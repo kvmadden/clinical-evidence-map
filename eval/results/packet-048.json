@@ -1,0 +1,2935 @@
+{
+  "packet_id": "packet-048",
+  "criteria_id": "pcsk9",
+  "quality_group": "intolerance",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "REQUESTING PROVIDER LETTER\nRequest date: [date].\nPatient: [name] (fictional).\nAge: 51 years.\nFrom: [name], fictional requesting provider.\nRequest: evolocumab 140 mg every 2 weeks.\nPlease review the enclosed records for [name] atherosclerotic cardiovascular\ndisease.\nCLINICAL NOTES\nVisit date: [date].\nDiagnosis: Established atherosclerotic cardiovascular disease.\nThe patient reports ongoing symptoms despite prior treatment.\nLABS AND MEASUREMENTS\nLDL-C: 132 mg/dL; collected [date].\nMEDICATION HISTORY\nCurrent requested therapy: evolocumab 140 mg every 2 weeks.\nPrior therapy: atorvastatin 80 mg daily; started [date]; stopped [date];\nintolerance documented: persistent nausea.\nNo other prior therapy records supplied.\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 3
+      },
+      {
+        "tier": "pattern",
+        "type": "date",
+        "count": 5
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points"
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "age",
+      "value": 51,
+      "source_span": {
+        "start": 78,
+        "end": 92,
+        "text": "Age: 51 years."
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 283,
+          "width": 52,
+          "height": 22
+        },
+        {
+          "x": 174,
+          "y": 283,
+          "width": 22,
+          "height": 17
+        },
+        {
+          "x": 216,
+          "y": 287,
+          "width": 80,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "requested_medication",
+      "value": "evolocumab",
+      "source_span": {
+        "start": 138,
+        "end": 179,
+        "text": "Request: evolocumab 140 mg every 2 weeks."
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "1665684",
+        "display": "evolocumab"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 363,
+          "width": 109,
+          "height": 22
+        },
+        {
+          "x": 231,
+          "y": 362,
+          "width": 141,
+          "height": 18
+        },
+        {
+          "x": 390,
+          "y": 363,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 447,
+          "y": 367,
+          "width": 25,
+          "height": 18
+        },
+        {
+          "x": 490,
+          "y": 367,
+          "width": 70,
+          "height": 18
+        },
+        {
+          "x": 576,
+          "y": 363,
+          "width": 12,
+          "height": 17
+        },
+        {
+          "x": 605,
+          "y": 362,
+          "width": 80,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "requested_dose",
+      "value": "140 mg every 2 weeks",
+      "source_span": {
+        "start": 138,
+        "end": 179,
+        "text": "Request: evolocumab 140 mg every 2 weeks."
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 363,
+          "width": 109,
+          "height": 22
+        },
+        {
+          "x": 231,
+          "y": 362,
+          "width": 141,
+          "height": 18
+        },
+        {
+          "x": 390,
+          "y": 363,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 447,
+          "y": 367,
+          "width": 25,
+          "height": 18
+        },
+        {
+          "x": 490,
+          "y": 367,
+          "width": 70,
+          "height": 18
+        },
+        {
+          "x": 576,
+          "y": 363,
+          "width": 12,
+          "height": 17
+        },
+        {
+          "x": 605,
+          "y": 362,
+          "width": 80,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "diagnosis",
+      "value": "Established atherosclerotic cardiovascular disease",
+      "source_span": {
+        "start": 301,
+        "end": 363,
+        "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 664,
+          "y": 402,
+          "width": 154,
+          "height": 18
+        },
+        {
+          "x": 836,
+          "y": 402,
+          "width": 213,
+          "height": 18
+        },
+        {
+          "x": 1067,
+          "y": 402,
+          "width": 198,
+          "height": 18
+        },
+        {
+          "x": 102,
+          "y": 442,
+          "width": 108,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "measurement",
+      "value": {
+        "name": "LDL-C",
+        "value": 132,
+        "unit": "mg/dL"
+      },
+      "source_span": {
+        "start": 448,
+        "end": 483,
+        "text": "LDL-C: 132 mg/dL; collected [date]."
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 763,
+          "width": 80,
+          "height": 17
+        },
+        {
+          "x": 203,
+          "y": 763,
+          "width": 39,
+          "height": 17
+        },
+        {
+          "x": 259,
+          "y": 762,
+          "width": 81,
+          "height": 23
+        },
+        {
+          "x": 361,
+          "y": 762,
+          "width": 126,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "medication_list_dose",
+      "value": "140 mg every 2 weeks",
+      "source_span": {
+        "start": 503,
+        "end": 562,
+        "text": "Current requested therapy: evolocumab 140 mg every 2 weeks."
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 883,
+          "width": 98,
+          "height": 17
+        },
+        {
+          "x": 219,
+          "y": 882,
+          "width": 124,
+          "height": 23
+        },
+        {
+          "x": 361,
+          "y": 882,
+          "width": 109,
+          "height": 23
+        },
+        {
+          "x": 490,
+          "y": 882,
+          "width": 141,
+          "height": 18
+        },
+        {
+          "x": 650,
+          "y": 883,
+          "width": 39,
+          "height": 17
+        },
+        {
+          "x": 706,
+          "y": 887,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 750,
+          "y": 887,
+          "width": 69,
+          "height": 18
+        },
+        {
+          "x": 836,
+          "y": 883,
+          "width": 11,
+          "height": 17
+        },
+        {
+          "x": 864,
+          "y": 882,
+          "width": 81,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "prior_medication",
+      "value": "atorvastatin",
+      "source_span": {
+        "start": 563,
+        "end": 678,
+        "text": "Prior therapy: atorvastatin 80 mg daily; started [date]; stopped [date];\nintolerance documented: persistent nausea."
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "83367",
+        "display": "atorvastatin"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 923,
+          "width": 68,
+          "height": 17
+        },
+        {
+          "x": 188,
+          "y": 922,
+          "width": 109,
+          "height": 23
+        },
+        {
+          "x": 318,
+          "y": 923,
+          "width": 169,
+          "height": 17
+        },
+        {
+          "x": 505,
+          "y": 923,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 547,
+          "y": 927,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 591,
+          "y": 922,
+          "width": 80,
+          "height": 23
+        },
+        {
+          "x": 693,
+          "y": 922,
+          "width": 96,
+          "height": 18
+        },
+        {
+          "x": 981,
+          "y": 922,
+          "width": 96,
+          "height": 23
+        },
+        {
+          "x": 102,
+          "y": 962,
+          "width": 155,
+          "height": 18
+        },
+        {
+          "x": 274,
+          "y": 962,
+          "width": 153,
+          "height": 18
+        },
+        {
+          "x": 448,
+          "y": 963,
+          "width": 140,
+          "height": 22
+        },
+        {
+          "x": 606,
+          "y": 967,
+          "width": 94,
+          "height": 13
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "prior_dose",
+      "value": "80 mg daily",
+      "source_span": {
+        "start": 563,
+        "end": 678,
+        "text": "Prior therapy: atorvastatin 80 mg daily; started [date]; stopped [date];\nintolerance documented: persistent nausea."
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 923,
+          "width": 68,
+          "height": 17
+        },
+        {
+          "x": 188,
+          "y": 922,
+          "width": 109,
+          "height": 23
+        },
+        {
+          "x": 318,
+          "y": 923,
+          "width": 169,
+          "height": 17
+        },
+        {
+          "x": 505,
+          "y": 923,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 547,
+          "y": 927,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 591,
+          "y": 922,
+          "width": 80,
+          "height": 23
+        },
+        {
+          "x": 693,
+          "y": 922,
+          "width": 96,
+          "height": 18
+        },
+        {
+          "x": 981,
+          "y": 922,
+          "width": 96,
+          "height": 23
+        },
+        {
+          "x": 102,
+          "y": 962,
+          "width": 155,
+          "height": 18
+        },
+        {
+          "x": 274,
+          "y": 962,
+          "width": 153,
+          "height": 18
+        },
+        {
+          "x": 448,
+          "y": 963,
+          "width": 140,
+          "height": 22
+        },
+        {
+          "x": 606,
+          "y": 967,
+          "width": 94,
+          "height": 13
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "prior_outcome",
+      "value": "intolerance",
+      "source_span": {
+        "start": 563,
+        "end": 678,
+        "text": "Prior therapy: atorvastatin 80 mg daily; started [date]; stopped [date];\nintolerance documented: persistent nausea."
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 923,
+          "width": 68,
+          "height": 17
+        },
+        {
+          "x": 188,
+          "y": 922,
+          "width": 109,
+          "height": 23
+        },
+        {
+          "x": 318,
+          "y": 923,
+          "width": 169,
+          "height": 17
+        },
+        {
+          "x": 505,
+          "y": 923,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 547,
+          "y": 927,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 591,
+          "y": 922,
+          "width": 80,
+          "height": 23
+        },
+        {
+          "x": 693,
+          "y": 922,
+          "width": 96,
+          "height": 18
+        },
+        {
+          "x": 981,
+          "y": 922,
+          "width": 96,
+          "height": 23
+        },
+        {
+          "x": 102,
+          "y": 962,
+          "width": 155,
+          "height": 18
+        },
+        {
+          "x": 274,
+          "y": 962,
+          "width": 153,
+          "height": 18
+        },
+        {
+          "x": 448,
+          "y": 963,
+          "width": 140,
+          "height": 22
+        },
+        {
+          "x": 606,
+          "y": 967,
+          "width": 94,
+          "height": 13
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 78,
+          "end": 92,
+          "text": "Age: 51 years."
+        }
+      ],
+      "reason": "Check documented age against the fictional adult rule.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 301,
+          "end": 363,
+          "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
+        }
+      ],
+      "reason": "Diagnosis must match the fictional rule. Negation is not positive evidence.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 448,
+          "end": 483,
+          "text": "LDL-C: 132 mg/dL; collected [date]."
+        }
+      ],
+      "reason": "Check value and a 180-day window. Conflicting dates require review.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 563,
+          "end": 678,
+          "text": "Prior therapy: atorvastatin 80 mg daily; started [date]; stopped [date];\nintolerance documented: persistent nausea."
+        }
+      ],
+      "reason": "A 90-day trial with response or documented intolerance is required.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 138,
+          "end": 179,
+          "text": "Request: evolocumab 140 mg every 2 weeks."
+        }
+      ],
+      "reason": "Low confidence OCR overlaps this evidence. Check the image.",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "Request: evolocumab 140 mg every 2 weeks.",
+      "citations": [
+        {
+          "start": 138,
+          "end": 179,
+          "text": "Request: evolocumab 140 mg every 2 weeks."
+        }
+      ],
+      "supported": true,
+      "needsReview": true,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Diagnosis: Established atherosclerotic cardiovascular disease.",
+      "citations": [
+        {
+          "start": 301,
+          "end": 363,
+          "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "LDL-C: 132 mg/dL; collected [date].",
+      "citations": [
+        {
+          "start": 448,
+          "end": 483,
+          "text": "LDL-C: 132 mg/dL; collected [date]."
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Prior therapy: atorvastatin 80 mg daily; started [date]; stopped [date];\nintolerance documented: persistent nausea.",
+      "citations": [
+        {
+          "start": 563,
+          "end": 678,
+          "text": "Prior therapy: atorvastatin 80 mg daily; started [date]; stopped [date];\nintolerance documented: persistent nausea."
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "REQUESTING",
+      "confidence": 96.821548,
+      "box": {
+        "x": 102,
+        "y": 163,
+        "width": 141,
+        "height": 20
+      },
+      "start": 0,
+      "end": 10,
+      "needsReview": false
+    },
+    {
+      "text": "PROVIDER",
+      "confidence": 96.174187,
+      "box": {
+        "x": 261,
+        "y": 163,
+        "width": 111,
+        "height": 17
+      },
+      "start": 11,
+      "end": 19,
+      "needsReview": false
+    },
+    {
+      "text": "LETTER",
+      "confidence": 96.449257,
+      "box": {
+        "x": 390,
+        "y": 163,
+        "width": 83,
+        "height": 17
+      },
+      "start": 20,
+      "end": 26,
+      "needsReview": false
+    },
+    {
+      "text": "Request",
+      "confidence": 95.274277,
+      "box": {
+        "x": 102,
+        "y": 203,
+        "width": 97,
+        "height": 22
+      },
+      "start": 27,
+      "end": 34,
+      "needsReview": false
+    },
+    {
+      "text": "date:",
+      "confidence": 96.499519,
+      "box": {
+        "x": 217,
+        "y": 202,
+        "width": 66,
+        "height": 18
+      },
+      "start": 35,
+      "end": 40,
+      "needsReview": false
+    },
+    {
+      "text": "Patient:",
+      "confidence": 96.187408,
+      "box": {
+        "x": 102,
+        "y": 243,
+        "width": 109,
+        "height": 17
+      },
+      "start": 49,
+      "end": 57,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional).",
+      "confidence": 95.889648,
+      "box": {
+        "x": 450,
+        "y": 241,
+        "width": 163,
+        "height": 24
+      },
+      "start": 65,
+      "end": 77,
+      "needsReview": false
+    },
+    {
+      "text": "Age:",
+      "confidence": 96.565331,
+      "box": {
+        "x": 101,
+        "y": 283,
+        "width": 52,
+        "height": 22
+      },
+      "start": 78,
+      "end": 82,
+      "needsReview": false
+    },
+    {
+      "text": "51",
+      "confidence": 95.837677,
+      "box": {
+        "x": 174,
+        "y": 283,
+        "width": 22,
+        "height": 17
+      },
+      "start": 83,
+      "end": 85,
+      "needsReview": false
+    },
+    {
+      "text": "years.",
+      "confidence": 95.895355,
+      "box": {
+        "x": 216,
+        "y": 287,
+        "width": 80,
+        "height": 18
+      },
+      "start": 86,
+      "end": 92,
+      "needsReview": false
+    },
+    {
+      "text": "From:",
+      "confidence": 96.868805,
+      "box": {
+        "x": 102,
+        "y": 323,
+        "width": 65,
+        "height": 17
+      },
+      "start": 93,
+      "end": 98,
+      "needsReview": false
+    },
+    {
+      "text": "fictional",
+      "confidence": 96.366722,
+      "box": {
+        "x": 419,
+        "y": 321,
+        "width": 126,
+        "height": 19
+      },
+      "start": 107,
+      "end": 116,
+      "needsReview": false
+    },
+    {
+      "text": "requesting",
+      "confidence": 96.655304,
+      "box": {
+        "x": 565,
+        "y": 323,
+        "width": 138,
+        "height": 22
+      },
+      "start": 117,
+      "end": 127,
+      "needsReview": false
+    },
+    {
+      "text": "provider.",
+      "confidence": 96.233215,
+      "box": {
+        "x": 721,
+        "y": 322,
+        "width": 123,
+        "height": 23
+      },
+      "start": 128,
+      "end": 137,
+      "needsReview": false
+    },
+    {
+      "text": "Request:",
+      "confidence": 92.411362,
+      "box": {
+        "x": 102,
+        "y": 363,
+        "width": 109,
+        "height": 22
+      },
+      "start": 138,
+      "end": 146,
+      "needsReview": false
+    },
+    {
+      "text": "evolocumab",
+      "confidence": 92.411362,
+      "box": {
+        "x": 231,
+        "y": 362,
+        "width": 141,
+        "height": 18
+      },
+      "start": 147,
+      "end": 157,
+      "needsReview": false
+    },
+    {
+      "text": "140",
+      "confidence": 69.993332,
+      "box": {
+        "x": 390,
+        "y": 363,
+        "width": 40,
+        "height": 17
+      },
+      "start": 158,
+      "end": 161,
+      "needsReview": true
+    },
+    {
+      "text": "mg",
+      "confidence": 95.58934,
+      "box": {
+        "x": 447,
+        "y": 367,
+        "width": 25,
+        "height": 18
+      },
+      "start": 162,
+      "end": 164,
+      "needsReview": false
+    },
+    {
+      "text": "every",
+      "confidence": 96.27256,
+      "box": {
+        "x": 490,
+        "y": 367,
+        "width": 70,
+        "height": 18
+      },
+      "start": 165,
+      "end": 170,
+      "needsReview": false
+    },
+    {
+      "text": "2",
+      "confidence": 96.002357,
+      "box": {
+        "x": 576,
+        "y": 363,
+        "width": 12,
+        "height": 17
+      },
+      "start": 171,
+      "end": 172,
+      "needsReview": false
+    },
+    {
+      "text": "weeks.",
+      "confidence": 96.426468,
+      "box": {
+        "x": 605,
+        "y": 362,
+        "width": 80,
+        "height": 18
+      },
+      "start": 173,
+      "end": 179,
+      "needsReview": false
+    },
+    {
+      "text": "Please",
+      "confidence": 96.194366,
+      "box": {
+        "x": 102,
+        "y": 402,
+        "width": 83,
+        "height": 18
+      },
+      "start": 180,
+      "end": 186,
+      "needsReview": false
+    },
+    {
+      "text": "review",
+      "confidence": 96.484428,
+      "box": {
+        "x": 205,
+        "y": 403,
+        "width": 82,
+        "height": 17
+      },
+      "start": 187,
+      "end": 193,
+      "needsReview": false
+    },
+    {
+      "text": "the",
+      "confidence": 96.23291,
+      "box": {
+        "x": 303,
+        "y": 402,
+        "width": 40,
+        "height": 18
+      },
+      "start": 194,
+      "end": 197,
+      "needsReview": false
+    },
+    {
+      "text": "enclosed",
+      "confidence": 95.22509,
+      "box": {
+        "x": 361,
+        "y": 402,
+        "width": 111,
+        "height": 18
+      },
+      "start": 198,
+      "end": 206,
+      "needsReview": false
+    },
+    {
+      "text": "records",
+      "confidence": 96.794609,
+      "box": {
+        "x": 493,
+        "y": 402,
+        "width": 95,
+        "height": 18
+      },
+      "start": 207,
+      "end": 214,
+      "needsReview": false
+    },
+    {
+      "text": "for",
+      "confidence": 96.380753,
+      "box": {
+        "x": 606,
+        "y": 401,
+        "width": 39,
+        "height": 19
+      },
+      "start": 215,
+      "end": 218,
+      "needsReview": false
+    },
+    {
+      "text": "Established",
+      "confidence": 96.773178,
+      "box": {
+        "x": 664,
+        "y": 402,
+        "width": 154,
+        "height": 18
+      },
+      "start": 312,
+      "end": 323,
+      "needsReview": false
+    },
+    {
+      "text": "atherosclerotic",
+      "confidence": 96.673309,
+      "box": {
+        "x": 836,
+        "y": 402,
+        "width": 213,
+        "height": 18
+      },
+      "start": 324,
+      "end": 339,
+      "needsReview": false
+    },
+    {
+      "text": "cardiovascular",
+      "confidence": 96.34668,
+      "box": {
+        "x": 1067,
+        "y": 402,
+        "width": 198,
+        "height": 18
+      },
+      "start": 340,
+      "end": 354,
+      "needsReview": false
+    },
+    {
+      "text": "disease.",
+      "confidence": 96.313057,
+      "box": {
+        "x": 102,
+        "y": 442,
+        "width": 108,
+        "height": 18
+      },
+      "start": 355,
+      "end": 363,
+      "needsReview": false
+    },
+    {
+      "text": "The",
+      "confidence": 95.463608,
+      "box": {
+        "x": 101,
+        "y": 642,
+        "width": 41,
+        "height": 18
+      },
+      "start": 364,
+      "end": 367,
+      "needsReview": false
+    },
+    {
+      "text": "patient",
+      "confidence": 96.617035,
+      "box": {
+        "x": 160,
+        "y": 643,
+        "width": 96,
+        "height": 22
+      },
+      "start": 368,
+      "end": 375,
+      "needsReview": false
+    },
+    {
+      "text": "reports",
+      "confidence": 96.605469,
+      "box": {
+        "x": 277,
+        "y": 644,
+        "width": 95,
+        "height": 21
+      },
+      "start": 376,
+      "end": 383,
+      "needsReview": false
+    },
+    {
+      "text": "ongoing",
+      "confidence": 96.753357,
+      "box": {
+        "x": 389,
+        "y": 643,
+        "width": 98,
+        "height": 22
+      },
+      "start": 384,
+      "end": 391,
+      "needsReview": false
+    },
+    {
+      "text": "symptoms",
+      "confidence": 96.035446,
+      "box": {
+        "x": 505,
+        "y": 644,
+        "width": 112,
+        "height": 21
+      },
+      "start": 392,
+      "end": 400,
+      "needsReview": false
+    },
+    {
+      "text": "despite",
+      "confidence": 96.035446,
+      "box": {
+        "x": 634,
+        "y": 642,
+        "width": 98,
+        "height": 23
+      },
+      "start": 401,
+      "end": 408,
+      "needsReview": false
+    },
+    {
+      "text": "prior",
+      "confidence": 94.759933,
+      "box": {
+        "x": 750,
+        "y": 643,
+        "width": 68,
+        "height": 22
+      },
+      "start": 409,
+      "end": 414,
+      "needsReview": false
+    },
+    {
+      "text": "treatment.",
+      "confidence": 94.759933,
+      "box": {
+        "x": 836,
+        "y": 644,
+        "width": 137,
+        "height": 16
+      },
+      "start": 415,
+      "end": 425,
+      "needsReview": false
+    },
+    {
+      "text": "LABS",
+      "confidence": 94.860481,
+      "box": {
+        "x": 102,
+        "y": 723,
+        "width": 54,
+        "height": 17
+      },
+      "start": 426,
+      "end": 430,
+      "needsReview": false
+    },
+    {
+      "text": "AND",
+      "confidence": 94.860481,
+      "box": {
+        "x": 173,
+        "y": 723,
+        "width": 41,
+        "height": 17
+      },
+      "start": 431,
+      "end": 434,
+      "needsReview": false
+    },
+    {
+      "text": "MEASUREMENTS",
+      "confidence": 96.507584,
+      "box": {
+        "x": 231,
+        "y": 723,
+        "width": 170,
+        "height": 17
+      },
+      "start": 435,
+      "end": 447,
+      "needsReview": false
+    },
+    {
+      "text": "LDL-C:",
+      "confidence": 93.504578,
+      "box": {
+        "x": 102,
+        "y": 763,
+        "width": 80,
+        "height": 17
+      },
+      "start": 448,
+      "end": 454,
+      "needsReview": false
+    },
+    {
+      "text": "132",
+      "confidence": 94.443123,
+      "box": {
+        "x": 203,
+        "y": 763,
+        "width": 39,
+        "height": 17
+      },
+      "start": 455,
+      "end": 458,
+      "needsReview": false
+    },
+    {
+      "text": "mg/dL;",
+      "confidence": 96.563751,
+      "box": {
+        "x": 259,
+        "y": 762,
+        "width": 81,
+        "height": 23
+      },
+      "start": 459,
+      "end": 465,
+      "needsReview": false
+    },
+    {
+      "text": "collected",
+      "confidence": 96.507439,
+      "box": {
+        "x": 361,
+        "y": 762,
+        "width": 126,
+        "height": 18
+      },
+      "start": 466,
+      "end": 475,
+      "needsReview": false
+    },
+    {
+      "text": "MEDICATION",
+      "confidence": 95.686623,
+      "box": {
+        "x": 102,
+        "y": 843,
+        "width": 140,
+        "height": 17
+      },
+      "start": 484,
+      "end": 494,
+      "needsReview": false
+    },
+    {
+      "text": "HISTORY",
+      "confidence": 95.686623,
+      "box": {
+        "x": 260,
+        "y": 843,
+        "width": 98,
+        "height": 17
+      },
+      "start": 495,
+      "end": 502,
+      "needsReview": false
+    },
+    {
+      "text": "Current",
+      "confidence": 96.577347,
+      "box": {
+        "x": 101,
+        "y": 883,
+        "width": 98,
+        "height": 17
+      },
+      "start": 503,
+      "end": 510,
+      "needsReview": false
+    },
+    {
+      "text": "requested",
+      "confidence": 96.800743,
+      "box": {
+        "x": 219,
+        "y": 882,
+        "width": 124,
+        "height": 23
+      },
+      "start": 511,
+      "end": 520,
+      "needsReview": false
+    },
+    {
+      "text": "therapy:",
+      "confidence": 92.974754,
+      "box": {
+        "x": 361,
+        "y": 882,
+        "width": 109,
+        "height": 23
+      },
+      "start": 521,
+      "end": 529,
+      "needsReview": false
+    },
+    {
+      "text": "evolocumab",
+      "confidence": 92.193672,
+      "box": {
+        "x": 490,
+        "y": 882,
+        "width": 141,
+        "height": 18
+      },
+      "start": 530,
+      "end": 540,
+      "needsReview": false
+    },
+    {
+      "text": "140",
+      "confidence": 75.327644,
+      "box": {
+        "x": 650,
+        "y": 883,
+        "width": 39,
+        "height": 17
+      },
+      "start": 541,
+      "end": 544,
+      "needsReview": true
+    },
+    {
+      "text": "mg",
+      "confidence": 96.721878,
+      "box": {
+        "x": 706,
+        "y": 887,
+        "width": 26,
+        "height": 18
+      },
+      "start": 545,
+      "end": 547,
+      "needsReview": false
+    },
+    {
+      "text": "every",
+      "confidence": 95.82695,
+      "box": {
+        "x": 750,
+        "y": 887,
+        "width": 69,
+        "height": 18
+      },
+      "start": 548,
+      "end": 553,
+      "needsReview": false
+    },
+    {
+      "text": "2",
+      "confidence": 95.038696,
+      "box": {
+        "x": 836,
+        "y": 883,
+        "width": 11,
+        "height": 17
+      },
+      "start": 554,
+      "end": 555,
+      "needsReview": false
+    },
+    {
+      "text": "weeks.",
+      "confidence": 96.145515,
+      "box": {
+        "x": 864,
+        "y": 882,
+        "width": 81,
+        "height": 18
+      },
+      "start": 556,
+      "end": 562,
+      "needsReview": false
+    },
+    {
+      "text": "Prior",
+      "confidence": 96.160782,
+      "box": {
+        "x": 102,
+        "y": 923,
+        "width": 68,
+        "height": 17
+      },
+      "start": 563,
+      "end": 568,
+      "needsReview": false
+    },
+    {
+      "text": "therapy:",
+      "confidence": 95.030106,
+      "box": {
+        "x": 188,
+        "y": 922,
+        "width": 109,
+        "height": 23
+      },
+      "start": 569,
+      "end": 577,
+      "needsReview": false
+    },
+    {
+      "text": "atorvastatin",
+      "confidence": 96.420952,
+      "box": {
+        "x": 318,
+        "y": 923,
+        "width": 169,
+        "height": 17
+      },
+      "start": 578,
+      "end": 590,
+      "needsReview": false
+    },
+    {
+      "text": "80",
+      "confidence": 86.43663,
+      "box": {
+        "x": 505,
+        "y": 923,
+        "width": 25,
+        "height": 17
+      },
+      "start": 591,
+      "end": 593,
+      "needsReview": false
+    },
+    {
+      "text": "mg",
+      "confidence": 96.627609,
+      "box": {
+        "x": 547,
+        "y": 927,
+        "width": 26,
+        "height": 18
+      },
+      "start": 594,
+      "end": 596,
+      "needsReview": false
+    },
+    {
+      "text": "daily;",
+      "confidence": 95.89373,
+      "box": {
+        "x": 591,
+        "y": 922,
+        "width": 80,
+        "height": 23
+      },
+      "start": 597,
+      "end": 603,
+      "needsReview": false
+    },
+    {
+      "text": "started",
+      "confidence": 96.211838,
+      "box": {
+        "x": 693,
+        "y": 922,
+        "width": 96,
+        "height": 18
+      },
+      "start": 604,
+      "end": 611,
+      "needsReview": false
+    },
+    {
+      "text": "stopped",
+      "confidence": 96.068741,
+      "box": {
+        "x": 981,
+        "y": 922,
+        "width": 96,
+        "height": 23
+      },
+      "start": 620,
+      "end": 627,
+      "needsReview": false
+    },
+    {
+      "text": "intolerance",
+      "confidence": 95.501251,
+      "box": {
+        "x": 102,
+        "y": 962,
+        "width": 155,
+        "height": 18
+      },
+      "start": 636,
+      "end": 647,
+      "needsReview": false
+    },
+    {
+      "text": "documented:",
+      "confidence": 96.349586,
+      "box": {
+        "x": 274,
+        "y": 962,
+        "width": 153,
+        "height": 18
+      },
+      "start": 648,
+      "end": 659,
+      "needsReview": false
+    },
+    {
+      "text": "persistent",
+      "confidence": 96.524704,
+      "box": {
+        "x": 448,
+        "y": 963,
+        "width": 140,
+        "height": 22
+      },
+      "start": 660,
+      "end": 670,
+      "needsReview": false
+    },
+    {
+      "text": "nausea.",
+      "confidence": 96.242668,
+      "box": {
+        "x": 606,
+        "y": 967,
+        "width": 94,
+        "height": 13
+      },
+      "start": 671,
+      "end": 678,
+      "needsReview": false
+    },
+    {
+      "text": "No",
+      "confidence": 96.936417,
+      "box": {
+        "x": 102,
+        "y": 1003,
+        "width": 25,
+        "height": 17
+      },
+      "start": 679,
+      "end": 681,
+      "needsReview": false
+    },
+    {
+      "text": "other",
+      "confidence": 96.366798,
+      "box": {
+        "x": 145,
+        "y": 1002,
+        "width": 68,
+        "height": 18
+      },
+      "start": 682,
+      "end": 687,
+      "needsReview": false
+    },
+    {
+      "text": "prior",
+      "confidence": 95.74173,
+      "box": {
+        "x": 232,
+        "y": 1003,
+        "width": 68,
+        "height": 22
+      },
+      "start": 688,
+      "end": 693,
+      "needsReview": false
+    },
+    {
+      "text": "therapy",
+      "confidence": 95.934326,
+      "box": {
+        "x": 318,
+        "y": 1002,
+        "width": 98,
+        "height": 23
+      },
+      "start": 694,
+      "end": 701,
+      "needsReview": false
+    },
+    {
+      "text": "records",
+      "confidence": 96.49086,
+      "box": {
+        "x": 435,
+        "y": 1002,
+        "width": 95,
+        "height": 18
+      },
+      "start": 702,
+      "end": 709,
+      "needsReview": false
+    },
+    {
+      "text": "supplied.",
+      "confidence": 96.216568,
+      "box": {
+        "x": 549,
+        "y": 1002,
+        "width": 122,
+        "height": 23
+      },
+      "start": 710,
+      "end": 719,
+      "needsReview": false
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "REQUESTING PROVIDER LETTER\nRequest date: 2026-10-01.\nPatient: Corin Reedwell (fictional).\nAge: 51 years.\nFrom: Dr. Rowan Vale, fictional requesting provider.\nRequest: evolocumab 140 mg every 2 weeks.\nPlease review the enclosed records for Established atherosclerotic cardiovascular\ndisease.\nCLINICAL NOTES\nVisit date: 2026-09-20.\nDiagnosis: Established atherosclerotic cardiovascular disease.\nThe patient reports ongoing symptoms despite prior treatment.\nLABS AND MEASUREMENTS\nLDL-C: 132 mg/dL; collected 2026-09-15.\nMEDICATION HISTORY\nCurrent requested therapy: evolocumab 140 mg every 2 weeks.\nPrior therapy: atorvastatin 80 mg daily; started 2026-08-01; stopped 2026-08-15;\nintolerance documented: persistent nausea.\nNo other prior therapy records supplied.\n",
+    "words": [
+      {
+        "text": "REQUESTING",
+        "confidence": 96.821548,
+        "box": {
+          "x": 102,
+          "y": 163,
+          "width": 141,
+          "height": 20
+        },
+        "start": 0,
+        "end": 10,
+        "needsReview": false
+      },
+      {
+        "text": "PROVIDER",
+        "confidence": 96.174187,
+        "box": {
+          "x": 261,
+          "y": 163,
+          "width": 111,
+          "height": 17
+        },
+        "start": 11,
+        "end": 19,
+        "needsReview": false
+      },
+      {
+        "text": "LETTER",
+        "confidence": 96.449257,
+        "box": {
+          "x": 390,
+          "y": 163,
+          "width": 83,
+          "height": 17
+        },
+        "start": 20,
+        "end": 26,
+        "needsReview": false
+      },
+      {
+        "text": "Request",
+        "confidence": 95.274277,
+        "box": {
+          "x": 102,
+          "y": 203,
+          "width": 97,
+          "height": 22
+        },
+        "start": 27,
+        "end": 34,
+        "needsReview": false
+      },
+      {
+        "text": "date:",
+        "confidence": 96.499519,
+        "box": {
+          "x": 217,
+          "y": 202,
+          "width": 66,
+          "height": 18
+        },
+        "start": 35,
+        "end": 40,
+        "needsReview": false
+      },
+      {
+        "text": "2026-10-01.",
+        "confidence": 87.659462,
+        "box": {
+          "x": 303,
+          "y": 203,
+          "width": 152,
+          "height": 17
+        },
+        "start": 41,
+        "end": 52,
+        "needsReview": false
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.187408,
+        "box": {
+          "x": 102,
+          "y": 243,
+          "width": 109,
+          "height": 17
+        },
+        "start": 53,
+        "end": 61,
+        "needsReview": false
+      },
+      {
+        "text": "Corin",
+        "confidence": 93.198639,
+        "box": {
+          "x": 231,
+          "y": 243,
+          "width": 69,
+          "height": 17
+        },
+        "start": 62,
+        "end": 67,
+        "needsReview": false
+      },
+      {
+        "text": "Reedwell",
+        "confidence": 92.51947,
+        "box": {
+          "x": 318,
+          "y": 242,
+          "width": 112,
+          "height": 18
+        },
+        "start": 68,
+        "end": 76,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional).",
+        "confidence": 95.889648,
+        "box": {
+          "x": 450,
+          "y": 241,
+          "width": 163,
+          "height": 24
+        },
+        "start": 77,
+        "end": 89,
+        "needsReview": false
+      },
+      {
+        "text": "Age:",
+        "confidence": 96.565331,
+        "box": {
+          "x": 101,
+          "y": 283,
+          "width": 52,
+          "height": 22
+        },
+        "start": 90,
+        "end": 94,
+        "needsReview": false
+      },
+      {
+        "text": "51",
+        "confidence": 95.837677,
+        "box": {
+          "x": 174,
+          "y": 283,
+          "width": 22,
+          "height": 17
+        },
+        "start": 95,
+        "end": 97,
+        "needsReview": false
+      },
+      {
+        "text": "years.",
+        "confidence": 95.895355,
+        "box": {
+          "x": 216,
+          "y": 287,
+          "width": 80,
+          "height": 18
+        },
+        "start": 98,
+        "end": 104,
+        "needsReview": false
+      },
+      {
+        "text": "From:",
+        "confidence": 96.868805,
+        "box": {
+          "x": 102,
+          "y": 323,
+          "width": 65,
+          "height": 17
+        },
+        "start": 105,
+        "end": 110,
+        "needsReview": false
+      },
+      {
+        "text": "Dr.",
+        "confidence": 96.367645,
+        "box": {
+          "x": 188,
+          "y": 323,
+          "width": 36,
+          "height": 17
+        },
+        "start": 111,
+        "end": 114,
+        "needsReview": false
+      },
+      {
+        "text": "Rowan",
+        "confidence": 96.290176,
+        "box": {
+          "x": 246,
+          "y": 323,
+          "width": 68,
+          "height": 17
+        },
+        "start": 115,
+        "end": 120,
+        "needsReview": false
+      },
+      {
+        "text": "Vale,",
+        "confidence": 95.624352,
+        "box": {
+          "x": 331,
+          "y": 322,
+          "width": 65,
+          "height": 22
+        },
+        "start": 121,
+        "end": 126,
+        "needsReview": false
+      },
+      {
+        "text": "fictional",
+        "confidence": 96.366722,
+        "box": {
+          "x": 419,
+          "y": 321,
+          "width": 126,
+          "height": 19
+        },
+        "start": 127,
+        "end": 136,
+        "needsReview": false
+      },
+      {
+        "text": "requesting",
+        "confidence": 96.655304,
+        "box": {
+          "x": 565,
+          "y": 323,
+          "width": 138,
+          "height": 22
+        },
+        "start": 137,
+        "end": 147,
+        "needsReview": false
+      },
+      {
+        "text": "provider.",
+        "confidence": 96.233215,
+        "box": {
+          "x": 721,
+          "y": 322,
+          "width": 123,
+          "height": 23
+        },
+        "start": 148,
+        "end": 157,
+        "needsReview": false
+      },
+      {
+        "text": "Request:",
+        "confidence": 92.411362,
+        "box": {
+          "x": 102,
+          "y": 363,
+          "width": 109,
+          "height": 22
+        },
+        "start": 158,
+        "end": 166,
+        "needsReview": false
+      },
+      {
+        "text": "evolocumab",
+        "confidence": 92.411362,
+        "box": {
+          "x": 231,
+          "y": 362,
+          "width": 141,
+          "height": 18
+        },
+        "start": 167,
+        "end": 177,
+        "needsReview": false
+      },
+      {
+        "text": "140",
+        "confidence": 69.993332,
+        "box": {
+          "x": 390,
+          "y": 363,
+          "width": 40,
+          "height": 17
+        },
+        "start": 178,
+        "end": 181,
+        "needsReview": true
+      },
+      {
+        "text": "mg",
+        "confidence": 95.58934,
+        "box": {
+          "x": 447,
+          "y": 367,
+          "width": 25,
+          "height": 18
+        },
+        "start": 182,
+        "end": 184,
+        "needsReview": false
+      },
+      {
+        "text": "every",
+        "confidence": 96.27256,
+        "box": {
+          "x": 490,
+          "y": 367,
+          "width": 70,
+          "height": 18
+        },
+        "start": 185,
+        "end": 190,
+        "needsReview": false
+      },
+      {
+        "text": "2",
+        "confidence": 96.002357,
+        "box": {
+          "x": 576,
+          "y": 363,
+          "width": 12,
+          "height": 17
+        },
+        "start": 191,
+        "end": 192,
+        "needsReview": false
+      },
+      {
+        "text": "weeks.",
+        "confidence": 96.426468,
+        "box": {
+          "x": 605,
+          "y": 362,
+          "width": 80,
+          "height": 18
+        },
+        "start": 193,
+        "end": 199,
+        "needsReview": false
+      },
+      {
+        "text": "Please",
+        "confidence": 96.194366,
+        "box": {
+          "x": 102,
+          "y": 402,
+          "width": 83,
+          "height": 18
+        },
+        "start": 200,
+        "end": 206,
+        "needsReview": false
+      },
+      {
+        "text": "review",
+        "confidence": 96.484428,
+        "box": {
+          "x": 205,
+          "y": 403,
+          "width": 82,
+          "height": 17
+        },
+        "start": 207,
+        "end": 213,
+        "needsReview": false
+      },
+      {
+        "text": "the",
+        "confidence": 96.23291,
+        "box": {
+          "x": 303,
+          "y": 402,
+          "width": 40,
+          "height": 18
+        },
+        "start": 214,
+        "end": 217,
+        "needsReview": false
+      },
+      {
+        "text": "enclosed",
+        "confidence": 95.22509,
+        "box": {
+          "x": 361,
+          "y": 402,
+          "width": 111,
+          "height": 18
+        },
+        "start": 218,
+        "end": 226,
+        "needsReview": false
+      },
+      {
+        "text": "records",
+        "confidence": 96.794609,
+        "box": {
+          "x": 493,
+          "y": 402,
+          "width": 95,
+          "height": 18
+        },
+        "start": 227,
+        "end": 234,
+        "needsReview": false
+      },
+      {
+        "text": "for",
+        "confidence": 96.380753,
+        "box": {
+          "x": 606,
+          "y": 401,
+          "width": 39,
+          "height": 19
+        },
+        "start": 235,
+        "end": 238,
+        "needsReview": false
+      },
+      {
+        "text": "Established",
+        "confidence": 96.773178,
+        "box": {
+          "x": 664,
+          "y": 402,
+          "width": 154,
+          "height": 18
+        },
+        "start": 239,
+        "end": 250,
+        "needsReview": false
+      },
+      {
+        "text": "atherosclerotic",
+        "confidence": 96.673309,
+        "box": {
+          "x": 836,
+          "y": 402,
+          "width": 213,
+          "height": 18
+        },
+        "start": 251,
+        "end": 266,
+        "needsReview": false
+      },
+      {
+        "text": "cardiovascular",
+        "confidence": 96.34668,
+        "box": {
+          "x": 1067,
+          "y": 402,
+          "width": 198,
+          "height": 18
+        },
+        "start": 267,
+        "end": 281,
+        "needsReview": false
+      },
+      {
+        "text": "disease.",
+        "confidence": 96.313057,
+        "box": {
+          "x": 102,
+          "y": 442,
+          "width": 108,
+          "height": 18
+        },
+        "start": 282,
+        "end": 290,
+        "needsReview": false
+      },
+      {
+        "text": "CLINICAL",
+        "confidence": 96.153519,
+        "box": {
+          "x": 101,
+          "y": 523,
+          "width": 113,
+          "height": 17
+        },
+        "start": 291,
+        "end": 299,
+        "needsReview": false
+      },
+      {
+        "text": "NOTES",
+        "confidence": 95.853561,
+        "box": {
+          "x": 231,
+          "y": 523,
+          "width": 70,
+          "height": 17
+        },
+        "start": 300,
+        "end": 305,
+        "needsReview": false
+      },
+      {
+        "text": "Visit",
+        "confidence": 95.583618,
+        "box": {
+          "x": 101,
+          "y": 563,
+          "width": 69,
+          "height": 17
+        },
+        "start": 306,
+        "end": 311,
+        "needsReview": false
+      },
+      {
+        "text": "date:",
+        "confidence": 95.697205,
+        "box": {
+          "x": 188,
+          "y": 562,
+          "width": 66,
+          "height": 18
+        },
+        "start": 312,
+        "end": 317,
+        "needsReview": false
+      },
+      {
+        "text": "2026-09-20.",
+        "confidence": 91.4702,
+        "box": {
+          "x": 274,
+          "y": 563,
+          "width": 152,
+          "height": 17
+        },
+        "start": 318,
+        "end": 329,
+        "needsReview": false
+      },
+      {
+        "text": "Diagnosis:",
+        "confidence": 96.008209,
+        "box": {
+          "x": 102,
+          "y": 603,
+          "width": 137,
+          "height": 22
+        },
+        "start": 330,
+        "end": 340,
+        "needsReview": false
+      },
+      {
+        "text": "Established",
+        "confidence": 96.563065,
+        "box": {
+          "x": 260,
+          "y": 602,
+          "width": 155,
+          "height": 18
+        },
+        "start": 341,
+        "end": 352,
+        "needsReview": false
+      },
+      {
+        "text": "atherosclerotic",
+        "confidence": 96.473679,
+        "box": {
+          "x": 433,
+          "y": 602,
+          "width": 212,
+          "height": 18
+        },
+        "start": 353,
+        "end": 368,
+        "needsReview": false
+      },
+      {
+        "text": "cardiovascular",
+        "confidence": 96.559692,
+        "box": {
+          "x": 663,
+          "y": 602,
+          "width": 198,
+          "height": 18
+        },
+        "start": 369,
+        "end": 383,
+        "needsReview": false
+      },
+      {
+        "text": "disease.",
+        "confidence": 96.292961,
+        "box": {
+          "x": 879,
+          "y": 602,
+          "width": 109,
+          "height": 18
+        },
+        "start": 384,
+        "end": 392,
+        "needsReview": false
+      },
+      {
+        "text": "The",
+        "confidence": 95.463608,
+        "box": {
+          "x": 101,
+          "y": 642,
+          "width": 41,
+          "height": 18
+        },
+        "start": 393,
+        "end": 396,
+        "needsReview": false
+      },
+      {
+        "text": "patient",
+        "confidence": 96.617035,
+        "box": {
+          "x": 160,
+          "y": 643,
+          "width": 96,
+          "height": 22
+        },
+        "start": 397,
+        "end": 404,
+        "needsReview": false
+      },
+      {
+        "text": "reports",
+        "confidence": 96.605469,
+        "box": {
+          "x": 277,
+          "y": 644,
+          "width": 95,
+          "height": 21
+        },
+        "start": 405,
+        "end": 412,
+        "needsReview": false
+      },
+      {
+        "text": "ongoing",
+        "confidence": 96.753357,
+        "box": {
+          "x": 389,
+          "y": 643,
+          "width": 98,
+          "height": 22
+        },
+        "start": 413,
+        "end": 420,
+        "needsReview": false
+      },
+      {
+        "text": "symptoms",
+        "confidence": 96.035446,
+        "box": {
+          "x": 505,
+          "y": 644,
+          "width": 112,
+          "height": 21
+        },
+        "start": 421,
+        "end": 429,
+        "needsReview": false
+      },
+      {
+        "text": "despite",
+        "confidence": 96.035446,
+        "box": {
+          "x": 634,
+          "y": 642,
+          "width": 98,
+          "height": 23
+        },
+        "start": 430,
+        "end": 437,
+        "needsReview": false
+      },
+      {
+        "text": "prior",
+        "confidence": 94.759933,
+        "box": {
+          "x": 750,
+          "y": 643,
+          "width": 68,
+          "height": 22
+        },
+        "start": 438,
+        "end": 443,
+        "needsReview": false
+      },
+      {
+        "text": "treatment.",
+        "confidence": 94.759933,
+        "box": {
+          "x": 836,
+          "y": 644,
+          "width": 137,
+          "height": 16
+        },
+        "start": 444,
+        "end": 454,
+        "needsReview": false
+      },
+      {
+        "text": "LABS",
+        "confidence": 94.860481,
+        "box": {
+          "x": 102,
+          "y": 723,
+          "width": 54,
+          "height": 17
+        },
+        "start": 455,
+        "end": 459,
+        "needsReview": false
+      },
+      {
+        "text": "AND",
+        "confidence": 94.860481,
+        "box": {
+          "x": 173,
+          "y": 723,
+          "width": 41,
+          "height": 17
+        },
+        "start": 460,
+        "end": 463,
+        "needsReview": false
+      },
+      {
+        "text": "MEASUREMENTS",
+        "confidence": 96.507584,
+        "box": {
+          "x": 231,
+          "y": 723,
+          "width": 170,
+          "height": 17
+        },
+        "start": 464,
+        "end": 476,
+        "needsReview": false
+      },
+      {
+        "text": "LDL-C:",
+        "confidence": 93.504578,
+        "box": {
+          "x": 102,
+          "y": 763,
+          "width": 80,
+          "height": 17
+        },
+        "start": 477,
+        "end": 483,
+        "needsReview": false
+      },
+      {
+        "text": "132",
+        "confidence": 94.443123,
+        "box": {
+          "x": 203,
+          "y": 763,
+          "width": 39,
+          "height": 17
+        },
+        "start": 484,
+        "end": 487,
+        "needsReview": false
+      },
+      {
+        "text": "mg/dL;",
+        "confidence": 96.563751,
+        "box": {
+          "x": 259,
+          "y": 762,
+          "width": 81,
+          "height": 23
+        },
+        "start": 488,
+        "end": 494,
+        "needsReview": false
+      },
+      {
+        "text": "collected",
+        "confidence": 96.507439,
+        "box": {
+          "x": 361,
+          "y": 762,
+          "width": 126,
+          "height": 18
+        },
+        "start": 495,
+        "end": 504,
+        "needsReview": false
+      },
+      {
+        "text": "2026-09-15.",
+        "confidence": 85.300346,
+        "box": {
+          "x": 504,
+          "y": 763,
+          "width": 153,
+          "height": 17
+        },
+        "start": 505,
+        "end": 516,
+        "needsReview": false
+      },
+      {
+        "text": "MEDICATION",
+        "confidence": 95.686623,
+        "box": {
+          "x": 102,
+          "y": 843,
+          "width": 140,
+          "height": 17
+        },
+        "start": 517,
+        "end": 527,
+        "needsReview": false
+      },
+      {
+        "text": "HISTORY",
+        "confidence": 95.686623,
+        "box": {
+          "x": 260,
+          "y": 843,
+          "width": 98,
+          "height": 17
+        },
+        "start": 528,
+        "end": 535,
+        "needsReview": false
+      },
+      {
+        "text": "Current",
+        "confidence": 96.577347,
+        "box": {
+          "x": 101,
+          "y": 883,
+          "width": 98,
+          "height": 17
+        },
+        "start": 536,
+        "end": 543,
+        "needsReview": false
+      },
+      {
+        "text": "requested",
+        "confidence": 96.800743,
+        "box": {
+          "x": 219,
+          "y": 882,
+          "width": 124,
+          "height": 23
+        },
+        "start": 544,
+        "end": 553,
+        "needsReview": false
+      },
+      {
+        "text": "therapy:",
+        "confidence": 92.974754,
+        "box": {
+          "x": 361,
+          "y": 882,
+          "width": 109,
+          "height": 23
+        },
+        "start": 554,
+        "end": 562,
+        "needsReview": false
+      },
+      {
+        "text": "evolocumab",
+        "confidence": 92.193672,
+        "box": {
+          "x": 490,
+          "y": 882,
+          "width": 141,
+          "height": 18
+        },
+        "start": 563,
+        "end": 573,
+        "needsReview": false
+      },
+      {
+        "text": "140",
+        "confidence": 75.327644,
+        "box": {
+          "x": 650,
+          "y": 883,
+          "width": 39,
+          "height": 17
+        },
+        "start": 574,
+        "end": 577,
+        "needsReview": true
+      },
+      {
+        "text": "mg",
+        "confidence": 96.721878,
+        "box": {
+          "x": 706,
+          "y": 887,
+          "width": 26,
+          "height": 18
+        },
+        "start": 578,
+        "end": 580,
+        "needsReview": false
+      },
+      {
+        "text": "every",
+        "confidence": 95.82695,
+        "box": {
+          "x": 750,
+          "y": 887,
+          "width": 69,
+          "height": 18
+        },
+        "start": 581,
+        "end": 586,
+        "needsReview": false
+      },
+      {
+        "text": "2",
+        "confidence": 95.038696,
+        "box": {
+          "x": 836,
+          "y": 883,
+          "width": 11,
+          "height": 17
+        },
+        "start": 587,
+        "end": 588,
+        "needsReview": false
+      },
+      {
+        "text": "weeks.",
+        "confidence": 96.145515,
+        "box": {
+          "x": 864,
+          "y": 882,
+          "width": 81,
+          "height": 18
+        },
+        "start": 589,
+        "end": 595,
+        "needsReview": false
+      },
+      {
+        "text": "Prior",
+        "confidence": 96.160782,
+        "box": {
+          "x": 102,
+          "y": 923,
+          "width": 68,
+          "height": 17
+        },
+        "start": 596,
+        "end": 601,
+        "needsReview": false
+      },
+      {
+        "text": "therapy:",
+        "confidence": 95.030106,
+        "box": {
+          "x": 188,
+          "y": 922,
+          "width": 109,
+          "height": 23
+        },
+        "start": 602,
+        "end": 610,
+        "needsReview": false
+      },
+      {
+        "text": "atorvastatin",
+        "confidence": 96.420952,
+        "box": {
+          "x": 318,
+          "y": 923,
+          "width": 169,
+          "height": 17
+        },
+        "start": 611,
+        "end": 623,
+        "needsReview": false
+      },
+      {
+        "text": "80",
+        "confidence": 86.43663,
+        "box": {
+          "x": 505,
+          "y": 923,
+          "width": 25,
+          "height": 17
+        },
+        "start": 624,
+        "end": 626,
+        "needsReview": false
+      },
+      {
+        "text": "mg",
+        "confidence": 96.627609,
+        "box": {
+          "x": 547,
+          "y": 927,
+          "width": 26,
+          "height": 18
+        },
+        "start": 627,
+        "end": 629,
+        "needsReview": false
+      },
+      {
+        "text": "daily;",
+        "confidence": 95.89373,
+        "box": {
+          "x": 591,
+          "y": 922,
+          "width": 80,
+          "height": 23
+        },
+        "start": 630,
+        "end": 636,
+        "needsReview": false
+      },
+      {
+        "text": "started",
+        "confidence": 96.211838,
+        "box": {
+          "x": 693,
+          "y": 922,
+          "width": 96,
+          "height": 18
+        },
+        "start": 637,
+        "end": 644,
+        "needsReview": false
+      },
+      {
+        "text": "2026-08-01;",
+        "confidence": 91.862885,
+        "box": {
+          "x": 807,
+          "y": 923,
+          "width": 152,
+          "height": 21
+        },
+        "start": 645,
+        "end": 656,
+        "needsReview": false
+      },
+      {
+        "text": "stopped",
+        "confidence": 96.068741,
+        "box": {
+          "x": 981,
+          "y": 922,
+          "width": 96,
+          "height": 23
+        },
+        "start": 657,
+        "end": 664,
+        "needsReview": false
+      },
+      {
+        "text": "2026-08-15;",
+        "confidence": 84.396255,
+        "box": {
+          "x": 1095,
+          "y": 923,
+          "width": 153,
+          "height": 21
+        },
+        "start": 665,
+        "end": 676,
+        "needsReview": false
+      },
+      {
+        "text": "intolerance",
+        "confidence": 95.501251,
+        "box": {
+          "x": 102,
+          "y": 962,
+          "width": 155,
+          "height": 18
+        },
+        "start": 677,
+        "end": 688,
+        "needsReview": false
+      },
+      {
+        "text": "documented:",
+        "confidence": 96.349586,
+        "box": {
+          "x": 274,
+          "y": 962,
+          "width": 153,
+          "height": 18
+        },
+        "start": 689,
+        "end": 700,
+        "needsReview": false
+      },
+      {
+        "text": "persistent",
+        "confidence": 96.524704,
+        "box": {
+          "x": 448,
+          "y": 963,
+          "width": 140,
+          "height": 22
+        },
+        "start": 701,
+        "end": 711,
+        "needsReview": false
+      },
+      {
+        "text": "nausea.",
+        "confidence": 96.242668,
+        "box": {
+          "x": 606,
+          "y": 967,
+          "width": 94,
+          "height": 13
+        },
+        "start": 712,
+        "end": 719,
+        "needsReview": false
+      },
+      {
+        "text": "No",
+        "confidence": 96.936417,
+        "box": {
+          "x": 102,
+          "y": 1003,
+          "width": 25,
+          "height": 17
+        },
+        "start": 720,
+        "end": 722,
+        "needsReview": false
+      },
+      {
+        "text": "other",
+        "confidence": 96.366798,
+        "box": {
+          "x": 145,
+          "y": 1002,
+          "width": 68,
+          "height": 18
+        },
+        "start": 723,
+        "end": 728,
+        "needsReview": false
+      },
+      {
+        "text": "prior",
+        "confidence": 95.74173,
+        "box": {
+          "x": 232,
+          "y": 1003,
+          "width": 68,
+          "height": 22
+        },
+        "start": 729,
+        "end": 734,
+        "needsReview": false
+      },
+      {
+        "text": "therapy",
+        "confidence": 95.934326,
+        "box": {
+          "x": 318,
+          "y": 1002,
+          "width": 98,
+          "height": 23
+        },
+        "start": 735,
+        "end": 742,
+        "needsReview": false
+      },
+      {
+        "text": "records",
+        "confidence": 96.49086,
+        "box": {
+          "x": 435,
+          "y": 1002,
+          "width": 95,
+          "height": 18
+        },
+        "start": 743,
+        "end": 750,
+        "needsReview": false
+      },
+      {
+        "text": "supplied.",
+        "confidence": 96.216568,
+        "box": {
+          "x": 549,
+          "y": 1002,
+          "width": 122,
+          "height": 23
+        },
+        "start": 751,
+        "end": 760,
+        "needsReview": false
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM"
+  },
+  "scores": {
+    "entities": {
+      "tp": 9,
+      "predicted": 9,
+      "gold": 13,
+      "exactQuote": 5
+    },
+    "criteria": {
+      "correct": 3,
+      "total": 5,
+      "supportedSpanCorrect": 2
+    },
+    "cer": 0,
+    "edits": 0,
+    "chars": 760,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [
+    "Extraction value mismatch",
+    "Evidence quote differs from draft reference",
+    "lab: draft evidence_found, pipeline needs_review",
+    "dose: draft evidence_found, pipeline needs_review"
+  ],
+  "latency": {
+    "renderAndOcrMs": 2716.0691670000087,
+    "serviceMs": 0.5185829999973066
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "notice": "draft, pending pharmacist review",
+  "packets": 50,
+  "heldOut": false,
+  "clinicalValidation": {
+    "status": "pending pharmacist review",
+    "reviewedEntities": 0,
+    "reviewedCriteria": 0,
+    "scoredClinicalRate": null
+  },
+  "draftDiagnostics": {
+    "ocr": {
+      "cer": 0.012081274025260845,
+      "edits": 418,
+      "referenceCharacters": 34599,
+      "whitespace": "collapsed runs, case sensitive"
+    },
+    "extraction": {
+      "precision": 0.9834254143646409,
+      "recall": 0.5933333333333334,
+      "f1": 0.7401247401247402,
+      "tp": 356,
+      "predicted": 362,
+      "gold": 600,
+      "exactEvidenceQuoteMatches": 218,
+      "quoteAndValueF1": 0.45322245322245325,
+      "offsetBasis": "predictions reference redacted OCR, gold references original source. Exact source quote scored separately from offsets"
+    },
+    "criteria": {
+      "accuracy": 0.496,
+      "correct": 124,
+      "total": 250,
+      "statusAndExactQuotesCorrect": 107
+    },
+    "verifier": {
+      "catchRate": 1,
+      "caught": 150,
+      "injected": 150,
+      "acceptedSupported": 157,
+      "supported": 157,
+      "challengeType": "three deterministic unsupported mutations per packet, not semantic validation"
+    },
+    "sourceTextBaseline": {
+      "extraction": {
+        "precision": 1,
+        "recall": 0.7,
+        "f1": 0.8235294117647058,
+        "tp": 420,
+        "predicted": 420,
+        "gold": 600
+      },
+      "exactQuote": 255,
+      "criteriaCorrect": 180,
+      "criteriaTotal": 250
+    }
+  },
+  "slices": [
+    {
+      "group": "clean",
+      "packets": 5,
+      "cer": 0.0013962580284836638,
+      "extraction": {
+        "precision": 1,
+        "recall": 0.6615384615384615,
+        "f1": 0.7962962962962963,
+        "tp": 43,
+        "predicted": 43,
+        "gold": 65
+      },
+      "criteriaCorrect": 11,
+      "criteriaTotal": 25
+    },
+    {
+      "group": "skew",
+      "packets": 5,
+      "cer": 0.10752986940816893,
+      "extraction": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "predicted": 0,
+        "gold": 65
+      },
+      "criteriaCorrect": 0,
+      "criteriaTotal": 25
+    },
+    {
+      "group": "handwriting",
+      "packets": 5,
+      "cer": 0.0022002200220022,
+      "extraction": {
+        "precision": 0.8636363636363636,
+        "recall": 0.5846153846153846,
+        "f1": 0.6972477064220184,
+        "tp": 38,
+        "predicted": 44,
+        "gold": 65
+      },
+      "criteriaCorrect": 10,
+      "criteriaTotal": 25
+    },
+    {
+      "group": "missing-lab",
+      "packets": 5,
+      "cer": 0.000613685179502915,
+      "extraction": {
+        "precision": 1,
+        "recall": 0.7272727272727273,
+        "f1": 0.8421052631578947,
+        "tp": 40,
+        "predicted": 40,
+        "gold": 55
+      },
+      "criteriaCorrect": 16,
+      "criteriaTotal": 25
+    },
+    {
+      "group": "missing-history",
+      "packets": 5,
+      "cer": 0.0008254230293025176,
+      "extraction": {
+        "precision": 1,
+        "recall": 0.6571428571428571,
+        "f1": 0.7931034482758621,
+        "tp": 23,
+        "predicted": 23,
+        "gold": 35
+      },
+      "criteriaCorrect": 15,
+      "criteriaTotal": 25
+    },
+    {
+      "group": "conflicting-dates",
+      "packets": 5,
+      "cer": 0.0005193456245131135,
+      "extraction": {
+        "precision": 1,
+        "recall": 0.6285714285714286,
+        "f1": 0.7719298245614035,
+        "tp": 44,
+        "predicted": 44,
+        "gold": 70
+      },
+      "criteriaCorrect": 14,
+      "criteriaTotal": 25
+    },
+    {
+      "group": "stale-lab",
+      "packets": 5,
+      "cer": 0.0011201344161299357,
+      "extraction": {
+        "precision": 1,
+        "recall": 0.6615384615384615,
+        "f1": 0.7962962962962963,
+        "tp": 43,
+        "predicted": 43,
+        "gold": 65
+      },
+      "criteriaCorrect": 13,
+      "criteriaTotal": 25
+    },
+    {
+      "group": "unclear-trial",
+      "packets": 5,
+      "cer": 0.0005807200929152149,
+      "extraction": {
+        "precision": 1,
+        "recall": 0.76,
+        "f1": 0.8636363636363636,
+        "tp": 38,
+        "predicted": 38,
+        "gold": 50
+      },
+      "criteriaCorrect": 15,
+      "criteriaTotal": 25
+    },
+    {
+      "group": "conflicting-dose",
+      "packets": 5,
+      "cer": 0.0005549389567147614,
+      "extraction": {
+        "precision": 1,
+        "recall": 0.676923076923077,
+        "f1": 0.8073394495412844,
+        "tp": 44,
+        "predicted": 44,
+        "gold": 65
+      },
+      "criteriaCorrect": 15,
+      "criteriaTotal": 25
+    },
+    {
+      "group": "intolerance",
+      "packets": 5,
+      "cer": 0.001101624896722666,
+      "extraction": {
+        "precision": 1,
+        "recall": 0.6615384615384615,
+        "f1": 0.7962962962962963,
+        "tp": 43,
+        "predicted": 43,
+        "gold": 65
+      },
+      "criteriaCorrect": 15,
+      "criteriaTotal": 25
+    }
+  ],
+  "reviewerOverrideRate": {
+    "value": null,
+    "reason": "No observed nurse study. Scripted UI actions are not workflow evidence."
+  },
+  "hostedComparison": {
+    "value": null,
+    "reason": "Local only. No paid API or external document transfer."
+  }
+}

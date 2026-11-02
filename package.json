@@ -1,0 +1,41 @@
+{
+  "name": "clinical-evidence-map",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "eval": "tsx scripts/evaluate.ts",
+    "start": "tsx scripts/server.ts",
+    "test:ui": "playwright test",
+    "gate": "npm run typecheck && npm test && npm run eval -- --check && npm run test:ui",
+    "summary": "tsx scripts/summary.ts",
+    "media": "node scripts/media.mjs",
+    "format:check": "prettier --check --no-semi services scripts tests web playwright.config.ts tsconfig.json package.json",
+    "report": "node scripts/report.mjs"
+  },
+  "dependencies": {
+    "fontkit": "2.0.4",
+    "layered-pii-redaction": "https://codeload.github.com/kvmadden/pii-redaction-gate/tar.gz/63ac3abc48094e86f6883f99c1586b45bf6ebd3f",
+    "pdfkit": "0.17.2",
+    "sharp": "0.34.5",
+    "tesseract.js": "6.0.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.56.1",
+    "@types/node": "24.10.0",
+    "@types/pdfkit": "0.17.3",
+    "gifenc": "^1.0.3",
+    "prettier": "^3.6.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "playwright-core": "1.56.1"
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "packet_id": "packet-025",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/packets/packet-025.md",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [
+    {
+      "type": "patient_name",
+      "value": "Sera Fenwick",
+      "source_span": {
+        "start": 53,
+        "end": 87,
+        "text": "Patient: Sera Fenwick (fictional)."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "age",
+      "value": 57,
+      "source_span": {
+        "start": 88,
+        "end": 102,
+        "text": "Age: 57 years."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "request_date",
+      "value": "2026-10-01",
+      "source_span": {
+        "start": 27,
+        "end": 52,
+        "text": "Request date: 2026-10-01."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "provider",
+      "value": "Dr. Rowan Vale",
+      "source_span": {
+        "start": 103,
+        "end": 155,
+        "text": "From: Dr. Rowan Vale, fictional requesting provider."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_medication",
+      "value": "semaglutide",
+      "source_span": {
+        "start": 156,
+        "end": 191,
+        "text": "Request: semaglutide 0.5 mg weekly."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_dose",
+      "value": "0.5 mg weekly",
+      "source_span": {
+        "start": 156,
+        "end": 191,
+        "text": "Request: semaglutide 0.5 mg weekly."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "diagnosis",
+      "value": "Type 2 diabetes mellitus",
+      "source_span": {
+        "start": 297,
+        "end": 333,
+        "text": "Diagnosis: Type 2 diabetes mellitus."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "measurement",
+      "value": {
+        "name": "A1c",
+        "value": 8.6,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 419,
+        "end": 452,
+        "text": "A1c: 8.6 %; collected 2026-09-15."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "measurement_date",
+      "value": "2026-09-15",
+      "source_span": {
+        "start": 419,
+        "end": 452,
+        "text": "A1c: 8.6 %; collected 2026-09-15."
+      },
+      "reviewed": false
+    }
+  ],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 88,
+          "end": 102,
+          "text": "Age: 57 years."
+        }
+      ],
+      "reason": "Documented in the supplied source.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 297,
+          "end": 333,
+          "text": "Diagnosis: Type 2 diabetes mellitus."
+        }
+      ],
+      "reason": "Documented in the supplied source.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 419,
+          "end": 452,
+          "text": "A1c: 8.6 %; collected 2026-09-15."
+        },
+        {
+          "start": 27,
+          "end": 52,
+          "text": "Request date: 2026-10-01."
+        }
+      ],
+      "reason": "Documented in the supplied source.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The medication history page was not supplied.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 156,
+          "end": 191,
+          "text": "Request: semaglutide 0.5 mg weekly."
+        }
+      ],
+      "reason": "Documented in the supplied source.",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reviewed": false
+  }
+}

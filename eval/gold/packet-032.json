@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "packet_id": "packet-032",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/packets/packet-032.md",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [
+    {
+      "type": "patient_name",
+      "value": "Tobin Dunvale",
+      "source_span": {
+        "start": 53,
+        "end": 88,
+        "text": "Patient: Tobin Dunvale (fictional)."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "age",
+      "value": 35,
+      "source_span": {
+        "start": 89,
+        "end": 103,
+        "text": "Age: 35 years."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "request_date",
+      "value": "2026-10-01",
+      "source_span": {
+        "start": 27,
+        "end": 52,
+        "text": "Request date: 2026-10-01."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "provider",
+      "value": "Dr. Rowan Vale",
+      "source_span": {
+        "start": 104,
+        "end": 156,
+        "text": "From: Dr. Rowan Vale, fictional requesting provider."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_medication",
+      "value": "adalimumab",
+      "source_span": {
+        "start": 157,
+        "end": 200,
+        "text": "Request: adalimumab 40 mg every other week."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_dose",
+      "value": "40 mg every other week",
+      "source_span": {
+        "start": 157,
+        "end": 200,
+        "text": "Request: adalimumab 40 mg every other week."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "diagnosis",
+      "value": "Moderate-to-severe plaque psoriasis",
+      "source_span": {
+        "start": 317,
+        "end": 364,
+        "text": "Diagnosis: Moderate-to-severe plaque psoriasis."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "measurement",
+      "value": {
+        "name": "Body surface area",
+        "value": 14.0,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 450,
+        "end": 496,
+        "text": "Body surface area: 14 %; collected 2026-01-01."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "measurement_date",
+      "value": "2026-01-01",
+      "source_span": {
+        "start": 450,
+        "end": 496,
+        "text": "Body surface area: 14 %; collected 2026-01-01."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "methotrexate",
+      "source_span": {
+        "start": 579,
+        "end": 692,
+        "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "15 mg weekly",
+      "source_span": {
+        "start": 579,
+        "end": 692,
+        "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2026-04-01",
+      "source_span": {
+        "start": 579,
+        "end": 692,
+        "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-08-01",
+      "source_span": {
+        "start": 579,
+        "end": 692,
+        "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_outcome",
+      "value": "inadequate response",
+      "source_span": {
+        "start": 579,
+        "end": 692,
+        "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "medication_list_dose",
+      "value": "40 mg every other week",
+      "source_span": {
+        "start": 517,
+        "end": 578,
+        "text": "Current requested therapy: adalimumab 40 mg every other week."
+      },
+      "reviewed": false
+    }
+  ],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 89,
+          "end": 103,
+          "text": "Age: 35 years."
+        }
+      ],
+      "reason": "Documented in the supplied source.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 317,
+          "end": 364,
+          "text": "Diagnosis: Moderate-to-severe plaque psoriasis."
+        }
+      ],
+      "reason": "Documented in the supplied source.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 450,
+          "end": 496,
+          "text": "Body surface area: 14 %; collected 2026-01-01."
+        },
+        {
+          "start": 27,
+          "end": 52,
+          "text": "Request date: 2026-10-01."
+        }
+      ],
+      "reason": "The measurement is outside the fictional 180-day window.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 579,
+          "end": 692,
+          "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        }
+      ],
+      "reason": "The documented trial runs 122 days, meeting the fictional 90-day requirement.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 157,
+          "end": 200,
+          "text": "Request: adalimumab 40 mg every other week."
+        }
+      ],
+      "reason": "Documented in the supplied source.",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reviewed": false
+  }
+}
