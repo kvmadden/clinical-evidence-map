@@ -80,7 +80,7 @@ npm run eval -- --check
 npm start
 ```
 
-Open `http://127.0.0.1:4178`. The checked-in page images, PDFs and OCR outputs let you inspect and rescore the demonstration immediately. `npm run generate` rebuilds the packets and labels. `npm run eval -- --rebuild` redraws all 63 pages and reruns local OCR, which takes several minutes. `npm run eval:holdout-v2 -- --check` confirms that the second held-out set's saved blind score reproduces from its stored OCR. Any other run on that set is saved as a development result.
+`npm start` prints the review workspace's local address. Open it in a browser. The checked-in page images, PDFs and OCR outputs let you inspect and rescore the demonstration immediately. `npm run generate` rebuilds the packets and labels. `npm run eval -- --rebuild` redraws all 63 pages and reruns local OCR, which takes several minutes. `npm run eval:holdout-v2 -- --check` confirms that the second held-out set's saved blind score reproduces from its stored OCR. Any other run on that set is saved as a development result.
 
 A second consumer, a care-management summary, reuses the same redaction and extraction modules:
 
