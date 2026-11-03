@@ -2,28 +2,35 @@
 packet_id: packet-019
 fictional: true
 criteria_id: glp1-t2d
-quality_group: missing-lab
-quality_plan: "Lab page omitted from supplied packet."
-render_status: source_text_only
+group: fax-noise
+page_style: letter
+date_style: iso
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Request date: 2026-09-27.
 Patient: Lina Ashmere (fictional).
-Age: 51 years.
+Age: 51
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: semaglutide 0.5 mg weekly.
-Please review the enclosed records for Type 2 diabetes mellitus.
+Request: Ozempic (semaglutide) 1 pen (0.5 mg) SC weekly.
+Indication for this request: diabetes mellitus type 2.
+Please review the enclosed records for diabetes mellitus type 2.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Type 2 diabetes mellitus.
+Visit date: 2026-09-16.
+Assessment: diabetes mellitus type 2, above goal on prior therapy.
+Past medical history: hypertension, seasonal allergies.
+Request date recorded in note: 2026-08-28.
 The patient reports ongoing symptoms despite prior treatment.
 
+LABS AND MEASUREMENTS
+A1C = 8.6 % on 2026-09-11
+
 MEDICATION HISTORY
-Current requested therapy: semaglutide 0.5 mg weekly.
-Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: Ozempic (semaglutide) 1 pen (0.5 mg) SC q7d.
+Prior therapy: metformin 500 mg tablets, 2 tabs PO BID.
+Dates and response not supplied.
 No other prior therapy records supplied.

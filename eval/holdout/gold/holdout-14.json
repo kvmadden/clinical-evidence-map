@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-14",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout/packets/holdout-14.md",
+  "group": "smudge",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Unresolved numeric dates alter BSA recency; different indication; no fully supported criterion.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 124,
+          "end": 137,
+          "text": "Age: 16 years"
+        }
+      ],
+      "reason": "The stated age is under 18.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The indication is hidradenitis suppurativa; plaque psoriasis is never named.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 15,
+          "end": 37,
+          "text": "Order date: 09/10/2026"
+        },
+        {
+          "start": 269,
+          "end": 296,
+          "text": "BSA 11% measured 04/03/2026"
+        }
+      ],
+      "reason": "The measurement is 160 days old under month-first dates and 219 days old under day-first dates; neither order is resolved.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No methotrexate exposure is documented.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 209,
+          "end": 252,
+          "text": "Maintenance order: 80mg SQ every other week"
+        }
+      ],
+      "reason": "The amount is 80 mg rather than 40 mg.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

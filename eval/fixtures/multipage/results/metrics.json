@@ -1,0 +1,2496 @@
+{
+  "notice": "draft, pending pharmacist review",
+  "set": "multi-page fixture",
+  "packets": 2,
+  "heldOut": false,
+  "run": {
+    "class": "development",
+    "set": "multipage",
+    "frozenSha256": null
+  },
+  "clinicalValidation": {
+    "status": "pending pharmacist review",
+    "reviewedCriteria": 0,
+    "reviewedEntities": 0,
+    "scoredClinicalRate": null
+  },
+  "draftDiagnostics": {
+    "ocr": {
+      "cer": 0,
+      "edits": 0,
+      "referenceCharacters": 1741,
+      "whitespace": "collapsed runs, case sensitive",
+      "orientation": {
+        "correct": 5,
+        "total": 5,
+        "turnedPages": 0,
+        "turnedCorrect": 0
+      }
+    },
+    "privacy": {
+      "dateHandling": "shifted by a per-packet number of days, intervals kept",
+      "dateTokens": 10,
+      "datesRemovedWithoutShift": 0,
+      "overRedaction": {
+        "definition": "[name] tokens whose original text holds no word of the packet's fictional patient or provider name",
+        "ocr": {
+          "nameTokens": 8,
+          "overRedacted": 0,
+          "conditionHidden": 0,
+          "aligned": 2,
+          "examples": []
+        },
+        "source": {
+          "nameTokens": 8,
+          "overRedacted": 0,
+          "conditionHidden": 0,
+          "aligned": 2,
+          "examples": []
+        }
+      }
+    },
+    "extraction": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 29,
+      "predicted": 29,
+      "gold": 29,
+      "exactEvidenceQuoteMatches": 29,
+      "offsetBasis": "predictions reference redacted OCR, gold references original source. Dates are unshifted and date tokens restored before quotes are compared"
+    },
+    "criteria": {
+      "total": 10,
+      "correct": 9,
+      "accuracy": 0.9,
+      "alwaysFound": {
+        "correct": 5,
+        "accuracy": 0.5
+      },
+      "byStatus": {
+        "evidence_found": {
+          "gold": 5,
+          "predicted": 4,
+          "hit": 4,
+          "recall": 0.8,
+          "precision": 1
+        },
+        "missing": {
+          "gold": 0,
+          "predicted": 0,
+          "hit": 0,
+          "recall": null,
+          "precision": null
+        },
+        "needs_review": {
+          "gold": 5,
+          "predicted": 6,
+          "hit": 5,
+          "recall": 1,
+          "precision": 0.8333333333333334
+        }
+      },
+      "falseFound": {
+        "count": 0,
+        "of": 5
+      },
+      "statusAndQuotes": 9,
+      "confusion": {
+        "evidence_found": {
+          "evidence_found": 4,
+          "missing": 0,
+          "needs_review": 1
+        },
+        "missing": {
+          "evidence_found": 0,
+          "missing": 0,
+          "needs_review": 0
+        },
+        "needs_review": {
+          "evidence_found": 0,
+          "missing": 0,
+          "needs_review": 5
+        }
+      },
+      "falseMissing": {
+        "count": 0,
+        "of": 10
+      },
+      "sentToReview": {
+        "count": 6,
+        "of": 10
+      }
+    },
+    "criteriaReviewed": {
+      "total": 0,
+      "correct": 0,
+      "accuracy": null,
+      "alwaysFound": {
+        "correct": 0,
+        "accuracy": null
+      },
+      "byStatus": {
+        "evidence_found": {
+          "gold": 0,
+          "predicted": 0,
+          "hit": 0,
+          "recall": null,
+          "precision": null
+        },
+        "missing": {
+          "gold": 0,
+          "predicted": 0,
+          "hit": 0,
+          "recall": null,
+          "precision": null
+        },
+        "needs_review": {
+          "gold": 0,
+          "predicted": 0,
+          "hit": 0,
+          "recall": null,
+          "precision": null
+        }
+      },
+      "falseFound": {
+        "count": 0,
+        "of": 0
+      },
+      "statusAndQuotes": 0,
+      "confusion": {
+        "evidence_found": {
+          "evidence_found": 0,
+          "missing": 0,
+          "needs_review": 0
+        },
+        "missing": {
+          "evidence_found": 0,
+          "missing": 0,
+          "needs_review": 0
+        },
+        "needs_review": {
+          "evidence_found": 0,
+          "missing": 0,
+          "needs_review": 0
+        }
+      },
+      "falseMissing": {
+        "count": 0,
+        "of": 0
+      },
+      "sentToReview": {
+        "count": 0,
+        "of": 0
+      }
+    },
+    "criteriaDraft": {
+      "total": 10,
+      "correct": 9,
+      "accuracy": 0.9,
+      "alwaysFound": {
+        "correct": 5,
+        "accuracy": 0.5
+      },
+      "byStatus": {
+        "evidence_found": {
+          "gold": 5,
+          "predicted": 4,
+          "hit": 4,
+          "recall": 0.8,
+          "precision": 1
+        },
+        "missing": {
+          "gold": 0,
+          "predicted": 0,
+          "hit": 0,
+          "recall": null,
+          "precision": null
+        },
+        "needs_review": {
+          "gold": 5,
+          "predicted": 6,
+          "hit": 5,
+          "recall": 1,
+          "precision": 0.8333333333333334
+        }
+      },
+      "falseFound": {
+        "count": 0,
+        "of": 5
+      },
+      "statusAndQuotes": 9,
+      "confusion": {
+        "evidence_found": {
+          "evidence_found": 4,
+          "missing": 0,
+          "needs_review": 1
+        },
+        "missing": {
+          "evidence_found": 0,
+          "missing": 0,
+          "needs_review": 0
+        },
+        "needs_review": {
+          "evidence_found": 0,
+          "missing": 0,
+          "needs_review": 5
+        }
+      },
+      "falseMissing": {
+        "count": 0,
+        "of": 10
+      },
+      "sentToReview": {
+        "count": 6,
+        "of": 10
+      }
+    },
+    "spelling": {
+      "accepted": {
+        "total": 0,
+        "matched": 0
+      },
+      "notAccepted": {
+        "total": 0,
+        "acceptedAnyway": 0
+      }
+    },
+    "dateReading": {
+      "packets": 2,
+      "sameStatus": 2,
+      "ambiguousPackets": 2,
+      "ambiguousSame": 2
+    },
+    "verifier": {
+      "catchRate": 1,
+      "caught": 6,
+      "injected": 6,
+      "supported": 7,
+      "acceptedSupported": 7,
+      "challengeType": "three deterministic unsupported mutations per packet, not semantic validation"
+    },
+    "sourceTextBaseline": {
+      "extraction": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "tp": 29,
+        "predicted": 29,
+        "gold": 29,
+        "exactEvidenceQuoteMatches": 29
+      },
+      "criteria": {
+        "total": 10,
+        "correct": 10,
+        "accuracy": 1,
+        "alwaysFound": {
+          "correct": 5,
+          "accuracy": 0.5
+        },
+        "byStatus": {
+          "evidence_found": {
+            "gold": 5,
+            "predicted": 5,
+            "hit": 5,
+            "recall": 1,
+            "precision": 1
+          },
+          "missing": {
+            "gold": 0,
+            "predicted": 0,
+            "hit": 0,
+            "recall": null,
+            "precision": null
+          },
+          "needs_review": {
+            "gold": 5,
+            "predicted": 5,
+            "hit": 5,
+            "recall": 1,
+            "precision": 1
+          }
+        },
+        "falseFound": {
+          "count": 0,
+          "of": 5
+        },
+        "statusAndQuotes": 10,
+        "confusion": {
+          "evidence_found": {
+            "evidence_found": 5,
+            "missing": 0,
+            "needs_review": 0
+          },
+          "missing": {
+            "evidence_found": 0,
+            "missing": 0,
+            "needs_review": 0
+          },
+          "needs_review": {
+            "evidence_found": 0,
+            "missing": 0,
+            "needs_review": 5
+          }
+        },
+        "falseMissing": {
+          "count": 0,
+          "of": 10
+        },
+        "sentToReview": {
+          "count": 5,
+          "of": 10
+        }
+      },
+      "criterion": [
+        {
+          "key": "criterion",
+          "value": "adult",
+          "criteria": {
+            "total": 2,
+            "correct": 2,
+            "accuracy": 1,
+            "alwaysFound": {
+              "correct": 2,
+              "accuracy": 1
+            },
+            "byStatus": {
+              "evidence_found": {
+                "gold": 2,
+                "predicted": 2,
+                "hit": 2,
+                "recall": 1,
+                "precision": 1
+              },
+              "missing": {
+                "gold": 0,
+                "predicted": 0,
+                "hit": 0,
+                "recall": null,
+                "precision": null
+              },
+              "needs_review": {
+                "gold": 0,
+                "predicted": 0,
+                "hit": 0,
+                "recall": null,
+                "precision": null
+              }
+            },
+            "falseFound": {
+              "count": 0,
+              "of": 0
+            },
+            "statusAndQuotes": 2,
+            "confusion": {
+              "evidence_found": {
+                "evidence_found": 2,
+                "missing": 0,
+                "needs_review": 0
+              },
+              "missing": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 0
+              },
+              "needs_review": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 0
+              }
+            },
+            "falseMissing": {
+              "count": 0,
+              "of": 2
+            },
+            "sentToReview": {
+              "count": 0,
+              "of": 2
+            }
+          }
+        },
+        {
+          "key": "criterion",
+          "value": "diagnosis",
+          "criteria": {
+            "total": 2,
+            "correct": 2,
+            "accuracy": 1,
+            "alwaysFound": {
+              "correct": 2,
+              "accuracy": 1
+            },
+            "byStatus": {
+              "evidence_found": {
+                "gold": 2,
+                "predicted": 2,
+                "hit": 2,
+                "recall": 1,
+                "precision": 1
+              },
+              "missing": {
+                "gold": 0,
+                "predicted": 0,
+                "hit": 0,
+                "recall": null,
+                "precision": null
+              },
+              "needs_review": {
+                "gold": 0,
+                "predicted": 0,
+                "hit": 0,
+                "recall": null,
+                "precision": null
+              }
+            },
+            "falseFound": {
+              "count": 0,
+              "of": 0
+            },
+            "statusAndQuotes": 2,
+            "confusion": {
+              "evidence_found": {
+                "evidence_found": 2,
+                "missing": 0,
+                "needs_review": 0
+              },
+              "missing": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 0
+              },
+              "needs_review": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 0
+              }
+            },
+            "falseMissing": {
+              "count": 0,
+              "of": 2
+            },
+            "sentToReview": {
+              "count": 0,
+              "of": 2
+            }
+          }
+        },
+        {
+          "key": "criterion",
+          "value": "lab",
+          "criteria": {
+            "total": 2,
+            "correct": 2,
+            "accuracy": 1,
+            "alwaysFound": {
+              "correct": 0,
+              "accuracy": 0
+            },
+            "byStatus": {
+              "evidence_found": {
+                "gold": 0,
+                "predicted": 0,
+                "hit": 0,
+                "recall": null,
+                "precision": null
+              },
+              "missing": {
+                "gold": 0,
+                "predicted": 0,
+                "hit": 0,
+                "recall": null,
+                "precision": null
+              },
+              "needs_review": {
+                "gold": 2,
+                "predicted": 2,
+                "hit": 2,
+                "recall": 1,
+                "precision": 1
+              }
+            },
+            "falseFound": {
+              "count": 0,
+              "of": 2
+            },
+            "statusAndQuotes": 2,
+            "confusion": {
+              "evidence_found": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 0
+              },
+              "missing": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 0
+              },
+              "needs_review": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 2
+              }
+            },
+            "falseMissing": {
+              "count": 0,
+              "of": 2
+            },
+            "sentToReview": {
+              "count": 2,
+              "of": 2
+            }
+          }
+        },
+        {
+          "key": "criterion",
+          "value": "prior",
+          "criteria": {
+            "total": 2,
+            "correct": 2,
+            "accuracy": 1,
+            "alwaysFound": {
+              "correct": 0,
+              "accuracy": 0
+            },
+            "byStatus": {
+              "evidence_found": {
+                "gold": 0,
+                "predicted": 0,
+                "hit": 0,
+                "recall": null,
+                "precision": null
+              },
+              "missing": {
+                "gold": 0,
+                "predicted": 0,
+                "hit": 0,
+                "recall": null,
+                "precision": null
+              },
+              "needs_review": {
+                "gold": 2,
+                "predicted": 2,
+                "hit": 2,
+                "recall": 1,
+                "precision": 1
+              }
+            },
+            "falseFound": {
+              "count": 0,
+              "of": 2
+            },
+            "statusAndQuotes": 2,
+            "confusion": {
+              "evidence_found": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 0
+              },
+              "missing": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 0
+              },
+              "needs_review": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 2
+              }
+            },
+            "falseMissing": {
+              "count": 0,
+              "of": 2
+            },
+            "sentToReview": {
+              "count": 2,
+              "of": 2
+            }
+          }
+        },
+        {
+          "key": "criterion",
+          "value": "dose",
+          "criteria": {
+            "total": 2,
+            "correct": 2,
+            "accuracy": 1,
+            "alwaysFound": {
+              "correct": 1,
+              "accuracy": 0.5
+            },
+            "byStatus": {
+              "evidence_found": {
+                "gold": 1,
+                "predicted": 1,
+                "hit": 1,
+                "recall": 1,
+                "precision": 1
+              },
+              "missing": {
+                "gold": 0,
+                "predicted": 0,
+                "hit": 0,
+                "recall": null,
+                "precision": null
+              },
+              "needs_review": {
+                "gold": 1,
+                "predicted": 1,
+                "hit": 1,
+                "recall": 1,
+                "precision": 1
+              }
+            },
+            "falseFound": {
+              "count": 0,
+              "of": 1
+            },
+            "statusAndQuotes": 2,
+            "confusion": {
+              "evidence_found": {
+                "evidence_found": 1,
+                "missing": 0,
+                "needs_review": 0
+              },
+              "missing": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 0
+              },
+              "needs_review": {
+                "evidence_found": 0,
+                "missing": 0,
+                "needs_review": 1
+              }
+            },
+            "falseMissing": {
+              "count": 0,
+              "of": 2
+            },
+            "sentToReview": {
+              "count": 1,
+              "of": 2
+            }
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "definition": "Pages, page counters, turns and low-confidence lines come from the OCR output alone and go into the pipeline. Unread source lines compare OCR with the source text, so they are an evaluation measure only and never reach the pipeline.",
+      "pagesReceived": 5,
+      "multiPagePackets": 2,
+      "packetsWithPageCounter": 2,
+      "incompletePackets": [
+        "multipage-02"
+      ],
+      "pagesMissing": 1,
+      "orientationHandled": {
+        "pages": 5,
+        "of": 5
+      },
+      "ocrLinesWithLowConfidenceWord": {
+        "lines": 2,
+        "of": 44
+      },
+      "ocrLinesUnreadable": {
+        "lines": 0,
+        "of": 44
+      },
+      "unreadSourceLines": {
+        "definition": "source lines with visible text, matched whole line to whole line with the OCR lines, of which fewer than a quarter of the characters come back from the matched OCR line unchanged and in order",
+        "lines": 0,
+        "of": 44,
+        "flaggedByCoverage": 0,
+        "examples": []
+      }
+    },
+    "quotes": {
+      "reproduced": 58,
+      "total": 58
+    }
+  },
+  "slices": {
+    "group": [
+      {
+        "key": "group",
+        "value": "fax-noise",
+        "packets": 2,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 1741
+        },
+        "extraction": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 29,
+          "predicted": 29,
+          "gold": 29,
+          "exactEvidenceQuoteMatches": 29
+        },
+        "criteria": {
+          "total": 10,
+          "correct": 9,
+          "accuracy": 0.9,
+          "alwaysFound": {
+            "correct": 5,
+            "accuracy": 0.5
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 5,
+              "predicted": 4,
+              "hit": 4,
+              "recall": 0.8,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 5,
+              "predicted": 6,
+              "hit": 5,
+              "recall": 1,
+              "precision": 0.8333333333333334
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 5
+          },
+          "statusAndQuotes": 9,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 4,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 5
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 10
+          },
+          "sentToReview": {
+            "count": 6,
+            "of": 10
+          }
+        },
+        "label": "Simulated fax noise"
+      }
+    ],
+    "class": [
+      {
+        "key": "class",
+        "value": "glp1-t2d",
+        "packets": 0,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 0
+        },
+        "extraction": {
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "tp": 0,
+          "predicted": 0,
+          "gold": 0,
+          "exactEvidenceQuoteMatches": 0
+        },
+        "criteria": {
+          "total": 0,
+          "correct": 0,
+          "accuracy": null,
+          "alwaysFound": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 0
+          },
+          "statusAndQuotes": 0,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 0
+          },
+          "sentToReview": {
+            "count": 0,
+            "of": 0
+          }
+        }
+      },
+      {
+        "key": "class",
+        "value": "biologic-psoriasis",
+        "packets": 0,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 0
+        },
+        "extraction": {
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "tp": 0,
+          "predicted": 0,
+          "gold": 0,
+          "exactEvidenceQuoteMatches": 0
+        },
+        "criteria": {
+          "total": 0,
+          "correct": 0,
+          "accuracy": null,
+          "alwaysFound": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 0
+          },
+          "statusAndQuotes": 0,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 0
+          },
+          "sentToReview": {
+            "count": 0,
+            "of": 0
+          }
+        }
+      },
+      {
+        "key": "class",
+        "value": "pcsk9",
+        "packets": 2,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 1741
+        },
+        "extraction": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 29,
+          "predicted": 29,
+          "gold": 29,
+          "exactEvidenceQuoteMatches": 29
+        },
+        "criteria": {
+          "total": 10,
+          "correct": 9,
+          "accuracy": 0.9,
+          "alwaysFound": {
+            "correct": 5,
+            "accuracy": 0.5
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 5,
+              "predicted": 4,
+              "hit": 4,
+              "recall": 0.8,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 5,
+              "predicted": 6,
+              "hit": 5,
+              "recall": 1,
+              "precision": 0.8333333333333334
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 5
+          },
+          "statusAndQuotes": 9,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 4,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 5
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 10
+          },
+          "sentToReview": {
+            "count": 6,
+            "of": 10
+          }
+        }
+      }
+    ],
+    "tag": [
+      {
+        "key": "tag",
+        "value": "date-reading:unresolved",
+        "packets": 2,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 1741
+        },
+        "extraction": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 29,
+          "predicted": 29,
+          "gold": 29,
+          "exactEvidenceQuoteMatches": 29
+        },
+        "criteria": {
+          "total": 10,
+          "correct": 9,
+          "accuracy": 0.9,
+          "alwaysFound": {
+            "correct": 5,
+            "accuracy": 0.5
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 5,
+              "predicted": 4,
+              "hit": 4,
+              "recall": 0.8,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 5,
+              "predicted": 6,
+              "hit": 5,
+              "recall": 1,
+              "precision": 0.8333333333333334
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 5
+          },
+          "statusAndQuotes": 9,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 4,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 5
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 10
+          },
+          "sentToReview": {
+            "count": 6,
+            "of": 10
+          }
+        }
+      },
+      {
+        "key": "tag",
+        "value": "date:day-first",
+        "packets": 2,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 1741
+        },
+        "extraction": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 29,
+          "predicted": 29,
+          "gold": 29,
+          "exactEvidenceQuoteMatches": 29
+        },
+        "criteria": {
+          "total": 10,
+          "correct": 9,
+          "accuracy": 0.9,
+          "alwaysFound": {
+            "correct": 5,
+            "accuracy": 0.5
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 5,
+              "predicted": 4,
+              "hit": 4,
+              "recall": 0.8,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 5,
+              "predicted": 6,
+              "hit": 5,
+              "recall": 1,
+              "precision": 0.8333333333333334
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 5
+          },
+          "statusAndQuotes": 9,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 4,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 5
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 10
+          },
+          "sentToReview": {
+            "count": 6,
+            "of": 10
+          }
+        }
+      },
+      {
+        "key": "tag",
+        "value": "dose-format:route",
+        "packets": 2,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 1741
+        },
+        "extraction": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 29,
+          "predicted": 29,
+          "gold": 29,
+          "exactEvidenceQuoteMatches": 29
+        },
+        "criteria": {
+          "total": 10,
+          "correct": 9,
+          "accuracy": 0.9,
+          "alwaysFound": {
+            "correct": 5,
+            "accuracy": 0.5
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 5,
+              "predicted": 4,
+              "hit": 4,
+              "recall": 0.8,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 5,
+              "predicted": 6,
+              "hit": 5,
+              "recall": 1,
+              "precision": 0.8333333333333334
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 5
+          },
+          "statusAndQuotes": 9,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 4,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 5
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 10
+          },
+          "sentToReview": {
+            "count": 6,
+            "of": 10
+          }
+        }
+      },
+      {
+        "key": "tag",
+        "value": "drug-name:generic",
+        "packets": 2,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 1741
+        },
+        "extraction": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 29,
+          "predicted": 29,
+          "gold": 29,
+          "exactEvidenceQuoteMatches": 29
+        },
+        "criteria": {
+          "total": 10,
+          "correct": 9,
+          "accuracy": 0.9,
+          "alwaysFound": {
+            "correct": 5,
+            "accuracy": 0.5
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 5,
+              "predicted": 4,
+              "hit": 4,
+              "recall": 0.8,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 5,
+              "predicted": 6,
+              "hit": 5,
+              "recall": 1,
+              "precision": 0.8333333333333334
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 5
+          },
+          "statusAndQuotes": 9,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 4,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 5
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 10
+          },
+          "sentToReview": {
+            "count": 6,
+            "of": 10
+          }
+        }
+      },
+      {
+        "key": "tag",
+        "value": "page-not-received",
+        "packets": 1,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 667
+        },
+        "extraction": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 10,
+          "predicted": 10,
+          "gold": 10,
+          "exactEvidenceQuoteMatches": 10
+        },
+        "criteria": {
+          "total": 5,
+          "correct": 4,
+          "accuracy": 0.8,
+          "alwaysFound": {
+            "correct": 3,
+            "accuracy": 0.6
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 3,
+              "predicted": 2,
+              "hit": 2,
+              "recall": 0.6666666666666666,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 2,
+              "predicted": 3,
+              "hit": 2,
+              "recall": 1,
+              "precision": 0.6666666666666666
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 2
+          },
+          "statusAndQuotes": 4,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 2,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 2
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 5
+          },
+          "sentToReview": {
+            "count": 3,
+            "of": 5
+          }
+        }
+      },
+      {
+        "key": "tag",
+        "value": "page:form",
+        "packets": 2,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 1741
+        },
+        "extraction": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 29,
+          "predicted": 29,
+          "gold": 29,
+          "exactEvidenceQuoteMatches": 29
+        },
+        "criteria": {
+          "total": 10,
+          "correct": 9,
+          "accuracy": 0.9,
+          "alwaysFound": {
+            "correct": 5,
+            "accuracy": 0.5
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 5,
+              "predicted": 4,
+              "hit": 4,
+              "recall": 0.8,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 5,
+              "predicted": 6,
+              "hit": 5,
+              "recall": 1,
+              "precision": 0.8333333333333334
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 5
+          },
+          "statusAndQuotes": 9,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 4,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 5
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 10
+          },
+          "sentToReview": {
+            "count": 6,
+            "of": 10
+          }
+        }
+      },
+      {
+        "key": "tag",
+        "value": "pages:2",
+        "packets": 1,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 667
+        },
+        "extraction": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 10,
+          "predicted": 10,
+          "gold": 10,
+          "exactEvidenceQuoteMatches": 10
+        },
+        "criteria": {
+          "total": 5,
+          "correct": 4,
+          "accuracy": 0.8,
+          "alwaysFound": {
+            "correct": 3,
+            "accuracy": 0.6
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 3,
+              "predicted": 2,
+              "hit": 2,
+              "recall": 0.6666666666666666,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 2,
+              "predicted": 3,
+              "hit": 2,
+              "recall": 1,
+              "precision": 0.6666666666666666
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 2
+          },
+          "statusAndQuotes": 4,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 2,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 2
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 5
+          },
+          "sentToReview": {
+            "count": 3,
+            "of": 5
+          }
+        }
+      },
+      {
+        "key": "tag",
+        "value": "pages:3",
+        "packets": 1,
+        "ocr": {
+          "cer": 0,
+          "edits": 0,
+          "referenceCharacters": 1074
+        },
+        "extraction": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "tp": 19,
+          "predicted": 19,
+          "gold": 19,
+          "exactEvidenceQuoteMatches": 19
+        },
+        "criteria": {
+          "total": 5,
+          "correct": 5,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 2,
+            "accuracy": 0.4
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 2,
+              "predicted": 2,
+              "hit": 2,
+              "recall": 1,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 3,
+              "predicted": 3,
+              "hit": 3,
+              "recall": 1,
+              "precision": 1
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 3
+          },
+          "statusAndQuotes": 5,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 2,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 3
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 5
+          },
+          "sentToReview": {
+            "count": 3,
+            "of": 5
+          }
+        }
+      }
+    ],
+    "criterion": [
+      {
+        "key": "criterion",
+        "value": "adult",
+        "criteria": {
+          "total": 2,
+          "correct": 2,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 2,
+            "accuracy": 1
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 2,
+              "predicted": 2,
+              "hit": 2,
+              "recall": 1,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 0
+          },
+          "statusAndQuotes": 2,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 2,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 2
+          },
+          "sentToReview": {
+            "count": 0,
+            "of": 2
+          }
+        }
+      },
+      {
+        "key": "criterion",
+        "value": "diagnosis",
+        "criteria": {
+          "total": 2,
+          "correct": 2,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 2,
+            "accuracy": 1
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 2,
+              "predicted": 2,
+              "hit": 2,
+              "recall": 1,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 0
+          },
+          "statusAndQuotes": 2,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 2,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 2
+          },
+          "sentToReview": {
+            "count": 0,
+            "of": 2
+          }
+        }
+      },
+      {
+        "key": "criterion",
+        "value": "lab",
+        "criteria": {
+          "total": 2,
+          "correct": 2,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 0,
+            "accuracy": 0
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 2,
+              "predicted": 2,
+              "hit": 2,
+              "recall": 1,
+              "precision": 1
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 2
+          },
+          "statusAndQuotes": 2,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 2
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 2
+          },
+          "sentToReview": {
+            "count": 2,
+            "of": 2
+          }
+        }
+      },
+      {
+        "key": "criterion",
+        "value": "prior",
+        "criteria": {
+          "total": 2,
+          "correct": 2,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 0,
+            "accuracy": 0
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 2,
+              "predicted": 2,
+              "hit": 2,
+              "recall": 1,
+              "precision": 1
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 2
+          },
+          "statusAndQuotes": 2,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 2
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 2
+          },
+          "sentToReview": {
+            "count": 2,
+            "of": 2
+          }
+        }
+      },
+      {
+        "key": "criterion",
+        "value": "dose",
+        "criteria": {
+          "total": 2,
+          "correct": 1,
+          "accuracy": 0.5,
+          "alwaysFound": {
+            "correct": 1,
+            "accuracy": 0.5
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 1,
+              "predicted": 0,
+              "hit": 0,
+              "recall": 0,
+              "precision": null
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 1,
+              "predicted": 2,
+              "hit": 1,
+              "recall": 1,
+              "precision": 0.5
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 1
+          },
+          "statusAndQuotes": 1,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 1
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 2
+          },
+          "sentToReview": {
+            "count": 2,
+            "of": 2
+          }
+        }
+      }
+    ],
+    "scenario": [
+      {
+        "key": "scenario",
+        "value": "adult:supported",
+        "criteria": {
+          "total": 2,
+          "correct": 2,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 2,
+            "accuracy": 1
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 2,
+              "predicted": 2,
+              "hit": 2,
+              "recall": 1,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 0
+          },
+          "statusAndQuotes": 2,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 2,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 2
+          },
+          "sentToReview": {
+            "count": 0,
+            "of": 2
+          }
+        }
+      },
+      {
+        "key": "scenario",
+        "value": "diagnosis:supported",
+        "criteria": {
+          "total": 2,
+          "correct": 2,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 2,
+            "accuracy": 1
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 2,
+              "predicted": 2,
+              "hit": 2,
+              "recall": 1,
+              "precision": 1
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 0
+          },
+          "statusAndQuotes": 2,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 2,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 2
+          },
+          "sentToReview": {
+            "count": 0,
+            "of": 2
+          }
+        }
+      },
+      {
+        "key": "scenario",
+        "value": "dose:conflict",
+        "criteria": {
+          "total": 1,
+          "correct": 1,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 0,
+            "accuracy": 0
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 1,
+              "predicted": 1,
+              "hit": 1,
+              "recall": 1,
+              "precision": 1
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 1
+          },
+          "statusAndQuotes": 1,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 1
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 1
+          },
+          "sentToReview": {
+            "count": 1,
+            "of": 1
+          }
+        }
+      },
+      {
+        "key": "scenario",
+        "value": "dose:supported",
+        "criteria": {
+          "total": 1,
+          "correct": 0,
+          "accuracy": 0,
+          "alwaysFound": {
+            "correct": 1,
+            "accuracy": 1
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 1,
+              "predicted": 0,
+              "hit": 0,
+              "recall": 0,
+              "precision": null
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 0,
+              "predicted": 1,
+              "hit": 0,
+              "recall": null,
+              "precision": 0
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 0
+          },
+          "statusAndQuotes": 0,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 1
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 1
+          },
+          "sentToReview": {
+            "count": 1,
+            "of": 1
+          }
+        }
+      },
+      {
+        "key": "scenario",
+        "value": "lab:ambiguous-date",
+        "criteria": {
+          "total": 2,
+          "correct": 2,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 0,
+            "accuracy": 0
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 2,
+              "predicted": 2,
+              "hit": 2,
+              "recall": 1,
+              "precision": 1
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 2
+          },
+          "statusAndQuotes": 2,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 2
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 2
+          },
+          "sentToReview": {
+            "count": 2,
+            "of": 2
+          }
+        }
+      },
+      {
+        "key": "scenario",
+        "value": "prior:ambiguous-date",
+        "criteria": {
+          "total": 1,
+          "correct": 1,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 0,
+            "accuracy": 0
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 1,
+              "predicted": 1,
+              "hit": 1,
+              "recall": 1,
+              "precision": 1
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 1
+          },
+          "statusAndQuotes": 1,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 1
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 1
+          },
+          "sentToReview": {
+            "count": 1,
+            "of": 1
+          }
+        }
+      },
+      {
+        "key": "scenario",
+        "value": "prior:page-not-received",
+        "criteria": {
+          "total": 1,
+          "correct": 1,
+          "accuracy": 1,
+          "alwaysFound": {
+            "correct": 0,
+            "accuracy": 0
+          },
+          "byStatus": {
+            "evidence_found": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "missing": {
+              "gold": 0,
+              "predicted": 0,
+              "hit": 0,
+              "recall": null,
+              "precision": null
+            },
+            "needs_review": {
+              "gold": 1,
+              "predicted": 1,
+              "hit": 1,
+              "recall": 1,
+              "precision": 1
+            }
+          },
+          "falseFound": {
+            "count": 0,
+            "of": 1
+          },
+          "statusAndQuotes": 1,
+          "confusion": {
+            "evidence_found": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "missing": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 0
+            },
+            "needs_review": {
+              "evidence_found": 0,
+              "missing": 0,
+              "needs_review": 1
+            }
+          },
+          "falseMissing": {
+            "count": 0,
+            "of": 1
+          },
+          "sentToReview": {
+            "count": 1,
+            "of": 1
+          }
+        }
+      }
+    ]
+  },
+  "reviewerOverrideRate": {
+    "value": null,
+    "reason": "No observed nurse study. Scripted UI actions are not workflow evidence."
+  },
+  "hostedComparison": {
+    "value": null,
+    "reason": "Local only. No paid API or external document transfer."
+  }
+}

@@ -2,9 +2,9 @@
 packet_id: packet-007
 fictional: true
 criteria_id: glp1-t2d
-quality_group: skew
-quality_plan: "Complete text; later render with 7-degree skew."
-render_status: source_text_only
+group: rotation-7deg
+page_style: letter
+date_style: iso
 names: all_fictional
 identifiers: none
 ---
@@ -16,11 +16,11 @@ Patient: Veda Brookvale (fictional).
 Age: 39 years.
 From: Dr. Rowan Vale, fictional requesting provider.
 Request: semaglutide 0.5 mg weekly.
-Please review the enclosed records for Type 2 diabetes mellitus.
+Indication for this request: Type 2 diabetes mellitus.
 
 CLINICAL NOTES
 Visit date: 2026-09-20.
-Diagnosis: Type 2 diabetes mellitus.
+Assessment: Type 2 diabetes mellitus, above goal on prior therapy.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
@@ -28,5 +28,7 @@ A1c: 8.6 %; collected 2026-09-15.
 
 MEDICATION HISTORY
 Current requested therapy: semaglutide 0.5 mg weekly.
-Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Prior therapy: metformin 1000 mg twice daily.
+Trial dates: started 2026-08-01; stopped 2026-08-15.
+Stopped for persistent nausea and diarrhea.
 No other prior therapy records supplied.

@@ -1,39 +1,56 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-023",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "biologic-psoriasis",
   "source_file": "eval/packets/packet-023.md",
+  "group": "fax-noise",
+  "tags": [
+    "page:form",
+    "date:text-dmy",
+    "date-reading:none",
+    "drug-name:brand",
+    "dose-format:compact"
+  ],
+  "date_reading": {
+    "status": "none",
+    "order": null
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-09-29",
+      "source_span": {
+        "start": 33,
+        "end": 61,
+        "text": "Date of request: 29 Sep 2026"
+      },
+      "date": {
+        "written": "29 Sep 2026",
+        "format": "text-dmy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Elva Fenwick",
       "source_span": {
-        "start": 53,
-        "end": 87,
-        "text": "Patient: Elva Fenwick (fictional)."
+        "start": 62,
+        "end": 100,
+        "text": "Patient name: Elva Fenwick (fictional)"
       },
       "reviewed": false
     },
     {
       "type": "age",
-      "value": 55,
+      "value": 17,
       "source_span": {
-        "start": 88,
-        "end": 102,
-        "text": "Age: 55 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
+        "start": 101,
+        "end": 108,
+        "text": "Age: 17"
       },
       "reviewed": false
     },
@@ -41,9 +58,9 @@
       "type": "provider",
       "value": "Dr. Rowan Vale",
       "source_span": {
-        "start": 103,
-        "end": 155,
-        "text": "From: Dr. Rowan Vale, fictional requesting provider."
+        "start": 109,
+        "end": 147,
+        "text": "Prescriber: Dr. Rowan Vale (fictional)"
       },
       "reviewed": false
     },
@@ -51,53 +68,141 @@
       "type": "requested_medication",
       "value": "adalimumab",
       "source_span": {
-        "start": 156,
-        "end": 199,
-        "text": "Request: adalimumab 40 mg every other week."
+        "start": 148,
+        "end": 176,
+        "text": "Medication requested: Humira"
       },
       "reviewed": false
     },
     {
       "type": "requested_dose",
-      "value": "40 mg every other week",
+      "value": "40 mg every 2 weeks",
       "source_span": {
-        "start": 156,
-        "end": 199,
-        "text": "Request: adalimumab 40 mg every other week."
+        "start": 177,
+        "end": 206,
+        "text": "Dose and frequency: 40mg q2wk"
       },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Moderate-to-severe plaque psoriasis",
+      "type": "indication",
+      "value": "moderate-to-severe plaque psoriasis",
       "source_span": {
-        "start": 316,
-        "end": 363,
-        "text": "Diagnosis: Moderate-to-severe plaque psoriasis."
+        "start": 207,
+        "end": 271,
+        "text": "Diagnosis for this request: plaque psoriasis, moderate to severe"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "moderate-to-severe plaque psoriasis",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 313,
+        "end": 387,
+        "text": "Assessment: plaque psoriasis, moderate to severe, active on prior therapy."
       },
       "reviewed": false
     },
     {
       "type": "measurement",
       "value": {
-        "name": "Body surface area",
-        "value": 14.0,
+        "name": "BSA",
+        "value": 14,
         "unit": "%"
       },
       "source_span": {
-        "start": 449,
-        "end": 495,
-        "text": "Body surface area: 14 %; collected 2026-09-15."
+        "start": 473,
+        "end": 494,
+        "text": "Most recent BSA: 14 %"
       },
       "reviewed": false
     },
     {
       "type": "measurement_date",
-      "value": "2026-09-15",
+      "value": "2026-09-13",
       "source_span": {
-        "start": 449,
-        "end": 495,
-        "text": "Body surface area: 14 %; collected 2026-09-15."
+        "start": 495,
+        "end": 522,
+        "text": "Date collected: 13 Sep 2026"
+      },
+      "date": {
+        "written": "13 Sep 2026",
+        "format": "text-dmy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "medication_list_dose",
+      "value": "80 mg every 2 weeks",
+      "source_span": {
+        "start": 543,
+        "end": 587,
+        "text": "Current requested therapy: Humira 80mg q2wk."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2026-03-30",
+      "source_span": {
+        "start": 636,
+        "end": 675,
+        "text": "Trial dates: 30 Mar 2026 to 30 Jul 2026"
+      },
+      "date": {
+        "written": "30 Mar 2026",
+        "format": "text-dmy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-07-30",
+      "source_span": {
+        "start": 636,
+        "end": 675,
+        "text": "Trial dates: 30 Mar 2026 to 30 Jul 2026"
+      },
+      "date": {
+        "written": "30 Jul 2026",
+        "format": "text-dmy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "methotrexate",
+      "source_span": {
+        "start": 588,
+        "end": 635,
+        "text": "Prior therapies tried: methotrexate 15mg weekly"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "15 mg weekly",
+      "source_span": {
+        "start": 588,
+        "end": 635,
+        "text": "Prior therapies tried: methotrexate 15mg weekly"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_outcome",
+      "value": "inadequate response",
+      "source_span": {
+        "start": 676,
+        "end": 705,
+        "text": "Outcome: inadequate response."
       },
       "reviewed": false
     }
@@ -105,15 +210,16 @@
   "criterion_evidence": [
     {
       "criterion_id": "adult",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 88,
-          "end": 102,
-          "text": "Age: 55 years."
+          "start": 101,
+          "end": 108,
+          "text": "Age: 17"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Documented age 17 is below the fictional 18-year rule.",
+      "scenario": "minor",
       "reviewed": false
     },
     {
@@ -121,12 +227,18 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 316,
-          "end": 363,
-          "text": "Diagnosis: Moderate-to-severe plaque psoriasis."
+          "start": 207,
+          "end": 271,
+          "text": "Diagnosis for this request: plaque psoriasis, moderate to severe"
+        },
+        {
+          "start": 313,
+          "end": 387,
+          "text": "Assessment: plaque psoriasis, moderate to severe, active on prior therapy."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The request names moderate-to-severe plaque psoriasis as its reason.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
@@ -134,43 +246,77 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 449,
-          "end": 495,
-          "text": "Body surface area: 14 %; collected 2026-09-15."
+          "start": 473,
+          "end": 494,
+          "text": "Most recent BSA: 14 %"
         },
         {
-          "start": 27,
-          "end": 52,
-          "text": "Request date: 2026-10-01."
+          "start": 495,
+          "end": 522,
+          "text": "Date collected: 13 Sep 2026"
+        },
+        {
+          "start": 33,
+          "end": 61,
+          "text": "Date of request: 29 Sep 2026"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "BSA 14 % is 16 days before the request and meets the 10 % threshold.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
       "criterion_id": "prior",
-      "status": "missing",
-      "evidence_spans": [],
-      "reason": "The medication history page was not supplied.",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 588,
+          "end": 635,
+          "text": "Prior therapies tried: methotrexate 15mg weekly"
+        },
+        {
+          "start": 636,
+          "end": 675,
+          "text": "Trial dates: 30 Mar 2026 to 30 Jul 2026"
+        },
+        {
+          "start": 676,
+          "end": 705,
+          "text": "Outcome: inadequate response."
+        }
+      ],
+      "reason": "A 122-day methotrexate trial is documented, but no BSA before and after the trial shows the goal was not met.",
+      "scenario": "bare",
       "reviewed": false
     },
     {
       "criterion_id": "dose",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 156,
-          "end": 199,
-          "text": "Request: adalimumab 40 mg every other week."
+          "start": 148,
+          "end": 176,
+          "text": "Medication requested: Humira"
+        },
+        {
+          "start": 177,
+          "end": 206,
+          "text": "Dose and frequency: 40mg q2wk"
+        },
+        {
+          "start": 543,
+          "end": 587,
+          "text": "Current requested therapy: Humira 80mg q2wk."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The request says 40 mg every 2 weeks but the medication list says 80 mg every 2 weeks.",
+      "scenario": "conflict",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

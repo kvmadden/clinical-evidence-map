@@ -2,31 +2,25 @@
 packet_id: packet-009
 fictional: true
 criteria_id: pcsk9
-quality_group: skew
-quality_plan: "Complete text; later render with 7-degree skew."
-render_status: source_text_only
+group: rotation-7deg
+page_style: letter
+date_style: text-mdy
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Letter date: Sep 30, 2026.
 Patient: Lina Brookvale (fictional).
-Age: 41 years.
 From: Dr. Rowan Vale, fictional requesting provider.
 Request: evolocumab 140 mg every 2 weeks.
-Please review the enclosed records for Established atherosclerotic cardiovascular disease.
+Requested for: possible coronary artery disease, stress test pending.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Established atherosclerotic cardiovascular disease.
+Visit date: Sep 19, 2026.
+Assessment: possible coronary artery disease, stress test pending.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-LDL-C: 132 mg/dL; collected 2026-09-15.
-
-MEDICATION HISTORY
-Current requested therapy: evolocumab 140 mg every 2 weeks.
-Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
-No other prior therapy records supplied.
+LDL = 132 mg/dL on Sep 14, 2026

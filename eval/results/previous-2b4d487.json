@@ -1,0 +1,188 @@
+{
+  "commit": "2b4d487",
+  "note": "Numbers from the evaluation at 2b4d487, the revision kvmadden.com and the public snapshot cite. Per-status counts were recomputed from that revision's saved results and draft gold.",
+  "packets": 50,
+  "rendering": "Typed pages with seeded speckles and streaks. The handwriting group used the Kalam font. Nothing was printed, faxed or scanned.",
+  "labels": {
+    "criteria": 250,
+    "evidence_found": 220,
+    "missing": 10,
+    "needs_review": 20
+  },
+  "criteria": {
+    "correct": 124,
+    "total": 250,
+    "alwaysFound": 220,
+    "byStatus": {
+      "evidence_found": {
+        "gold": 220,
+        "hit": 97,
+        "predicted": 97
+      },
+      "missing": {
+        "gold": 10,
+        "hit": 10,
+        "predicted": 48
+      },
+      "needs_review": {
+        "gold": 20,
+        "hit": 17,
+        "predicted": 105
+      }
+    },
+    "falseFound": {
+      "count": 0,
+      "of": 30
+    },
+    "statusAndQuotes": 107
+  },
+  "extraction": {
+    "tp": 356,
+    "predicted": 362,
+    "gold": 600,
+    "f1": 0.7401247401247402,
+    "exactQuote": 218
+  },
+  "ocr": {
+    "edits": 418,
+    "chars": 34599
+  },
+  "verifier": {
+    "caught": 150,
+    "injected": 150
+  },
+  "sourceTextBaseline": {
+    "criteriaCorrect": 180,
+    "criteriaTotal": 250,
+    "extractionF1": 0.8235294117647058
+  },
+  "privacy": {
+    "dateHandling": "all dates removed",
+    "lettersWithConditionHiddenOcr": 48,
+    "letters": 50,
+    "lettersWithConditionHiddenSource": 50
+  },
+  "reviewedCriteria": 0,
+  "slices": [
+    {
+      "group": "clean",
+      "label": "Clean render (was clean)",
+      "packets": 5,
+      "cer": 0.0013962580284836638,
+      "extractionF1": 0.7962962962962963,
+      "criteria": {
+        "correct": 11,
+        "total": 25,
+        "alwaysFound": 25
+      }
+    },
+    {
+      "group": "skew",
+      "label": "Simulated 7-degree rotation (was skew)",
+      "packets": 5,
+      "cer": 0.10752986940816893,
+      "extractionF1": 0,
+      "criteria": {
+        "correct": 0,
+        "total": 25,
+        "alwaysFound": 25
+      }
+    },
+    {
+      "group": "handwriting",
+      "label": "Handwriting font, Kalam (was handwriting)",
+      "packets": 5,
+      "cer": 0.0022002200220022,
+      "extractionF1": 0.6972477064220184,
+      "criteria": {
+        "correct": 10,
+        "total": 25,
+        "alwaysFound": 25
+      }
+    },
+    {
+      "group": "missing-lab",
+      "label": "Missing lab page",
+      "packets": 5,
+      "cer": 0.000613685179502915,
+      "extractionF1": 0.8421052631578947,
+      "criteria": {
+        "correct": 16,
+        "total": 25,
+        "alwaysFound": 20
+      }
+    },
+    {
+      "group": "missing-history",
+      "label": "Missing medication history page",
+      "packets": 5,
+      "cer": 0.0008254230293025176,
+      "extractionF1": 0.7931034482758621,
+      "criteria": {
+        "correct": 15,
+        "total": 25,
+        "alwaysFound": 20
+      }
+    },
+    {
+      "group": "conflicting-dates",
+      "label": "Conflicting request dates",
+      "packets": 5,
+      "cer": 0.0005193456245131135,
+      "extractionF1": 0.7719298245614035,
+      "criteria": {
+        "correct": 14,
+        "total": 25,
+        "alwaysFound": 20
+      }
+    },
+    {
+      "group": "stale-lab",
+      "label": "Measurement outside 180 days",
+      "packets": 5,
+      "cer": 0.0011201344161299357,
+      "extractionF1": 0.7962962962962963,
+      "criteria": {
+        "correct": 13,
+        "total": 25,
+        "alwaysFound": 20
+      }
+    },
+    {
+      "group": "unclear-trial",
+      "label": "Prior trial without dates or response",
+      "packets": 5,
+      "cer": 0.0005807200929152149,
+      "extractionF1": 0.8636363636363636,
+      "criteria": {
+        "correct": 15,
+        "total": 25,
+        "alwaysFound": 20
+      }
+    },
+    {
+      "group": "conflicting-dose",
+      "label": "Conflicting dose",
+      "packets": 5,
+      "cer": 0.0005549389567147614,
+      "extractionF1": 0.8073394495412844,
+      "criteria": {
+        "correct": 15,
+        "total": 25,
+        "alwaysFound": 20
+      }
+    },
+    {
+      "group": "intolerance",
+      "label": "Intolerance documented",
+      "packets": 5,
+      "cer": 0.001101624896722666,
+      "extractionF1": 0.7962962962962963,
+      "criteria": {
+        "correct": 15,
+        "total": 25,
+        "alwaysFound": 25
+      }
+    }
+  ]
+}

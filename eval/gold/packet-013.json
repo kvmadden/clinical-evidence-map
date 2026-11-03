@@ -1,12 +1,40 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-013",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "glp1-t2d",
   "source_file": "eval/packets/packet-013.md",
+  "group": "ai-handwriting",
+  "tags": [
+    "page:letter",
+    "date:text-mdy",
+    "date-reading:forced",
+    "drug-name:generic",
+    "dose-format:plain",
+    "ai-drawn-handwriting"
+  ],
+  "date_reading": {
+    "status": "forced",
+    "order": "mdy"
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-10-01",
+      "source_span": {
+        "start": 27,
+        "end": 52,
+        "text": "Letter date: Oct 1, 2026."
+      },
+      "date": {
+        "written": "Oct 1, 2026",
+        "format": "text-mdy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Elva Ashmere",
@@ -24,16 +52,6 @@
         "start": 88,
         "end": 102,
         "text": "Age: 45 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
       },
       "reviewed": false
     },
@@ -68,12 +86,45 @@
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Type 2 diabetes mellitus",
+      "type": "indication",
+      "value": "type 2 diabetes mellitus",
       "source_span": {
-        "start": 297,
-        "end": 333,
-        "text": "Diagnosis: Type 2 diabetes mellitus."
+        "start": 192,
+        "end": 237,
+        "text": "Reason for request: diabetes mellitus type 2."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "type 2 diabetes mellitus",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 280,
+        "end": 346,
+        "text": "Assessment: diabetes mellitus type 2, above goal on prior therapy."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "history_condition",
+      "value": "hypertension",
+      "source_span": {
+        "start": 347,
+        "end": 402,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "history_condition",
+      "value": "seasonal allergies",
+      "source_span": {
+        "start": 347,
+        "end": 402,
+        "text": "Past medical history: hypertension, seasonal allergies."
       },
       "reviewed": false
     },
@@ -85,69 +136,24 @@
         "unit": "%"
       },
       "source_span": {
-        "start": 419,
-        "end": 452,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 488,
+        "end": 530,
+        "text": "HbA1c: 8.6 percent; collected Jan 1, 2026."
       },
       "reviewed": false
     },
     {
       "type": "measurement_date",
-      "value": "2026-09-15",
+      "value": "2026-01-01",
       "source_span": {
-        "start": 419,
-        "end": 452,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 488,
+        "end": 530,
+        "text": "HbA1c: 8.6 percent; collected Jan 1, 2026."
       },
-      "reviewed": false
-    },
-    {
-      "type": "prior_medication",
-      "value": "metformin",
-      "source_span": {
-        "start": 527,
-        "end": 644,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_dose",
-      "value": "1000 mg twice daily",
-      "source_span": {
-        "start": 527,
-        "end": 644,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_start_date",
-      "value": "2026-04-01",
-      "source_span": {
-        "start": 527,
-        "end": 644,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_stop_date",
-      "value": "2026-08-01",
-      "source_span": {
-        "start": 527,
-        "end": 644,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_outcome",
-      "value": "inadequate response",
-      "source_span": {
-        "start": 527,
-        "end": 644,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+      "date": {
+        "written": "Jan 1, 2026",
+        "format": "text-mdy",
+        "ambiguous": false
       },
       "reviewed": false
     },
@@ -155,10 +161,92 @@
       "type": "medication_list_dose",
       "value": "0.5 mg weekly",
       "source_span": {
-        "start": 473,
-        "end": 526,
-        "text": "Current requested therapy: semaglutide 0.5 mg weekly."
+        "start": 551,
+        "end": 577,
+        "text": "Ozempic 0.5 mg once weekly"
       },
+      "handwritten": true,
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "metformin",
+      "source_span": {
+        "start": 578,
+        "end": 631,
+        "text": "Metformin 1000 mg BID started 8/1/26, stopped 8/15/26"
+      },
+      "handwritten": true,
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "1000 mg twice daily",
+      "source_span": {
+        "start": 578,
+        "end": 631,
+        "text": "Metformin 1000 mg BID started 8/1/26, stopped 8/15/26"
+      },
+      "handwritten": true,
+      "reviewed": false
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2026-08-01",
+      "source_span": {
+        "start": 578,
+        "end": 631,
+        "text": "Metformin 1000 mg BID started 8/1/26, stopped 8/15/26"
+      },
+      "date": {
+        "written": "8/1/26",
+        "format": "handwritten-m/d/yy",
+        "ambiguous": true,
+        "readings": [
+          "2026-08-01",
+          "2026-01-08"
+        ],
+        "resolved_by": "forced"
+      },
+      "handwritten": true,
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-08-15",
+      "source_span": {
+        "start": 578,
+        "end": 631,
+        "text": "Metformin 1000 mg BID started 8/1/26, stopped 8/15/26"
+      },
+      "date": {
+        "written": "8/15/26",
+        "format": "handwritten-m/d/yy",
+        "ambiguous": false
+      },
+      "handwritten": true,
+      "reviewed": false
+    },
+    {
+      "type": "prior_outcome",
+      "value": "intolerance",
+      "source_span": {
+        "start": 632,
+        "end": 674,
+        "text": "Stopped for persistent nausea and diarrhea"
+      },
+      "handwritten": true,
+      "reviewed": false
+    },
+    {
+      "type": "prior_reason",
+      "value": "persistent nausea and diarrhea",
+      "source_span": {
+        "start": 632,
+        "end": 674,
+        "text": "Stopped for persistent nausea and diarrhea"
+      },
+      "handwritten": true,
       "reviewed": false
     }
   ],
@@ -173,7 +261,8 @@
           "text": "Age: 45 years."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Age 45 is documented.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
@@ -181,30 +270,37 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 297,
-          "end": 333,
-          "text": "Diagnosis: Type 2 diabetes mellitus."
+          "start": 192,
+          "end": 237,
+          "text": "Reason for request: diabetes mellitus type 2."
+        },
+        {
+          "start": 280,
+          "end": 346,
+          "text": "Assessment: diabetes mellitus type 2, above goal on prior therapy."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The request names type 2 diabetes mellitus as its reason.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
       "criterion_id": "lab",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 419,
-          "end": 452,
-          "text": "A1c: 8.6 %; collected 2026-09-15."
+          "start": 488,
+          "end": 530,
+          "text": "HbA1c: 8.6 percent; collected Jan 1, 2026."
         },
         {
           "start": 27,
           "end": 52,
-          "text": "Request date: 2026-10-01."
+          "text": "Letter date: Oct 1, 2026."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The most recent A1c is 273 days before the request, outside the 180-day window.",
+      "scenario": "stale",
       "reviewed": false
     },
     {
@@ -212,12 +308,18 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 527,
-          "end": 644,
-          "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+          "start": 578,
+          "end": 631,
+          "text": "Metformin 1000 mg BID started 8/1/26, stopped 8/15/26"
+        },
+        {
+          "start": 632,
+          "end": 674,
+          "text": "Stopped for persistent nausea and diarrhea"
         }
       ],
-      "reason": "The documented trial runs 122 days, meeting the fictional 90-day requirement.",
+      "reason": "Metformin intolerance is documented with its reason: persistent nausea and diarrhea.",
+      "scenario": "intolerance",
       "reviewed": false
     },
     {
@@ -230,13 +332,14 @@
           "text": "Request: semaglutide 0.5 mg weekly."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The requested semaglutide dose 0.5 mg weekly matches the fictional rule.",
+      "scenario": "supported",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

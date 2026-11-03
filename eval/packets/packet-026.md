@@ -2,32 +2,30 @@
 packet_id: packet-026
 fictional: true
 criteria_id: biologic-psoriasis
-quality_group: conflicting-dates
-quality_plan: "Provider letter and note disagree on the request date."
-render_status: source_text_only
+group: choppy-lines
+page_style: form
+date_style: text-mdy
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
-REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
-Patient: Arlen Fenwick (fictional).
-Age: 58 years.
-From: Dr. Rowan Vale, fictional requesting provider.
-Request: adalimumab 40 mg every other week.
-Please review the enclosed records for Moderate-to-severe plaque psoriasis.
+PRIOR AUTHORIZATION REQUEST FORM
+Date of request: Oct 9, 2026
+Patient name: Arlen Fenwick (fictional)
+Age: 58
+Prescriber: Dr. Rowan Vale (fictional)
+Medication requested: adalimumab
+Dose and frequency: 40 mg every 2 weeks
+Diagnosis for this request: moderate to severe plaque psoraisis
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Moderate-to-severe plaque psoriasis.
-The patient reports ongoing symptoms despite prior treatment.
-Request date recorded in note: 2026-09-01.
-
-LABS AND MEASUREMENTS
-Body surface area: 14 %; collected 2026-09-15.
+Visit date: Sep 28, 2026.
+Assessment: moderate to severe plaque psoraisis, active on prior therapy.
 
 MEDICATION HISTORY
-Current requested therapy: adalimumab 40 mg every other week.
-Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: adalimumab 40 mg every 2 weeks.
+Prior therapies tried: methotrexate 15 mg weekly
+Trial dates: Aug 9, 2026 to Aug 23, 2026
+Stopped due to intolerance.
 No other prior therapy records supplied.

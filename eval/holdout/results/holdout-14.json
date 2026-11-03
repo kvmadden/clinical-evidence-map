@@ -1,0 +1,2237 @@
+{
+  "packet_id": "holdout-14",
+  "criteria_id": "biologic-psoriasis",
+  "group": "smudge",
+  "tags": [
+    "render:smudge"
+  ],
+  "render": {
+    "font": "liberation-sans",
+    "effects": [
+      "speckle-light",
+      "smudge"
+    ],
+    "rotate": 0,
+    "handwriting": [],
+    "annotations": []
+  },
+  "groupLabel": "Simulated smudges",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "PHARMACY ENTRY\nOrder date: [date-a]\nPatient: [name] [name] (fictional)\nOrdering professional: Dr. [name] [name] (fictional)\nAge: 16 years\nAgent selected: adalimumab\nTreatment purpose: hidradenitis suppurativa\nMaintenance order: 80mg SQ every other week\nSkin worksheet:\nBSA 11% measured [date-b]\nPast therapy:\nDoxycycline 100 mg PO BID for four months\nInjection supplies discussed.\nDelivery preference: collect in person\nEntered by [name] [name] (fictional)\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 6
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points",
+    "dateHandling": "shifted",
+    "dates": [
+      {
+        "token": "[date-a]",
+        "readings": [
+          "2130-03-31",
+          "2130-04-29"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-b]",
+        "readings": [
+          "2129-10-22",
+          "2129-09-22"
+        ],
+        "order": "ambiguous"
+      }
+    ]
+  },
+  "dateReading": {
+    "status": "unresolved",
+    "order": null
+  },
+  "readerCoverage": {
+    "lines": 16,
+    "pages": 1,
+    "blockers": {
+      "adult": [],
+      "diagnosis": [],
+      "lab": [],
+      "prior": [],
+      "dose": []
+    },
+    "mentions": [],
+    "complete": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "request_date",
+      "value": {
+        "readings": [
+          "2130-03-31",
+          "2130-04-29"
+        ]
+      },
+      "source_span": {
+        "start": 15,
+        "end": 35,
+        "text": "Order date: [date-a]"
+      },
+      "value_span": {
+        "start": 27,
+        "end": 35
+      },
+      "attrs": {
+        "label": "Order date"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 197,
+          "width": 65,
+          "height": 19
+        },
+        {
+          "x": 175,
+          "y": 197,
+          "width": 54,
+          "height": 19
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "age",
+      "value": 16,
+      "source_span": {
+        "start": 124,
+        "end": 137,
+        "text": "Age: 16 years"
+      },
+      "value_span": {
+        "start": 129,
+        "end": 131
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 318,
+          "width": 51,
+          "height": 23
+        },
+        {
+          "x": 163,
+          "y": 318,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 197,
+          "y": 322,
+          "width": 63,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "requested_medication",
+      "value": "adalimumab",
+      "source_span": {
+        "start": 138,
+        "end": 164,
+        "text": "Agent selected: adalimumab"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "327361",
+        "display": "adalimumab"
+      },
+      "value_span": {
+        "start": 154,
+        "end": 164
+      },
+      "match": {
+        "kind": "exact",
+        "written": "adalimumab",
+        "confidence": 1
+      },
+      "attrs": {
+        "product": "adalimumab",
+        "source": "Agent selected"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 358,
+          "width": 68,
+          "height": 23
+        },
+        {
+          "x": 176,
+          "y": 357,
+          "width": 101,
+          "height": 19
+        },
+        {
+          "x": 287,
+          "y": 357,
+          "width": 140,
+          "height": 19
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "indication",
+      "value": "hidradenitis suppurativa",
+      "source_span": {
+        "start": 165,
+        "end": 208,
+        "text": "Treatment purpose: hidradenitis suppurativa"
+      },
+      "value_span": {
+        "start": 184,
+        "end": 208
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 398,
+          "width": 116,
+          "height": 18
+        },
+        {
+          "x": 226,
+          "y": 402,
+          "width": 98,
+          "height": 19
+        },
+        {
+          "x": 335,
+          "y": 397,
+          "width": 130,
+          "height": 19
+        },
+        {
+          "x": 474,
+          "y": 397,
+          "width": 134,
+          "height": 24
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "requested_dose",
+      "value": "80 mg every 2 weeks",
+      "source_span": {
+        "start": 209,
+        "end": 252,
+        "text": "Maintenance order: 80mg SQ every other week"
+      },
+      "value_span": {
+        "start": 228,
+        "end": 252
+      },
+      "attrs": {
+        "drug": "adalimumab",
+        "amount": 80,
+        "route": "subcutaneous",
+        "source": "Maintenance order"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 437,
+          "width": 146,
+          "height": 19
+        },
+        {
+          "x": 257,
+          "y": 437,
+          "width": 65,
+          "height": 19
+        },
+        {
+          "x": 332,
+          "y": 438,
+          "width": 63,
+          "height": 23
+        },
+        {
+          "x": 405,
+          "y": 438,
+          "width": 35,
+          "height": 23
+        },
+        {
+          "x": 449,
+          "y": 442,
+          "width": 63,
+          "height": 19
+        },
+        {
+          "x": 520,
+          "y": 437,
+          "width": 58,
+          "height": 19
+        },
+        {
+          "x": 586,
+          "y": 437,
+          "width": 60,
+          "height": 19
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "measurement",
+      "value": {
+        "name": "BSA",
+        "value": 11,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 269,
+        "end": 294,
+        "text": "BSA 11% measured [date-b]"
+      },
+      "value_span": {
+        "start": 273,
+        "end": 275
+      },
+      "name_span": {
+        "start": 269,
+        "end": 272
+      },
+      "reviewed": false,
+      "related": [
+        "e7"
+      ],
+      "boxes": [
+        {
+          "x": 102,
+          "y": 518,
+          "width": 50,
+          "height": 18
+        },
+        {
+          "x": 160,
+          "y": 518,
+          "width": 49,
+          "height": 18
+        },
+        {
+          "x": 219,
+          "y": 517,
+          "width": 112,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "measurement_date",
+      "value": {
+        "readings": [
+          "2129-10-22",
+          "2129-09-22"
+        ]
+      },
+      "source_span": {
+        "start": 269,
+        "end": 294,
+        "text": "BSA 11% measured [date-b]"
+      },
+      "value_span": {
+        "start": 286,
+        "end": 294
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 518,
+          "width": 50,
+          "height": 18
+        },
+        {
+          "x": 160,
+          "y": 518,
+          "width": 49,
+          "height": 18
+        },
+        {
+          "x": 219,
+          "y": 517,
+          "width": 112,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "prior_medication",
+      "value": "doxycycline",
+      "source_span": {
+        "start": 309,
+        "end": 350,
+        "text": "Doxycycline 100 mg PO BID for four months"
+      },
+      "value_span": {
+        "start": 309,
+        "end": 320
+      },
+      "episode": 1,
+      "match": {
+        "kind": "exact",
+        "written": "Doxycycline",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "tetracycline"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 597,
+          "width": 136,
+          "height": 24
+        },
+        {
+          "x": 248,
+          "y": 598,
+          "width": 40,
+          "height": 18
+        },
+        {
+          "x": 298,
+          "y": 602,
+          "width": 33,
+          "height": 19
+        },
+        {
+          "x": 342,
+          "y": 598,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 387,
+          "y": 598,
+          "width": 40,
+          "height": 18
+        },
+        {
+          "x": 436,
+          "y": 597,
+          "width": 29,
+          "height": 19
+        },
+        {
+          "x": 473,
+          "y": 597,
+          "width": 44,
+          "height": 19
+        },
+        {
+          "x": 527,
+          "y": 597,
+          "width": 82,
+          "height": 19
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "prior_dose",
+      "value": "100 mg twice daily",
+      "source_span": {
+        "start": 309,
+        "end": 350,
+        "text": "Doxycycline 100 mg PO BID for four months"
+      },
+      "value_span": {
+        "start": 321,
+        "end": 334
+      },
+      "episode": 1,
+      "attrs": {
+        "amount": 100,
+        "frequency": "twice daily"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 597,
+          "width": 136,
+          "height": 24
+        },
+        {
+          "x": 248,
+          "y": 598,
+          "width": 40,
+          "height": 18
+        },
+        {
+          "x": 298,
+          "y": 602,
+          "width": 33,
+          "height": 19
+        },
+        {
+          "x": 342,
+          "y": 598,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 387,
+          "y": 598,
+          "width": 40,
+          "height": 18
+        },
+        {
+          "x": 436,
+          "y": 597,
+          "width": 29,
+          "height": 19
+        },
+        {
+          "x": 473,
+          "y": 597,
+          "width": 44,
+          "height": 19
+        },
+        {
+          "x": 527,
+          "y": 597,
+          "width": 82,
+          "height": 19
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "prior_duration_days",
+      "value": 120,
+      "source_span": {
+        "start": 309,
+        "end": 350,
+        "text": "Doxycycline 100 mg PO BID for four months"
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 597,
+          "width": 136,
+          "height": 24
+        },
+        {
+          "x": 248,
+          "y": 598,
+          "width": 40,
+          "height": 18
+        },
+        {
+          "x": 298,
+          "y": 602,
+          "width": 33,
+          "height": 19
+        },
+        {
+          "x": 342,
+          "y": 598,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 387,
+          "y": 598,
+          "width": 40,
+          "height": 18
+        },
+        {
+          "x": 436,
+          "y": 597,
+          "width": 29,
+          "height": 19
+        },
+        {
+          "x": 473,
+          "y": 597,
+          "width": 44,
+          "height": 19
+        },
+        {
+          "x": 527,
+          "y": 597,
+          "width": 82,
+          "height": 19
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 124,
+          "end": 137,
+          "text": "Age: 16 years"
+        }
+      ],
+      "reason": "Documented age 16 is below the fictional 18-year rule.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The request names hidradenitis suppurativa, not moderate-to-severe plaque psoriasis.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 15,
+          "end": 35,
+          "text": "Order date: [date-a]"
+        },
+        {
+          "start": 269,
+          "end": 294,
+          "text": "BSA 11% measured [date-b]"
+        }
+      ],
+      "reason": "Numeric dates on this page can be read month first or day first, and the two readings give different results. Both readings are kept. Check the page.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "A doxycycline course is documented. No methotrexate trial, intolerance or contraindication is documented.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 138,
+          "end": 164,
+          "text": "Agent selected: adalimumab"
+        },
+        {
+          "start": 209,
+          "end": 252,
+          "text": "Maintenance order: 80mg SQ every other week"
+        }
+      ],
+      "reason": "The request is 80 mg every 2 weeks. The fictional rule allows 40 mg every 2 weeks.",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "Agent selected: adalimumab",
+      "citations": [
+        {
+          "start": 138,
+          "end": 164,
+          "text": "Agent selected: adalimumab"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Treatment purpose: hidradenitis suppurativa",
+      "citations": [
+        {
+          "start": 165,
+          "end": 208,
+          "text": "Treatment purpose: hidradenitis suppurativa"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "BSA 11% measured [date-b]",
+      "citations": [
+        {
+          "start": 269,
+          "end": 294,
+          "text": "BSA 11% measured [date-b]"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Doxycycline 100 mg PO BID for four months",
+      "citations": [
+        {
+          "start": 309,
+          "end": 350,
+          "text": "Doxycycline 100 mg PO BID for four months"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "PHARMACY",
+      "confidence": 96.702278,
+      "box": {
+        "x": 102,
+        "y": 158,
+        "width": 144,
+        "height": 18
+      },
+      "start": 0,
+      "end": 8,
+      "needsReview": false
+    },
+    {
+      "text": "ENTRY",
+      "confidence": 96.927872,
+      "box": {
+        "x": 256,
+        "y": 158,
+        "width": 85,
+        "height": 18
+      },
+      "start": 9,
+      "end": 14,
+      "needsReview": false
+    },
+    {
+      "text": "Order",
+      "confidence": 96.81221,
+      "box": {
+        "x": 101,
+        "y": 197,
+        "width": 65,
+        "height": 19
+      },
+      "start": 15,
+      "end": 20,
+      "needsReview": false
+    },
+    {
+      "text": "date:",
+      "confidence": 96.634598,
+      "box": {
+        "x": 175,
+        "y": 197,
+        "width": 54,
+        "height": 19
+      },
+      "start": 21,
+      "end": 26,
+      "needsReview": false
+    },
+    {
+      "text": "Patient:",
+      "confidence": 96.60173,
+      "box": {
+        "x": 102,
+        "y": 237,
+        "width": 84,
+        "height": 19
+      },
+      "start": 36,
+      "end": 44,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.090485,
+      "box": {
+        "x": 366,
+        "y": 237,
+        "width": 102,
+        "height": 25
+      },
+      "start": 59,
+      "end": 70,
+      "needsReview": false
+    },
+    {
+      "text": "Ordering",
+      "confidence": 96.239098,
+      "box": {
+        "x": 101,
+        "y": 277,
+        "width": 99,
+        "height": 25
+      },
+      "start": 71,
+      "end": 79,
+      "needsReview": false
+    },
+    {
+      "text": "professional:",
+      "confidence": 96.441147,
+      "box": {
+        "x": 210,
+        "y": 277,
+        "width": 144,
+        "height": 25
+      },
+      "start": 80,
+      "end": 93,
+      "needsReview": false
+    },
+    {
+      "text": "Dr.",
+      "confidence": 93.217079,
+      "box": {
+        "x": 365,
+        "y": 278,
+        "width": 29,
+        "height": 18
+      },
+      "start": 94,
+      "end": 97,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.621567,
+      "box": {
+        "x": 549,
+        "y": 277,
+        "width": 103,
+        "height": 25
+      },
+      "start": 112,
+      "end": 123,
+      "needsReview": false
+    },
+    {
+      "text": "Age:",
+      "confidence": 94.546997,
+      "box": {
+        "x": 100,
+        "y": 318,
+        "width": 51,
+        "height": 23
+      },
+      "start": 124,
+      "end": 128,
+      "needsReview": false
+    },
+    {
+      "text": "16",
+      "confidence": 94.546997,
+      "box": {
+        "x": 163,
+        "y": 318,
+        "width": 26,
+        "height": 18
+      },
+      "start": 129,
+      "end": 131,
+      "needsReview": false
+    },
+    {
+      "text": "years",
+      "confidence": 96.329948,
+      "box": {
+        "x": 197,
+        "y": 322,
+        "width": 63,
+        "height": 20
+      },
+      "start": 132,
+      "end": 137,
+      "needsReview": false
+    },
+    {
+      "text": "Agent",
+      "confidence": 96.401031,
+      "box": {
+        "x": 100,
+        "y": 358,
+        "width": 68,
+        "height": 23
+      },
+      "start": 138,
+      "end": 143,
+      "needsReview": false
+    },
+    {
+      "text": "selected:",
+      "confidence": 95.163673,
+      "box": {
+        "x": 176,
+        "y": 357,
+        "width": 101,
+        "height": 19
+      },
+      "start": 144,
+      "end": 153,
+      "needsReview": false
+    },
+    {
+      "text": "adalimumab",
+      "confidence": 96.517624,
+      "box": {
+        "x": 287,
+        "y": 357,
+        "width": 140,
+        "height": 19
+      },
+      "start": 154,
+      "end": 164,
+      "needsReview": false
+    },
+    {
+      "text": "Treatment",
+      "confidence": 96.210587,
+      "box": {
+        "x": 101,
+        "y": 398,
+        "width": 116,
+        "height": 18
+      },
+      "start": 165,
+      "end": 174,
+      "needsReview": false
+    },
+    {
+      "text": "purpose:",
+      "confidence": 92.819992,
+      "box": {
+        "x": 226,
+        "y": 402,
+        "width": 98,
+        "height": 19
+      },
+      "start": 175,
+      "end": 183,
+      "needsReview": false
+    },
+    {
+      "text": "hidradenitis",
+      "confidence": 90.681633,
+      "box": {
+        "x": 335,
+        "y": 397,
+        "width": 130,
+        "height": 19
+      },
+      "start": 184,
+      "end": 196,
+      "needsReview": false
+    },
+    {
+      "text": "suppurativa",
+      "confidence": 91.423447,
+      "box": {
+        "x": 474,
+        "y": 397,
+        "width": 134,
+        "height": 24
+      },
+      "start": 197,
+      "end": 208,
+      "needsReview": false
+    },
+    {
+      "text": "Maintenance",
+      "confidence": 95.673576,
+      "box": {
+        "x": 102,
+        "y": 437,
+        "width": 146,
+        "height": 19
+      },
+      "start": 209,
+      "end": 220,
+      "needsReview": false
+    },
+    {
+      "text": "order:",
+      "confidence": 95.673576,
+      "box": {
+        "x": 257,
+        "y": 437,
+        "width": 65,
+        "height": 19
+      },
+      "start": 221,
+      "end": 227,
+      "needsReview": false
+    },
+    {
+      "text": "80mg",
+      "confidence": 96.173729,
+      "box": {
+        "x": 332,
+        "y": 438,
+        "width": 63,
+        "height": 23
+      },
+      "start": 228,
+      "end": 232,
+      "needsReview": false
+    },
+    {
+      "text": "SQ",
+      "confidence": 96.976845,
+      "box": {
+        "x": 405,
+        "y": 438,
+        "width": 35,
+        "height": 23
+      },
+      "start": 233,
+      "end": 235,
+      "needsReview": false
+    },
+    {
+      "text": "every",
+      "confidence": 96.745918,
+      "box": {
+        "x": 449,
+        "y": 442,
+        "width": 63,
+        "height": 19
+      },
+      "start": 236,
+      "end": 241,
+      "needsReview": false
+    },
+    {
+      "text": "other",
+      "confidence": 96.430328,
+      "box": {
+        "x": 520,
+        "y": 437,
+        "width": 58,
+        "height": 19
+      },
+      "start": 242,
+      "end": 247,
+      "needsReview": false
+    },
+    {
+      "text": "week",
+      "confidence": 96.589081,
+      "box": {
+        "x": 586,
+        "y": 437,
+        "width": 60,
+        "height": 19
+      },
+      "start": 248,
+      "end": 252,
+      "needsReview": false
+    },
+    {
+      "text": "Skin",
+      "confidence": 96.603882,
+      "box": {
+        "x": 101,
+        "y": 477,
+        "width": 48,
+        "height": 19
+      },
+      "start": 253,
+      "end": 257,
+      "needsReview": false
+    },
+    {
+      "text": "worksheet:",
+      "confidence": 96.244652,
+      "box": {
+        "x": 158,
+        "y": 477,
+        "width": 123,
+        "height": 19
+      },
+      "start": 258,
+      "end": 268,
+      "needsReview": false
+    },
+    {
+      "text": "BSA",
+      "confidence": 95.632683,
+      "box": {
+        "x": 102,
+        "y": 518,
+        "width": 50,
+        "height": 18
+      },
+      "start": 269,
+      "end": 272,
+      "needsReview": false
+    },
+    {
+      "text": "11%",
+      "confidence": 96.564346,
+      "box": {
+        "x": 160,
+        "y": 518,
+        "width": 49,
+        "height": 18
+      },
+      "start": 273,
+      "end": 276,
+      "needsReview": false
+    },
+    {
+      "text": "measured",
+      "confidence": 96.439896,
+      "box": {
+        "x": 219,
+        "y": 517,
+        "width": 112,
+        "height": 20
+      },
+      "start": 277,
+      "end": 285,
+      "needsReview": false
+    },
+    {
+      "text": "Past",
+      "confidence": 96.628471,
+      "box": {
+        "x": 102,
+        "y": 558,
+        "width": 50,
+        "height": 18
+      },
+      "start": 295,
+      "end": 299,
+      "needsReview": false
+    },
+    {
+      "text": "therapy:",
+      "confidence": 96.445801,
+      "box": {
+        "x": 160,
+        "y": 557,
+        "width": 91,
+        "height": 24
+      },
+      "start": 300,
+      "end": 308,
+      "needsReview": false
+    },
+    {
+      "text": "Doxycycline",
+      "confidence": 95.812836,
+      "box": {
+        "x": 102,
+        "y": 597,
+        "width": 136,
+        "height": 24
+      },
+      "start": 309,
+      "end": 320,
+      "needsReview": false
+    },
+    {
+      "text": "100",
+      "confidence": 96.384346,
+      "box": {
+        "x": 248,
+        "y": 598,
+        "width": 40,
+        "height": 18
+      },
+      "start": 321,
+      "end": 324,
+      "needsReview": false
+    },
+    {
+      "text": "mg",
+      "confidence": 96.04702,
+      "box": {
+        "x": 298,
+        "y": 602,
+        "width": 33,
+        "height": 19
+      },
+      "start": 325,
+      "end": 327,
+      "needsReview": false
+    },
+    {
+      "text": "PO",
+      "confidence": 96.04702,
+      "box": {
+        "x": 342,
+        "y": 598,
+        "width": 34,
+        "height": 18
+      },
+      "start": 328,
+      "end": 330,
+      "needsReview": false
+    },
+    {
+      "text": "BID",
+      "confidence": 95.351524,
+      "box": {
+        "x": 387,
+        "y": 598,
+        "width": 40,
+        "height": 18
+      },
+      "start": 331,
+      "end": 334,
+      "needsReview": false
+    },
+    {
+      "text": "for",
+      "confidence": 96.76651,
+      "box": {
+        "x": 436,
+        "y": 597,
+        "width": 29,
+        "height": 19
+      },
+      "start": 335,
+      "end": 338,
+      "needsReview": false
+    },
+    {
+      "text": "four",
+      "confidence": 96.56076,
+      "box": {
+        "x": 473,
+        "y": 597,
+        "width": 44,
+        "height": 19
+      },
+      "start": 339,
+      "end": 343,
+      "needsReview": false
+    },
+    {
+      "text": "months",
+      "confidence": 96.172874,
+      "box": {
+        "x": 527,
+        "y": 597,
+        "width": 82,
+        "height": 19
+      },
+      "start": 344,
+      "end": 350,
+      "needsReview": false
+    },
+    {
+      "text": "Injection",
+      "confidence": 96.156036,
+      "box": {
+        "x": 102,
+        "y": 637,
+        "width": 93,
+        "height": 24
+      },
+      "start": 351,
+      "end": 360,
+      "needsReview": false
+    },
+    {
+      "text": "supplies",
+      "confidence": 96.625389,
+      "box": {
+        "x": 205,
+        "y": 637,
+        "width": 94,
+        "height": 24
+      },
+      "start": 361,
+      "end": 369,
+      "needsReview": false
+    },
+    {
+      "text": "discussed.",
+      "confidence": 96.753609,
+      "box": {
+        "x": 308,
+        "y": 637,
+        "width": 119,
+        "height": 19
+      },
+      "start": 370,
+      "end": 380,
+      "needsReview": false
+    },
+    {
+      "text": "Delivery",
+      "confidence": 96.608879,
+      "box": {
+        "x": 102,
+        "y": 677,
+        "width": 92,
+        "height": 24
+      },
+      "start": 381,
+      "end": 389,
+      "needsReview": false
+    },
+    {
+      "text": "preference:",
+      "confidence": 96.652489,
+      "box": {
+        "x": 203,
+        "y": 677,
+        "width": 127,
+        "height": 24
+      },
+      "start": 390,
+      "end": 401,
+      "needsReview": false
+    },
+    {
+      "text": "collect",
+      "confidence": 95.884979,
+      "box": {
+        "x": 341,
+        "y": 677,
+        "width": 72,
+        "height": 19
+      },
+      "start": 402,
+      "end": 409,
+      "needsReview": false
+    },
+    {
+      "text": "in",
+      "confidence": 95.884979,
+      "box": {
+        "x": 422,
+        "y": 677,
+        "width": 17,
+        "height": 19
+      },
+      "start": 410,
+      "end": 412,
+      "needsReview": false
+    },
+    {
+      "text": "person",
+      "confidence": 96.760841,
+      "box": {
+        "x": 450,
+        "y": 682,
+        "width": 76,
+        "height": 19
+      },
+      "start": 413,
+      "end": 419,
+      "needsReview": false
+    },
+    {
+      "text": "Entered",
+      "confidence": 96.016769,
+      "box": {
+        "x": 102,
+        "y": 717,
+        "width": 87,
+        "height": 19
+      },
+      "start": 420,
+      "end": 427,
+      "needsReview": false
+    },
+    {
+      "text": "by",
+      "confidence": 93.302536,
+      "box": {
+        "x": 200,
+        "y": 717,
+        "width": 25,
+        "height": 24
+      },
+      "start": 428,
+      "end": 430,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.247299,
+      "box": {
+        "x": 379,
+        "y": 717,
+        "width": 102,
+        "height": 24
+      },
+      "start": 445,
+      "end": 456,
+      "needsReview": false
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "PHARMACY ENTRY\nOrder date: 09/10/2026\nPatient: Nessa Quillan (fictional)\nOrdering professional: Dr. Daro Elwick (fictional)\nAge: 16 years\nAgent selected: adalimumab\nTreatment purpose: hidradenitis suppurativa\nMaintenance order: 80mg SQ every other week\nSkin worksheet:\nBSA 11% measured 04/03/2026\nPast therapy:\nDoxycycline 100 mg PO BID for four months\nInjection supplies discussed.\nDelivery preference: collect in person\nEntered by Daro Elwick (fictional)\n",
+    "words": [
+      {
+        "text": "PHARMACY",
+        "confidence": 96.702278,
+        "box": {
+          "x": 102,
+          "y": 158,
+          "width": 144,
+          "height": 18
+        },
+        "start": 0,
+        "end": 8,
+        "needsReview": false
+      },
+      {
+        "text": "ENTRY",
+        "confidence": 96.927872,
+        "box": {
+          "x": 256,
+          "y": 158,
+          "width": 85,
+          "height": 18
+        },
+        "start": 9,
+        "end": 14,
+        "needsReview": false
+      },
+      {
+        "text": "Order",
+        "confidence": 96.81221,
+        "box": {
+          "x": 101,
+          "y": 197,
+          "width": 65,
+          "height": 19
+        },
+        "start": 15,
+        "end": 20,
+        "needsReview": false
+      },
+      {
+        "text": "date:",
+        "confidence": 96.634598,
+        "box": {
+          "x": 175,
+          "y": 197,
+          "width": 54,
+          "height": 19
+        },
+        "start": 21,
+        "end": 26,
+        "needsReview": false
+      },
+      {
+        "text": "09/10/2026",
+        "confidence": 96.832397,
+        "box": {
+          "x": 240,
+          "y": 197,
+          "width": 128,
+          "height": 19
+        },
+        "start": 27,
+        "end": 37,
+        "needsReview": false
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.60173,
+        "box": {
+          "x": 102,
+          "y": 237,
+          "width": 84,
+          "height": 19
+        },
+        "start": 38,
+        "end": 46,
+        "needsReview": false
+      },
+      {
+        "text": "Nessa",
+        "confidence": 93.07341,
+        "box": {
+          "x": 197,
+          "y": 238,
+          "width": 72,
+          "height": 18
+        },
+        "start": 47,
+        "end": 52,
+        "needsReview": false
+      },
+      {
+        "text": "Quillan",
+        "confidence": 90.260689,
+        "box": {
+          "x": 277,
+          "y": 237,
+          "width": 79,
+          "height": 24
+        },
+        "start": 53,
+        "end": 60,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.090485,
+        "box": {
+          "x": 366,
+          "y": 237,
+          "width": 102,
+          "height": 25
+        },
+        "start": 61,
+        "end": 72,
+        "needsReview": false
+      },
+      {
+        "text": "Ordering",
+        "confidence": 96.239098,
+        "box": {
+          "x": 101,
+          "y": 277,
+          "width": 99,
+          "height": 25
+        },
+        "start": 73,
+        "end": 81,
+        "needsReview": false
+      },
+      {
+        "text": "professional:",
+        "confidence": 96.441147,
+        "box": {
+          "x": 210,
+          "y": 277,
+          "width": 144,
+          "height": 25
+        },
+        "start": 82,
+        "end": 95,
+        "needsReview": false
+      },
+      {
+        "text": "Dr.",
+        "confidence": 93.217079,
+        "box": {
+          "x": 365,
+          "y": 278,
+          "width": 29,
+          "height": 18
+        },
+        "start": 96,
+        "end": 99,
+        "needsReview": false
+      },
+      {
+        "text": "Daro",
+        "confidence": 92.498749,
+        "box": {
+          "x": 405,
+          "y": 278,
+          "width": 54,
+          "height": 18
+        },
+        "start": 100,
+        "end": 104,
+        "needsReview": false
+      },
+      {
+        "text": "Elwick",
+        "confidence": 92.94445,
+        "box": {
+          "x": 469,
+          "y": 277,
+          "width": 72,
+          "height": 19
+        },
+        "start": 105,
+        "end": 111,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.621567,
+        "box": {
+          "x": 549,
+          "y": 277,
+          "width": 103,
+          "height": 25
+        },
+        "start": 112,
+        "end": 123,
+        "needsReview": false
+      },
+      {
+        "text": "Age:",
+        "confidence": 94.546997,
+        "box": {
+          "x": 100,
+          "y": 318,
+          "width": 51,
+          "height": 23
+        },
+        "start": 124,
+        "end": 128,
+        "needsReview": false
+      },
+      {
+        "text": "16",
+        "confidence": 94.546997,
+        "box": {
+          "x": 163,
+          "y": 318,
+          "width": 26,
+          "height": 18
+        },
+        "start": 129,
+        "end": 131,
+        "needsReview": false
+      },
+      {
+        "text": "years",
+        "confidence": 96.329948,
+        "box": {
+          "x": 197,
+          "y": 322,
+          "width": 63,
+          "height": 20
+        },
+        "start": 132,
+        "end": 137,
+        "needsReview": false
+      },
+      {
+        "text": "Agent",
+        "confidence": 96.401031,
+        "box": {
+          "x": 100,
+          "y": 358,
+          "width": 68,
+          "height": 23
+        },
+        "start": 138,
+        "end": 143,
+        "needsReview": false
+      },
+      {
+        "text": "selected:",
+        "confidence": 95.163673,
+        "box": {
+          "x": 176,
+          "y": 357,
+          "width": 101,
+          "height": 19
+        },
+        "start": 144,
+        "end": 153,
+        "needsReview": false
+      },
+      {
+        "text": "adalimumab",
+        "confidence": 96.517624,
+        "box": {
+          "x": 287,
+          "y": 357,
+          "width": 140,
+          "height": 19
+        },
+        "start": 154,
+        "end": 164,
+        "needsReview": false
+      },
+      {
+        "text": "Treatment",
+        "confidence": 96.210587,
+        "box": {
+          "x": 101,
+          "y": 398,
+          "width": 116,
+          "height": 18
+        },
+        "start": 165,
+        "end": 174,
+        "needsReview": false
+      },
+      {
+        "text": "purpose:",
+        "confidence": 92.819992,
+        "box": {
+          "x": 226,
+          "y": 402,
+          "width": 98,
+          "height": 19
+        },
+        "start": 175,
+        "end": 183,
+        "needsReview": false
+      },
+      {
+        "text": "hidradenitis",
+        "confidence": 90.681633,
+        "box": {
+          "x": 335,
+          "y": 397,
+          "width": 130,
+          "height": 19
+        },
+        "start": 184,
+        "end": 196,
+        "needsReview": false
+      },
+      {
+        "text": "suppurativa",
+        "confidence": 91.423447,
+        "box": {
+          "x": 474,
+          "y": 397,
+          "width": 134,
+          "height": 24
+        },
+        "start": 197,
+        "end": 208,
+        "needsReview": false
+      },
+      {
+        "text": "Maintenance",
+        "confidence": 95.673576,
+        "box": {
+          "x": 102,
+          "y": 437,
+          "width": 146,
+          "height": 19
+        },
+        "start": 209,
+        "end": 220,
+        "needsReview": false
+      },
+      {
+        "text": "order:",
+        "confidence": 95.673576,
+        "box": {
+          "x": 257,
+          "y": 437,
+          "width": 65,
+          "height": 19
+        },
+        "start": 221,
+        "end": 227,
+        "needsReview": false
+      },
+      {
+        "text": "80mg",
+        "confidence": 96.173729,
+        "box": {
+          "x": 332,
+          "y": 438,
+          "width": 63,
+          "height": 23
+        },
+        "start": 228,
+        "end": 232,
+        "needsReview": false
+      },
+      {
+        "text": "SQ",
+        "confidence": 96.976845,
+        "box": {
+          "x": 405,
+          "y": 438,
+          "width": 35,
+          "height": 23
+        },
+        "start": 233,
+        "end": 235,
+        "needsReview": false
+      },
+      {
+        "text": "every",
+        "confidence": 96.745918,
+        "box": {
+          "x": 449,
+          "y": 442,
+          "width": 63,
+          "height": 19
+        },
+        "start": 236,
+        "end": 241,
+        "needsReview": false
+      },
+      {
+        "text": "other",
+        "confidence": 96.430328,
+        "box": {
+          "x": 520,
+          "y": 437,
+          "width": 58,
+          "height": 19
+        },
+        "start": 242,
+        "end": 247,
+        "needsReview": false
+      },
+      {
+        "text": "week",
+        "confidence": 96.589081,
+        "box": {
+          "x": 586,
+          "y": 437,
+          "width": 60,
+          "height": 19
+        },
+        "start": 248,
+        "end": 252,
+        "needsReview": false
+      },
+      {
+        "text": "Skin",
+        "confidence": 96.603882,
+        "box": {
+          "x": 101,
+          "y": 477,
+          "width": 48,
+          "height": 19
+        },
+        "start": 253,
+        "end": 257,
+        "needsReview": false
+      },
+      {
+        "text": "worksheet:",
+        "confidence": 96.244652,
+        "box": {
+          "x": 158,
+          "y": 477,
+          "width": 123,
+          "height": 19
+        },
+        "start": 258,
+        "end": 268,
+        "needsReview": false
+      },
+      {
+        "text": "BSA",
+        "confidence": 95.632683,
+        "box": {
+          "x": 102,
+          "y": 518,
+          "width": 50,
+          "height": 18
+        },
+        "start": 269,
+        "end": 272,
+        "needsReview": false
+      },
+      {
+        "text": "11%",
+        "confidence": 96.564346,
+        "box": {
+          "x": 160,
+          "y": 518,
+          "width": 49,
+          "height": 18
+        },
+        "start": 273,
+        "end": 276,
+        "needsReview": false
+      },
+      {
+        "text": "measured",
+        "confidence": 96.439896,
+        "box": {
+          "x": 219,
+          "y": 517,
+          "width": 112,
+          "height": 20
+        },
+        "start": 277,
+        "end": 285,
+        "needsReview": false
+      },
+      {
+        "text": "04/03/2026",
+        "confidence": 96.576134,
+        "box": {
+          "x": 341,
+          "y": 517,
+          "width": 128,
+          "height": 20
+        },
+        "start": 286,
+        "end": 296,
+        "needsReview": false
+      },
+      {
+        "text": "Past",
+        "confidence": 96.628471,
+        "box": {
+          "x": 102,
+          "y": 558,
+          "width": 50,
+          "height": 18
+        },
+        "start": 297,
+        "end": 301,
+        "needsReview": false
+      },
+      {
+        "text": "therapy:",
+        "confidence": 96.445801,
+        "box": {
+          "x": 160,
+          "y": 557,
+          "width": 91,
+          "height": 24
+        },
+        "start": 302,
+        "end": 310,
+        "needsReview": false
+      },
+      {
+        "text": "Doxycycline",
+        "confidence": 95.812836,
+        "box": {
+          "x": 102,
+          "y": 597,
+          "width": 136,
+          "height": 24
+        },
+        "start": 311,
+        "end": 322,
+        "needsReview": false
+      },
+      {
+        "text": "100",
+        "confidence": 96.384346,
+        "box": {
+          "x": 248,
+          "y": 598,
+          "width": 40,
+          "height": 18
+        },
+        "start": 323,
+        "end": 326,
+        "needsReview": false
+      },
+      {
+        "text": "mg",
+        "confidence": 96.04702,
+        "box": {
+          "x": 298,
+          "y": 602,
+          "width": 33,
+          "height": 19
+        },
+        "start": 327,
+        "end": 329,
+        "needsReview": false
+      },
+      {
+        "text": "PO",
+        "confidence": 96.04702,
+        "box": {
+          "x": 342,
+          "y": 598,
+          "width": 34,
+          "height": 18
+        },
+        "start": 330,
+        "end": 332,
+        "needsReview": false
+      },
+      {
+        "text": "BID",
+        "confidence": 95.351524,
+        "box": {
+          "x": 387,
+          "y": 598,
+          "width": 40,
+          "height": 18
+        },
+        "start": 333,
+        "end": 336,
+        "needsReview": false
+      },
+      {
+        "text": "for",
+        "confidence": 96.76651,
+        "box": {
+          "x": 436,
+          "y": 597,
+          "width": 29,
+          "height": 19
+        },
+        "start": 337,
+        "end": 340,
+        "needsReview": false
+      },
+      {
+        "text": "four",
+        "confidence": 96.56076,
+        "box": {
+          "x": 473,
+          "y": 597,
+          "width": 44,
+          "height": 19
+        },
+        "start": 341,
+        "end": 345,
+        "needsReview": false
+      },
+      {
+        "text": "months",
+        "confidence": 96.172874,
+        "box": {
+          "x": 527,
+          "y": 597,
+          "width": 82,
+          "height": 19
+        },
+        "start": 346,
+        "end": 352,
+        "needsReview": false
+      },
+      {
+        "text": "Injection",
+        "confidence": 96.156036,
+        "box": {
+          "x": 102,
+          "y": 637,
+          "width": 93,
+          "height": 24
+        },
+        "start": 353,
+        "end": 362,
+        "needsReview": false
+      },
+      {
+        "text": "supplies",
+        "confidence": 96.625389,
+        "box": {
+          "x": 205,
+          "y": 637,
+          "width": 94,
+          "height": 24
+        },
+        "start": 363,
+        "end": 371,
+        "needsReview": false
+      },
+      {
+        "text": "discussed.",
+        "confidence": 96.753609,
+        "box": {
+          "x": 308,
+          "y": 637,
+          "width": 119,
+          "height": 19
+        },
+        "start": 372,
+        "end": 382,
+        "needsReview": false
+      },
+      {
+        "text": "Delivery",
+        "confidence": 96.608879,
+        "box": {
+          "x": 102,
+          "y": 677,
+          "width": 92,
+          "height": 24
+        },
+        "start": 383,
+        "end": 391,
+        "needsReview": false
+      },
+      {
+        "text": "preference:",
+        "confidence": 96.652489,
+        "box": {
+          "x": 203,
+          "y": 677,
+          "width": 127,
+          "height": 24
+        },
+        "start": 392,
+        "end": 403,
+        "needsReview": false
+      },
+      {
+        "text": "collect",
+        "confidence": 95.884979,
+        "box": {
+          "x": 341,
+          "y": 677,
+          "width": 72,
+          "height": 19
+        },
+        "start": 404,
+        "end": 411,
+        "needsReview": false
+      },
+      {
+        "text": "in",
+        "confidence": 95.884979,
+        "box": {
+          "x": 422,
+          "y": 677,
+          "width": 17,
+          "height": 19
+        },
+        "start": 412,
+        "end": 414,
+        "needsReview": false
+      },
+      {
+        "text": "person",
+        "confidence": 96.760841,
+        "box": {
+          "x": 450,
+          "y": 682,
+          "width": 76,
+          "height": 19
+        },
+        "start": 415,
+        "end": 421,
+        "needsReview": false
+      },
+      {
+        "text": "Entered",
+        "confidence": 96.016769,
+        "box": {
+          "x": 102,
+          "y": 717,
+          "width": 87,
+          "height": 19
+        },
+        "start": 422,
+        "end": 429,
+        "needsReview": false
+      },
+      {
+        "text": "by",
+        "confidence": 93.302536,
+        "box": {
+          "x": 200,
+          "y": 717,
+          "width": 25,
+          "height": 24
+        },
+        "start": 430,
+        "end": 432,
+        "needsReview": false
+      },
+      {
+        "text": "Daro",
+        "confidence": 92.648575,
+        "box": {
+          "x": 235,
+          "y": 718,
+          "width": 53,
+          "height": 18
+        },
+        "start": 433,
+        "end": 437,
+        "needsReview": false
+      },
+      {
+        "text": "Elwick",
+        "confidence": 92.060051,
+        "box": {
+          "x": 299,
+          "y": 717,
+          "width": 71,
+          "height": 19
+        },
+        "start": 438,
+        "end": 444,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.247299,
+        "box": {
+          "x": 379,
+          "y": 717,
+          "width": 102,
+          "height": 24
+        },
+        "start": 445,
+        "end": 456,
+        "needsReview": false
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM",
+    "orientation": {
+      "pageRotation": 0,
+      "scores": {
+        "0": 4176.819306000001,
+        "180": 298.13202
+      }
+    },
+    "deskewDegrees": 0,
+    "readImage": "holdout-14.png",
+    "width": 1700,
+    "height": 2200
+  },
+  "scores": {
+    "entities": {
+      "tp": 0,
+      "predicted": 10,
+      "gold": 0,
+      "exactQuote": 0
+    },
+    "criteria": {
+      "correct": 5,
+      "total": 5
+    },
+    "cer": 0,
+    "edits": 0,
+    "chars": 456,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [],
+  "latency": {
+    "renderAndOcrMs": 2829.310875000003,
+    "serviceMs": 14.65237500000012
+  }
+}

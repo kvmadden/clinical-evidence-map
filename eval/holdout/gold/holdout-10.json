@@ -1,0 +1,120 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-10",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout/packets/holdout-10.md",
+  "group": "orientation",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Pipe rows; trial duration without baseline or outcome measurements.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 119,
+          "end": 133,
+          "text": "Age | 36 years"
+        }
+      ],
+      "reason": "The patient is adult.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 134,
+          "end": 182,
+          "text": "Indication | moderate-to-severe plaque psoriasis"
+        }
+      ],
+      "reason": "The requested indication includes qualifying severity.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 26,
+          "end": 44,
+          "text": "Sent | 18-Sep-2026"
+        },
+        {
+          "start": 406,
+          "end": 450,
+          "text": "Current examination | BSA 12% on 11-Sep-2026"
+        }
+      ],
+      "reason": "The recent BSA exceeds 10%.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 230,
+          "end": 277,
+          "text": "Previous systemic | methotrexate 10mg PO weekly"
+        },
+        {
+          "start": 278,
+          "end": 302,
+          "text": "Course length | 120 days"
+        },
+        {
+          "start": 303,
+          "end": 336,
+          "text": "Outcome | failed to clear plaques"
+        },
+        {
+          "start": 337,
+          "end": 368,
+          "text": "Starting skin percentage | ____"
+        },
+        {
+          "start": 369,
+          "end": 405,
+          "text": "End-of-course skin percentage | ____"
+        }
+      ],
+      "reason": "Failure is asserted without the required before and after BSA values.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 183,
+          "end": 201,
+          "text": "Agent | adalimumab"
+        },
+        {
+          "start": 202,
+          "end": 229,
+          "text": "Maintenance | 40 mg SQ q14d"
+        }
+      ],
+      "reason": "The maintenance dose is 40 mg every two weeks.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

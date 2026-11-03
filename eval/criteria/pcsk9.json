@@ -1,13 +1,13 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "id": "pcsk9",
   "title": "PCSK9 inhibitor",
   "fictional": true,
   "reviewed": false,
   "notice": "Fictional exercise criteria. Not a payer policy, prescribing guide, or clinical recommendation. Draft for pharmacist review. Modeled on common documentation patterns, without reproducing a real policy.",
   "effective_date": "2026-01-01",
-  "request_date_rule": "Use the provider letter request date. Conflicting source dates require review.",
-  "logic": "All five criteria require evidence. Missing evidence is not a denial. Contradiction, unclear duration, and unreadable evidence require review.",
+  "request_date_rule": "Use the provider letter or form request date. Conflicting source dates require review. A numeric date that can be read two ways is settled only by a day above 12 elsewhere on the page or by a later fax-style received date. Otherwise it requires review.",
+  "logic": "All five criteria require evidence. Missing evidence is not a denial. Contradiction, unclear duration, unconfirmed diagnosis, unreadable evidence and ambiguous dates require review.",
   "criteria": [
     {
       "id": "adult",
@@ -16,7 +16,7 @@
     },
     {
       "id": "diagnosis",
-      "text": "Established atherosclerotic cardiovascular disease is documented.",
+      "text": "Established atherosclerotic cardiovascular disease is documented as the reason for this request. A condition found only in a history or problem list, a suspected diagnosis, or a different requested indication does not meet this rule.",
       "reviewed": false
     },
     {
@@ -26,7 +26,7 @@
     },
     {
       "id": "prior",
-      "text": "An atorvastatin trial lasting at least 90 days is documented, or intolerance is documented.",
+      "text": "A high-intensity statin, atorvastatin 40 or 80 mg or rosuvastatin 20 or 40 mg daily, for at least 90 days, with LDL-C on or before the start and at least 90 days after the start that is still 70 mg/dL or higher. A documented statin intolerance or contraindication, with its reason, also meets this rule.",
       "reviewed": false
     },
     {

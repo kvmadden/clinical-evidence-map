@@ -1,39 +1,46 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-009",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "pcsk9",
   "source_file": "eval/packets/packet-009.md",
+  "group": "rotation-7deg",
+  "tags": [
+    "page:letter",
+    "date:text-mdy",
+    "date-reading:none",
+    "drug-name:generic",
+    "dose-format:plain"
+  ],
+  "date_reading": {
+    "status": "none",
+    "order": null
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-09-30",
+      "source_span": {
+        "start": 27,
+        "end": 53,
+        "text": "Letter date: Sep 30, 2026."
+      },
+      "date": {
+        "written": "Sep 30, 2026",
+        "format": "text-mdy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Lina Brookvale",
       "source_span": {
-        "start": 53,
-        "end": 89,
+        "start": 54,
+        "end": 90,
         "text": "Patient: Lina Brookvale (fictional)."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "age",
-      "value": 41,
-      "source_span": {
-        "start": 90,
-        "end": 104,
-        "text": "Age: 41 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
       },
       "reviewed": false
     },
@@ -41,8 +48,8 @@
       "type": "provider",
       "value": "Dr. Rowan Vale",
       "source_span": {
-        "start": 105,
-        "end": 157,
+        "start": 91,
+        "end": 143,
         "text": "From: Dr. Rowan Vale, fictional requesting provider."
       },
       "reviewed": false
@@ -51,8 +58,8 @@
       "type": "requested_medication",
       "value": "evolocumab",
       "source_span": {
-        "start": 158,
-        "end": 199,
+        "start": 144,
+        "end": 185,
         "text": "Request: evolocumab 140 mg every 2 weeks."
       },
       "reviewed": false
@@ -61,19 +68,35 @@
       "type": "requested_dose",
       "value": "140 mg every 2 weeks",
       "source_span": {
-        "start": 158,
-        "end": 199,
+        "start": 144,
+        "end": 185,
         "text": "Request: evolocumab 140 mg every 2 weeks."
       },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Established atherosclerotic cardiovascular disease",
+      "type": "indication",
+      "value": {
+        "condition": "atherosclerotic cardiovascular disease",
+        "certainty": "unconfirmed"
+      },
       "source_span": {
-        "start": 331,
-        "end": 393,
-        "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
+        "start": 186,
+        "end": 255,
+        "text": "Requested for: possible coronary artery disease, stress test pending."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "atherosclerotic cardiovascular disease",
+        "certainty": "unconfirmed"
+      },
+      "source_span": {
+        "start": 298,
+        "end": 364,
+        "text": "Assessment: possible coronary artery disease, stress test pending."
       },
       "reviewed": false
     },
@@ -81,83 +104,28 @@
       "type": "measurement",
       "value": {
         "name": "LDL-C",
-        "value": 132.0,
+        "value": 132,
         "unit": "mg/dL"
       },
       "source_span": {
-        "start": 479,
-        "end": 518,
-        "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
+        "start": 450,
+        "end": 481,
+        "text": "LDL = 132 mg/dL on Sep 14, 2026"
       },
       "reviewed": false
     },
     {
       "type": "measurement_date",
-      "value": "2026-09-15",
+      "value": "2026-09-14",
       "source_span": {
-        "start": 479,
-        "end": 518,
-        "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
+        "start": 450,
+        "end": 481,
+        "text": "LDL = 132 mg/dL on Sep 14, 2026"
       },
-      "reviewed": false
-    },
-    {
-      "type": "prior_medication",
-      "value": "atorvastatin",
-      "source_span": {
-        "start": 599,
-        "end": 711,
-        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_dose",
-      "value": "80 mg daily",
-      "source_span": {
-        "start": 599,
-        "end": 711,
-        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_start_date",
-      "value": "2026-04-01",
-      "source_span": {
-        "start": 599,
-        "end": 711,
-        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_stop_date",
-      "value": "2026-08-01",
-      "source_span": {
-        "start": 599,
-        "end": 711,
-        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_outcome",
-      "value": "inadequate response",
-      "source_span": {
-        "start": 599,
-        "end": 711,
-        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "medication_list_dose",
-      "value": "140 mg every 2 weeks",
-      "source_span": {
-        "start": 539,
-        "end": 598,
-        "text": "Current requested therapy: evolocumab 140 mg every 2 weeks."
+      "date": {
+        "written": "Sep 14, 2026",
+        "format": "text-mdy",
+        "ambiguous": false
       },
       "reviewed": false
     }
@@ -165,28 +133,29 @@
   "criterion_evidence": [
     {
       "criterion_id": "adult",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 90,
-          "end": 104,
-          "text": "Age: 41 years."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No age is documented.",
+      "scenario": "absent",
       "reviewed": false
     },
     {
       "criterion_id": "diagnosis",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 331,
-          "end": 393,
-          "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
+          "start": 186,
+          "end": 255,
+          "text": "Requested for: possible coronary artery disease, stress test pending."
+        },
+        {
+          "start": 298,
+          "end": 364,
+          "text": "Assessment: possible coronary artery disease, stress test pending."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Atherosclerotic cardiovascular disease is stated as suspected or possible, not confirmed.",
+      "scenario": "unconfirmed",
       "reviewed": false
     },
     {
@@ -194,30 +163,26 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 479,
-          "end": 518,
-          "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
+          "start": 450,
+          "end": 481,
+          "text": "LDL = 132 mg/dL on Sep 14, 2026"
         },
         {
           "start": 27,
-          "end": 52,
-          "text": "Request date: 2026-10-01."
+          "end": 53,
+          "text": "Letter date: Sep 30, 2026."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "LDL-C 132 mg/dL is 16 days before the request and meets the 70 mg/dL threshold.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
       "criterion_id": "prior",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 599,
-          "end": 711,
-          "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-        }
-      ],
-      "reason": "The documented trial runs 122 days, meeting the fictional 90-day requirement.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No atorvastatin trial, intolerance or contraindication is documented.",
+      "scenario": "missing-page",
       "reviewed": false
     },
     {
@@ -225,18 +190,19 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 158,
-          "end": 199,
+          "start": 144,
+          "end": 185,
           "text": "Request: evolocumab 140 mg every 2 weeks."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The requested evolocumab dose 140 mg every 2 weeks matches the fictional rule.",
+      "scenario": "supported",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

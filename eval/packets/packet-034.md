@@ -2,31 +2,35 @@
 packet_id: packet-034
 fictional: true
 criteria_id: glp1-t2d
-quality_group: stale-lab
-quality_plan: "Measurement is older than the 180-day window."
-render_status: source_text_only
+group: smudge
+page_style: letter
+date_style: us-slash
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Letter date: 10/04/2026.
 Patient: Nolan Dunvale (fictional).
-Age: 37 years.
+Age: 17 yrs
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: semaglutide 0.5 mg weekly.
-Please review the enclosed records for Type 2 diabetes mellitus.
+Request: semaglutide 0.5 mg subcutaneous weekly.
+Indication for this request: possible type 2 diabetes.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Type 2 diabetes mellitus.
+Visit date: 09/23/2026.
+Assessment: possible type 2 diabetes.
+Past medical history: hypertension, seasonal allergies.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-A1c: 8.6 %; collected 2026-01-01.
+A1c = 8.6% on 09/18/2026
 
 MEDICATION HISTORY
-Current requested therapy: semaglutide 0.5 mg weekly.
-Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: semaglutide 0.5 mg subcut once weekly.
+Prior therapy: metformin 1000 mg orally bid.
+Trial dates: started 04/04/2026; stopped 08/04/2026.
+Baseline before metformin: A1c 9.4 % on 03/28/2026.
+On metformin: A1c 8.9 % on 07/23/2026; goal below 7.0 % not met.
 No other prior therapy records supplied.

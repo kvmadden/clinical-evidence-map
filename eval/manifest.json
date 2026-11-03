@@ -1,257 +1,1824 @@
 {
   "fictional": true,
   "reviewed": false,
-  "packet_count": 50,
+  "packet_count": 63,
+  "generator": "scripts/generate.ts",
+  "groups": [
+    {
+      "id": "clean-render",
+      "label": "Clean render",
+      "render": "Typed page with light speckle. No other effect."
+    },
+    {
+      "id": "rotation-7deg",
+      "label": "Simulated 7-degree rotation",
+      "render": "Typed page with simulated fax noise, rotated 7 degrees."
+    },
+    {
+      "id": "ai-handwriting",
+      "label": "AI-drawn handwriting (image model)",
+      "render": "Typed page whose medication history is an AI-drawn handwriting image from an image model, not a real person's handwriting, with simulated fax noise."
+    },
+    {
+      "id": "fax-noise",
+      "label": "Simulated fax noise",
+      "render": "Typed page with seeded speckles and faint horizontal streaks."
+    },
+    {
+      "id": "choppy-lines",
+      "label": "Simulated choppy scan lines",
+      "render": "Typed page with seeded row jitter, dropped lines and dark streaks."
+    },
+    {
+      "id": "smudge",
+      "label": "Simulated smudges",
+      "render": "Typed page with seeded blurred smudges over the text."
+    },
+    {
+      "id": "low-contrast",
+      "label": "Simulated low contrast",
+      "render": "Typed page in light gray ink on a gray background."
+    },
+    {
+      "id": "orientation",
+      "label": "Simulated page orientation",
+      "render": "Typed page with simulated fax noise, turned 180, 90 or 270 degrees."
+    },
+    {
+      "id": "mixed-annotations",
+      "label": "Printed page with AI-drawn notes, circles and arrows",
+      "render": "Typed page with AI-drawn handwritten fills and margin notes from an image model, drawn circles and arrows, and simulated fax noise."
+    }
+  ],
   "packets": [
     {
       "packet_id": "packet-001",
       "criteria_id": "glp1-t2d",
-      "quality_group": "clean"
+      "group": "clean-render",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-light"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-002",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "clean"
+      "group": "clean-render",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-light"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-003",
       "criteria_id": "pcsk9",
-      "quality_group": "clean"
+      "group": "clean-render",
+      "tags": [
+        "page:letter",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-light"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-004",
       "criteria_id": "glp1-t2d",
-      "quality_group": "clean"
+      "group": "clean-render",
+      "tags": [
+        "page:form",
+        "date:text-dmy",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:compact"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-light"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-005",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "clean"
+      "group": "clean-render",
+      "tags": [
+        "page:letter",
+        "date:day-first",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-light"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-006",
       "criteria_id": "pcsk9",
-      "quality_group": "skew"
+      "group": "rotation-7deg",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 7,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-007",
       "criteria_id": "glp1-t2d",
-      "quality_group": "skew"
+      "group": "rotation-7deg",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 7,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-008",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "skew"
+      "group": "rotation-7deg",
+      "tags": [
+        "page:form",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:sig"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 7,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-009",
       "criteria_id": "pcsk9",
-      "quality_group": "skew"
+      "group": "rotation-7deg",
+      "tags": [
+        "page:letter",
+        "date:text-mdy",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 7,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-010",
       "criteria_id": "glp1-t2d",
-      "quality_group": "skew"
+      "group": "rotation-7deg",
+      "tags": [
+        "page:letter",
+        "date:us-short",
+        "date-reading:forced",
+        "drug-name:brand",
+        "dose-format:compact",
+        "blank-field",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 7,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-011",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "handwriting"
+      "group": "ai-handwriting",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 17,
+            "image": "hw-011",
+            "kind": "block",
+            "box": [
+              20,
+              163,
+              2156,
+              505
+            ],
+            "lines": 3
+          }
+        ],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-012",
       "criteria_id": "pcsk9",
-      "quality_group": "handwriting"
+      "group": "ai-handwriting",
+      "tags": [
+        "page:letter",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 17,
+            "image": "hw-012",
+            "kind": "block",
+            "box": [
+              42,
+              104,
+              1923,
+              723
+            ],
+            "lines": 3
+          }
+        ],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-013",
       "criteria_id": "glp1-t2d",
-      "quality_group": "handwriting"
+      "group": "ai-handwriting",
+      "tags": [
+        "page:letter",
+        "date:text-mdy",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 18,
+            "image": "hw-013",
+            "kind": "block",
+            "box": [
+              73,
+              107,
+              2136,
+              598
+            ],
+            "lines": 3
+          }
+        ],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-014",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "handwriting"
+      "group": "ai-handwriting",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 14,
+            "image": "hw-014",
+            "kind": "block",
+            "box": [
+              82,
+              82,
+              2122,
+              637
+            ],
+            "lines": 3
+          }
+        ],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-015",
       "criteria_id": "pcsk9",
-      "quality_group": "handwriting"
+      "group": "ai-handwriting",
+      "tags": [
+        "page:letter",
+        "date:text-dmy",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 18,
+            "image": "hw-015",
+            "kind": "block",
+            "box": [
+              14,
+              154,
+              1769,
+              749
+            ],
+            "lines": 3
+          }
+        ],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-016",
       "criteria_id": "glp1-t2d",
-      "quality_group": "missing-lab"
+      "group": "fax-noise",
+      "tags": [
+        "page:form",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "misspelling"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-017",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "missing-lab"
+      "group": "fax-noise",
+      "tags": [
+        "page:letter",
+        "date:text-dmy",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:compact",
+        "misspelling",
+        "look-alike-name"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-018",
       "criteria_id": "pcsk9",
-      "quality_group": "missing-lab"
+      "group": "fax-noise",
+      "tags": [
+        "page:form",
+        "date:day-first",
+        "date-reading:unresolved",
+        "drug-name:generic",
+        "dose-format:route"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-019",
       "criteria_id": "glp1-t2d",
-      "quality_group": "missing-lab"
+      "group": "fax-noise",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:sig"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-020",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "missing-lab"
+      "group": "fax-noise",
+      "tags": [
+        "page:letter",
+        "date:text-mdy",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-021",
       "criteria_id": "pcsk9",
-      "quality_group": "missing-history"
+      "group": "fax-noise",
+      "tags": [
+        "page:form",
+        "date:us-short",
+        "date-reading:forced",
+        "drug-name:brand",
+        "dose-format:compact",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-022",
       "criteria_id": "glp1-t2d",
-      "quality_group": "missing-history"
+      "group": "fax-noise",
+      "tags": [
+        "page:letter",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "misspelling"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-023",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "missing-history"
+      "group": "fax-noise",
+      "tags": [
+        "page:form",
+        "date:text-dmy",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:compact"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-024",
       "criteria_id": "pcsk9",
-      "quality_group": "missing-history"
+      "group": "choppy-lines",
+      "tags": [
+        "page:letter",
+        "date:day-first",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks",
+          "choppy"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-025",
       "criteria_id": "glp1-t2d",
-      "quality_group": "missing-history"
+      "group": "choppy-lines",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:sig",
+        "blank-field"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks",
+          "choppy"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-026",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "conflicting-dates"
+      "group": "choppy-lines",
+      "tags": [
+        "page:form",
+        "date:text-mdy",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain",
+        "misspelling"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks",
+          "choppy"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-027",
       "criteria_id": "pcsk9",
-      "quality_group": "conflicting-dates"
+      "group": "choppy-lines",
+      "tags": [
+        "page:letter",
+        "date:us-short",
+        "date-reading:forced",
+        "drug-name:brand",
+        "dose-format:compact",
+        "misspelling",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks",
+          "choppy"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-028",
       "criteria_id": "glp1-t2d",
-      "quality_group": "conflicting-dates"
+      "group": "choppy-lines",
+      "tags": [
+        "page:form",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "blank-field"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks",
+          "choppy"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-029",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "conflicting-dates"
+      "group": "choppy-lines",
+      "tags": [
+        "page:letter",
+        "date:us-short",
+        "date-reading:unresolved",
+        "drug-name:brand",
+        "dose-format:compact"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks",
+          "choppy"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-030",
       "criteria_id": "pcsk9",
-      "quality_group": "conflicting-dates"
+      "group": "choppy-lines",
+      "tags": [
+        "page:letter",
+        "date:day-first",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks",
+          "choppy"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-031",
       "criteria_id": "glp1-t2d",
-      "quality_group": "stale-lab"
+      "group": "choppy-lines",
+      "tags": [
+        "page:form",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:sig"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks",
+          "choppy"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-032",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "stale-lab"
+      "group": "smudge",
+      "tags": [
+        "page:letter",
+        "date:text-mdy",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-light",
+          "smudge"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-033",
       "criteria_id": "pcsk9",
-      "quality_group": "stale-lab"
+      "group": "smudge",
+      "tags": [
+        "page:form",
+        "date:us-short",
+        "date-reading:forced",
+        "drug-name:brand",
+        "dose-format:compact",
+        "misspelling",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-light",
+          "smudge"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-034",
       "criteria_id": "glp1-t2d",
-      "quality_group": "stale-lab"
+      "group": "smudge",
+      "tags": [
+        "page:letter",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-light",
+          "smudge"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-035",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "stale-lab"
+      "group": "smudge",
+      "tags": [
+        "page:letter",
+        "date:text-dmy",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:compact",
+        "blank-field",
+        "misspelling"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-light",
+          "smudge"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-036",
       "criteria_id": "pcsk9",
-      "quality_group": "unclear-trial"
+      "group": "smudge",
+      "tags": [
+        "page:form",
+        "date:day-first",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "misspelling",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-light",
+          "smudge"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-037",
       "criteria_id": "glp1-t2d",
-      "quality_group": "unclear-trial"
+      "group": "smudge",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:sig"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-light",
+          "smudge"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-038",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "unclear-trial"
+      "group": "smudge",
+      "tags": [
+        "page:form",
+        "date:text-mdy",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-light",
+          "smudge"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-039",
       "criteria_id": "pcsk9",
-      "quality_group": "unclear-trial"
+      "group": "smudge",
+      "tags": [
+        "page:letter",
+        "date:us-short",
+        "date-reading:forced",
+        "drug-name:brand",
+        "dose-format:compact",
+        "misspelling",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-light",
+          "smudge"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-040",
       "criteria_id": "glp1-t2d",
-      "quality_group": "unclear-trial"
+      "group": "low-contrast",
+      "tags": [
+        "page:letter",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-light",
+          "low-contrast"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-041",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "conflicting-dose"
+      "group": "low-contrast",
+      "tags": [
+        "page:form",
+        "date:day-first",
+        "date-reading:header",
+        "drug-name:brand",
+        "dose-format:compact",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-light",
+          "low-contrast"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-042",
       "criteria_id": "pcsk9",
-      "quality_group": "conflicting-dose"
+      "group": "low-contrast",
+      "tags": [
+        "page:letter",
+        "date:day-first",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-light",
+          "low-contrast"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-043",
       "criteria_id": "glp1-t2d",
-      "quality_group": "conflicting-dose"
+      "group": "low-contrast",
+      "tags": [
+        "page:form",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:sig"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-light",
+          "low-contrast"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-044",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "conflicting-dose"
+      "group": "low-contrast",
+      "tags": [
+        "page:letter",
+        "date:text-mdy",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-light",
+          "low-contrast"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-045",
       "criteria_id": "pcsk9",
-      "quality_group": "conflicting-dose"
+      "group": "low-contrast",
+      "tags": [
+        "page:letter",
+        "date:us-short",
+        "date-reading:forced",
+        "drug-name:brand",
+        "dose-format:compact",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-light",
+          "low-contrast"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-046",
       "criteria_id": "glp1-t2d",
-      "quality_group": "intolerance"
+      "group": "low-contrast",
+      "tags": [
+        "page:form",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "misspelling"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-light",
+          "low-contrast"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-047",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "intolerance"
+      "group": "low-contrast",
+      "tags": [
+        "page:letter",
+        "date:text-dmy",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:compact"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-light",
+          "low-contrast"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-048",
       "criteria_id": "pcsk9",
-      "quality_group": "intolerance"
+      "group": "orientation",
+      "tags": [
+        "page:form",
+        "date:day-first",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 180,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-049",
       "criteria_id": "glp1-t2d",
-      "quality_group": "intolerance"
+      "group": "orientation",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:sig"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 180,
+        "handwriting": [],
+        "annotations": []
+      }
     },
     {
       "packet_id": "packet-050",
       "criteria_id": "biologic-psoriasis",
-      "quality_group": "intolerance"
+      "group": "orientation",
+      "tags": [
+        "page:letter",
+        "date:us-short",
+        "date-reading:header",
+        "drug-name:generic",
+        "dose-format:plain",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 180,
+        "handwriting": [],
+        "annotations": []
+      }
+    },
+    {
+      "packet_id": "packet-051",
+      "criteria_id": "pcsk9",
+      "group": "orientation",
+      "tags": [
+        "page:form",
+        "date:us-short",
+        "date-reading:forced",
+        "drug-name:brand",
+        "dose-format:compact",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 180,
+        "handwriting": [],
+        "annotations": []
+      }
+    },
+    {
+      "packet_id": "packet-052",
+      "criteria_id": "glp1-t2d",
+      "group": "orientation",
+      "tags": [
+        "page:letter",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 90,
+        "handwriting": [],
+        "annotations": []
+      }
+    },
+    {
+      "packet_id": "packet-053",
+      "criteria_id": "biologic-psoriasis",
+      "group": "orientation",
+      "tags": [
+        "page:form",
+        "date:day-first",
+        "date-reading:unresolved",
+        "drug-name:brand",
+        "dose-format:compact"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 90,
+        "handwriting": [],
+        "annotations": []
+      }
+    },
+    {
+      "packet_id": "packet-054",
+      "criteria_id": "pcsk9",
+      "group": "orientation",
+      "tags": [
+        "page:letter",
+        "date:day-first",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:route",
+        "misspelling",
+        "fax-style-header"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 270,
+        "handwriting": [],
+        "annotations": []
+      }
+    },
+    {
+      "packet_id": "packet-055",
+      "criteria_id": "glp1-t2d",
+      "group": "orientation",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:brand",
+        "dose-format:sig",
+        "blank-field"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 270,
+        "handwriting": [],
+        "annotations": []
+      }
+    },
+    {
+      "packet_id": "packet-056",
+      "criteria_id": "biologic-psoriasis",
+      "group": "mixed-annotations",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 20,
+            "image": "hw-notes-a",
+            "kind": "note",
+            "box": [
+              47,
+              764,
+              843,
+              855
+            ],
+            "lines": 1
+          }
+        ],
+        "annotations": [
+          {
+            "kind": "circle",
+            "line": 1,
+            "from": 12,
+            "to": 22
+          },
+          {
+            "kind": "arrow",
+            "line": 18
+          },
+          {
+            "kind": "underline",
+            "line": 3,
+            "from": 0,
+            "to": 7
+          }
+        ]
+      }
+    },
+    {
+      "packet_id": "packet-057",
+      "criteria_id": "pcsk9",
+      "group": "mixed-annotations",
+      "tags": [
+        "page:letter",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 13,
+            "image": "hw-notes-a",
+            "kind": "note",
+            "box": [
+              53,
+              478,
+              618,
+              557
+            ],
+            "lines": 1
+          }
+        ],
+        "annotations": [
+          {
+            "kind": "circle",
+            "line": 3,
+            "from": 4,
+            "to": 11
+          },
+          {
+            "kind": "arrow",
+            "line": 1
+          },
+          {
+            "kind": "underline",
+            "line": 16,
+            "from": 0,
+            "to": 53
+          }
+        ]
+      }
+    },
+    {
+      "packet_id": "packet-058",
+      "criteria_id": "glp1-t2d",
+      "group": "mixed-annotations",
+      "tags": [
+        "page:form",
+        "date:text-dmy",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain",
+        "blank-field",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 7,
+            "image": "hw-notes-a",
+            "kind": "fill",
+            "box": [
+              49,
+              194,
+              724,
+              283
+            ],
+            "prefix": "Diagnosis for this request: ",
+            "lines": 1
+          }
+        ],
+        "annotations": [
+          {
+            "kind": "circle",
+            "line": 21,
+            "from": 27,
+            "to": 37
+          },
+          {
+            "kind": "arrow",
+            "line": 20
+          },
+          {
+            "kind": "underline",
+            "line": 15,
+            "from": 0,
+            "to": 22
+          }
+        ]
+      }
+    },
+    {
+      "packet_id": "packet-059",
+      "criteria_id": "biologic-psoriasis",
+      "group": "mixed-annotations",
+      "tags": [
+        "page:form",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:plain",
+        "blank-field",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 6,
+            "image": "hw-notes-a",
+            "kind": "fill",
+            "box": [
+              49,
+              1336,
+              417,
+              1420
+            ],
+            "prefix": "Dose and frequency: ",
+            "lines": 1
+          },
+          {
+            "line": 13,
+            "image": "hw-notes-a",
+            "kind": "note",
+            "box": [
+              39,
+              1045,
+              780,
+              1122
+            ],
+            "lines": 1
+          }
+        ],
+        "annotations": [
+          {
+            "kind": "circle",
+            "line": 3,
+            "from": 4,
+            "to": 7
+          },
+          {
+            "kind": "arrow",
+            "line": 20
+          },
+          {
+            "kind": "underline",
+            "line": 16,
+            "from": 0,
+            "to": 20
+          }
+        ]
+      }
+    },
+    {
+      "packet_id": "packet-060",
+      "criteria_id": "pcsk9",
+      "group": "mixed-annotations",
+      "tags": [
+        "page:letter",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 20,
+            "image": "hw-notes-b",
+            "kind": "note",
+            "box": [
+              24,
+              201,
+              1005,
+              299
+            ],
+            "lines": 1
+          }
+        ],
+        "annotations": [
+          {
+            "kind": "circle",
+            "line": 15,
+            "from": 4,
+            "to": 14
+          },
+          {
+            "kind": "arrow",
+            "line": 1
+          },
+          {
+            "kind": "underline",
+            "line": 19,
+            "from": 0,
+            "to": 70
+          }
+        ]
+      }
+    },
+    {
+      "packet_id": "packet-061",
+      "criteria_id": "glp1-t2d",
+      "group": "mixed-annotations",
+      "tags": [
+        "page:letter",
+        "date:text-mdy",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "liberation-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 13,
+            "image": "hw-notes-b",
+            "kind": "note",
+            "box": [
+              30,
+              710,
+              443,
+              794
+            ],
+            "lines": 1
+          },
+          {
+            "line": 17,
+            "image": "hw-notes-b",
+            "kind": "note",
+            "box": [
+              26,
+              969,
+              737,
+              1061
+            ],
+            "lines": 1
+          }
+        ],
+        "annotations": [
+          {
+            "kind": "circle",
+            "line": 9,
+            "from": 15,
+            "to": 25
+          },
+          {
+            "kind": "arrow",
+            "line": 1
+          },
+          {
+            "kind": "underline",
+            "line": 16,
+            "from": 0,
+            "to": 53
+          }
+        ]
+      }
+    },
+    {
+      "packet_id": "packet-062",
+      "criteria_id": "biologic-psoriasis",
+      "group": "mixed-annotations",
+      "tags": [
+        "page:form",
+        "date:iso",
+        "date-reading:none",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 7,
+            "image": "hw-notes-b",
+            "kind": "fill",
+            "box": [
+              19,
+              453,
+              751,
+              549
+            ],
+            "prefix": "Diagnosis for this request: ",
+            "lines": 1
+          }
+        ],
+        "annotations": [
+          {
+            "kind": "circle",
+            "line": 20,
+            "from": 35,
+            "to": 45
+          },
+          {
+            "kind": "arrow",
+            "line": 20
+          },
+          {
+            "kind": "underline",
+            "line": 3,
+            "from": 0,
+            "to": 7
+          }
+        ]
+      }
+    },
+    {
+      "packet_id": "packet-063",
+      "criteria_id": "pcsk9",
+      "group": "mixed-annotations",
+      "tags": [
+        "page:letter",
+        "date:us-slash",
+        "date-reading:forced",
+        "drug-name:generic",
+        "dose-format:plain",
+        "ai-drawn-handwriting"
+      ],
+      "render": {
+        "font": "roboto-mono",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [
+          {
+            "line": 13,
+            "image": "hw-notes-b",
+            "kind": "note",
+            "box": [
+              24,
+              1224,
+              361,
+              1308
+            ],
+            "lines": 1
+          }
+        ],
+        "annotations": [
+          {
+            "kind": "circle",
+            "line": 9,
+            "from": 11,
+            "to": 21
+          },
+          {
+            "kind": "arrow",
+            "line": 16
+          },
+          {
+            "kind": "underline",
+            "line": 1,
+            "from": 0,
+            "to": 24
+          }
+        ]
+      }
     }
   ]
 }

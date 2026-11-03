@@ -1,12 +1,40 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-011",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "biologic-psoriasis",
   "source_file": "eval/packets/packet-011.md",
+  "group": "ai-handwriting",
+  "tags": [
+    "page:letter",
+    "date:iso",
+    "date-reading:forced",
+    "drug-name:generic",
+    "dose-format:plain",
+    "ai-drawn-handwriting"
+  ],
+  "date_reading": {
+    "status": "forced",
+    "order": "mdy"
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-10-01",
+      "source_span": {
+        "start": 27,
+        "end": 52,
+        "text": "Request date: 2026-10-01."
+      },
+      "date": {
+        "written": "2026-10-01",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Mira Ashmere",
@@ -24,16 +52,6 @@
         "start": 88,
         "end": 102,
         "text": "Age: 43 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
       },
       "reviewed": false
     },
@@ -59,7 +77,7 @@
     },
     {
       "type": "requested_dose",
-      "value": "40 mg every other week",
+      "value": "40 mg every 2 weeks",
       "source_span": {
         "start": 156,
         "end": 199,
@@ -68,25 +86,38 @@
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Moderate-to-severe plaque psoriasis",
+      "type": "indication",
+      "value": "moderate-to-severe plaque psoriasis",
       "source_span": {
-        "start": 316,
-        "end": 363,
-        "text": "Diagnosis: Moderate-to-severe plaque psoriasis."
+        "start": 200,
+        "end": 265,
+        "text": "Indication for this request: Moderate-to-severe plaque psoriasis."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "moderate-to-severe plaque psoriasis",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 306,
+        "end": 379,
+        "text": "Assessment: Moderate-to-severe plaque psoriasis, active on prior therapy."
       },
       "reviewed": false
     },
     {
       "type": "measurement",
       "value": {
-        "name": "Body surface area",
-        "value": 14.0,
+        "name": "BSA",
+        "value": 14,
         "unit": "%"
       },
       "source_span": {
-        "start": 449,
-        "end": 495,
+        "start": 465,
+        "end": 511,
         "text": "Body surface area: 14 %; collected 2026-09-15."
       },
       "reviewed": false
@@ -95,10 +126,26 @@
       "type": "measurement_date",
       "value": "2026-09-15",
       "source_span": {
-        "start": 449,
-        "end": 495,
+        "start": 465,
+        "end": 511,
         "text": "Body surface area: 14 %; collected 2026-09-15."
       },
+      "date": {
+        "written": "2026-09-15",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "medication_list_dose",
+      "value": "40 mg every 2 weeks",
+      "source_span": {
+        "start": 532,
+        "end": 577,
+        "text": "Current: adalimumab 40 mg SC every other week"
+      },
+      "handwritten": true,
       "reviewed": false
     },
     {
@@ -106,9 +153,10 @@
       "value": "methotrexate",
       "source_span": {
         "start": 578,
-        "end": 691,
-        "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "end": 640,
+        "text": "Prior: methotrexate 15 mg weekly from 04/01/2026 to 08/01/2026"
       },
+      "handwritten": true,
       "reviewed": false
     },
     {
@@ -116,9 +164,10 @@
       "value": "15 mg weekly",
       "source_span": {
         "start": 578,
-        "end": 691,
-        "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "end": 640,
+        "text": "Prior: methotrexate 15 mg weekly from 04/01/2026 to 08/01/2026"
       },
+      "handwritten": true,
       "reviewed": false
     },
     {
@@ -126,9 +175,20 @@
       "value": "2026-04-01",
       "source_span": {
         "start": 578,
-        "end": 691,
-        "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "end": 640,
+        "text": "Prior: methotrexate 15 mg weekly from 04/01/2026 to 08/01/2026"
       },
+      "date": {
+        "written": "04/01/2026",
+        "format": "us-slash",
+        "ambiguous": true,
+        "readings": [
+          "2026-04-01",
+          "2026-01-04"
+        ],
+        "resolved_by": "forced"
+      },
+      "handwritten": true,
       "reviewed": false
     },
     {
@@ -136,29 +196,82 @@
       "value": "2026-08-01",
       "source_span": {
         "start": 578,
-        "end": 691,
-        "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "end": 640,
+        "text": "Prior: methotrexate 15 mg weekly from 04/01/2026 to 08/01/2026"
       },
+      "date": {
+        "written": "08/01/2026",
+        "format": "us-slash",
+        "ambiguous": true,
+        "readings": [
+          "2026-08-01",
+          "2026-01-08"
+        ],
+        "resolved_by": "forced"
+      },
+      "handwritten": true,
       "reviewed": false
     },
     {
-      "type": "prior_outcome",
-      "value": "inadequate response",
-      "source_span": {
-        "start": 578,
-        "end": 691,
-        "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+      "type": "prior_baseline",
+      "value": {
+        "name": "BSA",
+        "value": 18,
+        "unit": "%"
       },
+      "source_span": {
+        "start": 641,
+        "end": 713,
+        "text": "BSA 18% on 03/25/2026, 15% on 07/20/2026 on MTX. Goal 3% or less not met"
+      },
+      "handwritten": true,
       "reviewed": false
     },
     {
-      "type": "medication_list_dose",
-      "value": "40 mg every other week",
+      "type": "prior_baseline_date",
+      "value": "2026-03-25",
       "source_span": {
-        "start": 516,
-        "end": 577,
-        "text": "Current requested therapy: adalimumab 40 mg every other week."
+        "start": 641,
+        "end": 713,
+        "text": "BSA 18% on 03/25/2026, 15% on 07/20/2026 on MTX. Goal 3% or less not met"
       },
+      "date": {
+        "written": "03/25/2026",
+        "format": "us-slash",
+        "ambiguous": false
+      },
+      "handwritten": true,
+      "reviewed": false
+    },
+    {
+      "type": "prior_followup",
+      "value": {
+        "name": "BSA",
+        "value": 15,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 641,
+        "end": 713,
+        "text": "BSA 18% on 03/25/2026, 15% on 07/20/2026 on MTX. Goal 3% or less not met"
+      },
+      "handwritten": true,
+      "reviewed": false
+    },
+    {
+      "type": "prior_followup_date",
+      "value": "2026-07-20",
+      "source_span": {
+        "start": 641,
+        "end": 713,
+        "text": "BSA 18% on 03/25/2026, 15% on 07/20/2026 on MTX. Goal 3% or less not met"
+      },
+      "date": {
+        "written": "07/20/2026",
+        "format": "us-slash",
+        "ambiguous": false
+      },
+      "handwritten": true,
       "reviewed": false
     }
   ],
@@ -173,20 +286,34 @@
           "text": "Age: 43 years."
         }
       ],
-      "reason": "Documented in the supplied source.",
-      "reviewed": false
+      "reason": "Age 43 is documented.",
+      "scenario": "supported",
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": true,
+        "basis": "Rule text and quoted evidence unchanged since this review."
+      }
     },
     {
       "criterion_id": "diagnosis",
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 316,
-          "end": 363,
-          "text": "Diagnosis: Moderate-to-severe plaque psoriasis."
+          "start": 200,
+          "end": 265,
+          "text": "Indication for this request: Moderate-to-severe plaque psoriasis."
+        },
+        {
+          "start": 306,
+          "end": 379,
+          "text": "Assessment: Moderate-to-severe plaque psoriasis, active on prior therapy."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The request names moderate-to-severe plaque psoriasis as its reason.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
@@ -194,8 +321,8 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 449,
-          "end": 495,
+          "start": 465,
+          "end": 511,
           "text": "Body surface area: 14 %; collected 2026-09-15."
         },
         {
@@ -204,7 +331,8 @@
           "text": "Request date: 2026-10-01."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "BSA 14 % is 16 days before the request and meets the 10 % threshold.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
@@ -213,11 +341,17 @@
       "evidence_spans": [
         {
           "start": 578,
-          "end": 691,
-          "text": "Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+          "end": 640,
+          "text": "Prior: methotrexate 15 mg weekly from 04/01/2026 to 08/01/2026"
+        },
+        {
+          "start": 641,
+          "end": 713,
+          "text": "BSA 18% on 03/25/2026, 15% on 07/20/2026 on MTX. Goal 3% or less not met"
         }
       ],
-      "reason": "The documented trial runs 122 days, meeting the fictional 90-day requirement.",
+      "reason": "A 122-day methotrexate trial is documented with BSA 18 before and 15 after, still not at goal.",
+      "scenario": "objective",
       "reviewed": false
     },
     {
@@ -230,13 +364,14 @@
           "text": "Request: adalimumab 40 mg every other week."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The requested adalimumab dose 40 mg every 2 weeks matches the fictional rule.",
+      "scenario": "supported",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

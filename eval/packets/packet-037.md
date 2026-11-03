@@ -2,31 +2,31 @@
 packet_id: packet-037
 fictional: true
 criteria_id: glp1-t2d
-quality_group: unclear-trial
-quality_plan: "Prior therapy is listed without start or stop dates or intolerance."
-render_status: source_text_only
+group: smudge
+page_style: letter
+date_style: iso
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Request date: 2026-09-29.
 Patient: Veda Dunvale (fictional).
-Age: 40 years.
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: semaglutide 0.5 mg weekly.
-Please review the enclosed records for Type 2 diabetes mellitus.
+Request: Ozempic (semaglutide) 1 pen (0.5 mg) SC daily.
+Reason for request: prediabetes.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Type 2 diabetes mellitus.
+Visit date: 2026-09-18.
+Assessment: prediabetes.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-A1c: 8.6 %; collected 2026-09-15.
+A1C 8.6 % (drawn 2025-12-30)
 
 MEDICATION HISTORY
-Current requested therapy: semaglutide 0.5 mg weekly.
-Prior therapy: metformin 1000 mg twice daily; treatment dates and response not supplied.
+Current requested therapy: Ozempic (semaglutide) 1 pen (0.5 mg) SC every day.
+Previous treatment: glipizide 5 mg by mouth daily, 2025-11-03 - 2026-03-05.
+Outcome: inadequate response.
 No other prior therapy records supplied.

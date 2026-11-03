@@ -1,13 +1,13 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "id": "biologic-psoriasis",
   "title": "Biologic for plaque psoriasis",
   "fictional": true,
   "reviewed": false,
   "notice": "Fictional exercise criteria. Not a payer policy, prescribing guide, or clinical recommendation. Draft for pharmacist review. Modeled on common documentation patterns, without reproducing a real policy.",
   "effective_date": "2026-01-01",
-  "request_date_rule": "Use the provider letter request date. Conflicting source dates require review.",
-  "logic": "All five criteria require evidence. Missing evidence is not a denial. Contradiction, unclear duration, and unreadable evidence require review.",
+  "request_date_rule": "Use the provider letter or form request date. Conflicting source dates require review. A numeric date that can be read two ways is settled only by a day above 12 elsewhere on the page or by a later fax-style received date. Otherwise it requires review.",
+  "logic": "All five criteria require evidence. Missing evidence is not a denial. Contradiction, unclear duration, unconfirmed diagnosis, unreadable evidence and ambiguous dates require review.",
   "criteria": [
     {
       "id": "adult",
@@ -16,7 +16,7 @@
     },
     {
       "id": "diagnosis",
-      "text": "Moderate-to-severe plaque psoriasis is documented.",
+      "text": "Moderate-to-severe plaque psoriasis is documented as the reason for this request. Psoriasis without that severity, a condition found only in a history or problem list, a suspected diagnosis, or a different requested indication does not meet this rule.",
       "reviewed": false
     },
     {
@@ -26,7 +26,7 @@
     },
     {
       "id": "prior",
-      "text": "A methotrexate trial lasting at least 90 days is documented, or intolerance is documented.",
+      "text": "Methotrexate at a stated dose for at least 90 days, with body surface area on or before the start and at least 90 days after the start that is still above 3%. A documented intolerance or contraindication to methotrexate, with its reason, also meets this rule.",
       "reviewed": false
     },
     {

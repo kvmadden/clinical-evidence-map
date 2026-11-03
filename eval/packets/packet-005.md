@@ -2,31 +2,34 @@
 packet_id: packet-005
 fictional: true
 criteria_id: biologic-psoriasis
-quality_group: clean
-quality_plan: "Complete text; render cleanly."
-render_status: source_text_only
+group: clean-render
+page_style: letter
+date_style: day-first
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
+Fax received: 28 Sep 2026 09:14. Page 1 of 1.
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Request date: 27/09/2026.
 Patient: Sera Brookvale (fictional).
-Age: 37 years.
+Patient age: 17 years.
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: adalimumab 40 mg every other week.
-Please review the enclosed records for Moderate-to-severe plaque psoriasis.
+Request: adalimumab 40 mg subcut once a week.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Moderate-to-severe plaque psoriasis.
+Visit date: 16/09/2026.
+Assessment: routine follow-up visit.
+Past medical history: hypertension, seasonal allergies.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-Body surface area: 14 %; collected 2026-09-15.
+BSA involvement 14 % (drawn 11/09/2026)
 
 MEDICATION HISTORY
-Current requested therapy: adalimumab 40 mg every other week.
-Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: adalimumab 40 mg subcut every 7 days.
+Prior therapy: methotrexate 15 mg PO once weekly.
+Trial dates: started 28/07/2026; stopped 11/08/2026.
+Stopped due to intolerance.
 No other prior therapy records supplied.

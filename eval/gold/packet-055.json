@@ -1,0 +1,249 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "packet-055",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/packets/packet-055.md",
+  "group": "orientation",
+  "tags": [
+    "page:letter",
+    "date:iso",
+    "date-reading:none",
+    "drug-name:brand",
+    "dose-format:sig",
+    "blank-field"
+  ],
+  "date_reading": {
+    "status": "none",
+    "order": null
+  },
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-10-08",
+      "source_span": {
+        "start": 27,
+        "end": 52,
+        "text": "Request date: 2026-10-08."
+      },
+      "date": {
+        "written": "2026-10-08",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "patient_name",
+      "value": "Sera Calderby",
+      "source_span": {
+        "start": 53,
+        "end": 88,
+        "text": "Patient: Sera Calderby (fictional)."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "age",
+      "value": 58,
+      "source_span": {
+        "start": 89,
+        "end": 103,
+        "text": "Age: 58 years."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "provider",
+      "value": "Dr. Rowan Vale",
+      "source_span": {
+        "start": 104,
+        "end": 156,
+        "text": "From: Dr. Rowan Vale, fictional requesting provider."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_medication",
+      "value": "semaglutide",
+      "source_span": {
+        "start": 157,
+        "end": 188,
+        "text": "Request: Ozempic (semaglutide)."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "indication",
+      "value": {
+        "condition": "type 2 diabetes mellitus",
+        "certainty": "unconfirmed"
+      },
+      "source_span": {
+        "start": 189,
+        "end": 255,
+        "text": "Reason for request: suspected type 2 diabetes, repeat A1c pending."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "type 2 diabetes mellitus",
+        "certainty": "unconfirmed"
+      },
+      "source_span": {
+        "start": 296,
+        "end": 354,
+        "text": "Assessment: suspected type 2 diabetes, repeat A1c pending."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "blank_field",
+      "value": "lab",
+      "source_span": {
+        "start": 440,
+        "end": 475,
+        "text": "A1c: ______  Date collected: ______"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "medication_list_dose",
+      "value": "0.5 mg weekly",
+      "source_span": {
+        "start": 496,
+        "end": 575,
+        "text": "Current requested therapy: Ozempic (semaglutide) 1 pen (0.5 mg) SC once weekly."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2025-11-12",
+      "source_span": {
+        "start": 576,
+        "end": 656,
+        "text": "Prior therapy: glipizide 5 mg orally qd; started 2025-11-12; stopped 2026-03-14."
+      },
+      "date": {
+        "written": "2025-11-12",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-03-14",
+      "source_span": {
+        "start": 576,
+        "end": 656,
+        "text": "Prior therapy: glipizide 5 mg orally qd; started 2025-11-12; stopped 2026-03-14."
+      },
+      "date": {
+        "written": "2026-03-14",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "glipizide",
+      "source_span": {
+        "start": 576,
+        "end": 656,
+        "text": "Prior therapy: glipizide 5 mg orally qd; started 2025-11-12; stopped 2026-03-14."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "5 mg daily",
+      "source_span": {
+        "start": 576,
+        "end": 656,
+        "text": "Prior therapy: glipizide 5 mg orally qd; started 2025-11-12; stopped 2026-03-14."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_outcome",
+      "value": "inadequate response",
+      "source_span": {
+        "start": 657,
+        "end": 688,
+        "text": "Inadequate response documented."
+      },
+      "reviewed": false
+    }
+  ],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 89,
+          "end": 103,
+          "text": "Age: 58 years."
+        }
+      ],
+      "reason": "Age 58 is documented.",
+      "scenario": "supported",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 189,
+          "end": 255,
+          "text": "Reason for request: suspected type 2 diabetes, repeat A1c pending."
+        },
+        {
+          "start": 296,
+          "end": 354,
+          "text": "Assessment: suspected type 2 diabetes, repeat A1c pending."
+        }
+      ],
+      "reason": "Type 2 diabetes mellitus is stated as suspected or possible, not confirmed.",
+      "scenario": "unconfirmed",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The A1c field is blank.",
+      "scenario": "blank",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "A glipizide trial is documented. No metformin trial, intolerance or contraindication is documented.",
+      "scenario": "wrong-class",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No dose is documented for the requested semaglutide.",
+      "scenario": "blank",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
+    "reviewed": false
+  }
+}

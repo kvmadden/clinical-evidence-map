@@ -1,12 +1,39 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-049",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "glp1-t2d",
   "source_file": "eval/packets/packet-049.md",
+  "group": "orientation",
+  "tags": [
+    "page:letter",
+    "date:iso",
+    "date-reading:none",
+    "drug-name:brand",
+    "dose-format:sig"
+  ],
+  "date_reading": {
+    "status": "none",
+    "order": null
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-09-26",
+      "source_span": {
+        "start": 27,
+        "end": 52,
+        "text": "Request date: 2026-09-26."
+      },
+      "date": {
+        "written": "2026-09-26",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Lina Reedwell",
@@ -19,21 +46,11 @@
     },
     {
       "type": "age",
-      "value": 52,
+      "value": 17,
       "source_span": {
         "start": 89,
-        "end": 103,
-        "text": "Age: 52 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
+        "end": 111,
+        "text": "Patient age: 17 years."
       },
       "reviewed": false
     },
@@ -41,8 +58,8 @@
       "type": "provider",
       "value": "Dr. Rowan Vale",
       "source_span": {
-        "start": 104,
-        "end": 156,
+        "start": 112,
+        "end": 164,
         "text": "From: Dr. Rowan Vale, fictional requesting provider."
       },
       "reviewed": false
@@ -51,9 +68,9 @@
       "type": "requested_medication",
       "value": "semaglutide",
       "source_span": {
-        "start": 157,
-        "end": 192,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 165,
+        "end": 227,
+        "text": "Request: Ozempic (semaglutide) 1 pen (0.5 mg) SC every 7 days."
       },
       "reviewed": false
     },
@@ -61,19 +78,67 @@
       "type": "requested_dose",
       "value": "0.5 mg weekly",
       "source_span": {
-        "start": 157,
-        "end": 192,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 165,
+        "end": 227,
+        "text": "Request: Ozempic (semaglutide) 1 pen (0.5 mg) SC every 7 days."
       },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Type 2 diabetes mellitus",
+      "type": "indication",
+      "value": "type 2 diabetes mellitus",
       "source_span": {
-        "start": 298,
-        "end": 334,
-        "text": "Diagnosis: Type 2 diabetes mellitus."
+        "start": 228,
+        "end": 268,
+        "text": "Requested for: Type 2 diabetes mellitus."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "type 2 diabetes mellitus",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 309,
+        "end": 375,
+        "text": "Assessment: Type 2 diabetes mellitus, above goal on prior therapy."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "history_condition",
+      "value": "hypertension",
+      "source_span": {
+        "start": 376,
+        "end": 431,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "history_condition",
+      "value": "seasonal allergies",
+      "source_span": {
+        "start": 376,
+        "end": 431,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "conflicting_request_date",
+      "value": "2026-08-27",
+      "source_span": {
+        "start": 432,
+        "end": 474,
+        "text": "Request date recorded in note: 2026-08-27."
+      },
+      "date": {
+        "written": "2026-08-27",
+        "format": "iso",
+        "ambiguous": false
       },
       "reviewed": false
     },
@@ -85,69 +150,24 @@
         "unit": "%"
       },
       "source_span": {
-        "start": 420,
-        "end": 453,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 560,
+        "end": 594,
+        "text": "A1C 8.6 percent (drawn 2026-09-10)"
       },
       "reviewed": false
     },
     {
       "type": "measurement_date",
-      "value": "2026-09-15",
+      "value": "2026-09-10",
       "source_span": {
-        "start": 420,
-        "end": 453,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 560,
+        "end": 594,
+        "text": "A1C 8.6 percent (drawn 2026-09-10)"
       },
-      "reviewed": false
-    },
-    {
-      "type": "prior_medication",
-      "value": "metformin",
-      "source_span": {
-        "start": 528,
-        "end": 656,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-08-01; stopped 2026-08-15; intolerance documented: persistent nausea."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_dose",
-      "value": "1000 mg twice daily",
-      "source_span": {
-        "start": 528,
-        "end": 656,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-08-01; stopped 2026-08-15; intolerance documented: persistent nausea."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_start_date",
-      "value": "2026-08-01",
-      "source_span": {
-        "start": 528,
-        "end": 656,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-08-01; stopped 2026-08-15; intolerance documented: persistent nausea."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_stop_date",
-      "value": "2026-08-15",
-      "source_span": {
-        "start": 528,
-        "end": 656,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-08-01; stopped 2026-08-15; intolerance documented: persistent nausea."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_outcome",
-      "value": "intolerance",
-      "source_span": {
-        "start": 528,
-        "end": 656,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-08-01; stopped 2026-08-15; intolerance documented: persistent nausea."
+      "date": {
+        "written": "2026-09-10",
+        "format": "iso",
+        "ambiguous": false
       },
       "reviewed": false
     },
@@ -155,9 +175,79 @@
       "type": "medication_list_dose",
       "value": "0.5 mg weekly",
       "source_span": {
-        "start": 474,
-        "end": 527,
-        "text": "Current requested therapy: semaglutide 0.5 mg weekly."
+        "start": 615,
+        "end": 694,
+        "text": "Current requested therapy: Ozempic (semaglutide) 1 pen (0.5 mg) SC once weekly."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2026-07-27",
+      "source_span": {
+        "start": 695,
+        "end": 772,
+        "text": "Prior: metformin 500 mg tablets, 2 tabs PO BID from 2026-07-27 to 2026-08-10."
+      },
+      "date": {
+        "written": "2026-07-27",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-08-10",
+      "source_span": {
+        "start": 695,
+        "end": 772,
+        "text": "Prior: metformin 500 mg tablets, 2 tabs PO BID from 2026-07-27 to 2026-08-10."
+      },
+      "date": {
+        "written": "2026-08-10",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "metformin",
+      "source_span": {
+        "start": 695,
+        "end": 772,
+        "text": "Prior: metformin 500 mg tablets, 2 tabs PO BID from 2026-07-27 to 2026-08-10."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "1000 mg twice daily",
+      "source_span": {
+        "start": 695,
+        "end": 772,
+        "text": "Prior: metformin 500 mg tablets, 2 tabs PO BID from 2026-07-27 to 2026-08-10."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_outcome",
+      "value": "intolerance",
+      "source_span": {
+        "start": 773,
+        "end": 816,
+        "text": "Stopped for persistent nausea and diarrhea."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_reason",
+      "value": "persistent nausea and diarrhea",
+      "source_span": {
+        "start": 773,
+        "end": 816,
+        "text": "Stopped for persistent nausea and diarrhea."
       },
       "reviewed": false
     }
@@ -165,15 +255,16 @@
   "criterion_evidence": [
     {
       "criterion_id": "adult",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
           "start": 89,
-          "end": 103,
-          "text": "Age: 52 years."
+          "end": 111,
+          "text": "Patient age: 17 years."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Documented age 17 is below the fictional 18-year rule.",
+      "scenario": "minor",
       "reviewed": false
     },
     {
@@ -181,30 +272,42 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 298,
-          "end": 334,
-          "text": "Diagnosis: Type 2 diabetes mellitus."
+          "start": 228,
+          "end": 268,
+          "text": "Requested for: Type 2 diabetes mellitus."
+        },
+        {
+          "start": 309,
+          "end": 375,
+          "text": "Assessment: Type 2 diabetes mellitus, above goal on prior therapy."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The request names type 2 diabetes mellitus as its reason.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
       "criterion_id": "lab",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 420,
-          "end": 453,
-          "text": "A1c: 8.6 %; collected 2026-09-15."
+          "start": 560,
+          "end": 594,
+          "text": "A1C 8.6 percent (drawn 2026-09-10)"
         },
         {
           "start": 27,
           "end": 52,
-          "text": "Request date: 2026-10-01."
+          "text": "Request date: 2026-09-26."
+        },
+        {
+          "start": 432,
+          "end": 474,
+          "text": "Request date recorded in note: 2026-08-27."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Two different request dates are documented. The 180-day window cannot be confirmed.",
+      "scenario": "conflict-date",
       "reviewed": false
     },
     {
@@ -212,12 +315,18 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 528,
-          "end": 656,
-          "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-08-01; stopped 2026-08-15; intolerance documented: persistent nausea."
+          "start": 695,
+          "end": 772,
+          "text": "Prior: metformin 500 mg tablets, 2 tabs PO BID from 2026-07-27 to 2026-08-10."
+        },
+        {
+          "start": 773,
+          "end": 816,
+          "text": "Stopped for persistent nausea and diarrhea."
         }
       ],
-      "reason": "Documented intolerance meets the fictional alternative to trial duration.",
+      "reason": "Metformin intolerance is documented with its reason: persistent nausea and diarrhea.",
+      "scenario": "intolerance",
       "reviewed": false
     },
     {
@@ -225,18 +334,19 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 157,
-          "end": 192,
-          "text": "Request: semaglutide 0.5 mg weekly."
+          "start": 165,
+          "end": 227,
+          "text": "Request: Ozempic (semaglutide) 1 pen (0.5 mg) SC every 7 days."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The requested semaglutide dose 0.5 mg weekly matches the fictional rule.",
+      "scenario": "supported",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

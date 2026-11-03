@@ -2,31 +2,33 @@
 packet_id: packet-015
 fictional: true
 criteria_id: pcsk9
-quality_group: handwriting
-quality_plan: "Complete text; later render the medication history in a handwriting-like font."
-render_status: source_text_only
+group: ai-handwriting
+page_style: letter
+date_style: text-dmy
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Letter date: 1 Oct 2026.
 Patient: Sera Ashmere (fictional).
-Age: 47 years.
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: evolocumab 140 mg every 2 weeks.
-Please review the enclosed records for Established atherosclerotic cardiovascular disease.
+Request: evolocumab 140 mg every other week.
+Requested for: coronary artery disease with prior stent.
+Please review the enclosed records for coronary artery disease with prior stent.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Established atherosclerotic cardiovascular disease.
+Visit date: 20 Sep 2026.
+Assessment: coronary artery disease with prior stent, LDL-C above goal.
+Request date recorded in note: 1 Sep 2026.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-LDL-C: 132 mg/dL; collected 2026-09-15.
+LDL 132 mg/dl (drawn 15 Sep 2026)
 
 MEDICATION HISTORY
-Current requested therapy: evolocumab 140 mg every 2 weeks.
-Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Evolocumab 140 mg subcut every 14 days
+Lipitor 80 mg daily 4/1/26 to 8/1/26
+LDL 168 (3/25/26) → 132 (7/20/26), goal <70 not met
 No other prior therapy records supplied.

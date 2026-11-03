@@ -1,12 +1,40 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-025",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "glp1-t2d",
   "source_file": "eval/packets/packet-025.md",
+  "group": "choppy-lines",
+  "tags": [
+    "page:letter",
+    "date:iso",
+    "date-reading:none",
+    "drug-name:brand",
+    "dose-format:sig",
+    "blank-field"
+  ],
+  "date_reading": {
+    "status": "none",
+    "order": null
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-10-03",
+      "source_span": {
+        "start": 27,
+        "end": 52,
+        "text": "Request date: 2026-10-03."
+      },
+      "date": {
+        "written": "2026-10-03",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Sera Fenwick",
@@ -18,31 +46,11 @@
       "reviewed": false
     },
     {
-      "type": "age",
-      "value": 57,
-      "source_span": {
-        "start": 88,
-        "end": 102,
-        "text": "Age: 57 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
-      },
-      "reviewed": false
-    },
-    {
       "type": "provider",
       "value": "Dr. Rowan Vale",
       "source_span": {
-        "start": 103,
-        "end": 155,
+        "start": 88,
+        "end": 140,
         "text": "From: Dr. Rowan Vale, fictional requesting provider."
       },
       "reviewed": false
@@ -51,53 +59,105 @@
       "type": "requested_medication",
       "value": "semaglutide",
       "source_span": {
-        "start": 156,
-        "end": 191,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 141,
+        "end": 172,
+        "text": "Request: Ozempic (semaglutide)."
       },
       "reviewed": false
     },
     {
-      "type": "requested_dose",
+      "type": "indication",
+      "value": {
+        "condition": "type 2 diabetes mellitus",
+        "certainty": "unconfirmed"
+      },
+      "source_span": {
+        "start": 173,
+        "end": 234,
+        "text": "Requested for: suspected type 2 diabetes, repeat A1c pending."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "type 2 diabetes mellitus",
+        "certainty": "unconfirmed"
+      },
+      "source_span": {
+        "start": 275,
+        "end": 333,
+        "text": "Assessment: suspected type 2 diabetes, repeat A1c pending."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "history_condition",
+      "value": "hypertension",
+      "source_span": {
+        "start": 334,
+        "end": 389,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "history_condition",
+      "value": "seasonal allergies",
+      "source_span": {
+        "start": 334,
+        "end": 389,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "blank_field",
+      "value": "lab",
+      "source_span": {
+        "start": 475,
+        "end": 510,
+        "text": "A1c: ______  Date collected: ______"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "medication_list_dose",
       "value": "0.5 mg weekly",
       "source_span": {
-        "start": 156,
-        "end": 191,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 531,
+        "end": 602,
+        "text": "Current requested therapy: Ozempic (semaglutide) 1 pen (0.5 mg) SC qwk."
       },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Type 2 diabetes mellitus",
+      "type": "prior_medication",
+      "value": "metformin",
       "source_span": {
-        "start": 297,
-        "end": 333,
-        "text": "Diagnosis: Type 2 diabetes mellitus."
+        "start": 603,
+        "end": 672,
+        "text": "Metformin not started: contraindicated due to eGFR 24 mL/min/1.73 m2."
       },
       "reviewed": false
     },
     {
-      "type": "measurement",
-      "value": {
-        "name": "A1c",
-        "value": 8.6,
-        "unit": "%"
-      },
+      "type": "prior_outcome",
+      "value": "contraindication",
       "source_span": {
-        "start": 419,
-        "end": 452,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 603,
+        "end": 672,
+        "text": "Metformin not started: contraindicated due to eGFR 24 mL/min/1.73 m2."
       },
       "reviewed": false
     },
     {
-      "type": "measurement_date",
-      "value": "2026-09-15",
+      "type": "prior_reason",
+      "value": "eGFR 24 mL/min/1.73 m2",
       "source_span": {
-        "start": 419,
-        "end": 452,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 603,
+        "end": 672,
+        "text": "Metformin not started: contraindicated due to eGFR 24 mL/min/1.73 m2."
       },
       "reviewed": false
     }
@@ -105,72 +165,65 @@
   "criterion_evidence": [
     {
       "criterion_id": "adult",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 88,
-          "end": 102,
-          "text": "Age: 57 years."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No age is documented.",
+      "scenario": "absent",
       "reviewed": false
     },
     {
       "criterion_id": "diagnosis",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 297,
+          "start": 173,
+          "end": 234,
+          "text": "Requested for: suspected type 2 diabetes, repeat A1c pending."
+        },
+        {
+          "start": 275,
           "end": 333,
-          "text": "Diagnosis: Type 2 diabetes mellitus."
+          "text": "Assessment: suspected type 2 diabetes, repeat A1c pending."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Type 2 diabetes mellitus is stated as suspected or possible, not confirmed.",
+      "scenario": "unconfirmed",
       "reviewed": false
     },
     {
       "criterion_id": "lab",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 419,
-          "end": 452,
-          "text": "A1c: 8.6 %; collected 2026-09-15."
-        },
-        {
-          "start": 27,
-          "end": 52,
-          "text": "Request date: 2026-10-01."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The A1c field is blank.",
+      "scenario": "blank",
       "reviewed": false
     },
     {
       "criterion_id": "prior",
-      "status": "missing",
-      "evidence_spans": [],
-      "reason": "The medication history page was not supplied.",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 603,
+          "end": 672,
+          "text": "Metformin not started: contraindicated due to eGFR 24 mL/min/1.73 m2."
+        }
+      ],
+      "reason": "Metformin contraindication is documented with its reason: eGFR 24 mL/min/1.73 m2.",
+      "scenario": "contraindication",
       "reviewed": false
     },
     {
       "criterion_id": "dose",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 156,
-          "end": 191,
-          "text": "Request: semaglutide 0.5 mg weekly."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No dose is documented for the requested semaglutide.",
+      "scenario": "blank",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

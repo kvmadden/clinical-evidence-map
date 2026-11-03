@@ -2,31 +2,31 @@
 packet_id: packet-046
 fictional: true
 criteria_id: glp1-t2d
-quality_group: intolerance
-quality_plan: "Prior therapy stopped early with documented intolerance."
-render_status: source_text_only
+group: low-contrast
+page_style: form
+date_style: us-slash
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
-REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
-Patient: Arlen Reedwell (fictional).
-Age: 49 years.
-From: Dr. Rowan Vale, fictional requesting provider.
-Request: semaglutide 0.5 mg weekly.
-Please review the enclosed records for Type 2 diabetes mellitus.
+PRIOR AUTHORIZATION REQUEST FORM
+Date of request: 09/27/2026
+Patient name: Arlen Reedwell (fictional)
+Age: 49
+Prescriber: Dr. Rowan Vale (fictional)
+Medication requested: semaglutide
+Dose and frequency: 0.5 mg subcutaneous once weekly
+Diagnosis for this request: Type 2 diabetis mellitus
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Type 2 diabetes mellitus.
-The patient reports ongoing symptoms despite prior treatment.
-
-LABS AND MEASUREMENTS
-A1c: 8.6 %; collected 2026-09-15.
+Visit date: 09/16/2026.
+Assessment: Type 2 diabetis mellitus, above goal on prior therapy.
+Past medical history: hypertension, seasonal allergies.
 
 MEDICATION HISTORY
-Current requested therapy: semaglutide 0.5 mg weekly.
-Prior therapy: metformin 1000 mg twice daily; started 2026-08-01; stopped 2026-08-15; intolerance documented: persistent nausea.
+Current requested therapy: semaglutide 0.5 mg subcutaneous once weekly.
+Prior therapies tried: metformin 1000 mg orally bid
+Trial dates: 11/01/2025 to 03/03/2026
+No improvement documented.
 No other prior therapy records supplied.

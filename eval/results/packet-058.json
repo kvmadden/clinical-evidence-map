@@ -1,0 +1,2406 @@
+{
+  "packet_id": "packet-058",
+  "criteria_id": "glp1-t2d",
+  "group": "mixed-annotations",
+  "tags": [
+    "page:form",
+    "date:text-dmy",
+    "date-reading:none",
+    "drug-name:generic",
+    "dose-format:plain",
+    "blank-field",
+    "ai-drawn-handwriting"
+  ],
+  "render": {
+    "font": "liberation-sans",
+    "effects": [
+      "speckle-heavy",
+      "streaks"
+    ],
+    "rotate": 0,
+    "handwriting": [
+      {
+        "line": 7,
+        "image": "hw-notes-a",
+        "kind": "fill",
+        "box": [
+          49,
+          194,
+          724,
+          283
+        ],
+        "prefix": "Diagnosis for this request: ",
+        "lines": 1
+      }
+    ],
+    "annotations": [
+      {
+        "kind": "circle",
+        "line": 21,
+        "from": 27,
+        "to": 37
+      },
+      {
+        "kind": "arrow",
+        "line": 20
+      },
+      {
+        "kind": "underline",
+        "line": 15,
+        "from": 0,
+        "to": 22
+      }
+    ]
+  },
+  "groupLabel": "Printed page with AI-drawn notes, circles and arrows",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "PRIOR AUTHORIZATION REQUEST FORM\nDate of request: [date-a]\nPatient name: [name] [name] (fictional)\nAge:\nPrescriber: Dr. [name] [name] (fictional)\nMedication requested: semaglutide\nDose and frequency:\nDiagnosis for this request: T2DM - Ale above goal\nCLINICAL NOTES\nVisit date: [date-b].\nAssessment: see request form.\nPast medical history: hypertension, seasonal allergies.\nLABS AND MEASUREMENTS\nMost recent Alc: 8.6 %\nDate collected: [date-c]\nMEDICATION HISTORY\nPrior therapies tried: metformin 1000 mg vigssety\nTrial dates: [date-d] to [date-e]\nBaseline before nator £430 [date-f].\nOn metformin: Alc 8.9 % on [date-g]; goal below 7.0 % not met.\nNo other prior therapy records supplied.\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 4
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points",
+    "dateHandling": "shifted",
+    "dates": [
+      {
+        "token": "[date-a]",
+        "readings": [
+          "2135-08-15"
+        ],
+        "order": "text"
+      },
+      {
+        "token": "[date-b]",
+        "readings": [
+          "2135-08-04"
+        ],
+        "order": "text"
+      },
+      {
+        "token": "[date-c]",
+        "readings": [
+          "2135-07-30"
+        ],
+        "order": "text"
+      },
+      {
+        "token": "[date-d]",
+        "readings": [
+          "2135-02-13"
+        ],
+        "order": "text"
+      },
+      {
+        "token": "[date-e]",
+        "readings": [
+          "2135-06-15"
+        ],
+        "order": "text"
+      },
+      {
+        "token": "[date-f]",
+        "readings": [
+          "2135-02-06"
+        ],
+        "order": "text"
+      },
+      {
+        "token": "[date-g]",
+        "readings": [
+          "2135-06-03"
+        ],
+        "order": "text"
+      }
+    ]
+  },
+  "dateReading": {
+    "status": "none",
+    "order": null
+  },
+  "readerCoverage": {
+    "lines": 22,
+    "pages": 1,
+    "blockers": {
+      "adult": [],
+      "diagnosis": [],
+      "lab": [],
+      "prior": [
+        {
+          "kind": "unbound-outcome",
+          "line": 7,
+          "page": 1,
+          "message": "An outcome statement could not be tied to a drug: \"Diagnosis for this request: T2DM - Ale above goal\""
+        }
+      ],
+      "dose": []
+    },
+    "mentions": [
+      {
+        "criterion": "prior",
+        "line": 20,
+        "kind": "no-more-records"
+      }
+    ],
+    "complete": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "request_date",
+      "value": "2135-08-15",
+      "source_span": {
+        "start": 33,
+        "end": 58,
+        "text": "Date of request: [date-a]"
+      },
+      "value_span": {
+        "start": 50,
+        "end": 58
+      },
+      "attrs": {
+        "label": "Date of request"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 198,
+          "width": 52,
+          "height": 18
+        },
+        {
+          "x": 163,
+          "y": 197,
+          "width": 21,
+          "height": 19
+        },
+        {
+          "x": 193,
+          "y": 199,
+          "width": 90,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "blank_field",
+      "value": "age",
+      "source_span": {
+        "start": 99,
+        "end": 103,
+        "text": "Age:"
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e3",
+      "type": "requested_medication",
+      "value": "semaglutide",
+      "source_span": {
+        "start": 146,
+        "end": 179,
+        "text": "Medication requested: semaglutide"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "1991302",
+        "display": "semaglutide"
+      },
+      "value_span": {
+        "start": 168,
+        "end": 179
+      },
+      "match": {
+        "kind": "exact",
+        "written": "semaglutide",
+        "confidence": 1
+      },
+      "attrs": {
+        "product": "semaglutide",
+        "source": "Medication requested"
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e4",
+      "type": "blank_field",
+      "value": "dose",
+      "source_span": {
+        "start": 180,
+        "end": 199,
+        "text": "Dose and frequency:"
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e5",
+      "type": "indication",
+      "value": "type 2 diabetes mellitus",
+      "source_span": {
+        "start": 200,
+        "end": 249,
+        "text": "Diagnosis for this request: T2DM - Ale above goal"
+      },
+      "normalization": {
+        "system": "ICD-10-CM",
+        "code": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications"
+      },
+      "value_span": {
+        "start": 228,
+        "end": 232
+      },
+      "attrs": {
+        "family": "t2dm"
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e6",
+      "type": "history_condition",
+      "value": "hypertension",
+      "source_span": {
+        "start": 317,
+        "end": 372,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "value_span": {
+        "start": 339,
+        "end": 351
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e7",
+      "type": "history_condition",
+      "value": "seasonal allergies",
+      "source_span": {
+        "start": 317,
+        "end": 372,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "value_span": {
+        "start": 353,
+        "end": 371
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e8",
+      "type": "measurement",
+      "value": {
+        "name": "A1c",
+        "value": 8.6,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 395,
+        "end": 417,
+        "text": "Most recent Alc: 8.6 %"
+      },
+      "value_span": {
+        "start": 412,
+        "end": 415
+      },
+      "name_span": {
+        "start": 407,
+        "end": 410
+      },
+      "reviewed": false,
+      "related": [
+        "e9"
+      ],
+      "boxes": []
+    },
+    {
+      "id": "e9",
+      "type": "measurement_date",
+      "value": "2135-07-30",
+      "source_span": {
+        "start": 418,
+        "end": 442,
+        "text": "Date collected: [date-c]"
+      },
+      "value_span": {
+        "start": 434,
+        "end": 442
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e10",
+      "type": "prior_medication",
+      "value": "metformin",
+      "source_span": {
+        "start": 462,
+        "end": 511,
+        "text": "Prior therapies tried: metformin 1000 mg vigssety"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "6809",
+        "display": "metformin"
+      },
+      "value_span": {
+        "start": 485,
+        "end": 494
+      },
+      "episode": 1,
+      "match": {
+        "kind": "exact",
+        "written": "metformin",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "biguanide"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 294,
+          "y": 198,
+          "width": 11,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "prior_start_date",
+      "value": "2135-02-13",
+      "source_span": {
+        "start": 512,
+        "end": 545,
+        "text": "Trial dates: [date-d] to [date-e]"
+      },
+      "value_span": {
+        "start": 525,
+        "end": 533
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e12",
+      "type": "prior_stop_date",
+      "value": "2135-06-15",
+      "source_span": {
+        "start": 512,
+        "end": 545,
+        "text": "Trial dates: [date-d] to [date-e]"
+      },
+      "value_span": {
+        "start": 537,
+        "end": 545
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e13",
+      "type": "prior_followup",
+      "value": {
+        "name": "A1c",
+        "value": 8.9,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 583,
+        "end": 645,
+        "text": "On metformin: Alc 8.9 % on [date-g]; goal below 7.0 % not met."
+      },
+      "value_span": {
+        "start": 601,
+        "end": 604
+      },
+      "name_span": {
+        "start": 597,
+        "end": 600
+      },
+      "episode": 1,
+      "reviewed": false,
+      "related": [
+        "e14"
+      ],
+      "boxes": [
+        {
+          "x": 775,
+          "y": 430,
+          "width": 63,
+          "height": 53
+        },
+        {
+          "x": 345,
+          "y": 788,
+          "width": 21,
+          "height": 18
+        },
+        {
+          "x": 788,
+          "y": 1069,
+          "width": 35,
+          "height": 17
+        },
+        {
+          "x": 832,
+          "y": 1069,
+          "width": 46,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e14",
+      "type": "prior_followup_date",
+      "value": "2135-06-03",
+      "source_span": {
+        "start": 583,
+        "end": 645,
+        "text": "On metformin: Alc 8.9 % on [date-g]; goal below 7.0 % not met."
+      },
+      "value_span": {
+        "start": 610,
+        "end": 618
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 775,
+          "y": 430,
+          "width": 63,
+          "height": 53
+        },
+        {
+          "x": 345,
+          "y": 788,
+          "width": 21,
+          "height": 18
+        },
+        {
+          "x": 788,
+          "y": 1069,
+          "width": 35,
+          "height": 17
+        },
+        {
+          "x": 832,
+          "y": 1069,
+          "width": 46,
+          "height": 17
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The age field is blank.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 200,
+          "end": 249,
+          "text": "Diagnosis for this request: T2DM - Ale above goal"
+        }
+      ],
+      "reason": "The request names type 2 diabetes mellitus as its reason.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 33,
+          "end": 58,
+          "text": "Date of request: [date-a]"
+        },
+        {
+          "start": 395,
+          "end": 417,
+          "text": "Most recent Alc: 8.6 %"
+        },
+        {
+          "start": 418,
+          "end": 442,
+          "text": "Date collected: [date-c]"
+        }
+      ],
+      "reason": "A1c 8.6 % is 16 days before the request.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 462,
+          "end": 511,
+          "text": "Prior therapies tried: metformin 1000 mg vigssety"
+        },
+        {
+          "start": 512,
+          "end": 545,
+          "text": "Trial dates: [date-d] to [date-e]"
+        },
+        {
+          "start": 583,
+          "end": 645,
+          "text": "On metformin: Alc 8.9 % on [date-g]; goal below 7.0 % not met."
+        }
+      ],
+      "reason": "The metformin dose is not stated.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The dose field is blank.",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "Medication requested: semaglutide",
+      "citations": [
+        {
+          "start": 146,
+          "end": 179,
+          "text": "Medication requested: semaglutide"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Diagnosis for this request: T2DM - Ale above goal",
+      "citations": [
+        {
+          "start": 200,
+          "end": 249,
+          "text": "Diagnosis for this request: T2DM - Ale above goal"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Most recent Alc: 8.6 %",
+      "citations": [
+        {
+          "start": 395,
+          "end": 417,
+          "text": "Most recent Alc: 8.6 %"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Prior therapies tried: metformin 1000 mg vigssety",
+      "citations": [
+        {
+          "start": 462,
+          "end": 511,
+          "text": "Prior therapies tried: metformin 1000 mg vigssety"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "PRIOR",
+      "confidence": 96.560692,
+      "box": {
+        "x": 102,
+        "y": 158,
+        "width": 79,
+        "height": 18
+      },
+      "start": 0,
+      "end": 5,
+      "needsReview": false
+    },
+    {
+      "text": "AUTHORIZATION",
+      "confidence": 96.226273,
+      "box": {
+        "x": 188,
+        "y": 158,
+        "width": 208,
+        "height": 18
+      },
+      "start": 6,
+      "end": 19,
+      "needsReview": false
+    },
+    {
+      "text": "REQUEST",
+      "confidence": 96.666595,
+      "box": {
+        "x": 408,
+        "y": 158,
+        "width": 123,
+        "height": 23
+      },
+      "start": 20,
+      "end": 27,
+      "needsReview": false
+    },
+    {
+      "text": "FORM",
+      "confidence": 95.96727,
+      "box": {
+        "x": 540,
+        "y": 158,
+        "width": 73,
+        "height": 18
+      },
+      "start": 28,
+      "end": 32,
+      "needsReview": false
+    },
+    {
+      "text": "Date",
+      "confidence": 96.833755,
+      "box": {
+        "x": 102,
+        "y": 198,
+        "width": 52,
+        "height": 18
+      },
+      "start": 33,
+      "end": 37,
+      "needsReview": false
+    },
+    {
+      "text": "of",
+      "confidence": 96.308205,
+      "box": {
+        "x": 163,
+        "y": 197,
+        "width": 21,
+        "height": 19
+      },
+      "start": 38,
+      "end": 40,
+      "needsReview": false
+    },
+    {
+      "text": "request:",
+      "confidence": 96.395836,
+      "box": {
+        "x": 193,
+        "y": 199,
+        "width": 90,
+        "height": 22
+      },
+      "start": 41,
+      "end": 49,
+      "needsReview": false
+    },
+    {
+      "text": "1",
+      "confidence": 96.684036,
+      "box": {
+        "x": 294,
+        "y": 198,
+        "width": 11,
+        "height": 18
+      },
+      "start": 495,
+      "end": 496,
+      "needsReview": false
+    },
+    {
+      "text": "for",
+      "confidence": 96.899559,
+      "box": {
+        "x": 222,
+        "y": 437,
+        "width": 29,
+        "height": 19
+      },
+      "start": 557,
+      "end": 560,
+      "needsReview": false
+    },
+    {
+      "text": "-",
+      "confidence": 80.700966,
+      "box": {
+        "x": 554,
+        "y": 454,
+        "width": 16,
+        "height": 3
+      },
+      "start": 578,
+      "end": 579,
+      "needsReview": false
+    },
+    {
+      "text": "goal",
+      "confidence": 86.260376,
+      "box": {
+        "x": 775,
+        "y": 430,
+        "width": 63,
+        "height": 53
+      },
+      "start": 620,
+      "end": 624,
+      "needsReview": false
+    },
+    {
+      "text": "%",
+      "confidence": 92.432823,
+      "box": {
+        "x": 345,
+        "y": 788,
+        "width": 21,
+        "height": 18
+      },
+      "start": 635,
+      "end": 636,
+      "needsReview": false
+    },
+    {
+      "text": "not",
+      "confidence": 95.238655,
+      "box": {
+        "x": 788,
+        "y": 1069,
+        "width": 35,
+        "height": 17
+      },
+      "start": 637,
+      "end": 640,
+      "needsReview": false
+    },
+    {
+      "text": "met.",
+      "confidence": 96.7033,
+      "box": {
+        "x": 832,
+        "y": 1069,
+        "width": 46,
+        "height": 17
+      },
+      "start": 641,
+      "end": 645,
+      "needsReview": false
+    },
+    {
+      "text": "No",
+      "confidence": 95.922523,
+      "box": {
+        "x": 102,
+        "y": 1108,
+        "width": 30,
+        "height": 18
+      },
+      "start": 646,
+      "end": 648,
+      "needsReview": false
+    },
+    {
+      "text": "other",
+      "confidence": 95.922523,
+      "box": {
+        "x": 142,
+        "y": 1107,
+        "width": 57,
+        "height": 19
+      },
+      "start": 649,
+      "end": 654,
+      "needsReview": false
+    },
+    {
+      "text": "prior",
+      "confidence": 95.995827,
+      "box": {
+        "x": 209,
+        "y": 1107,
+        "width": 50,
+        "height": 24
+      },
+      "start": 655,
+      "end": 660,
+      "needsReview": false
+    },
+    {
+      "text": "therapy",
+      "confidence": 95.995827,
+      "box": {
+        "x": 267,
+        "y": 1107,
+        "width": 86,
+        "height": 24
+      },
+      "start": 661,
+      "end": 668,
+      "needsReview": false
+    },
+    {
+      "text": "records",
+      "confidence": 96.847099,
+      "box": {
+        "x": 362,
+        "y": 1107,
+        "width": 84,
+        "height": 19
+      },
+      "start": 669,
+      "end": 676,
+      "needsReview": false
+    },
+    {
+      "text": "supplied.",
+      "confidence": 96.590897,
+      "box": {
+        "x": 455,
+        "y": 1107,
+        "width": 101,
+        "height": 24
+      },
+      "start": 677,
+      "end": 686,
+      "needsReview": false
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "PRIOR AUTHORIZATION REQUEST FORM\nDate of request: 1 Oct 2026\nPatient name: Corin Calderby (fictional)\nAge:\nPrescriber: Dr. Rowan Vale (fictional)\nMedication requested: semaglutide\nDose and frequency:\nDiagnosis for this request: T2DM - Ale above goal\nCLINICAL NOTES\nVisit date: 20 Sep 2026.\nAssessment: see request form.\nPast medical history: hypertension, seasonal allergies.\nLABS AND MEASUREMENTS\nMost recent Alc: 8.6 %\nDate collected: 15 Sep 2026\nMEDICATION HISTORY\nPrior therapies tried: metformin 1000 mg vigssety\nTrial dates: 1 Apr 2026 to 1 Aug 2026\nBaseline before nator £430 25 Mar 2026.\nOn metformin: Alc 8.9 % on 20 Jul 2026; goal below 7.0 % not met.\nNo other prior therapy records supplied.\n",
+    "words": [
+      {
+        "text": "PRIOR",
+        "confidence": 96.560692,
+        "box": {
+          "x": 102,
+          "y": 158,
+          "width": 79,
+          "height": 18
+        },
+        "start": 0,
+        "end": 5,
+        "needsReview": false
+      },
+      {
+        "text": "AUTHORIZATION",
+        "confidence": 96.226273,
+        "box": {
+          "x": 188,
+          "y": 158,
+          "width": 208,
+          "height": 18
+        },
+        "start": 6,
+        "end": 19,
+        "needsReview": false
+      },
+      {
+        "text": "REQUEST",
+        "confidence": 96.666595,
+        "box": {
+          "x": 408,
+          "y": 158,
+          "width": 123,
+          "height": 23
+        },
+        "start": 20,
+        "end": 27,
+        "needsReview": false
+      },
+      {
+        "text": "FORM",
+        "confidence": 95.96727,
+        "box": {
+          "x": 540,
+          "y": 158,
+          "width": 73,
+          "height": 18
+        },
+        "start": 28,
+        "end": 32,
+        "needsReview": false
+      },
+      {
+        "text": "Date",
+        "confidence": 96.833755,
+        "box": {
+          "x": 102,
+          "y": 198,
+          "width": 52,
+          "height": 18
+        },
+        "start": 33,
+        "end": 37,
+        "needsReview": false
+      },
+      {
+        "text": "of",
+        "confidence": 96.308205,
+        "box": {
+          "x": 163,
+          "y": 197,
+          "width": 21,
+          "height": 19
+        },
+        "start": 38,
+        "end": 40,
+        "needsReview": false
+      },
+      {
+        "text": "request:",
+        "confidence": 96.395836,
+        "box": {
+          "x": 193,
+          "y": 199,
+          "width": 90,
+          "height": 22
+        },
+        "start": 41,
+        "end": 49,
+        "needsReview": false
+      },
+      {
+        "text": "1",
+        "confidence": 96.684036,
+        "box": {
+          "x": 294,
+          "y": 198,
+          "width": 11,
+          "height": 18
+        },
+        "start": 50,
+        "end": 51,
+        "needsReview": false
+      },
+      {
+        "text": "Oct",
+        "confidence": 96.78994,
+        "box": {
+          "x": 315,
+          "y": 198,
+          "width": 39,
+          "height": 18
+        },
+        "start": 52,
+        "end": 55,
+        "needsReview": false
+      },
+      {
+        "text": "2026",
+        "confidence": 96.429733,
+        "box": {
+          "x": 363,
+          "y": 198,
+          "width": 55,
+          "height": 18
+        },
+        "start": 56,
+        "end": 60,
+        "needsReview": false
+      },
+      {
+        "text": "Patient",
+        "confidence": 96.596756,
+        "box": {
+          "x": 102,
+          "y": 237,
+          "width": 79,
+          "height": 19
+        },
+        "start": 61,
+        "end": 68,
+        "needsReview": false
+      },
+      {
+        "text": "name:",
+        "confidence": 96.110985,
+        "box": {
+          "x": 190,
+          "y": 242,
+          "width": 68,
+          "height": 14
+        },
+        "start": 69,
+        "end": 74,
+        "needsReview": false
+      },
+      {
+        "text": "Corin",
+        "confidence": 93.28569,
+        "box": {
+          "x": 269,
+          "y": 237,
+          "width": 59,
+          "height": 19
+        },
+        "start": 75,
+        "end": 80,
+        "needsReview": false
+      },
+      {
+        "text": "Calderby",
+        "confidence": 91.7145,
+        "box": {
+          "x": 338,
+          "y": 237,
+          "width": 103,
+          "height": 24
+        },
+        "start": 81,
+        "end": 89,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.729996,
+        "box": {
+          "x": 450,
+          "y": 237,
+          "width": 102,
+          "height": 24
+        },
+        "start": 90,
+        "end": 101,
+        "needsReview": false
+      },
+      {
+        "text": "Age:",
+        "confidence": 96.292969,
+        "box": {
+          "x": 100,
+          "y": 278,
+          "width": 51,
+          "height": 23
+        },
+        "start": 102,
+        "end": 106,
+        "needsReview": false
+      },
+      {
+        "text": "Prescriber:",
+        "confidence": 91.718727,
+        "box": {
+          "x": 102,
+          "y": 317,
+          "width": 121,
+          "height": 19
+        },
+        "start": 107,
+        "end": 118,
+        "needsReview": false
+      },
+      {
+        "text": "Dr.",
+        "confidence": 96.236649,
+        "box": {
+          "x": 235,
+          "y": 318,
+          "width": 29,
+          "height": 18
+        },
+        "start": 119,
+        "end": 122,
+        "needsReview": false
+      },
+      {
+        "text": "Rowan",
+        "confidence": 96.236649,
+        "box": {
+          "x": 275,
+          "y": 318,
+          "width": 78,
+          "height": 18
+        },
+        "start": 123,
+        "end": 128,
+        "needsReview": false
+      },
+      {
+        "text": "Vale",
+        "confidence": 96.295639,
+        "box": {
+          "x": 362,
+          "y": 317,
+          "width": 49,
+          "height": 19
+        },
+        "start": 129,
+        "end": 133,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.010811,
+        "box": {
+          "x": 420,
+          "y": 317,
+          "width": 103,
+          "height": 24
+        },
+        "start": 134,
+        "end": 145,
+        "needsReview": false
+      },
+      {
+        "text": "Medication",
+        "confidence": 95.980423,
+        "box": {
+          "x": 102,
+          "y": 357,
+          "width": 122,
+          "height": 19
+        },
+        "start": 146,
+        "end": 156,
+        "needsReview": false
+      },
+      {
+        "text": "requested:",
+        "confidence": 93.294708,
+        "box": {
+          "x": 235,
+          "y": 357,
+          "width": 119,
+          "height": 24
+        },
+        "start": 157,
+        "end": 167,
+        "needsReview": false
+      },
+      {
+        "text": "semaglutide",
+        "confidence": 90.34655,
+        "box": {
+          "x": 364,
+          "y": 357,
+          "width": 138,
+          "height": 24
+        },
+        "start": 168,
+        "end": 179,
+        "needsReview": false
+      },
+      {
+        "text": "Dose",
+        "confidence": 95.294373,
+        "box": {
+          "x": 102,
+          "y": 398,
+          "width": 58,
+          "height": 18
+        },
+        "start": 180,
+        "end": 184,
+        "needsReview": false
+      },
+      {
+        "text": "and",
+        "confidence": 96.922043,
+        "box": {
+          "x": 169,
+          "y": 397,
+          "width": 41,
+          "height": 19
+        },
+        "start": 185,
+        "end": 188,
+        "needsReview": false
+      },
+      {
+        "text": "frequency:",
+        "confidence": 96.11763,
+        "box": {
+          "x": 219,
+          "y": 397,
+          "width": 119,
+          "height": 24
+        },
+        "start": 189,
+        "end": 199,
+        "needsReview": false
+      },
+      {
+        "text": "Diagnosis",
+        "confidence": 95.000519,
+        "box": {
+          "x": 102,
+          "y": 437,
+          "width": 111,
+          "height": 24
+        },
+        "start": 200,
+        "end": 209,
+        "needsReview": false
+      },
+      {
+        "text": "for",
+        "confidence": 96.899559,
+        "box": {
+          "x": 222,
+          "y": 437,
+          "width": 29,
+          "height": 19
+        },
+        "start": 210,
+        "end": 213,
+        "needsReview": false
+      },
+      {
+        "text": "this",
+        "confidence": 95.771217,
+        "box": {
+          "x": 259,
+          "y": 437,
+          "width": 40,
+          "height": 19
+        },
+        "start": 214,
+        "end": 218,
+        "needsReview": false
+      },
+      {
+        "text": "request:",
+        "confidence": 95.771217,
+        "box": {
+          "x": 308,
+          "y": 439,
+          "width": 90,
+          "height": 22
+        },
+        "start": 219,
+        "end": 227,
+        "needsReview": false
+      },
+      {
+        "text": "T2DM",
+        "confidence": 81.387009,
+        "box": {
+          "x": 428,
+          "y": 439,
+          "width": 107,
+          "height": 29
+        },
+        "start": 228,
+        "end": 232,
+        "needsReview": false
+      },
+      {
+        "text": "-",
+        "confidence": 80.700966,
+        "box": {
+          "x": 554,
+          "y": 454,
+          "width": 16,
+          "height": 3
+        },
+        "start": 233,
+        "end": 234,
+        "needsReview": false
+      },
+      {
+        "text": "Ale",
+        "confidence": 76.064972,
+        "box": {
+          "x": 588,
+          "y": 438,
+          "width": 56,
+          "height": 30
+        },
+        "start": 235,
+        "end": 238,
+        "needsReview": true
+      },
+      {
+        "text": "above",
+        "confidence": 94.672112,
+        "box": {
+          "x": 668,
+          "y": 438,
+          "width": 88,
+          "height": 29
+        },
+        "start": 239,
+        "end": 244,
+        "needsReview": false
+      },
+      {
+        "text": "goal",
+        "confidence": 86.260376,
+        "box": {
+          "x": 775,
+          "y": 430,
+          "width": 63,
+          "height": 53
+        },
+        "start": 245,
+        "end": 249,
+        "needsReview": false
+      },
+      {
+        "text": "CLINICAL",
+        "confidence": 95.772125,
+        "box": {
+          "x": 101,
+          "y": 548,
+          "width": 115,
+          "height": 18
+        },
+        "start": 250,
+        "end": 258,
+        "needsReview": false
+      },
+      {
+        "text": "NOTES",
+        "confidence": 95.882866,
+        "box": {
+          "x": 225,
+          "y": 548,
+          "width": 87,
+          "height": 18
+        },
+        "start": 259,
+        "end": 264,
+        "needsReview": false
+      },
+      {
+        "text": "Visit",
+        "confidence": 96.422577,
+        "box": {
+          "x": 100,
+          "y": 587,
+          "width": 49,
+          "height": 19
+        },
+        "start": 265,
+        "end": 270,
+        "needsReview": false
+      },
+      {
+        "text": "date:",
+        "confidence": 96.578468,
+        "box": {
+          "x": 157,
+          "y": 587,
+          "width": 54,
+          "height": 19
+        },
+        "start": 271,
+        "end": 276,
+        "needsReview": false
+      },
+      {
+        "text": "20",
+        "confidence": 96.730125,
+        "box": {
+          "x": 222,
+          "y": 588,
+          "width": 27,
+          "height": 18
+        },
+        "start": 277,
+        "end": 279,
+        "needsReview": false
+      },
+      {
+        "text": "Sep",
+        "confidence": 96.625671,
+        "box": {
+          "x": 258,
+          "y": 588,
+          "width": 44,
+          "height": 23
+        },
+        "start": 280,
+        "end": 283,
+        "needsReview": false
+      },
+      {
+        "text": "2026.",
+        "confidence": 96.625671,
+        "box": {
+          "x": 312,
+          "y": 588,
+          "width": 61,
+          "height": 18
+        },
+        "start": 284,
+        "end": 289,
+        "needsReview": false
+      },
+      {
+        "text": "Assessment:",
+        "confidence": 93.881271,
+        "box": {
+          "x": 100,
+          "y": 628,
+          "width": 147,
+          "height": 18
+        },
+        "start": 290,
+        "end": 301,
+        "needsReview": false
+      },
+      {
+        "text": "see",
+        "confidence": 96.37986,
+        "box": {
+          "x": 257,
+          "y": 632,
+          "width": 40,
+          "height": 14
+        },
+        "start": 302,
+        "end": 305,
+        "needsReview": false
+      },
+      {
+        "text": "request",
+        "confidence": 96.420692,
+        "box": {
+          "x": 307,
+          "y": 629,
+          "width": 85,
+          "height": 22
+        },
+        "start": 306,
+        "end": 313,
+        "needsReview": false
+      },
+      {
+        "text": "form.",
+        "confidence": 96.464989,
+        "box": {
+          "x": 399,
+          "y": 627,
+          "width": 57,
+          "height": 19
+        },
+        "start": 314,
+        "end": 319,
+        "needsReview": false
+      },
+      {
+        "text": "Past",
+        "confidence": 96.541801,
+        "box": {
+          "x": 102,
+          "y": 668,
+          "width": 50,
+          "height": 18
+        },
+        "start": 320,
+        "end": 324,
+        "needsReview": false
+      },
+      {
+        "text": "medical",
+        "confidence": 95.7649,
+        "box": {
+          "x": 161,
+          "y": 667,
+          "width": 86,
+          "height": 19
+        },
+        "start": 325,
+        "end": 332,
+        "needsReview": false
+      },
+      {
+        "text": "history:",
+        "confidence": 95.751923,
+        "box": {
+          "x": 258,
+          "y": 667,
+          "width": 80,
+          "height": 24
+        },
+        "start": 333,
+        "end": 341,
+        "needsReview": false
+      },
+      {
+        "text": "hypertension,",
+        "confidence": 95.741188,
+        "box": {
+          "x": 349,
+          "y": 667,
+          "width": 152,
+          "height": 24
+        },
+        "start": 342,
+        "end": 355,
+        "needsReview": false
+      },
+      {
+        "text": "seasonal",
+        "confidence": 96.747581,
+        "box": {
+          "x": 511,
+          "y": 667,
+          "width": 102,
+          "height": 19
+        },
+        "start": 356,
+        "end": 364,
+        "needsReview": false
+      },
+      {
+        "text": "allergies.",
+        "confidence": 96.683601,
+        "box": {
+          "x": 623,
+          "y": 667,
+          "width": 100,
+          "height": 24
+        },
+        "start": 365,
+        "end": 375,
+        "needsReview": false
+      },
+      {
+        "text": "LABS",
+        "confidence": 96.392876,
+        "box": {
+          "x": 102,
+          "y": 748,
+          "width": 63,
+          "height": 18
+        },
+        "start": 376,
+        "end": 380,
+        "needsReview": false
+      },
+      {
+        "text": "AND",
+        "confidence": 96.373489,
+        "box": {
+          "x": 172,
+          "y": 748,
+          "width": 54,
+          "height": 18
+        },
+        "start": 381,
+        "end": 384,
+        "needsReview": false
+      },
+      {
+        "text": "MEASUREMENTS",
+        "confidence": 96.33654,
+        "box": {
+          "x": 236,
+          "y": 748,
+          "width": 217,
+          "height": 18
+        },
+        "start": 385,
+        "end": 397,
+        "needsReview": false
+      },
+      {
+        "text": "Most",
+        "confidence": 94.608154,
+        "box": {
+          "x": 102,
+          "y": 788,
+          "width": 54,
+          "height": 18
+        },
+        "start": 398,
+        "end": 402,
+        "needsReview": false
+      },
+      {
+        "text": "recent",
+        "confidence": 96.381386,
+        "box": {
+          "x": 165,
+          "y": 789,
+          "width": 71,
+          "height": 17
+        },
+        "start": 403,
+        "end": 409,
+        "needsReview": false
+      },
+      {
+        "text": "Alc:",
+        "confidence": 96.675484,
+        "box": {
+          "x": 242,
+          "y": 788,
+          "width": 49,
+          "height": 18
+        },
+        "start": 410,
+        "end": 414,
+        "needsReview": false
+      },
+      {
+        "text": "8.6",
+        "confidence": 92.432823,
+        "box": {
+          "x": 302,
+          "y": 788,
+          "width": 34,
+          "height": 18
+        },
+        "start": 415,
+        "end": 418,
+        "needsReview": false
+      },
+      {
+        "text": "%",
+        "confidence": 92.432823,
+        "box": {
+          "x": 345,
+          "y": 788,
+          "width": 21,
+          "height": 18
+        },
+        "start": 419,
+        "end": 420,
+        "needsReview": false
+      },
+      {
+        "text": "Date",
+        "confidence": 96.886581,
+        "box": {
+          "x": 102,
+          "y": 828,
+          "width": 52,
+          "height": 18
+        },
+        "start": 421,
+        "end": 425,
+        "needsReview": false
+      },
+      {
+        "text": "collected:",
+        "confidence": 96.519516,
+        "box": {
+          "x": 163,
+          "y": 827,
+          "width": 107,
+          "height": 19
+        },
+        "start": 426,
+        "end": 436,
+        "needsReview": false
+      },
+      {
+        "text": "15",
+        "confidence": 95.771729,
+        "box": {
+          "x": 281,
+          "y": 828,
+          "width": 26,
+          "height": 18
+        },
+        "start": 437,
+        "end": 439,
+        "needsReview": false
+      },
+      {
+        "text": "Sep",
+        "confidence": 96.510086,
+        "box": {
+          "x": 317,
+          "y": 828,
+          "width": 44,
+          "height": 23
+        },
+        "start": 440,
+        "end": 443,
+        "needsReview": false
+      },
+      {
+        "text": "2026",
+        "confidence": 96.920937,
+        "box": {
+          "x": 370,
+          "y": 828,
+          "width": 56,
+          "height": 18
+        },
+        "start": 444,
+        "end": 448,
+        "needsReview": false
+      },
+      {
+        "text": "MEDICATION",
+        "confidence": 95.962219,
+        "box": {
+          "x": 102,
+          "y": 908,
+          "width": 157,
+          "height": 18
+        },
+        "start": 449,
+        "end": 459,
+        "needsReview": false
+      },
+      {
+        "text": "HISTORY",
+        "confidence": 94.963936,
+        "box": {
+          "x": 271,
+          "y": 908,
+          "width": 111,
+          "height": 18
+        },
+        "start": 460,
+        "end": 467,
+        "needsReview": false
+      },
+      {
+        "text": "Prior",
+        "confidence": 96.450546,
+        "box": {
+          "x": 102,
+          "y": 943,
+          "width": 50,
+          "height": 32
+        },
+        "start": 468,
+        "end": 473,
+        "needsReview": false
+      },
+      {
+        "text": "therapies",
+        "confidence": 96.902885,
+        "box": {
+          "x": 162,
+          "y": 943,
+          "width": 99,
+          "height": 32
+        },
+        "start": 474,
+        "end": 483,
+        "needsReview": false
+      },
+      {
+        "text": "tried:",
+        "confidence": 96.158379,
+        "box": {
+          "x": 277,
+          "y": 947,
+          "width": 55,
+          "height": 19
+        },
+        "start": 484,
+        "end": 490,
+        "needsReview": false
+      },
+      {
+        "text": "metformin",
+        "confidence": 96.325111,
+        "box": {
+          "x": 343,
+          "y": 947,
+          "width": 112,
+          "height": 19
+        },
+        "start": 491,
+        "end": 500,
+        "needsReview": false
+      },
+      {
+        "text": "1000",
+        "confidence": 95.7491,
+        "box": {
+          "x": 466,
+          "y": 948,
+          "width": 55,
+          "height": 18
+        },
+        "start": 501,
+        "end": 505,
+        "needsReview": false
+      },
+      {
+        "text": "mg",
+        "confidence": 62.986237,
+        "box": {
+          "x": 531,
+          "y": 923,
+          "width": 30,
+          "height": 80
+        },
+        "start": 506,
+        "end": 508,
+        "needsReview": true
+      },
+      {
+        "text": "vigssety",
+        "confidence": 7.427147,
+        "box": {
+          "x": 573,
+          "y": 923,
+          "width": 121,
+          "height": 80
+        },
+        "start": 509,
+        "end": 517,
+        "needsReview": true
+      },
+      {
+        "text": "Trial",
+        "confidence": 96.357849,
+        "box": {
+          "x": 101,
+          "y": 987,
+          "width": 47,
+          "height": 19
+        },
+        "start": 518,
+        "end": 523,
+        "needsReview": false
+      },
+      {
+        "text": "dates:",
+        "confidence": 96.451492,
+        "box": {
+          "x": 158,
+          "y": 987,
+          "width": 67,
+          "height": 19
+        },
+        "start": 524,
+        "end": 530,
+        "needsReview": false
+      },
+      {
+        "text": "1",
+        "confidence": 96.639557,
+        "box": {
+          "x": 238,
+          "y": 988,
+          "width": 10,
+          "height": 18
+        },
+        "start": 531,
+        "end": 532,
+        "needsReview": false
+      },
+      {
+        "text": "Apr",
+        "confidence": 96.527451,
+        "box": {
+          "x": 255,
+          "y": 988,
+          "width": 40,
+          "height": 23
+        },
+        "start": 533,
+        "end": 536,
+        "needsReview": false
+      },
+      {
+        "text": "2026",
+        "confidence": 96.478004,
+        "box": {
+          "x": 304,
+          "y": 988,
+          "width": 56,
+          "height": 18
+        },
+        "start": 537,
+        "end": 541,
+        "needsReview": false
+      },
+      {
+        "text": "to",
+        "confidence": 96.854965,
+        "box": {
+          "x": 368,
+          "y": 989,
+          "width": 20,
+          "height": 17
+        },
+        "start": 542,
+        "end": 544,
+        "needsReview": false
+      },
+      {
+        "text": "1",
+        "confidence": 96.467506,
+        "box": {
+          "x": 399,
+          "y": 988,
+          "width": 11,
+          "height": 18
+        },
+        "start": 545,
+        "end": 546,
+        "needsReview": false
+      },
+      {
+        "text": "Aug",
+        "confidence": 96.469978,
+        "box": {
+          "x": 417,
+          "y": 988,
+          "width": 42,
+          "height": 18
+        },
+        "start": 547,
+        "end": 550,
+        "needsReview": false
+      },
+      {
+        "text": "2026",
+        "confidence": 96.760162,
+        "box": {
+          "x": 472,
+          "y": 988,
+          "width": 55,
+          "height": 18
+        },
+        "start": 551,
+        "end": 555,
+        "needsReview": false
+      },
+      {
+        "text": "Baseline",
+        "confidence": 96.442032,
+        "box": {
+          "x": 102,
+          "y": 1027,
+          "width": 97,
+          "height": 19
+        },
+        "start": 556,
+        "end": 564,
+        "needsReview": false
+      },
+      {
+        "text": "before",
+        "confidence": 96.509544,
+        "box": {
+          "x": 209,
+          "y": 1027,
+          "width": 71,
+          "height": 19
+        },
+        "start": 565,
+        "end": 571,
+        "needsReview": false
+      },
+      {
+        "text": "nator",
+        "confidence": 11.078072,
+        "box": {
+          "x": 290,
+          "y": 1027,
+          "width": 112,
+          "height": 19
+        },
+        "start": 572,
+        "end": 577,
+        "needsReview": true
+      },
+      {
+        "text": "£430",
+        "confidence": 21.702377,
+        "box": {
+          "x": 498,
+          "y": 988,
+          "width": 72,
+          "height": 102
+        },
+        "start": 578,
+        "end": 582,
+        "needsReview": true
+      },
+      {
+        "text": "25",
+        "confidence": 96.642128,
+        "box": {
+          "x": 580,
+          "y": 1028,
+          "width": 26,
+          "height": 18
+        },
+        "start": 583,
+        "end": 585,
+        "needsReview": false
+      },
+      {
+        "text": "Mar",
+        "confidence": 96.517853,
+        "box": {
+          "x": 617,
+          "y": 1028,
+          "width": 42,
+          "height": 18
+        },
+        "start": 586,
+        "end": 589,
+        "needsReview": false
+      },
+      {
+        "text": "2026.",
+        "confidence": 96.544868,
+        "box": {
+          "x": 668,
+          "y": 1028,
+          "width": 61,
+          "height": 18
+        },
+        "start": 590,
+        "end": 595,
+        "needsReview": false
+      },
+      {
+        "text": "On",
+        "confidence": 94.528061,
+        "box": {
+          "x": 101,
+          "y": 1068,
+          "width": 32,
+          "height": 18
+        },
+        "start": 596,
+        "end": 598,
+        "needsReview": false
+      },
+      {
+        "text": "metformin:",
+        "confidence": 96.265358,
+        "box": {
+          "x": 144,
+          "y": 1067,
+          "width": 118,
+          "height": 19
+        },
+        "start": 599,
+        "end": 609,
+        "needsReview": false
+      },
+      {
+        "text": "Alc",
+        "confidence": 95.907974,
+        "box": {
+          "x": 271,
+          "y": 1068,
+          "width": 44,
+          "height": 18
+        },
+        "start": 610,
+        "end": 613,
+        "needsReview": false
+      },
+      {
+        "text": "8.9",
+        "confidence": 93.252991,
+        "box": {
+          "x": 324,
+          "y": 1068,
+          "width": 33,
+          "height": 18
+        },
+        "start": 614,
+        "end": 617,
+        "needsReview": false
+      },
+      {
+        "text": "%",
+        "confidence": 93.252991,
+        "box": {
+          "x": 367,
+          "y": 1068,
+          "width": 21,
+          "height": 18
+        },
+        "start": 618,
+        "end": 619,
+        "needsReview": false
+      },
+      {
+        "text": "on",
+        "confidence": 96.498848,
+        "box": {
+          "x": 397,
+          "y": 1072,
+          "width": 27,
+          "height": 14
+        },
+        "start": 620,
+        "end": 622,
+        "needsReview": false
+      },
+      {
+        "text": "20",
+        "confidence": 96.216011,
+        "box": {
+          "x": 434,
+          "y": 1068,
+          "width": 26,
+          "height": 18
+        },
+        "start": 623,
+        "end": 625,
+        "needsReview": false
+      },
+      {
+        "text": "Jul",
+        "confidence": 96.216011,
+        "box": {
+          "x": 483,
+          "y": 1067,
+          "width": 17,
+          "height": 19
+        },
+        "start": 626,
+        "end": 629,
+        "needsReview": false
+      },
+      {
+        "text": "2026;",
+        "confidence": 96.236252,
+        "box": {
+          "x": 510,
+          "y": 1068,
+          "width": 62,
+          "height": 21
+        },
+        "start": 630,
+        "end": 635,
+        "needsReview": false
+      },
+      {
+        "text": "goal",
+        "confidence": 95.701897,
+        "box": {
+          "x": 582,
+          "y": 1067,
+          "width": 47,
+          "height": 24
+        },
+        "start": 636,
+        "end": 640,
+        "needsReview": false
+      },
+      {
+        "text": "below",
+        "confidence": 94.954544,
+        "box": {
+          "x": 639,
+          "y": 1067,
+          "width": 66,
+          "height": 19
+        },
+        "start": 641,
+        "end": 646,
+        "needsReview": false
+      },
+      {
+        "text": "7.0",
+        "confidence": 93.27623,
+        "box": {
+          "x": 714,
+          "y": 1068,
+          "width": 34,
+          "height": 18
+        },
+        "start": 647,
+        "end": 650,
+        "needsReview": false
+      },
+      {
+        "text": "%",
+        "confidence": 93.27623,
+        "box": {
+          "x": 757,
+          "y": 1068,
+          "width": 21,
+          "height": 18
+        },
+        "start": 651,
+        "end": 652,
+        "needsReview": false
+      },
+      {
+        "text": "not",
+        "confidence": 95.238655,
+        "box": {
+          "x": 788,
+          "y": 1069,
+          "width": 35,
+          "height": 17
+        },
+        "start": 653,
+        "end": 656,
+        "needsReview": false
+      },
+      {
+        "text": "met.",
+        "confidence": 96.7033,
+        "box": {
+          "x": 832,
+          "y": 1069,
+          "width": 46,
+          "height": 17
+        },
+        "start": 657,
+        "end": 661,
+        "needsReview": false
+      },
+      {
+        "text": "No",
+        "confidence": 95.922523,
+        "box": {
+          "x": 102,
+          "y": 1108,
+          "width": 30,
+          "height": 18
+        },
+        "start": 662,
+        "end": 664,
+        "needsReview": false
+      },
+      {
+        "text": "other",
+        "confidence": 95.922523,
+        "box": {
+          "x": 142,
+          "y": 1107,
+          "width": 57,
+          "height": 19
+        },
+        "start": 665,
+        "end": 670,
+        "needsReview": false
+      },
+      {
+        "text": "prior",
+        "confidence": 95.995827,
+        "box": {
+          "x": 209,
+          "y": 1107,
+          "width": 50,
+          "height": 24
+        },
+        "start": 671,
+        "end": 676,
+        "needsReview": false
+      },
+      {
+        "text": "therapy",
+        "confidence": 95.995827,
+        "box": {
+          "x": 267,
+          "y": 1107,
+          "width": 86,
+          "height": 24
+        },
+        "start": 677,
+        "end": 684,
+        "needsReview": false
+      },
+      {
+        "text": "records",
+        "confidence": 96.847099,
+        "box": {
+          "x": 362,
+          "y": 1107,
+          "width": 84,
+          "height": 19
+        },
+        "start": 685,
+        "end": 692,
+        "needsReview": false
+      },
+      {
+        "text": "supplied.",
+        "confidence": 96.590897,
+        "box": {
+          "x": 455,
+          "y": 1107,
+          "width": 101,
+          "height": 24
+        },
+        "start": 693,
+        "end": 702,
+        "needsReview": false
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM",
+    "orientation": {
+      "pageRotation": 0,
+      "scores": {
+        "0": 6188.825207,
+        "180": 488.859108
+      }
+    },
+    "deskewDegrees": 0,
+    "readImage": "packet-058.png",
+    "width": 1700,
+    "height": 2200
+  },
+  "scores": {
+    "entities": {
+      "tp": 14,
+      "predicted": 14,
+      "gold": 17,
+      "exactQuote": 7
+    },
+    "criteria": {
+      "correct": 4,
+      "total": 5
+    },
+    "cer": 0.06657608695652174,
+    "edits": 49,
+    "chars": 736,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [
+    "prior (objective): draft evidence_found, pipeline needs_review",
+    "Extraction: 14 of 17 draft values found, 0 extra",
+    "49 OCR character edits"
+  ],
+  "latency": {
+    "renderAndOcrMs": 4570.380375000008,
+    "serviceMs": 20.195959000000585
+  }
+}

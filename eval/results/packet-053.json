@@ -1,0 +1,4273 @@
+{
+  "packet_id": "packet-053",
+  "criteria_id": "biologic-psoriasis",
+  "group": "orientation",
+  "tags": [
+    "page:form",
+    "date:day-first",
+    "date-reading:unresolved",
+    "drug-name:brand",
+    "dose-format:compact"
+  ],
+  "render": {
+    "font": "roboto-mono",
+    "effects": [
+      "speckle-heavy",
+      "streaks"
+    ],
+    "rotate": 90,
+    "handwriting": [],
+    "annotations": []
+  },
+  "groupLabel": "Simulated page orientation",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "PRIOR AUTHORIZATION REQUEST FORM\nDate of request: [date-a]\nPatient name: [name] [name] (fictional)\nAge: 56\nPrescriber: Dr. [name] [name] (fictional)\nMedication requested: Humira\nDose and frequency: 48mg Q14D\nDiagnosis for this request: severe plaque psoriasis (L40.0)\nCLINICAL NOTES\nVisit date: [date-b].\nAssessment: severe plaque psoriasis (L40.0), active on prior therapy.\nLABS AND MEASUREMENTS\nMost recent BSA involvement: 14 %\nDate collected: [date-c]\nMEDICATION HISTORY\nCurrent requested therapy: Humira 86mg q2wk.\nPrior therapies tried: Trexall 15mg once a week\nTrial dates: [date-d] to [date-e]\nBaseline before Trexall: BSA 18 % on [date-f].\nOn Trexall: BSA 15 % on [date-g]; goal 3 % or less not met.\nNo other prior therapy records supplied.\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 4
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points",
+    "dateHandling": "shifted",
+    "dates": [
+      {
+        "token": "[date-a]",
+        "readings": [
+          "2128-02-25",
+          "2128-11-15"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-b]",
+        "readings": [
+          "2128-04-23",
+          "2128-10-18"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-c]",
+        "readings": [
+          "2128-09-23",
+          "2128-10-23"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-d]",
+        "readings": [
+          "2128-02-19",
+          "2128-05-16"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-e]",
+        "readings": [
+          "2128-02-23",
+          "2128-09-15"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-f]",
+        "readings": [
+          "2128-12-18",
+          "2128-04-25"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-g]",
+        "readings": [
+          "2128-07-22",
+          "2128-08-20"
+        ],
+        "order": "ambiguous"
+      }
+    ]
+  },
+  "dateReading": {
+    "status": "unresolved",
+    "order": null
+  },
+  "readerCoverage": {
+    "lines": 22,
+    "pages": 1,
+    "blockers": {
+      "adult": [],
+      "diagnosis": [],
+      "lab": [],
+      "prior": [],
+      "dose": []
+    },
+    "mentions": [
+      {
+        "criterion": "prior",
+        "line": 20,
+        "kind": "no-more-records"
+      }
+    ],
+    "complete": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "request_date",
+      "value": {
+        "readings": [
+          "2128-02-25",
+          "2128-11-15"
+        ]
+      },
+      "source_span": {
+        "start": 33,
+        "end": 58,
+        "text": "Date of request: [date-a]"
+      },
+      "value_span": {
+        "start": 50,
+        "end": 58
+      },
+      "attrs": {
+        "label": "Date of request"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 199,
+          "width": 54,
+          "height": 17
+        },
+        {
+          "x": 173,
+          "y": 197,
+          "width": 27,
+          "height": 19
+        },
+        {
+          "x": 219,
+          "y": 200,
+          "width": 107,
+          "height": 21
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "age",
+      "value": 56,
+      "source_span": {
+        "start": 99,
+        "end": 106,
+        "text": "Age: 56"
+      },
+      "value_span": {
+        "start": 104,
+        "end": 106
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 279,
+          "width": 52,
+          "height": 22
+        },
+        {
+          "x": 174,
+          "y": 279,
+          "width": 25,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "requested_medication",
+      "value": "adalimumab",
+      "source_span": {
+        "start": 149,
+        "end": 177,
+        "text": "Medication requested: Humira"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "327361",
+        "display": "adalimumab"
+      },
+      "value_span": {
+        "start": 171,
+        "end": 177
+      },
+      "match": {
+        "kind": "brand",
+        "written": "Humira",
+        "confidence": 1
+      },
+      "attrs": {
+        "product": "humira",
+        "source": "Medication requested"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 358,
+          "width": 140,
+          "height": 18
+        },
+        {
+          "x": 262,
+          "y": 358,
+          "width": 136,
+          "height": 23
+        },
+        {
+          "x": 418,
+          "y": 359,
+          "width": 83,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "requested_dose",
+      "value": "48 mg every 2 weeks",
+      "source_span": {
+        "start": 178,
+        "end": 207,
+        "text": "Dose and frequency: 48mg Q14D"
+      },
+      "value_span": {
+        "start": 198,
+        "end": 207
+      },
+      "attrs": {
+        "drug": "adalimumab",
+        "amount": 48,
+        "source": "Dose and frequency"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 399,
+          "width": 54,
+          "height": 17
+        },
+        {
+          "x": 174,
+          "y": 398,
+          "width": 39,
+          "height": 18
+        },
+        {
+          "x": 231,
+          "y": 397,
+          "width": 138,
+          "height": 24
+        },
+        {
+          "x": 389,
+          "y": 399,
+          "width": 55,
+          "height": 22
+        },
+        {
+          "x": 461,
+          "y": 399,
+          "width": 56,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "indication",
+      "value": "moderate-to-severe plaque psoriasis",
+      "source_span": {
+        "start": 208,
+        "end": 267,
+        "text": "Diagnosis for this request: severe plaque psoriasis (L40.0)"
+      },
+      "normalization": {
+        "system": "ICD-10-CM",
+        "code": "L40.0",
+        "display": "Psoriasis vulgaris"
+      },
+      "value_span": {
+        "start": 236,
+        "end": 259
+      },
+      "attrs": {
+        "family": "psoriasis"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 439,
+          "width": 126,
+          "height": 22
+        },
+        {
+          "x": 246,
+          "y": 437,
+          "width": 39,
+          "height": 19
+        },
+        {
+          "x": 303,
+          "y": 438,
+          "width": 55,
+          "height": 18
+        },
+        {
+          "x": 377,
+          "y": 440,
+          "width": 107,
+          "height": 21
+        },
+        {
+          "x": 505,
+          "y": 443,
+          "width": 83,
+          "height": 13
+        },
+        {
+          "x": 606,
+          "y": 438,
+          "width": 83,
+          "height": 23
+        },
+        {
+          "x": 707,
+          "y": 439,
+          "width": 126,
+          "height": 22
+        },
+        {
+          "x": 853,
+          "y": 437,
+          "width": 92,
+          "height": 24
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "indication",
+      "value": "plaque psoriasis",
+      "source_span": {
+        "start": 208,
+        "end": 267,
+        "text": "Diagnosis for this request: severe plaque psoriasis (L40.0)"
+      },
+      "value_span": {
+        "start": 261,
+        "end": 266
+      },
+      "attrs": {
+        "family": "psoriasis"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 439,
+          "width": 126,
+          "height": 22
+        },
+        {
+          "x": 246,
+          "y": 437,
+          "width": 39,
+          "height": 19
+        },
+        {
+          "x": 303,
+          "y": 438,
+          "width": 55,
+          "height": 18
+        },
+        {
+          "x": 377,
+          "y": 440,
+          "width": 107,
+          "height": 21
+        },
+        {
+          "x": 505,
+          "y": 443,
+          "width": 83,
+          "height": 13
+        },
+        {
+          "x": 606,
+          "y": 438,
+          "width": 83,
+          "height": 23
+        },
+        {
+          "x": 707,
+          "y": 439,
+          "width": 126,
+          "height": 22
+        },
+        {
+          "x": 853,
+          "y": 437,
+          "width": 92,
+          "height": 24
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "assessment",
+      "value": {
+        "condition": "moderate-to-severe plaque psoriasis",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 305,
+        "end": 374,
+        "text": "Assessment: severe plaque psoriasis (L40.0), active on prior therapy."
+      },
+      "value_span": {
+        "start": 317,
+        "end": 340
+      },
+      "attrs": {
+        "family": "psoriasis"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 599,
+          "width": 153,
+          "height": 17
+        },
+        {
+          "x": 275,
+          "y": 603,
+          "width": 83,
+          "height": 13
+        },
+        {
+          "x": 376,
+          "y": 598,
+          "width": 83,
+          "height": 23
+        },
+        {
+          "x": 476,
+          "y": 599,
+          "width": 126,
+          "height": 22
+        },
+        {
+          "x": 623,
+          "y": 597,
+          "width": 104,
+          "height": 24
+        },
+        {
+          "x": 750,
+          "y": 599,
+          "width": 83,
+          "height": 17
+        },
+        {
+          "x": 850,
+          "y": 603,
+          "width": 26,
+          "height": 13
+        },
+        {
+          "x": 894,
+          "y": 599,
+          "width": 68,
+          "height": 22
+        },
+        {
+          "x": 980,
+          "y": 598,
+          "width": 109,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "assessment",
+      "value": {
+        "condition": "plaque psoriasis",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 305,
+        "end": 374,
+        "text": "Assessment: severe plaque psoriasis (L40.0), active on prior therapy."
+      },
+      "value_span": {
+        "start": 342,
+        "end": 347
+      },
+      "attrs": {
+        "family": "psoriasis"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 599,
+          "width": 153,
+          "height": 17
+        },
+        {
+          "x": 275,
+          "y": 603,
+          "width": 83,
+          "height": 13
+        },
+        {
+          "x": 376,
+          "y": 598,
+          "width": 83,
+          "height": 23
+        },
+        {
+          "x": 476,
+          "y": 599,
+          "width": 126,
+          "height": 22
+        },
+        {
+          "x": 623,
+          "y": 597,
+          "width": 104,
+          "height": 24
+        },
+        {
+          "x": 750,
+          "y": 599,
+          "width": 83,
+          "height": 17
+        },
+        {
+          "x": 850,
+          "y": 603,
+          "width": 26,
+          "height": 13
+        },
+        {
+          "x": 894,
+          "y": 599,
+          "width": 68,
+          "height": 22
+        },
+        {
+          "x": 980,
+          "y": 598,
+          "width": 109,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "measurement",
+      "value": {
+        "name": "BSA",
+        "value": 14,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 397,
+        "end": 430,
+        "text": "Most recent BSA involvement: 14 %"
+      },
+      "value_span": {
+        "start": 426,
+        "end": 428
+      },
+      "name_span": {
+        "start": 409,
+        "end": 424
+      },
+      "reviewed": false,
+      "related": [
+        "e10"
+      ],
+      "boxes": [
+        {
+          "x": 102,
+          "y": 719,
+          "width": 54,
+          "height": 17
+        },
+        {
+          "x": 176,
+          "y": 720,
+          "width": 80,
+          "height": 16
+        },
+        {
+          "x": 275,
+          "y": 719,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 333,
+          "y": 718,
+          "width": 166,
+          "height": 18
+        },
+        {
+          "x": 520,
+          "y": 719,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 561,
+          "y": 719,
+          "width": 14,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "measurement_date",
+      "value": {
+        "readings": [
+          "2128-09-23",
+          "2128-10-23"
+        ]
+      },
+      "source_span": {
+        "start": 431,
+        "end": 455,
+        "text": "Date collected: [date-c]"
+      },
+      "value_span": {
+        "start": 447,
+        "end": 455
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 759,
+          "width": 54,
+          "height": 17
+        },
+        {
+          "x": 174,
+          "y": 758,
+          "width": 137,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "medication_list_dose",
+      "value": "86 mg every 2 weeks",
+      "source_span": {
+        "start": 475,
+        "end": 519,
+        "text": "Current requested therapy: Humira 86mg q2wk."
+      },
+      "value_span": {
+        "start": 509,
+        "end": 518
+      },
+      "attrs": {
+        "drug": "adalimumab",
+        "amount": 86
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 879,
+          "width": 98,
+          "height": 17
+        },
+        {
+          "x": 219,
+          "y": 878,
+          "width": 124,
+          "height": 23
+        },
+        {
+          "x": 361,
+          "y": 878,
+          "width": 109,
+          "height": 23
+        },
+        {
+          "x": 490,
+          "y": 879,
+          "width": 83,
+          "height": 17
+        },
+        {
+          "x": 592,
+          "y": 879,
+          "width": 53,
+          "height": 22
+        },
+        {
+          "x": 663,
+          "y": 878,
+          "width": 66,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e12",
+      "type": "prior_medication",
+      "value": "methotrexate",
+      "source_span": {
+        "start": 520,
+        "end": 567,
+        "text": "Prior therapies tried: Trexall 15mg once a week"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "6851",
+        "display": "methotrexate"
+      },
+      "value_span": {
+        "start": 543,
+        "end": 550
+      },
+      "episode": 1,
+      "match": {
+        "kind": "brand",
+        "written": "Trexall",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "antimetabolite",
+        "goalNotMet": true
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 919,
+          "width": 68,
+          "height": 17
+        },
+        {
+          "x": 188,
+          "y": 918,
+          "width": 126,
+          "height": 23
+        },
+        {
+          "x": 332,
+          "y": 918,
+          "width": 80,
+          "height": 18
+        },
+        {
+          "x": 432,
+          "y": 918,
+          "width": 99,
+          "height": 18
+        },
+        {
+          "x": 549,
+          "y": 919,
+          "width": 53,
+          "height": 22
+        },
+        {
+          "x": 620,
+          "y": 923,
+          "width": 55,
+          "height": 13
+        },
+        {
+          "x": 692,
+          "y": 923,
+          "width": 11,
+          "height": 13
+        },
+        {
+          "x": 720,
+          "y": 918,
+          "width": 55,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e13",
+      "type": "prior_dose",
+      "value": "15 mg weekly",
+      "source_span": {
+        "start": 520,
+        "end": 567,
+        "text": "Prior therapies tried: Trexall 15mg once a week"
+      },
+      "value_span": {
+        "start": 551,
+        "end": 567
+      },
+      "episode": 1,
+      "attrs": {
+        "amount": 15,
+        "frequency": "weekly"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 919,
+          "width": 68,
+          "height": 17
+        },
+        {
+          "x": 188,
+          "y": 918,
+          "width": 126,
+          "height": 23
+        },
+        {
+          "x": 332,
+          "y": 918,
+          "width": 80,
+          "height": 18
+        },
+        {
+          "x": 432,
+          "y": 918,
+          "width": 99,
+          "height": 18
+        },
+        {
+          "x": 549,
+          "y": 919,
+          "width": 53,
+          "height": 22
+        },
+        {
+          "x": 620,
+          "y": 923,
+          "width": 55,
+          "height": 13
+        },
+        {
+          "x": 692,
+          "y": 923,
+          "width": 11,
+          "height": 13
+        },
+        {
+          "x": 720,
+          "y": 918,
+          "width": 55,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e14",
+      "type": "prior_start_date",
+      "value": {
+        "readings": [
+          "2128-02-19",
+          "2128-05-16"
+        ]
+      },
+      "source_span": {
+        "start": 568,
+        "end": 601,
+        "text": "Trial dates: [date-d] to [date-e]"
+      },
+      "value_span": {
+        "start": 581,
+        "end": 589
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 958,
+          "width": 70,
+          "height": 18
+        },
+        {
+          "x": 188,
+          "y": 958,
+          "width": 80,
+          "height": 18
+        },
+        {
+          "x": 447,
+          "y": 960,
+          "width": 26,
+          "height": 16
+        }
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "prior_stop_date",
+      "value": {
+        "readings": [
+          "2128-02-23",
+          "2128-09-15"
+        ]
+      },
+      "source_span": {
+        "start": 568,
+        "end": 601,
+        "text": "Trial dates: [date-d] to [date-e]"
+      },
+      "value_span": {
+        "start": 593,
+        "end": 601
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 958,
+          "width": 70,
+          "height": 18
+        },
+        {
+          "x": 188,
+          "y": 958,
+          "width": 80,
+          "height": 18
+        },
+        {
+          "x": 447,
+          "y": 960,
+          "width": 26,
+          "height": 16
+        }
+      ]
+    },
+    {
+      "id": "e16",
+      "type": "prior_baseline",
+      "value": {
+        "name": "BSA",
+        "value": 18,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 602,
+        "end": 648,
+        "text": "Baseline before Trexall: BSA 18 % on [date-f]."
+      },
+      "value_span": {
+        "start": 631,
+        "end": 633
+      },
+      "name_span": {
+        "start": 627,
+        "end": 630
+      },
+      "episode": 1,
+      "reviewed": false,
+      "related": [
+        "e17"
+      ],
+      "boxes": [
+        {
+          "x": 102,
+          "y": 998,
+          "width": 112,
+          "height": 18
+        },
+        {
+          "x": 232,
+          "y": 997,
+          "width": 83,
+          "height": 19
+        },
+        {
+          "x": 331,
+          "y": 998,
+          "width": 110,
+          "height": 18
+        },
+        {
+          "x": 462,
+          "y": 999,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 520,
+          "y": 999,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 561,
+          "y": 999,
+          "width": 14,
+          "height": 17
+        },
+        {
+          "x": 591,
+          "y": 1003,
+          "width": 26,
+          "height": 13
+        }
+      ]
+    },
+    {
+      "id": "e17",
+      "type": "prior_baseline_date",
+      "value": {
+        "readings": [
+          "2128-12-18",
+          "2128-04-25"
+        ]
+      },
+      "source_span": {
+        "start": 602,
+        "end": 648,
+        "text": "Baseline before Trexall: BSA 18 % on [date-f]."
+      },
+      "value_span": {
+        "start": 639,
+        "end": 647
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 998,
+          "width": 112,
+          "height": 18
+        },
+        {
+          "x": 232,
+          "y": 997,
+          "width": 83,
+          "height": 19
+        },
+        {
+          "x": 331,
+          "y": 998,
+          "width": 110,
+          "height": 18
+        },
+        {
+          "x": 462,
+          "y": 999,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 520,
+          "y": 999,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 561,
+          "y": 999,
+          "width": 14,
+          "height": 17
+        },
+        {
+          "x": 591,
+          "y": 1003,
+          "width": 26,
+          "height": 13
+        }
+      ]
+    },
+    {
+      "id": "e18",
+      "type": "prior_followup",
+      "value": {
+        "name": "BSA",
+        "value": 15,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 649,
+        "end": 708,
+        "text": "On Trexall: BSA 15 % on [date-g]; goal 3 % or less not met."
+      },
+      "value_span": {
+        "start": 665,
+        "end": 667
+      },
+      "name_span": {
+        "start": 661,
+        "end": 664
+      },
+      "episode": 1,
+      "reviewed": false,
+      "related": [
+        "e19"
+      ],
+      "boxes": [
+        {
+          "x": 101,
+          "y": 1039,
+          "width": 26,
+          "height": 17
+        },
+        {
+          "x": 144,
+          "y": 1038,
+          "width": 110,
+          "height": 18
+        },
+        {
+          "x": 275,
+          "y": 1039,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 333,
+          "y": 1039,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 374,
+          "y": 1039,
+          "width": 14,
+          "height": 17
+        },
+        {
+          "x": 404,
+          "y": 1043,
+          "width": 25,
+          "height": 13
+        },
+        {
+          "x": 620,
+          "y": 1038,
+          "width": 55,
+          "height": 23
+        },
+        {
+          "x": 692,
+          "y": 1039,
+          "width": 10,
+          "height": 17
+        },
+        {
+          "x": 720,
+          "y": 1039,
+          "width": 13,
+          "height": 17
+        },
+        {
+          "x": 749,
+          "y": 1043,
+          "width": 26,
+          "height": 13
+        },
+        {
+          "x": 794,
+          "y": 1038,
+          "width": 53,
+          "height": 18
+        },
+        {
+          "x": 865,
+          "y": 1040,
+          "width": 39,
+          "height": 16
+        },
+        {
+          "x": 922,
+          "y": 1040,
+          "width": 51,
+          "height": 16
+        }
+      ]
+    },
+    {
+      "id": "e19",
+      "type": "prior_followup_date",
+      "value": {
+        "readings": [
+          "2128-07-22",
+          "2128-08-20"
+        ]
+      },
+      "source_span": {
+        "start": 649,
+        "end": 708,
+        "text": "On Trexall: BSA 15 % on [date-g]; goal 3 % or less not met."
+      },
+      "value_span": {
+        "start": 673,
+        "end": 681
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 1039,
+          "width": 26,
+          "height": 17
+        },
+        {
+          "x": 144,
+          "y": 1038,
+          "width": 110,
+          "height": 18
+        },
+        {
+          "x": 275,
+          "y": 1039,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 333,
+          "y": 1039,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 374,
+          "y": 1039,
+          "width": 14,
+          "height": 17
+        },
+        {
+          "x": 404,
+          "y": 1043,
+          "width": 25,
+          "height": 13
+        },
+        {
+          "x": 620,
+          "y": 1038,
+          "width": 55,
+          "height": 23
+        },
+        {
+          "x": 692,
+          "y": 1039,
+          "width": 10,
+          "height": 17
+        },
+        {
+          "x": 720,
+          "y": 1039,
+          "width": 13,
+          "height": 17
+        },
+        {
+          "x": 749,
+          "y": 1043,
+          "width": 26,
+          "height": 13
+        },
+        {
+          "x": 794,
+          "y": 1038,
+          "width": 53,
+          "height": 18
+        },
+        {
+          "x": 865,
+          "y": 1040,
+          "width": 39,
+          "height": 16
+        },
+        {
+          "x": 922,
+          "y": 1040,
+          "width": 51,
+          "height": 16
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 99,
+          "end": 106,
+          "text": "Age: 56"
+        }
+      ],
+      "reason": "Age 56 is documented.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 208,
+          "end": 267,
+          "text": "Diagnosis for this request: severe plaque psoriasis (L40.0)"
+        },
+        {
+          "start": 305,
+          "end": 374,
+          "text": "Assessment: severe plaque psoriasis (L40.0), active on prior therapy."
+        }
+      ],
+      "reason": "The request names moderate-to-severe plaque psoriasis as its reason.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 33,
+          "end": 58,
+          "text": "Date of request: [date-a]"
+        },
+        {
+          "start": 397,
+          "end": 430,
+          "text": "Most recent BSA involvement: 14 %"
+        },
+        {
+          "start": 431,
+          "end": 455,
+          "text": "Date collected: [date-c]"
+        },
+        {
+          "start": 602,
+          "end": 648,
+          "text": "Baseline before Trexall: BSA 18 % on [date-f]."
+        }
+      ],
+      "reason": "Numeric dates on this page can be read month first or day first, and the two readings give different results. Both readings are kept. Check the page.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 520,
+          "end": 567,
+          "text": "Prior therapies tried: Trexall 15mg once a week"
+        },
+        {
+          "start": 568,
+          "end": 601,
+          "text": "Trial dates: [date-d] to [date-e]"
+        },
+        {
+          "start": 602,
+          "end": 648,
+          "text": "Baseline before Trexall: BSA 18 % on [date-f]."
+        },
+        {
+          "start": 649,
+          "end": 708,
+          "text": "On Trexall: BSA 15 % on [date-g]; goal 3 % or less not met."
+        }
+      ],
+      "reason": "Numeric dates on this page can be read month first or day first, and the two readings give different results. Both readings are kept. Check the page.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 149,
+          "end": 177,
+          "text": "Medication requested: Humira"
+        },
+        {
+          "start": 178,
+          "end": 207,
+          "text": "Dose and frequency: 48mg Q14D"
+        }
+      ],
+      "reason": "48 mg is not a marketed adalimumab dose. Check the page for a misread.",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "Medication requested: Humira",
+      "citations": [
+        {
+          "start": 149,
+          "end": 177,
+          "text": "Medication requested: Humira"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Diagnosis for this request: severe plaque psoriasis (L40.0)",
+      "citations": [
+        {
+          "start": 208,
+          "end": 267,
+          "text": "Diagnosis for this request: severe plaque psoriasis (L40.0)"
+        }
+      ],
+      "supported": true,
+      "needsReview": true,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Most recent BSA involvement: 14 %",
+      "citations": [
+        {
+          "start": 397,
+          "end": 430,
+          "text": "Most recent BSA involvement: 14 %"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Prior therapies tried: Trexall 15mg once a week",
+      "citations": [
+        {
+          "start": 520,
+          "end": 567,
+          "text": "Prior therapies tried: Trexall 15mg once a week"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "PRIOR",
+      "confidence": 95.353821,
+      "box": {
+        "x": 102,
+        "y": 159,
+        "width": 69,
+        "height": 17
+      },
+      "start": 0,
+      "end": 5,
+      "needsReview": false
+    },
+    {
+      "text": "AUTHORIZATION",
+      "confidence": 96.126389,
+      "box": {
+        "x": 187,
+        "y": 159,
+        "width": 185,
+        "height": 17
+      },
+      "start": 6,
+      "end": 19,
+      "needsReview": false
+    },
+    {
+      "text": "REQUEST",
+      "confidence": 95.14296,
+      "box": {
+        "x": 390,
+        "y": 159,
+        "width": 98,
+        "height": 20
+      },
+      "start": 20,
+      "end": 27,
+      "needsReview": false
+    },
+    {
+      "text": "FORM",
+      "confidence": 95.996147,
+      "box": {
+        "x": 505,
+        "y": 159,
+        "width": 54,
+        "height": 17
+      },
+      "start": 28,
+      "end": 32,
+      "needsReview": false
+    },
+    {
+      "text": "Date",
+      "confidence": 96.187141,
+      "box": {
+        "x": 102,
+        "y": 199,
+        "width": 54,
+        "height": 17
+      },
+      "start": 33,
+      "end": 37,
+      "needsReview": false
+    },
+    {
+      "text": "of",
+      "confidence": 95.670876,
+      "box": {
+        "x": 173,
+        "y": 197,
+        "width": 27,
+        "height": 19
+      },
+      "start": 38,
+      "end": 40,
+      "needsReview": false
+    },
+    {
+      "text": "request:",
+      "confidence": 96.674835,
+      "box": {
+        "x": 219,
+        "y": 200,
+        "width": 107,
+        "height": 21
+      },
+      "start": 41,
+      "end": 49,
+      "needsReview": false
+    },
+    {
+      "text": "Patient",
+      "confidence": 96.345505,
+      "box": {
+        "x": 102,
+        "y": 239,
+        "width": 97,
+        "height": 17
+      },
+      "start": 59,
+      "end": 66,
+      "needsReview": false
+    },
+    {
+      "text": "name:",
+      "confidence": 96.415909,
+      "box": {
+        "x": 217,
+        "y": 243,
+        "width": 66,
+        "height": 13
+      },
+      "start": 67,
+      "end": 72,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.638863,
+      "box": {
+        "x": 507,
+        "y": 237,
+        "width": 150,
+        "height": 24
+      },
+      "start": 87,
+      "end": 98,
+      "needsReview": false
+    },
+    {
+      "text": "Age:",
+      "confidence": 95.833763,
+      "box": {
+        "x": 101,
+        "y": 279,
+        "width": 52,
+        "height": 22
+      },
+      "start": 99,
+      "end": 103,
+      "needsReview": false
+    },
+    {
+      "text": "56",
+      "confidence": 96.559372,
+      "box": {
+        "x": 174,
+        "y": 279,
+        "width": 25,
+        "height": 17
+      },
+      "start": 104,
+      "end": 106,
+      "needsReview": false
+    },
+    {
+      "text": "Prescriber:",
+      "confidence": 90.304672,
+      "box": {
+        "x": 102,
+        "y": 318,
+        "width": 152,
+        "height": 18
+      },
+      "start": 107,
+      "end": 118,
+      "needsReview": false
+    },
+    {
+      "text": "Dr.",
+      "confidence": 95.868599,
+      "box": {
+        "x": 275,
+        "y": 319,
+        "width": 36,
+        "height": 17
+      },
+      "start": 119,
+      "end": 122,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.240952,
+      "box": {
+        "x": 493,
+        "y": 317,
+        "width": 150,
+        "height": 24
+      },
+      "start": 137,
+      "end": 148,
+      "needsReview": false
+    },
+    {
+      "text": "Medication",
+      "confidence": 95.758217,
+      "box": {
+        "x": 102,
+        "y": 358,
+        "width": 140,
+        "height": 18
+      },
+      "start": 149,
+      "end": 159,
+      "needsReview": false
+    },
+    {
+      "text": "requested:",
+      "confidence": 92.685455,
+      "box": {
+        "x": 262,
+        "y": 358,
+        "width": 136,
+        "height": 23
+      },
+      "start": 160,
+      "end": 170,
+      "needsReview": false
+    },
+    {
+      "text": "Humira",
+      "confidence": 91.865204,
+      "box": {
+        "x": 418,
+        "y": 359,
+        "width": 83,
+        "height": 17
+      },
+      "start": 171,
+      "end": 177,
+      "needsReview": false
+    },
+    {
+      "text": "Dose",
+      "confidence": 96.770767,
+      "box": {
+        "x": 102,
+        "y": 399,
+        "width": 54,
+        "height": 17
+      },
+      "start": 178,
+      "end": 182,
+      "needsReview": false
+    },
+    {
+      "text": "and",
+      "confidence": 96.770767,
+      "box": {
+        "x": 174,
+        "y": 398,
+        "width": 39,
+        "height": 18
+      },
+      "start": 183,
+      "end": 186,
+      "needsReview": false
+    },
+    {
+      "text": "frequency:",
+      "confidence": 96.320847,
+      "box": {
+        "x": 231,
+        "y": 397,
+        "width": 138,
+        "height": 24
+      },
+      "start": 187,
+      "end": 197,
+      "needsReview": false
+    },
+    {
+      "text": "48mg",
+      "confidence": 12.570709,
+      "box": {
+        "x": 389,
+        "y": 399,
+        "width": 55,
+        "height": 22
+      },
+      "start": 198,
+      "end": 202,
+      "needsReview": true
+    },
+    {
+      "text": "Q14D",
+      "confidence": 92.147957,
+      "box": {
+        "x": 461,
+        "y": 399,
+        "width": 56,
+        "height": 20
+      },
+      "start": 203,
+      "end": 207,
+      "needsReview": false
+    },
+    {
+      "text": "Diagnosis",
+      "confidence": 96.36882,
+      "box": {
+        "x": 102,
+        "y": 439,
+        "width": 126,
+        "height": 22
+      },
+      "start": 208,
+      "end": 217,
+      "needsReview": false
+    },
+    {
+      "text": "for",
+      "confidence": 96.309563,
+      "box": {
+        "x": 246,
+        "y": 437,
+        "width": 39,
+        "height": 19
+      },
+      "start": 218,
+      "end": 221,
+      "needsReview": false
+    },
+    {
+      "text": "this",
+      "confidence": 96.058098,
+      "box": {
+        "x": 303,
+        "y": 438,
+        "width": 55,
+        "height": 18
+      },
+      "start": 222,
+      "end": 226,
+      "needsReview": false
+    },
+    {
+      "text": "request:",
+      "confidence": 96.058098,
+      "box": {
+        "x": 377,
+        "y": 440,
+        "width": 107,
+        "height": 21
+      },
+      "start": 227,
+      "end": 235,
+      "needsReview": false
+    },
+    {
+      "text": "severe",
+      "confidence": 96.444931,
+      "box": {
+        "x": 505,
+        "y": 443,
+        "width": 83,
+        "height": 13
+      },
+      "start": 236,
+      "end": 242,
+      "needsReview": false
+    },
+    {
+      "text": "plaque",
+      "confidence": 96.844902,
+      "box": {
+        "x": 606,
+        "y": 438,
+        "width": 83,
+        "height": 23
+      },
+      "start": 243,
+      "end": 249,
+      "needsReview": false
+    },
+    {
+      "text": "psoriasis",
+      "confidence": 93.27877,
+      "box": {
+        "x": 707,
+        "y": 439,
+        "width": 126,
+        "height": 22
+      },
+      "start": 250,
+      "end": 259,
+      "needsReview": false
+    },
+    {
+      "text": "(L40.0)",
+      "confidence": 63.697144,
+      "box": {
+        "x": 853,
+        "y": 437,
+        "width": 92,
+        "height": 24
+      },
+      "start": 260,
+      "end": 267,
+      "needsReview": true
+    },
+    {
+      "text": "CLINICAL",
+      "confidence": 96.26593,
+      "box": {
+        "x": 101,
+        "y": 519,
+        "width": 113,
+        "height": 17
+      },
+      "start": 268,
+      "end": 276,
+      "needsReview": false
+    },
+    {
+      "text": "NOTES",
+      "confidence": 95.65612,
+      "box": {
+        "x": 231,
+        "y": 519,
+        "width": 70,
+        "height": 17
+      },
+      "start": 277,
+      "end": 282,
+      "needsReview": false
+    },
+    {
+      "text": "Visit",
+      "confidence": 95.974266,
+      "box": {
+        "x": 101,
+        "y": 559,
+        "width": 69,
+        "height": 17
+      },
+      "start": 283,
+      "end": 288,
+      "needsReview": false
+    },
+    {
+      "text": "date:",
+      "confidence": 96.760315,
+      "box": {
+        "x": 188,
+        "y": 558,
+        "width": 66,
+        "height": 18
+      },
+      "start": 289,
+      "end": 294,
+      "needsReview": false
+    },
+    {
+      "text": "Assessment:",
+      "confidence": 95.554077,
+      "box": {
+        "x": 101,
+        "y": 599,
+        "width": 153,
+        "height": 17
+      },
+      "start": 305,
+      "end": 316,
+      "needsReview": false
+    },
+    {
+      "text": "severe",
+      "confidence": 96.457603,
+      "box": {
+        "x": 275,
+        "y": 603,
+        "width": 83,
+        "height": 13
+      },
+      "start": 317,
+      "end": 323,
+      "needsReview": false
+    },
+    {
+      "text": "plaque",
+      "confidence": 96.778839,
+      "box": {
+        "x": 376,
+        "y": 598,
+        "width": 83,
+        "height": 23
+      },
+      "start": 324,
+      "end": 330,
+      "needsReview": false
+    },
+    {
+      "text": "psoriasis",
+      "confidence": 93.081429,
+      "box": {
+        "x": 476,
+        "y": 599,
+        "width": 126,
+        "height": 22
+      },
+      "start": 331,
+      "end": 340,
+      "needsReview": false
+    },
+    {
+      "text": "(L40.0),",
+      "confidence": 76.515594,
+      "box": {
+        "x": 623,
+        "y": 597,
+        "width": 104,
+        "height": 24
+      },
+      "start": 341,
+      "end": 349,
+      "needsReview": true
+    },
+    {
+      "text": "active",
+      "confidence": 96.53447,
+      "box": {
+        "x": 750,
+        "y": 599,
+        "width": 83,
+        "height": 17
+      },
+      "start": 350,
+      "end": 356,
+      "needsReview": false
+    },
+    {
+      "text": "on",
+      "confidence": 96.084969,
+      "box": {
+        "x": 850,
+        "y": 603,
+        "width": 26,
+        "height": 13
+      },
+      "start": 357,
+      "end": 359,
+      "needsReview": false
+    },
+    {
+      "text": "prior",
+      "confidence": 94.726913,
+      "box": {
+        "x": 894,
+        "y": 599,
+        "width": 68,
+        "height": 22
+      },
+      "start": 360,
+      "end": 365,
+      "needsReview": false
+    },
+    {
+      "text": "therapy.",
+      "confidence": 96.311081,
+      "box": {
+        "x": 980,
+        "y": 598,
+        "width": 109,
+        "height": 23
+      },
+      "start": 366,
+      "end": 374,
+      "needsReview": false
+    },
+    {
+      "text": "LABS",
+      "confidence": 94.671791,
+      "box": {
+        "x": 102,
+        "y": 679,
+        "width": 54,
+        "height": 17
+      },
+      "start": 375,
+      "end": 379,
+      "needsReview": false
+    },
+    {
+      "text": "AND",
+      "confidence": 96.6772,
+      "box": {
+        "x": 173,
+        "y": 679,
+        "width": 41,
+        "height": 17
+      },
+      "start": 380,
+      "end": 383,
+      "needsReview": false
+    },
+    {
+      "text": "MEASUREMENTS",
+      "confidence": 96.439995,
+      "box": {
+        "x": 231,
+        "y": 679,
+        "width": 170,
+        "height": 17
+      },
+      "start": 384,
+      "end": 396,
+      "needsReview": false
+    },
+    {
+      "text": "Most",
+      "confidence": 96.65612,
+      "box": {
+        "x": 102,
+        "y": 719,
+        "width": 54,
+        "height": 17
+      },
+      "start": 397,
+      "end": 401,
+      "needsReview": false
+    },
+    {
+      "text": "recent",
+      "confidence": 96.373077,
+      "box": {
+        "x": 176,
+        "y": 720,
+        "width": 80,
+        "height": 16
+      },
+      "start": 402,
+      "end": 408,
+      "needsReview": false
+    },
+    {
+      "text": "BSA",
+      "confidence": 96.125854,
+      "box": {
+        "x": 275,
+        "y": 719,
+        "width": 40,
+        "height": 17
+      },
+      "start": 409,
+      "end": 412,
+      "needsReview": false
+    },
+    {
+      "text": "involvement:",
+      "confidence": 95.533043,
+      "box": {
+        "x": 333,
+        "y": 718,
+        "width": 166,
+        "height": 18
+      },
+      "start": 413,
+      "end": 425,
+      "needsReview": false
+    },
+    {
+      "text": "14",
+      "confidence": 89.099686,
+      "box": {
+        "x": 520,
+        "y": 719,
+        "width": 25,
+        "height": 17
+      },
+      "start": 426,
+      "end": 428,
+      "needsReview": false
+    },
+    {
+      "text": "%",
+      "confidence": 89.099686,
+      "box": {
+        "x": 561,
+        "y": 719,
+        "width": 14,
+        "height": 17
+      },
+      "start": 429,
+      "end": 430,
+      "needsReview": false
+    },
+    {
+      "text": "Date",
+      "confidence": 96.879578,
+      "box": {
+        "x": 102,
+        "y": 759,
+        "width": 54,
+        "height": 17
+      },
+      "start": 431,
+      "end": 435,
+      "needsReview": false
+    },
+    {
+      "text": "collected:",
+      "confidence": 95.964447,
+      "box": {
+        "x": 174,
+        "y": 758,
+        "width": 137,
+        "height": 18
+      },
+      "start": 436,
+      "end": 446,
+      "needsReview": false
+    },
+    {
+      "text": "MEDICATION",
+      "confidence": 95.602257,
+      "box": {
+        "x": 102,
+        "y": 839,
+        "width": 140,
+        "height": 17
+      },
+      "start": 456,
+      "end": 466,
+      "needsReview": false
+    },
+    {
+      "text": "HISTORY",
+      "confidence": 96.334114,
+      "box": {
+        "x": 260,
+        "y": 839,
+        "width": 98,
+        "height": 17
+      },
+      "start": 467,
+      "end": 474,
+      "needsReview": false
+    },
+    {
+      "text": "Current",
+      "confidence": 96.64006,
+      "box": {
+        "x": 101,
+        "y": 879,
+        "width": 98,
+        "height": 17
+      },
+      "start": 475,
+      "end": 482,
+      "needsReview": false
+    },
+    {
+      "text": "requested",
+      "confidence": 96.743469,
+      "box": {
+        "x": 219,
+        "y": 878,
+        "width": 124,
+        "height": 23
+      },
+      "start": 483,
+      "end": 492,
+      "needsReview": false
+    },
+    {
+      "text": "therapy:",
+      "confidence": 92.316605,
+      "box": {
+        "x": 361,
+        "y": 878,
+        "width": 109,
+        "height": 23
+      },
+      "start": 493,
+      "end": 501,
+      "needsReview": false
+    },
+    {
+      "text": "Humira",
+      "confidence": 92.316605,
+      "box": {
+        "x": 490,
+        "y": 879,
+        "width": 83,
+        "height": 17
+      },
+      "start": 502,
+      "end": 508,
+      "needsReview": false
+    },
+    {
+      "text": "86mg",
+      "confidence": 87.850044,
+      "box": {
+        "x": 592,
+        "y": 879,
+        "width": 53,
+        "height": 22
+      },
+      "start": 509,
+      "end": 513,
+      "needsReview": false
+    },
+    {
+      "text": "q2wk.",
+      "confidence": 81.80426,
+      "box": {
+        "x": 663,
+        "y": 878,
+        "width": 66,
+        "height": 23
+      },
+      "start": 514,
+      "end": 519,
+      "needsReview": false
+    },
+    {
+      "text": "Prior",
+      "confidence": 96.317253,
+      "box": {
+        "x": 102,
+        "y": 919,
+        "width": 68,
+        "height": 17
+      },
+      "start": 520,
+      "end": 525,
+      "needsReview": false
+    },
+    {
+      "text": "therapies",
+      "confidence": 96.317253,
+      "box": {
+        "x": 188,
+        "y": 918,
+        "width": 126,
+        "height": 23
+      },
+      "start": 526,
+      "end": 535,
+      "needsReview": false
+    },
+    {
+      "text": "tried:",
+      "confidence": 93.302132,
+      "box": {
+        "x": 332,
+        "y": 918,
+        "width": 80,
+        "height": 18
+      },
+      "start": 536,
+      "end": 542,
+      "needsReview": false
+    },
+    {
+      "text": "Trexall",
+      "confidence": 92.068893,
+      "box": {
+        "x": 432,
+        "y": 918,
+        "width": 99,
+        "height": 18
+      },
+      "start": 543,
+      "end": 550,
+      "needsReview": false
+    },
+    {
+      "text": "15mg",
+      "confidence": 96.368942,
+      "box": {
+        "x": 549,
+        "y": 919,
+        "width": 53,
+        "height": 22
+      },
+      "start": 551,
+      "end": 555,
+      "needsReview": false
+    },
+    {
+      "text": "once",
+      "confidence": 96.557343,
+      "box": {
+        "x": 620,
+        "y": 923,
+        "width": 55,
+        "height": 13
+      },
+      "start": 556,
+      "end": 560,
+      "needsReview": false
+    },
+    {
+      "text": "a",
+      "confidence": 96.799881,
+      "box": {
+        "x": 692,
+        "y": 923,
+        "width": 11,
+        "height": 13
+      },
+      "start": 561,
+      "end": 562,
+      "needsReview": false
+    },
+    {
+      "text": "week",
+      "confidence": 95.268265,
+      "box": {
+        "x": 720,
+        "y": 918,
+        "width": 55,
+        "height": 18
+      },
+      "start": 563,
+      "end": 567,
+      "needsReview": false
+    },
+    {
+      "text": "Trial",
+      "confidence": 96.554489,
+      "box": {
+        "x": 101,
+        "y": 958,
+        "width": 70,
+        "height": 18
+      },
+      "start": 568,
+      "end": 573,
+      "needsReview": false
+    },
+    {
+      "text": "dates:",
+      "confidence": 96.308121,
+      "box": {
+        "x": 188,
+        "y": 958,
+        "width": 80,
+        "height": 18
+      },
+      "start": 574,
+      "end": 580,
+      "needsReview": false
+    },
+    {
+      "text": "to",
+      "confidence": 96.574524,
+      "box": {
+        "x": 447,
+        "y": 960,
+        "width": 26,
+        "height": 16
+      },
+      "start": 590,
+      "end": 592,
+      "needsReview": false
+    },
+    {
+      "text": "Baseline",
+      "confidence": 96.785492,
+      "box": {
+        "x": 102,
+        "y": 998,
+        "width": 112,
+        "height": 18
+      },
+      "start": 602,
+      "end": 610,
+      "needsReview": false
+    },
+    {
+      "text": "before",
+      "confidence": 93.069931,
+      "box": {
+        "x": 232,
+        "y": 997,
+        "width": 83,
+        "height": 19
+      },
+      "start": 611,
+      "end": 617,
+      "needsReview": false
+    },
+    {
+      "text": "Trexall:",
+      "confidence": 92.396744,
+      "box": {
+        "x": 331,
+        "y": 998,
+        "width": 110,
+        "height": 18
+      },
+      "start": 618,
+      "end": 626,
+      "needsReview": false
+    },
+    {
+      "text": "BSA",
+      "confidence": 96.754959,
+      "box": {
+        "x": 462,
+        "y": 999,
+        "width": 40,
+        "height": 17
+      },
+      "start": 627,
+      "end": 630,
+      "needsReview": false
+    },
+    {
+      "text": "18",
+      "confidence": 92.616249,
+      "box": {
+        "x": 520,
+        "y": 999,
+        "width": 25,
+        "height": 17
+      },
+      "start": 631,
+      "end": 633,
+      "needsReview": false
+    },
+    {
+      "text": "%",
+      "confidence": 92.616249,
+      "box": {
+        "x": 561,
+        "y": 999,
+        "width": 14,
+        "height": 17
+      },
+      "start": 634,
+      "end": 635,
+      "needsReview": false
+    },
+    {
+      "text": "on",
+      "confidence": 96.775177,
+      "box": {
+        "x": 591,
+        "y": 1003,
+        "width": 26,
+        "height": 13
+      },
+      "start": 636,
+      "end": 638,
+      "needsReview": false
+    },
+    {
+      "text": "On",
+      "confidence": 93.198196,
+      "box": {
+        "x": 101,
+        "y": 1039,
+        "width": 26,
+        "height": 17
+      },
+      "start": 649,
+      "end": 651,
+      "needsReview": false
+    },
+    {
+      "text": "Trexall:",
+      "confidence": 92.329918,
+      "box": {
+        "x": 144,
+        "y": 1038,
+        "width": 110,
+        "height": 18
+      },
+      "start": 652,
+      "end": 660,
+      "needsReview": false
+    },
+    {
+      "text": "BSA",
+      "confidence": 96.117172,
+      "box": {
+        "x": 275,
+        "y": 1039,
+        "width": 40,
+        "height": 17
+      },
+      "start": 661,
+      "end": 664,
+      "needsReview": false
+    },
+    {
+      "text": "15",
+      "confidence": 93.130241,
+      "box": {
+        "x": 333,
+        "y": 1039,
+        "width": 25,
+        "height": 17
+      },
+      "start": 665,
+      "end": 667,
+      "needsReview": false
+    },
+    {
+      "text": "%",
+      "confidence": 91.002533,
+      "box": {
+        "x": 374,
+        "y": 1039,
+        "width": 14,
+        "height": 17
+      },
+      "start": 668,
+      "end": 669,
+      "needsReview": false
+    },
+    {
+      "text": "on",
+      "confidence": 96.855415,
+      "box": {
+        "x": 404,
+        "y": 1043,
+        "width": 25,
+        "height": 13
+      },
+      "start": 670,
+      "end": 672,
+      "needsReview": false
+    },
+    {
+      "text": "goal",
+      "confidence": 96.67482,
+      "box": {
+        "x": 620,
+        "y": 1038,
+        "width": 55,
+        "height": 23
+      },
+      "start": 683,
+      "end": 687,
+      "needsReview": false
+    },
+    {
+      "text": "3",
+      "confidence": 92.085396,
+      "box": {
+        "x": 692,
+        "y": 1039,
+        "width": 10,
+        "height": 17
+      },
+      "start": 688,
+      "end": 689,
+      "needsReview": false
+    },
+    {
+      "text": "%",
+      "confidence": 92.085396,
+      "box": {
+        "x": 720,
+        "y": 1039,
+        "width": 13,
+        "height": 17
+      },
+      "start": 690,
+      "end": 691,
+      "needsReview": false
+    },
+    {
+      "text": "or",
+      "confidence": 96.42617,
+      "box": {
+        "x": 749,
+        "y": 1043,
+        "width": 26,
+        "height": 13
+      },
+      "start": 692,
+      "end": 694,
+      "needsReview": false
+    },
+    {
+      "text": "less",
+      "confidence": 96.142174,
+      "box": {
+        "x": 794,
+        "y": 1038,
+        "width": 53,
+        "height": 18
+      },
+      "start": 695,
+      "end": 699,
+      "needsReview": false
+    },
+    {
+      "text": "not",
+      "confidence": 96.686317,
+      "box": {
+        "x": 865,
+        "y": 1040,
+        "width": 39,
+        "height": 16
+      },
+      "start": 700,
+      "end": 703,
+      "needsReview": false
+    },
+    {
+      "text": "met.",
+      "confidence": 96.600128,
+      "box": {
+        "x": 922,
+        "y": 1040,
+        "width": 51,
+        "height": 16
+      },
+      "start": 704,
+      "end": 708,
+      "needsReview": false
+    },
+    {
+      "text": "No",
+      "confidence": 96.941055,
+      "box": {
+        "x": 102,
+        "y": 1079,
+        "width": 25,
+        "height": 17
+      },
+      "start": 709,
+      "end": 711,
+      "needsReview": false
+    },
+    {
+      "text": "other",
+      "confidence": 96.343918,
+      "box": {
+        "x": 145,
+        "y": 1078,
+        "width": 68,
+        "height": 18
+      },
+      "start": 712,
+      "end": 717,
+      "needsReview": false
+    },
+    {
+      "text": "prior",
+      "confidence": 95.683609,
+      "box": {
+        "x": 232,
+        "y": 1079,
+        "width": 68,
+        "height": 22
+      },
+      "start": 718,
+      "end": 723,
+      "needsReview": false
+    },
+    {
+      "text": "therapy",
+      "confidence": 96.192932,
+      "box": {
+        "x": 318,
+        "y": 1078,
+        "width": 98,
+        "height": 23
+      },
+      "start": 724,
+      "end": 731,
+      "needsReview": false
+    },
+    {
+      "text": "records",
+      "confidence": 96.523293,
+      "box": {
+        "x": 435,
+        "y": 1078,
+        "width": 95,
+        "height": 18
+      },
+      "start": 732,
+      "end": 739,
+      "needsReview": false
+    },
+    {
+      "text": "supplied.",
+      "confidence": 96.14843,
+      "box": {
+        "x": 549,
+        "y": 1078,
+        "width": 122,
+        "height": 23
+      },
+      "start": 740,
+      "end": 749,
+      "needsReview": false
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "PRIOR AUTHORIZATION REQUEST FORM\nDate of request: 01/10/2026\nPatient name: Elva Calderby (fictional)\nAge: 56\nPrescriber: Dr. Rowan Vale (fictional)\nMedication requested: Humira\nDose and frequency: 48mg Q14D\nDiagnosis for this request: severe plaque psoriasis (L40.0)\nCLINICAL NOTES\nVisit date: 03/09/2026.\nAssessment: severe plaque psoriasis (L40.0), active on prior therapy.\nLABS AND MEASUREMENTS\nMost recent BSA involvement: 14 %\nDate collected: 08/09/2026\nMEDICATION HISTORY\nCurrent requested therapy: Humira 86mg q2wk.\nPrior therapies tried: Trexall 15mg once a week\nTrial dates: 01/04/2026 to 01/08/2026\nBaseline before Trexall: BSA 18 % on 11/03/2026.\nOn Trexall: BSA 15 % on 06/07/2026; goal 3 % or less not met.\nNo other prior therapy records supplied.\n",
+    "words": [
+      {
+        "text": "PRIOR",
+        "confidence": 95.353821,
+        "box": {
+          "x": 102,
+          "y": 159,
+          "width": 69,
+          "height": 17
+        },
+        "start": 0,
+        "end": 5,
+        "needsReview": false
+      },
+      {
+        "text": "AUTHORIZATION",
+        "confidence": 96.126389,
+        "box": {
+          "x": 187,
+          "y": 159,
+          "width": 185,
+          "height": 17
+        },
+        "start": 6,
+        "end": 19,
+        "needsReview": false
+      },
+      {
+        "text": "REQUEST",
+        "confidence": 95.14296,
+        "box": {
+          "x": 390,
+          "y": 159,
+          "width": 98,
+          "height": 20
+        },
+        "start": 20,
+        "end": 27,
+        "needsReview": false
+      },
+      {
+        "text": "FORM",
+        "confidence": 95.996147,
+        "box": {
+          "x": 505,
+          "y": 159,
+          "width": 54,
+          "height": 17
+        },
+        "start": 28,
+        "end": 32,
+        "needsReview": false
+      },
+      {
+        "text": "Date",
+        "confidence": 96.187141,
+        "box": {
+          "x": 102,
+          "y": 199,
+          "width": 54,
+          "height": 17
+        },
+        "start": 33,
+        "end": 37,
+        "needsReview": false
+      },
+      {
+        "text": "of",
+        "confidence": 95.670876,
+        "box": {
+          "x": 173,
+          "y": 197,
+          "width": 27,
+          "height": 19
+        },
+        "start": 38,
+        "end": 40,
+        "needsReview": false
+      },
+      {
+        "text": "request:",
+        "confidence": 96.674835,
+        "box": {
+          "x": 219,
+          "y": 200,
+          "width": 107,
+          "height": 21
+        },
+        "start": 41,
+        "end": 49,
+        "needsReview": false
+      },
+      {
+        "text": "01/10/2026",
+        "confidence": 42.443653,
+        "box": {
+          "x": 346,
+          "y": 199,
+          "width": 141,
+          "height": 19
+        },
+        "start": 50,
+        "end": 60,
+        "needsReview": true
+      },
+      {
+        "text": "Patient",
+        "confidence": 96.345505,
+        "box": {
+          "x": 102,
+          "y": 239,
+          "width": 97,
+          "height": 17
+        },
+        "start": 61,
+        "end": 68,
+        "needsReview": false
+      },
+      {
+        "text": "name:",
+        "confidence": 96.415909,
+        "box": {
+          "x": 217,
+          "y": 243,
+          "width": 66,
+          "height": 13
+        },
+        "start": 69,
+        "end": 74,
+        "needsReview": false
+      },
+      {
+        "text": "Elva",
+        "confidence": 93.300674,
+        "box": {
+          "x": 304,
+          "y": 238,
+          "width": 53,
+          "height": 18
+        },
+        "start": 75,
+        "end": 79,
+        "needsReview": false
+      },
+      {
+        "text": "Calderby",
+        "confidence": 91.800331,
+        "box": {
+          "x": 375,
+          "y": 238,
+          "width": 113,
+          "height": 23
+        },
+        "start": 80,
+        "end": 88,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.638863,
+        "box": {
+          "x": 507,
+          "y": 237,
+          "width": 150,
+          "height": 24
+        },
+        "start": 89,
+        "end": 100,
+        "needsReview": false
+      },
+      {
+        "text": "Age:",
+        "confidence": 95.833763,
+        "box": {
+          "x": 101,
+          "y": 279,
+          "width": 52,
+          "height": 22
+        },
+        "start": 101,
+        "end": 105,
+        "needsReview": false
+      },
+      {
+        "text": "56",
+        "confidence": 96.559372,
+        "box": {
+          "x": 174,
+          "y": 279,
+          "width": 25,
+          "height": 17
+        },
+        "start": 106,
+        "end": 108,
+        "needsReview": false
+      },
+      {
+        "text": "Prescriber:",
+        "confidence": 90.304672,
+        "box": {
+          "x": 102,
+          "y": 318,
+          "width": 152,
+          "height": 18
+        },
+        "start": 109,
+        "end": 120,
+        "needsReview": false
+      },
+      {
+        "text": "Dr.",
+        "confidence": 95.868599,
+        "box": {
+          "x": 275,
+          "y": 319,
+          "width": 36,
+          "height": 17
+        },
+        "start": 121,
+        "end": 124,
+        "needsReview": false
+      },
+      {
+        "text": "Rowan",
+        "confidence": 96.545891,
+        "box": {
+          "x": 332,
+          "y": 319,
+          "width": 69,
+          "height": 17
+        },
+        "start": 125,
+        "end": 130,
+        "needsReview": false
+      },
+      {
+        "text": "Vale",
+        "confidence": 96.595978,
+        "box": {
+          "x": 418,
+          "y": 318,
+          "width": 55,
+          "height": 18
+        },
+        "start": 131,
+        "end": 135,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.240952,
+        "box": {
+          "x": 493,
+          "y": 317,
+          "width": 150,
+          "height": 24
+        },
+        "start": 136,
+        "end": 147,
+        "needsReview": false
+      },
+      {
+        "text": "Medication",
+        "confidence": 95.758217,
+        "box": {
+          "x": 102,
+          "y": 358,
+          "width": 140,
+          "height": 18
+        },
+        "start": 148,
+        "end": 158,
+        "needsReview": false
+      },
+      {
+        "text": "requested:",
+        "confidence": 92.685455,
+        "box": {
+          "x": 262,
+          "y": 358,
+          "width": 136,
+          "height": 23
+        },
+        "start": 159,
+        "end": 169,
+        "needsReview": false
+      },
+      {
+        "text": "Humira",
+        "confidence": 91.865204,
+        "box": {
+          "x": 418,
+          "y": 359,
+          "width": 83,
+          "height": 17
+        },
+        "start": 170,
+        "end": 176,
+        "needsReview": false
+      },
+      {
+        "text": "Dose",
+        "confidence": 96.770767,
+        "box": {
+          "x": 102,
+          "y": 399,
+          "width": 54,
+          "height": 17
+        },
+        "start": 177,
+        "end": 181,
+        "needsReview": false
+      },
+      {
+        "text": "and",
+        "confidence": 96.770767,
+        "box": {
+          "x": 174,
+          "y": 398,
+          "width": 39,
+          "height": 18
+        },
+        "start": 182,
+        "end": 185,
+        "needsReview": false
+      },
+      {
+        "text": "frequency:",
+        "confidence": 96.320847,
+        "box": {
+          "x": 231,
+          "y": 397,
+          "width": 138,
+          "height": 24
+        },
+        "start": 186,
+        "end": 196,
+        "needsReview": false
+      },
+      {
+        "text": "48mg",
+        "confidence": 12.570709,
+        "box": {
+          "x": 389,
+          "y": 399,
+          "width": 55,
+          "height": 22
+        },
+        "start": 197,
+        "end": 201,
+        "needsReview": true
+      },
+      {
+        "text": "Q14D",
+        "confidence": 92.147957,
+        "box": {
+          "x": 461,
+          "y": 399,
+          "width": 56,
+          "height": 20
+        },
+        "start": 202,
+        "end": 206,
+        "needsReview": false
+      },
+      {
+        "text": "Diagnosis",
+        "confidence": 96.36882,
+        "box": {
+          "x": 102,
+          "y": 439,
+          "width": 126,
+          "height": 22
+        },
+        "start": 207,
+        "end": 216,
+        "needsReview": false
+      },
+      {
+        "text": "for",
+        "confidence": 96.309563,
+        "box": {
+          "x": 246,
+          "y": 437,
+          "width": 39,
+          "height": 19
+        },
+        "start": 217,
+        "end": 220,
+        "needsReview": false
+      },
+      {
+        "text": "this",
+        "confidence": 96.058098,
+        "box": {
+          "x": 303,
+          "y": 438,
+          "width": 55,
+          "height": 18
+        },
+        "start": 221,
+        "end": 225,
+        "needsReview": false
+      },
+      {
+        "text": "request:",
+        "confidence": 96.058098,
+        "box": {
+          "x": 377,
+          "y": 440,
+          "width": 107,
+          "height": 21
+        },
+        "start": 226,
+        "end": 234,
+        "needsReview": false
+      },
+      {
+        "text": "severe",
+        "confidence": 96.444931,
+        "box": {
+          "x": 505,
+          "y": 443,
+          "width": 83,
+          "height": 13
+        },
+        "start": 235,
+        "end": 241,
+        "needsReview": false
+      },
+      {
+        "text": "plaque",
+        "confidence": 96.844902,
+        "box": {
+          "x": 606,
+          "y": 438,
+          "width": 83,
+          "height": 23
+        },
+        "start": 242,
+        "end": 248,
+        "needsReview": false
+      },
+      {
+        "text": "psoriasis",
+        "confidence": 93.27877,
+        "box": {
+          "x": 707,
+          "y": 439,
+          "width": 126,
+          "height": 22
+        },
+        "start": 249,
+        "end": 258,
+        "needsReview": false
+      },
+      {
+        "text": "(L40.0)",
+        "confidence": 63.697144,
+        "box": {
+          "x": 853,
+          "y": 437,
+          "width": 92,
+          "height": 24
+        },
+        "start": 259,
+        "end": 266,
+        "needsReview": true
+      },
+      {
+        "text": "CLINICAL",
+        "confidence": 96.26593,
+        "box": {
+          "x": 101,
+          "y": 519,
+          "width": 113,
+          "height": 17
+        },
+        "start": 267,
+        "end": 275,
+        "needsReview": false
+      },
+      {
+        "text": "NOTES",
+        "confidence": 95.65612,
+        "box": {
+          "x": 231,
+          "y": 519,
+          "width": 70,
+          "height": 17
+        },
+        "start": 276,
+        "end": 281,
+        "needsReview": false
+      },
+      {
+        "text": "Visit",
+        "confidence": 95.974266,
+        "box": {
+          "x": 101,
+          "y": 559,
+          "width": 69,
+          "height": 17
+        },
+        "start": 282,
+        "end": 287,
+        "needsReview": false
+      },
+      {
+        "text": "date:",
+        "confidence": 96.760315,
+        "box": {
+          "x": 188,
+          "y": 558,
+          "width": 66,
+          "height": 18
+        },
+        "start": 288,
+        "end": 293,
+        "needsReview": false
+      },
+      {
+        "text": "03/09/2026.",
+        "confidence": 72.889709,
+        "box": {
+          "x": 274,
+          "y": 559,
+          "width": 152,
+          "height": 19
+        },
+        "start": 294,
+        "end": 305,
+        "needsReview": true
+      },
+      {
+        "text": "Assessment:",
+        "confidence": 95.554077,
+        "box": {
+          "x": 101,
+          "y": 599,
+          "width": 153,
+          "height": 17
+        },
+        "start": 306,
+        "end": 317,
+        "needsReview": false
+      },
+      {
+        "text": "severe",
+        "confidence": 96.457603,
+        "box": {
+          "x": 275,
+          "y": 603,
+          "width": 83,
+          "height": 13
+        },
+        "start": 318,
+        "end": 324,
+        "needsReview": false
+      },
+      {
+        "text": "plaque",
+        "confidence": 96.778839,
+        "box": {
+          "x": 376,
+          "y": 598,
+          "width": 83,
+          "height": 23
+        },
+        "start": 325,
+        "end": 331,
+        "needsReview": false
+      },
+      {
+        "text": "psoriasis",
+        "confidence": 93.081429,
+        "box": {
+          "x": 476,
+          "y": 599,
+          "width": 126,
+          "height": 22
+        },
+        "start": 332,
+        "end": 341,
+        "needsReview": false
+      },
+      {
+        "text": "(L40.0),",
+        "confidence": 76.515594,
+        "box": {
+          "x": 623,
+          "y": 597,
+          "width": 104,
+          "height": 24
+        },
+        "start": 342,
+        "end": 350,
+        "needsReview": true
+      },
+      {
+        "text": "active",
+        "confidence": 96.53447,
+        "box": {
+          "x": 750,
+          "y": 599,
+          "width": 83,
+          "height": 17
+        },
+        "start": 351,
+        "end": 357,
+        "needsReview": false
+      },
+      {
+        "text": "on",
+        "confidence": 96.084969,
+        "box": {
+          "x": 850,
+          "y": 603,
+          "width": 26,
+          "height": 13
+        },
+        "start": 358,
+        "end": 360,
+        "needsReview": false
+      },
+      {
+        "text": "prior",
+        "confidence": 94.726913,
+        "box": {
+          "x": 894,
+          "y": 599,
+          "width": 68,
+          "height": 22
+        },
+        "start": 361,
+        "end": 366,
+        "needsReview": false
+      },
+      {
+        "text": "therapy.",
+        "confidence": 96.311081,
+        "box": {
+          "x": 980,
+          "y": 598,
+          "width": 109,
+          "height": 23
+        },
+        "start": 367,
+        "end": 375,
+        "needsReview": false
+      },
+      {
+        "text": "LABS",
+        "confidence": 94.671791,
+        "box": {
+          "x": 102,
+          "y": 679,
+          "width": 54,
+          "height": 17
+        },
+        "start": 376,
+        "end": 380,
+        "needsReview": false
+      },
+      {
+        "text": "AND",
+        "confidence": 96.6772,
+        "box": {
+          "x": 173,
+          "y": 679,
+          "width": 41,
+          "height": 17
+        },
+        "start": 381,
+        "end": 384,
+        "needsReview": false
+      },
+      {
+        "text": "MEASUREMENTS",
+        "confidence": 96.439995,
+        "box": {
+          "x": 231,
+          "y": 679,
+          "width": 170,
+          "height": 17
+        },
+        "start": 385,
+        "end": 397,
+        "needsReview": false
+      },
+      {
+        "text": "Most",
+        "confidence": 96.65612,
+        "box": {
+          "x": 102,
+          "y": 719,
+          "width": 54,
+          "height": 17
+        },
+        "start": 398,
+        "end": 402,
+        "needsReview": false
+      },
+      {
+        "text": "recent",
+        "confidence": 96.373077,
+        "box": {
+          "x": 176,
+          "y": 720,
+          "width": 80,
+          "height": 16
+        },
+        "start": 403,
+        "end": 409,
+        "needsReview": false
+      },
+      {
+        "text": "BSA",
+        "confidence": 96.125854,
+        "box": {
+          "x": 275,
+          "y": 719,
+          "width": 40,
+          "height": 17
+        },
+        "start": 410,
+        "end": 413,
+        "needsReview": false
+      },
+      {
+        "text": "involvement:",
+        "confidence": 95.533043,
+        "box": {
+          "x": 333,
+          "y": 718,
+          "width": 166,
+          "height": 18
+        },
+        "start": 414,
+        "end": 426,
+        "needsReview": false
+      },
+      {
+        "text": "14",
+        "confidence": 89.099686,
+        "box": {
+          "x": 520,
+          "y": 719,
+          "width": 25,
+          "height": 17
+        },
+        "start": 427,
+        "end": 429,
+        "needsReview": false
+      },
+      {
+        "text": "%",
+        "confidence": 89.099686,
+        "box": {
+          "x": 561,
+          "y": 719,
+          "width": 14,
+          "height": 17
+        },
+        "start": 430,
+        "end": 431,
+        "needsReview": false
+      },
+      {
+        "text": "Date",
+        "confidence": 96.879578,
+        "box": {
+          "x": 102,
+          "y": 759,
+          "width": 54,
+          "height": 17
+        },
+        "start": 432,
+        "end": 436,
+        "needsReview": false
+      },
+      {
+        "text": "collected:",
+        "confidence": 95.964447,
+        "box": {
+          "x": 174,
+          "y": 758,
+          "width": 137,
+          "height": 18
+        },
+        "start": 437,
+        "end": 447,
+        "needsReview": false
+      },
+      {
+        "text": "08/09/2026",
+        "confidence": 35.705635,
+        "box": {
+          "x": 332,
+          "y": 759,
+          "width": 141,
+          "height": 19
+        },
+        "start": 448,
+        "end": 458,
+        "needsReview": true
+      },
+      {
+        "text": "MEDICATION",
+        "confidence": 95.602257,
+        "box": {
+          "x": 102,
+          "y": 839,
+          "width": 140,
+          "height": 17
+        },
+        "start": 459,
+        "end": 469,
+        "needsReview": false
+      },
+      {
+        "text": "HISTORY",
+        "confidence": 96.334114,
+        "box": {
+          "x": 260,
+          "y": 839,
+          "width": 98,
+          "height": 17
+        },
+        "start": 470,
+        "end": 477,
+        "needsReview": false
+      },
+      {
+        "text": "Current",
+        "confidence": 96.64006,
+        "box": {
+          "x": 101,
+          "y": 879,
+          "width": 98,
+          "height": 17
+        },
+        "start": 478,
+        "end": 485,
+        "needsReview": false
+      },
+      {
+        "text": "requested",
+        "confidence": 96.743469,
+        "box": {
+          "x": 219,
+          "y": 878,
+          "width": 124,
+          "height": 23
+        },
+        "start": 486,
+        "end": 495,
+        "needsReview": false
+      },
+      {
+        "text": "therapy:",
+        "confidence": 92.316605,
+        "box": {
+          "x": 361,
+          "y": 878,
+          "width": 109,
+          "height": 23
+        },
+        "start": 496,
+        "end": 504,
+        "needsReview": false
+      },
+      {
+        "text": "Humira",
+        "confidence": 92.316605,
+        "box": {
+          "x": 490,
+          "y": 879,
+          "width": 83,
+          "height": 17
+        },
+        "start": 505,
+        "end": 511,
+        "needsReview": false
+      },
+      {
+        "text": "86mg",
+        "confidence": 87.850044,
+        "box": {
+          "x": 592,
+          "y": 879,
+          "width": 53,
+          "height": 22
+        },
+        "start": 512,
+        "end": 516,
+        "needsReview": false
+      },
+      {
+        "text": "q2wk.",
+        "confidence": 81.80426,
+        "box": {
+          "x": 663,
+          "y": 878,
+          "width": 66,
+          "height": 23
+        },
+        "start": 517,
+        "end": 522,
+        "needsReview": false
+      },
+      {
+        "text": "Prior",
+        "confidence": 96.317253,
+        "box": {
+          "x": 102,
+          "y": 919,
+          "width": 68,
+          "height": 17
+        },
+        "start": 523,
+        "end": 528,
+        "needsReview": false
+      },
+      {
+        "text": "therapies",
+        "confidence": 96.317253,
+        "box": {
+          "x": 188,
+          "y": 918,
+          "width": 126,
+          "height": 23
+        },
+        "start": 529,
+        "end": 538,
+        "needsReview": false
+      },
+      {
+        "text": "tried:",
+        "confidence": 93.302132,
+        "box": {
+          "x": 332,
+          "y": 918,
+          "width": 80,
+          "height": 18
+        },
+        "start": 539,
+        "end": 545,
+        "needsReview": false
+      },
+      {
+        "text": "Trexall",
+        "confidence": 92.068893,
+        "box": {
+          "x": 432,
+          "y": 918,
+          "width": 99,
+          "height": 18
+        },
+        "start": 546,
+        "end": 553,
+        "needsReview": false
+      },
+      {
+        "text": "15mg",
+        "confidence": 96.368942,
+        "box": {
+          "x": 549,
+          "y": 919,
+          "width": 53,
+          "height": 22
+        },
+        "start": 554,
+        "end": 558,
+        "needsReview": false
+      },
+      {
+        "text": "once",
+        "confidence": 96.557343,
+        "box": {
+          "x": 620,
+          "y": 923,
+          "width": 55,
+          "height": 13
+        },
+        "start": 559,
+        "end": 563,
+        "needsReview": false
+      },
+      {
+        "text": "a",
+        "confidence": 96.799881,
+        "box": {
+          "x": 692,
+          "y": 923,
+          "width": 11,
+          "height": 13
+        },
+        "start": 564,
+        "end": 565,
+        "needsReview": false
+      },
+      {
+        "text": "week",
+        "confidence": 95.268265,
+        "box": {
+          "x": 720,
+          "y": 918,
+          "width": 55,
+          "height": 18
+        },
+        "start": 566,
+        "end": 570,
+        "needsReview": false
+      },
+      {
+        "text": "Trial",
+        "confidence": 96.554489,
+        "box": {
+          "x": 101,
+          "y": 958,
+          "width": 70,
+          "height": 18
+        },
+        "start": 571,
+        "end": 576,
+        "needsReview": false
+      },
+      {
+        "text": "dates:",
+        "confidence": 96.308121,
+        "box": {
+          "x": 188,
+          "y": 958,
+          "width": 80,
+          "height": 18
+        },
+        "start": 577,
+        "end": 583,
+        "needsReview": false
+      },
+      {
+        "text": "01/04/2026",
+        "confidence": 70.012268,
+        "box": {
+          "x": 289,
+          "y": 959,
+          "width": 140,
+          "height": 19
+        },
+        "start": 584,
+        "end": 594,
+        "needsReview": true
+      },
+      {
+        "text": "to",
+        "confidence": 96.574524,
+        "box": {
+          "x": 447,
+          "y": 960,
+          "width": 26,
+          "height": 16
+        },
+        "start": 595,
+        "end": 597,
+        "needsReview": false
+      },
+      {
+        "text": "01/08/2026",
+        "confidence": 74.93969,
+        "box": {
+          "x": 490,
+          "y": 959,
+          "width": 141,
+          "height": 19
+        },
+        "start": 598,
+        "end": 608,
+        "needsReview": true
+      },
+      {
+        "text": "Baseline",
+        "confidence": 96.785492,
+        "box": {
+          "x": 102,
+          "y": 998,
+          "width": 112,
+          "height": 18
+        },
+        "start": 609,
+        "end": 617,
+        "needsReview": false
+      },
+      {
+        "text": "before",
+        "confidence": 93.069931,
+        "box": {
+          "x": 232,
+          "y": 997,
+          "width": 83,
+          "height": 19
+        },
+        "start": 618,
+        "end": 624,
+        "needsReview": false
+      },
+      {
+        "text": "Trexall:",
+        "confidence": 92.396744,
+        "box": {
+          "x": 331,
+          "y": 998,
+          "width": 110,
+          "height": 18
+        },
+        "start": 625,
+        "end": 633,
+        "needsReview": false
+      },
+      {
+        "text": "BSA",
+        "confidence": 96.754959,
+        "box": {
+          "x": 462,
+          "y": 999,
+          "width": 40,
+          "height": 17
+        },
+        "start": 634,
+        "end": 637,
+        "needsReview": false
+      },
+      {
+        "text": "18",
+        "confidence": 92.616249,
+        "box": {
+          "x": 520,
+          "y": 999,
+          "width": 25,
+          "height": 17
+        },
+        "start": 638,
+        "end": 640,
+        "needsReview": false
+      },
+      {
+        "text": "%",
+        "confidence": 92.616249,
+        "box": {
+          "x": 561,
+          "y": 999,
+          "width": 14,
+          "height": 17
+        },
+        "start": 641,
+        "end": 642,
+        "needsReview": false
+      },
+      {
+        "text": "on",
+        "confidence": 96.775177,
+        "box": {
+          "x": 591,
+          "y": 1003,
+          "width": 26,
+          "height": 13
+        },
+        "start": 643,
+        "end": 645,
+        "needsReview": false
+      },
+      {
+        "text": "11/03/2026.",
+        "confidence": 92.727242,
+        "box": {
+          "x": 635,
+          "y": 999,
+          "width": 151,
+          "height": 19
+        },
+        "start": 646,
+        "end": 657,
+        "needsReview": false
+      },
+      {
+        "text": "On",
+        "confidence": 93.198196,
+        "box": {
+          "x": 101,
+          "y": 1039,
+          "width": 26,
+          "height": 17
+        },
+        "start": 658,
+        "end": 660,
+        "needsReview": false
+      },
+      {
+        "text": "Trexall:",
+        "confidence": 92.329918,
+        "box": {
+          "x": 144,
+          "y": 1038,
+          "width": 110,
+          "height": 18
+        },
+        "start": 661,
+        "end": 669,
+        "needsReview": false
+      },
+      {
+        "text": "BSA",
+        "confidence": 96.117172,
+        "box": {
+          "x": 275,
+          "y": 1039,
+          "width": 40,
+          "height": 17
+        },
+        "start": 670,
+        "end": 673,
+        "needsReview": false
+      },
+      {
+        "text": "15",
+        "confidence": 93.130241,
+        "box": {
+          "x": 333,
+          "y": 1039,
+          "width": 25,
+          "height": 17
+        },
+        "start": 674,
+        "end": 676,
+        "needsReview": false
+      },
+      {
+        "text": "%",
+        "confidence": 91.002533,
+        "box": {
+          "x": 374,
+          "y": 1039,
+          "width": 14,
+          "height": 17
+        },
+        "start": 677,
+        "end": 678,
+        "needsReview": false
+      },
+      {
+        "text": "on",
+        "confidence": 96.855415,
+        "box": {
+          "x": 404,
+          "y": 1043,
+          "width": 25,
+          "height": 13
+        },
+        "start": 679,
+        "end": 681,
+        "needsReview": false
+      },
+      {
+        "text": "06/07/2026;",
+        "confidence": 94.800713,
+        "box": {
+          "x": 447,
+          "y": 1039,
+          "width": 152,
+          "height": 21
+        },
+        "start": 682,
+        "end": 693,
+        "needsReview": false
+      },
+      {
+        "text": "goal",
+        "confidence": 96.67482,
+        "box": {
+          "x": 620,
+          "y": 1038,
+          "width": 55,
+          "height": 23
+        },
+        "start": 694,
+        "end": 698,
+        "needsReview": false
+      },
+      {
+        "text": "3",
+        "confidence": 92.085396,
+        "box": {
+          "x": 692,
+          "y": 1039,
+          "width": 10,
+          "height": 17
+        },
+        "start": 699,
+        "end": 700,
+        "needsReview": false
+      },
+      {
+        "text": "%",
+        "confidence": 92.085396,
+        "box": {
+          "x": 720,
+          "y": 1039,
+          "width": 13,
+          "height": 17
+        },
+        "start": 701,
+        "end": 702,
+        "needsReview": false
+      },
+      {
+        "text": "or",
+        "confidence": 96.42617,
+        "box": {
+          "x": 749,
+          "y": 1043,
+          "width": 26,
+          "height": 13
+        },
+        "start": 703,
+        "end": 705,
+        "needsReview": false
+      },
+      {
+        "text": "less",
+        "confidence": 96.142174,
+        "box": {
+          "x": 794,
+          "y": 1038,
+          "width": 53,
+          "height": 18
+        },
+        "start": 706,
+        "end": 710,
+        "needsReview": false
+      },
+      {
+        "text": "not",
+        "confidence": 96.686317,
+        "box": {
+          "x": 865,
+          "y": 1040,
+          "width": 39,
+          "height": 16
+        },
+        "start": 711,
+        "end": 714,
+        "needsReview": false
+      },
+      {
+        "text": "met.",
+        "confidence": 96.600128,
+        "box": {
+          "x": 922,
+          "y": 1040,
+          "width": 51,
+          "height": 16
+        },
+        "start": 715,
+        "end": 719,
+        "needsReview": false
+      },
+      {
+        "text": "No",
+        "confidence": 96.941055,
+        "box": {
+          "x": 102,
+          "y": 1079,
+          "width": 25,
+          "height": 17
+        },
+        "start": 720,
+        "end": 722,
+        "needsReview": false
+      },
+      {
+        "text": "other",
+        "confidence": 96.343918,
+        "box": {
+          "x": 145,
+          "y": 1078,
+          "width": 68,
+          "height": 18
+        },
+        "start": 723,
+        "end": 728,
+        "needsReview": false
+      },
+      {
+        "text": "prior",
+        "confidence": 95.683609,
+        "box": {
+          "x": 232,
+          "y": 1079,
+          "width": 68,
+          "height": 22
+        },
+        "start": 729,
+        "end": 734,
+        "needsReview": false
+      },
+      {
+        "text": "therapy",
+        "confidence": 96.192932,
+        "box": {
+          "x": 318,
+          "y": 1078,
+          "width": 98,
+          "height": 23
+        },
+        "start": 735,
+        "end": 742,
+        "needsReview": false
+      },
+      {
+        "text": "records",
+        "confidence": 96.523293,
+        "box": {
+          "x": 435,
+          "y": 1078,
+          "width": 95,
+          "height": 18
+        },
+        "start": 743,
+        "end": 750,
+        "needsReview": false
+      },
+      {
+        "text": "supplied.",
+        "confidence": 96.14843,
+        "box": {
+          "x": 549,
+          "y": 1078,
+          "width": 122,
+          "height": 23
+        },
+        "start": 751,
+        "end": 760,
+        "needsReview": false
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM",
+    "orientation": {
+      "pageRotation": 90,
+      "scores": {
+        "90": 416.132847,
+        "270": 7339.264882
+      }
+    },
+    "deskewDegrees": 0,
+    "readImage": "packet-053.read.png",
+    "width": 1700,
+    "height": 2200
+  },
+  "scores": {
+    "entities": {
+      "tp": 15,
+      "predicted": 19,
+      "gold": 17,
+      "exactQuote": 15
+    },
+    "criteria": {
+      "correct": 5,
+      "total": 5
+    },
+    "cer": 0.002631578947368421,
+    "edits": 2,
+    "chars": 760,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [
+    "Extraction: 15 of 17 draft values found, 4 extra",
+    "2 OCR character edits"
+  ],
+  "latency": {
+    "renderAndOcrMs": 4662.775250000006,
+    "serviceMs": 21.909209000000374
+  }
+}

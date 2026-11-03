@@ -1,0 +1,105 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-02",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/holdout/packets/holdout-02.md",
+  "group": "fax-noise",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Paragraph referral; duration is supplied but paired trial values are absent.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 106,
+          "end": 163,
+          "text": "Jalen is 39 years old and returns for glucose management."
+        }
+      ],
+      "reason": "The patient is an adult.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 164,
+          "end": 213,
+          "text": "Please authorize semaglutide for type 2 diabetes."
+        }
+      ],
+      "reason": "The requested indication is explicit.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 17,
+          "end": 42,
+          "text": "Written September 22 2026"
+        },
+        {
+          "start": 471,
+          "end": 520,
+          "text": "Current HbA1c is 7.8%, sampled September 15 2026."
+        }
+      ],
+      "reason": "A dated A1c was obtained seven days before the request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 312,
+          "end": 361,
+          "text": "Metformin 500mg b.i.d. was taken for four months."
+        },
+        {
+          "start": 362,
+          "end": 404,
+          "text": "It was stopped for an inadequate response."
+        },
+        {
+          "start": 405,
+          "end": 470,
+          "text": "No pretreatment or on-treatment A1c was supplied for that course."
+        }
+      ],
+      "reason": "The trial has a dose and duration but lacks the required baseline and follow-up values.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 214,
+          "end": 261,
+          "text": "The prescription is 0.5 mg subQ once each week."
+        }
+      ],
+      "reason": "The requested weekly dose matches.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

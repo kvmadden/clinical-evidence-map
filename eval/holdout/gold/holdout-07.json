@@ -1,0 +1,100 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-07",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/holdout/packets/holdout-07.md",
+  "group": "orientation",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Day above 12 establishes month-first dates; active list conflicts with requested dose.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 121,
+          "end": 134,
+          "text": "Age today: 47"
+        }
+      ],
+      "reason": "The age is adult.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 135,
+          "end": 172,
+          "text": "Requested indication: type 2 diabetes"
+        }
+      ],
+      "reason": "Type 2 diabetes is the requested indication.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 96,
+          "end": 120,
+          "text": "Request date: 10/03/2026"
+        },
+        {
+          "start": 379,
+          "end": 406,
+          "text": "HbA1c 8.3% drawn 09/18/2026"
+        }
+      ],
+      "reason": "The day 18 establishes month-first order; the result is 15 days before the request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 312,
+          "end": 378,
+          "text": "Metformin intolerance: persistent diarrhea despite dose reduction."
+        }
+      ],
+      "reason": "Metformin intolerance is documented with a reason.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 201,
+          "end": 242,
+          "text": "Requested sig: 0.5 mg SC every seven days"
+        },
+        {
+          "start": 271,
+          "end": 311,
+          "text": "Semaglutide 1mg SC weekly, marked active"
+        }
+      ],
+      "reason": "The order and active medication list disagree.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

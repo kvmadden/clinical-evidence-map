@@ -1,12 +1,46 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-007",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "glp1-t2d",
   "source_file": "eval/packets/packet-007.md",
+  "group": "rotation-7deg",
+  "tags": [
+    "page:letter",
+    "date:iso",
+    "date-reading:none",
+    "drug-name:generic",
+    "dose-format:plain"
+  ],
+  "date_reading": {
+    "status": "none",
+    "order": null
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-10-01",
+      "source_span": {
+        "start": 27,
+        "end": 52,
+        "text": "Request date: 2026-10-01."
+      },
+      "date": {
+        "written": "2026-10-01",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
+    },
     {
       "type": "patient_name",
       "value": "Veda Brookvale",
@@ -15,7 +49,14 @@
         "end": 89,
         "text": "Patient: Veda Brookvale (fictional)."
       },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "age",
@@ -25,17 +66,14 @@
         "end": 104,
         "text": "Age: 39 years."
       },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
-      },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "provider",
@@ -45,7 +83,14 @@
         "end": 157,
         "text": "From: Dr. Rowan Vale, fictional requesting provider."
       },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "requested_medication",
@@ -55,7 +100,14 @@
         "end": 193,
         "text": "Request: semaglutide 0.5 mg weekly."
       },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "requested_dose",
@@ -65,15 +117,35 @@
         "end": 193,
         "text": "Request: semaglutide 0.5 mg weekly."
       },
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
+    },
+    {
+      "type": "indication",
+      "value": "type 2 diabetes mellitus",
+      "source_span": {
+        "start": 194,
+        "end": 248,
+        "text": "Indication for this request: Type 2 diabetes mellitus."
+      },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Type 2 diabetes mellitus",
+      "type": "assessment",
+      "value": {
+        "condition": "type 2 diabetes mellitus",
+        "certainty": "confirmed"
+      },
       "source_span": {
-        "start": 299,
-        "end": 335,
-        "text": "Diagnosis: Type 2 diabetes mellitus."
+        "start": 289,
+        "end": 355,
+        "text": "Assessment: Type 2 diabetes mellitus, above goal on prior therapy."
       },
       "reviewed": false
     },
@@ -85,19 +157,85 @@
         "unit": "%"
       },
       "source_span": {
-        "start": 421,
-        "end": 454,
+        "start": 441,
+        "end": 474,
         "text": "A1c: 8.6 %; collected 2026-09-15."
       },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "measurement_date",
       "value": "2026-09-15",
       "source_span": {
-        "start": 421,
-        "end": 454,
+        "start": 441,
+        "end": 474,
         "text": "A1c: 8.6 %; collected 2026-09-15."
+      },
+      "date": {
+        "written": "2026-09-15",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
+    },
+    {
+      "type": "medication_list_dose",
+      "value": "0.5 mg weekly",
+      "source_span": {
+        "start": 495,
+        "end": 548,
+        "text": "Current requested therapy: semaglutide 0.5 mg weekly."
+      },
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2026-08-01",
+      "source_span": {
+        "start": 595,
+        "end": 647,
+        "text": "Trial dates: started 2026-08-01; stopped 2026-08-15."
+      },
+      "date": {
+        "written": "2026-08-01",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-08-15",
+      "source_span": {
+        "start": 595,
+        "end": 647,
+        "text": "Trial dates: started 2026-08-01; stopped 2026-08-15."
+      },
+      "date": {
+        "written": "2026-08-15",
+        "format": "iso",
+        "ambiguous": false
       },
       "reviewed": false
     },
@@ -105,9 +243,9 @@
       "type": "prior_medication",
       "value": "metformin",
       "source_span": {
-        "start": 529,
-        "end": 646,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "start": 549,
+        "end": 594,
+        "text": "Prior therapy: metformin 1000 mg twice daily."
       },
       "reviewed": false
     },
@@ -115,49 +253,29 @@
       "type": "prior_dose",
       "value": "1000 mg twice daily",
       "source_span": {
-        "start": 529,
-        "end": 646,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_start_date",
-      "value": "2026-04-01",
-      "source_span": {
-        "start": 529,
-        "end": 646,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_stop_date",
-      "value": "2026-08-01",
-      "source_span": {
-        "start": 529,
-        "end": 646,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "start": 549,
+        "end": 594,
+        "text": "Prior therapy: metformin 1000 mg twice daily."
       },
       "reviewed": false
     },
     {
       "type": "prior_outcome",
-      "value": "inadequate response",
+      "value": "intolerance",
       "source_span": {
-        "start": 529,
-        "end": 646,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "start": 648,
+        "end": 691,
+        "text": "Stopped for persistent nausea and diarrhea."
       },
       "reviewed": false
     },
     {
-      "type": "medication_list_dose",
-      "value": "0.5 mg weekly",
+      "type": "prior_reason",
+      "value": "persistent nausea and diarrhea",
       "source_span": {
-        "start": 475,
-        "end": 528,
-        "text": "Current requested therapy: semaglutide 0.5 mg weekly."
+        "start": 648,
+        "end": 691,
+        "text": "Stopped for persistent nausea and diarrhea."
       },
       "reviewed": false
     }
@@ -173,29 +291,51 @@
           "text": "Age: 39 years."
         }
       ],
-      "reason": "Documented in the supplied source.",
-      "reviewed": false
+      "reason": "Age 39 is documented.",
+      "scenario": "supported",
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": true,
+        "basis": "Rule text and quoted evidence unchanged since this review."
+      }
     },
     {
       "criterion_id": "diagnosis",
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 299,
-          "end": 335,
-          "text": "Diagnosis: Type 2 diabetes mellitus."
+          "start": 194,
+          "end": 248,
+          "text": "Indication for this request: Type 2 diabetes mellitus."
+        },
+        {
+          "start": 289,
+          "end": 355,
+          "text": "Assessment: Type 2 diabetes mellitus, above goal on prior therapy."
         }
       ],
-      "reason": "Documented in the supplied source.",
-      "reviewed": false
+      "reason": "The request names type 2 diabetes mellitus as its reason.",
+      "scenario": "supported",
+      "reviewed": false,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": false,
+        "needs_rereview": true,
+        "basis": "Not carried over because the rule text changed and the packet text for this criterion changed."
+      }
     },
     {
       "criterion_id": "lab",
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 421,
-          "end": 454,
+          "start": 441,
+          "end": 474,
           "text": "A1c: 8.6 %; collected 2026-09-15."
         },
         {
@@ -204,21 +344,48 @@
           "text": "Request date: 2026-10-01."
         }
       ],
-      "reason": "Documented in the supplied source.",
-      "reviewed": false
+      "reason": "A1c 8.6 % is 16 days before the request.",
+      "scenario": "supported",
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": true,
+        "basis": "Rule text and quoted evidence unchanged since this review."
+      }
     },
     {
       "criterion_id": "prior",
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 529,
-          "end": 646,
-          "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+          "start": 549,
+          "end": 594,
+          "text": "Prior therapy: metformin 1000 mg twice daily."
+        },
+        {
+          "start": 595,
+          "end": 647,
+          "text": "Trial dates: started 2026-08-01; stopped 2026-08-15."
+        },
+        {
+          "start": 648,
+          "end": 691,
+          "text": "Stopped for persistent nausea and diarrhea."
         }
       ],
-      "reason": "The documented trial runs 122 days, meeting the fictional 90-day requirement.",
-      "reviewed": false
+      "reason": "Metformin intolerance is documented with its reason: persistent nausea and diarrhea.",
+      "scenario": "intolerance",
+      "reviewed": false,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": false,
+        "needs_rereview": true,
+        "basis": "Not carried over because the rule text changed and the packet text for this criterion changed."
+      }
     },
     {
       "criterion_id": "dose",
@@ -230,13 +397,21 @@
           "text": "Request: semaglutide 0.5 mg weekly."
         }
       ],
-      "reason": "Documented in the supplied source.",
-      "reviewed": false
+      "reason": "The requested semaglutide dose 0.5 mg weekly matches the fictional rule.",
+      "scenario": "supported",
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": true,
+        "basis": "Rule text and quoted evidence unchanged since this review."
+      }
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

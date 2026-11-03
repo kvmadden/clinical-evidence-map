@@ -1,0 +1,3846 @@
+{
+  "packet_id": "packet-056",
+  "criteria_id": "biologic-psoriasis",
+  "group": "mixed-annotations",
+  "tags": [
+    "page:letter",
+    "date:iso",
+    "date-reading:none",
+    "drug-name:generic",
+    "dose-format:plain",
+    "ai-drawn-handwriting"
+  ],
+  "render": {
+    "font": "dejavu-sans",
+    "effects": [
+      "speckle-heavy",
+      "streaks"
+    ],
+    "rotate": 0,
+    "handwriting": [
+      {
+        "line": 20,
+        "image": "hw-notes-a",
+        "kind": "note",
+        "box": [
+          47,
+          764,
+          843,
+          855
+        ],
+        "lines": 1
+      }
+    ],
+    "annotations": [
+      {
+        "kind": "circle",
+        "line": 1,
+        "from": 12,
+        "to": 22
+      },
+      {
+        "kind": "arrow",
+        "line": 18
+      },
+      {
+        "kind": "underline",
+        "line": 3,
+        "from": 0,
+        "to": 7
+      }
+    ]
+  },
+  "groupLabel": "Printed page with AI-drawn notes, circles and arrows",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "REQUESTING PROVIDER LETTER\nLetter date [date]].\nPatient: [name] [name] (fictional).\nAge: 59\nFrom: Dr. [name] [name], fictional requesting provider.\nRequest: adalimumab 40 mg every 2 weeks.\nReason for request: rash, rule out plaque psoriasis.\nCLINICAL NOTES\nVisit date: [date-a].\nAssessment: rash, rule out plaque psoriasis.\nPast medical history: hypertension, seasonal allergies.\nThe patient reports ongoing symptoms despite prior treatment.\nLABS AND MEASUREMENTS\nBody surface area = 14 % on [date-b]\nMEDICATION HISTORY _—\nCurrent requested therapy: adalimumab 40 mg every other week.\nPrevious treatment: methotrexate 15 mg weekly, [date-c] - [date-d].\nstopped MTX — ALT 3x ULN\nNo other prior therapy records supplied.\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 4
+      },
+      {
+        "tier": "pattern",
+        "type": "date",
+        "count": 1
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points",
+    "dateHandling": "shifted",
+    "dates": [
+      {
+        "token": "[date-a]",
+        "readings": [
+          "2133-04-19"
+        ],
+        "order": "ymd"
+      },
+      {
+        "token": "[date-b]",
+        "readings": [
+          "2133-04-14"
+        ],
+        "order": "ymd"
+      },
+      {
+        "token": "[date-c]",
+        "readings": [
+          "2133-02-28"
+        ],
+        "order": "ymd"
+      },
+      {
+        "token": "[date-d]",
+        "readings": [
+          "2133-03-14"
+        ],
+        "order": "ymd"
+      }
+    ]
+  },
+  "dateReading": {
+    "status": "none",
+    "order": null
+  },
+  "readerCoverage": {
+    "lines": 20,
+    "pages": 1,
+    "blockers": {
+      "adult": [],
+      "diagnosis": [],
+      "lab": [],
+      "prior": [],
+      "dose": []
+    },
+    "mentions": [
+      {
+        "criterion": "prior",
+        "line": 18,
+        "kind": "no-more-records"
+      }
+    ],
+    "complete": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "age",
+      "value": 59,
+      "source_span": {
+        "start": 84,
+        "end": 91,
+        "text": "Age: 59"
+      },
+      "value_span": {
+        "start": 89,
+        "end": 91
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 278,
+          "width": 52,
+          "height": 23
+        },
+        {
+          "x": 164,
+          "y": 278,
+          "width": 27,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "requested_medication",
+      "value": "adalimumab",
+      "source_span": {
+        "start": 148,
+        "end": 188,
+        "text": "Request: adalimumab 40 mg every 2 weeks."
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "327361",
+        "display": "adalimumab"
+      },
+      "value_span": {
+        "start": 157,
+        "end": 167
+      },
+      "match": {
+        "kind": "exact",
+        "written": "adalimumab",
+        "confidence": 1
+      },
+      "attrs": {
+        "product": "adalimumab",
+        "source": "Request"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 358,
+          "width": 101,
+          "height": 23
+        },
+        {
+          "x": 215,
+          "y": 358,
+          "width": 147,
+          "height": 18
+        },
+        {
+          "x": 372,
+          "y": 358,
+          "width": 28,
+          "height": 18
+        },
+        {
+          "x": 411,
+          "y": 363,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 456,
+          "y": 363,
+          "width": 66,
+          "height": 18
+        },
+        {
+          "x": 532,
+          "y": 358,
+          "width": 12,
+          "height": 18
+        },
+        {
+          "x": 555,
+          "y": 358,
+          "width": 79,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "requested_dose",
+      "value": "40 mg every 2 weeks",
+      "source_span": {
+        "start": 148,
+        "end": 188,
+        "text": "Request: adalimumab 40 mg every 2 weeks."
+      },
+      "value_span": {
+        "start": 168,
+        "end": 187
+      },
+      "attrs": {
+        "drug": "adalimumab",
+        "amount": 40,
+        "source": "Request"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 358,
+          "width": 101,
+          "height": 23
+        },
+        {
+          "x": 215,
+          "y": 358,
+          "width": 147,
+          "height": 18
+        },
+        {
+          "x": 372,
+          "y": 358,
+          "width": 28,
+          "height": 18
+        },
+        {
+          "x": 411,
+          "y": 363,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 456,
+          "y": 363,
+          "width": 66,
+          "height": 18
+        },
+        {
+          "x": 532,
+          "y": 358,
+          "width": 12,
+          "height": 18
+        },
+        {
+          "x": 555,
+          "y": 358,
+          "width": 79,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "indication",
+      "value": {
+        "condition": "plaque psoriasis",
+        "certainty": "unconfirmed"
+      },
+      "source_span": {
+        "start": 189,
+        "end": 241,
+        "text": "Reason for request: rash, rule out plaque psoriasis."
+      },
+      "value_span": {
+        "start": 224,
+        "end": 240
+      },
+      "attrs": {
+        "family": "psoriasis"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 398,
+          "width": 84,
+          "height": 18
+        },
+        {
+          "x": 196,
+          "y": 398,
+          "width": 32,
+          "height": 18
+        },
+        {
+          "x": 238,
+          "y": 399,
+          "width": 94,
+          "height": 22
+        },
+        {
+          "x": 345,
+          "y": 398,
+          "width": 55,
+          "height": 21
+        },
+        {
+          "x": 412,
+          "y": 398,
+          "width": 43,
+          "height": 18
+        },
+        {
+          "x": 466,
+          "y": 399,
+          "width": 37,
+          "height": 17
+        },
+        {
+          "x": 513,
+          "y": 398,
+          "width": 79,
+          "height": 23
+        },
+        {
+          "x": 603,
+          "y": 398,
+          "width": 108,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "assessment",
+      "value": {
+        "condition": "plaque psoriasis",
+        "certainty": "unconfirmed"
+      },
+      "source_span": {
+        "start": 279,
+        "end": 323,
+        "text": "Assessment: rash, rule out plaque psoriasis."
+      },
+      "value_span": {
+        "start": 306,
+        "end": 322
+      },
+      "attrs": {
+        "family": "psoriasis"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 558,
+          "width": 149,
+          "height": 18
+        },
+        {
+          "x": 262,
+          "y": 558,
+          "width": 55,
+          "height": 21
+        },
+        {
+          "x": 329,
+          "y": 558,
+          "width": 44,
+          "height": 18
+        },
+        {
+          "x": 383,
+          "y": 559,
+          "width": 37,
+          "height": 17
+        },
+        {
+          "x": 430,
+          "y": 558,
+          "width": 79,
+          "height": 23
+        },
+        {
+          "x": 520,
+          "y": 558,
+          "width": 108,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "history_condition",
+      "value": "hypertension",
+      "source_span": {
+        "start": 324,
+        "end": 379,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "value_span": {
+        "start": 346,
+        "end": 358
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 598,
+          "width": 48,
+          "height": 18
+        },
+        {
+          "x": 160,
+          "y": 598,
+          "width": 90,
+          "height": 18
+        },
+        {
+          "x": 262,
+          "y": 598,
+          "width": 84,
+          "height": 23
+        },
+        {
+          "x": 359,
+          "y": 598,
+          "width": 161,
+          "height": 23
+        },
+        {
+          "x": 531,
+          "y": 598,
+          "width": 102,
+          "height": 18
+        },
+        {
+          "x": 644,
+          "y": 598,
+          "width": 105,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "history_condition",
+      "value": "seasonal allergies",
+      "source_span": {
+        "start": 324,
+        "end": 379,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "value_span": {
+        "start": 360,
+        "end": 378
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 598,
+          "width": 48,
+          "height": 18
+        },
+        {
+          "x": 160,
+          "y": 598,
+          "width": 90,
+          "height": 18
+        },
+        {
+          "x": 262,
+          "y": 598,
+          "width": 84,
+          "height": 23
+        },
+        {
+          "x": 359,
+          "y": 598,
+          "width": 161,
+          "height": 23
+        },
+        {
+          "x": 531,
+          "y": 598,
+          "width": 102,
+          "height": 18
+        },
+        {
+          "x": 644,
+          "y": 598,
+          "width": 105,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "measurement",
+      "value": {
+        "name": "BSA",
+        "value": 14,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 464,
+        "end": 500,
+        "text": "Body surface area = 14 % on [date-b]"
+      },
+      "value_span": {
+        "start": 484,
+        "end": 486
+      },
+      "name_span": {
+        "start": 464,
+        "end": 481
+      },
+      "reviewed": false,
+      "related": [
+        "e9"
+      ],
+      "boxes": [
+        {
+          "x": 102,
+          "y": 758,
+          "width": 58,
+          "height": 23
+        },
+        {
+          "x": 169,
+          "y": 758,
+          "width": 87,
+          "height": 18
+        },
+        {
+          "x": 266,
+          "y": 763,
+          "width": 50,
+          "height": 13
+        },
+        {
+          "x": 328,
+          "y": 765,
+          "width": 15,
+          "height": 7
+        },
+        {
+          "x": 356,
+          "y": 758,
+          "width": 27,
+          "height": 18
+        },
+        {
+          "x": 393,
+          "y": 758,
+          "width": 20,
+          "height": 18
+        },
+        {
+          "x": 423,
+          "y": 763,
+          "width": 27,
+          "height": 13
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "measurement_date",
+      "value": "2133-04-14",
+      "source_span": {
+        "start": 464,
+        "end": 500,
+        "text": "Body surface area = 14 % on [date-b]"
+      },
+      "value_span": {
+        "start": 492,
+        "end": 500
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 758,
+          "width": 58,
+          "height": 23
+        },
+        {
+          "x": 169,
+          "y": 758,
+          "width": 87,
+          "height": 18
+        },
+        {
+          "x": 266,
+          "y": 763,
+          "width": 50,
+          "height": 13
+        },
+        {
+          "x": 328,
+          "y": 765,
+          "width": 15,
+          "height": 7
+        },
+        {
+          "x": 356,
+          "y": 758,
+          "width": 27,
+          "height": 18
+        },
+        {
+          "x": 393,
+          "y": 758,
+          "width": 20,
+          "height": 18
+        },
+        {
+          "x": 423,
+          "y": 763,
+          "width": 27,
+          "height": 13
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "medication_list_dose",
+      "value": "40 mg every 2 weeks",
+      "source_span": {
+        "start": 523,
+        "end": 584,
+        "text": "Current requested therapy: adalimumab 40 mg every other week."
+      },
+      "value_span": {
+        "start": 561,
+        "end": 583
+      },
+      "attrs": {
+        "drug": "adalimumab",
+        "amount": 40
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 878,
+          "width": 89,
+          "height": 18
+        },
+        {
+          "x": 200,
+          "y": 878,
+          "width": 117,
+          "height": 23
+        },
+        {
+          "x": 327,
+          "y": 878,
+          "width": 97,
+          "height": 23
+        },
+        {
+          "x": 435,
+          "y": 878,
+          "width": 148,
+          "height": 18
+        },
+        {
+          "x": 593,
+          "y": 878,
+          "width": 28,
+          "height": 18
+        },
+        {
+          "x": 632,
+          "y": 883,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 677,
+          "y": 883,
+          "width": 66,
+          "height": 18
+        },
+        {
+          "x": 753,
+          "y": 878,
+          "width": 62,
+          "height": 18
+        },
+        {
+          "x": 824,
+          "y": 878,
+          "width": 67,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "prior_medication",
+      "value": "methotrexate",
+      "source_span": {
+        "start": 585,
+        "end": 652,
+        "text": "Previous treatment: methotrexate 15 mg weekly, [date-c] - [date-d]."
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "6851",
+        "display": "methotrexate"
+      },
+      "value_span": {
+        "start": 605,
+        "end": 617
+      },
+      "episode": 1,
+      "match": {
+        "kind": "exact",
+        "written": "methotrexate",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "antimetabolite"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 918,
+          "width": 98,
+          "height": 18
+        },
+        {
+          "x": 210,
+          "y": 919,
+          "width": 125,
+          "height": 17
+        },
+        {
+          "x": 347,
+          "y": 918,
+          "width": 161,
+          "height": 18
+        },
+        {
+          "x": 519,
+          "y": 918,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 557,
+          "y": 923,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 602,
+          "y": 918,
+          "width": 88,
+          "height": 23
+        },
+        {
+          "x": 848,
+          "y": 928,
+          "width": 7,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "id": "e12",
+      "type": "prior_dose",
+      "value": "15 mg weekly",
+      "source_span": {
+        "start": 585,
+        "end": 652,
+        "text": "Previous treatment: methotrexate 15 mg weekly, [date-c] - [date-d]."
+      },
+      "value_span": {
+        "start": 618,
+        "end": 630
+      },
+      "episode": 1,
+      "attrs": {
+        "amount": 15,
+        "frequency": "weekly"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 918,
+          "width": 98,
+          "height": 18
+        },
+        {
+          "x": 210,
+          "y": 919,
+          "width": 125,
+          "height": 17
+        },
+        {
+          "x": 347,
+          "y": 918,
+          "width": 161,
+          "height": 18
+        },
+        {
+          "x": 519,
+          "y": 918,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 557,
+          "y": 923,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 602,
+          "y": 918,
+          "width": 88,
+          "height": 23
+        },
+        {
+          "x": 848,
+          "y": 928,
+          "width": 7,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "id": "e13",
+      "type": "prior_start_date",
+      "value": "2133-02-28",
+      "source_span": {
+        "start": 585,
+        "end": 652,
+        "text": "Previous treatment: methotrexate 15 mg weekly, [date-c] - [date-d]."
+      },
+      "value_span": {
+        "start": 632,
+        "end": 640
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 918,
+          "width": 98,
+          "height": 18
+        },
+        {
+          "x": 210,
+          "y": 919,
+          "width": 125,
+          "height": 17
+        },
+        {
+          "x": 347,
+          "y": 918,
+          "width": 161,
+          "height": 18
+        },
+        {
+          "x": 519,
+          "y": 918,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 557,
+          "y": 923,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 602,
+          "y": 918,
+          "width": 88,
+          "height": 23
+        },
+        {
+          "x": 848,
+          "y": 928,
+          "width": 7,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "id": "e14",
+      "type": "prior_stop_date",
+      "value": "2133-03-14",
+      "source_span": {
+        "start": 585,
+        "end": 652,
+        "text": "Previous treatment: methotrexate 15 mg weekly, [date-c] - [date-d]."
+      },
+      "value_span": {
+        "start": 643,
+        "end": 651
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 918,
+          "width": 98,
+          "height": 18
+        },
+        {
+          "x": 210,
+          "y": 919,
+          "width": 125,
+          "height": 17
+        },
+        {
+          "x": 347,
+          "y": 918,
+          "width": 161,
+          "height": 18
+        },
+        {
+          "x": 519,
+          "y": 918,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 557,
+          "y": 923,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 602,
+          "y": 918,
+          "width": 88,
+          "height": 23
+        },
+        {
+          "x": 848,
+          "y": 928,
+          "width": 7,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "prior_outcome",
+      "value": "intolerance",
+      "source_span": {
+        "start": 653,
+        "end": 677,
+        "text": "stopped MTX — ALT 3x ULN"
+      },
+      "episode": 1,
+      "attrs": {
+        "category": "adverse"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 167,
+          "y": 956,
+          "width": 124,
+          "height": 44
+        },
+        {
+          "x": 312,
+          "y": 963,
+          "width": 67,
+          "height": 25
+        },
+        {
+          "x": 399,
+          "y": 973,
+          "width": 15,
+          "height": 3
+        },
+        {
+          "x": 431,
+          "y": 960,
+          "width": 67,
+          "height": 27
+        },
+        {
+          "x": 517,
+          "y": 960,
+          "width": 37,
+          "height": 28
+        },
+        {
+          "x": 574,
+          "y": 957,
+          "width": 69,
+          "height": 29
+        }
+      ]
+    },
+    {
+      "id": "e16",
+      "type": "prior_reason",
+      "value": "ALT 3x ULN",
+      "source_span": {
+        "start": 653,
+        "end": 677,
+        "text": "stopped MTX — ALT 3x ULN"
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 167,
+          "y": 956,
+          "width": 124,
+          "height": 44
+        },
+        {
+          "x": 312,
+          "y": 963,
+          "width": 67,
+          "height": 25
+        },
+        {
+          "x": 399,
+          "y": 973,
+          "width": 15,
+          "height": 3
+        },
+        {
+          "x": 431,
+          "y": 960,
+          "width": 67,
+          "height": 27
+        },
+        {
+          "x": 517,
+          "y": 960,
+          "width": 37,
+          "height": 28
+        },
+        {
+          "x": 574,
+          "y": 957,
+          "width": 69,
+          "height": 29
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 84,
+          "end": 91,
+          "text": "Age: 59"
+        }
+      ],
+      "reason": "Age 59 is documented.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 189,
+          "end": 241,
+          "text": "Reason for request: rash, rule out plaque psoriasis."
+        }
+      ],
+      "reason": "Plaque psoriasis is stated as suspected or possible, not confirmed.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 464,
+          "end": 500,
+          "text": "Body surface area = 14 % on [date-b]"
+        }
+      ],
+      "reason": "The BSA date or the request date could not be read. Check the page.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 585,
+          "end": 652,
+          "text": "Previous treatment: methotrexate 15 mg weekly, [date-c] - [date-d]."
+        },
+        {
+          "start": 653,
+          "end": 677,
+          "text": "stopped MTX — ALT 3x ULN"
+        }
+      ],
+      "reason": "Low confidence OCR overlaps the words this answer rests on. Check the image.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 148,
+          "end": 188,
+          "text": "Request: adalimumab 40 mg every 2 weeks."
+        }
+      ],
+      "reason": "The requested adalimumab dose 40 mg every 2 weeks matches the fictional rule.",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "Request: adalimumab 40 mg every 2 weeks.",
+      "citations": [
+        {
+          "start": 148,
+          "end": 188,
+          "text": "Request: adalimumab 40 mg every 2 weeks."
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Reason for request: rash, rule out plaque psoriasis.",
+      "citations": [
+        {
+          "start": 189,
+          "end": 241,
+          "text": "Reason for request: rash, rule out plaque psoriasis."
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Body surface area = 14 % on [date-b]",
+      "citations": [
+        {
+          "start": 464,
+          "end": 500,
+          "text": "Body surface area = 14 % on [date-b]"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Previous treatment: methotrexate 15 mg weekly, [date-c] - [date-d].",
+      "citations": [
+        {
+          "start": 585,
+          "end": 652,
+          "text": "Previous treatment: methotrexate 15 mg weekly, [date-c] - [date-d]."
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "stopped MTX — ALT 3x ULN",
+      "citations": [
+        {
+          "start": 653,
+          "end": 677,
+          "text": "stopped MTX — ALT 3x ULN"
+        }
+      ],
+      "supported": true,
+      "needsReview": true,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "REQUESTING",
+      "confidence": 96.383644,
+      "box": {
+        "x": 102,
+        "y": 158,
+        "width": 153,
+        "height": 21
+      },
+      "start": 0,
+      "end": 10,
+      "needsReview": false
+    },
+    {
+      "text": "PROVIDER",
+      "confidence": 96.288559,
+      "box": {
+        "x": 267,
+        "y": 158,
+        "width": 120,
+        "height": 18
+      },
+      "start": 11,
+      "end": 19,
+      "needsReview": false
+    },
+    {
+      "text": "LETTER",
+      "confidence": 95.767326,
+      "box": {
+        "x": 398,
+        "y": 158,
+        "width": 86,
+        "height": 18
+      },
+      "start": 20,
+      "end": 26,
+      "needsReview": false
+    },
+    {
+      "text": "Letter",
+      "confidence": 96.363853,
+      "box": {
+        "x": 102,
+        "y": 198,
+        "width": 69,
+        "height": 18
+      },
+      "start": 27,
+      "end": 33,
+      "needsReview": false
+    },
+    {
+      "text": "date",
+      "confidence": 0,
+      "box": {
+        "x": 180,
+        "y": 198,
+        "width": 58,
+        "height": 18
+      },
+      "start": 34,
+      "end": 38,
+      "needsReview": true
+    },
+    {
+      "text": "Patient:",
+      "confidence": 96.28672,
+      "box": {
+        "x": 102,
+        "y": 238,
+        "width": 87,
+        "height": 18
+      },
+      "start": 48,
+      "end": 56,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional).",
+      "confidence": 96.241447,
+      "box": {
+        "x": 387,
+        "y": 238,
+        "width": 117,
+        "height": 21
+      },
+      "start": 71,
+      "end": 83,
+      "needsReview": false
+    },
+    {
+      "text": "Age:",
+      "confidence": 96.34494,
+      "box": {
+        "x": 100,
+        "y": 278,
+        "width": 52,
+        "height": 23
+      },
+      "start": 84,
+      "end": 88,
+      "needsReview": false
+    },
+    {
+      "text": "59",
+      "confidence": 96.618408,
+      "box": {
+        "x": 164,
+        "y": 278,
+        "width": 27,
+        "height": 18
+      },
+      "start": 89,
+      "end": 91,
+      "needsReview": false
+    },
+    {
+      "text": "From:",
+      "confidence": 95.953445,
+      "box": {
+        "x": 102,
+        "y": 318,
+        "width": 63,
+        "height": 18
+      },
+      "start": 92,
+      "end": 97,
+      "needsReview": false
+    },
+    {
+      "text": "Dr.",
+      "confidence": 96.658928,
+      "box": {
+        "x": 177,
+        "y": 318,
+        "width": 29,
+        "height": 18
+      },
+      "start": 98,
+      "end": 101,
+      "needsReview": false
+    },
+    {
+      "text": "fictional",
+      "confidence": 96.520515,
+      "box": {
+        "x": 370,
+        "y": 318,
+        "width": 93,
+        "height": 18
+      },
+      "start": 117,
+      "end": 126,
+      "needsReview": false
+    },
+    {
+      "text": "requesting",
+      "confidence": 95.761284,
+      "box": {
+        "x": 475,
+        "y": 318,
+        "width": 125,
+        "height": 23
+      },
+      "start": 127,
+      "end": 137,
+      "needsReview": false
+    },
+    {
+      "text": "provider.",
+      "confidence": 96.574577,
+      "box": {
+        "x": 611,
+        "y": 318,
+        "width": 101,
+        "height": 23
+      },
+      "start": 138,
+      "end": 147,
+      "needsReview": false
+    },
+    {
+      "text": "Request:",
+      "confidence": 95.866142,
+      "box": {
+        "x": 102,
+        "y": 358,
+        "width": 101,
+        "height": 23
+      },
+      "start": 148,
+      "end": 156,
+      "needsReview": false
+    },
+    {
+      "text": "adalimumab",
+      "confidence": 96.498894,
+      "box": {
+        "x": 215,
+        "y": 358,
+        "width": 147,
+        "height": 18
+      },
+      "start": 157,
+      "end": 167,
+      "needsReview": false
+    },
+    {
+      "text": "40",
+      "confidence": 96.738876,
+      "box": {
+        "x": 372,
+        "y": 358,
+        "width": 28,
+        "height": 18
+      },
+      "start": 168,
+      "end": 170,
+      "needsReview": false
+    },
+    {
+      "text": "mg",
+      "confidence": 94.688599,
+      "box": {
+        "x": 411,
+        "y": 363,
+        "width": 34,
+        "height": 18
+      },
+      "start": 171,
+      "end": 173,
+      "needsReview": false
+    },
+    {
+      "text": "every",
+      "confidence": 96.117996,
+      "box": {
+        "x": 456,
+        "y": 363,
+        "width": 66,
+        "height": 18
+      },
+      "start": 174,
+      "end": 179,
+      "needsReview": false
+    },
+    {
+      "text": "2",
+      "confidence": 96.033318,
+      "box": {
+        "x": 532,
+        "y": 358,
+        "width": 12,
+        "height": 18
+      },
+      "start": 180,
+      "end": 181,
+      "needsReview": false
+    },
+    {
+      "text": "weeks.",
+      "confidence": 96.86673,
+      "box": {
+        "x": 555,
+        "y": 358,
+        "width": 79,
+        "height": 18
+      },
+      "start": 182,
+      "end": 188,
+      "needsReview": false
+    },
+    {
+      "text": "Reason",
+      "confidence": 96.50959,
+      "box": {
+        "x": 102,
+        "y": 398,
+        "width": 84,
+        "height": 18
+      },
+      "start": 189,
+      "end": 195,
+      "needsReview": false
+    },
+    {
+      "text": "for",
+      "confidence": 96.518822,
+      "box": {
+        "x": 196,
+        "y": 398,
+        "width": 32,
+        "height": 18
+      },
+      "start": 196,
+      "end": 199,
+      "needsReview": false
+    },
+    {
+      "text": "request:",
+      "confidence": 95.952232,
+      "box": {
+        "x": 238,
+        "y": 399,
+        "width": 94,
+        "height": 22
+      },
+      "start": 200,
+      "end": 208,
+      "needsReview": false
+    },
+    {
+      "text": "rash,",
+      "confidence": 96.344139,
+      "box": {
+        "x": 345,
+        "y": 398,
+        "width": 55,
+        "height": 21
+      },
+      "start": 209,
+      "end": 214,
+      "needsReview": false
+    },
+    {
+      "text": "rule",
+      "confidence": 95.513367,
+      "box": {
+        "x": 412,
+        "y": 398,
+        "width": 43,
+        "height": 18
+      },
+      "start": 215,
+      "end": 219,
+      "needsReview": false
+    },
+    {
+      "text": "out",
+      "confidence": 95.789749,
+      "box": {
+        "x": 466,
+        "y": 399,
+        "width": 37,
+        "height": 17
+      },
+      "start": 220,
+      "end": 223,
+      "needsReview": false
+    },
+    {
+      "text": "plaque",
+      "confidence": 95.789749,
+      "box": {
+        "x": 513,
+        "y": 398,
+        "width": 79,
+        "height": 23
+      },
+      "start": 224,
+      "end": 230,
+      "needsReview": false
+    },
+    {
+      "text": "psoriasis.",
+      "confidence": 96.759811,
+      "box": {
+        "x": 603,
+        "y": 398,
+        "width": 108,
+        "height": 23
+      },
+      "start": 231,
+      "end": 241,
+      "needsReview": false
+    },
+    {
+      "text": "CLINICAL",
+      "confidence": 95.44709,
+      "box": {
+        "x": 101,
+        "y": 478,
+        "width": 108,
+        "height": 18
+      },
+      "start": 242,
+      "end": 250,
+      "needsReview": false
+    },
+    {
+      "text": "NOTES",
+      "confidence": 96.21286,
+      "box": {
+        "x": 219,
+        "y": 478,
+        "width": 78,
+        "height": 18
+      },
+      "start": 251,
+      "end": 256,
+      "needsReview": false
+    },
+    {
+      "text": "Visit",
+      "confidence": 96.733192,
+      "box": {
+        "x": 100,
+        "y": 518,
+        "width": 51,
+        "height": 18
+      },
+      "start": 257,
+      "end": 262,
+      "needsReview": false
+    },
+    {
+      "text": "date:",
+      "confidence": 96.534973,
+      "box": {
+        "x": 160,
+        "y": 518,
+        "width": 58,
+        "height": 18
+      },
+      "start": 263,
+      "end": 268,
+      "needsReview": false
+    },
+    {
+      "text": "Assessment:",
+      "confidence": 96.174782,
+      "box": {
+        "x": 100,
+        "y": 558,
+        "width": 149,
+        "height": 18
+      },
+      "start": 279,
+      "end": 290,
+      "needsReview": false
+    },
+    {
+      "text": "rash,",
+      "confidence": 96.438057,
+      "box": {
+        "x": 262,
+        "y": 558,
+        "width": 55,
+        "height": 21
+      },
+      "start": 291,
+      "end": 296,
+      "needsReview": false
+    },
+    {
+      "text": "rule",
+      "confidence": 96.461456,
+      "box": {
+        "x": 329,
+        "y": 558,
+        "width": 44,
+        "height": 18
+      },
+      "start": 297,
+      "end": 301,
+      "needsReview": false
+    },
+    {
+      "text": "out",
+      "confidence": 96.706642,
+      "box": {
+        "x": 383,
+        "y": 559,
+        "width": 37,
+        "height": 17
+      },
+      "start": 302,
+      "end": 305,
+      "needsReview": false
+    },
+    {
+      "text": "plaque",
+      "confidence": 95.601517,
+      "box": {
+        "x": 430,
+        "y": 558,
+        "width": 79,
+        "height": 23
+      },
+      "start": 306,
+      "end": 312,
+      "needsReview": false
+    },
+    {
+      "text": "psoriasis.",
+      "confidence": 96.811157,
+      "box": {
+        "x": 520,
+        "y": 558,
+        "width": 108,
+        "height": 23
+      },
+      "start": 313,
+      "end": 323,
+      "needsReview": false
+    },
+    {
+      "text": "Past",
+      "confidence": 96.521927,
+      "box": {
+        "x": 102,
+        "y": 598,
+        "width": 48,
+        "height": 18
+      },
+      "start": 324,
+      "end": 328,
+      "needsReview": false
+    },
+    {
+      "text": "medical",
+      "confidence": 96.260712,
+      "box": {
+        "x": 160,
+        "y": 598,
+        "width": 90,
+        "height": 18
+      },
+      "start": 329,
+      "end": 336,
+      "needsReview": false
+    },
+    {
+      "text": "history:",
+      "confidence": 96.309204,
+      "box": {
+        "x": 262,
+        "y": 598,
+        "width": 84,
+        "height": 23
+      },
+      "start": 337,
+      "end": 345,
+      "needsReview": false
+    },
+    {
+      "text": "hypertension,",
+      "confidence": 96.117012,
+      "box": {
+        "x": 359,
+        "y": 598,
+        "width": 161,
+        "height": 23
+      },
+      "start": 346,
+      "end": 359,
+      "needsReview": false
+    },
+    {
+      "text": "seasonal",
+      "confidence": 95.648186,
+      "box": {
+        "x": 531,
+        "y": 598,
+        "width": 102,
+        "height": 18
+      },
+      "start": 360,
+      "end": 368,
+      "needsReview": false
+    },
+    {
+      "text": "allergies.",
+      "confidence": 95.648186,
+      "box": {
+        "x": 644,
+        "y": 598,
+        "width": 105,
+        "height": 23
+      },
+      "start": 369,
+      "end": 379,
+      "needsReview": false
+    },
+    {
+      "text": "The",
+      "confidence": 95.110031,
+      "box": {
+        "x": 100,
+        "y": 638,
+        "width": 43,
+        "height": 18
+      },
+      "start": 380,
+      "end": 383,
+      "needsReview": false
+    },
+    {
+      "text": "patient",
+      "confidence": 95.110031,
+      "box": {
+        "x": 154,
+        "y": 638,
+        "width": 83,
+        "height": 23
+      },
+      "start": 384,
+      "end": 391,
+      "needsReview": false
+    },
+    {
+      "text": "reports",
+      "confidence": 96.008766,
+      "box": {
+        "x": 247,
+        "y": 639,
+        "width": 83,
+        "height": 22
+      },
+      "start": 392,
+      "end": 399,
+      "needsReview": false
+    },
+    {
+      "text": "ongoing",
+      "confidence": 96.299942,
+      "box": {
+        "x": 340,
+        "y": 638,
+        "width": 94,
+        "height": 23
+      },
+      "start": 400,
+      "end": 407,
+      "needsReview": false
+    },
+    {
+      "text": "symptoms",
+      "confidence": 96.761299,
+      "box": {
+        "x": 445,
+        "y": 639,
+        "width": 122,
+        "height": 22
+      },
+      "start": 408,
+      "end": 416,
+      "needsReview": false
+    },
+    {
+      "text": "despite",
+      "confidence": 96.551445,
+      "box": {
+        "x": 577,
+        "y": 638,
+        "width": 87,
+        "height": 23
+      },
+      "start": 417,
+      "end": 424,
+      "needsReview": false
+    },
+    {
+      "text": "prior",
+      "confidence": 96.716904,
+      "box": {
+        "x": 675,
+        "y": 638,
+        "width": 54,
+        "height": 23
+      },
+      "start": 425,
+      "end": 430,
+      "needsReview": false
+    },
+    {
+      "text": "treatment.",
+      "confidence": 96.563332,
+      "box": {
+        "x": 737,
+        "y": 639,
+        "width": 125,
+        "height": 17
+      },
+      "start": 431,
+      "end": 441,
+      "needsReview": false
+    },
+    {
+      "text": "LABS",
+      "confidence": 96.518951,
+      "box": {
+        "x": 102,
+        "y": 718,
+        "width": 58,
+        "height": 18
+      },
+      "start": 442,
+      "end": 446,
+      "needsReview": false
+    },
+    {
+      "text": "AND",
+      "confidence": 96.548576,
+      "box": {
+        "x": 170,
+        "y": 718,
+        "width": 51,
+        "height": 18
+      },
+      "start": 447,
+      "end": 450,
+      "needsReview": false
+    },
+    {
+      "text": "MEASUREMENTS",
+      "confidence": 96.19294,
+      "box": {
+        "x": 232,
+        "y": 718,
+        "width": 197,
+        "height": 18
+      },
+      "start": 451,
+      "end": 463,
+      "needsReview": false
+    },
+    {
+      "text": "Body",
+      "confidence": 96.68795,
+      "box": {
+        "x": 102,
+        "y": 758,
+        "width": 58,
+        "height": 23
+      },
+      "start": 464,
+      "end": 468,
+      "needsReview": false
+    },
+    {
+      "text": "surface",
+      "confidence": 96.340881,
+      "box": {
+        "x": 169,
+        "y": 758,
+        "width": 87,
+        "height": 18
+      },
+      "start": 469,
+      "end": 476,
+      "needsReview": false
+    },
+    {
+      "text": "area",
+      "confidence": 96.184868,
+      "box": {
+        "x": 266,
+        "y": 763,
+        "width": 50,
+        "height": 13
+      },
+      "start": 477,
+      "end": 481,
+      "needsReview": false
+    },
+    {
+      "text": "=",
+      "confidence": 95.556633,
+      "box": {
+        "x": 328,
+        "y": 765,
+        "width": 15,
+        "height": 7
+      },
+      "start": 482,
+      "end": 483,
+      "needsReview": false
+    },
+    {
+      "text": "14",
+      "confidence": 93.230949,
+      "box": {
+        "x": 356,
+        "y": 758,
+        "width": 27,
+        "height": 18
+      },
+      "start": 484,
+      "end": 486,
+      "needsReview": false
+    },
+    {
+      "text": "%",
+      "confidence": 93.230949,
+      "box": {
+        "x": 393,
+        "y": 758,
+        "width": 20,
+        "height": 18
+      },
+      "start": 487,
+      "end": 488,
+      "needsReview": false
+    },
+    {
+      "text": "on",
+      "confidence": 96.745499,
+      "box": {
+        "x": 423,
+        "y": 763,
+        "width": 27,
+        "height": 13
+      },
+      "start": 489,
+      "end": 491,
+      "needsReview": false
+    },
+    {
+      "text": "MEDICATION",
+      "confidence": 96.565445,
+      "box": {
+        "x": 102,
+        "y": 838,
+        "width": 147,
+        "height": 18
+      },
+      "start": 501,
+      "end": 511,
+      "needsReview": false
+    },
+    {
+      "text": "HISTORY",
+      "confidence": 96.466492,
+      "box": {
+        "x": 261,
+        "y": 838,
+        "width": 101,
+        "height": 18
+      },
+      "start": 512,
+      "end": 519,
+      "needsReview": false
+    },
+    {
+      "text": "_—",
+      "confidence": 2.276451,
+      "box": {
+        "x": 913,
+        "y": 813,
+        "width": 156,
+        "height": 81
+      },
+      "start": 520,
+      "end": 522,
+      "needsReview": true
+    },
+    {
+      "text": "Current",
+      "confidence": 95.947678,
+      "box": {
+        "x": 101,
+        "y": 878,
+        "width": 89,
+        "height": 18
+      },
+      "start": 523,
+      "end": 530,
+      "needsReview": false
+    },
+    {
+      "text": "requested",
+      "confidence": 96.927223,
+      "box": {
+        "x": 200,
+        "y": 878,
+        "width": 117,
+        "height": 23
+      },
+      "start": 531,
+      "end": 540,
+      "needsReview": false
+    },
+    {
+      "text": "therapy:",
+      "confidence": 96.809242,
+      "box": {
+        "x": 327,
+        "y": 878,
+        "width": 97,
+        "height": 23
+      },
+      "start": 541,
+      "end": 549,
+      "needsReview": false
+    },
+    {
+      "text": "adalimumab",
+      "confidence": 96.069534,
+      "box": {
+        "x": 435,
+        "y": 878,
+        "width": 148,
+        "height": 18
+      },
+      "start": 550,
+      "end": 560,
+      "needsReview": false
+    },
+    {
+      "text": "40",
+      "confidence": 96.704735,
+      "box": {
+        "x": 593,
+        "y": 878,
+        "width": 28,
+        "height": 18
+      },
+      "start": 561,
+      "end": 563,
+      "needsReview": false
+    },
+    {
+      "text": "mg",
+      "confidence": 94.790558,
+      "box": {
+        "x": 632,
+        "y": 883,
+        "width": 34,
+        "height": 18
+      },
+      "start": 564,
+      "end": 566,
+      "needsReview": false
+    },
+    {
+      "text": "every",
+      "confidence": 96.29509,
+      "box": {
+        "x": 677,
+        "y": 883,
+        "width": 66,
+        "height": 18
+      },
+      "start": 567,
+      "end": 572,
+      "needsReview": false
+    },
+    {
+      "text": "other",
+      "confidence": 96.396568,
+      "box": {
+        "x": 753,
+        "y": 878,
+        "width": 62,
+        "height": 18
+      },
+      "start": 573,
+      "end": 578,
+      "needsReview": false
+    },
+    {
+      "text": "week.",
+      "confidence": 96.66288,
+      "box": {
+        "x": 824,
+        "y": 878,
+        "width": 67,
+        "height": 18
+      },
+      "start": 579,
+      "end": 584,
+      "needsReview": false
+    },
+    {
+      "text": "Previous",
+      "confidence": 96.16526,
+      "box": {
+        "x": 102,
+        "y": 918,
+        "width": 98,
+        "height": 18
+      },
+      "start": 585,
+      "end": 593,
+      "needsReview": false
+    },
+    {
+      "text": "treatment:",
+      "confidence": 96.435623,
+      "box": {
+        "x": 210,
+        "y": 919,
+        "width": 125,
+        "height": 17
+      },
+      "start": 594,
+      "end": 604,
+      "needsReview": false
+    },
+    {
+      "text": "methotrexate",
+      "confidence": 96.91777,
+      "box": {
+        "x": 347,
+        "y": 918,
+        "width": 161,
+        "height": 18
+      },
+      "start": 605,
+      "end": 617,
+      "needsReview": false
+    },
+    {
+      "text": "15",
+      "confidence": 96.956947,
+      "box": {
+        "x": 519,
+        "y": 918,
+        "width": 26,
+        "height": 18
+      },
+      "start": 618,
+      "end": 620,
+      "needsReview": false
+    },
+    {
+      "text": "mg",
+      "confidence": 94.563889,
+      "box": {
+        "x": 557,
+        "y": 923,
+        "width": 34,
+        "height": 18
+      },
+      "start": 621,
+      "end": 623,
+      "needsReview": false
+    },
+    {
+      "text": "weekly,",
+      "confidence": 96.275291,
+      "box": {
+        "x": 602,
+        "y": 918,
+        "width": 88,
+        "height": 23
+      },
+      "start": 624,
+      "end": 631,
+      "needsReview": false
+    },
+    {
+      "text": "-",
+      "confidence": 91.299095,
+      "box": {
+        "x": 848,
+        "y": 928,
+        "width": 7,
+        "height": 2
+      },
+      "start": 637,
+      "end": 638,
+      "needsReview": false
+    },
+    {
+      "text": "stopped",
+      "confidence": 96.220245,
+      "box": {
+        "x": 167,
+        "y": 956,
+        "width": 124,
+        "height": 44
+      },
+      "start": 653,
+      "end": 660,
+      "needsReview": false
+    },
+    {
+      "text": "MTX",
+      "confidence": 92.481712,
+      "box": {
+        "x": 312,
+        "y": 963,
+        "width": 67,
+        "height": 25
+      },
+      "start": 661,
+      "end": 664,
+      "needsReview": false
+    },
+    {
+      "text": "—",
+      "confidence": 38.072109,
+      "box": {
+        "x": 399,
+        "y": 973,
+        "width": 15,
+        "height": 3
+      },
+      "start": 665,
+      "end": 666,
+      "needsReview": true
+    },
+    {
+      "text": "ALT",
+      "confidence": 96.144806,
+      "box": {
+        "x": 431,
+        "y": 960,
+        "width": 67,
+        "height": 27
+      },
+      "start": 667,
+      "end": 670,
+      "needsReview": false
+    },
+    {
+      "text": "3x",
+      "confidence": 93.203117,
+      "box": {
+        "x": 517,
+        "y": 960,
+        "width": 37,
+        "height": 28
+      },
+      "start": 671,
+      "end": 673,
+      "needsReview": false
+    },
+    {
+      "text": "ULN",
+      "confidence": 92.643723,
+      "box": {
+        "x": 574,
+        "y": 957,
+        "width": 69,
+        "height": 29
+      },
+      "start": 674,
+      "end": 677,
+      "needsReview": false
+    },
+    {
+      "text": "No",
+      "confidence": 96.651154,
+      "box": {
+        "x": 102,
+        "y": 1028,
+        "width": 29,
+        "height": 18
+      },
+      "start": 678,
+      "end": 680,
+      "needsReview": false
+    },
+    {
+      "text": "other",
+      "confidence": 96.465683,
+      "box": {
+        "x": 142,
+        "y": 1028,
+        "width": 62,
+        "height": 18
+      },
+      "start": 681,
+      "end": 686,
+      "needsReview": false
+    },
+    {
+      "text": "prior",
+      "confidence": 96.802597,
+      "box": {
+        "x": 214,
+        "y": 1028,
+        "width": 54,
+        "height": 23
+      },
+      "start": 687,
+      "end": 692,
+      "needsReview": false
+    },
+    {
+      "text": "therapy",
+      "confidence": 95.920502,
+      "box": {
+        "x": 276,
+        "y": 1028,
+        "width": 92,
+        "height": 23
+      },
+      "start": 693,
+      "end": 700,
+      "needsReview": false
+    },
+    {
+      "text": "records",
+      "confidence": 96.381554,
+      "box": {
+        "x": 379,
+        "y": 1028,
+        "width": 86,
+        "height": 18
+      },
+      "start": 701,
+      "end": 708,
+      "needsReview": false
+    },
+    {
+      "text": "supplied.",
+      "confidence": 96.249779,
+      "box": {
+        "x": 475,
+        "y": 1028,
+        "width": 105,
+        "height": 23
+      },
+      "start": 709,
+      "end": 718,
+      "needsReview": false
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "REQUESTING PROVIDER LETTER\nLetter date 2026-10-0].\nPatient: Arlen Calderby (fictional).\nAge: 59\nFrom: Dr. Rowan Vale, fictional requesting provider.\nRequest: adalimumab 40 mg every 2 weeks.\nReason for request: rash, rule out plaque psoriasis.\nCLINICAL NOTES\nVisit date: 2026-09-20.\nAssessment: rash, rule out plaque psoriasis.\nPast medical history: hypertension, seasonal allergies.\nThe patient reports ongoing symptoms despite prior treatment.\nLABS AND MEASUREMENTS\nBody surface area = 14 % on 2026-09-15\nMEDICATION HISTORY _—\nCurrent requested therapy: adalimumab 40 mg every other week.\nPrevious treatment: methotrexate 15 mg weekly, 2026-08-01 - 2026-08-15.\nstopped MTX — ALT 3x ULN\nNo other prior therapy records supplied.\n",
+    "words": [
+      {
+        "text": "REQUESTING",
+        "confidence": 96.383644,
+        "box": {
+          "x": 102,
+          "y": 158,
+          "width": 153,
+          "height": 21
+        },
+        "start": 0,
+        "end": 10,
+        "needsReview": false
+      },
+      {
+        "text": "PROVIDER",
+        "confidence": 96.288559,
+        "box": {
+          "x": 267,
+          "y": 158,
+          "width": 120,
+          "height": 18
+        },
+        "start": 11,
+        "end": 19,
+        "needsReview": false
+      },
+      {
+        "text": "LETTER",
+        "confidence": 95.767326,
+        "box": {
+          "x": 398,
+          "y": 158,
+          "width": 86,
+          "height": 18
+        },
+        "start": 20,
+        "end": 26,
+        "needsReview": false
+      },
+      {
+        "text": "Letter",
+        "confidence": 96.363853,
+        "box": {
+          "x": 102,
+          "y": 198,
+          "width": 69,
+          "height": 18
+        },
+        "start": 27,
+        "end": 33,
+        "needsReview": false
+      },
+      {
+        "text": "date",
+        "confidence": 0,
+        "box": {
+          "x": 180,
+          "y": 198,
+          "width": 58,
+          "height": 18
+        },
+        "start": 34,
+        "end": 38,
+        "needsReview": true
+      },
+      {
+        "text": "2026-10-0].",
+        "confidence": 17.153511,
+        "box": {
+          "x": 250,
+          "y": 198,
+          "width": 143,
+          "height": 18
+        },
+        "start": 39,
+        "end": 50,
+        "needsReview": true
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.28672,
+        "box": {
+          "x": 102,
+          "y": 238,
+          "width": 87,
+          "height": 18
+        },
+        "start": 51,
+        "end": 59,
+        "needsReview": false
+      },
+      {
+        "text": "Arlen",
+        "confidence": 93.292358,
+        "box": {
+          "x": 200,
+          "y": 238,
+          "width": 60,
+          "height": 18
+        },
+        "start": 60,
+        "end": 65,
+        "needsReview": false
+      },
+      {
+        "text": "Calderby",
+        "confidence": 90.848015,
+        "box": {
+          "x": 271,
+          "y": 238,
+          "width": 105,
+          "height": 23
+        },
+        "start": 66,
+        "end": 74,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional).",
+        "confidence": 96.241447,
+        "box": {
+          "x": 387,
+          "y": 238,
+          "width": 117,
+          "height": 21
+        },
+        "start": 75,
+        "end": 87,
+        "needsReview": false
+      },
+      {
+        "text": "Age:",
+        "confidence": 96.34494,
+        "box": {
+          "x": 100,
+          "y": 278,
+          "width": 52,
+          "height": 23
+        },
+        "start": 88,
+        "end": 92,
+        "needsReview": false
+      },
+      {
+        "text": "59",
+        "confidence": 96.618408,
+        "box": {
+          "x": 164,
+          "y": 278,
+          "width": 27,
+          "height": 18
+        },
+        "start": 93,
+        "end": 95,
+        "needsReview": false
+      },
+      {
+        "text": "From:",
+        "confidence": 95.953445,
+        "box": {
+          "x": 102,
+          "y": 318,
+          "width": 63,
+          "height": 18
+        },
+        "start": 96,
+        "end": 101,
+        "needsReview": false
+      },
+      {
+        "text": "Dr.",
+        "confidence": 96.658928,
+        "box": {
+          "x": 177,
+          "y": 318,
+          "width": 29,
+          "height": 18
+        },
+        "start": 102,
+        "end": 105,
+        "needsReview": false
+      },
+      {
+        "text": "Rowan",
+        "confidence": 96.486008,
+        "box": {
+          "x": 219,
+          "y": 318,
+          "width": 75,
+          "height": 18
+        },
+        "start": 106,
+        "end": 111,
+        "needsReview": false
+      },
+      {
+        "text": "Vale,",
+        "confidence": 96.700729,
+        "box": {
+          "x": 305,
+          "y": 318,
+          "width": 55,
+          "height": 21
+        },
+        "start": 112,
+        "end": 117,
+        "needsReview": false
+      },
+      {
+        "text": "fictional",
+        "confidence": 96.520515,
+        "box": {
+          "x": 370,
+          "y": 318,
+          "width": 93,
+          "height": 18
+        },
+        "start": 118,
+        "end": 127,
+        "needsReview": false
+      },
+      {
+        "text": "requesting",
+        "confidence": 95.761284,
+        "box": {
+          "x": 475,
+          "y": 318,
+          "width": 125,
+          "height": 23
+        },
+        "start": 128,
+        "end": 138,
+        "needsReview": false
+      },
+      {
+        "text": "provider.",
+        "confidence": 96.574577,
+        "box": {
+          "x": 611,
+          "y": 318,
+          "width": 101,
+          "height": 23
+        },
+        "start": 139,
+        "end": 148,
+        "needsReview": false
+      },
+      {
+        "text": "Request:",
+        "confidence": 95.866142,
+        "box": {
+          "x": 102,
+          "y": 358,
+          "width": 101,
+          "height": 23
+        },
+        "start": 149,
+        "end": 157,
+        "needsReview": false
+      },
+      {
+        "text": "adalimumab",
+        "confidence": 96.498894,
+        "box": {
+          "x": 215,
+          "y": 358,
+          "width": 147,
+          "height": 18
+        },
+        "start": 158,
+        "end": 168,
+        "needsReview": false
+      },
+      {
+        "text": "40",
+        "confidence": 96.738876,
+        "box": {
+          "x": 372,
+          "y": 358,
+          "width": 28,
+          "height": 18
+        },
+        "start": 169,
+        "end": 171,
+        "needsReview": false
+      },
+      {
+        "text": "mg",
+        "confidence": 94.688599,
+        "box": {
+          "x": 411,
+          "y": 363,
+          "width": 34,
+          "height": 18
+        },
+        "start": 172,
+        "end": 174,
+        "needsReview": false
+      },
+      {
+        "text": "every",
+        "confidence": 96.117996,
+        "box": {
+          "x": 456,
+          "y": 363,
+          "width": 66,
+          "height": 18
+        },
+        "start": 175,
+        "end": 180,
+        "needsReview": false
+      },
+      {
+        "text": "2",
+        "confidence": 96.033318,
+        "box": {
+          "x": 532,
+          "y": 358,
+          "width": 12,
+          "height": 18
+        },
+        "start": 181,
+        "end": 182,
+        "needsReview": false
+      },
+      {
+        "text": "weeks.",
+        "confidence": 96.86673,
+        "box": {
+          "x": 555,
+          "y": 358,
+          "width": 79,
+          "height": 18
+        },
+        "start": 183,
+        "end": 189,
+        "needsReview": false
+      },
+      {
+        "text": "Reason",
+        "confidence": 96.50959,
+        "box": {
+          "x": 102,
+          "y": 398,
+          "width": 84,
+          "height": 18
+        },
+        "start": 190,
+        "end": 196,
+        "needsReview": false
+      },
+      {
+        "text": "for",
+        "confidence": 96.518822,
+        "box": {
+          "x": 196,
+          "y": 398,
+          "width": 32,
+          "height": 18
+        },
+        "start": 197,
+        "end": 200,
+        "needsReview": false
+      },
+      {
+        "text": "request:",
+        "confidence": 95.952232,
+        "box": {
+          "x": 238,
+          "y": 399,
+          "width": 94,
+          "height": 22
+        },
+        "start": 201,
+        "end": 209,
+        "needsReview": false
+      },
+      {
+        "text": "rash,",
+        "confidence": 96.344139,
+        "box": {
+          "x": 345,
+          "y": 398,
+          "width": 55,
+          "height": 21
+        },
+        "start": 210,
+        "end": 215,
+        "needsReview": false
+      },
+      {
+        "text": "rule",
+        "confidence": 95.513367,
+        "box": {
+          "x": 412,
+          "y": 398,
+          "width": 43,
+          "height": 18
+        },
+        "start": 216,
+        "end": 220,
+        "needsReview": false
+      },
+      {
+        "text": "out",
+        "confidence": 95.789749,
+        "box": {
+          "x": 466,
+          "y": 399,
+          "width": 37,
+          "height": 17
+        },
+        "start": 221,
+        "end": 224,
+        "needsReview": false
+      },
+      {
+        "text": "plaque",
+        "confidence": 95.789749,
+        "box": {
+          "x": 513,
+          "y": 398,
+          "width": 79,
+          "height": 23
+        },
+        "start": 225,
+        "end": 231,
+        "needsReview": false
+      },
+      {
+        "text": "psoriasis.",
+        "confidence": 96.759811,
+        "box": {
+          "x": 603,
+          "y": 398,
+          "width": 108,
+          "height": 23
+        },
+        "start": 232,
+        "end": 242,
+        "needsReview": false
+      },
+      {
+        "text": "CLINICAL",
+        "confidence": 95.44709,
+        "box": {
+          "x": 101,
+          "y": 478,
+          "width": 108,
+          "height": 18
+        },
+        "start": 243,
+        "end": 251,
+        "needsReview": false
+      },
+      {
+        "text": "NOTES",
+        "confidence": 96.21286,
+        "box": {
+          "x": 219,
+          "y": 478,
+          "width": 78,
+          "height": 18
+        },
+        "start": 252,
+        "end": 257,
+        "needsReview": false
+      },
+      {
+        "text": "Visit",
+        "confidence": 96.733192,
+        "box": {
+          "x": 100,
+          "y": 518,
+          "width": 51,
+          "height": 18
+        },
+        "start": 258,
+        "end": 263,
+        "needsReview": false
+      },
+      {
+        "text": "date:",
+        "confidence": 96.534973,
+        "box": {
+          "x": 160,
+          "y": 518,
+          "width": 58,
+          "height": 18
+        },
+        "start": 264,
+        "end": 269,
+        "needsReview": false
+      },
+      {
+        "text": "2026-09-20.",
+        "confidence": 96.510864,
+        "box": {
+          "x": 230,
+          "y": 518,
+          "width": 143,
+          "height": 18
+        },
+        "start": 270,
+        "end": 281,
+        "needsReview": false
+      },
+      {
+        "text": "Assessment:",
+        "confidence": 96.174782,
+        "box": {
+          "x": 100,
+          "y": 558,
+          "width": 149,
+          "height": 18
+        },
+        "start": 282,
+        "end": 293,
+        "needsReview": false
+      },
+      {
+        "text": "rash,",
+        "confidence": 96.438057,
+        "box": {
+          "x": 262,
+          "y": 558,
+          "width": 55,
+          "height": 21
+        },
+        "start": 294,
+        "end": 299,
+        "needsReview": false
+      },
+      {
+        "text": "rule",
+        "confidence": 96.461456,
+        "box": {
+          "x": 329,
+          "y": 558,
+          "width": 44,
+          "height": 18
+        },
+        "start": 300,
+        "end": 304,
+        "needsReview": false
+      },
+      {
+        "text": "out",
+        "confidence": 96.706642,
+        "box": {
+          "x": 383,
+          "y": 559,
+          "width": 37,
+          "height": 17
+        },
+        "start": 305,
+        "end": 308,
+        "needsReview": false
+      },
+      {
+        "text": "plaque",
+        "confidence": 95.601517,
+        "box": {
+          "x": 430,
+          "y": 558,
+          "width": 79,
+          "height": 23
+        },
+        "start": 309,
+        "end": 315,
+        "needsReview": false
+      },
+      {
+        "text": "psoriasis.",
+        "confidence": 96.811157,
+        "box": {
+          "x": 520,
+          "y": 558,
+          "width": 108,
+          "height": 23
+        },
+        "start": 316,
+        "end": 326,
+        "needsReview": false
+      },
+      {
+        "text": "Past",
+        "confidence": 96.521927,
+        "box": {
+          "x": 102,
+          "y": 598,
+          "width": 48,
+          "height": 18
+        },
+        "start": 327,
+        "end": 331,
+        "needsReview": false
+      },
+      {
+        "text": "medical",
+        "confidence": 96.260712,
+        "box": {
+          "x": 160,
+          "y": 598,
+          "width": 90,
+          "height": 18
+        },
+        "start": 332,
+        "end": 339,
+        "needsReview": false
+      },
+      {
+        "text": "history:",
+        "confidence": 96.309204,
+        "box": {
+          "x": 262,
+          "y": 598,
+          "width": 84,
+          "height": 23
+        },
+        "start": 340,
+        "end": 348,
+        "needsReview": false
+      },
+      {
+        "text": "hypertension,",
+        "confidence": 96.117012,
+        "box": {
+          "x": 359,
+          "y": 598,
+          "width": 161,
+          "height": 23
+        },
+        "start": 349,
+        "end": 362,
+        "needsReview": false
+      },
+      {
+        "text": "seasonal",
+        "confidence": 95.648186,
+        "box": {
+          "x": 531,
+          "y": 598,
+          "width": 102,
+          "height": 18
+        },
+        "start": 363,
+        "end": 371,
+        "needsReview": false
+      },
+      {
+        "text": "allergies.",
+        "confidence": 95.648186,
+        "box": {
+          "x": 644,
+          "y": 598,
+          "width": 105,
+          "height": 23
+        },
+        "start": 372,
+        "end": 382,
+        "needsReview": false
+      },
+      {
+        "text": "The",
+        "confidence": 95.110031,
+        "box": {
+          "x": 100,
+          "y": 638,
+          "width": 43,
+          "height": 18
+        },
+        "start": 383,
+        "end": 386,
+        "needsReview": false
+      },
+      {
+        "text": "patient",
+        "confidence": 95.110031,
+        "box": {
+          "x": 154,
+          "y": 638,
+          "width": 83,
+          "height": 23
+        },
+        "start": 387,
+        "end": 394,
+        "needsReview": false
+      },
+      {
+        "text": "reports",
+        "confidence": 96.008766,
+        "box": {
+          "x": 247,
+          "y": 639,
+          "width": 83,
+          "height": 22
+        },
+        "start": 395,
+        "end": 402,
+        "needsReview": false
+      },
+      {
+        "text": "ongoing",
+        "confidence": 96.299942,
+        "box": {
+          "x": 340,
+          "y": 638,
+          "width": 94,
+          "height": 23
+        },
+        "start": 403,
+        "end": 410,
+        "needsReview": false
+      },
+      {
+        "text": "symptoms",
+        "confidence": 96.761299,
+        "box": {
+          "x": 445,
+          "y": 639,
+          "width": 122,
+          "height": 22
+        },
+        "start": 411,
+        "end": 419,
+        "needsReview": false
+      },
+      {
+        "text": "despite",
+        "confidence": 96.551445,
+        "box": {
+          "x": 577,
+          "y": 638,
+          "width": 87,
+          "height": 23
+        },
+        "start": 420,
+        "end": 427,
+        "needsReview": false
+      },
+      {
+        "text": "prior",
+        "confidence": 96.716904,
+        "box": {
+          "x": 675,
+          "y": 638,
+          "width": 54,
+          "height": 23
+        },
+        "start": 428,
+        "end": 433,
+        "needsReview": false
+      },
+      {
+        "text": "treatment.",
+        "confidence": 96.563332,
+        "box": {
+          "x": 737,
+          "y": 639,
+          "width": 125,
+          "height": 17
+        },
+        "start": 434,
+        "end": 444,
+        "needsReview": false
+      },
+      {
+        "text": "LABS",
+        "confidence": 96.518951,
+        "box": {
+          "x": 102,
+          "y": 718,
+          "width": 58,
+          "height": 18
+        },
+        "start": 445,
+        "end": 449,
+        "needsReview": false
+      },
+      {
+        "text": "AND",
+        "confidence": 96.548576,
+        "box": {
+          "x": 170,
+          "y": 718,
+          "width": 51,
+          "height": 18
+        },
+        "start": 450,
+        "end": 453,
+        "needsReview": false
+      },
+      {
+        "text": "MEASUREMENTS",
+        "confidence": 96.19294,
+        "box": {
+          "x": 232,
+          "y": 718,
+          "width": 197,
+          "height": 18
+        },
+        "start": 454,
+        "end": 466,
+        "needsReview": false
+      },
+      {
+        "text": "Body",
+        "confidence": 96.68795,
+        "box": {
+          "x": 102,
+          "y": 758,
+          "width": 58,
+          "height": 23
+        },
+        "start": 467,
+        "end": 471,
+        "needsReview": false
+      },
+      {
+        "text": "surface",
+        "confidence": 96.340881,
+        "box": {
+          "x": 169,
+          "y": 758,
+          "width": 87,
+          "height": 18
+        },
+        "start": 472,
+        "end": 479,
+        "needsReview": false
+      },
+      {
+        "text": "area",
+        "confidence": 96.184868,
+        "box": {
+          "x": 266,
+          "y": 763,
+          "width": 50,
+          "height": 13
+        },
+        "start": 480,
+        "end": 484,
+        "needsReview": false
+      },
+      {
+        "text": "=",
+        "confidence": 95.556633,
+        "box": {
+          "x": 328,
+          "y": 765,
+          "width": 15,
+          "height": 7
+        },
+        "start": 485,
+        "end": 486,
+        "needsReview": false
+      },
+      {
+        "text": "14",
+        "confidence": 93.230949,
+        "box": {
+          "x": 356,
+          "y": 758,
+          "width": 27,
+          "height": 18
+        },
+        "start": 487,
+        "end": 489,
+        "needsReview": false
+      },
+      {
+        "text": "%",
+        "confidence": 93.230949,
+        "box": {
+          "x": 393,
+          "y": 758,
+          "width": 20,
+          "height": 18
+        },
+        "start": 490,
+        "end": 491,
+        "needsReview": false
+      },
+      {
+        "text": "on",
+        "confidence": 96.745499,
+        "box": {
+          "x": 423,
+          "y": 763,
+          "width": 27,
+          "height": 13
+        },
+        "start": 492,
+        "end": 494,
+        "needsReview": false
+      },
+      {
+        "text": "2026-09-15",
+        "confidence": 96.792625,
+        "box": {
+          "x": 461,
+          "y": 758,
+          "width": 136,
+          "height": 18
+        },
+        "start": 495,
+        "end": 505,
+        "needsReview": false
+      },
+      {
+        "text": "MEDICATION",
+        "confidence": 96.565445,
+        "box": {
+          "x": 102,
+          "y": 838,
+          "width": 147,
+          "height": 18
+        },
+        "start": 506,
+        "end": 516,
+        "needsReview": false
+      },
+      {
+        "text": "HISTORY",
+        "confidence": 96.466492,
+        "box": {
+          "x": 261,
+          "y": 838,
+          "width": 101,
+          "height": 18
+        },
+        "start": 517,
+        "end": 524,
+        "needsReview": false
+      },
+      {
+        "text": "_—",
+        "confidence": 2.276451,
+        "box": {
+          "x": 913,
+          "y": 813,
+          "width": 156,
+          "height": 81
+        },
+        "start": 525,
+        "end": 527,
+        "needsReview": true
+      },
+      {
+        "text": "Current",
+        "confidence": 95.947678,
+        "box": {
+          "x": 101,
+          "y": 878,
+          "width": 89,
+          "height": 18
+        },
+        "start": 528,
+        "end": 535,
+        "needsReview": false
+      },
+      {
+        "text": "requested",
+        "confidence": 96.927223,
+        "box": {
+          "x": 200,
+          "y": 878,
+          "width": 117,
+          "height": 23
+        },
+        "start": 536,
+        "end": 545,
+        "needsReview": false
+      },
+      {
+        "text": "therapy:",
+        "confidence": 96.809242,
+        "box": {
+          "x": 327,
+          "y": 878,
+          "width": 97,
+          "height": 23
+        },
+        "start": 546,
+        "end": 554,
+        "needsReview": false
+      },
+      {
+        "text": "adalimumab",
+        "confidence": 96.069534,
+        "box": {
+          "x": 435,
+          "y": 878,
+          "width": 148,
+          "height": 18
+        },
+        "start": 555,
+        "end": 565,
+        "needsReview": false
+      },
+      {
+        "text": "40",
+        "confidence": 96.704735,
+        "box": {
+          "x": 593,
+          "y": 878,
+          "width": 28,
+          "height": 18
+        },
+        "start": 566,
+        "end": 568,
+        "needsReview": false
+      },
+      {
+        "text": "mg",
+        "confidence": 94.790558,
+        "box": {
+          "x": 632,
+          "y": 883,
+          "width": 34,
+          "height": 18
+        },
+        "start": 569,
+        "end": 571,
+        "needsReview": false
+      },
+      {
+        "text": "every",
+        "confidence": 96.29509,
+        "box": {
+          "x": 677,
+          "y": 883,
+          "width": 66,
+          "height": 18
+        },
+        "start": 572,
+        "end": 577,
+        "needsReview": false
+      },
+      {
+        "text": "other",
+        "confidence": 96.396568,
+        "box": {
+          "x": 753,
+          "y": 878,
+          "width": 62,
+          "height": 18
+        },
+        "start": 578,
+        "end": 583,
+        "needsReview": false
+      },
+      {
+        "text": "week.",
+        "confidence": 96.66288,
+        "box": {
+          "x": 824,
+          "y": 878,
+          "width": 67,
+          "height": 18
+        },
+        "start": 584,
+        "end": 589,
+        "needsReview": false
+      },
+      {
+        "text": "Previous",
+        "confidence": 96.16526,
+        "box": {
+          "x": 102,
+          "y": 918,
+          "width": 98,
+          "height": 18
+        },
+        "start": 590,
+        "end": 598,
+        "needsReview": false
+      },
+      {
+        "text": "treatment:",
+        "confidence": 96.435623,
+        "box": {
+          "x": 210,
+          "y": 919,
+          "width": 125,
+          "height": 17
+        },
+        "start": 599,
+        "end": 609,
+        "needsReview": false
+      },
+      {
+        "text": "methotrexate",
+        "confidence": 96.91777,
+        "box": {
+          "x": 347,
+          "y": 918,
+          "width": 161,
+          "height": 18
+        },
+        "start": 610,
+        "end": 622,
+        "needsReview": false
+      },
+      {
+        "text": "15",
+        "confidence": 96.956947,
+        "box": {
+          "x": 519,
+          "y": 918,
+          "width": 26,
+          "height": 18
+        },
+        "start": 623,
+        "end": 625,
+        "needsReview": false
+      },
+      {
+        "text": "mg",
+        "confidence": 94.563889,
+        "box": {
+          "x": 557,
+          "y": 923,
+          "width": 34,
+          "height": 18
+        },
+        "start": 626,
+        "end": 628,
+        "needsReview": false
+      },
+      {
+        "text": "weekly,",
+        "confidence": 96.275291,
+        "box": {
+          "x": 602,
+          "y": 918,
+          "width": 88,
+          "height": 23
+        },
+        "start": 629,
+        "end": 636,
+        "needsReview": false
+      },
+      {
+        "text": "2026-08-01",
+        "confidence": 93.166328,
+        "box": {
+          "x": 702,
+          "y": 918,
+          "width": 135,
+          "height": 18
+        },
+        "start": 637,
+        "end": 647,
+        "needsReview": false
+      },
+      {
+        "text": "-",
+        "confidence": 91.299095,
+        "box": {
+          "x": 848,
+          "y": 928,
+          "width": 7,
+          "height": 2
+        },
+        "start": 648,
+        "end": 649,
+        "needsReview": false
+      },
+      {
+        "text": "2026-08-15.",
+        "confidence": 96.449554,
+        "box": {
+          "x": 865,
+          "y": 918,
+          "width": 143,
+          "height": 18
+        },
+        "start": 650,
+        "end": 661,
+        "needsReview": false
+      },
+      {
+        "text": "stopped",
+        "confidence": 96.220245,
+        "box": {
+          "x": 167,
+          "y": 956,
+          "width": 124,
+          "height": 44
+        },
+        "start": 662,
+        "end": 669,
+        "needsReview": false
+      },
+      {
+        "text": "MTX",
+        "confidence": 92.481712,
+        "box": {
+          "x": 312,
+          "y": 963,
+          "width": 67,
+          "height": 25
+        },
+        "start": 670,
+        "end": 673,
+        "needsReview": false
+      },
+      {
+        "text": "—",
+        "confidence": 38.072109,
+        "box": {
+          "x": 399,
+          "y": 973,
+          "width": 15,
+          "height": 3
+        },
+        "start": 674,
+        "end": 675,
+        "needsReview": true
+      },
+      {
+        "text": "ALT",
+        "confidence": 96.144806,
+        "box": {
+          "x": 431,
+          "y": 960,
+          "width": 67,
+          "height": 27
+        },
+        "start": 676,
+        "end": 679,
+        "needsReview": false
+      },
+      {
+        "text": "3x",
+        "confidence": 93.203117,
+        "box": {
+          "x": 517,
+          "y": 960,
+          "width": 37,
+          "height": 28
+        },
+        "start": 680,
+        "end": 682,
+        "needsReview": false
+      },
+      {
+        "text": "ULN",
+        "confidence": 92.643723,
+        "box": {
+          "x": 574,
+          "y": 957,
+          "width": 69,
+          "height": 29
+        },
+        "start": 683,
+        "end": 686,
+        "needsReview": false
+      },
+      {
+        "text": "No",
+        "confidence": 96.651154,
+        "box": {
+          "x": 102,
+          "y": 1028,
+          "width": 29,
+          "height": 18
+        },
+        "start": 687,
+        "end": 689,
+        "needsReview": false
+      },
+      {
+        "text": "other",
+        "confidence": 96.465683,
+        "box": {
+          "x": 142,
+          "y": 1028,
+          "width": 62,
+          "height": 18
+        },
+        "start": 690,
+        "end": 695,
+        "needsReview": false
+      },
+      {
+        "text": "prior",
+        "confidence": 96.802597,
+        "box": {
+          "x": 214,
+          "y": 1028,
+          "width": 54,
+          "height": 23
+        },
+        "start": 696,
+        "end": 701,
+        "needsReview": false
+      },
+      {
+        "text": "therapy",
+        "confidence": 95.920502,
+        "box": {
+          "x": 276,
+          "y": 1028,
+          "width": 92,
+          "height": 23
+        },
+        "start": 702,
+        "end": 709,
+        "needsReview": false
+      },
+      {
+        "text": "records",
+        "confidence": 96.381554,
+        "box": {
+          "x": 379,
+          "y": 1028,
+          "width": 86,
+          "height": 18
+        },
+        "start": 710,
+        "end": 717,
+        "needsReview": false
+      },
+      {
+        "text": "supplied.",
+        "confidence": 96.249779,
+        "box": {
+          "x": 475,
+          "y": 1028,
+          "width": 105,
+          "height": 23
+        },
+        "start": 718,
+        "end": 727,
+        "needsReview": false
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM",
+    "orientation": {
+      "pageRotation": 0,
+      "scores": {
+        "0": 7374.540590999998,
+        "180": 918.0857860000001
+      }
+    },
+    "deskewDegrees": 0,
+    "readImage": "packet-056.png",
+    "width": 1700,
+    "height": 2200
+  },
+  "scores": {
+    "entities": {
+      "tp": 16,
+      "predicted": 16,
+      "gold": 17,
+      "exactQuote": 14
+    },
+    "criteria": {
+      "correct": 3,
+      "total": 5
+    },
+    "cer": 0.008275862068965517,
+    "edits": 6,
+    "chars": 725,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [
+    "lab (supported): draft evidence_found, pipeline needs_review",
+    "prior (intolerance): draft evidence_found, pipeline needs_review",
+    "Extraction: 16 of 17 draft values found, 0 extra",
+    "6 OCR character edits"
+  ],
+  "latency": {
+    "renderAndOcrMs": 4407.828791999986,
+    "serviceMs": 23.060583000000406
+  }
+}

@@ -1,12 +1,39 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-040",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "glp1-t2d",
   "source_file": "eval/packets/packet-040.md",
+  "group": "low-contrast",
+  "tags": [
+    "page:letter",
+    "date:us-slash",
+    "date-reading:forced",
+    "drug-name:generic",
+    "dose-format:route"
+  ],
+  "date_reading": {
+    "status": "forced",
+    "order": "mdy"
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-09-26",
+      "source_span": {
+        "start": 27,
+        "end": 52,
+        "text": "Request date: 09/26/2026."
+      },
+      "date": {
+        "written": "09/26/2026",
+        "format": "us-slash",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Oren Dunvale",
@@ -22,18 +49,8 @@
       "value": 43,
       "source_span": {
         "start": 88,
-        "end": 102,
-        "text": "Age: 43 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
+        "end": 95,
+        "text": "Age: 43"
       },
       "reviewed": false
     },
@@ -41,8 +58,8 @@
       "type": "provider",
       "value": "Dr. Rowan Vale",
       "source_span": {
-        "start": 103,
-        "end": 155,
+        "start": 96,
+        "end": 148,
         "text": "From: Dr. Rowan Vale, fictional requesting provider."
       },
       "reviewed": false
@@ -51,29 +68,29 @@
       "type": "requested_medication",
       "value": "semaglutide",
       "source_span": {
-        "start": 156,
-        "end": 191,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 149,
+        "end": 170,
+        "text": "Request: semaglutide."
       },
       "reviewed": false
     },
     {
-      "type": "requested_dose",
-      "value": "0.5 mg weekly",
+      "type": "history_condition",
+      "value": "type 2 diabetes mellitus",
       "source_span": {
-        "start": 156,
-        "end": 191,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 248,
+        "end": 300,
+        "text": "Past medical history: type 2 diabetes, hypertension."
       },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Type 2 diabetes mellitus",
+      "type": "history_condition",
+      "value": "hypertension",
       "source_span": {
-        "start": 297,
-        "end": 333,
-        "text": "Diagnosis: Type 2 diabetes mellitus."
+        "start": 248,
+        "end": 300,
+        "text": "Past medical history: type 2 diabetes, hypertension."
       },
       "reviewed": false
     },
@@ -85,39 +102,24 @@
         "unit": "%"
       },
       "source_span": {
-        "start": 419,
-        "end": 452,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 386,
+        "end": 429,
+        "text": "Hemoglobin A1c: 8.6 %, measured 12/27/2025."
       },
       "reviewed": false
     },
     {
       "type": "measurement_date",
-      "value": "2026-09-15",
+      "value": "2025-12-27",
       "source_span": {
-        "start": 419,
-        "end": 452,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 386,
+        "end": 429,
+        "text": "Hemoglobin A1c: 8.6 %, measured 12/27/2025."
       },
-      "reviewed": false
-    },
-    {
-      "type": "prior_medication",
-      "value": "metformin",
-      "source_span": {
-        "start": 527,
-        "end": 615,
-        "text": "Prior therapy: metformin 1000 mg twice daily; treatment dates and response not supplied."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_dose",
-      "value": "1000 mg twice daily",
-      "source_span": {
-        "start": 527,
-        "end": 615,
-        "text": "Prior therapy: metformin 1000 mg twice daily; treatment dates and response not supplied."
+      "date": {
+        "written": "12/27/2025",
+        "format": "us-slash",
+        "ambiguous": false
       },
       "reviewed": false
     },
@@ -125,9 +127,74 @@
       "type": "medication_list_dose",
       "value": "0.5 mg weekly",
       "source_span": {
-        "start": 473,
-        "end": 526,
-        "text": "Current requested therapy: semaglutide 0.5 mg weekly."
+        "start": 450,
+        "end": 516,
+        "text": "Current requested therapy: semaglutide 0.5 mg subcut every 7 days."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2026-07-27",
+      "source_span": {
+        "start": 517,
+        "end": 593,
+        "text": "Prior: metformin 1000 mg by mouth twice a day from 07/27/2026 to 08/10/2026."
+      },
+      "date": {
+        "written": "07/27/2026",
+        "format": "us-slash",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-08-10",
+      "source_span": {
+        "start": 517,
+        "end": 593,
+        "text": "Prior: metformin 1000 mg by mouth twice a day from 07/27/2026 to 08/10/2026."
+      },
+      "date": {
+        "written": "08/10/2026",
+        "format": "us-slash",
+        "ambiguous": true,
+        "readings": [
+          "2026-08-10",
+          "2026-10-08"
+        ],
+        "resolved_by": "forced"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "metformin",
+      "source_span": {
+        "start": 517,
+        "end": 593,
+        "text": "Prior: metformin 1000 mg by mouth twice a day from 07/27/2026 to 08/10/2026."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "1000 mg twice daily",
+      "source_span": {
+        "start": 517,
+        "end": 593,
+        "text": "Prior: metformin 1000 mg by mouth twice a day from 07/27/2026 to 08/10/2026."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_outcome",
+      "value": "intolerance",
+      "source_span": {
+        "start": 594,
+        "end": 621,
+        "text": "Stopped due to intolerance."
       },
       "reviewed": false
     }
@@ -139,42 +206,45 @@
       "evidence_spans": [
         {
           "start": 88,
-          "end": 102,
-          "text": "Age: 43 years."
+          "end": 95,
+          "text": "Age: 43"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Age 43 is documented.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
       "criterion_id": "diagnosis",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 297,
-          "end": 333,
-          "text": "Diagnosis: Type 2 diabetes mellitus."
+          "start": 248,
+          "end": 300,
+          "text": "Past medical history: type 2 diabetes, hypertension."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Type 2 diabetes mellitus appears only in the past medical history. No document names it as the reason for this request.",
+      "scenario": "history-only",
       "reviewed": false
     },
     {
       "criterion_id": "lab",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 419,
-          "end": 452,
-          "text": "A1c: 8.6 %; collected 2026-09-15."
+          "start": 386,
+          "end": 429,
+          "text": "Hemoglobin A1c: 8.6 %, measured 12/27/2025."
         },
         {
           "start": 27,
           "end": 52,
-          "text": "Request date: 2026-10-01."
+          "text": "Request date: 09/26/2026."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The most recent A1c is 273 days before the request, outside the 180-day window.",
+      "scenario": "stale",
       "reviewed": false
     },
     {
@@ -182,31 +252,32 @@
       "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 527,
-          "end": 615,
-          "text": "Prior therapy: metformin 1000 mg twice daily; treatment dates and response not supplied."
+          "start": 517,
+          "end": 593,
+          "text": "Prior: metformin 1000 mg by mouth twice a day from 07/27/2026 to 08/10/2026."
+        },
+        {
+          "start": 594,
+          "end": 621,
+          "text": "Stopped due to intolerance."
         }
       ],
-      "reason": "The record does not establish trial duration or intolerance.",
+      "reason": "Metformin intolerance is stated without a reason.",
+      "scenario": "intolerance-no-reason",
       "reviewed": false
     },
     {
       "criterion_id": "dose",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 156,
-          "end": 191,
-          "text": "Request: semaglutide 0.5 mg weekly."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No dose is documented for the requested semaglutide.",
+      "scenario": "blank",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

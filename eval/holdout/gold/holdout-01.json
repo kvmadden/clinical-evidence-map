@@ -1,0 +1,105 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-01",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/holdout/packets/holdout-01.md",
+  "group": "clean-render",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "SOAP layout; complete dated trial; compact injection sig.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 114,
+          "end": 127,
+          "text": "Age: 54 years"
+        }
+      ],
+      "reason": "The stated age exceeds 18.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 245,
+          "end": 300,
+          "text": "A: T2DM is the indication for this semaglutide request."
+        }
+      ],
+      "reason": "T2DM is explicitly linked to this request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 86,
+          "end": 113,
+          "text": "Request entered: 2026-10-03"
+        },
+        {
+          "start": 219,
+          "end": 244,
+          "text": "HbA1c: 8.1% on 2026-09-18"
+        }
+      ],
+      "reason": "The A1c precedes the request by 15 days.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 349,
+          "end": 405,
+          "text": "Metformin 1000 mg PO BID, 2026-01-10 through 2026-09-30."
+        },
+        {
+          "start": 406,
+          "end": 450,
+          "text": "A1c before first tablet: 9.0% on 2026-01-09."
+        },
+        {
+          "start": 451,
+          "end": 492,
+          "text": "A1c during treatment: 8.4% on 2026-05-12."
+        }
+      ],
+      "reason": "A stated-dose trial exceeds 90 days, with baseline and a qualifying follow-up more than 90 days after initiation.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 301,
+          "end": 329,
+          "text": "P: Semaglutide 0.5mg SQ q7d."
+        }
+      ],
+      "reason": "The requested dose is 0.5 mg weekly.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

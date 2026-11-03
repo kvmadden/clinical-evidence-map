@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-06",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/holdout/packets/holdout-06.md",
+  "group": "rotation-7deg",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Unresolved month/day order changes A1c recency; no criterion is fully supported.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 123,
+          "end": 143,
+          "text": "Age stated: 17 years"
+        }
+      ],
+      "reason": "The stated age is below 18.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The request is for appetite suppression and never names type 2 diabetes.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 18,
+          "end": 40,
+          "text": "Entry date: 09/10/2026"
+        },
+        {
+          "start": 265,
+          "end": 296,
+          "text": "HbA1c 7.4% collected 04/03/2026"
+        }
+      ],
+      "reason": "Month-first reading gives a result 160 days before the request; day-first gives 219 days. Nothing resolves the order.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "Glipizide is the only prior drug documented.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 216,
+          "end": 247,
+          "text": "Order directions: 0.25mg SQ q7d"
+        }
+      ],
+      "reason": "The requested dose is below 0.5 mg weekly.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

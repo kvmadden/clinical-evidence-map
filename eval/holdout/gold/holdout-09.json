@@ -1,0 +1,105 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-09",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout/packets/holdout-09.md",
+  "group": "orientation",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Referral letter with complete methotrexate course and paired skin measurements.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 45,
+          "end": 85,
+          "text": "Patient: Savi Norlen (fictional), age 44"
+        }
+      ],
+      "reason": "The stated age exceeds 18.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 127,
+          "end": 194,
+          "text": "I am requesting adalimumab for moderate-to-severe plaque psoriasis."
+        }
+      ],
+      "reason": "The condition and qualifying severity are explicitly linked to the request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 28,
+          "end": 44,
+          "text": "Dated 2026-10-21"
+        },
+        {
+          "start": 488,
+          "end": 535,
+          "text": "Latest skin measurement: BSA 16% on 2026-10-14."
+        }
+      ],
+      "reason": "BSA is at least 10% and was measured seven days before the request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 344,
+          "end": 399,
+          "text": "Methotrexate 15 mg PO weekly, 2026-01-02 to 2026-08-28."
+        },
+        {
+          "start": 400,
+          "end": 440,
+          "text": "BSA before treatment: 19% on 2026-01-01."
+        },
+        {
+          "start": 441,
+          "end": 487,
+          "text": "BSA while taking treatment: 14% on 2026-04-20."
+        }
+      ],
+      "reason": "The stated-dose course exceeds 90 days with baseline and a later BSA above 3% more than 90 days after initiation.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 238,
+          "end": 295,
+          "text": "The maintenance prescription is 40mg SC every other week."
+        }
+      ],
+      "reason": "The adalimumab maintenance dose matches.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

@@ -1,39 +1,68 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-039",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "pcsk9",
   "source_file": "eval/packets/packet-039.md",
+  "group": "smudge",
+  "tags": [
+    "page:letter",
+    "date:us-short",
+    "date-reading:forced",
+    "drug-name:brand",
+    "dose-format:compact",
+    "misspelling",
+    "fax-style-header"
+  ],
+  "date_reading": {
+    "status": "forced",
+    "order": "mdy"
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
     {
-      "type": "patient_name",
-      "value": "Lina Dunvale",
+      "type": "fax_received_date",
+      "value": "2026-10-07",
       "source_span": {
-        "start": 53,
-        "end": 87,
-        "text": "Patient: Lina Dunvale (fictional)."
+        "start": 0,
+        "end": 44,
+        "text": "Fax received: 7 Oct 2026 09:14. Page 1 of 1."
       },
-      "reviewed": false
-    },
-    {
-      "type": "age",
-      "value": 42,
-      "source_span": {
-        "start": 88,
-        "end": 102,
-        "text": "Age: 42 years."
+      "date": {
+        "written": "7 Oct 2026",
+        "format": "text-dmy",
+        "ambiguous": false
       },
       "reviewed": false
     },
     {
       "type": "request_date",
-      "value": "2026-10-01",
+      "value": "2026-10-06",
       "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
+        "start": 72,
+        "end": 94,
+        "text": "Request date: 10-6-26."
+      },
+      "date": {
+        "written": "10-6-26",
+        "format": "us-short",
+        "ambiguous": true,
+        "readings": [
+          "2026-10-06",
+          "2026-06-10"
+        ],
+        "resolved_by": "forced"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "patient_name",
+      "value": "Lina Dunvale",
+      "source_span": {
+        "start": 95,
+        "end": 129,
+        "text": "Patient: Lina Dunvale (fictional)."
       },
       "reviewed": false
     },
@@ -41,8 +70,8 @@
       "type": "provider",
       "value": "Dr. Rowan Vale",
       "source_span": {
-        "start": 103,
-        "end": 155,
+        "start": 130,
+        "end": 182,
         "text": "From: Dr. Rowan Vale, fictional requesting provider."
       },
       "reviewed": false
@@ -51,9 +80,9 @@
       "type": "requested_medication",
       "value": "evolocumab",
       "source_span": {
-        "start": 156,
-        "end": 197,
-        "text": "Request: evolocumab 140 mg every 2 weeks."
+        "start": 183,
+        "end": 220,
+        "text": "Request: Repatha 140mg every 2 weeks."
       },
       "reviewed": false
     },
@@ -61,19 +90,57 @@
       "type": "requested_dose",
       "value": "140 mg every 2 weeks",
       "source_span": {
-        "start": 156,
-        "end": 197,
-        "text": "Request: evolocumab 140 mg every 2 weeks."
+        "start": 183,
+        "end": 220,
+        "text": "Request: Repatha 140mg every 2 weeks."
       },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Established atherosclerotic cardiovascular disease",
+      "type": "indication",
+      "value": "atherosclerotic cardiovascular disease",
+      "source_span": {
+        "start": 221,
+        "end": 291,
+        "text": "Reason for request: established atherosclerotc cardiovascular disease."
+      },
+      "misspelling": {
+        "written": "established atherosclerotc cardiovascular disease",
+        "intended": "atherosclerotic cardiovascular disease",
+        "pharmacist_accepts": true
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "atherosclerotic cardiovascular disease",
+        "certainty": "confirmed"
+      },
       "source_span": {
         "start": 329,
-        "end": 391,
-        "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
+        "end": 409,
+        "text": "Assessment: established atherosclerotc cardiovascular disease, LDL-C above goal."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "conflicting_request_date",
+      "value": "2026-09-06",
+      "source_span": {
+        "start": 410,
+        "end": 448,
+        "text": "Request date recorded in note: 9-6-26."
+      },
+      "date": {
+        "written": "9-6-26",
+        "format": "us-short",
+        "ambiguous": true,
+        "readings": [
+          "2026-09-06",
+          "2026-06-09"
+        ],
+        "resolved_by": "forced"
       },
       "reviewed": false
     },
@@ -81,43 +148,28 @@
       "type": "measurement",
       "value": {
         "name": "LDL-C",
-        "value": 132.0,
+        "value": 132,
         "unit": "mg/dL"
       },
       "source_span": {
-        "start": 477,
-        "end": 516,
-        "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
+        "start": 534,
+        "end": 570,
+        "text": "LDL-C: 132 mg/dL; collected 9-20-26."
       },
       "reviewed": false
     },
     {
       "type": "measurement_date",
-      "value": "2026-09-15",
+      "value": "2026-09-20",
       "source_span": {
-        "start": 477,
-        "end": 516,
-        "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
+        "start": 534,
+        "end": 570,
+        "text": "LDL-C: 132 mg/dL; collected 9-20-26."
       },
-      "reviewed": false
-    },
-    {
-      "type": "prior_medication",
-      "value": "atorvastatin",
-      "source_span": {
-        "start": 597,
-        "end": 680,
-        "text": "Prior therapy: atorvastatin 80 mg daily; treatment dates and response not supplied."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_dose",
-      "value": "80 mg daily",
-      "source_span": {
-        "start": 597,
-        "end": 680,
-        "text": "Prior therapy: atorvastatin 80 mg daily; treatment dates and response not supplied."
+      "date": {
+        "written": "9-20-26",
+        "format": "us-short",
+        "ambiguous": false
       },
       "reviewed": false
     },
@@ -125,9 +177,39 @@
       "type": "medication_list_dose",
       "value": "140 mg every 2 weeks",
       "source_span": {
-        "start": 537,
-        "end": 596,
-        "text": "Current requested therapy: evolocumab 140 mg every 2 weeks."
+        "start": 591,
+        "end": 646,
+        "text": "Current requested therapy: Repatha 140mg every 2 weeks."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "atorvastatin",
+      "source_span": {
+        "start": 647,
+        "end": 720,
+        "text": "Atorvastatin not started: contraindicated due to decompensated cirrhosis."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_outcome",
+      "value": "contraindication",
+      "source_span": {
+        "start": 647,
+        "end": 720,
+        "text": "Atorvastatin not started: contraindicated due to decompensated cirrhosis."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_reason",
+      "value": "decompensated cirrhosis",
+      "source_span": {
+        "start": 647,
+        "end": 720,
+        "text": "Atorvastatin not started: contraindicated due to decompensated cirrhosis."
       },
       "reviewed": false
     }
@@ -135,15 +217,10 @@
   "criterion_evidence": [
     {
       "criterion_id": "adult",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 88,
-          "end": 102,
-          "text": "Age: 42 years."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No age is documented.",
+      "scenario": "blank",
       "reviewed": false
     },
     {
@@ -151,43 +228,56 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
+          "start": 221,
+          "end": 291,
+          "text": "Reason for request: established atherosclerotc cardiovascular disease."
+        },
+        {
           "start": 329,
-          "end": 391,
-          "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
+          "end": 409,
+          "text": "Assessment: established atherosclerotc cardiovascular disease, LDL-C above goal."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The request names atherosclerotic cardiovascular disease as its reason.",
+      "scenario": "misspelled",
       "reviewed": false
     },
     {
       "criterion_id": "lab",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 477,
-          "end": 516,
-          "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
+          "start": 534,
+          "end": 570,
+          "text": "LDL-C: 132 mg/dL; collected 9-20-26."
         },
         {
-          "start": 27,
-          "end": 52,
-          "text": "Request date: 2026-10-01."
+          "start": 72,
+          "end": 94,
+          "text": "Request date: 10-6-26."
+        },
+        {
+          "start": 410,
+          "end": 448,
+          "text": "Request date recorded in note: 9-6-26."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Two different request dates are documented. The 180-day window cannot be confirmed.",
+      "scenario": "conflict-date",
       "reviewed": false
     },
     {
       "criterion_id": "prior",
-      "status": "needs_review",
+      "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 597,
-          "end": 680,
-          "text": "Prior therapy: atorvastatin 80 mg daily; treatment dates and response not supplied."
+          "start": 647,
+          "end": 720,
+          "text": "Atorvastatin not started: contraindicated due to decompensated cirrhosis."
         }
       ],
-      "reason": "The record does not establish trial duration or intolerance.",
+      "reason": "Atorvastatin contraindication is documented with its reason: decompensated cirrhosis.",
+      "scenario": "contraindication",
       "reviewed": false
     },
     {
@@ -195,18 +285,19 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 156,
-          "end": 197,
-          "text": "Request: evolocumab 140 mg every 2 weeks."
+          "start": 183,
+          "end": 220,
+          "text": "Request: Repatha 140mg every 2 weeks."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The requested evolocumab dose 140 mg every 2 weeks matches the fictional rule.",
+      "scenario": "supported",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

@@ -2,31 +2,34 @@
 packet_id: packet-044
 fictional: true
 criteria_id: biologic-psoriasis
-quality_group: conflicting-dose
-quality_plan: "Letter and medication list give different requested doses."
-render_status: source_text_only
+group: low-contrast
+page_style: letter
+date_style: text-mdy
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Letter date: Sep 28, 2026.
 Patient: Nolan Reedwell (fictional).
-Age: 47 years.
+Age: 47
 From: Dr. Rowan Vale, fictional requesting provider.
 Request: adalimumab 40 mg every other week.
-Please review the enclosed records for Moderate-to-severe plaque psoriasis.
+Indication for this request: possible psoriasis versus eczema.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Moderate-to-severe plaque psoriasis.
+Visit date: Sep 17, 2026.
+Assessment: possible psoriasis versus eczema.
+Past medical history: hypertension, seasonal allergies.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-Body surface area: 14 %; collected 2026-09-15.
+BSA involvement 14 percent (drawn Sep 12, 2026)
 
 MEDICATION HISTORY
-Current requested therapy: adalimumab 999 mg daily.
-Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: adalimumab 40 mg every other week.
+Previous treatment: methotrexate 15 mg weekly, Mar 29, 2026 - Jul 29, 2026.
+Baseline before methotrexate: BSA 18 % on Mar 22, 2026.
+On methotrexate: BSA 15 % on Jul 17, 2026; goal 3 % or less not met.
 No other prior therapy records supplied.

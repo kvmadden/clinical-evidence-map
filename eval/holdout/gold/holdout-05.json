@@ -1,0 +1,87 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-05",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/holdout/packets/holdout-05.md",
+  "group": "low-contrast",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Question-and-answer form; no criterion is fully supported.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The age field is blank.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 151,
+          "end": 207,
+          "text": "Why now? Possible type 2 diabetes; confirmation pending."
+        }
+      ],
+      "reason": "The indication remains unconfirmed.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No laboratory value is documented.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 274,
+          "end": 329,
+          "text": "Previous glucose medicine? Metformin 500 mg PO nightly."
+        },
+        {
+          "start": 330,
+          "end": 369,
+          "text": "How long? Six weeks, then discontinued."
+        },
+        {
+          "start": 370,
+          "end": 407,
+          "text": "Why discontinued? Patient preference."
+        },
+        {
+          "start": 408,
+          "end": 442,
+          "text": "Before and after A1c? not provided"
+        }
+      ],
+      "reason": "The trial is shorter than 90 days and lacks paired values; preference is not a documented intolerance.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "Neither requested strength nor frequency is supplied.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

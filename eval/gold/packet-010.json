@@ -1,18 +1,62 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-010",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "glp1-t2d",
   "source_file": "eval/packets/packet-010.md",
+  "group": "rotation-7deg",
+  "tags": [
+    "page:letter",
+    "date:us-short",
+    "date-reading:forced",
+    "drug-name:brand",
+    "dose-format:compact",
+    "blank-field",
+    "fax-style-header"
+  ],
+  "date_reading": {
+    "status": "forced",
+    "order": "mdy"
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "fax_received_date",
+      "value": "2026-09-28",
+      "source_span": {
+        "start": 0,
+        "end": 45,
+        "text": "Fax received: 28 Sep 2026 09:14. Page 1 of 1."
+      },
+      "date": {
+        "written": "28 Sep 2026",
+        "format": "text-dmy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "request_date",
+      "value": "2026-09-27",
+      "source_span": {
+        "start": 73,
+        "end": 95,
+        "text": "Request date: 9-27-26."
+      },
+      "date": {
+        "written": "9-27-26",
+        "format": "us-short",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Oren Brookvale",
       "source_span": {
-        "start": 53,
-        "end": 89,
+        "start": 96,
+        "end": 132,
         "text": "Patient: Oren Brookvale (fictional)."
       },
       "reviewed": false
@@ -21,19 +65,9 @@
       "type": "age",
       "value": 42,
       "source_span": {
-        "start": 90,
-        "end": 104,
+        "start": 133,
+        "end": 147,
         "text": "Age: 42 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
       },
       "reviewed": false
     },
@@ -41,8 +75,8 @@
       "type": "provider",
       "value": "Dr. Rowan Vale",
       "source_span": {
-        "start": 105,
-        "end": 157,
+        "start": 148,
+        "end": 200,
         "text": "From: Dr. Rowan Vale, fictional requesting provider."
       },
       "reviewed": false
@@ -51,103 +85,65 @@
       "type": "requested_medication",
       "value": "semaglutide",
       "source_span": {
-        "start": 158,
-        "end": 193,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 201,
+        "end": 218,
+        "text": "Request: Ozempic."
       },
       "reviewed": false
     },
     {
-      "type": "requested_dose",
-      "value": "0.5 mg weekly",
-      "source_span": {
-        "start": 158,
-        "end": 193,
-        "text": "Request: semaglutide 0.5 mg weekly."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "diagnosis",
-      "value": "Type 2 diabetes mellitus",
-      "source_span": {
-        "start": 299,
-        "end": 335,
-        "text": "Diagnosis: Type 2 diabetes mellitus."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "measurement",
+      "type": "indication",
       "value": {
-        "name": "A1c",
-        "value": 8.6,
-        "unit": "%"
+        "condition": "type 2 diabetes mellitus",
+        "certainty": "unconfirmed"
       },
       "source_span": {
-        "start": 421,
-        "end": 454,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "measurement_date",
-      "value": "2026-09-15",
-      "source_span": {
-        "start": 421,
-        "end": 454,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 219,
+        "end": 280,
+        "text": "Requested for: suspected type 2 diabetes, repeat A1c pending."
       },
       "reviewed": false
     },
     {
-      "type": "prior_medication",
-      "value": "metformin",
+      "type": "assessment",
+      "value": {
+        "condition": "type 2 diabetes mellitus",
+        "certainty": "unconfirmed"
+      },
       "source_span": {
-        "start": 529,
-        "end": 646,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "start": 318,
+        "end": 376,
+        "text": "Assessment: suspected type 2 diabetes, repeat A1c pending."
       },
       "reviewed": false
     },
     {
-      "type": "prior_dose",
-      "value": "1000 mg twice daily",
+      "type": "history_condition",
+      "value": "hypertension",
       "source_span": {
-        "start": 529,
-        "end": 646,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "start": 377,
+        "end": 432,
+        "text": "Past medical history: hypertension, seasonal allergies."
       },
       "reviewed": false
     },
     {
-      "type": "prior_start_date",
-      "value": "2026-04-01",
+      "type": "history_condition",
+      "value": "seasonal allergies",
       "source_span": {
-        "start": 529,
-        "end": 646,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "start": 377,
+        "end": 432,
+        "text": "Past medical history: hypertension, seasonal allergies."
       },
       "reviewed": false
     },
     {
-      "type": "prior_stop_date",
-      "value": "2026-08-01",
+      "type": "blank_field",
+      "value": "lab",
       "source_span": {
-        "start": 529,
-        "end": 646,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_outcome",
-      "value": "inadequate response",
-      "source_span": {
-        "start": 529,
-        "end": 646,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "start": 518,
+        "end": 553,
+        "text": "A1c: ______  Date collected: ______"
       },
       "reviewed": false
     },
@@ -155,9 +151,84 @@
       "type": "medication_list_dose",
       "value": "0.5 mg weekly",
       "source_span": {
-        "start": 475,
-        "end": 528,
-        "text": "Current requested therapy: semaglutide 0.5 mg weekly."
+        "start": 574,
+        "end": 627,
+        "text": "Current requested therapy: Ozempic 0.5mg once weekly."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2026-07-28",
+      "source_span": {
+        "start": 628,
+        "end": 680,
+        "text": "Prior: metformin 1000mg bid from 7-28-26 to 8-11-26."
+      },
+      "date": {
+        "written": "7-28-26",
+        "format": "us-short",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-08-11",
+      "source_span": {
+        "start": 628,
+        "end": 680,
+        "text": "Prior: metformin 1000mg bid from 7-28-26 to 8-11-26."
+      },
+      "date": {
+        "written": "8-11-26",
+        "format": "us-short",
+        "ambiguous": true,
+        "readings": [
+          "2026-08-11",
+          "2026-11-08"
+        ],
+        "resolved_by": "forced"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "metformin",
+      "source_span": {
+        "start": 628,
+        "end": 680,
+        "text": "Prior: metformin 1000mg bid from 7-28-26 to 8-11-26."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "1000 mg twice daily",
+      "source_span": {
+        "start": 628,
+        "end": 680,
+        "text": "Prior: metformin 1000mg bid from 7-28-26 to 8-11-26."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_outcome",
+      "value": "intolerance",
+      "source_span": {
+        "start": 681,
+        "end": 724,
+        "text": "Stopped for persistent nausea and diarrhea."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_reason",
+      "value": "persistent nausea and diarrhea",
+      "source_span": {
+        "start": 681,
+        "end": 724,
+        "text": "Stopped for persistent nausea and diarrhea."
       },
       "reviewed": false
     }
@@ -168,43 +239,40 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 90,
-          "end": 104,
+          "start": 133,
+          "end": 147,
           "text": "Age: 42 years."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Age 42 is documented.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
       "criterion_id": "diagnosis",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 299,
-          "end": 335,
-          "text": "Diagnosis: Type 2 diabetes mellitus."
+          "start": 219,
+          "end": 280,
+          "text": "Requested for: suspected type 2 diabetes, repeat A1c pending."
+        },
+        {
+          "start": 318,
+          "end": 376,
+          "text": "Assessment: suspected type 2 diabetes, repeat A1c pending."
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Type 2 diabetes mellitus is stated as suspected or possible, not confirmed.",
+      "scenario": "unconfirmed",
       "reviewed": false
     },
     {
       "criterion_id": "lab",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 421,
-          "end": 454,
-          "text": "A1c: 8.6 %; collected 2026-09-15."
-        },
-        {
-          "start": 27,
-          "end": 52,
-          "text": "Request date: 2026-10-01."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The A1c field is blank.",
+      "scenario": "blank",
       "reviewed": false
     },
     {
@@ -212,31 +280,32 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 529,
-          "end": 646,
-          "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+          "start": 628,
+          "end": 680,
+          "text": "Prior: metformin 1000mg bid from 7-28-26 to 8-11-26."
+        },
+        {
+          "start": 681,
+          "end": 724,
+          "text": "Stopped for persistent nausea and diarrhea."
         }
       ],
-      "reason": "The documented trial runs 122 days, meeting the fictional 90-day requirement.",
+      "reason": "Metformin intolerance is documented with its reason: persistent nausea and diarrhea.",
+      "scenario": "intolerance",
       "reviewed": false
     },
     {
       "criterion_id": "dose",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 158,
-          "end": 193,
-          "text": "Request: semaglutide 0.5 mg weekly."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No dose is documented for the requested semaglutide.",
+      "scenario": "blank",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packets"
+  ],
+  "properties": {
+    "packets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "packet_id",
+          "criteria_id",
+          "render",
+          "text",
+          "labels",
+          "variation_notes"
+        ],
+        "properties": {
+          "packet_id": {
+            "type": "string"
+          },
+          "criteria_id": {
+            "type": "string",
+            "enum": [
+              "glp1-t2d",
+              "biologic-psoriasis",
+              "pcsk9"
+            ]
+          },
+          "render": {
+            "type": "string",
+            "enum": [
+              "clean",
+              "fax-noise",
+              "choppy",
+              "smudge",
+              "low-contrast",
+              "rotate-7",
+              "turn-180",
+              "turn-90",
+              "turn-270",
+              "annotations"
+            ]
+          },
+          "text": {
+            "type": "string"
+          },
+          "variation_notes": {
+            "type": "string"
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "criterion_id",
+                "status",
+                "evidence_lines",
+                "reason"
+              ],
+              "properties": {
+                "criterion_id": {
+                  "type": "string",
+                  "enum": [
+                    "adult",
+                    "diagnosis",
+                    "lab",
+                    "prior",
+                    "dose"
+                  ]
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "evidence_found",
+                    "missing",
+                    "needs_review"
+                  ]
+                },
+                "evidence_lines": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,9 +2,9 @@
 packet_id: packet-011
 fictional: true
 criteria_id: biologic-psoriasis
-quality_group: handwriting
-quality_plan: "Complete text; later render the medication history in a handwriting-like font."
-render_status: source_text_only
+group: ai-handwriting
+page_style: letter
+date_style: iso
 names: all_fictional
 identifiers: none
 ---
@@ -16,17 +16,18 @@ Patient: Mira Ashmere (fictional).
 Age: 43 years.
 From: Dr. Rowan Vale, fictional requesting provider.
 Request: adalimumab 40 mg every other week.
-Please review the enclosed records for Moderate-to-severe plaque psoriasis.
+Indication for this request: Moderate-to-severe plaque psoriasis.
 
 CLINICAL NOTES
 Visit date: 2026-09-20.
-Diagnosis: Moderate-to-severe plaque psoriasis.
+Assessment: Moderate-to-severe plaque psoriasis, active on prior therapy.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
 Body surface area: 14 %; collected 2026-09-15.
 
 MEDICATION HISTORY
-Current requested therapy: adalimumab 40 mg every other week.
-Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current: adalimumab 40 mg SC every other week
+Prior: methotrexate 15 mg weekly from 04/01/2026 to 08/01/2026
+BSA 18% on 03/25/2026, 15% on 07/20/2026 on MTX. Goal 3% or less not met
 No other prior therapy records supplied.

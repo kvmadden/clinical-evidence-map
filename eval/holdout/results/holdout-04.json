@@ -1,0 +1,1500 @@
+{
+  "packet_id": "holdout-04",
+  "criteria_id": "glp1-t2d",
+  "group": "smudge",
+  "tags": [
+    "render:smudge"
+  ],
+  "render": {
+    "font": "roboto-mono",
+    "effects": [
+      "speckle-light",
+      "smudge"
+    ],
+    "rotate": 0,
+    "handwriting": [],
+    "annotations": []
+  },
+  "groupLabel": "Simulated smudges",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "INJECTION CHECKLIST\nPrepared: [date-a]\nPatient: [name] [name] (fictional)\nPrescriber: Dr. [name] [name] (fictional)\n[x] Age confirmed: 28 years\n[x] Treating type 2 diabetes with this semaglutide order\n[x] Prescription: semaglutide 1 mg SC QW\n[ 1 Alc attachment: ____\nMedication discussion:\n[x] Sitagliptin 160 mg QD used for six months\n[x] Home glucose log reviewed\n[ ] Other oral medication course: ____\n[x] Injection teaching requested\n[ ] Follow-up appointment: ____\nAttested by [name] [name] (fictional)\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 6
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points",
+    "dateHandling": "shifted",
+    "dates": [
+      {
+        "token": "[date-a]",
+        "readings": [
+          "2131-11-22"
+        ],
+        "order": "text"
+      }
+    ]
+  },
+  "dateReading": {
+    "status": "none",
+    "order": null
+  },
+  "readerCoverage": {
+    "lines": 16,
+    "pages": 1,
+    "blockers": {
+      "adult": [],
+      "diagnosis": [],
+      "lab": [],
+      "prior": [],
+      "dose": []
+    },
+    "mentions": [],
+    "complete": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "request_date",
+      "value": "2131-11-22",
+      "source_span": {
+        "start": 20,
+        "end": 38,
+        "text": "Prepared: [date-a]"
+      },
+      "value_span": {
+        "start": 30,
+        "end": 38
+      },
+      "attrs": {
+        "label": "Prepared"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 198,
+          "width": 123,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "age",
+      "value": 28,
+      "source_span": {
+        "start": 116,
+        "end": 143,
+        "text": "[x] Age confirmed: 28 years"
+      },
+      "value_span": {
+        "start": 135,
+        "end": 137
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e3",
+      "type": "indication",
+      "value": "type 2 diabetes mellitus",
+      "source_span": {
+        "start": 144,
+        "end": 200,
+        "text": "[x] Treating type 2 diabetes with this semaglutide order"
+      },
+      "normalization": {
+        "system": "ICD-10-CM",
+        "code": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications"
+      },
+      "value_span": {
+        "start": 157,
+        "end": 172
+      },
+      "attrs": {
+        "checked": "checked",
+        "family": "t2dm"
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e4",
+      "type": "requested_medication",
+      "value": "semaglutide",
+      "source_span": {
+        "start": 144,
+        "end": 200,
+        "text": "[x] Treating type 2 diabetes with this semaglutide order"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "1991302",
+        "display": "semaglutide"
+      },
+      "value_span": {
+        "start": 183,
+        "end": 194
+      },
+      "match": {
+        "kind": "exact",
+        "written": "semaglutide",
+        "confidence": 1
+      },
+      "attrs": {
+        "product": "semaglutide",
+        "source": "prose"
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e5",
+      "type": "requested_dose",
+      "value": "1 mg weekly",
+      "source_span": {
+        "start": 201,
+        "end": 241,
+        "text": "[x] Prescription: semaglutide 1 mg SC QW"
+      },
+      "value_span": {
+        "start": 231,
+        "end": 241
+      },
+      "attrs": {
+        "drug": "semaglutide",
+        "amount": 1,
+        "route": "subcutaneous",
+        "source": "Prescription"
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e6",
+      "type": "blank_field",
+      "value": "lab",
+      "source_span": {
+        "start": 242,
+        "end": 266,
+        "text": "[ 1 Alc attachment: ____"
+      },
+      "reviewed": false,
+      "boxes": []
+    },
+    {
+      "id": "e7",
+      "type": "prior_medication",
+      "value": "sitagliptin",
+      "source_span": {
+        "start": 290,
+        "end": 335,
+        "text": "[x] Sitagliptin 160 mg QD used for six months"
+      },
+      "value_span": {
+        "start": 294,
+        "end": 305
+      },
+      "episode": 1,
+      "match": {
+        "kind": "exact",
+        "written": "Sitagliptin",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "dpp4"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 362,
+          "y": 199,
+          "width": 24,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "prior_dose",
+      "value": "160 mg daily",
+      "source_span": {
+        "start": 290,
+        "end": 335,
+        "text": "[x] Sitagliptin 160 mg QD used for six months"
+      },
+      "value_span": {
+        "start": 306,
+        "end": 315
+      },
+      "episode": 1,
+      "attrs": {
+        "amount": 160,
+        "frequency": "daily"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 362,
+          "y": 199,
+          "width": 24,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "prior_duration_days",
+      "value": 180,
+      "source_span": {
+        "start": 290,
+        "end": 335,
+        "text": "[x] Sitagliptin 160 mg QD used for six months"
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 362,
+          "y": 199,
+          "width": 24,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "blank_field",
+      "value": "prior therapy",
+      "source_span": {
+        "start": 366,
+        "end": 404,
+        "text": "[ ] Other oral medication course: ____"
+      },
+      "reviewed": false,
+      "boxes": []
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 116,
+          "end": 143,
+          "text": "[x] Age confirmed: 28 years"
+        }
+      ],
+      "reason": "Age 28 is documented.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 144,
+          "end": 200,
+          "text": "[x] Treating type 2 diabetes with this semaglutide order"
+        }
+      ],
+      "reason": "The request names type 2 diabetes mellitus as its reason.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The A1c field is blank.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "A sitagliptin course is documented. No metformin trial, intolerance or contraindication is documented.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 144,
+          "end": 200,
+          "text": "[x] Treating type 2 diabetes with this semaglutide order"
+        },
+        {
+          "start": 201,
+          "end": 241,
+          "text": "[x] Prescription: semaglutide 1 mg SC QW"
+        }
+      ],
+      "reason": "The request is 1 mg weekly. The fictional rule allows 0.5 mg weekly.",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "[x] Treating type 2 diabetes with this semaglutide order",
+      "citations": [
+        {
+          "start": 144,
+          "end": 200,
+          "text": "[x] Treating type 2 diabetes with this semaglutide order"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "[x] Sitagliptin 160 mg QD used for six months",
+      "citations": [
+        {
+          "start": 290,
+          "end": 335,
+          "text": "[x] Sitagliptin 160 mg QD used for six months"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "INJECTION",
+      "confidence": 96.306732,
+      "box": {
+        "x": 102,
+        "y": 159,
+        "width": 126,
+        "height": 17
+      },
+      "start": 0,
+      "end": 9,
+      "needsReview": false
+    },
+    {
+      "text": "CHECKLIST",
+      "confidence": 96.670746,
+      "box": {
+        "x": 245,
+        "y": 159,
+        "width": 128,
+        "height": 17
+      },
+      "start": 10,
+      "end": 19,
+      "needsReview": false
+    },
+    {
+      "text": "Prepared:",
+      "confidence": 96.690041,
+      "box": {
+        "x": 102,
+        "y": 198,
+        "width": 123,
+        "height": 23
+      },
+      "start": 20,
+      "end": 29,
+      "needsReview": false
+    },
+    {
+      "text": "16",
+      "confidence": 95.835655,
+      "box": {
+        "x": 362,
+        "y": 199,
+        "width": 24,
+        "height": 17
+      },
+      "start": 306,
+      "end": 308,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.503502,
+      "box": {
+        "x": 407,
+        "y": 237,
+        "width": 149,
+        "height": 24
+      },
+      "start": 496,
+      "end": 507,
+      "needsReview": false
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "INJECTION CHECKLIST\nPrepared: October 16 2026\nPatient: Niko Pellan (fictional)\nPrescriber: Dr. Vela Corwin (fictional)\n[x] Age confirmed: 28 years\n[x] Treating type 2 diabetes with this semaglutide order\n[x] Prescription: semaglutide 1 mg SC QW\n[ 1 Alc attachment: ____\nMedication discussion:\n[x] Sitagliptin 160 mg QD used for six months\n[x] Home glucose log reviewed\n[ ] Other oral medication course: ____\n[x] Injection teaching requested\n[ ] Follow-up appointment: ____\nAttested by Vela Corwin (fictional)\n",
+    "words": [
+      {
+        "text": "INJECTION",
+        "confidence": 96.306732,
+        "box": {
+          "x": 102,
+          "y": 159,
+          "width": 126,
+          "height": 17
+        },
+        "start": 0,
+        "end": 9,
+        "needsReview": false
+      },
+      {
+        "text": "CHECKLIST",
+        "confidence": 96.670746,
+        "box": {
+          "x": 245,
+          "y": 159,
+          "width": 128,
+          "height": 17
+        },
+        "start": 10,
+        "end": 19,
+        "needsReview": false
+      },
+      {
+        "text": "Prepared:",
+        "confidence": 96.690041,
+        "box": {
+          "x": 102,
+          "y": 198,
+          "width": 123,
+          "height": 23
+        },
+        "start": 20,
+        "end": 29,
+        "needsReview": false
+      },
+      {
+        "text": "October",
+        "confidence": 95.920975,
+        "box": {
+          "x": 245,
+          "y": 198,
+          "width": 98,
+          "height": 18
+        },
+        "start": 30,
+        "end": 37,
+        "needsReview": false
+      },
+      {
+        "text": "16",
+        "confidence": 95.835655,
+        "box": {
+          "x": 362,
+          "y": 199,
+          "width": 24,
+          "height": 17
+        },
+        "start": 38,
+        "end": 40,
+        "needsReview": false
+      },
+      {
+        "text": "2026",
+        "confidence": 86.311722,
+        "box": {
+          "x": 403,
+          "y": 199,
+          "width": 55,
+          "height": 17
+        },
+        "start": 41,
+        "end": 45,
+        "needsReview": false
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.243271,
+        "box": {
+          "x": 102,
+          "y": 239,
+          "width": 109,
+          "height": 17
+        },
+        "start": 46,
+        "end": 54,
+        "needsReview": false
+      },
+      {
+        "text": "Niko",
+        "confidence": 93.299278,
+        "box": {
+          "x": 231,
+          "y": 238,
+          "width": 55,
+          "height": 18
+        },
+        "start": 55,
+        "end": 59,
+        "needsReview": false
+      },
+      {
+        "text": "Pellan",
+        "confidence": 91.525002,
+        "box": {
+          "x": 304,
+          "y": 238,
+          "width": 82,
+          "height": 18
+        },
+        "start": 60,
+        "end": 66,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.503502,
+        "box": {
+          "x": 407,
+          "y": 237,
+          "width": 149,
+          "height": 24
+        },
+        "start": 67,
+        "end": 78,
+        "needsReview": false
+      },
+      {
+        "text": "Prescriber:",
+        "confidence": 90.53199,
+        "box": {
+          "x": 102,
+          "y": 278,
+          "width": 152,
+          "height": 18
+        },
+        "start": 79,
+        "end": 90,
+        "needsReview": false
+      },
+      {
+        "text": "Dr.",
+        "confidence": 96.307655,
+        "box": {
+          "x": 275,
+          "y": 279,
+          "width": 36,
+          "height": 17
+        },
+        "start": 91,
+        "end": 94,
+        "needsReview": false
+      },
+      {
+        "text": "Vela",
+        "confidence": 96.010513,
+        "box": {
+          "x": 331,
+          "y": 278,
+          "width": 55,
+          "height": 18
+        },
+        "start": 95,
+        "end": 99,
+        "needsReview": false
+      },
+      {
+        "text": "Corwin",
+        "confidence": 96.004875,
+        "box": {
+          "x": 404,
+          "y": 279,
+          "width": 83,
+          "height": 17
+        },
+        "start": 100,
+        "end": 106,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.05864,
+        "box": {
+          "x": 507,
+          "y": 277,
+          "width": 150,
+          "height": 24
+        },
+        "start": 107,
+        "end": 118,
+        "needsReview": false
+      },
+      {
+        "text": "[x]",
+        "confidence": 96.783546,
+        "box": {
+          "x": 105,
+          "y": 316,
+          "width": 33,
+          "height": 24
+        },
+        "start": 119,
+        "end": 122,
+        "needsReview": false
+      },
+      {
+        "text": "Age",
+        "confidence": 96.364456,
+        "box": {
+          "x": 159,
+          "y": 319,
+          "width": 40,
+          "height": 22
+        },
+        "start": 123,
+        "end": 126,
+        "needsReview": false
+      },
+      {
+        "text": "confirmed:",
+        "confidence": 95.511406,
+        "box": {
+          "x": 217,
+          "y": 317,
+          "width": 138,
+          "height": 19
+        },
+        "start": 127,
+        "end": 137,
+        "needsReview": false
+      },
+      {
+        "text": "28",
+        "confidence": 96.868919,
+        "box": {
+          "x": 375,
+          "y": 319,
+          "width": 26,
+          "height": 17
+        },
+        "start": 138,
+        "end": 140,
+        "needsReview": false
+      },
+      {
+        "text": "years",
+        "confidence": 96.621071,
+        "box": {
+          "x": 418,
+          "y": 323,
+          "width": 69,
+          "height": 18
+        },
+        "start": 141,
+        "end": 146,
+        "needsReview": false
+      },
+      {
+        "text": "[x]",
+        "confidence": 96.871979,
+        "box": {
+          "x": 105,
+          "y": 356,
+          "width": 33,
+          "height": 24
+        },
+        "start": 147,
+        "end": 150,
+        "needsReview": false
+      },
+      {
+        "text": "Treating",
+        "confidence": 96.150475,
+        "box": {
+          "x": 158,
+          "y": 359,
+          "width": 113,
+          "height": 22
+        },
+        "start": 151,
+        "end": 159,
+        "needsReview": false
+      },
+      {
+        "text": "type",
+        "confidence": 96.683571,
+        "box": {
+          "x": 289,
+          "y": 360,
+          "width": 54,
+          "height": 21
+        },
+        "start": 160,
+        "end": 164,
+        "needsReview": false
+      },
+      {
+        "text": "2",
+        "confidence": 95.884293,
+        "box": {
+          "x": 360,
+          "y": 359,
+          "width": 12,
+          "height": 17
+        },
+        "start": 165,
+        "end": 166,
+        "needsReview": false
+      },
+      {
+        "text": "diabetes",
+        "confidence": 96.441689,
+        "box": {
+          "x": 390,
+          "y": 358,
+          "width": 112,
+          "height": 18
+        },
+        "start": 167,
+        "end": 175,
+        "needsReview": false
+      },
+      {
+        "text": "with",
+        "confidence": 96.79406,
+        "box": {
+          "x": 518,
+          "y": 358,
+          "width": 56,
+          "height": 18
+        },
+        "start": 176,
+        "end": 180,
+        "needsReview": false
+      },
+      {
+        "text": "this",
+        "confidence": 92.261436,
+        "box": {
+          "x": 591,
+          "y": 358,
+          "width": 55,
+          "height": 18
+        },
+        "start": 181,
+        "end": 185,
+        "needsReview": false
+      },
+      {
+        "text": "semaglutide",
+        "confidence": 90.797104,
+        "box": {
+          "x": 664,
+          "y": 358,
+          "width": 155,
+          "height": 23
+        },
+        "start": 186,
+        "end": 197,
+        "needsReview": false
+      },
+      {
+        "text": "order",
+        "confidence": 96.852852,
+        "box": {
+          "x": 836,
+          "y": 358,
+          "width": 69,
+          "height": 18
+        },
+        "start": 198,
+        "end": 203,
+        "needsReview": false
+      },
+      {
+        "text": "[x]",
+        "confidence": 96.352882,
+        "box": {
+          "x": 105,
+          "y": 396,
+          "width": 33,
+          "height": 24
+        },
+        "start": 204,
+        "end": 207,
+        "needsReview": false
+      },
+      {
+        "text": "Prescription:",
+        "confidence": 91.752686,
+        "box": {
+          "x": 160,
+          "y": 399,
+          "width": 180,
+          "height": 22
+        },
+        "start": 208,
+        "end": 221,
+        "needsReview": false
+      },
+      {
+        "text": "semaglutide",
+        "confidence": 92.392143,
+        "box": {
+          "x": 361,
+          "y": 398,
+          "width": 155,
+          "height": 23
+        },
+        "start": 222,
+        "end": 233,
+        "needsReview": false
+      },
+      {
+        "text": "1",
+        "confidence": 96.077133,
+        "box": {
+          "x": 534,
+          "y": 399,
+          "width": 7,
+          "height": 17
+        },
+        "start": 234,
+        "end": 235,
+        "needsReview": false
+      },
+      {
+        "text": "mg",
+        "confidence": 96.077133,
+        "box": {
+          "x": 562,
+          "y": 403,
+          "width": 26,
+          "height": 18
+        },
+        "start": 236,
+        "end": 238,
+        "needsReview": false
+      },
+      {
+        "text": "SC",
+        "confidence": 96.686882,
+        "box": {
+          "x": 605,
+          "y": 399,
+          "width": 27,
+          "height": 17
+        },
+        "start": 239,
+        "end": 241,
+        "needsReview": false
+      },
+      {
+        "text": "QW",
+        "confidence": 96.987404,
+        "box": {
+          "x": 648,
+          "y": 399,
+          "width": 28,
+          "height": 20
+        },
+        "start": 242,
+        "end": 244,
+        "needsReview": false
+      },
+      {
+        "text": "[",
+        "confidence": 93.026825,
+        "box": {
+          "x": 105,
+          "y": 436,
+          "width": 5,
+          "height": 24
+        },
+        "start": 245,
+        "end": 246,
+        "needsReview": false
+      },
+      {
+        "text": "1",
+        "confidence": 43.60894,
+        "box": {
+          "x": 133,
+          "y": 436,
+          "width": 5,
+          "height": 24
+        },
+        "start": 247,
+        "end": 248,
+        "needsReview": true
+      },
+      {
+        "text": "Alc",
+        "confidence": 93.868927,
+        "box": {
+          "x": 159,
+          "y": 439,
+          "width": 40,
+          "height": 17
+        },
+        "start": 249,
+        "end": 252,
+        "needsReview": false
+      },
+      {
+        "text": "attachment:",
+        "confidence": 91.038017,
+        "box": {
+          "x": 217,
+          "y": 438,
+          "width": 152,
+          "height": 18
+        },
+        "start": 253,
+        "end": 264,
+        "needsReview": false
+      },
+      {
+        "text": "____",
+        "confidence": 91.038017,
+        "box": {
+          "x": 390,
+          "y": 456,
+          "width": 54,
+          "height": 2
+        },
+        "start": 265,
+        "end": 269,
+        "needsReview": false
+      },
+      {
+        "text": "Medication",
+        "confidence": 96.033241,
+        "box": {
+          "x": 102,
+          "y": 478,
+          "width": 140,
+          "height": 18
+        },
+        "start": 270,
+        "end": 280,
+        "needsReview": false
+      },
+      {
+        "text": "discussion:",
+        "confidence": 96.441536,
+        "box": {
+          "x": 260,
+          "y": 478,
+          "width": 152,
+          "height": 18
+        },
+        "start": 281,
+        "end": 292,
+        "needsReview": false
+      },
+      {
+        "text": "[x]",
+        "confidence": 93.279999,
+        "box": {
+          "x": 105,
+          "y": 516,
+          "width": 33,
+          "height": 24
+        },
+        "start": 293,
+        "end": 296,
+        "needsReview": false
+      },
+      {
+        "text": "Sitagliptin",
+        "confidence": 92.356705,
+        "box": {
+          "x": 159,
+          "y": 518,
+          "width": 155,
+          "height": 23
+        },
+        "start": 297,
+        "end": 308,
+        "needsReview": false
+      },
+      {
+        "text": "160",
+        "confidence": 75.529602,
+        "box": {
+          "x": 333,
+          "y": 519,
+          "width": 39,
+          "height": 17
+        },
+        "start": 309,
+        "end": 312,
+        "needsReview": true
+      },
+      {
+        "text": "mg",
+        "confidence": 96.447784,
+        "box": {
+          "x": 389,
+          "y": 523,
+          "width": 26,
+          "height": 18
+        },
+        "start": 313,
+        "end": 315,
+        "needsReview": false
+      },
+      {
+        "text": "QD",
+        "confidence": 96.424759,
+        "box": {
+          "x": 432,
+          "y": 519,
+          "width": 27,
+          "height": 20
+        },
+        "start": 316,
+        "end": 318,
+        "needsReview": false
+      },
+      {
+        "text": "used",
+        "confidence": 96.496643,
+        "box": {
+          "x": 476,
+          "y": 518,
+          "width": 54,
+          "height": 18
+        },
+        "start": 319,
+        "end": 323,
+        "needsReview": false
+      },
+      {
+        "text": "for",
+        "confidence": 96.694191,
+        "box": {
+          "x": 548,
+          "y": 517,
+          "width": 40,
+          "height": 19
+        },
+        "start": 324,
+        "end": 327,
+        "needsReview": false
+      },
+      {
+        "text": "six",
+        "confidence": 96.473022,
+        "box": {
+          "x": 606,
+          "y": 519,
+          "width": 40,
+          "height": 17
+        },
+        "start": 328,
+        "end": 331,
+        "needsReview": false
+      },
+      {
+        "text": "months",
+        "confidence": 96.473022,
+        "box": {
+          "x": 663,
+          "y": 518,
+          "width": 83,
+          "height": 18
+        },
+        "start": 332,
+        "end": 338,
+        "needsReview": false
+      },
+      {
+        "text": "[x]",
+        "confidence": 96.772217,
+        "box": {
+          "x": 105,
+          "y": 556,
+          "width": 33,
+          "height": 24
+        },
+        "start": 339,
+        "end": 342,
+        "needsReview": false
+      },
+      {
+        "text": "Home",
+        "confidence": 96.626823,
+        "box": {
+          "x": 159,
+          "y": 559,
+          "width": 55,
+          "height": 17
+        },
+        "start": 343,
+        "end": 347,
+        "needsReview": false
+      },
+      {
+        "text": "glucose",
+        "confidence": 96.586372,
+        "box": {
+          "x": 231,
+          "y": 558,
+          "width": 98,
+          "height": 23
+        },
+        "start": 348,
+        "end": 355,
+        "needsReview": false
+      },
+      {
+        "text": "log",
+        "confidence": 96.794388,
+        "box": {
+          "x": 347,
+          "y": 558,
+          "width": 39,
+          "height": 23
+        },
+        "start": 356,
+        "end": 359,
+        "needsReview": false
+      },
+      {
+        "text": "reviewed",
+        "confidence": 96.558655,
+        "box": {
+          "x": 406,
+          "y": 558,
+          "width": 110,
+          "height": 18
+        },
+        "start": 360,
+        "end": 368,
+        "needsReview": false
+      },
+      {
+        "text": "[",
+        "confidence": 77.788521,
+        "box": {
+          "x": 105,
+          "y": 596,
+          "width": 5,
+          "height": 24
+        },
+        "start": 369,
+        "end": 370,
+        "needsReview": true
+      },
+      {
+        "text": "]",
+        "confidence": 77.788521,
+        "box": {
+          "x": 133,
+          "y": 596,
+          "width": 5,
+          "height": 24
+        },
+        "start": 371,
+        "end": 372,
+        "needsReview": true
+      },
+      {
+        "text": "Other",
+        "confidence": 95.564468,
+        "box": {
+          "x": 159,
+          "y": 598,
+          "width": 69,
+          "height": 18
+        },
+        "start": 373,
+        "end": 378,
+        "needsReview": false
+      },
+      {
+        "text": "oral",
+        "confidence": 96.554817,
+        "box": {
+          "x": 245,
+          "y": 598,
+          "width": 55,
+          "height": 18
+        },
+        "start": 379,
+        "end": 383,
+        "needsReview": false
+      },
+      {
+        "text": "medication",
+        "confidence": 96.554817,
+        "box": {
+          "x": 317,
+          "y": 598,
+          "width": 141,
+          "height": 18
+        },
+        "start": 384,
+        "end": 394,
+        "needsReview": false
+      },
+      {
+        "text": "course:",
+        "confidence": 93.027969,
+        "box": {
+          "x": 476,
+          "y": 603,
+          "width": 95,
+          "height": 13
+        },
+        "start": 395,
+        "end": 402,
+        "needsReview": false
+      },
+      {
+        "text": "____",
+        "confidence": 91.35601,
+        "box": {
+          "x": 591,
+          "y": 616,
+          "width": 55,
+          "height": 2
+        },
+        "start": 403,
+        "end": 407,
+        "needsReview": false
+      },
+      {
+        "text": "[x]",
+        "confidence": 96.829636,
+        "box": {
+          "x": 105,
+          "y": 636,
+          "width": 33,
+          "height": 24
+        },
+        "start": 408,
+        "end": 411,
+        "needsReview": false
+      },
+      {
+        "text": "Injection",
+        "confidence": 95.363625,
+        "box": {
+          "x": 160,
+          "y": 639,
+          "width": 125,
+          "height": 22
+        },
+        "start": 412,
+        "end": 421,
+        "needsReview": false
+      },
+      {
+        "text": "teaching",
+        "confidence": 96.624985,
+        "box": {
+          "x": 303,
+          "y": 638,
+          "width": 112,
+          "height": 23
+        },
+        "start": 422,
+        "end": 430,
+        "needsReview": false
+      },
+      {
+        "text": "requested",
+        "confidence": 96.224709,
+        "box": {
+          "x": 435,
+          "y": 638,
+          "width": 124,
+          "height": 23
+        },
+        "start": 431,
+        "end": 440,
+        "needsReview": false
+      },
+      {
+        "text": "[",
+        "confidence": 85.574615,
+        "box": {
+          "x": 105,
+          "y": 676,
+          "width": 5,
+          "height": 24
+        },
+        "start": 441,
+        "end": 442,
+        "needsReview": false
+      },
+      {
+        "text": "]",
+        "confidence": 65.868088,
+        "box": {
+          "x": 133,
+          "y": 676,
+          "width": 5,
+          "height": 24
+        },
+        "start": 443,
+        "end": 444,
+        "needsReview": true
+      },
+      {
+        "text": "Follow-up",
+        "confidence": 96.184067,
+        "box": {
+          "x": 160,
+          "y": 678,
+          "width": 126,
+          "height": 23
+        },
+        "start": 445,
+        "end": 454,
+        "needsReview": false
+      },
+      {
+        "text": "appointment:",
+        "confidence": 92.951675,
+        "box": {
+          "x": 303,
+          "y": 679,
+          "width": 167,
+          "height": 22
+        },
+        "start": 455,
+        "end": 467,
+        "needsReview": false
+      },
+      {
+        "text": "____",
+        "confidence": 84.963867,
+        "box": {
+          "x": 491,
+          "y": 696,
+          "width": 54,
+          "height": 2
+        },
+        "start": 468,
+        "end": 472,
+        "needsReview": false
+      },
+      {
+        "text": "Attested",
+        "confidence": 91.687798,
+        "box": {
+          "x": 101,
+          "y": 718,
+          "width": 112,
+          "height": 18
+        },
+        "start": 473,
+        "end": 481,
+        "needsReview": false
+      },
+      {
+        "text": "by",
+        "confidence": 95.918953,
+        "box": {
+          "x": 231,
+          "y": 718,
+          "width": 27,
+          "height": 23
+        },
+        "start": 482,
+        "end": 484,
+        "needsReview": false
+      },
+      {
+        "text": "Vela",
+        "confidence": 96.436104,
+        "box": {
+          "x": 273,
+          "y": 718,
+          "width": 56,
+          "height": 19
+        },
+        "start": 485,
+        "end": 489,
+        "needsReview": false
+      },
+      {
+        "text": "Corwin",
+        "confidence": 96.259911,
+        "box": {
+          "x": 346,
+          "y": 718,
+          "width": 83,
+          "height": 19
+        },
+        "start": 490,
+        "end": 496,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.300003,
+        "box": {
+          "x": 450,
+          "y": 717,
+          "width": 150,
+          "height": 24
+        },
+        "start": 497,
+        "end": 508,
+        "needsReview": false
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM",
+    "orientation": {
+      "pageRotation": 0,
+      "scores": {
+        "0": 4391.3131250000015,
+        "180": 212.851272
+      }
+    },
+    "deskewDegrees": 0,
+    "readImage": "holdout-04.png",
+    "width": 1700,
+    "height": 2200
+  },
+  "scores": {
+    "entities": {
+      "tp": 0,
+      "predicted": 10,
+      "gold": 0,
+      "exactQuote": 0
+    },
+    "criteria": {
+      "correct": 5,
+      "total": 5
+    },
+    "cer": 0.005905511811023622,
+    "edits": 3,
+    "chars": 508,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [
+    "3 OCR character edits"
+  ],
+  "latency": {
+    "renderAndOcrMs": 3104.48725,
+    "serviceMs": 17.350124999999935
+  }
+}

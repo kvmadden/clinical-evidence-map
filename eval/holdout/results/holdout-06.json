@@ -1,0 +1,2143 @@
+{
+  "packet_id": "holdout-06",
+  "criteria_id": "glp1-t2d",
+  "group": "rotation-7deg",
+  "tags": [
+    "render:rotate-7"
+  ],
+  "render": {
+    "font": "dejavu-sans",
+    "effects": [
+      "speckle-heavy",
+      "streaks"
+    ],
+    "rotate": 7,
+    "handwriting": [],
+    "annotations": []
+  },
+  "groupLabel": "Simulated 7-degree rotation",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "DISPENSING INTAKE\nEntry date: [date-a]\nPatient: [name] [name] (fictional)\nOrdering clinician: Dr. [name] [name] (fictional)\nAge stated: 17 years\nRequested agent: semaglutide\nReason for treatment: appetite suppression\nOrder directions: 0.25mg SQ q7d\nLaboratory slip:\nHbAlc 7.4% collected [date-b]\nMedication exposure:\nGlipizide 5 mg QD for eight months\nMeals reviewed with patient.\nCounseling visit requested.\nEnd of intake.\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 4
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points",
+    "dateHandling": "shifted",
+    "dates": [
+      {
+        "token": "[date-a]",
+        "readings": [
+          "2130-08-03",
+          "2130-09-01"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-b]",
+        "readings": [
+          "2130-02-24",
+          "2130-01-25"
+        ],
+        "order": "ambiguous"
+      }
+    ]
+  },
+  "dateReading": {
+    "status": "unresolved",
+    "order": null
+  },
+  "readerCoverage": {
+    "lines": 16,
+    "pages": 1,
+    "blockers": {
+      "adult": [],
+      "diagnosis": [],
+      "lab": [],
+      "prior": [],
+      "dose": []
+    },
+    "mentions": [],
+    "complete": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "request_date",
+      "value": {
+        "readings": [
+          "2130-08-03",
+          "2130-09-01"
+        ]
+      },
+      "source_span": {
+        "start": 18,
+        "end": 38,
+        "text": "Entry date: [date-a]"
+      },
+      "value_span": {
+        "start": 30,
+        "end": 38
+      },
+      "attrs": {
+        "label": "Entry date"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 329,
+          "y": 422,
+          "width": 53,
+          "height": 20
+        },
+        {
+          "x": 390,
+          "y": 422,
+          "width": 52,
+          "height": 16
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "age",
+      "value": 17,
+      "source_span": {
+        "start": 124,
+        "end": 144,
+        "text": "Age stated: 17 years"
+      },
+      "value_span": {
+        "start": 136,
+        "end": 138
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 329,
+          "y": 527,
+          "width": 39,
+          "height": 20
+        },
+        {
+          "x": 376,
+          "y": 525,
+          "width": 70,
+          "height": 17
+        },
+        {
+          "x": 457,
+          "y": 526,
+          "width": 23,
+          "height": 16
+        },
+        {
+          "x": 489,
+          "y": 529,
+          "width": 56,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "requested_medication",
+      "value": "semaglutide",
+      "source_span": {
+        "start": 145,
+        "end": 173,
+        "text": "Requested agent: semaglutide"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "1991302",
+        "display": "semaglutide"
+      },
+      "value_span": {
+        "start": 162,
+        "end": 173
+      },
+      "match": {
+        "kind": "exact",
+        "written": "semaglutide",
+        "confidence": 1
+      },
+      "attrs": {
+        "product": "semaglutide",
+        "source": "Requested agent"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 330,
+          "y": 560,
+          "width": 108,
+          "height": 21
+        },
+        {
+          "x": 447,
+          "y": 561,
+          "width": 64,
+          "height": 20
+        },
+        {
+          "x": 521,
+          "y": 558,
+          "width": 127,
+          "height": 21
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "indication",
+      "value": "obesity",
+      "source_span": {
+        "start": 174,
+        "end": 216,
+        "text": "Reason for treatment: appetite suppression"
+      },
+      "value_span": {
+        "start": 196,
+        "end": 216
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 331,
+          "y": 596,
+          "width": 73,
+          "height": 16
+        },
+        {
+          "x": 412,
+          "y": 595,
+          "width": 28,
+          "height": 17
+        },
+        {
+          "x": 447,
+          "y": 595,
+          "width": 110,
+          "height": 16
+        },
+        {
+          "x": 566,
+          "y": 593,
+          "width": 86,
+          "height": 21
+        },
+        {
+          "x": 660,
+          "y": 592,
+          "width": 123,
+          "height": 21
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "requested_dose",
+      "value": "0.25 mg weekly",
+      "source_span": {
+        "start": 217,
+        "end": 248,
+        "text": "Order directions: 0.25mg SQ q7d"
+      },
+      "value_span": {
+        "start": 235,
+        "end": 248
+      },
+      "attrs": {
+        "drug": "semaglutide",
+        "amount": 0.25,
+        "route": "subcutaneous",
+        "source": "Order directions"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 330,
+          "y": 631,
+          "width": 59,
+          "height": 16
+        },
+        {
+          "x": 396,
+          "y": 630,
+          "width": 106,
+          "height": 17
+        },
+        {
+          "x": 512,
+          "y": 629,
+          "width": 78,
+          "height": 20
+        },
+        {
+          "x": 599,
+          "y": 628,
+          "width": 28,
+          "height": 19
+        },
+        {
+          "x": 635,
+          "y": 628,
+          "width": 37,
+          "height": 21
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "measurement",
+      "value": {
+        "name": "A1c",
+        "value": 7.4,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 266,
+        "end": 295,
+        "text": "HbAlc 7.4% collected [date-b]"
+      },
+      "value_span": {
+        "start": 272,
+        "end": 275
+      },
+      "name_span": {
+        "start": 266,
+        "end": 271
+      },
+      "reviewed": false,
+      "related": [
+        "e7"
+      ],
+      "boxes": [
+        {
+          "x": 331,
+          "y": 700,
+          "width": 66,
+          "height": 17
+        },
+        {
+          "x": 406,
+          "y": 700,
+          "width": 51,
+          "height": 16
+        },
+        {
+          "x": 465,
+          "y": 698,
+          "width": 92,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "measurement_date",
+      "value": {
+        "readings": [
+          "2130-02-24",
+          "2130-01-25"
+        ]
+      },
+      "source_span": {
+        "start": 266,
+        "end": 295,
+        "text": "HbAlc 7.4% collected [date-b]"
+      },
+      "value_span": {
+        "start": 287,
+        "end": 295
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 331,
+          "y": 700,
+          "width": 66,
+          "height": 17
+        },
+        {
+          "x": 406,
+          "y": 700,
+          "width": 51,
+          "height": 16
+        },
+        {
+          "x": 465,
+          "y": 698,
+          "width": 92,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "prior_medication",
+      "value": "glipizide",
+      "source_span": {
+        "start": 317,
+        "end": 351,
+        "text": "Glipizide 5 mg QD for eight months"
+      },
+      "value_span": {
+        "start": 317,
+        "end": 326
+      },
+      "episode": 1,
+      "match": {
+        "kind": "exact",
+        "written": "Glipizide",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "sulfonylurea"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 331,
+          "y": 769,
+          "width": 88,
+          "height": 21
+        },
+        {
+          "x": 428,
+          "y": 769,
+          "width": 10,
+          "height": 17
+        },
+        {
+          "x": 448,
+          "y": 773,
+          "width": 31,
+          "height": 16
+        },
+        {
+          "x": 488,
+          "y": 769,
+          "width": 30,
+          "height": 18
+        },
+        {
+          "x": 526,
+          "y": 768,
+          "width": 29,
+          "height": 17
+        },
+        {
+          "x": 562,
+          "y": 768,
+          "width": 52,
+          "height": 20
+        },
+        {
+          "x": 623,
+          "y": 767,
+          "width": 76,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "prior_dose",
+      "value": "5 mg daily",
+      "source_span": {
+        "start": 317,
+        "end": 351,
+        "text": "Glipizide 5 mg QD for eight months"
+      },
+      "value_span": {
+        "start": 327,
+        "end": 334
+      },
+      "episode": 1,
+      "attrs": {
+        "amount": 5,
+        "frequency": "daily"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 331,
+          "y": 769,
+          "width": 88,
+          "height": 21
+        },
+        {
+          "x": 428,
+          "y": 769,
+          "width": 10,
+          "height": 17
+        },
+        {
+          "x": 448,
+          "y": 773,
+          "width": 31,
+          "height": 16
+        },
+        {
+          "x": 488,
+          "y": 769,
+          "width": 30,
+          "height": 18
+        },
+        {
+          "x": 526,
+          "y": 768,
+          "width": 29,
+          "height": 17
+        },
+        {
+          "x": 562,
+          "y": 768,
+          "width": 52,
+          "height": 20
+        },
+        {
+          "x": 623,
+          "y": 767,
+          "width": 76,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "prior_duration_days",
+      "value": 240,
+      "source_span": {
+        "start": 317,
+        "end": 351,
+        "text": "Glipizide 5 mg QD for eight months"
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 331,
+          "y": 769,
+          "width": 88,
+          "height": 21
+        },
+        {
+          "x": 428,
+          "y": 769,
+          "width": 10,
+          "height": 17
+        },
+        {
+          "x": 448,
+          "y": 773,
+          "width": 31,
+          "height": 16
+        },
+        {
+          "x": 488,
+          "y": 769,
+          "width": 30,
+          "height": 18
+        },
+        {
+          "x": 526,
+          "y": 768,
+          "width": 29,
+          "height": 17
+        },
+        {
+          "x": 562,
+          "y": 768,
+          "width": 52,
+          "height": 20
+        },
+        {
+          "x": 623,
+          "y": 767,
+          "width": 76,
+          "height": 17
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 124,
+          "end": 144,
+          "text": "Age stated: 17 years"
+        }
+      ],
+      "reason": "Documented age 17 is below the fictional 18-year rule.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The request names obesity, not type 2 diabetes mellitus.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 18,
+          "end": 38,
+          "text": "Entry date: [date-a]"
+        },
+        {
+          "start": 266,
+          "end": 295,
+          "text": "HbAlc 7.4% collected [date-b]"
+        }
+      ],
+      "reason": "Numeric dates on this page can be read month first or day first, and the two readings give different results. Both readings are kept. Check the page.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "A glipizide course is documented. No metformin trial, intolerance or contraindication is documented.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 145,
+          "end": 173,
+          "text": "Requested agent: semaglutide"
+        },
+        {
+          "start": 217,
+          "end": 248,
+          "text": "Order directions: 0.25mg SQ q7d"
+        }
+      ],
+      "reason": "The request is 0.25 mg weekly. The fictional rule allows 0.5 mg weekly.",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "Requested agent: semaglutide",
+      "citations": [
+        {
+          "start": 145,
+          "end": 173,
+          "text": "Requested agent: semaglutide"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Reason for treatment: appetite suppression",
+      "citations": [
+        {
+          "start": 174,
+          "end": 216,
+          "text": "Reason for treatment: appetite suppression"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "HbAlc 7.4% collected [date-b]",
+      "citations": [
+        {
+          "start": 266,
+          "end": 295,
+          "text": "HbAlc 7.4% collected [date-b]"
+        }
+      ],
+      "supported": true,
+      "needsReview": true,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Glipizide 5 mg QD for eight months",
+      "citations": [
+        {
+          "start": 317,
+          "end": 351,
+          "text": "Glipizide 5 mg QD for eight months"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "DISPENSING",
+      "confidence": 96.235481,
+      "box": {
+        "x": 329,
+        "y": 387,
+        "width": 125,
+        "height": 17
+      },
+      "start": 0,
+      "end": 10,
+      "needsReview": false
+    },
+    {
+      "text": "INTAKE",
+      "confidence": 96.280029,
+      "box": {
+        "x": 463,
+        "y": 386,
+        "width": 72,
+        "height": 16
+      },
+      "start": 11,
+      "end": 17,
+      "needsReview": false
+    },
+    {
+      "text": "Entry",
+      "confidence": 96.870071,
+      "box": {
+        "x": 329,
+        "y": 422,
+        "width": 53,
+        "height": 20
+      },
+      "start": 18,
+      "end": 23,
+      "needsReview": false
+    },
+    {
+      "text": "date:",
+      "confidence": 96.342133,
+      "box": {
+        "x": 390,
+        "y": 422,
+        "width": 52,
+        "height": 16
+      },
+      "start": 24,
+      "end": 29,
+      "needsReview": false
+    },
+    {
+      "text": "Patient:",
+      "confidence": 96.725212,
+      "box": {
+        "x": 329,
+        "y": 456,
+        "width": 76,
+        "height": 17
+      },
+      "start": 39,
+      "end": 47,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.785774,
+      "box": {
+        "x": 539,
+        "y": 454,
+        "width": 97,
+        "height": 20
+      },
+      "start": 62,
+      "end": 73,
+      "needsReview": false
+    },
+    {
+      "text": "Ordering",
+      "confidence": 95.879517,
+      "box": {
+        "x": 329,
+        "y": 491,
+        "width": 89,
+        "height": 21
+      },
+      "start": 74,
+      "end": 82,
+      "needsReview": false
+    },
+    {
+      "text": "clinician:",
+      "confidence": 93.499146,
+      "box": {
+        "x": 427,
+        "y": 490,
+        "width": 90,
+        "height": 17
+      },
+      "start": 83,
+      "end": 93,
+      "needsReview": false
+    },
+    {
+      "text": "Dr.",
+      "confidence": 96.332573,
+      "box": {
+        "x": 527,
+        "y": 490,
+        "width": 26,
+        "height": 16
+      },
+      "start": 94,
+      "end": 97,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.954491,
+      "box": {
+        "x": 701,
+        "y": 488,
+        "width": 96,
+        "height": 19
+      },
+      "start": 112,
+      "end": 123,
+      "needsReview": false
+    },
+    {
+      "text": "Age",
+      "confidence": 96.409233,
+      "box": {
+        "x": 329,
+        "y": 527,
+        "width": 39,
+        "height": 20
+      },
+      "start": 124,
+      "end": 127,
+      "needsReview": false
+    },
+    {
+      "text": "stated:",
+      "confidence": 96.409233,
+      "box": {
+        "x": 376,
+        "y": 525,
+        "width": 70,
+        "height": 17
+      },
+      "start": 128,
+      "end": 135,
+      "needsReview": false
+    },
+    {
+      "text": "17",
+      "confidence": 96.946838,
+      "box": {
+        "x": 457,
+        "y": 526,
+        "width": 23,
+        "height": 16
+      },
+      "start": 136,
+      "end": 138,
+      "needsReview": false
+    },
+    {
+      "text": "years",
+      "confidence": 96.275467,
+      "box": {
+        "x": 489,
+        "y": 529,
+        "width": 56,
+        "height": 17
+      },
+      "start": 139,
+      "end": 144,
+      "needsReview": false
+    },
+    {
+      "text": "Requested",
+      "confidence": 96.767555,
+      "box": {
+        "x": 330,
+        "y": 560,
+        "width": 108,
+        "height": 21
+      },
+      "start": 145,
+      "end": 154,
+      "needsReview": false
+    },
+    {
+      "text": "agent:",
+      "confidence": 93.01799,
+      "box": {
+        "x": 447,
+        "y": 561,
+        "width": 64,
+        "height": 20
+      },
+      "start": 155,
+      "end": 161,
+      "needsReview": false
+    },
+    {
+      "text": "semaglutide",
+      "confidence": 91.883156,
+      "box": {
+        "x": 521,
+        "y": 558,
+        "width": 127,
+        "height": 21
+      },
+      "start": 162,
+      "end": 173,
+      "needsReview": false
+    },
+    {
+      "text": "Reason",
+      "confidence": 96.217316,
+      "box": {
+        "x": 331,
+        "y": 596,
+        "width": 73,
+        "height": 16
+      },
+      "start": 174,
+      "end": 180,
+      "needsReview": false
+    },
+    {
+      "text": "for",
+      "confidence": 96.516403,
+      "box": {
+        "x": 412,
+        "y": 595,
+        "width": 28,
+        "height": 17
+      },
+      "start": 181,
+      "end": 184,
+      "needsReview": false
+    },
+    {
+      "text": "treatment:",
+      "confidence": 96.536484,
+      "box": {
+        "x": 447,
+        "y": 595,
+        "width": 110,
+        "height": 16
+      },
+      "start": 185,
+      "end": 195,
+      "needsReview": false
+    },
+    {
+      "text": "appetite",
+      "confidence": 96.803307,
+      "box": {
+        "x": 566,
+        "y": 593,
+        "width": 86,
+        "height": 21
+      },
+      "start": 196,
+      "end": 204,
+      "needsReview": false
+    },
+    {
+      "text": "suppression",
+      "confidence": 96.84903,
+      "box": {
+        "x": 660,
+        "y": 592,
+        "width": 123,
+        "height": 21
+      },
+      "start": 205,
+      "end": 216,
+      "needsReview": false
+    },
+    {
+      "text": "Order",
+      "confidence": 96.43708,
+      "box": {
+        "x": 330,
+        "y": 631,
+        "width": 59,
+        "height": 16
+      },
+      "start": 217,
+      "end": 222,
+      "needsReview": false
+    },
+    {
+      "text": "directions:",
+      "confidence": 93.226692,
+      "box": {
+        "x": 396,
+        "y": 630,
+        "width": 106,
+        "height": 17
+      },
+      "start": 223,
+      "end": 234,
+      "needsReview": false
+    },
+    {
+      "text": "0.25mg",
+      "confidence": 91.4217,
+      "box": {
+        "x": 512,
+        "y": 629,
+        "width": 78,
+        "height": 20
+      },
+      "start": 235,
+      "end": 241,
+      "needsReview": false
+    },
+    {
+      "text": "SQ",
+      "confidence": 93.217834,
+      "box": {
+        "x": 599,
+        "y": 628,
+        "width": 28,
+        "height": 19
+      },
+      "start": 242,
+      "end": 244,
+      "needsReview": false
+    },
+    {
+      "text": "q7d",
+      "confidence": 92.940643,
+      "box": {
+        "x": 635,
+        "y": 628,
+        "width": 37,
+        "height": 21
+      },
+      "start": 245,
+      "end": 248,
+      "needsReview": false
+    },
+    {
+      "text": "Laboratory",
+      "confidence": 95.600311,
+      "box": {
+        "x": 331,
+        "y": 665,
+        "width": 111,
+        "height": 20
+      },
+      "start": 249,
+      "end": 259,
+      "needsReview": false
+    },
+    {
+      "text": "slip:",
+      "confidence": 95.600311,
+      "box": {
+        "x": 451,
+        "y": 664,
+        "width": 40,
+        "height": 21
+      },
+      "start": 260,
+      "end": 265,
+      "needsReview": false
+    },
+    {
+      "text": "HbAlc",
+      "confidence": 40.839417,
+      "box": {
+        "x": 331,
+        "y": 700,
+        "width": 66,
+        "height": 17
+      },
+      "start": 266,
+      "end": 271,
+      "needsReview": true
+    },
+    {
+      "text": "7.4%",
+      "confidence": 96.776993,
+      "box": {
+        "x": 406,
+        "y": 700,
+        "width": 51,
+        "height": 16
+      },
+      "start": 272,
+      "end": 276,
+      "needsReview": false
+    },
+    {
+      "text": "collected",
+      "confidence": 96.910767,
+      "box": {
+        "x": 465,
+        "y": 698,
+        "width": 92,
+        "height": 18
+      },
+      "start": 277,
+      "end": 286,
+      "needsReview": false
+    },
+    {
+      "text": "Medication",
+      "confidence": 96.388023,
+      "box": {
+        "x": 332,
+        "y": 734,
+        "width": 111,
+        "height": 17
+      },
+      "start": 296,
+      "end": 306,
+      "needsReview": false
+    },
+    {
+      "text": "exposure:",
+      "confidence": 96.521828,
+      "box": {
+        "x": 452,
+        "y": 737,
+        "width": 100,
+        "height": 17
+      },
+      "start": 307,
+      "end": 316,
+      "needsReview": false
+    },
+    {
+      "text": "Glipizide",
+      "confidence": 91.998833,
+      "box": {
+        "x": 331,
+        "y": 769,
+        "width": 88,
+        "height": 21
+      },
+      "start": 317,
+      "end": 326,
+      "needsReview": false
+    },
+    {
+      "text": "5",
+      "confidence": 96.708107,
+      "box": {
+        "x": 428,
+        "y": 769,
+        "width": 10,
+        "height": 17
+      },
+      "start": 327,
+      "end": 328,
+      "needsReview": false
+    },
+    {
+      "text": "mg",
+      "confidence": 96.43969,
+      "box": {
+        "x": 448,
+        "y": 773,
+        "width": 31,
+        "height": 16
+      },
+      "start": 329,
+      "end": 331,
+      "needsReview": false
+    },
+    {
+      "text": "QD",
+      "confidence": 96.887901,
+      "box": {
+        "x": 488,
+        "y": 769,
+        "width": 30,
+        "height": 18
+      },
+      "start": 332,
+      "end": 334,
+      "needsReview": false
+    },
+    {
+      "text": "for",
+      "confidence": 96.887901,
+      "box": {
+        "x": 526,
+        "y": 768,
+        "width": 29,
+        "height": 17
+      },
+      "start": 335,
+      "end": 338,
+      "needsReview": false
+    },
+    {
+      "text": "eight",
+      "confidence": 96.817047,
+      "box": {
+        "x": 562,
+        "y": 768,
+        "width": 52,
+        "height": 20
+      },
+      "start": 339,
+      "end": 344,
+      "needsReview": false
+    },
+    {
+      "text": "months",
+      "confidence": 96.88047,
+      "box": {
+        "x": 623,
+        "y": 767,
+        "width": 76,
+        "height": 17
+      },
+      "start": 345,
+      "end": 351,
+      "needsReview": false
+    },
+    {
+      "text": "Meals",
+      "confidence": 96.721565,
+      "box": {
+        "x": 332,
+        "y": 804,
+        "width": 58,
+        "height": 17
+      },
+      "start": 352,
+      "end": 357,
+      "needsReview": false
+    },
+    {
+      "text": "reviewed",
+      "confidence": 96.402649,
+      "box": {
+        "x": 399,
+        "y": 803,
+        "width": 92,
+        "height": 17
+      },
+      "start": 358,
+      "end": 366,
+      "needsReview": false
+    },
+    {
+      "text": "with",
+      "confidence": 96.773224,
+      "box": {
+        "x": 500,
+        "y": 803,
+        "width": 42,
+        "height": 16
+      },
+      "start": 367,
+      "end": 371,
+      "needsReview": false
+    },
+    {
+      "text": "patient.",
+      "confidence": 96.704376,
+      "box": {
+        "x": 552,
+        "y": 802,
+        "width": 77,
+        "height": 21
+      },
+      "start": 372,
+      "end": 380,
+      "needsReview": false
+    },
+    {
+      "text": "Counseling",
+      "confidence": 96.584732,
+      "box": {
+        "x": 332,
+        "y": 839,
+        "width": 113,
+        "height": 20
+      },
+      "start": 381,
+      "end": 391,
+      "needsReview": false
+    },
+    {
+      "text": "visit",
+      "confidence": 96.867302,
+      "box": {
+        "x": 454,
+        "y": 838,
+        "width": 42,
+        "height": 17
+      },
+      "start": 392,
+      "end": 397,
+      "needsReview": false
+    },
+    {
+      "text": "requested.",
+      "confidence": 96.71534,
+      "box": {
+        "x": 504,
+        "y": 837,
+        "width": 109,
+        "height": 21
+      },
+      "start": 398,
+      "end": 408,
+      "needsReview": false
+    },
+    {
+      "text": "End",
+      "confidence": 96.36277,
+      "box": {
+        "x": 333,
+        "y": 874,
+        "width": 36,
+        "height": 17
+      },
+      "start": 409,
+      "end": 412,
+      "needsReview": false
+    },
+    {
+      "text": "of",
+      "confidence": 96.888077,
+      "box": {
+        "x": 379,
+        "y": 874,
+        "width": 19,
+        "height": 16
+      },
+      "start": 413,
+      "end": 415,
+      "needsReview": false
+    },
+    {
+      "text": "intake.",
+      "confidence": 96.179108,
+      "box": {
+        "x": 406,
+        "y": 873,
+        "width": 67,
+        "height": 17
+      },
+      "start": 416,
+      "end": 423,
+      "needsReview": false
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "DISPENSING INTAKE\nEntry date: 09/10/2026\nPatient: Kori Thalen (fictional)\nOrdering clinician: Dr. Aven Ruskell (fictional)\nAge stated: 17 years\nRequested agent: semaglutide\nReason for treatment: appetite suppression\nOrder directions: 0.25mg SQ q7d\nLaboratory slip:\nHbAlc 7.4% collected 04/03/2026\nMedication exposure:\nGlipizide 5 mg QD for eight months\nMeals reviewed with patient.\nCounseling visit requested.\nEnd of intake.\n",
+    "words": [
+      {
+        "text": "DISPENSING",
+        "confidence": 96.235481,
+        "box": {
+          "x": 329,
+          "y": 387,
+          "width": 125,
+          "height": 17
+        },
+        "start": 0,
+        "end": 10,
+        "needsReview": false
+      },
+      {
+        "text": "INTAKE",
+        "confidence": 96.280029,
+        "box": {
+          "x": 463,
+          "y": 386,
+          "width": 72,
+          "height": 16
+        },
+        "start": 11,
+        "end": 17,
+        "needsReview": false
+      },
+      {
+        "text": "Entry",
+        "confidence": 96.870071,
+        "box": {
+          "x": 329,
+          "y": 422,
+          "width": 53,
+          "height": 20
+        },
+        "start": 18,
+        "end": 23,
+        "needsReview": false
+      },
+      {
+        "text": "date:",
+        "confidence": 96.342133,
+        "box": {
+          "x": 390,
+          "y": 422,
+          "width": 52,
+          "height": 16
+        },
+        "start": 24,
+        "end": 29,
+        "needsReview": false
+      },
+      {
+        "text": "09/10/2026",
+        "confidence": 96.670631,
+        "box": {
+          "x": 451,
+          "y": 420,
+          "width": 118,
+          "height": 19
+        },
+        "start": 30,
+        "end": 40,
+        "needsReview": false
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.725212,
+        "box": {
+          "x": 329,
+          "y": 456,
+          "width": 76,
+          "height": 17
+        },
+        "start": 41,
+        "end": 49,
+        "needsReview": false
+      },
+      {
+        "text": "Kori",
+        "confidence": 93.155167,
+        "box": {
+          "x": 416,
+          "y": 456,
+          "width": 36,
+          "height": 16
+        },
+        "start": 50,
+        "end": 54,
+        "needsReview": false
+      },
+      {
+        "text": "Thalen",
+        "confidence": 93.154823,
+        "box": {
+          "x": 460,
+          "y": 455,
+          "width": 70,
+          "height": 17
+        },
+        "start": 55,
+        "end": 61,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.785774,
+        "box": {
+          "x": 539,
+          "y": 454,
+          "width": 97,
+          "height": 20
+        },
+        "start": 62,
+        "end": 73,
+        "needsReview": false
+      },
+      {
+        "text": "Ordering",
+        "confidence": 95.879517,
+        "box": {
+          "x": 329,
+          "y": 491,
+          "width": 89,
+          "height": 21
+        },
+        "start": 74,
+        "end": 82,
+        "needsReview": false
+      },
+      {
+        "text": "clinician:",
+        "confidence": 93.499146,
+        "box": {
+          "x": 427,
+          "y": 490,
+          "width": 90,
+          "height": 17
+        },
+        "start": 83,
+        "end": 93,
+        "needsReview": false
+      },
+      {
+        "text": "Dr.",
+        "confidence": 96.332573,
+        "box": {
+          "x": 527,
+          "y": 490,
+          "width": 26,
+          "height": 16
+        },
+        "start": 94,
+        "end": 97,
+        "needsReview": false
+      },
+      {
+        "text": "Aven",
+        "confidence": 93.291687,
+        "box": {
+          "x": 562,
+          "y": 490,
+          "width": 49,
+          "height": 16
+        },
+        "start": 98,
+        "end": 102,
+        "needsReview": false
+      },
+      {
+        "text": "Ruskell",
+        "confidence": 88.454239,
+        "box": {
+          "x": 621,
+          "y": 489,
+          "width": 70,
+          "height": 16
+        },
+        "start": 103,
+        "end": 110,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.954491,
+        "box": {
+          "x": 701,
+          "y": 488,
+          "width": 96,
+          "height": 19
+        },
+        "start": 111,
+        "end": 122,
+        "needsReview": false
+      },
+      {
+        "text": "Age",
+        "confidence": 96.409233,
+        "box": {
+          "x": 329,
+          "y": 527,
+          "width": 39,
+          "height": 20
+        },
+        "start": 123,
+        "end": 126,
+        "needsReview": false
+      },
+      {
+        "text": "stated:",
+        "confidence": 96.409233,
+        "box": {
+          "x": 376,
+          "y": 525,
+          "width": 70,
+          "height": 17
+        },
+        "start": 127,
+        "end": 134,
+        "needsReview": false
+      },
+      {
+        "text": "17",
+        "confidence": 96.946838,
+        "box": {
+          "x": 457,
+          "y": 526,
+          "width": 23,
+          "height": 16
+        },
+        "start": 135,
+        "end": 137,
+        "needsReview": false
+      },
+      {
+        "text": "years",
+        "confidence": 96.275467,
+        "box": {
+          "x": 489,
+          "y": 529,
+          "width": 56,
+          "height": 17
+        },
+        "start": 138,
+        "end": 143,
+        "needsReview": false
+      },
+      {
+        "text": "Requested",
+        "confidence": 96.767555,
+        "box": {
+          "x": 330,
+          "y": 560,
+          "width": 108,
+          "height": 21
+        },
+        "start": 144,
+        "end": 153,
+        "needsReview": false
+      },
+      {
+        "text": "agent:",
+        "confidence": 93.01799,
+        "box": {
+          "x": 447,
+          "y": 561,
+          "width": 64,
+          "height": 20
+        },
+        "start": 154,
+        "end": 160,
+        "needsReview": false
+      },
+      {
+        "text": "semaglutide",
+        "confidence": 91.883156,
+        "box": {
+          "x": 521,
+          "y": 558,
+          "width": 127,
+          "height": 21
+        },
+        "start": 161,
+        "end": 172,
+        "needsReview": false
+      },
+      {
+        "text": "Reason",
+        "confidence": 96.217316,
+        "box": {
+          "x": 331,
+          "y": 596,
+          "width": 73,
+          "height": 16
+        },
+        "start": 173,
+        "end": 179,
+        "needsReview": false
+      },
+      {
+        "text": "for",
+        "confidence": 96.516403,
+        "box": {
+          "x": 412,
+          "y": 595,
+          "width": 28,
+          "height": 17
+        },
+        "start": 180,
+        "end": 183,
+        "needsReview": false
+      },
+      {
+        "text": "treatment:",
+        "confidence": 96.536484,
+        "box": {
+          "x": 447,
+          "y": 595,
+          "width": 110,
+          "height": 16
+        },
+        "start": 184,
+        "end": 194,
+        "needsReview": false
+      },
+      {
+        "text": "appetite",
+        "confidence": 96.803307,
+        "box": {
+          "x": 566,
+          "y": 593,
+          "width": 86,
+          "height": 21
+        },
+        "start": 195,
+        "end": 203,
+        "needsReview": false
+      },
+      {
+        "text": "suppression",
+        "confidence": 96.84903,
+        "box": {
+          "x": 660,
+          "y": 592,
+          "width": 123,
+          "height": 21
+        },
+        "start": 204,
+        "end": 215,
+        "needsReview": false
+      },
+      {
+        "text": "Order",
+        "confidence": 96.43708,
+        "box": {
+          "x": 330,
+          "y": 631,
+          "width": 59,
+          "height": 16
+        },
+        "start": 216,
+        "end": 221,
+        "needsReview": false
+      },
+      {
+        "text": "directions:",
+        "confidence": 93.226692,
+        "box": {
+          "x": 396,
+          "y": 630,
+          "width": 106,
+          "height": 17
+        },
+        "start": 222,
+        "end": 233,
+        "needsReview": false
+      },
+      {
+        "text": "0.25mg",
+        "confidence": 91.4217,
+        "box": {
+          "x": 512,
+          "y": 629,
+          "width": 78,
+          "height": 20
+        },
+        "start": 234,
+        "end": 240,
+        "needsReview": false
+      },
+      {
+        "text": "SQ",
+        "confidence": 93.217834,
+        "box": {
+          "x": 599,
+          "y": 628,
+          "width": 28,
+          "height": 19
+        },
+        "start": 241,
+        "end": 243,
+        "needsReview": false
+      },
+      {
+        "text": "q7d",
+        "confidence": 92.940643,
+        "box": {
+          "x": 635,
+          "y": 628,
+          "width": 37,
+          "height": 21
+        },
+        "start": 244,
+        "end": 247,
+        "needsReview": false
+      },
+      {
+        "text": "Laboratory",
+        "confidence": 95.600311,
+        "box": {
+          "x": 331,
+          "y": 665,
+          "width": 111,
+          "height": 20
+        },
+        "start": 248,
+        "end": 258,
+        "needsReview": false
+      },
+      {
+        "text": "slip:",
+        "confidence": 95.600311,
+        "box": {
+          "x": 451,
+          "y": 664,
+          "width": 40,
+          "height": 21
+        },
+        "start": 259,
+        "end": 264,
+        "needsReview": false
+      },
+      {
+        "text": "HbAlc",
+        "confidence": 40.839417,
+        "box": {
+          "x": 331,
+          "y": 700,
+          "width": 66,
+          "height": 17
+        },
+        "start": 265,
+        "end": 270,
+        "needsReview": true
+      },
+      {
+        "text": "7.4%",
+        "confidence": 96.776993,
+        "box": {
+          "x": 406,
+          "y": 700,
+          "width": 51,
+          "height": 16
+        },
+        "start": 271,
+        "end": 275,
+        "needsReview": false
+      },
+      {
+        "text": "collected",
+        "confidence": 96.910767,
+        "box": {
+          "x": 465,
+          "y": 698,
+          "width": 92,
+          "height": 18
+        },
+        "start": 276,
+        "end": 285,
+        "needsReview": false
+      },
+      {
+        "text": "04/03/2026",
+        "confidence": 96.415977,
+        "box": {
+          "x": 566,
+          "y": 697,
+          "width": 118,
+          "height": 19
+        },
+        "start": 286,
+        "end": 296,
+        "needsReview": false
+      },
+      {
+        "text": "Medication",
+        "confidence": 96.388023,
+        "box": {
+          "x": 332,
+          "y": 734,
+          "width": 111,
+          "height": 17
+        },
+        "start": 297,
+        "end": 307,
+        "needsReview": false
+      },
+      {
+        "text": "exposure:",
+        "confidence": 96.521828,
+        "box": {
+          "x": 452,
+          "y": 737,
+          "width": 100,
+          "height": 17
+        },
+        "start": 308,
+        "end": 317,
+        "needsReview": false
+      },
+      {
+        "text": "Glipizide",
+        "confidence": 91.998833,
+        "box": {
+          "x": 331,
+          "y": 769,
+          "width": 88,
+          "height": 21
+        },
+        "start": 318,
+        "end": 327,
+        "needsReview": false
+      },
+      {
+        "text": "5",
+        "confidence": 96.708107,
+        "box": {
+          "x": 428,
+          "y": 769,
+          "width": 10,
+          "height": 17
+        },
+        "start": 328,
+        "end": 329,
+        "needsReview": false
+      },
+      {
+        "text": "mg",
+        "confidence": 96.43969,
+        "box": {
+          "x": 448,
+          "y": 773,
+          "width": 31,
+          "height": 16
+        },
+        "start": 330,
+        "end": 332,
+        "needsReview": false
+      },
+      {
+        "text": "QD",
+        "confidence": 96.887901,
+        "box": {
+          "x": 488,
+          "y": 769,
+          "width": 30,
+          "height": 18
+        },
+        "start": 333,
+        "end": 335,
+        "needsReview": false
+      },
+      {
+        "text": "for",
+        "confidence": 96.887901,
+        "box": {
+          "x": 526,
+          "y": 768,
+          "width": 29,
+          "height": 17
+        },
+        "start": 336,
+        "end": 339,
+        "needsReview": false
+      },
+      {
+        "text": "eight",
+        "confidence": 96.817047,
+        "box": {
+          "x": 562,
+          "y": 768,
+          "width": 52,
+          "height": 20
+        },
+        "start": 340,
+        "end": 345,
+        "needsReview": false
+      },
+      {
+        "text": "months",
+        "confidence": 96.88047,
+        "box": {
+          "x": 623,
+          "y": 767,
+          "width": 76,
+          "height": 17
+        },
+        "start": 346,
+        "end": 352,
+        "needsReview": false
+      },
+      {
+        "text": "Meals",
+        "confidence": 96.721565,
+        "box": {
+          "x": 332,
+          "y": 804,
+          "width": 58,
+          "height": 17
+        },
+        "start": 353,
+        "end": 358,
+        "needsReview": false
+      },
+      {
+        "text": "reviewed",
+        "confidence": 96.402649,
+        "box": {
+          "x": 399,
+          "y": 803,
+          "width": 92,
+          "height": 17
+        },
+        "start": 359,
+        "end": 367,
+        "needsReview": false
+      },
+      {
+        "text": "with",
+        "confidence": 96.773224,
+        "box": {
+          "x": 500,
+          "y": 803,
+          "width": 42,
+          "height": 16
+        },
+        "start": 368,
+        "end": 372,
+        "needsReview": false
+      },
+      {
+        "text": "patient.",
+        "confidence": 96.704376,
+        "box": {
+          "x": 552,
+          "y": 802,
+          "width": 77,
+          "height": 21
+        },
+        "start": 373,
+        "end": 381,
+        "needsReview": false
+      },
+      {
+        "text": "Counseling",
+        "confidence": 96.584732,
+        "box": {
+          "x": 332,
+          "y": 839,
+          "width": 113,
+          "height": 20
+        },
+        "start": 382,
+        "end": 392,
+        "needsReview": false
+      },
+      {
+        "text": "visit",
+        "confidence": 96.867302,
+        "box": {
+          "x": 454,
+          "y": 838,
+          "width": 42,
+          "height": 17
+        },
+        "start": 393,
+        "end": 398,
+        "needsReview": false
+      },
+      {
+        "text": "requested.",
+        "confidence": 96.71534,
+        "box": {
+          "x": 504,
+          "y": 837,
+          "width": 109,
+          "height": 21
+        },
+        "start": 399,
+        "end": 409,
+        "needsReview": false
+      },
+      {
+        "text": "End",
+        "confidence": 96.36277,
+        "box": {
+          "x": 333,
+          "y": 874,
+          "width": 36,
+          "height": 17
+        },
+        "start": 410,
+        "end": 413,
+        "needsReview": false
+      },
+      {
+        "text": "of",
+        "confidence": 96.888077,
+        "box": {
+          "x": 379,
+          "y": 874,
+          "width": 19,
+          "height": 16
+        },
+        "start": 414,
+        "end": 416,
+        "needsReview": false
+      },
+      {
+        "text": "intake.",
+        "confidence": 96.179108,
+        "box": {
+          "x": 406,
+          "y": 873,
+          "width": 67,
+          "height": 17
+        },
+        "start": 417,
+        "end": 424,
+        "needsReview": false
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM",
+    "orientation": {
+      "pageRotation": 0,
+      "scores": {
+        "0": 1535.2842959999998,
+        "180": 0
+      }
+    },
+    "deskewDegrees": -7.5,
+    "readImage": "holdout-06.read.png",
+    "width": 1973,
+    "height": 2403
+  },
+  "scores": {
+    "entities": {
+      "tp": 0,
+      "predicted": 10,
+      "gold": 0,
+      "exactQuote": 0
+    },
+    "criteria": {
+      "correct": 5,
+      "total": 5
+    },
+    "cer": 0.0023584905660377358,
+    "edits": 1,
+    "chars": 424,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [
+    "1 OCR character edits"
+  ],
+  "latency": {
+    "renderAndOcrMs": 3920.293334000002,
+    "serviceMs": 16.467708000000016
+  }
+}

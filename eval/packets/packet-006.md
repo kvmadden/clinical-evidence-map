@@ -2,9 +2,9 @@
 packet_id: packet-006
 fictional: true
 criteria_id: pcsk9
-quality_group: skew
-quality_plan: "Complete text; later render with 7-degree skew."
-render_status: source_text_only
+group: rotation-7deg
+page_style: letter
+date_style: iso
 names: all_fictional
 identifiers: none
 ---
@@ -16,11 +16,11 @@ Patient: Arlen Brookvale (fictional).
 Age: 38 years.
 From: Dr. Rowan Vale, fictional requesting provider.
 Request: evolocumab 140 mg every 2 weeks.
-Please review the enclosed records for Established atherosclerotic cardiovascular disease.
 
 CLINICAL NOTES
 Visit date: 2026-09-20.
-Diagnosis: Established atherosclerotic cardiovascular disease.
+Assessment: routine follow-up visit.
+Past medical history: ASCVD with prior myocardial infarction, hypertension.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
@@ -28,5 +28,6 @@ LDL-C: 132 mg/dL; collected 2026-09-15.
 
 MEDICATION HISTORY
 Current requested therapy: evolocumab 140 mg every 2 weeks.
-Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01.
+Inadequate response documented.
 No other prior therapy records supplied.

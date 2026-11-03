@@ -2,32 +2,35 @@
 packet_id: packet-028
 fictional: true
 criteria_id: glp1-t2d
-quality_group: conflicting-dates
-quality_plan: "Provider letter and note disagree on the request date."
-render_status: source_text_only
+group: choppy-lines
+page_style: form
+date_style: us-slash
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
-REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
-Patient: Corin Fenwick (fictional).
-Age: 60 years.
-From: Dr. Rowan Vale, fictional requesting provider.
-Request: semaglutide 0.5 mg weekly.
-Please review the enclosed records for Type 2 diabetes mellitus.
+PRIOR AUTHORIZATION REQUEST FORM
+Date of request: 10/02/2026
+Patient name: Corin Fenwick (fictional)
+Age: ________
+Prescriber: Dr. Rowan Vale (fictional)
+Medication requested: semaglutide
+Dose and frequency: 0.5 mg SQ every 7 days
+Diagnosis for this request: type 2 diabetes mellitus (E11.9)
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Type 2 diabetes mellitus.
+Visit date: 09/21/2026.
+Assessment: type 2 diabetes mellitus (E11.9), above goal on prior therapy.
 The patient reports ongoing symptoms despite prior treatment.
-Request date recorded in note: 2026-09-01.
 
 LABS AND MEASUREMENTS
-A1c: 8.6 %; collected 2026-09-15.
+Most recent A1c: 8.6 %
+Date collected: 01/02/2026
 
 MEDICATION HISTORY
-Current requested therapy: semaglutide 0.5 mg weekly.
-Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: semaglutide 1 mg SQ qwk.
+Prior therapies tried: metformin 1000 mg by mouth q12h
+Trial dates: 11/06/2025 to 03/08/2026
+No improvement documented.
 No other prior therapy records supplied.

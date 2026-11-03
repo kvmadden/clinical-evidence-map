@@ -1,0 +1,337 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "packet-054",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/packets/packet-054.md",
+  "group": "orientation",
+  "tags": [
+    "page:letter",
+    "date:day-first",
+    "date-reading:forced",
+    "drug-name:generic",
+    "dose-format:route",
+    "misspelling",
+    "fax-style-header"
+  ],
+  "date_reading": {
+    "status": "forced",
+    "order": "dmy"
+  },
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [
+    {
+      "type": "fax_received_date",
+      "value": "2026-09-26",
+      "source_span": {
+        "start": 0,
+        "end": 45,
+        "text": "Fax received: 26 Sep 2026 09:14. Page 1 of 1."
+      },
+      "date": {
+        "written": "26 Sep 2026",
+        "format": "text-dmy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "request_date",
+      "value": "2026-09-25",
+      "source_span": {
+        "start": 73,
+        "end": 97,
+        "text": "Letter date: 25/09/2026."
+      },
+      "date": {
+        "written": "25/09/2026",
+        "format": "day-first",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "patient_name",
+      "value": "Nolan Calderby",
+      "source_span": {
+        "start": 98,
+        "end": 134,
+        "text": "Patient: Nolan Calderby (fictional)."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "age",
+      "value": 57,
+      "source_span": {
+        "start": 135,
+        "end": 146,
+        "text": "Age: 57 yrs"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "provider",
+      "value": "Dr. Rowan Vale",
+      "source_span": {
+        "start": 147,
+        "end": 199,
+        "text": "From: Dr. Rowan Vale, fictional requesting provider."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_medication",
+      "value": "evolocumab",
+      "source_span": {
+        "start": 200,
+        "end": 235,
+        "text": "Request: evolocumab 140 mg SQ Q14D."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_dose",
+      "value": "140 mg every 2 weeks",
+      "source_span": {
+        "start": 200,
+        "end": 235,
+        "text": "Request: evolocumab 140 mg SQ Q14D."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "indication",
+      "value": {
+        "condition": "atherosclerotic cardiovascular disease",
+        "certainty": "unconfirmed"
+      },
+      "source_span": {
+        "start": 236,
+        "end": 310,
+        "text": "Reason for request: possible coronary artery disease, stress test pending."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "atherosclerotic cardiovascular disease",
+        "certainty": "unconfirmed"
+      },
+      "source_span": {
+        "start": 351,
+        "end": 417,
+        "text": "Assessment: possible coronary artery disease, stress test pending."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "measurement",
+      "value": {
+        "name": "LDL-C",
+        "value": 132,
+        "unit": "mg/dL"
+      },
+      "source_span": {
+        "start": 503,
+        "end": 537,
+        "text": "LDL-c 132 mg/dL (drawn 09/09/2026)"
+      },
+      "misspelling": {
+        "written": "LDL-c",
+        "intended": "LDL-C",
+        "pharmacist_accepts": true
+      },
+      "reviewed": false
+    },
+    {
+      "type": "measurement_date",
+      "value": "2026-09-09",
+      "source_span": {
+        "start": 503,
+        "end": 537,
+        "text": "LDL-c 132 mg/dL (drawn 09/09/2026)"
+      },
+      "date": {
+        "written": "09/09/2026",
+        "format": "day-first",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "medication_list_dose",
+      "value": "140 mg every 2 weeks",
+      "source_span": {
+        "start": 558,
+        "end": 624,
+        "text": "Current requested therapy: evolocumab 140 mg subcut every 14 days."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2026-07-26",
+      "source_span": {
+        "start": 678,
+        "end": 730,
+        "text": "Trial dates: started 26/07/2026; stopped 09/08/2026."
+      },
+      "date": {
+        "written": "26/07/2026",
+        "format": "day-first",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-08-09",
+      "source_span": {
+        "start": 678,
+        "end": 730,
+        "text": "Trial dates: started 26/07/2026; stopped 09/08/2026."
+      },
+      "date": {
+        "written": "09/08/2026",
+        "format": "day-first",
+        "ambiguous": true,
+        "readings": [
+          "2026-09-08",
+          "2026-08-09"
+        ],
+        "resolved_by": "forced"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "atorvastatin",
+      "source_span": {
+        "start": 625,
+        "end": 677,
+        "text": "Prior therapy: atorvastatin 80 mg orally once daily."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "80 mg daily",
+      "source_span": {
+        "start": 625,
+        "end": 677,
+        "text": "Prior therapy: atorvastatin 80 mg orally once daily."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_outcome",
+      "value": "intolerance",
+      "source_span": {
+        "start": 731,
+        "end": 758,
+        "text": "Stopped due to intolerance."
+      },
+      "reviewed": false
+    }
+  ],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 135,
+          "end": 146,
+          "text": "Age: 57 yrs"
+        }
+      ],
+      "reason": "Age 57 is documented.",
+      "scenario": "supported",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 236,
+          "end": 310,
+          "text": "Reason for request: possible coronary artery disease, stress test pending."
+        },
+        {
+          "start": 351,
+          "end": 417,
+          "text": "Assessment: possible coronary artery disease, stress test pending."
+        }
+      ],
+      "reason": "Atherosclerotic cardiovascular disease is stated as suspected or possible, not confirmed.",
+      "scenario": "unconfirmed",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 503,
+          "end": 537,
+          "text": "LDL-c 132 mg/dL (drawn 09/09/2026)"
+        },
+        {
+          "start": 73,
+          "end": 97,
+          "text": "Letter date: 25/09/2026."
+        }
+      ],
+      "reason": "LDL-C 132 mg/dL is 16 days before the request and meets the 70 mg/dL threshold.",
+      "scenario": "supported",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 625,
+          "end": 677,
+          "text": "Prior therapy: atorvastatin 80 mg orally once daily."
+        },
+        {
+          "start": 678,
+          "end": 730,
+          "text": "Trial dates: started 26/07/2026; stopped 09/08/2026."
+        },
+        {
+          "start": 731,
+          "end": 758,
+          "text": "Stopped due to intolerance."
+        }
+      ],
+      "reason": "Atorvastatin intolerance is stated without a reason.",
+      "scenario": "intolerance-no-reason",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 200,
+          "end": 235,
+          "text": "Request: evolocumab 140 mg SQ Q14D."
+        }
+      ],
+      "reason": "The requested evolocumab dose 140 mg every 2 weeks matches the fictional rule.",
+      "scenario": "supported",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
+    "reviewed": false
+  }
+}

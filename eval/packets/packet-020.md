@@ -2,28 +2,32 @@
 packet_id: packet-020
 fictional: true
 criteria_id: biologic-psoriasis
-quality_group: missing-lab
-quality_plan: "Lab page omitted from supplied packet."
-render_status: source_text_only
+group: fax-noise
+page_style: letter
+date_style: text-mdy
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Request date: Oct 6, 2026.
 Patient: Oren Ashmere (fictional).
-Age: 52 years.
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: adalimumab 40 mg every other week.
-Please review the enclosed records for Moderate-to-severe plaque psoriasis.
+Request: adalimumab 40 mg weekly.
+Requested for: psoriatic arthritis.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Moderate-to-severe plaque psoriasis.
+Visit date: Sep 25, 2026.
+Assessment: psoriatic arthritis.
+Past medical history: hypertension, seasonal allergies.
 The patient reports ongoing symptoms despite prior treatment.
 
+LABS AND MEASUREMENTS
+Body surface area: 14 %, measured Jan 6, 2026.
+
 MEDICATION HISTORY
-Current requested therapy: adalimumab 40 mg every other week.
-Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: adalimumab 40 mg weekly.
+Previous treatment: apremilast 30 mg twice daily, Nov 10, 2025 - Mar 12, 2026.
+Inadequate response documented.
 No other prior therapy records supplied.

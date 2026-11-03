@@ -2,31 +2,31 @@
 packet_id: packet-047
 fictional: true
 criteria_id: biologic-psoriasis
-quality_group: intolerance
-quality_plan: "Prior therapy stopped early with documented intolerance."
-render_status: source_text_only
+group: low-contrast
+page_style: letter
+date_style: text-dmy
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Letter date: 8 Oct 2026.
 Patient: Veda Reedwell (fictional).
-Age: 50 years.
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: adalimumab 40 mg every other week.
-Please review the enclosed records for Moderate-to-severe plaque psoriasis.
+Request: Humira 40mg qwk.
+Indication for this request: Moderate-to-severe plaque psoriasis.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Moderate-to-severe plaque psoriasis.
+Visit date: 27 Sep 2026.
+Assessment: Moderate-to-severe plaque psoriasis, active on prior therapy.
+Past medical history: hypertension, seasonal allergies.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-Body surface area: 14 %; collected 2026-09-15.
+Body surface area: 14 percent; collected 8 Jan 2026.
 
 MEDICATION HISTORY
-Current requested therapy: adalimumab 40 mg every other week.
-Prior therapy: methotrexate 15 mg weekly; started 2026-08-01; stopped 2026-08-15; intolerance documented: persistent nausea.
+Current requested therapy: Humira 40mg once weekly.
+Prior therapy: Trexall 15mg once weekly; dates and response not supplied.
 No other prior therapy records supplied.

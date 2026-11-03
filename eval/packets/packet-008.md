@@ -2,31 +2,35 @@
 packet_id: packet-008
 fictional: true
 criteria_id: biologic-psoriasis
-quality_group: skew
-quality_plan: "Complete text; later render with 7-degree skew."
-render_status: source_text_only
+group: rotation-7deg
+page_style: form
+date_style: iso
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
-REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
-Patient: Corin Brookvale (fictional).
-Age: 40 years.
-From: Dr. Rowan Vale, fictional requesting provider.
-Request: adalimumab 40 mg every other week.
-Please review the enclosed records for Moderate-to-severe plaque psoriasis.
+PRIOR AUTHORIZATION REQUEST FORM
+Date of request: 2026-10-05
+Patient name: Corin Brookvale (fictional)
+Age: 40
+Prescriber: Dr. Rowan Vale (fictional)
+Medication requested: Humira (adalimumab)
+Dose and frequency: 1 pen (40 mg) SC every 14 days
+Diagnosis for this request: Moderate-to-severe plaque psoriasis
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Moderate-to-severe plaque psoriasis.
+Visit date: 2026-09-24.
+Assessment: Moderate-to-severe plaque psoriasis, active on prior therapy.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-Body surface area: 14 %; collected 2026-09-15.
+Most recent BSA: 14 %
+Date collected: 2026-09-19
 
 MEDICATION HISTORY
-Current requested therapy: adalimumab 40 mg every other week.
-Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: Humira (adalimumab) 1 pen (80 mg) SC every 2 weeks.
+Prior therapies tried: apremilast 30 mg PO twice a day
+Trial dates: 2026-04-05 to 2026-08-05
+Outcome: inadequate response.
 No other prior therapy records supplied.

@@ -2,27 +2,35 @@
 packet_id: packet-023
 fictional: true
 criteria_id: biologic-psoriasis
-quality_group: missing-history
-quality_plan: "Medication history page omitted from supplied packet."
-render_status: source_text_only
+group: fax-noise
+page_style: form
+date_style: text-dmy
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
-REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
-Patient: Elva Fenwick (fictional).
-Age: 55 years.
-From: Dr. Rowan Vale, fictional requesting provider.
-Request: adalimumab 40 mg every other week.
-Please review the enclosed records for Moderate-to-severe plaque psoriasis.
+PRIOR AUTHORIZATION REQUEST FORM
+Date of request: 29 Sep 2026
+Patient name: Elva Fenwick (fictional)
+Age: 17
+Prescriber: Dr. Rowan Vale (fictional)
+Medication requested: Humira
+Dose and frequency: 40mg q2wk
+Diagnosis for this request: plaque psoriasis, moderate to severe
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Moderate-to-severe plaque psoriasis.
+Visit date: 18 Sep 2026.
+Assessment: plaque psoriasis, moderate to severe, active on prior therapy.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-Body surface area: 14 %; collected 2026-09-15.
+Most recent BSA: 14 %
+Date collected: 13 Sep 2026
 
+MEDICATION HISTORY
+Current requested therapy: Humira 80mg q2wk.
+Prior therapies tried: methotrexate 15mg weekly
+Trial dates: 30 Mar 2026 to 30 Jul 2026
+Outcome: inadequate response.
+No other prior therapy records supplied.

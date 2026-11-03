@@ -2,28 +2,32 @@
 packet_id: packet-017
 fictional: true
 criteria_id: biologic-psoriasis
-quality_group: missing-lab
-quality_plan: "Lab page omitted from supplied packet."
-render_status: source_text_only
+group: fax-noise
+page_style: letter
+date_style: text-dmy
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Request date: 7 Oct 2026.
 Patient: Veda Ashmere (fictional).
-Age: 49 years.
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: adalimumab 40 mg every other week.
-Please review the enclosed records for Moderate-to-severe plaque psoriasis.
+Request: adalimumb 40mg every 7 days.
+Reason for request: plaque psoriasis, moderate to severe.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Moderate-to-severe plaque psoriasis.
+Visit date: 26 Sep 2026.
+Assessment: plaque psoriasis, moderate to severe, active on prior therapy.
 The patient reports ongoing symptoms despite prior treatment.
 
+LABS AND MEASUREMENTS
+BSA = 14 percent on 7 Jan 2026
+
 MEDICATION HISTORY
-Current requested therapy: adalimumab 40 mg every other week.
-Prior therapy: methotrexate 15 mg weekly; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: adalimumb 40mg q7d.
+Previous treatment: Trexan 15mg once a week, 11 Nov 2025 - 13 Mar 2026.
+Baseline before Trexan: BSA 18 % on 4 Nov 2025.
+On Trexan: BSA 15 % on 1 Mar 2026; goal 3 % or less not met.
 No other prior therapy records supplied.

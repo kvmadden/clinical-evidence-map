@@ -1,12 +1,46 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-006",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "pcsk9",
   "source_file": "eval/packets/packet-006.md",
+  "group": "rotation-7deg",
+  "tags": [
+    "page:letter",
+    "date:iso",
+    "date-reading:none",
+    "drug-name:generic",
+    "dose-format:plain"
+  ],
+  "date_reading": {
+    "status": "none",
+    "order": null
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-10-01",
+      "source_span": {
+        "start": 27,
+        "end": 52,
+        "text": "Request date: 2026-10-01."
+      },
+      "date": {
+        "written": "2026-10-01",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
+    },
     {
       "type": "patient_name",
       "value": "Arlen Brookvale",
@@ -15,7 +49,14 @@
         "end": 90,
         "text": "Patient: Arlen Brookvale (fictional)."
       },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "age",
@@ -25,17 +66,14 @@
         "end": 105,
         "text": "Age: 38 years."
       },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
-      },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "provider",
@@ -45,7 +83,14 @@
         "end": 158,
         "text": "From: Dr. Rowan Vale, fictional requesting provider."
       },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "requested_medication",
@@ -55,7 +100,14 @@
         "end": 200,
         "text": "Request: evolocumab 140 mg every 2 weeks."
       },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "requested_dose",
@@ -65,15 +117,32 @@
         "end": 200,
         "text": "Request: evolocumab 140 mg every 2 weeks."
       },
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
+    },
+    {
+      "type": "history_condition",
+      "value": "atherosclerotic cardiovascular disease",
+      "source_span": {
+        "start": 278,
+        "end": 353,
+        "text": "Past medical history: ASCVD with prior myocardial infarction, hypertension."
+      },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Established atherosclerotic cardiovascular disease",
+      "type": "history_condition",
+      "value": "hypertension",
       "source_span": {
-        "start": 332,
-        "end": 394,
-        "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
+        "start": 278,
+        "end": 353,
+        "text": "Past medical history: ASCVD with prior myocardial infarction, hypertension."
       },
       "reviewed": false
     },
@@ -81,53 +150,74 @@
       "type": "measurement",
       "value": {
         "name": "LDL-C",
-        "value": 132.0,
+        "value": 132,
         "unit": "mg/dL"
       },
       "source_span": {
-        "start": 480,
-        "end": 519,
+        "start": 439,
+        "end": 478,
         "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
       },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "measurement_date",
       "value": "2026-09-15",
       "source_span": {
-        "start": 480,
-        "end": 519,
+        "start": 439,
+        "end": 478,
         "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
       },
-      "reviewed": false
+      "date": {
+        "written": "2026-09-15",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
-      "type": "prior_medication",
-      "value": "atorvastatin",
+      "type": "medication_list_dose",
+      "value": "140 mg every 2 weeks",
       "source_span": {
-        "start": 600,
-        "end": 712,
-        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "start": 499,
+        "end": 558,
+        "text": "Current requested therapy: evolocumab 140 mg every 2 weeks."
       },
-      "reviewed": false
-    },
-    {
-      "type": "prior_dose",
-      "value": "80 mg daily",
-      "source_span": {
-        "start": 600,
-        "end": 712,
-        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "verdict": "agree",
+        "carried_over": true,
+        "basis": "Type, value and quoted line unchanged since this review."
+      }
     },
     {
       "type": "prior_start_date",
       "value": "2026-04-01",
       "source_span": {
-        "start": 600,
-        "end": 712,
-        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "start": 559,
+        "end": 639,
+        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01."
+      },
+      "date": {
+        "written": "2026-04-01",
+        "format": "iso",
+        "ambiguous": false
       },
       "reviewed": false
     },
@@ -135,9 +225,34 @@
       "type": "prior_stop_date",
       "value": "2026-08-01",
       "source_span": {
-        "start": 600,
-        "end": 712,
-        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "start": 559,
+        "end": 639,
+        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01."
+      },
+      "date": {
+        "written": "2026-08-01",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "atorvastatin",
+      "source_span": {
+        "start": 559,
+        "end": 639,
+        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "80 mg daily",
+      "source_span": {
+        "start": 559,
+        "end": 639,
+        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01."
       },
       "reviewed": false
     },
@@ -145,19 +260,9 @@
       "type": "prior_outcome",
       "value": "inadequate response",
       "source_span": {
-        "start": 600,
-        "end": 712,
-        "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "medication_list_dose",
-      "value": "140 mg every 2 weeks",
-      "source_span": {
-        "start": 540,
-        "end": 599,
-        "text": "Current requested therapy: evolocumab 140 mg every 2 weeks."
+        "start": 640,
+        "end": 671,
+        "text": "Inadequate response documented."
       },
       "reviewed": false
     }
@@ -173,29 +278,46 @@
           "text": "Age: 38 years."
         }
       ],
-      "reason": "Documented in the supplied source.",
-      "reviewed": false
+      "reason": "Age 38 is documented.",
+      "scenario": "supported",
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": true,
+        "basis": "Rule text and quoted evidence unchanged since this review."
+      }
     },
     {
       "criterion_id": "diagnosis",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 332,
-          "end": 394,
-          "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
+          "start": 278,
+          "end": 353,
+          "text": "Past medical history: ASCVD with prior myocardial infarction, hypertension."
         }
       ],
-      "reason": "Documented in the supplied source.",
-      "reviewed": false
+      "reason": "Atherosclerotic cardiovascular disease appears only in the past medical history. No document names it as the reason for this request.",
+      "scenario": "history-only",
+      "reviewed": false,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": false,
+        "needs_rereview": true,
+        "basis": "Not carried over because the rule text changed and the packet text for this criterion changed."
+      }
     },
     {
       "criterion_id": "lab",
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 480,
-          "end": 519,
+          "start": 439,
+          "end": 478,
           "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
         },
         {
@@ -204,21 +326,43 @@
           "text": "Request date: 2026-10-01."
         }
       ],
-      "reason": "Documented in the supplied source.",
-      "reviewed": false
+      "reason": "LDL-C 132 mg/dL is 16 days before the request and meets the 70 mg/dL threshold.",
+      "scenario": "supported",
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": true,
+        "basis": "Rule text and quoted evidence unchanged since this review."
+      }
     },
     {
       "criterion_id": "prior",
-      "status": "evidence_found",
+      "status": "needs_review",
       "evidence_spans": [
         {
-          "start": 600,
-          "end": 712,
-          "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+          "start": 559,
+          "end": 639,
+          "text": "Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01."
+        },
+        {
+          "start": 640,
+          "end": 671,
+          "text": "Inadequate response documented."
         }
       ],
-      "reason": "The documented trial runs 122 days, meeting the fictional 90-day requirement.",
-      "reviewed": false
+      "reason": "A 122-day atorvastatin trial is documented, but no LDL-C before and after the trial shows the goal was not met.",
+      "scenario": "bare",
+      "reviewed": false,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": false,
+        "needs_rereview": true,
+        "basis": "Not carried over because the rule text changed and the packet text for this criterion changed."
+      }
     },
     {
       "criterion_id": "dose",
@@ -230,13 +374,21 @@
           "text": "Request: evolocumab 140 mg every 2 weeks."
         }
       ],
-      "reason": "Documented in the supplied source.",
-      "reviewed": false
+      "reason": "The requested evolocumab dose 140 mg every 2 weeks matches the fictional rule.",
+      "scenario": "supported",
+      "reviewed": true,
+      "review": {
+        "reviewer": "Kevin Madden, pharmacist",
+        "date": "2026-11-02",
+        "status": "evidence_found",
+        "carried_over": true,
+        "basis": "Rule text and quoted evidence unchanged since this review."
+      }
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

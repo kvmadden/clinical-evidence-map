@@ -1,0 +1,281 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "multipage-02",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/fixtures/multipage/packets/multipage-02.md",
+  "group": "fax-noise",
+  "tags": [
+    "page:form",
+    "date:day-first",
+    "date-reading:unresolved",
+    "drug-name:generic",
+    "dose-format:route",
+    "pages:2",
+    "page-not-received"
+  ],
+  "date_reading": {
+    "status": "unresolved",
+    "order": null
+  },
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [
+    {
+      "type": "request_date",
+      "value": {
+        "readings": [
+          "2026-01-10",
+          "2026-10-01"
+        ]
+      },
+      "source_span": {
+        "start": 70,
+        "end": 97,
+        "text": "Date of request: 01/10/2026"
+      },
+      "date": {
+        "written": "01/10/2026",
+        "format": "day-first",
+        "ambiguous": true,
+        "readings": [
+          "2026-01-10",
+          "2026-10-01"
+        ],
+        "resolved_by": "unresolved"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "patient_name",
+      "value": "Corin Ashmere",
+      "source_span": {
+        "start": 98,
+        "end": 137,
+        "text": "Patient name: Corin Ashmere (fictional)"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "age",
+      "value": 50,
+      "source_span": {
+        "start": 138,
+        "end": 145,
+        "text": "Age: 50"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "provider",
+      "value": "Dr. Rowan Vale",
+      "source_span": {
+        "start": 146,
+        "end": 184,
+        "text": "Prescriber: Dr. Rowan Vale (fictional)"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_medication",
+      "value": "evolocumab",
+      "source_span": {
+        "start": 185,
+        "end": 217,
+        "text": "Medication requested: evolocumab"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_dose",
+      "value": "140 mg every 2 weeks",
+      "source_span": {
+        "start": 218,
+        "end": 252,
+        "text": "Dose and frequency: 140 mg SQ q2wk"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "indication",
+      "value": "atherosclerotic cardiovascular disease",
+      "source_span": {
+        "start": 253,
+        "end": 331,
+        "text": "Diagnosis for this request: Established atherosclerotic cardiovascular disease"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "atherosclerotic cardiovascular disease",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 417,
+        "end": 480,
+        "text": "Assessment: Established atherosclerotic cardiovascular disease."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "history_condition",
+      "value": "hypertension",
+      "source_span": {
+        "start": 481,
+        "end": 536,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "history_condition",
+      "value": "seasonal allergies",
+      "source_span": {
+        "start": 481,
+        "end": 536,
+        "text": "Past medical history: hypertension, seasonal allergies."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "measurement",
+      "value": {
+        "name": "LDL-C",
+        "value": 132,
+        "unit": "mg/dL"
+      },
+      "source_span": {
+        "start": 622,
+        "end": 650,
+        "text": "Most recent LDL-C: 132 mg/dL"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "measurement_date",
+      "value": {
+        "readings": [
+          "2026-08-09",
+          "2026-09-08"
+        ]
+      },
+      "source_span": {
+        "start": 651,
+        "end": 677,
+        "text": "Date collected: 08/09/2026"
+      },
+      "date": {
+        "written": "08/09/2026",
+        "format": "day-first",
+        "ambiguous": true,
+        "readings": [
+          "2026-08-09",
+          "2026-09-08"
+        ],
+        "resolved_by": "unresolved"
+      },
+      "reviewed": false
+    }
+  ],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 138,
+          "end": 145,
+          "text": "Age: 50"
+        }
+      ],
+      "reason": "Age 50 is documented.",
+      "scenario": "supported",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 253,
+          "end": 331,
+          "text": "Diagnosis for this request: Established atherosclerotic cardiovascular disease"
+        },
+        {
+          "start": 417,
+          "end": 480,
+          "text": "Assessment: Established atherosclerotic cardiovascular disease."
+        }
+      ],
+      "reason": "The request names atherosclerotic cardiovascular disease as its reason.",
+      "scenario": "supported",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 70,
+          "end": 97,
+          "text": "Date of request: 01/10/2026"
+        },
+        {
+          "start": 622,
+          "end": 650,
+          "text": "Most recent LDL-C: 132 mg/dL"
+        },
+        {
+          "start": 651,
+          "end": 677,
+          "text": "Date collected: 08/09/2026"
+        }
+      ],
+      "reason": "Numeric dates on the pages received can be read month first or day first, and the two readings give different results. Nothing on those pages settles the order.",
+      "scenario": "ambiguous-date",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [],
+      "reason": "Page 2 of 3 was not received, and nothing on the pages that were documents this criterion. It may be on the missing page.",
+      "scenario": "page-not-received",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 185,
+          "end": 217,
+          "text": "Medication requested: evolocumab"
+        },
+        {
+          "start": 218,
+          "end": 252,
+          "text": "Dose and frequency: 140 mg SQ q2wk"
+        }
+      ],
+      "reason": "The requested dose matches the fictional rule on the pages received. The medication list that disagreed with it was on page 2, which was not received. Whether a found answer stands while a page is missing is Kevin's open decision.",
+      "scenario": "supported",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
+    "reviewed": false
+  },
+  "built_from": "eval/packets/packet-018.md",
+  "pages": {
+    "received": [
+      1,
+      3
+    ],
+    "of": 3
+  }
+}

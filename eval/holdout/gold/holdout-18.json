@@ -1,0 +1,110 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-18",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/holdout/packets/holdout-18.md",
+  "group": "orientation",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Referral paragraphs; otherwise complete atorvastatin course uses only 20 mg.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 39,
+          "end": 79,
+          "text": "Patient: Anya Corlen (fictional), age 57"
+        }
+      ],
+      "reason": "The patient is an adult.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 115,
+          "end": 181,
+          "text": "Please supply evolocumab for coronary artery disease with a stent."
+        }
+      ],
+      "reason": "Coronary artery disease with a stent establishes ASCVD and is the requested indication.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 15,
+          "end": 38,
+          "text": "Written November 4 2026"
+        },
+        {
+          "start": 464,
+          "end": 507,
+          "text": "Latest LDL-C: 104 mg/dL on October 27 2026."
+        }
+      ],
+      "reason": "The qualifying LDL-C was measured eight days before the request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 292,
+          "end": 355,
+          "text": "Atorvastatin 20 mg QD began January 1 2026 and remains ongoing."
+        },
+        {
+          "start": 356,
+          "end": 413,
+          "text": "LDL before the first dose: 155 mg/dl on December 30 2025."
+        },
+        {
+          "start": 414,
+          "end": 463,
+          "text": "LDL during treatment: 112 mg/dl on April 15 2026."
+        },
+        {
+          "start": 508,
+          "end": 558,
+          "text": "No adverse effects were reported with the tablets."
+        }
+      ],
+      "reason": "The atorvastatin dose is below 40 mg, with no intolerance or contraindication documented.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 182,
+          "end": 223,
+          "text": "The directions are 140 mg SC every 2 wks."
+        }
+      ],
+      "reason": "The requested evolocumab dose matches.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

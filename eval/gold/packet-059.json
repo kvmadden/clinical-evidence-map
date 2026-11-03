@@ -1,0 +1,251 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "packet-059",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/packets/packet-059.md",
+  "group": "mixed-annotations",
+  "tags": [
+    "page:form",
+    "date:us-slash",
+    "date-reading:forced",
+    "drug-name:generic",
+    "dose-format:plain",
+    "blank-field",
+    "ai-drawn-handwriting"
+  ],
+  "date_reading": {
+    "status": "forced",
+    "order": "mdy"
+  },
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-10-01",
+      "source_span": {
+        "start": 33,
+        "end": 60,
+        "text": "Date of request: 10/01/2026"
+      },
+      "date": {
+        "written": "10/01/2026",
+        "format": "us-slash",
+        "ambiguous": true,
+        "readings": [
+          "2026-10-01",
+          "2026-01-10"
+        ],
+        "resolved_by": "forced"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "patient_name",
+      "value": "Lina Calderby",
+      "source_span": {
+        "start": 61,
+        "end": 100,
+        "text": "Patient name: Lina Calderby (fictional)"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "age",
+      "value": 33,
+      "source_span": {
+        "start": 101,
+        "end": 108,
+        "text": "Age: 33"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "provider",
+      "value": "Dr. Rowan Vale",
+      "source_span": {
+        "start": 109,
+        "end": 147,
+        "text": "Prescriber: Dr. Rowan Vale (fictional)"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_medication",
+      "value": "adalimumab",
+      "source_span": {
+        "start": 148,
+        "end": 180,
+        "text": "Medication requested: adalimumab"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "requested_dose",
+      "value": "40 mg every 2 weeks",
+      "source_span": {
+        "start": 181,
+        "end": 211,
+        "text": "Dose and frequency: 40 mg q2wk"
+      },
+      "handwritten": true,
+      "reviewed": false
+    },
+    {
+      "type": "history_condition",
+      "value": "moderate-to-severe plaque psoriasis",
+      "source_span": {
+        "start": 289,
+        "end": 362,
+        "text": "Past medical history: plaque psoriasis, moderate to severe, hypertension."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "history_condition",
+      "value": "hypertension",
+      "source_span": {
+        "start": 289,
+        "end": 362,
+        "text": "Past medical history: plaque psoriasis, moderate to severe, hypertension."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "measurement",
+      "value": {
+        "name": "BSA",
+        "value": 6,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 474,
+        "end": 494,
+        "text": "Most recent BSA: 6 %"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "measurement_date",
+      "value": "2026-09-15",
+      "source_span": {
+        "start": 495,
+        "end": 521,
+        "text": "Date collected: 09/15/2026"
+      },
+      "date": {
+        "written": "09/15/2026",
+        "format": "us-slash",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "medication_list_dose",
+      "value": "40 mg every 2 weeks",
+      "source_span": {
+        "start": 542,
+        "end": 603,
+        "text": "Current requested therapy: adalimumab 40 mg every other week."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "blank_field",
+      "value": "prior therapy",
+      "source_span": {
+        "start": 604,
+        "end": 635,
+        "text": "Prior therapies tried: ________"
+      },
+      "reviewed": false
+    }
+  ],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 101,
+          "end": 108,
+          "text": "Age: 33"
+        }
+      ],
+      "reason": "Age 33 is documented.",
+      "scenario": "supported",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 289,
+          "end": 362,
+          "text": "Past medical history: plaque psoriasis, moderate to severe, hypertension."
+        }
+      ],
+      "reason": "Moderate-to-severe plaque psoriasis appears only in the past medical history. No document names it as the reason for this request.",
+      "scenario": "history-only",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 474,
+          "end": 494,
+          "text": "Most recent BSA: 6 %"
+        },
+        {
+          "start": 495,
+          "end": 521,
+          "text": "Date collected: 09/15/2026"
+        },
+        {
+          "start": 33,
+          "end": 60,
+          "text": "Date of request: 10/01/2026"
+        }
+      ],
+      "reason": "BSA 6 % is below the 10 % threshold.",
+      "scenario": "below",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The prior therapy field is blank.",
+      "scenario": "blank",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 148,
+          "end": 180,
+          "text": "Medication requested: adalimumab"
+        },
+        {
+          "start": 181,
+          "end": 211,
+          "text": "Dose and frequency: 40 mg q2wk"
+        }
+      ],
+      "reason": "The requested adalimumab dose 40 mg every 2 weeks matches the fictional rule.",
+      "scenario": "handwritten",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
+    "reviewed": false
+  }
+}

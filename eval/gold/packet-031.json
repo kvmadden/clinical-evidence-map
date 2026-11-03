@@ -1,19 +1,46 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-031",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "glp1-t2d",
   "source_file": "eval/packets/packet-031.md",
+  "group": "choppy-lines",
+  "tags": [
+    "page:form",
+    "date:iso",
+    "date-reading:none",
+    "drug-name:brand",
+    "dose-format:sig"
+  ],
+  "date_reading": {
+    "status": "none",
+    "order": null
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-09-25",
+      "source_span": {
+        "start": 33,
+        "end": 60,
+        "text": "Date of request: 2026-09-25"
+      },
+      "date": {
+        "written": "2026-09-25",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Mira Dunvale",
       "source_span": {
-        "start": 53,
-        "end": 87,
-        "text": "Patient: Mira Dunvale (fictional)."
+        "start": 61,
+        "end": 99,
+        "text": "Patient name: Mira Dunvale (fictional)"
       },
       "reviewed": false
     },
@@ -21,19 +48,9 @@
       "type": "age",
       "value": 34,
       "source_span": {
-        "start": 88,
-        "end": 102,
-        "text": "Age: 34 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
+        "start": 100,
+        "end": 107,
+        "text": "Age: 34"
       },
       "reviewed": false
     },
@@ -41,9 +58,9 @@
       "type": "provider",
       "value": "Dr. Rowan Vale",
       "source_span": {
-        "start": 103,
-        "end": 155,
-        "text": "From: Dr. Rowan Vale, fictional requesting provider."
+        "start": 108,
+        "end": 146,
+        "text": "Prescriber: Dr. Rowan Vale (fictional)"
       },
       "reviewed": false
     },
@@ -51,9 +68,9 @@
       "type": "requested_medication",
       "value": "semaglutide",
       "source_span": {
-        "start": 156,
-        "end": 191,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 147,
+        "end": 190,
+        "text": "Medication requested: Ozempic (semaglutide)"
       },
       "reviewed": false
     },
@@ -61,19 +78,32 @@
       "type": "requested_dose",
       "value": "0.5 mg weekly",
       "source_span": {
-        "start": 156,
-        "end": 191,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 191,
+        "end": 240,
+        "text": "Dose and frequency: 1 pen (0.5 mg) SC once weekly"
       },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Type 2 diabetes mellitus",
+      "type": "indication",
+      "value": "obesity",
       "source_span": {
-        "start": 297,
-        "end": 333,
-        "text": "Diagnosis: Type 2 diabetes mellitus."
+        "start": 241,
+        "end": 307,
+        "text": "Diagnosis for this request: obesity, for chronic weight management"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "obesity",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 348,
+        "end": 399,
+        "text": "Assessment: obesity, for chronic weight management."
       },
       "reviewed": false
     },
@@ -85,69 +115,24 @@
         "unit": "%"
       },
       "source_span": {
-        "start": 419,
-        "end": 452,
-        "text": "A1c: 8.6 %; collected 2026-01-01."
+        "start": 485,
+        "end": 518,
+        "text": "Most recent Hemoglobin A1c: 8.6 %"
       },
       "reviewed": false
     },
     {
       "type": "measurement_date",
-      "value": "2026-01-01",
+      "value": "2026-09-09",
       "source_span": {
-        "start": 419,
-        "end": 452,
-        "text": "A1c: 8.6 %; collected 2026-01-01."
+        "start": 519,
+        "end": 545,
+        "text": "Date collected: 2026-09-09"
       },
-      "reviewed": false
-    },
-    {
-      "type": "prior_medication",
-      "value": "metformin",
-      "source_span": {
-        "start": 527,
-        "end": 644,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_dose",
-      "value": "1000 mg twice daily",
-      "source_span": {
-        "start": 527,
-        "end": 644,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_start_date",
-      "value": "2026-04-01",
-      "source_span": {
-        "start": 527,
-        "end": 644,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_stop_date",
-      "value": "2026-08-01",
-      "source_span": {
-        "start": 527,
-        "end": 644,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_outcome",
-      "value": "inadequate response",
-      "source_span": {
-        "start": 527,
-        "end": 644,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+      "date": {
+        "written": "2026-09-09",
+        "format": "iso",
+        "ambiguous": false
       },
       "reviewed": false
     },
@@ -155,9 +140,117 @@
       "type": "medication_list_dose",
       "value": "0.5 mg weekly",
       "source_span": {
-        "start": 473,
-        "end": 526,
-        "text": "Current requested therapy: semaglutide 0.5 mg weekly."
+        "start": 566,
+        "end": 637,
+        "text": "Current requested therapy: Ozempic (semaglutide) 1 pen (0.5 mg) SC qwk."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2026-03-26",
+      "source_span": {
+        "start": 701,
+        "end": 738,
+        "text": "Trial dates: 2026-03-26 to 2026-07-26"
+      },
+      "date": {
+        "written": "2026-03-26",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-07-26",
+      "source_span": {
+        "start": 701,
+        "end": 738,
+        "text": "Trial dates: 2026-03-26 to 2026-07-26"
+      },
+      "date": {
+        "written": "2026-07-26",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "metformin",
+      "source_span": {
+        "start": 638,
+        "end": 700,
+        "text": "Prior therapies tried: metformin 500 mg tablets, 2 tabs PO BID"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "1000 mg twice daily",
+      "source_span": {
+        "start": 638,
+        "end": 700,
+        "text": "Prior therapies tried: metformin 500 mg tablets, 2 tabs PO BID"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_baseline",
+      "value": {
+        "name": "A1c",
+        "value": 9.4,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 739,
+        "end": 790,
+        "text": "Baseline before metformin: A1c 9.4 % on 2026-03-19."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_baseline_date",
+      "value": "2026-03-19",
+      "source_span": {
+        "start": 739,
+        "end": 790,
+        "text": "Baseline before metformin: A1c 9.4 % on 2026-03-19."
+      },
+      "date": {
+        "written": "2026-03-19",
+        "format": "iso",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_followup",
+      "value": {
+        "name": "A1c",
+        "value": 8.9,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 791,
+        "end": 855,
+        "text": "On metformin: A1c 8.9 % on 2026-07-14; goal below 7.0 % not met."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_followup_date",
+      "value": "2026-07-14",
+      "source_span": {
+        "start": 791,
+        "end": 855,
+        "text": "On metformin: A1c 8.9 % on 2026-07-14; goal below 7.0 % not met."
+      },
+      "date": {
+        "written": "2026-07-14",
+        "format": "iso",
+        "ambiguous": false
       },
       "reviewed": false
     }
@@ -168,43 +261,45 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 88,
-          "end": 102,
-          "text": "Age: 34 years."
+          "start": 100,
+          "end": 107,
+          "text": "Age: 34"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Age 34 is documented.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
       "criterion_id": "diagnosis",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 297,
-          "end": 333,
-          "text": "Diagnosis: Type 2 diabetes mellitus."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The request names obesity, not type 2 diabetes mellitus.",
+      "scenario": "other-indication",
       "reviewed": false
     },
     {
       "criterion_id": "lab",
-      "status": "needs_review",
+      "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 419,
-          "end": 452,
-          "text": "A1c: 8.6 %; collected 2026-01-01."
+          "start": 485,
+          "end": 518,
+          "text": "Most recent Hemoglobin A1c: 8.6 %"
         },
         {
-          "start": 27,
-          "end": 52,
-          "text": "Request date: 2026-10-01."
+          "start": 519,
+          "end": 545,
+          "text": "Date collected: 2026-09-09"
+        },
+        {
+          "start": 33,
+          "end": 60,
+          "text": "Date of request: 2026-09-25"
         }
       ],
-      "reason": "The measurement is outside the fictional 180-day window.",
+      "reason": "A1c 8.6 % is 16 days before the request.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
@@ -212,12 +307,28 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 527,
-          "end": 644,
-          "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+          "start": 638,
+          "end": 700,
+          "text": "Prior therapies tried: metformin 500 mg tablets, 2 tabs PO BID"
+        },
+        {
+          "start": 701,
+          "end": 738,
+          "text": "Trial dates: 2026-03-26 to 2026-07-26"
+        },
+        {
+          "start": 739,
+          "end": 790,
+          "text": "Baseline before metformin: A1c 9.4 % on 2026-03-19."
+        },
+        {
+          "start": 791,
+          "end": 855,
+          "text": "On metformin: A1c 8.9 % on 2026-07-14; goal below 7.0 % not met."
         }
       ],
-      "reason": "The documented trial runs 122 days, meeting the fictional 90-day requirement.",
+      "reason": "A 122-day metformin trial is documented with A1c 9.4 before and 8.9 after, still not at goal.",
+      "scenario": "objective",
       "reviewed": false
     },
     {
@@ -225,18 +336,24 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 156,
-          "end": 191,
-          "text": "Request: semaglutide 0.5 mg weekly."
+          "start": 147,
+          "end": 190,
+          "text": "Medication requested: Ozempic (semaglutide)"
+        },
+        {
+          "start": 191,
+          "end": 240,
+          "text": "Dose and frequency: 1 pen (0.5 mg) SC once weekly"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The requested semaglutide dose 0.5 mg weekly matches the fictional rule.",
+      "scenario": "supported",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

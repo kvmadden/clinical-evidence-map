@@ -1,0 +1,340 @@
+{
+  "packets": [
+    {
+      "packet_id": "holdout-01",
+      "criteria_id": "glp1-t2d",
+      "render": "clean",
+      "text": "ENDOCRINE SOAP\nPatient: Mira Velden (fictional)\nClinician: Dr. Oren Tavis (fictional)\nRequest entered: 2026-10-03\nAge: 54 years\nS: Glucose remains elevated despite regular tablets.\nO: Weight stable; hydration adequate.\nHbA1c: 8.1% on 2026-09-18\nA: T2DM is the indication for this semaglutide request.\nP: Semaglutide 0.5mg SQ q7d.\nMedication course:\nMetformin 1000 mg PO BID, 2026-01-10 through 2026-09-30.\nA1c before first tablet: 9.0% on 2026-01-09.\nA1c during treatment: 8.4% on 2026-05-12.\nAdherence discussed; patient reports taking both daily doses.\nElectronic attestation: Oren Tavis (fictional)",
+      "variation_notes": "SOAP layout; complete dated trial; compact injection sig.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age: 54 years"],"reason":"The stated age exceeds 18."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["A: T2DM is the indication for this semaglutide request."],"reason":"T2DM is explicitly linked to this request."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Request entered: 2026-10-03","HbA1c: 8.1% on 2026-09-18"],"reason":"The A1c precedes the request by 15 days."},
+        {"criterion_id":"prior","status":"evidence_found","evidence_lines":["Metformin 1000 mg PO BID, 2026-01-10 through 2026-09-30.","A1c before first tablet: 9.0% on 2026-01-09.","A1c during treatment: 8.4% on 2026-05-12."],"reason":"A stated-dose trial exceeds 90 days, with baseline and a qualifying follow-up more than 90 days after initiation."},
+        {"criterion_id":"dose","status":"evidence_found","evidence_lines":["P: Semaglutide 0.5mg SQ q7d."],"reason":"The requested dose is 0.5 mg weekly."}
+      ]
+    },
+    {
+      "packet_id": "holdout-02",
+      "criteria_id": "glp1-t2d",
+      "render": "fax-noise",
+      "text": "THERAPY REFERRAL\nWritten September 22 2026\nRe: Jalen Orwick (fictional)\nFrom: Dr. Sera Nollin (fictional)\nJalen is 39 years old and returns for glucose management.\nPlease authorize semaglutide for type 2 diabetes.\nThe prescription is 0.5 mg subQ once each week.\nPrevious treatment was reviewed with the patient.\nMetformin 500mg b.i.d. was taken for four months.\nIt was stopped for an inadequate response.\nNo pretreatment or on-treatment A1c was supplied for that course.\nCurrent HbA1c is 7.8%, sampled September 15 2026.\nThe patient prefers an injection to an additional daily tablet.\nTeaching will occur at the next visit.\nSigned: Sera Nollin (fictional)",
+      "variation_notes": "Paragraph referral; duration is supplied but paired trial values are absent.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Jalen is 39 years old and returns for glucose management."],"reason":"The patient is an adult."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["Please authorize semaglutide for type 2 diabetes."],"reason":"The requested indication is explicit."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Written September 22 2026","Current HbA1c is 7.8%, sampled September 15 2026."],"reason":"A dated A1c was obtained seven days before the request."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Metformin 500mg b.i.d. was taken for four months.","It was stopped for an inadequate response.","No pretreatment or on-treatment A1c was supplied for that course."],"reason":"The trial has a dose and duration but lacks the required baseline and follow-up values."},
+        {"criterion_id":"dose","status":"evidence_found","evidence_lines":["The prescription is 0.5 mg subQ once each week."],"reason":"The requested weekly dose matches."}
+      ]
+    },
+    {
+      "packet_id": "holdout-03",
+      "criteria_id": "glp1-t2d",
+      "render": "choppy",
+      "text": "MEDICATION DESK | REVIEW COPY\nPerson | Tessa Brindle (fictional)\nWriter | Dr. Ivo Merlan (fictional)\nSubmission | 03-Nov-2026\nYears of age | 62\nProduct | semaglutide\nStrength and schedule | not provided\nPurpose | weight reduction\nArchived problems | type 2 diabetes; knee pain\nChemistry | A1C=7.6% | 20-Oct-2026\nEarlier tablets | metopformin 500 mg twice daily\nTime on earlier tablets | about five months\nResponse | glucose remained high\nDiet counseling | completed\nReturn visit | pending\nWriter initials | Ivo Merlan (fictional)",
+      "variation_notes": "Pipe-separated intake; sole look-alike drug name; diagnosis appears only in archived problems.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Years of age | 62"],"reason":"The stated age is adult."},
+        {"criterion_id":"diagnosis","status":"needs_review","evidence_lines":["Purpose | weight reduction","Archived problems | type 2 diabetes; knee pain"],"reason":"Type 2 diabetes appears only in archived problems; the request names another purpose."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Submission | 03-Nov-2026","Chemistry | A1C=7.6% | 20-Oct-2026"],"reason":"The A1c was measured within 180 days before submission."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Earlier tablets | metopformin 500 mg twice daily","Time on earlier tablets | about five months","Response | glucose remained high"],"reason":"The drug name is uncertain and the trial lacks paired A1c values."},
+        {"criterion_id":"dose","status":"missing","evidence_lines":[],"reason":"The requested strength and schedule are not provided."}
+      ]
+    },
+    {
+      "packet_id": "holdout-04",
+      "criteria_id": "glp1-t2d",
+      "render": "smudge",
+      "text": "INJECTION CHECKLIST\nPrepared: October 16 2026\nPatient: Niko Pellan (fictional)\nPrescriber: Dr. Vela Corwin (fictional)\n[x] Age confirmed: 28 years\n[x] Treating type 2 diabetes with this semaglutide order\n[x] Prescription: semaglutide 1 mg SC QW\n[ ] A1c attachment: ____\nMedication discussion:\n[x] Sitagliptin 100 mg QD used for six months\n[x] Home glucose log reviewed\n[ ] Other oral medication course: ____\n[x] Injection teaching requested\n[ ] Follow-up appointment: ____\nAttested by Vela Corwin (fictional)",
+      "variation_notes": "Checkbox layout; absent A1c and metformin trial; higher requested dose.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["[x] Age confirmed: 28 years"],"reason":"Age is at least 18."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["[x] Treating type 2 diabetes with this semaglutide order"],"reason":"The condition is tied to the order."},
+        {"criterion_id":"lab","status":"missing","evidence_lines":[],"reason":"No A1c result appears."},
+        {"criterion_id":"prior","status":"missing","evidence_lines":[],"reason":"Only sitagliptin is documented; no metformin trial appears."},
+        {"criterion_id":"dose","status":"needs_review","evidence_lines":["[x] Prescription: semaglutide 1 mg SC QW"],"reason":"The requested dose is 1 mg weekly."}
+      ]
+    },
+    {
+      "packet_id": "holdout-05",
+      "criteria_id": "glp1-t2d",
+      "render": "low-contrast",
+      "text": "PRESCRIPTION QUESTIONS\nCompleted: 2026-09-29\nName? Elia Vossel (fictional)\nAuthor? Dr. Remy Dalven (fictional)\nAge? ____\nWhich injectable? semaglutide\nWhy now? Possible type 2 diabetes; confirmation pending.\nWhat strength? ____\nHow often? ____\nRecent laboratory result? N/A\nPrevious glucose medicine? Metformin 500 mg PO nightly.\nHow long? Six weeks, then discontinued.\nWhy discontinued? Patient preference.\nBefore and after A1c? not provided\nAuthor signature: Remy Dalven (fictional)",
+      "variation_notes": "Question-and-answer form; no criterion is fully supported.",
+      "labels": [
+        {"criterion_id":"adult","status":"missing","evidence_lines":[],"reason":"The age field is blank."},
+        {"criterion_id":"diagnosis","status":"needs_review","evidence_lines":["Why now? Possible type 2 diabetes; confirmation pending."],"reason":"The indication remains unconfirmed."},
+        {"criterion_id":"lab","status":"missing","evidence_lines":[],"reason":"No laboratory value is documented."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Previous glucose medicine? Metformin 500 mg PO nightly.","How long? Six weeks, then discontinued.","Why discontinued? Patient preference.","Before and after A1c? not provided"],"reason":"The trial is shorter than 90 days and lacks paired values; preference is not a documented intolerance."},
+        {"criterion_id":"dose","status":"missing","evidence_lines":[],"reason":"Neither requested strength nor frequency is supplied."}
+      ]
+    },
+    {
+      "packet_id": "holdout-06",
+      "criteria_id": "glp1-t2d",
+      "render": "rotate-7",
+      "text": "DISPENSING INTAKE\nEntry date: 09/10/2026\nPatient: Kori Thalen (fictional)\nOrdering clinician: Dr. Aven Ruskell (fictional)\nAge stated: 17 years\nRequested agent: semaglutide\nReason for treatment: appetite suppression\nOrder directions: 0.25mg SQ q7d\nLaboratory slip:\nHbA1c 7.4% collected 04/03/2026\nMedication exposure:\nGlipizide 5 mg QD for eight months\nMeals reviewed with patient.\nCounseling visit requested.\nEnd of intake.",
+      "variation_notes": "Unresolved month/day order changes A1c recency; no criterion is fully supported.",
+      "labels": [
+        {"criterion_id":"adult","status":"needs_review","evidence_lines":["Age stated: 17 years"],"reason":"The stated age is below 18."},
+        {"criterion_id":"diagnosis","status":"missing","evidence_lines":[],"reason":"The request is for appetite suppression and never names type 2 diabetes."},
+        {"criterion_id":"lab","status":"needs_review","evidence_lines":["Entry date: 09/10/2026","HbA1c 7.4% collected 04/03/2026"],"reason":"Month-first reading gives a result 160 days before the request; day-first gives 219 days. Nothing resolves the order."},
+        {"criterion_id":"prior","status":"missing","evidence_lines":[],"reason":"Glipizide is the only prior drug documented."},
+        {"criterion_id":"dose","status":"needs_review","evidence_lines":["Order directions: 0.25mg SQ q7d"],"reason":"The requested dose is below 0.5 mg weekly."}
+      ]
+    },
+    {
+      "packet_id": "holdout-07",
+      "criteria_id": "glp1-t2d",
+      "render": "turn-180",
+      "text": "TREATMENT ACCESS FORM\nPatient: Dena Marwick (fictional)\nPrescriber: Dr. Lior Fenway (fictional)\nRequest date: 10/03/2026\nAge today: 47\nRequested indication: type 2 diabetes\nRequested drug: semaglutide\nRequested sig: 0.5 mg SC every seven days\nReconciled medication list:\nSemaglutide 1mg SC weekly, marked active\nMetformin intolerance: persistent diarrhea despite dose reduction.\nHbA1c 8.3% drawn 09/18/2026\nInjection technique reviewed verbally.\nSupply quantity: four injections\nSigned: Lior Fenway (fictional)",
+      "variation_notes": "Day above 12 establishes month-first dates; active list conflicts with requested dose.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age today: 47"],"reason":"The age is adult."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["Requested indication: type 2 diabetes"],"reason":"Type 2 diabetes is the requested indication."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Request date: 10/03/2026","HbA1c 8.3% drawn 09/18/2026"],"reason":"The day 18 establishes month-first order; the result is 15 days before the request."},
+        {"criterion_id":"prior","status":"evidence_found","evidence_lines":["Metformin intolerance: persistent diarrhea despite dose reduction."],"reason":"Metformin intolerance is documented with a reason."},
+        {"criterion_id":"dose","status":"needs_review","evidence_lines":["Requested sig: 0.5 mg SC every seven days","Semaglutide 1mg SC weekly, marked active"],"reason":"The order and active medication list disagree."}
+      ]
+    },
+    {
+      "packet_id": "holdout-08",
+      "criteria_id": "glp1-t2d",
+      "render": "annotations",
+      "text": "FOLLOW-UP PROGRESS\nDate of request: 5 November 2026\nPatient: Rowan Elist (fictional)\nSeen by: Dr. Mina Torven (fictional)\nAge 71; pulse 76; seated comfortably.\nAssessment: probable T2DM, further diagnostic review planned.\nSemaglutide is being sought for the probable T2DM.\nPlan: semaglutide 0.5 mg subQ QW.\nTreatment record:\nMetformin 850mg BID from 1 March through 1 October 2026.\nA1c on 28 February 2026: 8.2%.\nA1c on 15 June 2026: 6.8%.\nMost recent HbA1c: 6.9% on 20 October 2026.\nPatient reports taking tablets with food.\nNext review will address diagnostic uncertainty.\nSigned: Mina Torven (fictional)",
+      "variation_notes": "Progress note with vitals; probable diagnosis and prior-treatment value at goal.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age 71; pulse 76; seated comfortably."],"reason":"The patient is an adult."},
+        {"criterion_id":"diagnosis","status":"needs_review","evidence_lines":["Assessment: probable T2DM, further diagnostic review planned.","Semaglutide is being sought for the probable T2DM."],"reason":"The linked diagnosis is still probable."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Date of request: 5 November 2026","Most recent HbA1c: 6.9% on 20 October 2026."],"reason":"The A1c is recent; this lab criterion has no minimum value."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Metformin 850mg BID from 1 March through 1 October 2026.","A1c on 28 February 2026: 8.2%.","A1c on 15 June 2026: 6.8%."],"reason":"The follow-up more than 90 days after initiation is below 7.0%."},
+        {"criterion_id":"dose","status":"evidence_found","evidence_lines":["Plan: semaglutide 0.5 mg subQ QW."],"reason":"The requested dose matches."}
+      ]
+    },
+    {
+      "packet_id": "holdout-09",
+      "criteria_id": "biologic-psoriasis",
+      "render": "turn-90",
+      "text": "DERMATOLOGY TRANSFER LETTER\nDated 2026-10-21\nPatient: Savi Norlen (fictional), age 44\nPrescriber: Dr. Eren Calwick (fictional)\nI am requesting adalimumab for moderate-to-severe plaque psoriasis.\nPlaques interfere with sleep and dressing.\nThe maintenance prescription is 40mg SC every other week.\nEarlier systemic treatment is summarized below.\nMethotrexate 15 mg PO weekly, 2026-01-02 to 2026-08-28.\nBSA before treatment: 19% on 2026-01-01.\nBSA while taking treatment: 14% on 2026-04-20.\nLatest skin measurement: BSA 16% on 2026-10-14.\nPatient reports no missed weekly doses during that course.\nInjection education is planned.\nRegards, Eren Calwick (fictional)",
+      "variation_notes": "Referral letter with complete methotrexate course and paired skin measurements.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Patient: Savi Norlen (fictional), age 44"],"reason":"The stated age exceeds 18."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["I am requesting adalimumab for moderate-to-severe plaque psoriasis."],"reason":"The condition and qualifying severity are explicitly linked to the request."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Dated 2026-10-21","Latest skin measurement: BSA 16% on 2026-10-14."],"reason":"BSA is at least 10% and was measured seven days before the request."},
+        {"criterion_id":"prior","status":"evidence_found","evidence_lines":["Methotrexate 15 mg PO weekly, 2026-01-02 to 2026-08-28.","BSA before treatment: 19% on 2026-01-01.","BSA while taking treatment: 14% on 2026-04-20."],"reason":"The stated-dose course exceeds 90 days with baseline and a later BSA above 3% more than 90 days after initiation."},
+        {"criterion_id":"dose","status":"evidence_found","evidence_lines":["The maintenance prescription is 40mg SC every other week."],"reason":"The adalimumab maintenance dose matches."}
+      ]
+    },
+    {
+      "packet_id": "holdout-10",
+      "criteria_id": "biologic-psoriasis",
+      "render": "turn-270",
+      "text": "SKIN THERAPY | SUBMISSION\nSent | 18-Sep-2026\nPatient | Pella Darsen (fictional)\nClinician | Dr. Neri Valco (fictional)\nAge | 36 years\nIndication | moderate-to-severe plaque psoriasis\nAgent | adalimumab\nMaintenance | 40 mg SQ q14d\nPrevious systemic | methotrexate 10mg PO weekly\nCourse length | 120 days\nOutcome | failed to clear plaques\nStarting skin percentage | ____\nEnd-of-course skin percentage | ____\nCurrent examination | BSA 12% on 11-Sep-2026\nTeaching | patient requests demonstration\nAttestation | Neri Valco (fictional)",
+      "variation_notes": "Pipe rows; trial duration without baseline or outcome measurements.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age | 36 years"],"reason":"The patient is adult."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["Indication | moderate-to-severe plaque psoriasis"],"reason":"The requested indication includes qualifying severity."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Sent | 18-Sep-2026","Current examination | BSA 12% on 11-Sep-2026"],"reason":"The recent BSA exceeds 10%."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Previous systemic | methotrexate 10mg PO weekly","Course length | 120 days","Outcome | failed to clear plaques","Starting skin percentage | ____","End-of-course skin percentage | ____"],"reason":"Failure is asserted without the required before and after BSA values."},
+        {"criterion_id":"dose","status":"evidence_found","evidence_lines":["Agent | adalimumab","Maintenance | 40 mg SQ q14d"],"reason":"The maintenance dose is 40 mg every two weeks."}
+      ]
+    },
+    {
+      "packet_id": "holdout-11",
+      "criteria_id": "biologic-psoriasis",
+      "render": "clean",
+      "text": "BIOLOGIC QUESTIONS\nDate completed? October 8 2026\nPatient? Arlo Venset (fictional)\nPrescriber? Dr. Tali Orven (fictional)\nAge? 59\nMedicine sought? adalimumab\nReason? Plaque psoriasis affecting elbows and trunk.\nSeverity category? not provided\nMaintenance directions? ____\nMost recent skin estimate? BSA 13% on September 30 2026.\nPrevious systemic? Methotrexate 12.5mg weekly.\nCourse dates? July 1 through August 15 2026.\nBSA before course? 18% on June 30 2026.\nBSA at last tablet? 15% on August 15 2026.\nEducation preference? Written instructions.\nSigned: Tali Orven (fictional)",
+      "variation_notes": "Question form; unspecified severity; methotrexate course under 90 days.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age? 59"],"reason":"The age is adult."},
+        {"criterion_id":"diagnosis","status":"needs_review","evidence_lines":["Reason? Plaque psoriasis affecting elbows and trunk.","Severity category? not provided"],"reason":"The diagnosis is linked to the request but moderate-to-severe severity is not documented."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Date completed? October 8 2026","Most recent skin estimate? BSA 13% on September 30 2026."],"reason":"The BSA measurement is recent and at least 10%."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Previous systemic? Methotrexate 12.5mg weekly.","Course dates? July 1 through August 15 2026.","BSA before course? 18% on June 30 2026.","BSA at last tablet? 15% on August 15 2026."],"reason":"The documented course and follow-up interval are shorter than 90 days."},
+        {"criterion_id":"dose","status":"missing","evidence_lines":[],"reason":"Maintenance directions are blank."}
+      ]
+    },
+    {
+      "packet_id": "holdout-12",
+      "criteria_id": "biologic-psoriasis",
+      "render": "fax-noise",
+      "text": "SKIN FOLLOW-UP / SOAP\nRequest: 2026-11-06\nPatient: Luma Kestrel (fictional)\nExaminer: Dr. Olin Varell (fictional)\nAge: 65 years\nS: Itching persists despite topical care.\nO: Plaques present on limbs; pulse 72.\nSurface estimate: ____\nA: Moderate-to-severe plaque psoriasis.\nThis assessment is the reason for requesting adalimumab.\nP: Adalimumab maintenance 40 mg subQ every week.\nEarlier treatment: clobetasol ointment for five months.\nAdditional systemic course: N/A\nPatient will return for injection instruction.\nSigned: Olin Varell (fictional)",
+      "variation_notes": "SOAP note; absent numeric BSA and methotrexate; weekly maintenance order.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age: 65 years"],"reason":"The age is at least 18."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["A: Moderate-to-severe plaque psoriasis.","This assessment is the reason for requesting adalimumab."],"reason":"The qualifying diagnosis is tied to the request."},
+        {"criterion_id":"lab","status":"missing","evidence_lines":[],"reason":"There is no numeric BSA value."},
+        {"criterion_id":"prior","status":"missing","evidence_lines":[],"reason":"Only topical clobetasol is recorded."},
+        {"criterion_id":"dose","status":"needs_review","evidence_lines":["P: Adalimumab maintenance 40 mg subQ every week."],"reason":"Weekly maintenance differs from every other week."}
+      ]
+    },
+    {
+      "packet_id": "holdout-13",
+      "criteria_id": "biologic-psoriasis",
+      "render": "choppy",
+      "text": "SYSTEMIC MEDICATION CHECK\nSubmission: 2026-09-24\nPatient: Evin Solmar (fictional)\nAuthor: Dr. Rhea Tollen (fictional)\nAge: not provided\n[x] Drug sought: adalimumab\n[x] Intended use: mild plaque psoriasis\n[ ] Maintenance amount: ____\n[ ] Maintenance interval: ____\n[ ] Numeric skin measurement: ____\n[x] Methotrexate previously attempted\n[x] Stopped because of intolerance\nReason for intolerance: ____\nCourse details: not provided\nAuthor signature: Rhea Tollen (fictional)",
+      "variation_notes": "Checkbox form; intolerance lacks a reason; no criterion is fully supported.",
+      "labels": [
+        {"criterion_id":"adult","status":"missing","evidence_lines":[],"reason":"No age is supplied."},
+        {"criterion_id":"diagnosis","status":"needs_review","evidence_lines":["[x] Intended use: mild plaque psoriasis"],"reason":"The stated severity is mild."},
+        {"criterion_id":"lab","status":"missing","evidence_lines":[],"reason":"No numeric BSA is documented."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["[x] Methotrexate previously attempted","[x] Stopped because of intolerance","Reason for intolerance: ____","Course details: not provided"],"reason":"Intolerance is asserted without its reason, and no evaluable trial is supplied."},
+        {"criterion_id":"dose","status":"missing","evidence_lines":[],"reason":"The maintenance amount and interval are blank."}
+      ]
+    },
+    {
+      "packet_id": "holdout-14",
+      "criteria_id": "biologic-psoriasis",
+      "render": "smudge",
+      "text": "PHARMACY ENTRY\nOrder date: 09/10/2026\nPatient: Nessa Quillan (fictional)\nOrdering professional: Dr. Daro Elwick (fictional)\nAge: 16 years\nAgent selected: adalimumab\nTreatment purpose: hidradenitis suppurativa\nMaintenance order: 80mg SQ every other week\nSkin worksheet:\nBSA 11% measured 04/03/2026\nPast therapy:\nDoxycycline 100 mg PO BID for four months\nInjection supplies discussed.\nDelivery preference: collect in person\nEntered by Daro Elwick (fictional)",
+      "variation_notes": "Unresolved numeric dates alter BSA recency; different indication; no fully supported criterion.",
+      "labels": [
+        {"criterion_id":"adult","status":"needs_review","evidence_lines":["Age: 16 years"],"reason":"The stated age is under 18."},
+        {"criterion_id":"diagnosis","status":"missing","evidence_lines":[],"reason":"The indication is hidradenitis suppurativa; plaque psoriasis is never named."},
+        {"criterion_id":"lab","status":"needs_review","evidence_lines":["Order date: 09/10/2026","BSA 11% measured 04/03/2026"],"reason":"The measurement is 160 days old under month-first dates and 219 days old under day-first dates; neither order is resolved."},
+        {"criterion_id":"prior","status":"missing","evidence_lines":[],"reason":"No methotrexate exposure is documented."},
+        {"criterion_id":"dose","status":"needs_review","evidence_lines":["Maintenance order: 80mg SQ every other week"],"reason":"The amount is 80 mg rather than 40 mg."}
+      ]
+    },
+    {
+      "packet_id": "holdout-15",
+      "criteria_id": "biologic-psoriasis",
+      "render": "low-contrast",
+      "text": "SPECIALTY ACCESS RECORD\nPatient: Bram Ostell (fictional)\nPrescriber: Dr. Yara Mendel (fictional)\nRequest written: 09/10/2026\nReceived: September 12 2026\nAge: 52 years\nReason for adalimumab: moderate-to-severe plaque psoriasis\nPrescription maintenance: 40mg SC q14d\nActive therapies copied from visit:\nAdalimumab 40 mg SC weekly\nMethotrexate contraindicated because of cirrhosis.\nBSA 17% measured 09/01/2026\nPatient requests a teaching appointment.\nNo loading directions included in this sheet.\nSigned: Yara Mendel (fictional)",
+      "variation_notes": "Received date resolves numeric order; contraindication with reason; dose conflict.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age: 52 years"],"reason":"The stated age is adult."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["Reason for adalimumab: moderate-to-severe plaque psoriasis"],"reason":"The qualifying indication is explicitly linked to adalimumab."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Request written: 09/10/2026","Received: September 12 2026","BSA 17% measured 09/01/2026"],"reason":"The received date rules out an October 9 request. Month-first dates give a qualifying BSA nine days before the request."},
+        {"criterion_id":"prior","status":"evidence_found","evidence_lines":["Methotrexate contraindicated because of cirrhosis."],"reason":"A contraindication and its reason are documented."},
+        {"criterion_id":"dose","status":"needs_review","evidence_lines":["Prescription maintenance: 40mg SC q14d","Adalimumab 40 mg SC weekly"],"reason":"The active therapy list and prescription disagree on frequency."}
+      ]
+    },
+    {
+      "packet_id": "holdout-16",
+      "criteria_id": "biologic-psoriasis",
+      "render": "rotate-7",
+      "text": "CONSULT SUMMARY\nPrepared 2 November 2026\nPatient: Cira Belven (fictional), 31 years old\nConsultant: Dr. Nolen Arvis (fictional)\nRequested product: adalimumab\nRequested use: psoriatic arthritis\nPast problem list: moderate-to-severe plaque psoriasis\nMaintenance to dispense: 40 mg subQ Q2W\nSystemic history follows.\nMethotrexate 20 mg weekly from 2 January to 30 June 2026.\nBSA 15% on 1 January 2026, before the course.\nBSA 3% on 15 April 2026, while still taking methotrexate.\nCurrent skin examination: BSA 12% on 26 October 2026.\nJoint symptoms are the focus of this referral.\nSigned: Nolen Arvis (fictional)",
+      "variation_notes": "Consult summary; class diagnosis only in history; prior follow-up exactly at goal.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Patient: Cira Belven (fictional), 31 years old"],"reason":"The patient is an adult."},
+        {"criterion_id":"diagnosis","status":"needs_review","evidence_lines":["Requested use: psoriatic arthritis","Past problem list: moderate-to-severe plaque psoriasis","Joint symptoms are the focus of this referral."],"reason":"Plaque psoriasis is only in the past problem list; the request targets psoriatic arthritis."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Prepared 2 November 2026","Current skin examination: BSA 12% on 26 October 2026."],"reason":"The qualifying BSA was measured seven days before the request."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Methotrexate 20 mg weekly from 2 January to 30 June 2026.","BSA 15% on 1 January 2026, before the course.","BSA 3% on 15 April 2026, while still taking methotrexate."],"reason":"The follow-up more than 90 days after initiation is at the 3% goal."},
+        {"criterion_id":"dose","status":"evidence_found","evidence_lines":["Requested product: adalimumab","Maintenance to dispense: 40 mg subQ Q2W"],"reason":"The maintenance amount and interval match."}
+      ]
+    },
+    {
+      "packet_id": "holdout-17",
+      "criteria_id": "pcsk9",
+      "render": "turn-180",
+      "text": "LIPID VISIT / SOAP\nRequest filed: 2026-10-12\nPatient: Tovin Rellam (fictional)\nPrescriber: Dr. Esme Valden (fictional)\nAge: 68 years\nS: Taking nightly tablets consistently.\nO: LDL-C 96 mg/dL on 2026-10-02.\nA: Prior myocardial infarction; evolocumab sought for this ASCVD.\nP: Evolocumab 140mg SQ q14d.\nMedication course:\nAtorvastatin 80 mg nightly from 2026-01-05 through today.\nLDL-C before treatment: 162 mg/dL on 2026-01-04.\nLDL-C on treatment: 108 mg/dL on 2026-04-15.\nPatient demonstrates injection technique with a training device.\nSigned: Esme Valden (fictional)",
+      "variation_notes": "SOAP note; prior myocardial infarction as established ASCVD; complete high-dose trial.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age: 68 years"],"reason":"The patient is adult."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["A: Prior myocardial infarction; evolocumab sought for this ASCVD."],"reason":"Established ASCVD is explicitly tied to the request."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Request filed: 2026-10-12","O: LDL-C 96 mg/dL on 2026-10-02."],"reason":"LDL-C exceeds 70 mg/dL and was measured ten days before the request."},
+        {"criterion_id":"prior","status":"evidence_found","evidence_lines":["Atorvastatin 80 mg nightly from 2026-01-05 through today.","LDL-C before treatment: 162 mg/dL on 2026-01-04.","LDL-C on treatment: 108 mg/dL on 2026-04-15."],"reason":"The qualifying-dose course exceeds 90 days, with baseline and an elevated follow-up more than 90 days after initiation."},
+        {"criterion_id":"dose","status":"evidence_found","evidence_lines":["P: Evolocumab 140mg SQ q14d."],"reason":"The requested dose is 140 mg every two weeks."}
+      ]
+    },
+    {
+      "packet_id": "holdout-18",
+      "criteria_id": "pcsk9",
+      "render": "turn-90",
+      "text": "LIPID REFERRAL\nWritten November 4 2026\nPatient: Anya Corlen (fictional), age 57\nFrom: Dr. Venn Solwick (fictional)\nPlease supply evolocumab for coronary artery disease with a stent.\nThe directions are 140 mg SC every 2 wks.\nThe patient continues lipid treatment while awaiting this decision.\nAtorvastatin 20 mg QD began January 1 2026 and remains ongoing.\nLDL before the first dose: 155 mg/dl on December 30 2025.\nLDL during treatment: 112 mg/dl on April 15 2026.\nLatest LDL-C: 104 mg/dL on October 27 2026.\nNo adverse effects were reported with the tablets.\nDietary changes were discussed.\nInjection training is requested.\nSigned: Venn Solwick (fictional)",
+      "variation_notes": "Referral paragraphs; otherwise complete atorvastatin course uses only 20 mg.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Patient: Anya Corlen (fictional), age 57"],"reason":"The patient is an adult."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["Please supply evolocumab for coronary artery disease with a stent."],"reason":"Coronary artery disease with a stent establishes ASCVD and is the requested indication."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Written November 4 2026","Latest LDL-C: 104 mg/dL on October 27 2026."],"reason":"The qualifying LDL-C was measured eight days before the request."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Atorvastatin 20 mg QD began January 1 2026 and remains ongoing.","LDL before the first dose: 155 mg/dl on December 30 2025.","LDL during treatment: 112 mg/dl on April 15 2026.","No adverse effects were reported with the tablets."],"reason":"The atorvastatin dose is below 40 mg, with no intolerance or contraindication documented."},
+        {"criterion_id":"dose","status":"evidence_found","evidence_lines":["The directions are 140 mg SC every 2 wks."],"reason":"The requested evolocumab dose matches."}
+      ]
+    },
+    {
+      "packet_id": "holdout-19",
+      "criteria_id": "pcsk9",
+      "render": "turn-270",
+      "text": "LIPID ACCESS | WORKSHEET\nDate | 25-Sep-2026\nPatient | Milo Kervan (fictional)\nPrescriber | Dr. Lysa Ordel (fictional)\nAge | 46\nRequested drug | evolocumab\nRequested purpose | familial hypercholesterolemia\nHistorical problems | ASCVD\nDose and frequency | not provided\nPrior tablets | atorvastatin 40 mg daily\nLength of use | not provided\nClinical impression | inadequate lipid response\nCurrent LDL-C | 121 mg/dL on 18-Sep-2026\nCounseling | storage instructions discussed\nSignature | Lysa Ordel (fictional)",
+      "variation_notes": "Pipe worksheet; ASCVD only in history; trial has no duration or paired values.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age | 46"],"reason":"The stated age is adult."},
+        {"criterion_id":"diagnosis","status":"needs_review","evidence_lines":["Requested purpose | familial hypercholesterolemia","Historical problems | ASCVD"],"reason":"ASCVD is present only in historical problems, while another indication is requested."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Date | 25-Sep-2026","Current LDL-C | 121 mg/dL on 18-Sep-2026"],"reason":"The LDL-C is qualifying and recent."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Prior tablets | atorvastatin 40 mg daily","Length of use | not provided","Clinical impression | inadequate lipid response"],"reason":"The trial lacks duration and paired LDL-C measurements."},
+        {"criterion_id":"dose","status":"missing","evidence_lines":[],"reason":"No requested amount or interval is given."}
+      ]
+    },
+    {
+      "packet_id": "holdout-20",
+      "criteria_id": "pcsk9",
+      "render": "annotations",
+      "text": "INJECTABLE THERAPY CHECKLIST\nRequest prepared: 2026-10-28\nPatient: Fara Nelwick (fictional)\nClinician: Dr. Cato Virell (fictional)\n[x] Age: 73 years\n[x] Evolocumab sought for established ASCVD\n[x] Known coronary artery disease with prior stent\n[x] Order: evolocumab 140mg subQ every four weeks\n[ ] LDL-C result attached: ____\nTherapy record:\n[x] Ezetimibe 10 mg PO QD for seven months\n[ ] Additional lipid tablet trial: ____\n[x] Patient prefers prefilled injections\n[ ] Teaching date: ____\nSigned: Cato Virell (fictional)",
+      "variation_notes": "Checkbox form; only nonstatin prior therapy; four-week requested interval.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["[x] Age: 73 years"],"reason":"The age is adult."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["[x] Evolocumab sought for established ASCVD","[x] Known coronary artery disease with prior stent"],"reason":"Established ASCVD is documented as the treatment purpose."},
+        {"criterion_id":"lab","status":"missing","evidence_lines":[],"reason":"No LDL-C value appears."},
+        {"criterion_id":"prior","status":"missing","evidence_lines":[],"reason":"Only ezetimibe is documented; no atorvastatin trial or statin intolerance appears."},
+        {"criterion_id":"dose","status":"needs_review","evidence_lines":["[x] Order: evolocumab 140mg subQ every four weeks"],"reason":"The requested interval is four weeks."}
+      ]
+    },
+    {
+      "packet_id": "holdout-21",
+      "criteria_id": "pcsk9",
+      "render": "clean",
+      "text": "CARDIOVASCULAR MEDICATION QUESTIONS\nCompleted: 2026-11-09\nPatient? Iren Dovell (fictional)\nPrescriber? Dr. Soren Malven (fictional)\nAge? N/A\nAgent sought? evolocumab\nPurpose? Possible ASCVD; evaluation remains open.\nAmount per injection? ____\nInterval? ____\nLDL-C result? not provided\nPrevious statin? Atorvastatin 40 mg daily for five months.\nWhy stopped? Statin intolerance.\nSymptoms or medical reason? ____\nEarlier lipid measurements? not provided\nSigned: Soren Malven (fictional)",
+      "variation_notes": "Question form; possible diagnosis and unexplained intolerance; no supported criterion.",
+      "labels": [
+        {"criterion_id":"adult","status":"missing","evidence_lines":[],"reason":"No age is given."},
+        {"criterion_id":"diagnosis","status":"needs_review","evidence_lines":["Purpose? Possible ASCVD; evaluation remains open."],"reason":"ASCVD is unconfirmed."},
+        {"criterion_id":"lab","status":"missing","evidence_lines":[],"reason":"No LDL-C result is supplied."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Previous statin? Atorvastatin 40 mg daily for five months.","Why stopped? Statin intolerance.","Symptoms or medical reason? ____","Earlier lipid measurements? not provided"],"reason":"The intolerance has no stated reason, and the alternative trial pathway lacks paired values."},
+        {"criterion_id":"dose","status":"missing","evidence_lines":[],"reason":"The injection amount and interval are blank."}
+      ]
+    },
+    {
+      "packet_id": "holdout-22",
+      "criteria_id": "pcsk9",
+      "render": "fax-noise",
+      "text": "SPECIALTY DISPENSING INTAKE\nSubmission date: 09/10/2026\nPatient: Veya Rallin (fictional)\nPrescriber: Dr. Taren Oswick (fictional)\nAge entered: 15 years\nRequested drug: evolocumab\nRequested indication: familial hypercholesterolemia\nDirections: 420 mg SQ monthly\nLaboratory enclosure:\nLDL-C 148 mg/dL on 04/03/2026\nEarlier treatment:\nCholestyramine 4 g PO BID for six months\nStorage instructions supplied.\nParent will attend teaching.\nSigned: Taren Oswick (fictional)",
+      "variation_notes": "Unresolved numeric dates change LDL-C recency; no ASCVD or statin course.",
+      "labels": [
+        {"criterion_id":"adult","status":"needs_review","evidence_lines":["Age entered: 15 years"],"reason":"The patient is younger than 18."},
+        {"criterion_id":"diagnosis","status":"missing","evidence_lines":[],"reason":"Familial hypercholesterolemia is requested and ASCVD is not named."},
+        {"criterion_id":"lab","status":"needs_review","evidence_lines":["Submission date: 09/10/2026","LDL-C 148 mg/dL on 04/03/2026"],"reason":"Month-first interpretation gives 160 days; day-first gives 219 days. The page does not resolve the date order."},
+        {"criterion_id":"prior","status":"missing","evidence_lines":[],"reason":"Only cholestyramine is documented."},
+        {"criterion_id":"dose","status":"needs_review","evidence_lines":["Directions: 420 mg SQ monthly"],"reason":"The requested dose and frequency differ from 140 mg every two weeks."}
+      ]
+    },
+    {
+      "packet_id": "holdout-23",
+      "criteria_id": "pcsk9",
+      "render": "smudge",
+      "text": "CARDIAC MEDICATION REVIEW\nRequest date: 3.10.2026\nPatient: Osa Vernell (fictional)\nReviewer: Dr. Elan Darswick (fictional)\nAge: 64 years\nPurpose: evolocumab for established ASCVD after myocardial infarction\nNew prescription: evolocumab 140 mg SC Q2W\nMedication list brought to visit:\nEvolocumab 140 mg SC every four weeks\nStatin intolerance: reproducible severe myalgia on atorvastatin.\nSymptoms resolved off atorvastatin and recurred after rechallenge.\nLDL-C 118 mg/dl measured 23.9.2026\nPatient understands refrigerated storage.\nTeaching visit requested before first injection.\nSigned: Elan Darswick (fictional)",
+      "variation_notes": "Dotted dates resolved by day 23; reasoned statin intolerance; conflicting medication list.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age: 64 years"],"reason":"The patient is an adult."},
+        {"criterion_id":"diagnosis","status":"evidence_found","evidence_lines":["Purpose: evolocumab for established ASCVD after myocardial infarction"],"reason":"Established ASCVD is explicitly the requested indication."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Request date: 3.10.2026","LDL-C 118 mg/dl measured 23.9.2026"],"reason":"Day 23 establishes day-first order; LDL-C is qualifying and ten days before the October 3 request."},
+        {"criterion_id":"prior","status":"evidence_found","evidence_lines":["Statin intolerance: reproducible severe myalgia on atorvastatin.","Symptoms resolved off atorvastatin and recurred after rechallenge."],"reason":"Statin intolerance is supported by a specific adverse effect and rechallenge history."},
+        {"criterion_id":"dose","status":"needs_review","evidence_lines":["New prescription: evolocumab 140 mg SC Q2W","Evolocumab 140 mg SC every four weeks"],"reason":"The prescription and medication list disagree on frequency."}
+      ]
+    },
+    {
+      "packet_id": "holdout-24",
+      "criteria_id": "pcsk9",
+      "render": "low-contrast",
+      "text": "FOLLOW-UP / LIPID PLAN\nRequest authored: October 30 2026\nPatient: Keva Orsett (fictional)\nAuthor: Dr. Rian Bellwick (fictional)\nAge 60; pulse 70; no acute distress.\nAssessment: suspected atherosclerotic cardiovascular disease.\nEvolocumab is requested for the suspected vascular disease.\nPlan: evolocumab 140mg subQ every 2 weeks.\nPrior regimen:\nAtorvastatin 20 mg tablets, two tablets PO QD.\nContinuous course: January 2 through September 30 2026.\nLDL-C 151 mg/dL on January 1 2026, before treatment.\nLDL-C 65 mg/dL on April 15 2026, during treatment.\nLatest LDL-C 92 mg/dL on October 20 2026, after stopping tablets.\nFurther vascular assessment is pending.\nSigned: Rian Bellwick (fictional)",
+      "variation_notes": "Progress note; tablet-count dose; on-treatment LDL-C at goal and later elevated result after cessation.",
+      "labels": [
+        {"criterion_id":"adult","status":"evidence_found","evidence_lines":["Age 60; pulse 70; no acute distress."],"reason":"The stated age is adult."},
+        {"criterion_id":"diagnosis","status":"needs_review","evidence_lines":["Assessment: suspected atherosclerotic cardiovascular disease.","Evolocumab is requested for the suspected vascular disease.","Further vascular assessment is pending."],"reason":"The requested ASCVD indication remains suspected."},
+        {"criterion_id":"lab","status":"evidence_found","evidence_lines":["Request authored: October 30 2026","Latest LDL-C 92 mg/dL on October 20 2026, after stopping tablets."],"reason":"A qualifying LDL-C was measured ten days before the request."},
+        {"criterion_id":"prior","status":"needs_review","evidence_lines":["Atorvastatin 20 mg tablets, two tablets PO QD.","Continuous course: January 2 through September 30 2026.","LDL-C 151 mg/dL on January 1 2026, before treatment.","LDL-C 65 mg/dL on April 15 2026, during treatment.","Latest LDL-C 92 mg/dL on October 20 2026, after stopping tablets."],"reason":"The 40 mg daily course is long enough, but its on-treatment follow-up is at goal. The elevated later value was obtained after treatment stopped."},
+        {"criterion_id":"dose","status":"evidence_found","evidence_lines":["Plan: evolocumab 140mg subQ every 2 weeks."],"reason":"The requested dose and interval match."}
+      ]
+    }
+  ]
+}

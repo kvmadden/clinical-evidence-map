@@ -1,0 +1,2247 @@
+{
+  "packet_id": "holdout-13",
+  "criteria_id": "biologic-psoriasis",
+  "group": "choppy-lines",
+  "tags": [
+    "render:choppy"
+  ],
+  "render": {
+    "font": "roboto-mono",
+    "effects": [
+      "speckle-heavy",
+      "streaks",
+      "choppy"
+    ],
+    "rotate": 0,
+    "handwriting": [],
+    "annotations": []
+  },
+  "groupLabel": "Simulated choppy scan lines",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "SYSTEMIC MEDICATION CHECK\nSubmission: [date-a]\nPatient: [name] [name] (fictional)\nAuthor: Dr. [name] [name] (fictional)\nAge: not provided\n[x] Drug sought: adalimumab\n[x] Intended use: mild plaque psoriasis\n[ ] Maintenance amount: ____\n[1 Maintenance interval: ____\n[ ] Numeric skin measurement: ____\n[x] Methotrexate previously attempted\n[x] Stopped because of intolerance\nReason for intolerance: ____\nCourse details: not provided\nAuthor signature: [name] [name] (fictional)\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 6
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points",
+    "dateHandling": "shifted",
+    "dates": [
+      {
+        "token": "[date-a]",
+        "readings": [
+          "2129-09-11"
+        ],
+        "order": "ymd"
+      }
+    ]
+  },
+  "dateReading": {
+    "status": "none",
+    "order": null
+  },
+  "readerCoverage": {
+    "lines": 16,
+    "pages": 1,
+    "blockers": {
+      "adult": [],
+      "diagnosis": [],
+      "lab": [],
+      "prior": [
+        {
+          "kind": "unbound-outcome",
+          "line": 12,
+          "page": 1,
+          "message": "An outcome statement could not be tied to a drug: \"Reason for intolerance: ____\""
+        }
+      ],
+      "dose": []
+    },
+    "mentions": [],
+    "complete": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "request_date",
+      "value": "2129-09-11",
+      "source_span": {
+        "start": 26,
+        "end": 46,
+        "text": "Submission: [date-a]"
+      },
+      "value_span": {
+        "start": 38,
+        "end": 46
+      },
+      "attrs": {
+        "label": "Submission"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 198,
+          "width": 153,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "blank_field",
+      "value": "age",
+      "source_span": {
+        "start": 120,
+        "end": 137,
+        "text": "Age: not provided"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 319,
+          "width": 52,
+          "height": 22
+        },
+        {
+          "x": 174,
+          "y": 320,
+          "width": 39,
+          "height": 16
+        },
+        {
+          "x": 232,
+          "y": 318,
+          "width": 111,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "requested_medication",
+      "value": "adalimumab",
+      "source_span": {
+        "start": 138,
+        "end": 165,
+        "text": "[x] Drug sought: adalimumab"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "327361",
+        "display": "adalimumab"
+      },
+      "value_span": {
+        "start": 155,
+        "end": 165
+      },
+      "match": {
+        "kind": "exact",
+        "written": "adalimumab",
+        "confidence": 1
+      },
+      "attrs": {
+        "product": "adalimumab",
+        "source": "Drug sought"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 105,
+          "y": 356,
+          "width": 34,
+          "height": 24
+        },
+        {
+          "x": 159,
+          "y": 359,
+          "width": 54,
+          "height": 22
+        },
+        {
+          "x": 232,
+          "y": 358,
+          "width": 94,
+          "height": 23
+        },
+        {
+          "x": 347,
+          "y": 358,
+          "width": 140,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "indication",
+      "value": "mild plaque psoriasis",
+      "source_span": {
+        "start": 166,
+        "end": 205,
+        "text": "[x] Intended use: mild plaque psoriasis"
+      },
+      "value_span": {
+        "start": 184,
+        "end": 205
+      },
+      "attrs": {
+        "checked": "checked",
+        "family": "psoriasis"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 105,
+          "y": 396,
+          "width": 33,
+          "height": 24
+        },
+        {
+          "x": 160,
+          "y": 398,
+          "width": 111,
+          "height": 18
+        },
+        {
+          "x": 289,
+          "y": 403,
+          "width": 51,
+          "height": 13
+        },
+        {
+          "x": 360,
+          "y": 398,
+          "width": 55,
+          "height": 18
+        },
+        {
+          "x": 433,
+          "y": 398,
+          "width": 83,
+          "height": 23
+        },
+        {
+          "x": 534,
+          "y": 399,
+          "width": 126,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "blank_field",
+      "value": "dose",
+      "source_span": {
+        "start": 235,
+        "end": 264,
+        "text": "[1 Maintenance interval: ____"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 105,
+          "y": 476,
+          "width": 37,
+          "height": 24
+        },
+        {
+          "x": 159,
+          "y": 479,
+          "width": 156,
+          "height": 17
+        },
+        {
+          "x": 333,
+          "y": 478,
+          "width": 123,
+          "height": 18
+        },
+        {
+          "x": 476,
+          "y": 496,
+          "width": 54,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "blank_field",
+      "value": "lab",
+      "source_span": {
+        "start": 265,
+        "end": 299,
+        "text": "[ ] Numeric skin measurement: ____"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 105,
+          "y": 516,
+          "width": 5,
+          "height": 24
+        },
+        {
+          "x": 133,
+          "y": 516,
+          "width": 5,
+          "height": 24
+        },
+        {
+          "x": 159,
+          "y": 519,
+          "width": 98,
+          "height": 17
+        },
+        {
+          "x": 275,
+          "y": 518,
+          "width": 54,
+          "height": 18
+        },
+        {
+          "x": 346,
+          "y": 520,
+          "width": 167,
+          "height": 16
+        },
+        {
+          "x": 534,
+          "y": 536,
+          "width": 54,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "prior_medication",
+      "value": "methotrexate",
+      "source_span": {
+        "start": 300,
+        "end": 337,
+        "text": "[x] Methotrexate previously attempted"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "6851",
+        "display": "methotrexate"
+      },
+      "value_span": {
+        "start": 304,
+        "end": 316
+      },
+      "episode": 1,
+      "match": {
+        "kind": "exact",
+        "written": "Methotrexate",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "antimetabolite"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 105,
+          "y": 556,
+          "width": 33,
+          "height": 24
+        },
+        {
+          "x": 159,
+          "y": 558,
+          "width": 170,
+          "height": 18
+        },
+        {
+          "x": 347,
+          "y": 558,
+          "width": 141,
+          "height": 23
+        },
+        {
+          "x": 505,
+          "y": 558,
+          "width": 126,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "prior_outcome",
+      "value": "intolerance",
+      "source_span": {
+        "start": 338,
+        "end": 372,
+        "text": "[x] Stopped because of intolerance"
+      },
+      "episode": 1,
+      "attrs": {
+        "category": "adverse"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 105,
+          "y": 596,
+          "width": 33,
+          "height": 24
+        },
+        {
+          "x": 159,
+          "y": 598,
+          "width": 97,
+          "height": 23
+        },
+        {
+          "x": 275,
+          "y": 598,
+          "width": 97,
+          "height": 18
+        },
+        {
+          "x": 389,
+          "y": 597,
+          "width": 27,
+          "height": 19
+        },
+        {
+          "x": 434,
+          "y": 598,
+          "width": 154,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "blank_field",
+      "value": "diagnosis",
+      "source_span": {
+        "start": 373,
+        "end": 401,
+        "text": "Reason for intolerance: ____"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 639,
+          "width": 85,
+          "height": 17
+        },
+        {
+          "x": 203,
+          "y": 637,
+          "width": 41,
+          "height": 19
+        },
+        {
+          "x": 261,
+          "y": 638,
+          "width": 168,
+          "height": 18
+        },
+        {
+          "x": 447,
+          "y": 656,
+          "width": 55,
+          "height": 2
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "prior_outcome",
+      "value": "intolerance",
+      "source_span": {
+        "start": 373,
+        "end": 401,
+        "text": "Reason for intolerance: ____"
+      },
+      "attrs": {
+        "category": "adverse",
+        "unbound": true
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 639,
+          "width": 85,
+          "height": 17
+        },
+        {
+          "x": 203,
+          "y": 637,
+          "width": 41,
+          "height": 19
+        },
+        {
+          "x": 261,
+          "y": 638,
+          "width": 168,
+          "height": 18
+        },
+        {
+          "x": 447,
+          "y": 656,
+          "width": 55,
+          "height": 2
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The age field is blank.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 166,
+          "end": 205,
+          "text": "[x] Intended use: mild plaque psoriasis"
+        }
+      ],
+      "reason": "The request names mild plaque psoriasis, not moderate-to-severe.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The BSA field is blank.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 300,
+          "end": 337,
+          "text": "[x] Methotrexate previously attempted"
+        },
+        {
+          "start": 338,
+          "end": 372,
+          "text": "[x] Stopped because of intolerance"
+        }
+      ],
+      "reason": "Methotrexate intolerance is stated without a reason.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The dose field is blank.",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "[x] Drug sought: adalimumab",
+      "citations": [
+        {
+          "start": 138,
+          "end": 165,
+          "text": "[x] Drug sought: adalimumab"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "[x] Intended use: mild plaque psoriasis",
+      "citations": [
+        {
+          "start": 166,
+          "end": 205,
+          "text": "[x] Intended use: mild plaque psoriasis"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "[x] Methotrexate previously attempted",
+      "citations": [
+        {
+          "start": 300,
+          "end": 337,
+          "text": "[x] Methotrexate previously attempted"
+        }
+      ],
+      "supported": true,
+      "needsReview": true,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "[x] Stopped because of intolerance",
+      "citations": [
+        {
+          "start": 338,
+          "end": 372,
+          "text": "[x] Stopped because of intolerance"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Reason for intolerance: ____",
+      "citations": [
+        {
+          "start": 373,
+          "end": 401,
+          "text": "Reason for intolerance: ____"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "SYSTEMIC",
+      "confidence": 96.432137,
+      "box": {
+        "x": 101,
+        "y": 159,
+        "width": 113,
+        "height": 17
+      },
+      "start": 0,
+      "end": 8,
+      "needsReview": false
+    },
+    {
+      "text": "MEDICATION",
+      "confidence": 95.702599,
+      "box": {
+        "x": 231,
+        "y": 159,
+        "width": 141,
+        "height": 17
+      },
+      "start": 9,
+      "end": 19,
+      "needsReview": false
+    },
+    {
+      "text": "CHECK",
+      "confidence": 95.781487,
+      "box": {
+        "x": 389,
+        "y": 159,
+        "width": 70,
+        "height": 17
+      },
+      "start": 20,
+      "end": 25,
+      "needsReview": false
+    },
+    {
+      "text": "Submission:",
+      "confidence": 96.310966,
+      "box": {
+        "x": 101,
+        "y": 198,
+        "width": 153,
+        "height": 18
+      },
+      "start": 26,
+      "end": 37,
+      "needsReview": false
+    },
+    {
+      "text": "Patient:",
+      "confidence": 96.495804,
+      "box": {
+        "x": 102,
+        "y": 239,
+        "width": 109,
+        "height": 17
+      },
+      "start": 47,
+      "end": 55,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 93.238083,
+      "box": {
+        "x": 407,
+        "y": 237,
+        "width": 149,
+        "height": 24
+      },
+      "start": 70,
+      "end": 81,
+      "needsReview": false
+    },
+    {
+      "text": "Author:",
+      "confidence": 94.72551,
+      "box": {
+        "x": 101,
+        "y": 278,
+        "width": 95,
+        "height": 18
+      },
+      "start": 82,
+      "end": 89,
+      "needsReview": false
+    },
+    {
+      "text": "Dr.",
+      "confidence": 94.72551,
+      "box": {
+        "x": 217,
+        "y": 279,
+        "width": 36,
+        "height": 17
+      },
+      "start": 90,
+      "end": 93,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.872765,
+      "box": {
+        "x": 450,
+        "y": 277,
+        "width": 150,
+        "height": 24
+      },
+      "start": 108,
+      "end": 119,
+      "needsReview": false
+    },
+    {
+      "text": "Age:",
+      "confidence": 95.788109,
+      "box": {
+        "x": 101,
+        "y": 319,
+        "width": 52,
+        "height": 22
+      },
+      "start": 120,
+      "end": 124,
+      "needsReview": false
+    },
+    {
+      "text": "not",
+      "confidence": 96.125336,
+      "box": {
+        "x": 174,
+        "y": 320,
+        "width": 39,
+        "height": 16
+      },
+      "start": 125,
+      "end": 128,
+      "needsReview": false
+    },
+    {
+      "text": "provided",
+      "confidence": 96.58136,
+      "box": {
+        "x": 232,
+        "y": 318,
+        "width": 111,
+        "height": 23
+      },
+      "start": 129,
+      "end": 137,
+      "needsReview": false
+    },
+    {
+      "text": "[x]",
+      "confidence": 96.547745,
+      "box": {
+        "x": 105,
+        "y": 356,
+        "width": 34,
+        "height": 24
+      },
+      "start": 138,
+      "end": 141,
+      "needsReview": false
+    },
+    {
+      "text": "Drug",
+      "confidence": 96.36544,
+      "box": {
+        "x": 159,
+        "y": 359,
+        "width": 54,
+        "height": 22
+      },
+      "start": 142,
+      "end": 146,
+      "needsReview": false
+    },
+    {
+      "text": "sought:",
+      "confidence": 96.337524,
+      "box": {
+        "x": 232,
+        "y": 358,
+        "width": 94,
+        "height": 23
+      },
+      "start": 147,
+      "end": 154,
+      "needsReview": false
+    },
+    {
+      "text": "adalimumab",
+      "confidence": 96.102402,
+      "box": {
+        "x": 347,
+        "y": 358,
+        "width": 140,
+        "height": 18
+      },
+      "start": 155,
+      "end": 165,
+      "needsReview": false
+    },
+    {
+      "text": "[x]",
+      "confidence": 96.681229,
+      "box": {
+        "x": 105,
+        "y": 396,
+        "width": 33,
+        "height": 24
+      },
+      "start": 166,
+      "end": 169,
+      "needsReview": false
+    },
+    {
+      "text": "Intended",
+      "confidence": 96.398628,
+      "box": {
+        "x": 160,
+        "y": 398,
+        "width": 111,
+        "height": 18
+      },
+      "start": 170,
+      "end": 178,
+      "needsReview": false
+    },
+    {
+      "text": "use:",
+      "confidence": 96.827393,
+      "box": {
+        "x": 289,
+        "y": 403,
+        "width": 51,
+        "height": 13
+      },
+      "start": 179,
+      "end": 183,
+      "needsReview": false
+    },
+    {
+      "text": "mild",
+      "confidence": 96.489746,
+      "box": {
+        "x": 360,
+        "y": 398,
+        "width": 55,
+        "height": 18
+      },
+      "start": 184,
+      "end": 188,
+      "needsReview": false
+    },
+    {
+      "text": "plaque",
+      "confidence": 96.514381,
+      "box": {
+        "x": 433,
+        "y": 398,
+        "width": 83,
+        "height": 23
+      },
+      "start": 189,
+      "end": 195,
+      "needsReview": false
+    },
+    {
+      "text": "psoriasis",
+      "confidence": 96.631432,
+      "box": {
+        "x": 534,
+        "y": 399,
+        "width": 126,
+        "height": 22
+      },
+      "start": 196,
+      "end": 205,
+      "needsReview": false
+    },
+    {
+      "text": "[",
+      "confidence": 83.098595,
+      "box": {
+        "x": 105,
+        "y": 436,
+        "width": 5,
+        "height": 24
+      },
+      "start": 206,
+      "end": 207,
+      "needsReview": false
+    },
+    {
+      "text": "]",
+      "confidence": 65.124542,
+      "box": {
+        "x": 133,
+        "y": 436,
+        "width": 5,
+        "height": 24
+      },
+      "start": 208,
+      "end": 209,
+      "needsReview": true
+    },
+    {
+      "text": "Maintenance",
+      "confidence": 95.789993,
+      "box": {
+        "x": 159,
+        "y": 439,
+        "width": 156,
+        "height": 17
+      },
+      "start": 210,
+      "end": 221,
+      "needsReview": false
+    },
+    {
+      "text": "amount:",
+      "confidence": 92.762077,
+      "box": {
+        "x": 332,
+        "y": 440,
+        "width": 95,
+        "height": 16
+      },
+      "start": 222,
+      "end": 229,
+      "needsReview": false
+    },
+    {
+      "text": "____",
+      "confidence": 91.931885,
+      "box": {
+        "x": 447,
+        "y": 456,
+        "width": 55,
+        "height": 2
+      },
+      "start": 230,
+      "end": 234,
+      "needsReview": false
+    },
+    {
+      "text": "[1",
+      "confidence": 72.509598,
+      "box": {
+        "x": 105,
+        "y": 476,
+        "width": 37,
+        "height": 24
+      },
+      "start": 235,
+      "end": 237,
+      "needsReview": true
+    },
+    {
+      "text": "Maintenance",
+      "confidence": 95.509399,
+      "box": {
+        "x": 159,
+        "y": 479,
+        "width": 156,
+        "height": 17
+      },
+      "start": 238,
+      "end": 249,
+      "needsReview": false
+    },
+    {
+      "text": "interval:",
+      "confidence": 93.009628,
+      "box": {
+        "x": 333,
+        "y": 478,
+        "width": 123,
+        "height": 18
+      },
+      "start": 250,
+      "end": 259,
+      "needsReview": false
+    },
+    {
+      "text": "____",
+      "confidence": 80.339607,
+      "box": {
+        "x": 476,
+        "y": 496,
+        "width": 54,
+        "height": 2
+      },
+      "start": 260,
+      "end": 264,
+      "needsReview": false
+    },
+    {
+      "text": "[",
+      "confidence": 78.252899,
+      "box": {
+        "x": 105,
+        "y": 516,
+        "width": 5,
+        "height": 24
+      },
+      "start": 265,
+      "end": 266,
+      "needsReview": true
+    },
+    {
+      "text": "]",
+      "confidence": 67.599548,
+      "box": {
+        "x": 133,
+        "y": 516,
+        "width": 5,
+        "height": 24
+      },
+      "start": 267,
+      "end": 268,
+      "needsReview": true
+    },
+    {
+      "text": "Numeric",
+      "confidence": 96.327835,
+      "box": {
+        "x": 159,
+        "y": 519,
+        "width": 98,
+        "height": 17
+      },
+      "start": 269,
+      "end": 276,
+      "needsReview": false
+    },
+    {
+      "text": "skin",
+      "confidence": 96.557381,
+      "box": {
+        "x": 275,
+        "y": 518,
+        "width": 54,
+        "height": 18
+      },
+      "start": 277,
+      "end": 281,
+      "needsReview": false
+    },
+    {
+      "text": "measurement:",
+      "confidence": 91.218033,
+      "box": {
+        "x": 346,
+        "y": 520,
+        "width": 167,
+        "height": 16
+      },
+      "start": 282,
+      "end": 294,
+      "needsReview": false
+    },
+    {
+      "text": "____",
+      "confidence": 89.651459,
+      "box": {
+        "x": 534,
+        "y": 536,
+        "width": 54,
+        "height": 2
+      },
+      "start": 295,
+      "end": 299,
+      "needsReview": false
+    },
+    {
+      "text": "[x]",
+      "confidence": 31.404633,
+      "box": {
+        "x": 105,
+        "y": 556,
+        "width": 33,
+        "height": 24
+      },
+      "start": 300,
+      "end": 303,
+      "needsReview": true
+    },
+    {
+      "text": "Methotrexate",
+      "confidence": 96.148575,
+      "box": {
+        "x": 159,
+        "y": 558,
+        "width": 170,
+        "height": 18
+      },
+      "start": 304,
+      "end": 316,
+      "needsReview": false
+    },
+    {
+      "text": "previously",
+      "confidence": 96.855927,
+      "box": {
+        "x": 347,
+        "y": 558,
+        "width": 141,
+        "height": 23
+      },
+      "start": 317,
+      "end": 327,
+      "needsReview": false
+    },
+    {
+      "text": "attempted",
+      "confidence": 96.634689,
+      "box": {
+        "x": 505,
+        "y": 558,
+        "width": 126,
+        "height": 23
+      },
+      "start": 328,
+      "end": 337,
+      "needsReview": false
+    },
+    {
+      "text": "[x]",
+      "confidence": 95.262207,
+      "box": {
+        "x": 105,
+        "y": 596,
+        "width": 33,
+        "height": 24
+      },
+      "start": 338,
+      "end": 341,
+      "needsReview": false
+    },
+    {
+      "text": "Stopped",
+      "confidence": 95.262207,
+      "box": {
+        "x": 159,
+        "y": 598,
+        "width": 97,
+        "height": 23
+      },
+      "start": 342,
+      "end": 349,
+      "needsReview": false
+    },
+    {
+      "text": "because",
+      "confidence": 96.662636,
+      "box": {
+        "x": 275,
+        "y": 598,
+        "width": 97,
+        "height": 18
+      },
+      "start": 350,
+      "end": 357,
+      "needsReview": false
+    },
+    {
+      "text": "of",
+      "confidence": 96.395302,
+      "box": {
+        "x": 389,
+        "y": 597,
+        "width": 27,
+        "height": 19
+      },
+      "start": 358,
+      "end": 360,
+      "needsReview": false
+    },
+    {
+      "text": "intolerance",
+      "confidence": 96.035667,
+      "box": {
+        "x": 434,
+        "y": 598,
+        "width": 154,
+        "height": 18
+      },
+      "start": 361,
+      "end": 372,
+      "needsReview": false
+    },
+    {
+      "text": "Reason",
+      "confidence": 85.531853,
+      "box": {
+        "x": 102,
+        "y": 639,
+        "width": 85,
+        "height": 17
+      },
+      "start": 373,
+      "end": 379,
+      "needsReview": false
+    },
+    {
+      "text": "for",
+      "confidence": 85.684212,
+      "box": {
+        "x": 203,
+        "y": 637,
+        "width": 41,
+        "height": 19
+      },
+      "start": 380,
+      "end": 383,
+      "needsReview": false
+    },
+    {
+      "text": "intolerance:",
+      "confidence": 91.334152,
+      "box": {
+        "x": 261,
+        "y": 638,
+        "width": 168,
+        "height": 18
+      },
+      "start": 384,
+      "end": 396,
+      "needsReview": false
+    },
+    {
+      "text": "____",
+      "confidence": 88.470726,
+      "box": {
+        "x": 447,
+        "y": 656,
+        "width": 55,
+        "height": 2
+      },
+      "start": 397,
+      "end": 401,
+      "needsReview": false
+    },
+    {
+      "text": "Course",
+      "confidence": 95.930031,
+      "box": {
+        "x": 101,
+        "y": 679,
+        "width": 84,
+        "height": 17
+      },
+      "start": 402,
+      "end": 408,
+      "needsReview": false
+    },
+    {
+      "text": "details:",
+      "confidence": 95.587959,
+      "box": {
+        "x": 202,
+        "y": 678,
+        "width": 109,
+        "height": 18
+      },
+      "start": 409,
+      "end": 417,
+      "needsReview": false
+    },
+    {
+      "text": "not",
+      "confidence": 96.726036,
+      "box": {
+        "x": 332,
+        "y": 680,
+        "width": 40,
+        "height": 16
+      },
+      "start": 418,
+      "end": 421,
+      "needsReview": false
+    },
+    {
+      "text": "provided",
+      "confidence": 96.097733,
+      "box": {
+        "x": 390,
+        "y": 678,
+        "width": 111,
+        "height": 23
+      },
+      "start": 422,
+      "end": 430,
+      "needsReview": false
+    },
+    {
+      "text": "Author",
+      "confidence": 96.165581,
+      "box": {
+        "x": 101,
+        "y": 718,
+        "width": 84,
+        "height": 18
+      },
+      "start": 431,
+      "end": 437,
+      "needsReview": false
+    },
+    {
+      "text": "signature:",
+      "confidence": 96.062447,
+      "box": {
+        "x": 203,
+        "y": 719,
+        "width": 137,
+        "height": 22
+      },
+      "start": 438,
+      "end": 448,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.870461,
+      "box": {
+        "x": 536,
+        "y": 717,
+        "width": 150,
+        "height": 24
+      },
+      "start": 463,
+      "end": 474,
+      "needsReview": false
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "SYSTEMIC MEDICATION CHECK\nSubmission: 2026-09-24\nPatient: Evin Solmar (fictional)\nAuthor: Dr. Rhea Tollen (fictional)\nAge: not provided\n[x] Drug sought: adalimumab\n[x] Intended use: mild plaque psoriasis\n[ ] Maintenance amount: ____\n[1 Maintenance interval: ____\n[ ] Numeric skin measurement: ____\n[x] Methotrexate previously attempted\n[x] Stopped because of intolerance\nReason for intolerance: ____\nCourse details: not provided\nAuthor signature: Rhea Tollen (fictional)\n",
+    "words": [
+      {
+        "text": "SYSTEMIC",
+        "confidence": 96.432137,
+        "box": {
+          "x": 101,
+          "y": 159,
+          "width": 113,
+          "height": 17
+        },
+        "start": 0,
+        "end": 8,
+        "needsReview": false
+      },
+      {
+        "text": "MEDICATION",
+        "confidence": 95.702599,
+        "box": {
+          "x": 231,
+          "y": 159,
+          "width": 141,
+          "height": 17
+        },
+        "start": 9,
+        "end": 19,
+        "needsReview": false
+      },
+      {
+        "text": "CHECK",
+        "confidence": 95.781487,
+        "box": {
+          "x": 389,
+          "y": 159,
+          "width": 70,
+          "height": 17
+        },
+        "start": 20,
+        "end": 25,
+        "needsReview": false
+      },
+      {
+        "text": "Submission:",
+        "confidence": 96.310966,
+        "box": {
+          "x": 101,
+          "y": 198,
+          "width": 153,
+          "height": 18
+        },
+        "start": 26,
+        "end": 37,
+        "needsReview": false
+      },
+      {
+        "text": "2026-09-24",
+        "confidence": 95.59359,
+        "box": {
+          "x": 274,
+          "y": 199,
+          "width": 142,
+          "height": 17
+        },
+        "start": 38,
+        "end": 48,
+        "needsReview": false
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.495804,
+        "box": {
+          "x": 102,
+          "y": 239,
+          "width": 109,
+          "height": 17
+        },
+        "start": 49,
+        "end": 57,
+        "needsReview": false
+      },
+      {
+        "text": "Evin",
+        "confidence": 92.231964,
+        "box": {
+          "x": 232,
+          "y": 239,
+          "width": 53,
+          "height": 17
+        },
+        "start": 58,
+        "end": 62,
+        "needsReview": false
+      },
+      {
+        "text": "Solmar",
+        "confidence": 92.006905,
+        "box": {
+          "x": 303,
+          "y": 238,
+          "width": 83,
+          "height": 18
+        },
+        "start": 63,
+        "end": 69,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 93.238083,
+        "box": {
+          "x": 407,
+          "y": 237,
+          "width": 149,
+          "height": 24
+        },
+        "start": 70,
+        "end": 81,
+        "needsReview": false
+      },
+      {
+        "text": "Author:",
+        "confidence": 94.72551,
+        "box": {
+          "x": 101,
+          "y": 278,
+          "width": 95,
+          "height": 18
+        },
+        "start": 82,
+        "end": 89,
+        "needsReview": false
+      },
+      {
+        "text": "Dr.",
+        "confidence": 94.72551,
+        "box": {
+          "x": 217,
+          "y": 279,
+          "width": 36,
+          "height": 17
+        },
+        "start": 90,
+        "end": 93,
+        "needsReview": false
+      },
+      {
+        "text": "Rhea",
+        "confidence": 92.753159,
+        "box": {
+          "x": 275,
+          "y": 278,
+          "width": 54,
+          "height": 18
+        },
+        "start": 94,
+        "end": 98,
+        "needsReview": false
+      },
+      {
+        "text": "Tollen",
+        "confidence": 92.753159,
+        "box": {
+          "x": 346,
+          "y": 278,
+          "width": 83,
+          "height": 18
+        },
+        "start": 99,
+        "end": 105,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.872765,
+        "box": {
+          "x": 450,
+          "y": 277,
+          "width": 150,
+          "height": 24
+        },
+        "start": 106,
+        "end": 117,
+        "needsReview": false
+      },
+      {
+        "text": "Age:",
+        "confidence": 95.788109,
+        "box": {
+          "x": 101,
+          "y": 319,
+          "width": 52,
+          "height": 22
+        },
+        "start": 118,
+        "end": 122,
+        "needsReview": false
+      },
+      {
+        "text": "not",
+        "confidence": 96.125336,
+        "box": {
+          "x": 174,
+          "y": 320,
+          "width": 39,
+          "height": 16
+        },
+        "start": 123,
+        "end": 126,
+        "needsReview": false
+      },
+      {
+        "text": "provided",
+        "confidence": 96.58136,
+        "box": {
+          "x": 232,
+          "y": 318,
+          "width": 111,
+          "height": 23
+        },
+        "start": 127,
+        "end": 135,
+        "needsReview": false
+      },
+      {
+        "text": "[x]",
+        "confidence": 96.547745,
+        "box": {
+          "x": 105,
+          "y": 356,
+          "width": 34,
+          "height": 24
+        },
+        "start": 136,
+        "end": 139,
+        "needsReview": false
+      },
+      {
+        "text": "Drug",
+        "confidence": 96.36544,
+        "box": {
+          "x": 159,
+          "y": 359,
+          "width": 54,
+          "height": 22
+        },
+        "start": 140,
+        "end": 144,
+        "needsReview": false
+      },
+      {
+        "text": "sought:",
+        "confidence": 96.337524,
+        "box": {
+          "x": 232,
+          "y": 358,
+          "width": 94,
+          "height": 23
+        },
+        "start": 145,
+        "end": 152,
+        "needsReview": false
+      },
+      {
+        "text": "adalimumab",
+        "confidence": 96.102402,
+        "box": {
+          "x": 347,
+          "y": 358,
+          "width": 140,
+          "height": 18
+        },
+        "start": 153,
+        "end": 163,
+        "needsReview": false
+      },
+      {
+        "text": "[x]",
+        "confidence": 96.681229,
+        "box": {
+          "x": 105,
+          "y": 396,
+          "width": 33,
+          "height": 24
+        },
+        "start": 164,
+        "end": 167,
+        "needsReview": false
+      },
+      {
+        "text": "Intended",
+        "confidence": 96.398628,
+        "box": {
+          "x": 160,
+          "y": 398,
+          "width": 111,
+          "height": 18
+        },
+        "start": 168,
+        "end": 176,
+        "needsReview": false
+      },
+      {
+        "text": "use:",
+        "confidence": 96.827393,
+        "box": {
+          "x": 289,
+          "y": 403,
+          "width": 51,
+          "height": 13
+        },
+        "start": 177,
+        "end": 181,
+        "needsReview": false
+      },
+      {
+        "text": "mild",
+        "confidence": 96.489746,
+        "box": {
+          "x": 360,
+          "y": 398,
+          "width": 55,
+          "height": 18
+        },
+        "start": 182,
+        "end": 186,
+        "needsReview": false
+      },
+      {
+        "text": "plaque",
+        "confidence": 96.514381,
+        "box": {
+          "x": 433,
+          "y": 398,
+          "width": 83,
+          "height": 23
+        },
+        "start": 187,
+        "end": 193,
+        "needsReview": false
+      },
+      {
+        "text": "psoriasis",
+        "confidence": 96.631432,
+        "box": {
+          "x": 534,
+          "y": 399,
+          "width": 126,
+          "height": 22
+        },
+        "start": 194,
+        "end": 203,
+        "needsReview": false
+      },
+      {
+        "text": "[",
+        "confidence": 83.098595,
+        "box": {
+          "x": 105,
+          "y": 436,
+          "width": 5,
+          "height": 24
+        },
+        "start": 204,
+        "end": 205,
+        "needsReview": false
+      },
+      {
+        "text": "]",
+        "confidence": 65.124542,
+        "box": {
+          "x": 133,
+          "y": 436,
+          "width": 5,
+          "height": 24
+        },
+        "start": 206,
+        "end": 207,
+        "needsReview": true
+      },
+      {
+        "text": "Maintenance",
+        "confidence": 95.789993,
+        "box": {
+          "x": 159,
+          "y": 439,
+          "width": 156,
+          "height": 17
+        },
+        "start": 208,
+        "end": 219,
+        "needsReview": false
+      },
+      {
+        "text": "amount:",
+        "confidence": 92.762077,
+        "box": {
+          "x": 332,
+          "y": 440,
+          "width": 95,
+          "height": 16
+        },
+        "start": 220,
+        "end": 227,
+        "needsReview": false
+      },
+      {
+        "text": "____",
+        "confidence": 91.931885,
+        "box": {
+          "x": 447,
+          "y": 456,
+          "width": 55,
+          "height": 2
+        },
+        "start": 228,
+        "end": 232,
+        "needsReview": false
+      },
+      {
+        "text": "[1",
+        "confidence": 72.509598,
+        "box": {
+          "x": 105,
+          "y": 476,
+          "width": 37,
+          "height": 24
+        },
+        "start": 233,
+        "end": 235,
+        "needsReview": true
+      },
+      {
+        "text": "Maintenance",
+        "confidence": 95.509399,
+        "box": {
+          "x": 159,
+          "y": 479,
+          "width": 156,
+          "height": 17
+        },
+        "start": 236,
+        "end": 247,
+        "needsReview": false
+      },
+      {
+        "text": "interval:",
+        "confidence": 93.009628,
+        "box": {
+          "x": 333,
+          "y": 478,
+          "width": 123,
+          "height": 18
+        },
+        "start": 248,
+        "end": 257,
+        "needsReview": false
+      },
+      {
+        "text": "____",
+        "confidence": 80.339607,
+        "box": {
+          "x": 476,
+          "y": 496,
+          "width": 54,
+          "height": 2
+        },
+        "start": 258,
+        "end": 262,
+        "needsReview": false
+      },
+      {
+        "text": "[",
+        "confidence": 78.252899,
+        "box": {
+          "x": 105,
+          "y": 516,
+          "width": 5,
+          "height": 24
+        },
+        "start": 263,
+        "end": 264,
+        "needsReview": true
+      },
+      {
+        "text": "]",
+        "confidence": 67.599548,
+        "box": {
+          "x": 133,
+          "y": 516,
+          "width": 5,
+          "height": 24
+        },
+        "start": 265,
+        "end": 266,
+        "needsReview": true
+      },
+      {
+        "text": "Numeric",
+        "confidence": 96.327835,
+        "box": {
+          "x": 159,
+          "y": 519,
+          "width": 98,
+          "height": 17
+        },
+        "start": 267,
+        "end": 274,
+        "needsReview": false
+      },
+      {
+        "text": "skin",
+        "confidence": 96.557381,
+        "box": {
+          "x": 275,
+          "y": 518,
+          "width": 54,
+          "height": 18
+        },
+        "start": 275,
+        "end": 279,
+        "needsReview": false
+      },
+      {
+        "text": "measurement:",
+        "confidence": 91.218033,
+        "box": {
+          "x": 346,
+          "y": 520,
+          "width": 167,
+          "height": 16
+        },
+        "start": 280,
+        "end": 292,
+        "needsReview": false
+      },
+      {
+        "text": "____",
+        "confidence": 89.651459,
+        "box": {
+          "x": 534,
+          "y": 536,
+          "width": 54,
+          "height": 2
+        },
+        "start": 293,
+        "end": 297,
+        "needsReview": false
+      },
+      {
+        "text": "[x]",
+        "confidence": 31.404633,
+        "box": {
+          "x": 105,
+          "y": 556,
+          "width": 33,
+          "height": 24
+        },
+        "start": 298,
+        "end": 301,
+        "needsReview": true
+      },
+      {
+        "text": "Methotrexate",
+        "confidence": 96.148575,
+        "box": {
+          "x": 159,
+          "y": 558,
+          "width": 170,
+          "height": 18
+        },
+        "start": 302,
+        "end": 314,
+        "needsReview": false
+      },
+      {
+        "text": "previously",
+        "confidence": 96.855927,
+        "box": {
+          "x": 347,
+          "y": 558,
+          "width": 141,
+          "height": 23
+        },
+        "start": 315,
+        "end": 325,
+        "needsReview": false
+      },
+      {
+        "text": "attempted",
+        "confidence": 96.634689,
+        "box": {
+          "x": 505,
+          "y": 558,
+          "width": 126,
+          "height": 23
+        },
+        "start": 326,
+        "end": 335,
+        "needsReview": false
+      },
+      {
+        "text": "[x]",
+        "confidence": 95.262207,
+        "box": {
+          "x": 105,
+          "y": 596,
+          "width": 33,
+          "height": 24
+        },
+        "start": 336,
+        "end": 339,
+        "needsReview": false
+      },
+      {
+        "text": "Stopped",
+        "confidence": 95.262207,
+        "box": {
+          "x": 159,
+          "y": 598,
+          "width": 97,
+          "height": 23
+        },
+        "start": 340,
+        "end": 347,
+        "needsReview": false
+      },
+      {
+        "text": "because",
+        "confidence": 96.662636,
+        "box": {
+          "x": 275,
+          "y": 598,
+          "width": 97,
+          "height": 18
+        },
+        "start": 348,
+        "end": 355,
+        "needsReview": false
+      },
+      {
+        "text": "of",
+        "confidence": 96.395302,
+        "box": {
+          "x": 389,
+          "y": 597,
+          "width": 27,
+          "height": 19
+        },
+        "start": 356,
+        "end": 358,
+        "needsReview": false
+      },
+      {
+        "text": "intolerance",
+        "confidence": 96.035667,
+        "box": {
+          "x": 434,
+          "y": 598,
+          "width": 154,
+          "height": 18
+        },
+        "start": 359,
+        "end": 370,
+        "needsReview": false
+      },
+      {
+        "text": "Reason",
+        "confidence": 85.531853,
+        "box": {
+          "x": 102,
+          "y": 639,
+          "width": 85,
+          "height": 17
+        },
+        "start": 371,
+        "end": 377,
+        "needsReview": false
+      },
+      {
+        "text": "for",
+        "confidence": 85.684212,
+        "box": {
+          "x": 203,
+          "y": 637,
+          "width": 41,
+          "height": 19
+        },
+        "start": 378,
+        "end": 381,
+        "needsReview": false
+      },
+      {
+        "text": "intolerance:",
+        "confidence": 91.334152,
+        "box": {
+          "x": 261,
+          "y": 638,
+          "width": 168,
+          "height": 18
+        },
+        "start": 382,
+        "end": 394,
+        "needsReview": false
+      },
+      {
+        "text": "____",
+        "confidence": 88.470726,
+        "box": {
+          "x": 447,
+          "y": 656,
+          "width": 55,
+          "height": 2
+        },
+        "start": 395,
+        "end": 399,
+        "needsReview": false
+      },
+      {
+        "text": "Course",
+        "confidence": 95.930031,
+        "box": {
+          "x": 101,
+          "y": 679,
+          "width": 84,
+          "height": 17
+        },
+        "start": 400,
+        "end": 406,
+        "needsReview": false
+      },
+      {
+        "text": "details:",
+        "confidence": 95.587959,
+        "box": {
+          "x": 202,
+          "y": 678,
+          "width": 109,
+          "height": 18
+        },
+        "start": 407,
+        "end": 415,
+        "needsReview": false
+      },
+      {
+        "text": "not",
+        "confidence": 96.726036,
+        "box": {
+          "x": 332,
+          "y": 680,
+          "width": 40,
+          "height": 16
+        },
+        "start": 416,
+        "end": 419,
+        "needsReview": false
+      },
+      {
+        "text": "provided",
+        "confidence": 96.097733,
+        "box": {
+          "x": 390,
+          "y": 678,
+          "width": 111,
+          "height": 23
+        },
+        "start": 420,
+        "end": 428,
+        "needsReview": false
+      },
+      {
+        "text": "Author",
+        "confidence": 96.165581,
+        "box": {
+          "x": 101,
+          "y": 718,
+          "width": 84,
+          "height": 18
+        },
+        "start": 429,
+        "end": 435,
+        "needsReview": false
+      },
+      {
+        "text": "signature:",
+        "confidence": 96.062447,
+        "box": {
+          "x": 203,
+          "y": 719,
+          "width": 137,
+          "height": 22
+        },
+        "start": 436,
+        "end": 446,
+        "needsReview": false
+      },
+      {
+        "text": "Rhea",
+        "confidence": 92.141457,
+        "box": {
+          "x": 361,
+          "y": 718,
+          "width": 54,
+          "height": 18
+        },
+        "start": 447,
+        "end": 451,
+        "needsReview": false
+      },
+      {
+        "text": "Tollen",
+        "confidence": 92.141457,
+        "box": {
+          "x": 432,
+          "y": 718,
+          "width": 84,
+          "height": 18
+        },
+        "start": 452,
+        "end": 458,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.870461,
+        "box": {
+          "x": 536,
+          "y": 717,
+          "width": 150,
+          "height": 24
+        },
+        "start": 459,
+        "end": 470,
+        "needsReview": false
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM",
+    "orientation": {
+      "pageRotation": 0,
+      "scores": {
+        "0": 4269.556233999999,
+        "180": 203.691814
+      }
+    },
+    "deskewDegrees": 0,
+    "readImage": "holdout-13.png",
+    "width": 1700,
+    "height": 2200
+  },
+  "scores": {
+    "entities": {
+      "tp": 0,
+      "predicted": 10,
+      "gold": 0,
+      "exactQuote": 0
+    },
+    "criteria": {
+      "correct": 5,
+      "total": 5
+    },
+    "cer": 0.004246284501061571,
+    "edits": 2,
+    "chars": 471,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [
+    "2 OCR character edits"
+  ],
+  "latency": {
+    "renderAndOcrMs": 4111.291125000003,
+    "serviceMs": 19.110500000000002
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-19",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/holdout/packets/holdout-19.md",
+  "group": "orientation",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Pipe worksheet; ASCVD only in history; trial has no duration or paired values.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 118,
+          "end": 126,
+          "text": "Age | 46"
+        }
+      ],
+      "reason": "The stated age is adult.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 155,
+          "end": 204,
+          "text": "Requested purpose | familial hypercholesterolemia"
+        },
+        {
+          "start": 205,
+          "end": 232,
+          "text": "Historical problems | ASCVD"
+        }
+      ],
+      "reason": "ASCVD is present only in historical problems, while another indication is requested.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 25,
+          "end": 43,
+          "text": "Date | 25-Sep-2026"
+        },
+        {
+          "start": 385,
+          "end": 425,
+          "text": "Current LDL-C | 121 mg/dL on 18-Sep-2026"
+        }
+      ],
+      "reason": "The LDL-C is qualifying and recent.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 267,
+          "end": 307,
+          "text": "Prior tablets | atorvastatin 40 mg daily"
+        },
+        {
+          "start": 308,
+          "end": 336,
+          "text": "Length of use | not provided"
+        },
+        {
+          "start": 337,
+          "end": 384,
+          "text": "Clinical impression | inadequate lipid response"
+        }
+      ],
+      "reason": "The trial lacks duration and paired LDL-C measurements.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No requested amount or interval is given.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

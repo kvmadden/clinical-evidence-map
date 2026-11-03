@@ -2,31 +2,34 @@
 packet_id: packet-010
 fictional: true
 criteria_id: glp1-t2d
-quality_group: skew
-quality_plan: "Complete text; later render with 7-degree skew."
-render_status: source_text_only
+group: rotation-7deg
+page_style: letter
+date_style: us-short
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
+Fax received: 28 Sep 2026 09:14. Page 1 of 1.
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Request date: 9-27-26.
 Patient: Oren Brookvale (fictional).
 Age: 42 years.
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: semaglutide 0.5 mg weekly.
-Please review the enclosed records for Type 2 diabetes mellitus.
+Request: Ozempic.
+Requested for: suspected type 2 diabetes, repeat A1c pending.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Type 2 diabetes mellitus.
+Visit date: 9-16-26.
+Assessment: suspected type 2 diabetes, repeat A1c pending.
+Past medical history: hypertension, seasonal allergies.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-A1c: 8.6 %; collected 2026-09-15.
+A1c: ______  Date collected: ______
 
 MEDICATION HISTORY
-Current requested therapy: semaglutide 0.5 mg weekly.
-Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: Ozempic 0.5mg once weekly.
+Prior: metformin 1000mg bid from 7-28-26 to 8-11-26.
+Stopped for persistent nausea and diarrhea.
 No other prior therapy records supplied.

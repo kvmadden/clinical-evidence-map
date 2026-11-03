@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-20",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/holdout/packets/holdout-20.md",
+  "group": "annotations",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Checkbox form; only nonstatin prior therapy; four-week requested interval.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 131,
+          "end": 148,
+          "text": "[x] Age: 73 years"
+        }
+      ],
+      "reason": "The age is adult.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 149,
+          "end": 192,
+          "text": "[x] Evolocumab sought for established ASCVD"
+        },
+        {
+          "start": 193,
+          "end": 243,
+          "text": "[x] Known coronary artery disease with prior stent"
+        }
+      ],
+      "reason": "Established ASCVD is documented as the treatment purpose.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No LDL-C value appears.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "Only ezetimibe is documented; no atorvastatin trial or statin intolerance appears.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 244,
+          "end": 293,
+          "text": "[x] Order: evolocumab 140mg subQ every four weeks"
+        }
+      ],
+      "reason": "The requested interval is four weeks.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

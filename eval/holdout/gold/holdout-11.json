@@ -1,0 +1,109 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-11",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout/packets/holdout-11.md",
+  "group": "clean-render",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Question form; unspecified severity; methotrexate course under 90 days.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 122,
+          "end": 129,
+          "text": "Age? 59"
+        }
+      ],
+      "reason": "The age is adult.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 158,
+          "end": 210,
+          "text": "Reason? Plaque psoriasis affecting elbows and trunk."
+        },
+        {
+          "start": 211,
+          "end": 242,
+          "text": "Severity category? not provided"
+        }
+      ],
+      "reason": "The diagnosis is linked to the request but moderate-to-severe severity is not documented.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 19,
+          "end": 49,
+          "text": "Date completed? October 8 2026"
+        },
+        {
+          "start": 272,
+          "end": 328,
+          "text": "Most recent skin estimate? BSA 13% on September 30 2026."
+        }
+      ],
+      "reason": "The BSA measurement is recent and at least 10%.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 329,
+          "end": 375,
+          "text": "Previous systemic? Methotrexate 12.5mg weekly."
+        },
+        {
+          "start": 376,
+          "end": 420,
+          "text": "Course dates? July 1 through August 15 2026."
+        },
+        {
+          "start": 421,
+          "end": 460,
+          "text": "BSA before course? 18% on June 30 2026."
+        },
+        {
+          "start": 461,
+          "end": 503,
+          "text": "BSA at last tablet? 15% on August 15 2026."
+        }
+      ],
+      "reason": "The documented course and follow-up interval are shorter than 90 days.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "Maintenance directions are blank.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

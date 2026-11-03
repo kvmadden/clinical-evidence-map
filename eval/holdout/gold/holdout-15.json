@@ -1,0 +1,105 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-15",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout/packets/holdout-15.md",
+  "group": "low-contrast",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Received date resolves numeric order; contraindication with reason; dose conflict.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 153,
+          "end": 166,
+          "text": "Age: 52 years"
+        }
+      ],
+      "reason": "The stated age is adult.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 167,
+          "end": 225,
+          "text": "Reason for adalimumab: moderate-to-severe plaque psoriasis"
+        }
+      ],
+      "reason": "The qualifying indication is explicitly linked to adalimumab.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 97,
+          "end": 124,
+          "text": "Request written: 09/10/2026"
+        },
+        {
+          "start": 125,
+          "end": 152,
+          "text": "Received: September 12 2026"
+        },
+        {
+          "start": 379,
+          "end": 406,
+          "text": "BSA 17% measured 09/01/2026"
+        }
+      ],
+      "reason": "The received date rules out an October 9 request. Month-first dates give a qualifying BSA nine days before the request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 328,
+          "end": 378,
+          "text": "Methotrexate contraindicated because of cirrhosis."
+        }
+      ],
+      "reason": "A contraindication and its reason are documented.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 226,
+          "end": 264,
+          "text": "Prescription maintenance: 40mg SC q14d"
+        },
+        {
+          "start": 301,
+          "end": 327,
+          "text": "Adalimumab 40 mg SC weekly"
+        }
+      ],
+      "reason": "The active therapy list and prescription disagree on frequency.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

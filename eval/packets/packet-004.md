@@ -2,31 +2,33 @@
 packet_id: packet-004
 fictional: true
 criteria_id: glp1-t2d
-quality_group: clean
-quality_plan: "Complete text; render cleanly."
-render_status: source_text_only
+group: clean-render
+page_style: form
+date_style: text-dmy
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
-REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
-Patient: Nolan Brookvale (fictional).
-Age: 36 years.
-From: Dr. Rowan Vale, fictional requesting provider.
-Request: semaglutide 0.5 mg weekly.
-Please review the enclosed records for Type 2 diabetes mellitus.
+PRIOR AUTHORIZATION REQUEST FORM
+Date of request: 30 Sep 2026
+Patient name: Nolan Brookvale (fictional)
+Age: 36
+Prescriber: Dr. Rowan Vale (fictional)
+Medication requested: Ozempic
+Dose and frequency: 0.5mg qwk
+Diagnosis for this request: prediabetes
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Type 2 diabetes mellitus.
+Visit date: 19 Sep 2026.
+Assessment: prediabetes.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-A1c: 8.6 %; collected 2026-09-15.
+Most recent Hemoglobin A1c: 8.6 %
+Date collected: 14 Sep 2026
 
 MEDICATION HISTORY
-Current requested therapy: semaglutide 0.5 mg weekly.
-Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: Ozempic 0.5mg qwk.
+Metformin not started: contraindicated due to eGFR 24 mL/min/1.73 m2.
 No other prior therapy records supplied.

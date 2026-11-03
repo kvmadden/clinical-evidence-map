@@ -1,19 +1,46 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-004",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "glp1-t2d",
   "source_file": "eval/packets/packet-004.md",
+  "group": "clean-render",
+  "tags": [
+    "page:form",
+    "date:text-dmy",
+    "date-reading:none",
+    "drug-name:brand",
+    "dose-format:compact"
+  ],
+  "date_reading": {
+    "status": "none",
+    "order": null
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "request_date",
+      "value": "2026-09-30",
+      "source_span": {
+        "start": 33,
+        "end": 61,
+        "text": "Date of request: 30 Sep 2026"
+      },
+      "date": {
+        "written": "30 Sep 2026",
+        "format": "text-dmy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Nolan Brookvale",
       "source_span": {
-        "start": 53,
-        "end": 90,
-        "text": "Patient: Nolan Brookvale (fictional)."
+        "start": 62,
+        "end": 103,
+        "text": "Patient name: Nolan Brookvale (fictional)"
       },
       "reviewed": false
     },
@@ -21,19 +48,9 @@
       "type": "age",
       "value": 36,
       "source_span": {
-        "start": 91,
-        "end": 105,
-        "text": "Age: 36 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
+        "start": 104,
+        "end": 111,
+        "text": "Age: 36"
       },
       "reviewed": false
     },
@@ -41,9 +58,9 @@
       "type": "provider",
       "value": "Dr. Rowan Vale",
       "source_span": {
-        "start": 106,
-        "end": 158,
-        "text": "From: Dr. Rowan Vale, fictional requesting provider."
+        "start": 112,
+        "end": 150,
+        "text": "Prescriber: Dr. Rowan Vale (fictional)"
       },
       "reviewed": false
     },
@@ -51,9 +68,9 @@
       "type": "requested_medication",
       "value": "semaglutide",
       "source_span": {
-        "start": 159,
-        "end": 194,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 151,
+        "end": 180,
+        "text": "Medication requested: Ozempic"
       },
       "reviewed": false
     },
@@ -61,19 +78,32 @@
       "type": "requested_dose",
       "value": "0.5 mg weekly",
       "source_span": {
-        "start": 159,
-        "end": 194,
-        "text": "Request: semaglutide 0.5 mg weekly."
+        "start": 181,
+        "end": 210,
+        "text": "Dose and frequency: 0.5mg qwk"
       },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Type 2 diabetes mellitus",
+      "type": "indication",
+      "value": "prediabetes",
       "source_span": {
-        "start": 300,
-        "end": 336,
-        "text": "Diagnosis: Type 2 diabetes mellitus."
+        "start": 211,
+        "end": 250,
+        "text": "Diagnosis for this request: prediabetes"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "prediabetes",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 292,
+        "end": 316,
+        "text": "Assessment: prediabetes."
       },
       "reviewed": false
     },
@@ -85,19 +115,34 @@
         "unit": "%"
       },
       "source_span": {
-        "start": 422,
-        "end": 455,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 402,
+        "end": 435,
+        "text": "Most recent Hemoglobin A1c: 8.6 %"
       },
       "reviewed": false
     },
     {
       "type": "measurement_date",
-      "value": "2026-09-15",
+      "value": "2026-09-14",
       "source_span": {
-        "start": 422,
-        "end": 455,
-        "text": "A1c: 8.6 %; collected 2026-09-15."
+        "start": 436,
+        "end": 463,
+        "text": "Date collected: 14 Sep 2026"
+      },
+      "date": {
+        "written": "14 Sep 2026",
+        "format": "text-dmy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "medication_list_dose",
+      "value": "0.5 mg weekly",
+      "source_span": {
+        "start": 484,
+        "end": 529,
+        "text": "Current requested therapy: Ozempic 0.5mg qwk."
       },
       "reviewed": false
     },
@@ -106,58 +151,28 @@
       "value": "metformin",
       "source_span": {
         "start": 530,
-        "end": 647,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_dose",
-      "value": "1000 mg twice daily",
-      "source_span": {
-        "start": 530,
-        "end": 647,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_start_date",
-      "value": "2026-04-01",
-      "source_span": {
-        "start": 530,
-        "end": 647,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "prior_stop_date",
-      "value": "2026-08-01",
-      "source_span": {
-        "start": 530,
-        "end": 647,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "end": 599,
+        "text": "Metformin not started: contraindicated due to eGFR 24 mL/min/1.73 m2."
       },
       "reviewed": false
     },
     {
       "type": "prior_outcome",
-      "value": "inadequate response",
+      "value": "contraindication",
       "source_span": {
         "start": 530,
-        "end": 647,
-        "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+        "end": 599,
+        "text": "Metformin not started: contraindicated due to eGFR 24 mL/min/1.73 m2."
       },
       "reviewed": false
     },
     {
-      "type": "medication_list_dose",
-      "value": "0.5 mg weekly",
+      "type": "prior_reason",
+      "value": "eGFR 24 mL/min/1.73 m2",
       "source_span": {
-        "start": 476,
-        "end": 529,
-        "text": "Current requested therapy: semaglutide 0.5 mg weekly."
+        "start": 530,
+        "end": 599,
+        "text": "Metformin not started: contraindicated due to eGFR 24 mL/min/1.73 m2."
       },
       "reviewed": false
     }
@@ -168,25 +183,21 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 91,
-          "end": 105,
-          "text": "Age: 36 years."
+          "start": 104,
+          "end": 111,
+          "text": "Age: 36"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Age 36 is documented.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
       "criterion_id": "diagnosis",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 300,
-          "end": 336,
-          "text": "Diagnosis: Type 2 diabetes mellitus."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The request names prediabetes, not type 2 diabetes mellitus.",
+      "scenario": "other-indication",
       "reviewed": false
     },
     {
@@ -194,17 +205,23 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 422,
-          "end": 455,
-          "text": "A1c: 8.6 %; collected 2026-09-15."
+          "start": 402,
+          "end": 435,
+          "text": "Most recent Hemoglobin A1c: 8.6 %"
         },
         {
-          "start": 27,
-          "end": 52,
-          "text": "Request date: 2026-10-01."
+          "start": 436,
+          "end": 463,
+          "text": "Date collected: 14 Sep 2026"
+        },
+        {
+          "start": 33,
+          "end": 61,
+          "text": "Date of request: 30 Sep 2026"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "A1c 8.6 % is 16 days before the request.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
@@ -213,11 +230,12 @@
       "evidence_spans": [
         {
           "start": 530,
-          "end": 647,
-          "text": "Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented."
+          "end": 599,
+          "text": "Metformin not started: contraindicated due to eGFR 24 mL/min/1.73 m2."
         }
       ],
-      "reason": "The documented trial runs 122 days, meeting the fictional 90-day requirement.",
+      "reason": "Metformin contraindication is documented with its reason: eGFR 24 mL/min/1.73 m2.",
+      "scenario": "contraindication",
       "reviewed": false
     },
     {
@@ -225,18 +243,24 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 159,
-          "end": 194,
-          "text": "Request: semaglutide 0.5 mg weekly."
+          "start": 151,
+          "end": 180,
+          "text": "Medication requested: Ozempic"
+        },
+        {
+          "start": 181,
+          "end": 210,
+          "text": "Dose and frequency: 0.5mg qwk"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The requested semaglutide dose 0.5 mg weekly matches the fictional rule.",
+      "scenario": "supported",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

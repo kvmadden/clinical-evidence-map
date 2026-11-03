@@ -2,28 +2,30 @@
 packet_id: packet-016
 fictional: true
 criteria_id: glp1-t2d
-quality_group: missing-lab
-quality_plan: "Lab page omitted from supplied packet."
-render_status: source_text_only
+group: fax-noise
+page_style: form
+date_style: us-slash
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
-REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
-Patient: Arlen Ashmere (fictional).
-Age: 48 years.
-From: Dr. Rowan Vale, fictional requesting provider.
-Request: semaglutide 0.5 mg weekly.
-Please review the enclosed records for Type 2 diabetes mellitus.
+PRIOR AUTHORIZATION REQUEST FORM
+Date of request: 10/06/2026
+Patient name: Arlen Ashmere (fictional)
+Age: 17
+Prescriber: Dr. Rowan Vale (fictional)
+Medication requested: semaglutide
+Dose and frequency: 0.5 mg subcut every 7 days
+Diagnosis for this request: Type 2 diabetis mellitus
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Type 2 diabetes mellitus.
-The patient reports ongoing symptoms despite prior treatment.
+Visit date: 09/25/2026.
+Assessment: Type 2 diabetis mellitus, above goal on prior therapy.
 
 MEDICATION HISTORY
-Current requested therapy: semaglutide 0.5 mg weekly.
-Prior therapy: metformin 1000 mg twice daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: semaglutide 0.5 mg SC once weekly.
+Prior therapies tried: metformin 1000 mg PO BID
+Trial dates: 11/10/2025 to 03/12/2026
+No improvement documented.
 No other prior therapy records supplied.

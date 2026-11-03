@@ -1,0 +1,64 @@
+{
+  "fictional": true,
+  "reviewed": false,
+  "set": "multi-page fixture",
+  "built_from": "eval/packets/packet-018.md by scripts/fixtures.ts",
+  "description": "Packet-018 sent as three fax pages, and the same fax with page 2 never received. Test fixtures, not part of either evaluation set.",
+  "packet_count": 2,
+  "groups": [
+    {
+      "id": "fax-noise",
+      "label": "Simulated fax noise",
+      "render": "Typed page with seeded speckles and faint horizontal streaks."
+    }
+  ],
+  "packets": [
+    {
+      "packet_id": "multipage-01",
+      "criteria_id": "pcsk9",
+      "group": "fax-noise",
+      "tags": [
+        "page:form",
+        "date:day-first",
+        "date-reading:unresolved",
+        "drug-name:generic",
+        "dose-format:route",
+        "pages:3"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
+    },
+    {
+      "packet_id": "multipage-02",
+      "criteria_id": "pcsk9",
+      "group": "fax-noise",
+      "tags": [
+        "page:form",
+        "date:day-first",
+        "date-reading:unresolved",
+        "drug-name:generic",
+        "dose-format:route",
+        "pages:2",
+        "page-not-received"
+      ],
+      "render": {
+        "font": "dejavu-sans",
+        "effects": [
+          "speckle-heavy",
+          "streaks"
+        ],
+        "rotate": 0,
+        "handwriting": [],
+        "annotations": []
+      }
+    }
+  ]
+}

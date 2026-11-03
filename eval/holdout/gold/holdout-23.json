@@ -1,0 +1,105 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-23",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/holdout/packets/holdout-23.md",
+  "group": "smudge",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Dotted dates resolved by day 23; reasoned statin intolerance; conflicting medication list.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 123,
+          "end": 136,
+          "text": "Age: 64 years"
+        }
+      ],
+      "reason": "The patient is an adult.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 137,
+          "end": 206,
+          "text": "Purpose: evolocumab for established ASCVD after myocardial infarction"
+        }
+      ],
+      "reason": "Established ASCVD is explicitly the requested indication.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 26,
+          "end": 49,
+          "text": "Request date: 3.10.2026"
+        },
+        {
+          "start": 454,
+          "end": 488,
+          "text": "LDL-C 118 mg/dl measured 23.9.2026"
+        }
+      ],
+      "reason": "Day 23 establishes day-first order; LDL-C is qualifying and ten days before the October 3 request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 322,
+          "end": 386,
+          "text": "Statin intolerance: reproducible severe myalgia on atorvastatin."
+        },
+        {
+          "start": 387,
+          "end": 453,
+          "text": "Symptoms resolved off atorvastatin and recurred after rechallenge."
+        }
+      ],
+      "reason": "Statin intolerance is supported by a specific adverse effect and rechallenge history.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 207,
+          "end": 249,
+          "text": "New prescription: evolocumab 140 mg SC Q2W"
+        },
+        {
+          "start": 284,
+          "end": 321,
+          "text": "Evolocumab 140 mg SC every four weeks"
+        }
+      ],
+      "reason": "The prescription and medication list disagree on frequency.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

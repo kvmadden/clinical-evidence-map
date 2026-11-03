@@ -1,0 +1,2294 @@
+{
+  "packet_id": "holdout-05",
+  "criteria_id": "glp1-t2d",
+  "group": "low-contrast",
+  "tags": [
+    "render:low-contrast"
+  ],
+  "render": {
+    "font": "liberation-sans",
+    "effects": [
+      "speckle-light",
+      "low-contrast"
+    ],
+    "rotate": 0,
+    "handwriting": [],
+    "annotations": []
+  },
+  "groupLabel": "Simulated low contrast",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "PRESCRIPTION QUESTIONS\nCompleted: [date-a]\nName? [name] [name] (fictional)\nAuthor? Dr. [name] [name] (fictional)\nAge?\nWhich injectable? semaglutide\nWhy now? Possible type 2 diabetes; confirmation pending.\nWhat strength?\nHow often? __\nRecent laboratory result? N/A\nPrevious glucose medicine? Metformin 500 mg PO nightly.\nHow long? Six weeks, then discontinued.\nWhy discontinued? Patient preference.\nBefore and after Alc? not provided\nAuthor signature: [name] [name] (fictional)\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 6
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points",
+    "dateHandling": "shifted",
+    "dates": [
+      {
+        "token": "[date-a]",
+        "readings": [
+          "2132-05-25"
+        ],
+        "order": "ymd"
+      }
+    ]
+  },
+  "dateReading": {
+    "status": "none",
+    "order": null
+  },
+  "readerCoverage": {
+    "lines": 16,
+    "pages": 1,
+    "blockers": {
+      "adult": [],
+      "diagnosis": [],
+      "lab": [],
+      "prior": [],
+      "dose": []
+    },
+    "mentions": [],
+    "complete": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "request_date",
+      "value": "2132-05-25",
+      "source_span": {
+        "start": 23,
+        "end": 42,
+        "text": "Completed: [date-a]"
+      },
+      "value_span": {
+        "start": 34,
+        "end": 42
+      },
+      "attrs": {
+        "label": "Completed"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 197,
+          "width": 130,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "blank_field",
+      "value": "age",
+      "source_span": {
+        "start": 113,
+        "end": 117,
+        "text": "Age?"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 318,
+          "width": 60,
+          "height": 24
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "requested_medication",
+      "value": "semaglutide",
+      "source_span": {
+        "start": 118,
+        "end": 147,
+        "text": "Which injectable? semaglutide"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "1991302",
+        "display": "semaglutide"
+      },
+      "value_span": {
+        "start": 136,
+        "end": 147
+      },
+      "match": {
+        "kind": "exact",
+        "written": "semaglutide",
+        "confidence": 1
+      },
+      "attrs": {
+        "product": "semaglutide",
+        "source": "Which injectable?"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 357,
+          "width": 71,
+          "height": 19
+        },
+        {
+          "x": 181,
+          "y": 357,
+          "width": 122,
+          "height": 25
+        },
+        {
+          "x": 312,
+          "y": 357,
+          "width": 138,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "indication",
+      "value": {
+        "condition": "type 2 diabetes mellitus",
+        "certainty": "unconfirmed"
+      },
+      "source_span": {
+        "start": 148,
+        "end": 204,
+        "text": "Why now? Possible type 2 diabetes; confirmation pending."
+      },
+      "value_span": {
+        "start": 166,
+        "end": 181
+      },
+      "attrs": {
+        "family": "t2dm"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 397,
+          "width": 52,
+          "height": 25
+        },
+        {
+          "x": 161,
+          "y": 398,
+          "width": 60,
+          "height": 18
+        },
+        {
+          "x": 231,
+          "y": 397,
+          "width": 95,
+          "height": 19
+        },
+        {
+          "x": 334,
+          "y": 399,
+          "width": 48,
+          "height": 23
+        },
+        {
+          "x": 392,
+          "y": 398,
+          "width": 12,
+          "height": 18
+        },
+        {
+          "x": 413,
+          "y": 397,
+          "width": 103,
+          "height": 22
+        },
+        {
+          "x": 526,
+          "y": 397,
+          "width": 139,
+          "height": 19
+        },
+        {
+          "x": 675,
+          "y": 397,
+          "width": 96,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "blank_field",
+      "value": "dose",
+      "source_span": {
+        "start": 205,
+        "end": 219,
+        "text": "What strength?"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 437,
+          "width": 61,
+          "height": 19
+        },
+        {
+          "x": 169,
+          "y": 437,
+          "width": 107,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "prior_medication",
+      "value": "metformin",
+      "source_span": {
+        "start": 264,
+        "end": 319,
+        "text": "Previous glucose medicine? Metformin 500 mg PO nightly."
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "6809",
+        "display": "metformin"
+      },
+      "value_span": {
+        "start": 291,
+        "end": 300
+      },
+      "episode": 1,
+      "match": {
+        "kind": "exact",
+        "written": "Metformin",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "biguanide"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 557,
+          "width": 98,
+          "height": 19
+        },
+        {
+          "x": 209,
+          "y": 557,
+          "width": 88,
+          "height": 25
+        },
+        {
+          "x": 307,
+          "y": 557,
+          "width": 116,
+          "height": 19
+        },
+        {
+          "x": 433,
+          "y": 557,
+          "width": 112,
+          "height": 19
+        },
+        {
+          "x": 555,
+          "y": 558,
+          "width": 41,
+          "height": 18
+        },
+        {
+          "x": 606,
+          "y": 562,
+          "width": 33,
+          "height": 20
+        },
+        {
+          "x": 650,
+          "y": 558,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 694,
+          "y": 557,
+          "width": 77,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "prior_dose",
+      "value": "500 mg daily",
+      "source_span": {
+        "start": 264,
+        "end": 319,
+        "text": "Previous glucose medicine? Metformin 500 mg PO nightly."
+      },
+      "value_span": {
+        "start": 301,
+        "end": 318
+      },
+      "episode": 1,
+      "attrs": {
+        "amount": 500,
+        "frequency": "daily"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 557,
+          "width": 98,
+          "height": 19
+        },
+        {
+          "x": 209,
+          "y": 557,
+          "width": 88,
+          "height": 25
+        },
+        {
+          "x": 307,
+          "y": 557,
+          "width": 116,
+          "height": 19
+        },
+        {
+          "x": 433,
+          "y": 557,
+          "width": 112,
+          "height": 19
+        },
+        {
+          "x": 555,
+          "y": 558,
+          "width": 41,
+          "height": 18
+        },
+        {
+          "x": 606,
+          "y": 562,
+          "width": 33,
+          "height": 20
+        },
+        {
+          "x": 650,
+          "y": 558,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 694,
+          "y": 557,
+          "width": 77,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "prior_duration_days",
+      "value": 42,
+      "source_span": {
+        "start": 264,
+        "end": 319,
+        "text": "Previous glucose medicine? Metformin 500 mg PO nightly."
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 557,
+          "width": 98,
+          "height": 19
+        },
+        {
+          "x": 209,
+          "y": 557,
+          "width": 88,
+          "height": 25
+        },
+        {
+          "x": 307,
+          "y": 557,
+          "width": 116,
+          "height": 19
+        },
+        {
+          "x": 433,
+          "y": 557,
+          "width": 112,
+          "height": 19
+        },
+        {
+          "x": 555,
+          "y": 558,
+          "width": 41,
+          "height": 18
+        },
+        {
+          "x": 606,
+          "y": 562,
+          "width": 33,
+          "height": 20
+        },
+        {
+          "x": 650,
+          "y": 558,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 694,
+          "y": 557,
+          "width": 77,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "prior_outcome",
+      "value": "stopped",
+      "source_span": {
+        "start": 360,
+        "end": 397,
+        "text": "Why discontinued? Patient preference."
+      },
+      "episode": 1,
+      "attrs": {
+        "category": "non-clinical"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 637,
+          "width": 52,
+          "height": 25
+        },
+        {
+          "x": 160,
+          "y": 637,
+          "width": 159,
+          "height": 19
+        },
+        {
+          "x": 329,
+          "y": 637,
+          "width": 79,
+          "height": 19
+        },
+        {
+          "x": 417,
+          "y": 637,
+          "width": 127,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "prior_reason",
+      "value": "Patient preference",
+      "source_span": {
+        "start": 360,
+        "end": 397,
+        "text": "Why discontinued? Patient preference."
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 637,
+          "width": 52,
+          "height": 25
+        },
+        {
+          "x": 160,
+          "y": 637,
+          "width": 159,
+          "height": 19
+        },
+        {
+          "x": 329,
+          "y": 637,
+          "width": 79,
+          "height": 19
+        },
+        {
+          "x": 417,
+          "y": 637,
+          "width": 127,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "blank_field",
+      "value": "lab",
+      "source_span": {
+        "start": 398,
+        "end": 432,
+        "text": "Before and after Alc? not provided"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 677,
+          "width": 74,
+          "height": 19
+        },
+        {
+          "x": 185,
+          "y": 677,
+          "width": 41,
+          "height": 19
+        },
+        {
+          "x": 235,
+          "y": 677,
+          "width": 51,
+          "height": 19
+        },
+        {
+          "x": 292,
+          "y": 678,
+          "width": 59,
+          "height": 18
+        },
+        {
+          "x": 360,
+          "y": 679,
+          "width": 35,
+          "height": 17
+        },
+        {
+          "x": 404,
+          "y": 677,
+          "width": 96,
+          "height": 25
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The age field is blank.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 148,
+          "end": 204,
+          "text": "Why now? Possible type 2 diabetes; confirmation pending."
+        }
+      ],
+      "reason": "Type 2 diabetes mellitus is stated as suspected or possible, not confirmed.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The A1c field is blank.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 264,
+          "end": 319,
+          "text": "Previous glucose medicine? Metformin 500 mg PO nightly."
+        },
+        {
+          "start": 360,
+          "end": 397,
+          "text": "Why discontinued? Patient preference."
+        }
+      ],
+      "reason": "The metformin trial lasted 42 days, under the 90-day minimum.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The dose field is blank.",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "Which injectable? semaglutide",
+      "citations": [
+        {
+          "start": 118,
+          "end": 147,
+          "text": "Which injectable? semaglutide"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Why now? Possible type 2 diabetes; confirmation pending.",
+      "citations": [
+        {
+          "start": 148,
+          "end": 204,
+          "text": "Why now? Possible type 2 diabetes; confirmation pending."
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Previous glucose medicine? Metformin 500 mg PO nightly.",
+      "citations": [
+        {
+          "start": 264,
+          "end": 319,
+          "text": "Previous glucose medicine? Metformin 500 mg PO nightly."
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Why discontinued? Patient preference.",
+      "citations": [
+        {
+          "start": 360,
+          "end": 397,
+          "text": "Why discontinued? Patient preference."
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "PRESCRIPTION",
+      "confidence": 96.26622,
+      "box": {
+        "x": 102,
+        "y": 158,
+        "width": 191,
+        "height": 18
+      },
+      "start": 0,
+      "end": 12,
+      "needsReview": false
+    },
+    {
+      "text": "QUESTIONS",
+      "confidence": 96.571281,
+      "box": {
+        "x": 303,
+        "y": 158,
+        "width": 151,
+        "height": 23
+      },
+      "start": 13,
+      "end": 22,
+      "needsReview": false
+    },
+    {
+      "text": "Completed:",
+      "confidence": 94.89904,
+      "box": {
+        "x": 101,
+        "y": 197,
+        "width": 130,
+        "height": 25
+      },
+      "start": 23,
+      "end": 33,
+      "needsReview": false
+    },
+    {
+      "text": "Name?",
+      "confidence": 95.869209,
+      "box": {
+        "x": 102,
+        "y": 238,
+        "width": 81,
+        "height": 18
+      },
+      "start": 43,
+      "end": 48,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.103043,
+      "box": {
+        "x": 327,
+        "y": 237,
+        "width": 102,
+        "height": 25
+      },
+      "start": 63,
+      "end": 74,
+      "needsReview": false
+    },
+    {
+      "text": "Author?",
+      "confidence": 95.582344,
+      "box": {
+        "x": 100,
+        "y": 277,
+        "width": 90,
+        "height": 19
+      },
+      "start": 75,
+      "end": 82,
+      "needsReview": false
+    },
+    {
+      "text": "Dr.",
+      "confidence": 96.093887,
+      "box": {
+        "x": 200,
+        "y": 278,
+        "width": 29,
+        "height": 18
+      },
+      "start": 83,
+      "end": 86,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.543396,
+      "box": {
+        "x": 403,
+        "y": 277,
+        "width": 103,
+        "height": 25
+      },
+      "start": 101,
+      "end": 112,
+      "needsReview": false
+    },
+    {
+      "text": "Age?",
+      "confidence": 51.776329,
+      "box": {
+        "x": 100,
+        "y": 318,
+        "width": 60,
+        "height": 24
+      },
+      "start": 113,
+      "end": 117,
+      "needsReview": true
+    },
+    {
+      "text": "Which",
+      "confidence": 96.499321,
+      "box": {
+        "x": 100,
+        "y": 357,
+        "width": 71,
+        "height": 19
+      },
+      "start": 118,
+      "end": 123,
+      "needsReview": false
+    },
+    {
+      "text": "injectable?",
+      "confidence": 93.25386,
+      "box": {
+        "x": 181,
+        "y": 357,
+        "width": 122,
+        "height": 25
+      },
+      "start": 124,
+      "end": 135,
+      "needsReview": false
+    },
+    {
+      "text": "semaglutide",
+      "confidence": 85.911362,
+      "box": {
+        "x": 312,
+        "y": 357,
+        "width": 138,
+        "height": 25
+      },
+      "start": 136,
+      "end": 147,
+      "needsReview": false
+    },
+    {
+      "text": "Why",
+      "confidence": 96.827469,
+      "box": {
+        "x": 100,
+        "y": 397,
+        "width": 52,
+        "height": 25
+      },
+      "start": 148,
+      "end": 151,
+      "needsReview": false
+    },
+    {
+      "text": "now?",
+      "confidence": 96.874718,
+      "box": {
+        "x": 161,
+        "y": 398,
+        "width": 60,
+        "height": 18
+      },
+      "start": 152,
+      "end": 156,
+      "needsReview": false
+    },
+    {
+      "text": "Possible",
+      "confidence": 96.736595,
+      "box": {
+        "x": 231,
+        "y": 397,
+        "width": 95,
+        "height": 19
+      },
+      "start": 157,
+      "end": 165,
+      "needsReview": false
+    },
+    {
+      "text": "type",
+      "confidence": 96.814888,
+      "box": {
+        "x": 334,
+        "y": 399,
+        "width": 48,
+        "height": 23
+      },
+      "start": 166,
+      "end": 170,
+      "needsReview": false
+    },
+    {
+      "text": "2",
+      "confidence": 97.00161,
+      "box": {
+        "x": 392,
+        "y": 398,
+        "width": 12,
+        "height": 18
+      },
+      "start": 171,
+      "end": 172,
+      "needsReview": false
+    },
+    {
+      "text": "diabetes;",
+      "confidence": 96.727951,
+      "box": {
+        "x": 413,
+        "y": 397,
+        "width": 103,
+        "height": 22
+      },
+      "start": 173,
+      "end": 182,
+      "needsReview": false
+    },
+    {
+      "text": "confirmation",
+      "confidence": 96.548035,
+      "box": {
+        "x": 526,
+        "y": 397,
+        "width": 139,
+        "height": 19
+      },
+      "start": 183,
+      "end": 195,
+      "needsReview": false
+    },
+    {
+      "text": "pending.",
+      "confidence": 96.042557,
+      "box": {
+        "x": 675,
+        "y": 397,
+        "width": 96,
+        "height": 25
+      },
+      "start": 196,
+      "end": 204,
+      "needsReview": false
+    },
+    {
+      "text": "What",
+      "confidence": 96.427101,
+      "box": {
+        "x": 100,
+        "y": 437,
+        "width": 61,
+        "height": 19
+      },
+      "start": 205,
+      "end": 209,
+      "needsReview": false
+    },
+    {
+      "text": "strength?",
+      "confidence": 7.960709,
+      "box": {
+        "x": 169,
+        "y": 437,
+        "width": 107,
+        "height": 25
+      },
+      "start": 210,
+      "end": 219,
+      "needsReview": true
+    },
+    {
+      "text": "How",
+      "confidence": 96.422073,
+      "box": {
+        "x": 102,
+        "y": 478,
+        "width": 50,
+        "height": 18
+      },
+      "start": 220,
+      "end": 223,
+      "needsReview": false
+    },
+    {
+      "text": "often?",
+      "confidence": 91.584335,
+      "box": {
+        "x": 160,
+        "y": 477,
+        "width": 71,
+        "height": 19
+      },
+      "start": 224,
+      "end": 230,
+      "needsReview": false
+    },
+    {
+      "text": "__",
+      "confidence": 38.754967,
+      "box": {
+        "x": 238,
+        "y": 499,
+        "width": 59,
+        "height": 2
+      },
+      "start": 231,
+      "end": 233,
+      "needsReview": true
+    },
+    {
+      "text": "Recent",
+      "confidence": 96.906898,
+      "box": {
+        "x": 102,
+        "y": 518,
+        "width": 80,
+        "height": 18
+      },
+      "start": 234,
+      "end": 240,
+      "needsReview": false
+    },
+    {
+      "text": "laboratory",
+      "confidence": 85.603493,
+      "box": {
+        "x": 191,
+        "y": 517,
+        "width": 114,
+        "height": 25
+      },
+      "start": 241,
+      "end": 251,
+      "needsReview": false
+    },
+    {
+      "text": "result?",
+      "confidence": 96.706169,
+      "box": {
+        "x": 314,
+        "y": 517,
+        "width": 76,
+        "height": 19
+      },
+      "start": 252,
+      "end": 259,
+      "needsReview": false
+    },
+    {
+      "text": "N/A",
+      "confidence": 96.409409,
+      "box": {
+        "x": 400,
+        "y": 517,
+        "width": 41,
+        "height": 19
+      },
+      "start": 260,
+      "end": 263,
+      "needsReview": false
+    },
+    {
+      "text": "Previous",
+      "confidence": 96.212509,
+      "box": {
+        "x": 102,
+        "y": 557,
+        "width": 98,
+        "height": 19
+      },
+      "start": 264,
+      "end": 272,
+      "needsReview": false
+    },
+    {
+      "text": "glucose",
+      "confidence": 95.765961,
+      "box": {
+        "x": 209,
+        "y": 557,
+        "width": 88,
+        "height": 25
+      },
+      "start": 273,
+      "end": 280,
+      "needsReview": false
+    },
+    {
+      "text": "medicine?",
+      "confidence": 96.571861,
+      "box": {
+        "x": 307,
+        "y": 557,
+        "width": 116,
+        "height": 19
+      },
+      "start": 281,
+      "end": 290,
+      "needsReview": false
+    },
+    {
+      "text": "Metformin",
+      "confidence": 96.228508,
+      "box": {
+        "x": 433,
+        "y": 557,
+        "width": 112,
+        "height": 19
+      },
+      "start": 291,
+      "end": 300,
+      "needsReview": false
+    },
+    {
+      "text": "500",
+      "confidence": 95.828094,
+      "box": {
+        "x": 555,
+        "y": 558,
+        "width": 41,
+        "height": 18
+      },
+      "start": 301,
+      "end": 304,
+      "needsReview": false
+    },
+    {
+      "text": "mg",
+      "confidence": 95.685562,
+      "box": {
+        "x": 606,
+        "y": 562,
+        "width": 33,
+        "height": 20
+      },
+      "start": 305,
+      "end": 307,
+      "needsReview": false
+    },
+    {
+      "text": "PO",
+      "confidence": 95.67981,
+      "box": {
+        "x": 650,
+        "y": 558,
+        "width": 34,
+        "height": 18
+      },
+      "start": 308,
+      "end": 310,
+      "needsReview": false
+    },
+    {
+      "text": "nightly.",
+      "confidence": 95.833984,
+      "box": {
+        "x": 694,
+        "y": 557,
+        "width": 77,
+        "height": 25
+      },
+      "start": 311,
+      "end": 319,
+      "needsReview": false
+    },
+    {
+      "text": "How",
+      "confidence": 96.021187,
+      "box": {
+        "x": 102,
+        "y": 598,
+        "width": 50,
+        "height": 18
+      },
+      "start": 320,
+      "end": 323,
+      "needsReview": false
+    },
+    {
+      "text": "long?",
+      "confidence": 96.460602,
+      "box": {
+        "x": 161,
+        "y": 597,
+        "width": 61,
+        "height": 25
+      },
+      "start": 324,
+      "end": 329,
+      "needsReview": false
+    },
+    {
+      "text": "Six",
+      "confidence": 96.753311,
+      "box": {
+        "x": 231,
+        "y": 597,
+        "width": 35,
+        "height": 19
+      },
+      "start": 330,
+      "end": 333,
+      "needsReview": false
+    },
+    {
+      "text": "weeks,",
+      "confidence": 96.425079,
+      "box": {
+        "x": 274,
+        "y": 597,
+        "width": 78,
+        "height": 22
+      },
+      "start": 334,
+      "end": 340,
+      "needsReview": false
+    },
+    {
+      "text": "then",
+      "confidence": 96.905922,
+      "box": {
+        "x": 362,
+        "y": 597,
+        "width": 49,
+        "height": 19
+      },
+      "start": 341,
+      "end": 345,
+      "needsReview": false
+    },
+    {
+      "text": "discontinued.",
+      "confidence": 96.233231,
+      "box": {
+        "x": 420,
+        "y": 597,
+        "width": 150,
+        "height": 19
+      },
+      "start": 346,
+      "end": 359,
+      "needsReview": false
+    },
+    {
+      "text": "Why",
+      "confidence": 96.09716,
+      "box": {
+        "x": 100,
+        "y": 637,
+        "width": 52,
+        "height": 25
+      },
+      "start": 360,
+      "end": 363,
+      "needsReview": false
+    },
+    {
+      "text": "discontinued?",
+      "confidence": 96.271545,
+      "box": {
+        "x": 160,
+        "y": 637,
+        "width": 159,
+        "height": 19
+      },
+      "start": 364,
+      "end": 377,
+      "needsReview": false
+    },
+    {
+      "text": "Patient",
+      "confidence": 96.499741,
+      "box": {
+        "x": 329,
+        "y": 637,
+        "width": 79,
+        "height": 19
+      },
+      "start": 378,
+      "end": 385,
+      "needsReview": false
+    },
+    {
+      "text": "preference.",
+      "confidence": 96.64328,
+      "box": {
+        "x": 417,
+        "y": 637,
+        "width": 127,
+        "height": 25
+      },
+      "start": 386,
+      "end": 397,
+      "needsReview": false
+    },
+    {
+      "text": "Before",
+      "confidence": 96.176521,
+      "box": {
+        "x": 102,
+        "y": 677,
+        "width": 74,
+        "height": 19
+      },
+      "start": 398,
+      "end": 404,
+      "needsReview": false
+    },
+    {
+      "text": "and",
+      "confidence": 96.091156,
+      "box": {
+        "x": 185,
+        "y": 677,
+        "width": 41,
+        "height": 19
+      },
+      "start": 405,
+      "end": 408,
+      "needsReview": false
+    },
+    {
+      "text": "after",
+      "confidence": 96.833504,
+      "box": {
+        "x": 235,
+        "y": 677,
+        "width": 51,
+        "height": 19
+      },
+      "start": 409,
+      "end": 414,
+      "needsReview": false
+    },
+    {
+      "text": "Alc?",
+      "confidence": 51.54253,
+      "box": {
+        "x": 292,
+        "y": 678,
+        "width": 59,
+        "height": 18
+      },
+      "start": 415,
+      "end": 419,
+      "needsReview": true
+    },
+    {
+      "text": "not",
+      "confidence": 96.994102,
+      "box": {
+        "x": 360,
+        "y": 679,
+        "width": 35,
+        "height": 17
+      },
+      "start": 420,
+      "end": 423,
+      "needsReview": false
+    },
+    {
+      "text": "provided",
+      "confidence": 96.370827,
+      "box": {
+        "x": 404,
+        "y": 677,
+        "width": 96,
+        "height": 25
+      },
+      "start": 424,
+      "end": 432,
+      "needsReview": false
+    },
+    {
+      "text": "Author",
+      "confidence": 94.974586,
+      "box": {
+        "x": 100,
+        "y": 717,
+        "width": 76,
+        "height": 19
+      },
+      "start": 433,
+      "end": 439,
+      "needsReview": false
+    },
+    {
+      "text": "signature:",
+      "confidence": 96.556259,
+      "box": {
+        "x": 185,
+        "y": 717,
+        "width": 111,
+        "height": 25
+      },
+      "start": 440,
+      "end": 450,
+      "needsReview": false
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.313744,
+      "box": {
+        "x": 470,
+        "y": 717,
+        "width": 103,
+        "height": 25
+      },
+      "start": 465,
+      "end": 476,
+      "needsReview": false
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "PRESCRIPTION QUESTIONS\nCompleted: 2026-09-29\nName? Elia Vossel (fictional)\nAuthor? Dr. Remy Dalven (fictional)\nAge?\nWhich injectable? semaglutide\nWhy now? Possible type 2 diabetes; confirmation pending.\nWhat strength?\nHow often? __\nRecent laboratory result? N/A\nPrevious glucose medicine? Metformin 500 mg PO nightly.\nHow long? Six weeks, then discontinued.\nWhy discontinued? Patient preference.\nBefore and after Alc? not provided\nAuthor signature: Remy Dalven (fictional)\n",
+    "words": [
+      {
+        "text": "PRESCRIPTION",
+        "confidence": 96.26622,
+        "box": {
+          "x": 102,
+          "y": 158,
+          "width": 191,
+          "height": 18
+        },
+        "start": 0,
+        "end": 12,
+        "needsReview": false
+      },
+      {
+        "text": "QUESTIONS",
+        "confidence": 96.571281,
+        "box": {
+          "x": 303,
+          "y": 158,
+          "width": 151,
+          "height": 23
+        },
+        "start": 13,
+        "end": 22,
+        "needsReview": false
+      },
+      {
+        "text": "Completed:",
+        "confidence": 94.89904,
+        "box": {
+          "x": 101,
+          "y": 197,
+          "width": 130,
+          "height": 25
+        },
+        "start": 23,
+        "end": 33,
+        "needsReview": false
+      },
+      {
+        "text": "2026-09-29",
+        "confidence": 96.716644,
+        "box": {
+          "x": 241,
+          "y": 198,
+          "width": 131,
+          "height": 18
+        },
+        "start": 34,
+        "end": 44,
+        "needsReview": false
+      },
+      {
+        "text": "Name?",
+        "confidence": 95.869209,
+        "box": {
+          "x": 102,
+          "y": 238,
+          "width": 81,
+          "height": 18
+        },
+        "start": 45,
+        "end": 50,
+        "needsReview": false
+      },
+      {
+        "text": "Elia",
+        "confidence": 93.066467,
+        "box": {
+          "x": 193,
+          "y": 237,
+          "width": 41,
+          "height": 19
+        },
+        "start": 51,
+        "end": 55,
+        "needsReview": false
+      },
+      {
+        "text": "Vossel",
+        "confidence": 87.01355,
+        "box": {
+          "x": 242,
+          "y": 237,
+          "width": 75,
+          "height": 19
+        },
+        "start": 56,
+        "end": 62,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.103043,
+        "box": {
+          "x": 327,
+          "y": 237,
+          "width": 102,
+          "height": 25
+        },
+        "start": 63,
+        "end": 74,
+        "needsReview": false
+      },
+      {
+        "text": "Author?",
+        "confidence": 95.582344,
+        "box": {
+          "x": 100,
+          "y": 277,
+          "width": 90,
+          "height": 19
+        },
+        "start": 75,
+        "end": 82,
+        "needsReview": false
+      },
+      {
+        "text": "Dr.",
+        "confidence": 96.093887,
+        "box": {
+          "x": 200,
+          "y": 278,
+          "width": 29,
+          "height": 18
+        },
+        "start": 83,
+        "end": 86,
+        "needsReview": false
+      },
+      {
+        "text": "Remy",
+        "confidence": 93.272568,
+        "box": {
+          "x": 241,
+          "y": 278,
+          "width": 65,
+          "height": 24
+        },
+        "start": 87,
+        "end": 91,
+        "needsReview": false
+      },
+      {
+        "text": "Dalven",
+        "confidence": 91.96183,
+        "box": {
+          "x": 316,
+          "y": 277,
+          "width": 77,
+          "height": 19
+        },
+        "start": 92,
+        "end": 98,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.543396,
+        "box": {
+          "x": 403,
+          "y": 277,
+          "width": 103,
+          "height": 25
+        },
+        "start": 99,
+        "end": 110,
+        "needsReview": false
+      },
+      {
+        "text": "Age?",
+        "confidence": 51.776329,
+        "box": {
+          "x": 100,
+          "y": 318,
+          "width": 60,
+          "height": 24
+        },
+        "start": 111,
+        "end": 115,
+        "needsReview": true
+      },
+      {
+        "text": "Which",
+        "confidence": 96.499321,
+        "box": {
+          "x": 100,
+          "y": 357,
+          "width": 71,
+          "height": 19
+        },
+        "start": 116,
+        "end": 121,
+        "needsReview": false
+      },
+      {
+        "text": "injectable?",
+        "confidence": 93.25386,
+        "box": {
+          "x": 181,
+          "y": 357,
+          "width": 122,
+          "height": 25
+        },
+        "start": 122,
+        "end": 133,
+        "needsReview": false
+      },
+      {
+        "text": "semaglutide",
+        "confidence": 85.911362,
+        "box": {
+          "x": 312,
+          "y": 357,
+          "width": 138,
+          "height": 25
+        },
+        "start": 134,
+        "end": 145,
+        "needsReview": false
+      },
+      {
+        "text": "Why",
+        "confidence": 96.827469,
+        "box": {
+          "x": 100,
+          "y": 397,
+          "width": 52,
+          "height": 25
+        },
+        "start": 146,
+        "end": 149,
+        "needsReview": false
+      },
+      {
+        "text": "now?",
+        "confidence": 96.874718,
+        "box": {
+          "x": 161,
+          "y": 398,
+          "width": 60,
+          "height": 18
+        },
+        "start": 150,
+        "end": 154,
+        "needsReview": false
+      },
+      {
+        "text": "Possible",
+        "confidence": 96.736595,
+        "box": {
+          "x": 231,
+          "y": 397,
+          "width": 95,
+          "height": 19
+        },
+        "start": 155,
+        "end": 163,
+        "needsReview": false
+      },
+      {
+        "text": "type",
+        "confidence": 96.814888,
+        "box": {
+          "x": 334,
+          "y": 399,
+          "width": 48,
+          "height": 23
+        },
+        "start": 164,
+        "end": 168,
+        "needsReview": false
+      },
+      {
+        "text": "2",
+        "confidence": 97.00161,
+        "box": {
+          "x": 392,
+          "y": 398,
+          "width": 12,
+          "height": 18
+        },
+        "start": 169,
+        "end": 170,
+        "needsReview": false
+      },
+      {
+        "text": "diabetes;",
+        "confidence": 96.727951,
+        "box": {
+          "x": 413,
+          "y": 397,
+          "width": 103,
+          "height": 22
+        },
+        "start": 171,
+        "end": 180,
+        "needsReview": false
+      },
+      {
+        "text": "confirmation",
+        "confidence": 96.548035,
+        "box": {
+          "x": 526,
+          "y": 397,
+          "width": 139,
+          "height": 19
+        },
+        "start": 181,
+        "end": 193,
+        "needsReview": false
+      },
+      {
+        "text": "pending.",
+        "confidence": 96.042557,
+        "box": {
+          "x": 675,
+          "y": 397,
+          "width": 96,
+          "height": 25
+        },
+        "start": 194,
+        "end": 202,
+        "needsReview": false
+      },
+      {
+        "text": "What",
+        "confidence": 96.427101,
+        "box": {
+          "x": 100,
+          "y": 437,
+          "width": 61,
+          "height": 19
+        },
+        "start": 203,
+        "end": 207,
+        "needsReview": false
+      },
+      {
+        "text": "strength?",
+        "confidence": 7.960709,
+        "box": {
+          "x": 169,
+          "y": 437,
+          "width": 107,
+          "height": 25
+        },
+        "start": 208,
+        "end": 217,
+        "needsReview": true
+      },
+      {
+        "text": "How",
+        "confidence": 96.422073,
+        "box": {
+          "x": 102,
+          "y": 478,
+          "width": 50,
+          "height": 18
+        },
+        "start": 218,
+        "end": 221,
+        "needsReview": false
+      },
+      {
+        "text": "often?",
+        "confidence": 91.584335,
+        "box": {
+          "x": 160,
+          "y": 477,
+          "width": 71,
+          "height": 19
+        },
+        "start": 222,
+        "end": 228,
+        "needsReview": false
+      },
+      {
+        "text": "__",
+        "confidence": 38.754967,
+        "box": {
+          "x": 238,
+          "y": 499,
+          "width": 59,
+          "height": 2
+        },
+        "start": 229,
+        "end": 231,
+        "needsReview": true
+      },
+      {
+        "text": "Recent",
+        "confidence": 96.906898,
+        "box": {
+          "x": 102,
+          "y": 518,
+          "width": 80,
+          "height": 18
+        },
+        "start": 232,
+        "end": 238,
+        "needsReview": false
+      },
+      {
+        "text": "laboratory",
+        "confidence": 85.603493,
+        "box": {
+          "x": 191,
+          "y": 517,
+          "width": 114,
+          "height": 25
+        },
+        "start": 239,
+        "end": 249,
+        "needsReview": false
+      },
+      {
+        "text": "result?",
+        "confidence": 96.706169,
+        "box": {
+          "x": 314,
+          "y": 517,
+          "width": 76,
+          "height": 19
+        },
+        "start": 250,
+        "end": 257,
+        "needsReview": false
+      },
+      {
+        "text": "N/A",
+        "confidence": 96.409409,
+        "box": {
+          "x": 400,
+          "y": 517,
+          "width": 41,
+          "height": 19
+        },
+        "start": 258,
+        "end": 261,
+        "needsReview": false
+      },
+      {
+        "text": "Previous",
+        "confidence": 96.212509,
+        "box": {
+          "x": 102,
+          "y": 557,
+          "width": 98,
+          "height": 19
+        },
+        "start": 262,
+        "end": 270,
+        "needsReview": false
+      },
+      {
+        "text": "glucose",
+        "confidence": 95.765961,
+        "box": {
+          "x": 209,
+          "y": 557,
+          "width": 88,
+          "height": 25
+        },
+        "start": 271,
+        "end": 278,
+        "needsReview": false
+      },
+      {
+        "text": "medicine?",
+        "confidence": 96.571861,
+        "box": {
+          "x": 307,
+          "y": 557,
+          "width": 116,
+          "height": 19
+        },
+        "start": 279,
+        "end": 288,
+        "needsReview": false
+      },
+      {
+        "text": "Metformin",
+        "confidence": 96.228508,
+        "box": {
+          "x": 433,
+          "y": 557,
+          "width": 112,
+          "height": 19
+        },
+        "start": 289,
+        "end": 298,
+        "needsReview": false
+      },
+      {
+        "text": "500",
+        "confidence": 95.828094,
+        "box": {
+          "x": 555,
+          "y": 558,
+          "width": 41,
+          "height": 18
+        },
+        "start": 299,
+        "end": 302,
+        "needsReview": false
+      },
+      {
+        "text": "mg",
+        "confidence": 95.685562,
+        "box": {
+          "x": 606,
+          "y": 562,
+          "width": 33,
+          "height": 20
+        },
+        "start": 303,
+        "end": 305,
+        "needsReview": false
+      },
+      {
+        "text": "PO",
+        "confidence": 95.67981,
+        "box": {
+          "x": 650,
+          "y": 558,
+          "width": 34,
+          "height": 18
+        },
+        "start": 306,
+        "end": 308,
+        "needsReview": false
+      },
+      {
+        "text": "nightly.",
+        "confidence": 95.833984,
+        "box": {
+          "x": 694,
+          "y": 557,
+          "width": 77,
+          "height": 25
+        },
+        "start": 309,
+        "end": 317,
+        "needsReview": false
+      },
+      {
+        "text": "How",
+        "confidence": 96.021187,
+        "box": {
+          "x": 102,
+          "y": 598,
+          "width": 50,
+          "height": 18
+        },
+        "start": 318,
+        "end": 321,
+        "needsReview": false
+      },
+      {
+        "text": "long?",
+        "confidence": 96.460602,
+        "box": {
+          "x": 161,
+          "y": 597,
+          "width": 61,
+          "height": 25
+        },
+        "start": 322,
+        "end": 327,
+        "needsReview": false
+      },
+      {
+        "text": "Six",
+        "confidence": 96.753311,
+        "box": {
+          "x": 231,
+          "y": 597,
+          "width": 35,
+          "height": 19
+        },
+        "start": 328,
+        "end": 331,
+        "needsReview": false
+      },
+      {
+        "text": "weeks,",
+        "confidence": 96.425079,
+        "box": {
+          "x": 274,
+          "y": 597,
+          "width": 78,
+          "height": 22
+        },
+        "start": 332,
+        "end": 338,
+        "needsReview": false
+      },
+      {
+        "text": "then",
+        "confidence": 96.905922,
+        "box": {
+          "x": 362,
+          "y": 597,
+          "width": 49,
+          "height": 19
+        },
+        "start": 339,
+        "end": 343,
+        "needsReview": false
+      },
+      {
+        "text": "discontinued.",
+        "confidence": 96.233231,
+        "box": {
+          "x": 420,
+          "y": 597,
+          "width": 150,
+          "height": 19
+        },
+        "start": 344,
+        "end": 357,
+        "needsReview": false
+      },
+      {
+        "text": "Why",
+        "confidence": 96.09716,
+        "box": {
+          "x": 100,
+          "y": 637,
+          "width": 52,
+          "height": 25
+        },
+        "start": 358,
+        "end": 361,
+        "needsReview": false
+      },
+      {
+        "text": "discontinued?",
+        "confidence": 96.271545,
+        "box": {
+          "x": 160,
+          "y": 637,
+          "width": 159,
+          "height": 19
+        },
+        "start": 362,
+        "end": 375,
+        "needsReview": false
+      },
+      {
+        "text": "Patient",
+        "confidence": 96.499741,
+        "box": {
+          "x": 329,
+          "y": 637,
+          "width": 79,
+          "height": 19
+        },
+        "start": 376,
+        "end": 383,
+        "needsReview": false
+      },
+      {
+        "text": "preference.",
+        "confidence": 96.64328,
+        "box": {
+          "x": 417,
+          "y": 637,
+          "width": 127,
+          "height": 25
+        },
+        "start": 384,
+        "end": 395,
+        "needsReview": false
+      },
+      {
+        "text": "Before",
+        "confidence": 96.176521,
+        "box": {
+          "x": 102,
+          "y": 677,
+          "width": 74,
+          "height": 19
+        },
+        "start": 396,
+        "end": 402,
+        "needsReview": false
+      },
+      {
+        "text": "and",
+        "confidence": 96.091156,
+        "box": {
+          "x": 185,
+          "y": 677,
+          "width": 41,
+          "height": 19
+        },
+        "start": 403,
+        "end": 406,
+        "needsReview": false
+      },
+      {
+        "text": "after",
+        "confidence": 96.833504,
+        "box": {
+          "x": 235,
+          "y": 677,
+          "width": 51,
+          "height": 19
+        },
+        "start": 407,
+        "end": 412,
+        "needsReview": false
+      },
+      {
+        "text": "Alc?",
+        "confidence": 51.54253,
+        "box": {
+          "x": 292,
+          "y": 678,
+          "width": 59,
+          "height": 18
+        },
+        "start": 413,
+        "end": 417,
+        "needsReview": true
+      },
+      {
+        "text": "not",
+        "confidence": 96.994102,
+        "box": {
+          "x": 360,
+          "y": 679,
+          "width": 35,
+          "height": 17
+        },
+        "start": 418,
+        "end": 421,
+        "needsReview": false
+      },
+      {
+        "text": "provided",
+        "confidence": 96.370827,
+        "box": {
+          "x": 404,
+          "y": 677,
+          "width": 96,
+          "height": 25
+        },
+        "start": 422,
+        "end": 430,
+        "needsReview": false
+      },
+      {
+        "text": "Author",
+        "confidence": 94.974586,
+        "box": {
+          "x": 100,
+          "y": 717,
+          "width": 76,
+          "height": 19
+        },
+        "start": 431,
+        "end": 437,
+        "needsReview": false
+      },
+      {
+        "text": "signature:",
+        "confidence": 96.556259,
+        "box": {
+          "x": 185,
+          "y": 717,
+          "width": 111,
+          "height": 25
+        },
+        "start": 438,
+        "end": 448,
+        "needsReview": false
+      },
+      {
+        "text": "Remy",
+        "confidence": 93.071754,
+        "box": {
+          "x": 307,
+          "y": 718,
+          "width": 66,
+          "height": 24
+        },
+        "start": 449,
+        "end": 453,
+        "needsReview": false
+      },
+      {
+        "text": "Dalven",
+        "confidence": 92.453239,
+        "box": {
+          "x": 382,
+          "y": 717,
+          "width": 78,
+          "height": 19
+        },
+        "start": 454,
+        "end": 460,
+        "needsReview": false
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.313744,
+        "box": {
+          "x": 470,
+          "y": 717,
+          "width": 103,
+          "height": 25
+        },
+        "start": 461,
+        "end": 472,
+        "needsReview": false
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM",
+    "orientation": {
+      "pageRotation": 0,
+      "scores": {
+        "0": 4680.939248,
+        "180": 719.901356
+      }
+    },
+    "deskewDegrees": 0,
+    "readImage": "holdout-05.png",
+    "width": 1700,
+    "height": 2200
+  },
+  "scores": {
+    "entities": {
+      "tp": 0,
+      "predicted": 11,
+      "gold": 0,
+      "exactQuote": 0
+    },
+    "criteria": {
+      "correct": 5,
+      "total": 5
+    },
+    "cer": 0.026859504132231406,
+    "edits": 13,
+    "chars": 484,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [
+    "13 OCR character edits"
+  ],
+  "latency": {
+    "renderAndOcrMs": 2476.684083,
+    "serviceMs": 25.66091700000004
+  }
+}

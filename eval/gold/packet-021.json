@@ -1,19 +1,67 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "packet_id": "packet-021",
   "fictional": true,
   "reviewed": false,
   "criteria_id": "pcsk9",
   "source_file": "eval/packets/packet-021.md",
+  "group": "fax-noise",
+  "tags": [
+    "page:form",
+    "date:us-short",
+    "date-reading:forced",
+    "drug-name:brand",
+    "dose-format:compact",
+    "fax-style-header"
+  ],
+  "date_reading": {
+    "status": "forced",
+    "order": "mdy"
+  },
   "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
   "entities": [
+    {
+      "type": "fax_received_date",
+      "value": "2026-10-04",
+      "source_span": {
+        "start": 0,
+        "end": 44,
+        "text": "Fax received: 4 Oct 2026 09:14. Page 1 of 1."
+      },
+      "date": {
+        "written": "4 Oct 2026",
+        "format": "text-dmy",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "request_date",
+      "value": "2026-10-03",
+      "source_span": {
+        "start": 78,
+        "end": 102,
+        "text": "Date of request: 10-3-26"
+      },
+      "date": {
+        "written": "10-3-26",
+        "format": "us-short",
+        "ambiguous": true,
+        "readings": [
+          "2026-10-03",
+          "2026-03-10"
+        ],
+        "resolved_by": "forced"
+      },
+      "reviewed": false
+    },
     {
       "type": "patient_name",
       "value": "Mira Fenwick",
       "source_span": {
-        "start": 53,
-        "end": 87,
-        "text": "Patient: Mira Fenwick (fictional)."
+        "start": 103,
+        "end": 141,
+        "text": "Patient name: Mira Fenwick (fictional)"
       },
       "reviewed": false
     },
@@ -21,19 +69,9 @@
       "type": "age",
       "value": 53,
       "source_span": {
-        "start": 88,
-        "end": 102,
-        "text": "Age: 53 years."
-      },
-      "reviewed": false
-    },
-    {
-      "type": "request_date",
-      "value": "2026-10-01",
-      "source_span": {
-        "start": 27,
-        "end": 52,
-        "text": "Request date: 2026-10-01."
+        "start": 142,
+        "end": 149,
+        "text": "Age: 53"
       },
       "reviewed": false
     },
@@ -41,9 +79,9 @@
       "type": "provider",
       "value": "Dr. Rowan Vale",
       "source_span": {
-        "start": 103,
-        "end": 155,
-        "text": "From: Dr. Rowan Vale, fictional requesting provider."
+        "start": 150,
+        "end": 188,
+        "text": "Prescriber: Dr. Rowan Vale (fictional)"
       },
       "reviewed": false
     },
@@ -51,9 +89,9 @@
       "type": "requested_medication",
       "value": "evolocumab",
       "source_span": {
-        "start": 156,
-        "end": 197,
-        "text": "Request: evolocumab 140 mg every 2 weeks."
+        "start": 189,
+        "end": 218,
+        "text": "Medication requested: Repatha"
       },
       "reviewed": false
     },
@@ -61,19 +99,32 @@
       "type": "requested_dose",
       "value": "140 mg every 2 weeks",
       "source_span": {
-        "start": 156,
-        "end": 197,
-        "text": "Request: evolocumab 140 mg every 2 weeks."
+        "start": 219,
+        "end": 258,
+        "text": "Dose and frequency: 140mg every 2 weeks"
       },
       "reviewed": false
     },
     {
-      "type": "diagnosis",
-      "value": "Established atherosclerotic cardiovascular disease",
+      "type": "indication",
+      "value": "primary hyperlipidemia",
       "source_span": {
-        "start": 329,
-        "end": 391,
-        "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
+        "start": 259,
+        "end": 325,
+        "text": "Diagnosis for this request: primary hyperlipidemia, no known ASCVD"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "assessment",
+      "value": {
+        "condition": "primary hyperlipidemia",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 363,
+        "end": 414,
+        "text": "Assessment: primary hyperlipidemia, no known ASCVD."
       },
       "reviewed": false
     },
@@ -81,23 +132,113 @@
       "type": "measurement",
       "value": {
         "name": "LDL-C",
-        "value": 132.0,
+        "value": 132,
         "unit": "mg/dL"
       },
       "source_span": {
-        "start": 477,
-        "end": 516,
-        "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
+        "start": 500,
+        "end": 538,
+        "text": "Most recent LDL cholesterol: 132 mg/dL"
       },
       "reviewed": false
     },
     {
       "type": "measurement_date",
-      "value": "2026-09-15",
+      "value": "2026-09-17",
       "source_span": {
-        "start": 477,
-        "end": 516,
-        "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
+        "start": 539,
+        "end": 562,
+        "text": "Date collected: 9-17-26"
+      },
+      "date": {
+        "written": "9-17-26",
+        "format": "us-short",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "medication_list_dose",
+      "value": "140 mg every 2 weeks",
+      "source_span": {
+        "start": 583,
+        "end": 641,
+        "text": "Current requested therapy: Repatha 140mg every other week."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_start_date",
+      "value": "2026-08-03",
+      "source_span": {
+        "start": 689,
+        "end": 719,
+        "text": "Trial dates: 8-3-26 to 8-17-26"
+      },
+      "date": {
+        "written": "8-3-26",
+        "format": "us-short",
+        "ambiguous": true,
+        "readings": [
+          "2026-08-03",
+          "2026-03-08"
+        ],
+        "resolved_by": "forced"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_stop_date",
+      "value": "2026-08-17",
+      "source_span": {
+        "start": 689,
+        "end": 719,
+        "text": "Trial dates: 8-3-26 to 8-17-26"
+      },
+      "date": {
+        "written": "8-17-26",
+        "format": "us-short",
+        "ambiguous": false
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_medication",
+      "value": "atorvastatin",
+      "source_span": {
+        "start": 642,
+        "end": 688,
+        "text": "Prior therapies tried: atorvastatin 80mg daily"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_dose",
+      "value": "80 mg daily",
+      "source_span": {
+        "start": 642,
+        "end": 688,
+        "text": "Prior therapies tried: atorvastatin 80mg daily"
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_outcome",
+      "value": "intolerance",
+      "source_span": {
+        "start": 720,
+        "end": 757,
+        "text": "Stopped for myalgias with CK 900 U/L."
+      },
+      "reviewed": false
+    },
+    {
+      "type": "prior_reason",
+      "value": "myalgias with CK 900 U/L",
+      "source_span": {
+        "start": 720,
+        "end": 757,
+        "text": "Stopped for myalgias with CK 900 U/L."
       },
       "reviewed": false
     }
@@ -108,25 +249,21 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 88,
-          "end": 102,
-          "text": "Age: 53 years."
+          "start": 142,
+          "end": 149,
+          "text": "Age: 53"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "Age 53 is documented.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
       "criterion_id": "diagnosis",
-      "status": "evidence_found",
-      "evidence_spans": [
-        {
-          "start": 329,
-          "end": 391,
-          "text": "Diagnosis: Established atherosclerotic cardiovascular disease."
-        }
-      ],
-      "reason": "Documented in the supplied source.",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The request names primary hyperlipidemia, not atherosclerotic cardiovascular disease.",
+      "scenario": "other-indication",
       "reviewed": false
     },
     {
@@ -134,24 +271,47 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 477,
-          "end": 516,
-          "text": "LDL-C: 132 mg/dL; collected 2026-09-15."
+          "start": 500,
+          "end": 538,
+          "text": "Most recent LDL cholesterol: 132 mg/dL"
         },
         {
-          "start": 27,
-          "end": 52,
-          "text": "Request date: 2026-10-01."
+          "start": 539,
+          "end": 562,
+          "text": "Date collected: 9-17-26"
+        },
+        {
+          "start": 78,
+          "end": 102,
+          "text": "Date of request: 10-3-26"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "LDL-C 132 mg/dL is 16 days before the request and meets the 70 mg/dL threshold.",
+      "scenario": "supported",
       "reviewed": false
     },
     {
       "criterion_id": "prior",
-      "status": "missing",
-      "evidence_spans": [],
-      "reason": "The medication history page was not supplied.",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 642,
+          "end": 688,
+          "text": "Prior therapies tried: atorvastatin 80mg daily"
+        },
+        {
+          "start": 689,
+          "end": 719,
+          "text": "Trial dates: 8-3-26 to 8-17-26"
+        },
+        {
+          "start": 720,
+          "end": 757,
+          "text": "Stopped for myalgias with CK 900 U/L."
+        }
+      ],
+      "reason": "Atorvastatin intolerance is documented with its reason: myalgias with CK 900 U/L.",
+      "scenario": "intolerance",
       "reviewed": false
     },
     {
@@ -159,18 +319,24 @@
       "status": "evidence_found",
       "evidence_spans": [
         {
-          "start": 156,
-          "end": 197,
-          "text": "Request: evolocumab 140 mg every 2 weeks."
+          "start": 189,
+          "end": 218,
+          "text": "Medication requested: Repatha"
+        },
+        {
+          "start": 219,
+          "end": 258,
+          "text": "Dose and frequency: 140mg every 2 weeks"
         }
       ],
-      "reason": "Documented in the supplied source.",
+      "reason": "The requested evolocumab dose 140 mg every 2 weeks matches the fictional rule.",
+      "scenario": "supported",
       "reviewed": false
     }
   ],
   "normalization": {
     "status": "not_attempted",
-    "reason": "Terminology lookup belongs to Stage B. No guessed RxNorm or ICD-10 codes.",
+    "reason": "Gold values are canonical strings. No guessed RxNorm or ICD-10 codes.",
     "reviewed": false
   }
 }

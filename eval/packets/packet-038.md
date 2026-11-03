@@ -2,31 +2,36 @@
 packet_id: packet-038
 fictional: true
 criteria_id: biologic-psoriasis
-quality_group: unclear-trial
-quality_plan: "Prior therapy is listed without start or stop dates or intolerance."
-render_status: source_text_only
+group: smudge
+page_style: form
+date_style: text-mdy
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
-REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
-Patient: Corin Dunvale (fictional).
-Age: 41 years.
-From: Dr. Rowan Vale, fictional requesting provider.
-Request: adalimumab 40 mg every other week.
-Please review the enclosed records for Moderate-to-severe plaque psoriasis.
+PRIOR AUTHORIZATION REQUEST FORM
+Date of request: Oct 10, 2026
+Patient name: Corin Dunvale (fictional)
+Age: 17
+Prescriber: Dr. Rowan Vale (fictional)
+Medication requested: adalimumab
+Dose and frequency: 40 mg every other week
+Diagnosis for this request: Moderate-to-severe plaque psoriasis
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Moderate-to-severe plaque psoriasis.
-The patient reports ongoing symptoms despite prior treatment.
+Visit date: Sep 29, 2026.
+Assessment: Moderate-to-severe plaque psoriasis, active on prior therapy.
+Past medical history: hypertension, seasonal allergies.
 
 LABS AND MEASUREMENTS
-Body surface area: 14 %; collected 2026-09-15.
+Most recent BSA: 6 %
+Date collected: Sep 24, 2026
 
 MEDICATION HISTORY
-Current requested therapy: adalimumab 40 mg every other week.
-Prior therapy: methotrexate 15 mg weekly; treatment dates and response not supplied.
+Current requested therapy: adalimumab 80 mg every other week.
+Prior therapies tried: methotrexate 15 mg weekly
+Trial dates: Nov 14, 2025 to Dec 29, 2025
+Baseline before methotrexate: BSA 18 % on Nov 7, 2025.
+On methotrexate: BSA 15 % on Dec 24, 2025; goal 3 % or less not met.
 No other prior therapy records supplied.

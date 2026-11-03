@@ -2,31 +2,32 @@
 packet_id: packet-045
 fictional: true
 criteria_id: pcsk9
-quality_group: conflicting-dose
-quality_plan: "Letter and medication list give different requested doses."
-render_status: source_text_only
+group: low-contrast
+page_style: letter
+date_style: us-short
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
+Fax received: 28 Sep 2026 09:14. Page 1 of 1.
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Request date: 9-27-26.
 Patient: Sera Reedwell (fictional).
-Age: 48 years.
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: evolocumab 140 mg every 2 weeks.
-Please review the enclosed records for Established atherosclerotic cardiovascular disease.
+Request: Repatha 420mg once monthly.
+Reason for request: primary hyperlipidemia, no known ASCVD.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Established atherosclerotic cardiovascular disease.
+Visit date: 9-16-26.
+Assessment: primary hyperlipidemia, no known ASCVD.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-LDL-C: 132 mg/dL; collected 2026-09-15.
+LDL: 132 mg/dl; collected 12-28-25.
 
 MEDICATION HISTORY
-Current requested therapy: evolocumab 999 mg daily.
-Prior therapy: atorvastatin 80 mg daily; started 2026-04-01; stopped 2026-08-01; inadequate response documented.
+Current requested therapy: Repatha 420mg once monthly.
+Prior: ezetimibe 10mg qd from 11-1-25 to 3-3-26.
+Outcome: inadequate response.
 No other prior therapy records supplied.

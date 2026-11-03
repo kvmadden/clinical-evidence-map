@@ -2,31 +2,32 @@
 packet_id: packet-039
 fictional: true
 criteria_id: pcsk9
-quality_group: unclear-trial
-quality_plan: "Prior therapy is listed without start or stop dates or intolerance."
-render_status: source_text_only
+group: smudge
+page_style: letter
+date_style: us-short
 names: all_fictional
 identifiers: none
 ---
 
 <!-- SOURCE START -->
+Fax received: 7 Oct 2026 09:14. Page 1 of 1.
 REQUESTING PROVIDER LETTER
-Request date: 2026-10-01.
+Request date: 10-6-26.
 Patient: Lina Dunvale (fictional).
-Age: 42 years.
 From: Dr. Rowan Vale, fictional requesting provider.
-Request: evolocumab 140 mg every 2 weeks.
-Please review the enclosed records for Established atherosclerotic cardiovascular disease.
+Request: Repatha 140mg every 2 weeks.
+Reason for request: established atherosclerotc cardiovascular disease.
 
 CLINICAL NOTES
-Visit date: 2026-09-20.
-Diagnosis: Established atherosclerotic cardiovascular disease.
+Visit date: 9-25-26.
+Assessment: established atherosclerotc cardiovascular disease, LDL-C above goal.
+Request date recorded in note: 9-6-26.
 The patient reports ongoing symptoms despite prior treatment.
 
 LABS AND MEASUREMENTS
-LDL-C: 132 mg/dL; collected 2026-09-15.
+LDL-C: 132 mg/dL; collected 9-20-26.
 
 MEDICATION HISTORY
-Current requested therapy: evolocumab 140 mg every 2 weeks.
-Prior therapy: atorvastatin 80 mg daily; treatment dates and response not supplied.
+Current requested therapy: Repatha 140mg every 2 weeks.
+Atorvastatin not started: contraindicated due to decompensated cirrhosis.
 No other prior therapy records supplied.

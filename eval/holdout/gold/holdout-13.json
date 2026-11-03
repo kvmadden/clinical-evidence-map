@@ -1,0 +1,87 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout-13",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout/packets/holdout-13.md",
+  "group": "choppy-lines",
+  "authored_by": "Codex (gpt-6.1-sol) from eval/holdout/SPEC.md only",
+  "variation_notes": "Checkbox form; intolerance lacks a reason; no criterion is fully supported.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No age is supplied.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 164,
+          "end": 203,
+          "text": "[x] Intended use: mild plaque psoriasis"
+        }
+      ],
+      "reason": "The stated severity is mild.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No numeric BSA is documented.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 299,
+          "end": 336,
+          "text": "[x] Methotrexate previously attempted"
+        },
+        {
+          "start": 337,
+          "end": 371,
+          "text": "[x] Stopped because of intolerance"
+        },
+        {
+          "start": 372,
+          "end": 400,
+          "text": "Reason for intolerance: ____"
+        },
+        {
+          "start": 401,
+          "end": 429,
+          "text": "Course details: not provided"
+        }
+      ],
+      "reason": "Intolerance is asserted without its reason, and no evaluable trial is supplied.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The maintenance amount and interval are blank.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}
