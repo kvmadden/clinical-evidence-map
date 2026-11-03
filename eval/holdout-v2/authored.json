@@ -1,0 +1,1273 @@
+{
+ "packets": [
+  {
+   "packet_id": "holdout2-01",
+   "criteria_id": "glp1-t2d",
+   "render": "clean",
+   "text": "10/02/2026  8:14 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/003\nFAX COVER SHEET\nTo: Pharmacy Review Desk, Northwind Benefit Plan (fictional)\nFrom: Harborlight Clinic (fictional)\nRe: Prior auth, semaglutide, Mara Ellison (fictional)\nPages incl cover: 3 Urgency: standard\nMember ID: XXXXXXXX Group: XXXXXXXX\nRequest date: 10/02/2026\nNote to reviewer: chart excerpt and lab page follow.\n--- PA REQUEST FORM (page 1 of 2) ---\nPatient: Mara Ellison (fictional) Age: 62 years\nSex: F Weight: 91 kg Prescriber NPI: XXXXXXXX\nPrescriber: Dr. Owen Pell (fictional)\nClinic: Harborlight Clinic (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug requested: semaglutide\nSig requested: 0.5 mg subQ q7d\nIndication for this request: Type 2 diabetes\n[x] New start [ ] Continuation [ ] Dose change\nICD notes (free text): E11.9 type 2 diabetes mellitus\nPrior diabetes therapy tried? [x] yes [ ] no\nAgent: metformin Dose: 1000 mg PO BID\nStart: 01/06/2026 Stop: ongoing Status: current\nA1c at or before start: 8.6% on 12/18/2025\nLatest A1c: 7.8% on 06/22/2026\nContraindication to metformin? [ ] yes [x] no\nPharmacy: Quill Pharmacy (fictional)\nNCPDP: XXXXXXXX\nHandwritten note: pt prefers Sunday injections.\n<<page>>\n10/02/2026  8:14 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/003\nHARBORLIGHT CLINIC (fictional) -- EHR NOTE\nPatient: Mara Ellison (fictional) MRN: XXXXXXXX\nVisit: 10/02/2026 Author: Dr. Owen Pell (fictional)\nLocation: Harborlight Clinic (fictional)\nSUBJECTIVE\nFollow-up for glucose control. Denies hypoglycemia.\nMother had type 2 diabetes; sister has hypothyriodism.\nShe is not pregnant. No hx of pancreatitis.\nOBJECTIVE\nMeds reconciled this visit (see list). Feet intact.\nASSESSMENT\n1. Type 2 diabetes mellitus, A1c still above goal.\n2. Hypertension. 3. Hypothyroidism, stable.\nPLAN\nContinue metformin. Start semaglutide 0.5 mg subQ q7d\nfor type 2 diabetes. PA submitted today, 10/02/2026.\nNurse note: taught pen use; pt repeated the steps.\nAddendum 10/02/2026 Dr. Owen Pell (fictional):\nGoal discussed as A1c under 7%. She agrees.\n--- MEDICATION LIST (printed 10/02/2026) ---\nDrug | Dose | Route | Freq | Start | Stop | Status\nmetformin | 1000 mg | PO | BID | 01/06/2026 | ongoing | current\nlisinopril | 20 mg | PO | daily | 03/14/2024 | ongoing | current\nlevothyroxine | 75 mcg | PO | daily | 11/02/2019 | ongoing | current\natorvastatin | 20 mg | PO | QHS | 06/01/2024 | ongoing | current\nsemaglutide | 0.5 mg | subQ | q7d | pending | n/a | requested\nFooter: Harborlight Clinic (fictional) MRN XXXXXXXX\nConfidential. Page 2 of 3. End of EHR extract.\n<<page>>\n10/02/2026  8:14 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.003/003\nQUILL LAB SERVICES (fictional) -- RESULT TABLE\nPatient: Mara Ellison (fictional) MRN: XXXXXXXX\nOrdering: Dr. Owen Pell (fictional)\nSpecimen lab report. Not a new request.\nTest | Result | Flag | Ref range | Collected\nA1c | 7.8% | H | 4.0-5.6% | 06/22/2026\nA1c | 8.6% | H | 4.0-5.6% | 12/18/2025\nTSH | 2.1 mIU/L | n/a | 0.4-4.5 | 06/22/2026\nCreatinine | 0.9 mg/dL | n/a | 0.6-1.1 | 06/22/2026\neGFR | 78 mL/min | n/a | >60 | 06/22/2026\nComment: sample acceptable, no hemolysis.\nPer call with pt on 09/28/2026: no missed metformin\ndoses this summer. Still taking 1000 mg PO BID.\nCopied-forward annual note: flu shot due, eye exam\noverdue, dental referral open. Ignore for this PA.\nEnd of transmission. 3 pages. Harborlight Clinic (fictional)",
+   "variation_notes": "An older baseline A1c, a family history of diabetes, and unrelated medicines sit beside one complete semaglutide request.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Patient: Mara Ellison (fictional) Age: 62 years"
+     ],
+     "reason": "The form states the patient is 62 years old."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Indication for this request: Type 2 diabetes"
+     ],
+     "reason": "The indication field names type 2 diabetes as the reason for this request."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Request date: 10/02/2026",
+      "Latest A1c: 7.8% on 06/22/2026",
+      "A1c | 7.8% | H | 4.0-5.6% | 06/22/2026"
+     ],
+     "reason": "A1c 7.8% collected on 06/22/2026 falls within 180 days before the 10/02/2026 request."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Agent: metformin Dose: 1000 mg PO BID",
+      "Start: 01/06/2026 Stop: ongoing Status: current",
+      "A1c at or before start: 8.6% on 12/18/2025",
+      "Latest A1c: 7.8% on 06/22/2026",
+      "Request date: 10/02/2026"
+     ],
+     "reason": "Metformin 1000 mg twice daily has been ongoing since 01/06/2026, with A1c 8.6% on 12/18/2025 before the start and A1c 7.8% on 06/22/2026 more than 90 days later, still 7.0% or higher."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Drug requested: semaglutide",
+      "Sig requested: 0.5 mg subQ q7d"
+     ],
+     "reason": "The requested sig is semaglutide 0.5 mg subQ q7d, which is 0.5 mg weekly."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-02",
+   "criteria_id": "glp1-t2d",
+   "render": "fax-noise",
+   "text": "11/10/2026  9:10 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/003\nFAX COVER -- BRAMBLE FAMILY PRACTICE (fictional)\nTo: Benefit Review, Cedar Span Plan (fictional)\nFrom: Bramble Family Practice (fictional)\nRe: semaglutide PA, Jules Kenner (fictional)\nMember ID: XXXXXXXX Request date: 07/02/2026\nFax received: 11/10/2026 Pages: 3\nNote to reviewer: weight-loss PA, see problem list.\n------ REQUEST FORM ------\nPatient: Jules Kenner (fictional)\nAge: 17 years Sex: F\nPrescriber: Dr. Nina Voss (fictional)\nClinic: Bramble Family Practice (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: semaglutide\nRequested sig: 1 mg SC weekly\nIndication: chronic weight management\n[x] New therapy [ ] Renewal\nAllergies: N/A\nA1c field: see attached lab\nPharmacy: Lampwick Pharmacy (fictional)\nHandwritten note: mom is on the line with Jules (fictional).\nPer call with pt: wants the higher weekly dose.\n<<page>>\n11/10/2026  9:10 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/003\nBRAMBLE FAMILY PRACTICE (fictional) EHR PRINT\nPatient: Jules Kenner (fictional) MRN: XXXXXXXX\nVisit date: 03/04/2026\nAuthor: Dr. Nina Voss (fictional)\nSUBJECTIVE\nHere for weight. Denies type 1 diabetes.\nNo hx of pancreatitis. Possible prediabetes was\nmentioned last year and was not confirmed.\nOBJECTIVE\nBMI 34. Meds: glipizide 5 mg PO daily.\nASSESSMENT / PROBLEM LIST\n1. Obesity, reason for today's semaglutide request\n2. T2DM\n3. Acne, mild\nPLAN\nSubmit PA for semaglutide 1 mg SC weekly for\nchronic weight management. Dietitian referral.\nGlipizide start 06/05/2026, still current.\nNo stop date. Copied forward from last refill.\nFooter: Bramble Family Practice (fictional)\nMRN XXXXXXXX. Page 2 of 3.\n<<page>>\n11/10/2026  9:10 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.003/003\nLAMPWICK LAB (fictional) RESULT\nPatient: Jules Kenner (fictional) MRN: XXXXXXXX\nTest | Result | Flag | Ref | Collected\nA1c | 8.4% | H | 4.0-5.6% | 12/01/2025\nTSH | 1.8 | n/a | 0.4-4.5 | 12/01/2025\nComment: fasting glucose 108 on the same draw.\nNo other A1c is on file at this lab.\n------ PHARMACY INTAKE ------\nSite: Lampwick Pharmacy (fictional)\nDrug asked: semaglutide 1 mg SC weekly\nDays supply: four weeks DAW: 0\nOther meds on profile:\nglipizide 5 mg PO daily\nadapalene 0.1% topical QHS\nEnd of fax. 3 pages. Bramble Family Practice (fictional)",
+   "variation_notes": "Every slash date can be read month-first or day-first, and those two readings put the only A1c on opposite sides of the 180-day window.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Age: 17 years Sex: F"
+     ],
+     "reason": "The form states the patient is 17 years old, which is under 18."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Indication: chronic weight management",
+      "1. Obesity, reason for today's semaglutide request",
+      "2. T2DM"
+     ],
+     "reason": "The request indication is chronic weight management, and T2DM appears only as a problem-list entry."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Member ID: XXXXXXXX Request date: 07/02/2026",
+      "Fax received: 11/10/2026 Pages: 3",
+      "A1c | 8.4% | H | 4.0-5.6% | 12/01/2025"
+     ],
+     "reason": "The only A1c is 8.4% on 12/01/2025 with request date 07/02/2026, and those slash dates can be read month-first as stale or day-first as inside 180 days, while the received date rules out neither reading."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The pages list glipizide and adapalene and do not document any metformin trial."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Drug: semaglutide",
+      "Requested sig: 1 mg SC weekly"
+     ],
+     "reason": "The requested sig is semaglutide 1 mg SC weekly, which is not 0.5 mg weekly."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-03",
+   "criteria_id": "glp1-t2d",
+   "render": "choppy",
+   "text": "08/19/2026  10:05 AM  FROM: XXXXXXXXXX  TO: PA  P.001/003\nCOVER SHEET PINE HOLLOW OFFICE (fictional)\nTo: PA Desk, Grayheron Fund (fictional)\nFrom: Pine Hollow Office (fictional)\nRe: semaglutide, Sol Mercer (fictional)\nMember ID: XXXXXXXX\nRequest date: 08/19/2026\nPages: 3\n---- PA FORM ----\nPatient: Sol Mercer (fictional)\nAge: 48 years Sex: M\nPrescriber: Dr. Ivo Trent (fictional)\nSite: Pine Hollow Office (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nMedication requested: semaglutide\nDose: ______ Frequency: ______\nRoute: ______\nIndication: possible type 2 diabetes\n[ ] Confirmed [x] Unconfirmed\nMetformin: 500 mg PO BID\nStart: 06/01/2026 Stop: 07/01/2026\nRestart: 07/20/2026 Stop: ______\nResponse: inadequate response\nBaseline A1c: ______\nFollow-up A1c: ______\nPharmacy: Silt Apothecary (fictional)\n[ ] Urgent [x] Routine\nAllergies: N/A\n<<page>>\n08/19/2026  10:05 AM  FROM: XXXXXXXXXX  TO: PA  P.002/003\nPINE HOLLOW OFFICE (fictional) SOAP NOTE\nPatient: Sol Mercer (fictional) MRN: XXXXXXXX\nDOS: 08/19/2026 Dr. Ivo Trent (fictional)\nS: Fatigue. Denies polyuria. No hx of DKA.\nO: BP 138 over 84. Weight 88 kg. Lungs clear.\nA: Hyperglycemia. r/o type 2 diabetes.\n   Also obesity and fatty liver on problem list.\nP: Hold confirmation. Metformin was stopped and\n   restarted; still short of a full course.\n   Ask payer about semaglutide. Dose not chosen.\nAddendum 08/19/2026, Dr. Ivo Trent (fictional):\nDo not list a dose until titration is decided.\nCopied-forward: colonoscopy due, tetanus due.\nNurse note: vial teaching deferred, no dose yet.\nFooter MRN XXXXXXXX Pine Hollow Office (fictional)\n<<page>>\n08/19/2026  10:05 AM  FROM: XXXXXXXXXX  TO: PA  P.003/003\nSILT APOTHECARY (fictional) INTAKE SHEET\nPatient: Sol Mercer (fictional)\nMember ID: XXXXXXXX\nProduct: semaglutide injection\nSig: (blank) Qty: (blank)\nPrior agent on profile:\nmetformin 500 mg tablet BID\nFirst fill 06/01/2026, last fill 07/01/2026,\nthen a new fill 07/20/2026. Gaps on profile.\nOther meds: atorvastatin 10 mg QHS, vitamin D.\n------ EARLIER DENIAL EXCERPT ------\nDate of that denial: 04/22/2026\nDrug denied: dulaglutide 0.75 mg weekly\nThis excerpt is an old file. It is not the\ncurrent semaglutide request.\nEnd. Pine Hollow Office (fictional). 3 pages.",
+   "variation_notes": "Metformin was stopped and restarted, the diabetes indication is only possible, and both the A1c and the semaglutide dose are blank.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Age: 48 years Sex: M"
+     ],
+     "reason": "The form states the patient is 48 years old."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Indication: possible type 2 diabetes",
+      "[ ] Confirmed [x] Unconfirmed",
+      "A: Hyperglycemia. r/o type 2 diabetes."
+     ],
+     "reason": "The indication is marked possible and unconfirmed, and the note says r/o type 2 diabetes."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "A1c fields are blank and no numeric A1c appears anywhere in the packet."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Metformin: 500 mg PO BID",
+      "Start: 06/01/2026 Stop: 07/01/2026",
+      "Restart: 07/20/2026 Stop: ______",
+      "Response: inadequate response",
+      "Baseline A1c: ______",
+      "Follow-up A1c: ______"
+     ],
+     "reason": "Metformin 500 mg twice daily was stopped and restarted with each segment under 90 days, called an inadequate response, and no before or after A1c is recorded."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The semaglutide dose and frequency are blank, and the note says a dose was not chosen."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-04",
+   "criteria_id": "glp1-t2d",
+   "render": "smudge",
+   "text": "03/20/2026  2:47 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/003\nFAX COVER RED MAPLE ENDO (fictional)\nTo: Review Unit, Lowfern Benefits (fictional)\nFrom: Red Maple Endo (fictional)\nRe: semaglutide, Ada Quill (fictional)\nMember ID: XXXXXXXX Pages: 3\nRequest date: 03/20/2026\n---- FORM ----\nPatient: Ada Quill (fictional) Age: 54 years\nPrescriber: Dr. Leah Soto (fictional)\nClinic: Red Maple Endo (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: semaglutide (Ozempic)\nRequested dose: 1 mg SQ QW\nIndication: Type 2 diabetes\n[x] Continuation of orals [ ] Insulin now\nMetformin dose: 1000 mg PO BID\nStart date: 01/10/2025 Still taking: [x] yes\nA1c before metformin: 9.1% (12/15/2024)\nPharmacy: Cobble Pharmacy (fictional)\nHandwritten note: please rush, travel next month.\n<<page>>\n03/20/2026  2:47 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/003\nLETTER OF MEDICAL NECESSITY\nRed Maple Endo (fictional)\nDr. Leah Soto (fictional)\nRe: Ada Quill (fictional), Member ID XXXXXXXX\nI request semaglutide 1 mg SQ weekly for Type 2\ndiabetes. She has taken metformin 1000 mg PO BID\nsince 01/10/2025 without a stop.\nA1c was 9.1% on 12/15/2024, before metformin.\nOn 06/18/2025 the lab read A1c 8.9%, corrected\nto 7.9%. That remains above our 7% goal.\nFamily history: father with type 2 diabetes.\nAlso followed for hypothyriodism and gout.\nPer call with pt on 03/18/2026: no GI stop, she\nstill swallows metformin twice a day.\nPlease approve the 1 mg weekly dose.\nSigned Dr. Leah Soto (fictional) 03/20/2026\n<<page>>\n03/20/2026  2:47 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.003/003\nCOBBLE LAB (fictional) REPORT\nPatient: Ada Quill (fictional) MRN: XXXXXXXX\nTest | Result | Flag | Range | Collected\nA1c | 9.1% | H | 4.0-5.6% | 12/15/2024\nA1c | 7.9% | H | 4.0-5.6% | 06/18/2025\nNote: original 8.9% corrected to 7.9% that day.\nTSH | 3.4 | n/a | 0.4-4.5 | 06/18/2025\nUrate | 7.2 mg/dL | H | 3.5-7.0 | 06/18/2025\nNo A1c collected after 06/18/2025.\n---- DENIAL EXCERPT (prior file) ----\nDenied 11/02/2025. Drug: dulaglutide 0.75 mg QW.\nDifferent product. Not this semaglutide request.\nEnd of fax. Red Maple Endo (fictional).",
+   "variation_notes": "The follow-up A1c was corrected from 8.9% to 7.9% and is stale by the request date, while the asked-for dose is 1 mg weekly.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Patient: Ada Quill (fictional) Age: 54 years"
+     ],
+     "reason": "The form states the patient is 54 years old."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Indication: Type 2 diabetes"
+     ],
+     "reason": "The indication field names type 2 diabetes as the reason for this request."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Request date: 03/20/2026",
+      "A1c | 7.9% | H | 4.0-5.6% | 06/18/2025",
+      "No A1c collected after 06/18/2025."
+     ],
+     "reason": "The newest A1c is dated 06/18/2025, which is more than 180 days before the 03/20/2026 request."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Metformin dose: 1000 mg PO BID",
+      "Start date: 01/10/2025 Still taking: [x] yes",
+      "A1c before metformin: 9.1% (12/15/2024)",
+      "On 06/18/2025 the lab read A1c 8.9%, corrected",
+      "to 7.9%. That remains above our 7% goal.",
+      "A1c | 7.9% | H | 4.0-5.6% | 06/18/2025"
+     ],
+     "reason": "Metformin 1000 mg twice daily has continued since 01/10/2025, with A1c 9.1% on 12/15/2024 before the start and a 06/18/2025 result corrected to 7.9%, more than 90 days later and still at least 7.0%."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Requested dose: 1 mg SQ QW",
+      "Please approve the 1 mg weekly dose."
+     ],
+     "reason": "The requested dose is semaglutide 1 mg weekly, which is not 0.5 mg weekly."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-05",
+   "criteria_id": "biologic-psoriasis",
+   "render": "low-contrast",
+   "text": "09/22/2026  11:05 AM  FROM: XXXXXXXXXX  TO: PA  P.001/003\nCOVER FERN DERM CLINIC (fictional)\nTo: Specialty PA, Holm Plan (fictional)\nFrom: Fern Derm Clinic (fictional)\nRe: adalimumab, Rio Sanchez (fictional)\nMember ID: XXXXXXXX\nRequest date: 09/22/2026\n---- PA FORM ----\nPatient: Rio Sanchez (fictional)\nAge: ______ Sex: F\nPrescriber: Dr. Pam Okada (fictional)\nClinic: Fern Derm Clinic (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: adalimumab (Humira)\nDose requested: 40 mg SC every week\nIndication: mild plaque psoriasis\nBSA percent: ______\nMethotrexate: 15 mg PO weekly\nDates used: not recorded\nOutcome: failed\n[x] New start [ ] Reauth\nPharmacy: Wick Pharmacy (fictional)\nNote to reviewer: photos were not faxed.\nAllergies: N/A\n<<page>>\n09/22/2026  11:05 AM  FROM: XXXXXXXXXX  TO: PA  P.002/003\nFERN DERM CLINIC (fictional) NOTE\nPatient: Rio Sanchez (fictional) MRN: XXXXXXXX\nVisit: 09/22/2026 Dr. Pam Okada (fictional)\nS: Itchy plaques on elbows. Denies joint pain.\n   No hx of psoriatic arthritis.\nO: Few thin plaques. Severity described as mild.\n   Body surface area field left empty.\nA: Mild plaque psoriasis.\n   Problem list also: eczema, seasonal alergies.\nP: Start adalimumab 40 mg SC weekly.\n   Methotrexate 15 mg weekly previously failed.\n   Length of that trial was not charted.\nNurse note: pt declined photos today.\nFamily history: mother has psoriasis.\nFooter Fern Derm Clinic (fictional) MRN XXXXXXXX\n<<page>>\n09/22/2026  11:05 AM  FROM: XXXXXXXXXX  TO: PA  P.003/003\nWICK PHARMACY (fictional) INTAKE\nPatient: Rio Sanchez (fictional)\nFill request: adalimumab 40 mg weekly\nOther profile meds:\nmethotrexate 15 mg PO weekly status: inactive\nbetamethasone ointment BID status: current\ncetirizine 10 mg daily status: current\n---- DENIAL EXCERPT ----\nOn 01/28/2026 a request for secukinumab was\ndenied. That drug is not the current request.\nCopied-forward reminder: eye exam overdue.\nHandwritten note: scale is mostly on the elbows.\nEnd of fax. 3 pages. Fern Derm Clinic (fictional)",
+   "variation_notes": "Age and body surface area are blank, plaque psoriasis is labeled mild, and adalimumab is requested every week after an undated methotrexate failure.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The age field is blank and no age is stated anywhere in the packet."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Indication: mild plaque psoriasis",
+      "A: Mild plaque psoriasis."
+     ],
+     "reason": "The request and assessment call it mild plaque psoriasis rather than moderate-to-severe."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The body surface area field is blank and no percent involvement is documented."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Methotrexate: 15 mg PO weekly",
+      "Dates used: not recorded",
+      "Outcome: failed",
+      "   Methotrexate 15 mg weekly previously failed.",
+      "   Length of that trial was not charted."
+     ],
+     "reason": "Methotrexate 15 mg weekly is called a failure, but the dates are not recorded and no before-and-after body surface area values are given."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Dose requested: 40 mg SC every week",
+      "P: Start adalimumab 40 mg SC weekly."
+     ],
+     "reason": "Adalimumab is requested at 40 mg every week, which is not 40 mg every other week."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-06",
+   "criteria_id": "biologic-psoriasis",
+   "render": "rotate-7",
+   "text": "05/08/2026  9:05 AM  FROM: XXXXXXXXXX  TO: PA UNIT  P.001/003\nCOVER YARROW SKIN OFFICE (fictional)\nTo: PA Unit, Smallstone Plan (fictional)\nFrom: Yarrow Skin Office (fictional)\nRe: adalimumab, Noa Pellam (fictional)\nMember ID: XXXXXXXX Pages: 3\nRequest date: 07/04/2026\nFax received: 05/08/2026\n---- PA FORM ----\nPatient: Noa Pellam (fictional)\nAge: 41 years Sex: F\nPrescriber: Dr. Seth Amar (fictional)\nClinic: Yarrow Skin Office (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug requested: adalimumab\nDose: ______ Frequency: ______\nIndication: moderate-to-severe plaque psoriasis\nBSA: 14% Measured: 03/02/2026\nMethotrexate 15 mg PO QW\nStart 01/02/2026 stop 01/11/2026\nRestart 02/01/2026 stop 02/03/2026\nReason stopped: not stated\nPharmacy: Nettle Pharmacy (fictional)\n<<page>>\n05/08/2026  9:05 AM  FROM: XXXXXXXXXX  TO: PA UNIT  P.002/003\nYARROW SKIN OFFICE (fictional) EHR NOTE\nPatient: Noa Pellam (fictional) MRN: XXXXXXXX\nEncounter: 07/04/2026\nAuthor: Dr. Seth Amar (fictional)\nS: Plaques persist. Denies fever. No joint pain.\nO: Body surface area involvement 14% on 03/02/2026.\nA: Moderate-to-severe plaque psoriasis, this request.\nP: Request adalimumab. Maintenance dose not chosen\n   on this draft. Do not infer a dose.\n   Methotrexate 15 mg PO QW was stopped 01/11/2026\n   and restarted 02/01/2026 through 02/03/2026.\nAddendum 07/04/2026 Dr. Seth Amar (fictional):\nDuration of methotrexate was under three months.\nHandwritten note: elbows and scalp are the worst.\nFooter Yarrow Skin Office (fictional) page 2 of 3\n<<page>>\n05/08/2026  9:05 AM  FROM: XXXXXXXXXX  TO: PA UNIT  P.003/003\nNETTLE PHARMACY (fictional) MED LIST\nPatient: Noa Pellam (fictional)\nDrug | Dose | Route | Freq | Start | Stop | Status\nmethotrexate | 15 mg | PO | QW | 01/02/2026 | 01/11/2026 | stopped\nmethotrexate | 15 mg | PO | QW | 02/01/2026 | 02/03/2026 | stopped\ntriamcinolone 0.1% ointment status: current\nadalimumab | no dose | SC | blank | pending | requested\nPer call with pt 07/04/2026: she is home now.\nCopied-forward: flu shot deferred.\nEnd. 3 pages. Yarrow Skin Office (fictional)",
+   "variation_notes": "No slash date has a day above 12, but the received date rules out a month-first reading because the request would fall after receipt.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Age: 41 years Sex: F"
+     ],
+     "reason": "The form states the patient is 41 years old."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Indication: moderate-to-severe plaque psoriasis",
+      "A: Moderate-to-severe plaque psoriasis, this request."
+     ],
+     "reason": "The indication and assessment name moderate-to-severe plaque psoriasis as the reason for this request."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Request date: 07/04/2026",
+      "Fax received: 05/08/2026",
+      "BSA: 14% Measured: 03/02/2026",
+      "O: Body surface area involvement 14% on 03/02/2026."
+     ],
+     "reason": "The received date rules out a month-first reading, and under the day-first reading body surface area 14% on 03/02/2026 is within 180 days before the 07/04/2026 request."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Methotrexate 15 mg PO QW",
+      "Start 01/02/2026 stop 01/11/2026",
+      "Restart 02/01/2026 stop 02/03/2026",
+      "Reason stopped: not stated",
+      "Duration of methotrexate was under three months."
+     ],
+     "reason": "Methotrexate 15 mg weekly was stopped and restarted across two short spans, under 90 days, and no intolerance reason is stated."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The adalimumab dose and frequency are blank and the note says no dose was chosen."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-07",
+   "criteria_id": "biologic-psoriasis",
+   "render": "turn-180",
+   "text": "08/19/2026  3:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/003\nCOVER LOOMIS DERM (fictional)\nTo: Biologic PA, Northcap Plan (fictional)\nFrom: Loomis Derm (fictional)\nRe: adalimumab, Teo Brant (fictional)\nMember ID: XXXXXXXX Pages: 3\n---- PA FORM ----\nPatient: Teo Brant (fictional) Age: 15 years\nPrescriber: Dr. Uma Shah (fictional)\nClinic: Loomis Derm (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: adalimumab\nSig: 40 mg SC Q2W\nIndication: moderate-to-severe plaque psoriasis\nRequest date: 08/19/2026\nPrior systemic: apremilast 30 mg PO BID\nPhototherapy: narrowband UVB last winter\nBSA today: see measures page\n[x] New start\nPharmacy: Kiln Pharmacy (fictional)\n<<page>>\n08/19/2026  3:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/003\nLETTER OF MEDICAL NECESSITY\nLoomis Derm (fictional)\nDr. Uma Shah (fictional)\nRe: Teo Brant (fictional) Member ID XXXXXXXX\nRequest date: 02/11/2026\nPlease approve adalimumab 40 mg every other week\nfor moderate-to-severe plaque psoriasis.\nThe form cover shows a different request date.\nI am not correcting either date in this letter.\nApremilast 30 mg PO BID was tried for acne only,\nnot as a psoriasis failure with measures.\nPer call with pt: itching is worse at night.\nDenies joint swelling. No hx of uveitis.\nFamily history: father with psoriasis.\nSigned Dr. Uma Shah (fictional)\n<<page>>\n08/19/2026  3:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.003/003\nLOOMIS DERM (fictional) MEASURES\nPatient: Teo Brant (fictional) MRN: XXXXXXXX\nMeasure | Value | Flag | Range | Date\nBSA involvement | 16% | H | n/a | 07/28/2026\nCBC | within ref | n/a | n/a | 07/28/2026\nNurse note: BSA estimated with the palm method.\nProblem list: acne, mild seborrhea.\nCopied-forward: sports physical form unsigned.\nHandwritten note: rash spares the face.\n---- OLD DENIAL EXCERPT ----\nDenied 12/14/2025 for secukinumab 300 mg.\nNot the drug on today's adalimumab request.\nEnd. Loomis Derm (fictional). 3 pages.",
+   "variation_notes": "The form and the letter give two different request dates for an otherwise consistent adalimumab order in a 15-year-old.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Patient: Teo Brant (fictional) Age: 15 years"
+     ],
+     "reason": "The form states the patient is 15 years old, which is under 18."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Indication: moderate-to-severe plaque psoriasis",
+      "for moderate-to-severe plaque psoriasis."
+     ],
+     "reason": "The form and letter both name moderate-to-severe plaque psoriasis as the reason for this request."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Request date: 08/19/2026",
+      "Request date: 02/11/2026",
+      "BSA involvement | 16% | H | n/a | 07/28/2026"
+     ],
+     "reason": "The packet prints two different request dates, 08/19/2026 and 02/11/2026."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "Apremilast and phototherapy are mentioned and methotrexate is never named."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Sig: 40 mg SC Q2W",
+      "Please approve adalimumab 40 mg every other week"
+     ],
+     "reason": "Both the form and the letter request adalimumab 40 mg every other week."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-08",
+   "criteria_id": "biologic-psoriasis",
+   "render": "turn-90",
+   "text": "09/25/2026  4:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/003\nCOVER HOLLIS OFFICE (fictional)\nTo: Specialty Review, Birch Fund (fictional)\nFrom: Hollis Office (fictional)\nRe: adalimumab, Wynn Calder (fictional)\nMember ID: XXXXXXXX\nRequest date: 09/25/2026\n---- PA FORM ----\nPatient: Wynn Calder (fictional) Age: 39 years\nPrescriber: Dr. Nedal Ruiz (fictional)\nClinic: Hollis Office (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: adalimumab\nSig on form: 40 mg subQ Q2W\nIndication: hidradenitis suppurativa\nBSA involvement: 15% on 08/14/2026\nPrior: methotrexate, outcome failed\nMTX dose: unknown MTX dates: unknown\n[x] New start\nPharmacy: Cinder Pharmacy (fictional)\nNurse note: form signed in the room today.\n<<page>>\n09/25/2026  4:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/003\nLETTER OF MEDICAL NECESSITY\nHollis Office (fictional)\nDr. Nedal Ruiz (fictional)\nRe: Wynn Calder (fictional) Member XXXXXXXX\nRequest date: 09/25/2026\nPlease authorize adalimumab 40 mg every week\nfor hidradenitis suppurativa. Drains continue.\nThe attached form lists a different frequency.\nI am leaving both frequencies on this fax.\nMethotrexate was failed. No dose and no dates\nwere written in the outside records I hold.\nBody surface area involvement remains 15%.\nMeasured 08/14/2026. No earlier BSA is filed.\nDenies fever. No hx of bowel disease.\nSigned Dr. Nedal Ruiz (fictional)\n<<page>>\n09/25/2026  4:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.003/003\nHOLLIS OFFICE (fictional) CLINIC NOTE\nPatient: Wynn Calder (fictional) MRN: XXXXXXXX\nVisit: 09/25/2026 Dr. Nedal Ruiz (fictional)\nS: Painful nodules in the axillae and groin.\nO: BSA involvement 15%, unchanged from 08/14/2026.\nA: Hidradenitis suppurativa, reason for request.\nP: Adalimumab. See form and letter; they disagree\n   on weekly versus every other week.\nMed list:\ndoxycycline 100 mg PO BID status: current\nadalimumab pending, two sigs on this fax\nCopied-forward: tetanus booster due.\nHandwritten note: odor worse in summer.\nEnd. Hollis Office (fictional). 3 pages.",
+   "variation_notes": "The form and the letter disagree on weekly versus every-other-week dosing, and the written indication is hidradenitis suppurativa.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Patient: Wynn Calder (fictional) Age: 39 years"
+     ],
+     "reason": "The form states the patient is 39 years old."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The stated indication is hidradenitis suppurativa, and plaque psoriasis is not named anywhere."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Request date: 09/25/2026",
+      "BSA involvement: 15% on 08/14/2026",
+      "O: BSA involvement 15%, unchanged from 08/14/2026."
+     ],
+     "reason": "Body surface area involvement is 15% on 08/14/2026, within 180 days before the single request date 09/25/2026."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Prior: methotrexate, outcome failed",
+      "MTX dose: unknown MTX dates: unknown",
+      "Methotrexate was failed. No dose and no dates"
+     ],
+     "reason": "Methotrexate is called a failure, but the dose and dates are unknown and there is no before-and-after body surface area pair."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Sig on form: 40 mg subQ Q2W",
+      "Please authorize adalimumab 40 mg every week"
+     ],
+     "reason": "The form requests 40 mg subQ every other week while the letter requests 40 mg every week."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-09",
+   "criteria_id": "pcsk9",
+   "render": "turn-270",
+   "text": "10/16/2026  8:05 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/003\nCOVER RIDGE HEART CLINIC (fictional)\nTo: Cardiology PA, Ironwharf Plan (fictional)\nFrom: Ridge Heart Clinic (fictional)\nRe: evolocumab, Ellis Dumar (fictional)\nMember ID: XXXXXXXX Pages: 3\nRequest date: 10/16/2026\n---- PA FORM ----\nPatient: Ellis Dumar (fictional) Age: 66 years\nPrescriber: Dr. Cara Nguyen (fictional)\nClinic: Ridge Heart Clinic (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug requested: evolocumab\nDose: ______ Frequency: ______\nIndication: severe hyperlipidemia\nProblem list: CAD s/p stent (2019); HTN\nStatin line: atorvastatin contraindicated\nReason: rhabdomyolysis, hospitalized 2024\nCurrently not on a statin.\nLDL-C: ______\nPharmacy: Moor Pharmacy (fictional)\n[x] New start [ ] Continuation\n<<page>>\n10/16/2026  8:05 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/003\nRIDGE HEART CLINIC (fictional) SOAP\nPatient: Ellis Dumar (fictional) MRN: XXXXXXXX\nVisit: 10/16/2026 Dr. Cara Nguyen (fictional)\nS: Here for cholesterol medicine. Denies chest\n   pain this month. Sleeps well.\nO: BP 142 over 80. Lungs clear. LDL not collected.\nA: Severe hyperlipidemia, reason for this request.\n   Problem list copied forward: CAD s/p stent,\n   hypertension, seasonal rhinitis.\nP: Request evolocumab. Dose still not selected.\n   Do not substitute a dose from another chart.\nAddendum 10/16/2026 Dr. Cara Nguyen (fictional):\nAtorvastatin stays contraindicated. Reason remains\nrhabdomyolysis from the 2024 admission.\nNote to reviewer: lipid numbers are not in this fax.\n<<page>>\n10/16/2026  8:05 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.003/003\nMOOR PHARMACY (fictional) INTAKE\nPatient: Ellis Dumar (fictional)\nAsked for: evolocumab\nSig: (blank) Qty: (blank)\nProfile: not on a statin.\nezetimibe 10 mg PO daily status: current\nmetoprolol 25 mg PO BID status: current\n---- LAB STUB (not lipids) ----\nTest | Result | Flag | Range | Collected\nA1c | 6.1% | n/a | 4.0-5.6% | 09/02/2026\nThis A1c is unrelated. LDL-C was not drawn.\n---- DENIAL EXCERPT ----\nDenied 05/19/2026. Drug: icosapent ethyl.\nDifferent product, not evolocumab.\nHandwritten note: bring the hospital summary.\nEnd. Ridge Heart Clinic (fictional). 3 pages.",
+   "variation_notes": "Evolocumab is requested for hyperlipidemia with the dose blank and no LDL on the fax, while a stent sits only on the problem list and atorvastatin is contraindicated.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Patient: Ellis Dumar (fictional) Age: 66 years"
+     ],
+     "reason": "The form states the patient is 66 years old."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Indication: severe hyperlipidemia",
+      "Problem list: CAD s/p stent (2019); HTN",
+      "A: Severe hyperlipidemia, reason for this request."
+     ],
+     "reason": "The stated reason is severe hyperlipidemia, and CAD with a stent appears only on the problem list."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The LDL-C field is blank and no LDL-C value is reported."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Statin line: atorvastatin contraindicated",
+      "Reason: rhabdomyolysis, hospitalized 2024",
+      "Atorvastatin stays contraindicated. Reason remains",
+      "rhabdomyolysis from the 2024 admission."
+     ],
+     "reason": "Atorvastatin is documented as contraindicated because of rhabdomyolysis with a 2024 hospitalization."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The evolocumab dose and frequency are blank and the note says the dose was not selected."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-10",
+   "criteria_id": "pcsk9",
+   "render": "annotations",
+   "text": "09/30/2026  1:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/004\nFAX COVER SLOPE LIPID CLINIC (fictional)\nTo: PA Dept, Copperline Plan (fictional)\nFrom: Slope Lipid Clinic (fictional)\nRe: evolocumab, Ari Mendel (fictional)\nMember ID: XXXXXXXX\nRequest date: 09/30/2026\nPages: 4 Urgency: routine\nAge on this cover: 17 years\nNote to reviewer: clinic note lists another age.\nHandwritten note: confirm which age is true.\nAllergies: N/A\nPharmacy: Flint Pharmacy (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\n<<page>>\n09/30/2026  1:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/004\nPA REQUEST FORM SLOPE LIPID CLINIC (fictional)\nPatient: Ari Mendel (fictional)\nPrescriber: Dr. Joan Ibek (fictional)\nClinic: Slope Lipid Clinic (fictional)\nDrug: evolocumab (Repatha)\nSig: 140 mg SC q14d\nIndication: familial hypercholesterolemia\n[x] New start [ ] Renewal\nAtorvastatin: 20 mg PO daily\nStart: 01/15/2026 Stop: ongoing\nLDL before start: 148 mg/dL on 01/08/2026\nLatest LDL-C: 104 mg/dL on 08/21/2026\nOther therapy: ezetimibe 10 mg PO daily\n[ ] Statin intolerance box unchecked\n<<page>>\n09/30/2026  1:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.003/004\nFLINT LAB (fictional) RESULT TABLE\nPatient: Ari Mendel (fictional) MRN: XXXXXXXX\nTest | Result | Flag | Range | Collected\nLDL-C | 148 mg/dL | H | <100 | 01/08/2026\nLDL-C | 104 mg/dL | H | <100 | 08/21/2026\nHDL | 46 mg/dL | n/a | >40 | 08/21/2026\nTG | 160 mg/dL | n/a | <150 | 08/21/2026\nComment: 01/08/2026 lipid is an older draw.\nFamily: mother has high cholesterol.\nCollected by Flint Lab (fictional).\n<<page>>\n09/30/2026  1:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.004/004\nSLOPE LIPID CLINIC (fictional) NOTE\nPatient: Ari Mendel (fictional) MRN: XXXXXXXX\nThis is a 71-year-old seen 09/30/2026.\nAuthor: Dr. Joan Ibek (fictional)\nS: Wants help with familial hypercholesterolemia.\n   Denies muscle pain on the current pill.\nO: See lab table. Exam unremarkable.\nA: Familial hypercholesterolemia, reason today.\nP: Continue atorvastatin 20 mg PO daily.\n   Start evolocumab 140 mg SC every 2 weeks.\nPer call with pt: no missed evening pills.\nCopied-forward: eye exam last year was normal.\nEnd of fax. 4 pages. Slope Lipid Clinic (fictional)",
+   "variation_notes": "The cover age and the clinic-note age disagree, and atorvastatin is documented at 20 mg daily beside a recent LDL.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Age on this cover: 17 years",
+      "This is a 71-year-old seen 09/30/2026."
+     ],
+     "reason": "The cover says 17 years and the clinic note says 71 years, and those two ages lead to different results."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The request is for familial hypercholesterolemia, and established atherosclerotic cardiovascular disease is not named."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Request date: 09/30/2026",
+      "Latest LDL-C: 104 mg/dL on 08/21/2026",
+      "LDL-C | 104 mg/dL | H | <100 | 08/21/2026"
+     ],
+     "reason": "LDL-C 104 mg/dL on 08/21/2026 is at least 70 mg/dL and within 180 days before the 09/30/2026 request."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Atorvastatin: 20 mg PO daily",
+      "Start: 01/15/2026 Stop: ongoing",
+      "LDL before start: 148 mg/dL on 01/08/2026",
+      "Latest LDL-C: 104 mg/dL on 08/21/2026",
+      "P: Continue atorvastatin 20 mg PO daily."
+     ],
+     "reason": "Atorvastatin is documented at 20 mg daily, which is below the high-intensity dose, even though LDL-C stayed at or above 70 mg/dL."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Sig: 140 mg SC q14d",
+      "   Start evolocumab 140 mg SC every 2 weeks."
+     ],
+     "reason": "The form and note both request evolocumab 140 mg every 2 weeks."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-11",
+   "criteria_id": "pcsk9",
+   "render": "clean",
+   "text": "05/18/2026  9:05 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/003\nCOVER KEEL CARDIOLOGY (fictional)\nTo: PA Desk, Westmarrow Plan (fictional)\nFrom: Keel Cardiology (fictional)\nRe: evolocumab, Samir Holt (fictional)\nMember ID: XXXXXXXX Pages: 3\nRequest date: 05/18/2026\n---- PA FORM ----\nPatient: Samir Holt (fictional) Age: 59 years\nPrescriber: Dr. Lila Cho (fictional)\nClinic: Keel Cardiology (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: evolocumab\nForm sig: 140 mg SC every 2 weeks\nIndication: established atherosclerotic\ncardiovascular disease, prior myocardial\ninfarction, reason for this request\n[x] New start\nPharmacy: Drift Pharmacy (fictional)\n<<page>>\n05/18/2026  9:05 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/003\nKEEL CARDIOLOGY (fictional) EHR NOTE\nPatient: Samir Holt (fictional) MRN: XXXXXXXX\nVisit: 05/18/2026 Dr. Lila Cho (fictional)\nS: Follow-up after myocardial infarction.\n   Denies current chest pain.\nO: Lungs clear. See labs below.\nA: Established atherosclerotic cardiovascular\n   disease. This visit's request is for that.\nP: Evolocumab ordered. Nurse note: pen teaching\n   booked, sig taken from the PA form.\n---- LAB REPORT ----\nTest | Result | Flag | Range | Collected\nLDL-C | 98 mg/dL | H | <100 | 06/02/2026\nLDL-C | 164 mg/dL | H | <100 | 11/20/2024\nComment: 06/02/2026 draw is after the request.\nThe 11/20/2024 draw is an old baseline.\n<<page>>\n05/18/2026  9:05 AM  FROM: XXXXXXXXXX  TO: PA DEPT  P.003/003\nDRIFT PHARMACY (fictional) MED LIST\nPatient: Samir Holt (fictional)\nDrug | Dose | Route | Freq | Start | Status\nezetimibe | 10 mg | PO | daily | 02/02/2025 | current\nmetoprolol | 50 mg | PO | daily | 11/20/2024 | current\naspirin | 81 mg | PO | daily | 11/20/2024 | current\nevolocumab | 420 mg | SC | monthly | pending | requested\nHandwritten note: patient asked about monthly.\nEnd. Keel Cardiology (fictional). 3 pages.",
+   "variation_notes": "The form asks for 140 mg every 2 weeks while the medication list asks for 420 mg monthly, and the only recent LDL was drawn after the request.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Patient: Samir Holt (fictional) Age: 59 years"
+     ],
+     "reason": "The form states the patient is 59 years old."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Indication: established atherosclerotic",
+      "cardiovascular disease, prior myocardial",
+      "infarction, reason for this request"
+     ],
+     "reason": "The form names established atherosclerotic cardiovascular disease with prior myocardial infarction as the reason for this request."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Request date: 05/18/2026",
+      "LDL-C | 98 mg/dL | H | <100 | 06/02/2026",
+      "Comment: 06/02/2026 draw is after the request.",
+      "LDL-C | 164 mg/dL | H | <100 | 11/20/2024"
+     ],
+     "reason": "LDL-C 98 mg/dL was collected on 06/02/2026, after the 05/18/2026 request, and the 11/20/2024 result is older than 180 days."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The medication list shows ezetimibe, metoprolol, and aspirin, with no atorvastatin or rosuvastatin trial."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Form sig: 140 mg SC every 2 weeks",
+      "evolocumab | 420 mg | SC | monthly | pending | requested"
+     ],
+     "reason": "The form requests 140 mg every 2 weeks while the medication list requests 420 mg monthly."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-12",
+   "criteria_id": "pcsk9",
+   "render": "fax-noise",
+   "text": "10/28/2026  2:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/003\nCOVER MARL CLINIC (fictional)\nTo: Lipid PA, Stoneharbor Plan (fictional)\nFrom: Marl Clinic (fictional)\nRe: evolocumab, Juni Park (fictional)\nMember ID: XXXXXXXX Pages: 3\nRequest date: 10/28/2026\n---- PA FORM ----\nPatient: Juni Park (fictional) Age: 16 years\nPrescriber: Dr. Omar Velez (fictional)\nClinic: Marl Clinic (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: evolocumab\nSig: 140 mg subQ Q2W\nIndication: hypercholesterolemia\n[x] New start\nAtorvastatin 10 mg PO daily\nStart 02/01/2026 stop 04/01/2026\nRestarted 04/20/2026, still taking\nPharmacy: Briar Pharmacy (fictional)\n<<page>>\n10/28/2026  2:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/003\nMARL CLINIC (fictional) EHR NOTE\nPatient: Juni Park (fictional) MRN: XXXXXXXX\nVisit: 10/28/2026 Dr. Omar Velez (fictional)\nS: Mother wants cholesterol treatment.\n   Family history: father died of a myocardial\n   infarction. Patient denies chest pain.\nO: Exam benign. Labs on the next page.\nA: Hypercholesterolemia is the reason for this\n   evolocumab request.\nPROBLEM LIST (copied forward, not reassessed)\n1. Coronary artery disease\n2. Hypertension\nP: Continue atorvastatin 10 mg PO daily.\n   Evolocumab 140 mg subQ every 2 weeks.\nAddendum 10/28/2026 Dr. Omar Velez (fictional):\nPill was stopped in April and restarted; dose\nhas stayed 10 mg daily the whole time.\n<<page>>\n10/28/2026  2:05 PM  FROM: XXXXXXXXXX  TO: PA DEPT  P.003/003\nBRIAR LAB (fictional) REPORT\nPatient: Juni Park (fictional) MRN: XXXXXXXX\nTest | Result | Flag | Range | Collected\nLDL-C | 160 mg/dL | H | <100 | 01/20/2026\nLDL-C | 91 mg/dL | H | <100 | 09/04/2026\nHDL | 52 mg/dL | n/a | >40 | 09/04/2026\nComment: 01/20/2026 is before atorvastatin.\nHandwritten note: mom says cholestrerol is high.\nPer call with pt: still taking the 10 mg pill.\nCopied-forward: dental cleaning overdue.\nEnd. Marl Clinic (fictional). 3 pages.",
+   "variation_notes": "Atorvastatin 10 mg was stopped and restarted, the patient is 16, and coronary disease appears only on a copied-forward problem list.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Patient: Juni Park (fictional) Age: 16 years"
+     ],
+     "reason": "The form states the patient is 16 years old, which is under 18."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Indication: hypercholesterolemia",
+      "A: Hypercholesterolemia is the reason for this",
+      "   evolocumab request.",
+      "PROBLEM LIST (copied forward, not reassessed)",
+      "1. Coronary artery disease"
+     ],
+     "reason": "Hypercholesterolemia is named as the reason for the request, while coronary artery disease appears only on a copied-forward problem list."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Request date: 10/28/2026",
+      "LDL-C | 91 mg/dL | H | <100 | 09/04/2026"
+     ],
+     "reason": "LDL-C 91 mg/dL on 09/04/2026 is at least 70 mg/dL and within 180 days before the 10/28/2026 request."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Atorvastatin 10 mg PO daily",
+      "Start 02/01/2026 stop 04/01/2026",
+      "Restarted 04/20/2026, still taking",
+      "P: Continue atorvastatin 10 mg PO daily.",
+      "has stayed 10 mg daily the whole time."
+     ],
+     "reason": "Atorvastatin is documented at 10 mg daily, below high-intensity, including across a stop and restart."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Sig: 140 mg subQ Q2W",
+      "   Evolocumab 140 mg subQ every 2 weeks."
+     ],
+     "reason": "The form and the note both request evolocumab 140 mg every 2 weeks."
+    }
+   ],
+   "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-13",
+   "criteria_id": "glp1-t2d",
+   "render": "clean",
+   "text": "10/14/2026 09:12  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\n======================================================================\nPRIOR AUTHORIZATION FAX TRANSMISSION - URGENT REVIEW REQUESTED\nSummit Internal Med (fictional) | Tel: XXXXXXXXXX | Fax: XXXXXXXXXX\nDate: 10/14/2026 | Total Pages: 2 | Attention: Pharmacy PA Department\nPatient: Harlan Jenks (fictional) | DOB: XX/XX/XXXX (Age: 52)\nMember ID: XXXXXXXX | Group: XXXXXXXX | Dr. Brenda Vance, MD (fictional)\n----------------------------------------------------------------------\nMEDICATION REQUEST FORM - GLP-1 RECEPTOR AGONIST\nRequested Drug: Ozempic (semaglutide)\nRequested Dose & Sig: 0.5 mg SQ weekly\nQuantity: 1 pen (2 mL) per 28 days | Refills: 3\nIndication / Reason for Request: [x] Type 2 Diabetes Mellitus  [ ] Other\nICD-10 Code: E11.9 (Type 2 diabetes mellitus without complications)\nCurrent HbA1c: 8.8% (collected 09/18/2026)\nPrior Metformin Trial:\n  - Metformin 1000 mg PO BID from 03/10/2026 to present (>6 months)\n  - Pre-treatment A1c: 9.2% (03/02/2026)\n  - Post-treatment A1c: 8.8% (09/18/2026) - persistent hyperglycemia\nNote to reviewer: Metformin 1000 mg BID failed to achieve glycemic goal.\nPrescriber Signature: Dr. Brenda Vance, MD (fictional)  Date: 10/14/2026\n<<page>>\n10/14/2026 09:12  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nSummit Internal Med (fictional) - OUTPATIENT PROGRESS NOTE\nPatient: Harlan Jenks (fictional) | Age: 52 | Sex: M | Date: 09/18/2026\nProvider: Dr. Brenda Vance, MD (fictional) | MRN: XXXXXXXX\n----------------------------------------------------------------------\nSUBJECTIVE: 52yo male with type 2 diabetes mellitus returns for follow-up.\nReports taking metformin 1000 mg twice daily with meals consistently.\nDenies hypoglycemic episodes. Denies gastrointestinal side effects.\nHome blood glucose logs run 160-220 mg/dL fasting.\nCURRENT MEDICATIONS:\n1. Metformin 1000 mg oral tablet, 1 tab PO BID with meals (start 03/10/2026)\n2. Lisinopril 20 mg PO daily\n3. Atorvastatin 20 mg PO daily\nOBJECTIVE:\nBP: 128/78 | HR: 72 | Wt: 218 lbs | BMI: 31.4 kg/m2\nLAB RESULTS (Summit Labs (fictional), collected 09/18/2026):\n  Hemoglobin A1c: 8.8 %  [HIGH]  (Ref: 4.0 - 5.6 %)\n  Fasting Glucose: 174 mg/dL  [HIGH]  (Ref: 70 - 99 mg/dL)\nASSESSMENT & PLAN:\n1. Type 2 diabetes mellitus, uncontrolled on oral monotherapy.\n   - HbA1c remains elevated at 8.8% despite >6 months of metformin.\n   - Pre-metformin baseline A1c was 9.2% on 03/02/2026.\n   - Initiate Ozempic (semaglutide) 0.5 mg SQ weekly for glycemic control.\n   - Continue metformin 1000 mg PO BID.\nElectronically signed: Dr. Brenda Vance, MD (fictional) 09/18/2026 15:30",
+   "variation_notes": "Straightforward submission where all five criteria are completely met across the PA form and clinic note.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Patient: Harlan Jenks (fictional) | DOB: XX/XX/XXXX (Age: 52)"
+     ],
+     "reason": "The patient is documented to be 52 years of age, satisfying the adult requirement."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Indication / Reason for Request: [x] Type 2 Diabetes Mellitus  [ ] Other"
+     ],
+     "reason": "Type 2 diabetes mellitus is explicitly marked as the requested indication."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Current HbA1c: 8.8% (collected 09/18/2026)"
+     ],
+     "reason": "An A1c result of 8.8% was collected on 09/18/2026, which is within 180 days before the 10/14/2026 request date."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "  - Metformin 1000 mg PO BID from 03/10/2026 to present (>6 months)",
+      "  - Pre-treatment A1c: 9.2% (03/02/2026)",
+      "  - Post-treatment A1c: 8.8% (09/18/2026) - persistent hyperglycemia"
+     ],
+     "reason": "Metformin at 1000 mg BID was taken for over 90 days with baseline A1c of 9.2% and follow-up A1c of 8.8% remaining at or above 7.0%."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Requested Dose & Sig: 0.5 mg SQ weekly"
+     ],
+     "reason": "The requested semaglutide dose matches the required 0.5 mg weekly."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-14",
+   "criteria_id": "glp1-t2d",
+   "render": "fax-noise",
+   "text": "11/22/2026 14:02  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\nNORTHRIDGE ENDOCRINE ASSOCIATES (fictional) | FAX: XXXXXXXXXX\nPRIOR AUTHORIZATION DRUG REQUEST FORM\nRequest Date: 11/12/2026 | Member ID: XXXXXXXX | Group #: XXXXXXXX\nPatient Name: Arthur Pendelton (fictional) | Age: 58 | Sex: M\nPrescriber: Dr. Robert K. Lang, MD (fictional) | NPI: XXXXXXXXXX\n----------------------------------------------------------------------\nDRUG REQUEST INFORMATION\nDrug Name Requested: Ozempic (semaglutide subcutaneous solution)\nRequested Dose: 1.0 mg weekly SQ\nDirections for Use: Inject 1.0 mg subcutaneously once every 7 days\nPrimary Diagnosis for this Request: Suspected T2D, r/o type 2 diabetes\nICD-10 Code: R73.03 (Prediabetes)\nRelevant Lab: HbA1c drawn 11/20/2026, see attached lab report\nMetformin Status: Patient never prescribed metformin; started on SU\nClinical Rationale: Patient requires GLP-1 therapy for elevated sugars\nPrescriber Signature: Dr. Robert K. Lang, MD (fictional)  11/12/2026\n<<page>>\n11/22/2026 14:02  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nNORTHRIDGE ENDOCRINE ASSOCIATES (fictional) | CLINICAL ATTACHMENTS\nPatient: Arthur Pendelton (fictional) | Age: 58 | MRN: XXXXXXXX\n----------------------------------------------------------------------\nLAB REPORT - QUILLMOOR DIAGNOSTICS (fictional)\nSpecimen ID: XXXXXXXX | Collected: 11/20/2026 08:30 | Reported: 11/21/2026\nTest Name             | Result | Units | Flag | Reference Interval\n----------------------|--------|-------|------|-------------------\nHemoglobin A1c        | 8.1    | %     | H    | 4.8 - 5.6\nEstimated Avg Glucose | 186    | mg/dL | H    | 70 - 126\n----------------------------------------------------------------------\nMEDICATION DISPENSE & ORDER HISTORY\nDrug Name        | Dose    | Freq  | Start Date | Stop Date  | Status\n-----------------|---------|-------|------------|------------|--------\nGlimepiride      | 2 mg    | Daily | 05/01/2026 | 11/10/2026 | Stopped\nLisinopril       | 10 mg   | Daily | 01/15/2025 | Current    | Active\nOmeprazole       | 20 mg   | Daily | 03/22/2025 | Current    | Active\n----------------------------------------------------------------------\nNurse note: Per call with pt, pt states glimepiride causes afternoon\nshakiness; pt confirms no hx of metformin use. Chart reviewed by\nNurse: Clara Higgins, RN (fictional) 11/12/2026.",
+   "variation_notes": "The diagnosis is only suspected/rule-out, the attached A1c was drawn after the request date, the dose is 1.0 mg, and glimepiride was tried instead of metformin.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Patient Name: Arthur Pendelton (fictional) | Age: 58 | Sex: M"
+     ],
+     "reason": "The patient is documented as 58 years of age."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Primary Diagnosis for this Request: Suspected T2D, r/o type 2 diabetes"
+     ],
+     "reason": "Type 2 diabetes is documented only as a suspected or rule-out diagnosis rather than an established condition."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Request Date: 11/12/2026 | Member ID: XXXXXXXX | Group #: XXXXXXXX",
+      "Specimen ID: XXXXXXXX | Collected: 11/20/2026 08:30 | Reported: 11/21/2026",
+      "Hemoglobin A1c        | 8.1    | %     | H    | 4.8 - 5.6"
+     ],
+     "reason": "The A1c specimen collection date of 11/20/2026 is dated after the request date of 11/12/2026."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "There is no documented trial of metformin, only a prior trial of glimepiride."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Requested Dose: 1.0 mg weekly SQ"
+     ],
+     "reason": "The requested dose is 1.0 mg weekly instead of the required 0.5 mg weekly."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-15",
+   "criteria_id": "glp1-t2d",
+   "render": "choppy",
+   "text": "08/18/2026 10:14  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\nVALLEY PEDIATRIC & ADOLESCENT SPECIALTY CENTER (fictional)\n500 Xxxxxxxx Way, Xxxxx, XX XXXXX | Tel: XXXXXXXXXX | Fax: XXXXXXXXXX\n----------------------------------------------------------------------\nPRIOR AUTHORIZATION REQUEST & LETTER OF MEDICAL NECESSITY\nDate of Request: 08/18/2026 | Member ID: XXXXXXXX | Group: XXXXXXXX\nPatient Name: Lior Gallant (fictional) | Age: 17 years old\nPrescriber: Dr. Evelyn Reed, MD (fictional) | Specialty: Endocrinology\n----------------------------------------------------------------------\nRE: Request for Ozempic (semaglutide)\nIndication: Type 2 Diabetes Mellitus (ICD-10: E11.69)\nRequested Dose: [ BLANK ] | Frequency: once weekly\nDear Reviewer,\nI am writing to request prior authorization for Ozempic for Lior Gallant\n(fictional), a 17-year-old patient under my care for type 2 diabetes.\nLiam was initiated on metformin 1000 mg PO BID on 02/10/2026 with baseline\nHbA1c of 9.4%. After 4 months of compliant therapy, repeat HbA1c on\n06/15/2026 decreased to 6.7%. However, due to recent erratic fasting\nglucose levels and concern for weight gain, we are requesting Ozempic.\nMost recent clinic HbA1c was collected on 07/28/2026 (see clinic note).\nSincerely,\nDr. Evelyn Reed, MD (fictional)\n<<page>>\n08/18/2026 10:14  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nVALLEY PEDIATRIC & ADOLESCENT SPECIALTY CENTER (fictional)\nCLINIC PROGRESS NOTE - ENDOCRINOLOGY\nPatient: Lior Gallant (fictional) | Age: 17 | MRN: XXXXXXXX\nDate of Visit: 07/28/2026 | Provider: Dr. Evelyn Reed, MD (fictional)\n----------------------------------------------------------------------\nDIAGNOSIS: Type 2 diabetes mellitus without acute complications (E11.9).\nHISTORY OF PRESENT ILLNESS:\n17yo male with established type 2 diabetes mellitus returns for follow-up.\nPatient completed 4-month course of metformin 1000 mg BID (02/10/2026 to\n06/15/2026). Baseline A1c was 9.4% (02/05/2026). Follow-up A1c was 6.7% on\n06/15/2026, achieving goal. Metformin was discontinued due to patient\npreference. Fasting blood glucoses have since rebounded.\nLAB RESULTS - IN-CLINIC TESTING (07/28/2026):\nHbA1c was initially transcribed as 8.9%, corrected to 8.4% per repeat run.\nResult: Hemoglobin A1c 8.4% (Collected: 07/28/2026).\nGlucose: 168 mg/dL.\nMEDICATION ORDER:\nDrug: Semaglutide (Ozempic) | Sig: SubQ weekly | Dispense: 1 pen\nNote: Dose field left blank pending insurance approval and titration plan.\n----------------------------------------------------------------------\nAddendum: Dr. Evelyn Reed, MD (fictional) 07/28/2026 16:15 - A1c\ntranscription corrected in laboratory interface; verified 8.4%.",
+   "variation_notes": "The patient is a 17-year-old minor, follow-up A1c on metformin achieved 6.7% (at goal), a corrected A1c is documented, and the dose field is left blank.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Patient Name: Lior Gallant (fictional) | Age: 17 years old"
+     ],
+     "reason": "The patient is stated to be 17 years old, which is under the adult age requirement of 18."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Indication: Type 2 Diabetes Mellitus (ICD-10: E11.69)"
+     ],
+     "reason": "Type 2 diabetes mellitus is documented as the specific indication for this request."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Result: Hemoglobin A1c 8.4% (Collected: 07/28/2026)."
+     ],
+     "reason": "An A1c result of 8.4% is documented on 07/28/2026, which is within 180 days before the 08/18/2026 request."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Patient completed 4-month course of metformin 1000 mg BID (02/10/2026 to",
+      "06/15/2026). Baseline A1c was 9.4% (02/05/2026). Follow-up A1c was 6.7% on",
+      "06/15/2026, achieving goal. Metformin was discontinued due to patient"
+     ],
+     "reason": "The follow-up A1c after 4 months of metformin was 6.7%, which is already at goal (<7.0%)."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The dose field for semaglutide was left blank on the request form and progress note."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-16",
+   "criteria_id": "glp1-t2d",
+   "render": "smudge",
+   "text": "09/05/2026 11:23  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\n======================================================================\nCLEARVIEW METABOLIC HEALTH (fictional) | FAX TRANSMISSION\nTO: Prior Authorization Unit | FAX: XXXXXXXXXX\nFROM: Dr. Samuel Park, MD (fictional) | CLINIC PHONE: XXXXXXXXXX\nDATE: 09/05/2026 | TOTAL PAGES: 2\nPATIENT: Beatrice Holloway (fictional) | ID: XXXXXXXX | GRP: XXXXXXXX\n----------------------------------------------------------------------\nPRIOR AUTHORIZATION REQUEST FORM - INCRETIN THERAPY\nRequested Drug: Ozempic (semaglutide)\nRequested Sig: 0.5 mg subcutaneously once weekly\nReason for Request / Requested Indication:\n  [ ] Type 2 Diabetes Mellitus\n  [x] Morbid Obesity with Metabolic Syndrome (BMI 38.2)\nPast Medical History:\n  - Essential hypertension (I10)\n  - Type 2 diabetes mellitus (E11.9) - per past records\n  - Dyslipidemia (E78.5)\nPrior Therapies Tried:\n  - Metformin: Patient intolerant to metformin (no reason documented)\n  - Lifestyle modification and dietary counseling x 6 months\nHandwritten note: Reviewer please check prior metformin intolerance.\nProvider Signature: Dr. Samuel Park, MD (fictional) 09/05/2026\n<<page>>\n09/05/2026 11:23  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nOAKRIDGE SPECIALTY PHARMACY (fictional) | RX INTAKE & TRIAGE SHEET\nPatient: Beatrice Holloway (fictional) | Rx#: XXXXXXXX | Date: 09/04/2026\nPrescriber: Dr. Samuel Park, MD (fictional) | NPI: XXXXXXXXXX\n----------------------------------------------------------------------\nPRESCRIPTION DETAILS AS TRANSMITTED:\nRx Item: Semaglutide 2 mg/3 mL (Ozempic) pen injector\nDirections: Inject 0.25 mg SQ once weekly for 4 weeks then re-evaluate\nQuantity: 1 pen (3 mL) | Refills: 0 | Days Supply: 28\nPrescriber Diagnosis Stated on Rx: Obesity (E66.01)\n----------------------------------------------------------------------\nCLINICAL INTAKE NOTES (Recorded by Pharmacy Staff, Oakridge (fictional)):\n- Intake call with clinic: Confirmed patient cannot tolerate metformin.\n  Specific adverse event or contraindication reason not provided in chart.\n- No HbA1c lab result found in medical records transferred to pharmacy.\n- Current weight: 236 lbs. Height: 66 in.\n- Prescriber office confirms request is for weight reduction therapy.\nIntake Pharmacist: Karen Price, PharmD (fictional) 09/04/2026",
+   "variation_notes": "None of the criteria are met: age is absent, T2D is only in past history while obesity is requested, A1c is missing, metformin intolerance lacks a reason, and doses conflict.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "No patient age or date of birth is documented anywhere in the packet."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Reason for Request / Requested Indication:",
+      "  [x] Morbid Obesity with Metabolic Syndrome (BMI 38.2)",
+      "  - Type 2 diabetes mellitus (E11.9) - per past records"
+     ],
+     "reason": "Type 2 diabetes appears only on a past medical history list while the stated requested indication is morbid obesity."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "No A1c lab result is documented in the packet."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "  - Metformin: Patient intolerant to metformin (no reason documented)",
+      "- Intake call with clinic: Confirmed patient cannot tolerate metformin.",
+      "  Specific adverse event or contraindication reason not provided in chart."
+     ],
+     "reason": "Metformin intolerance is asserted without documenting any clinical reason or specific adverse event."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Requested Sig: 0.5 mg subcutaneously once weekly",
+      "Directions: Inject 0.25 mg SQ once weekly for 4 weeks then re-evaluate"
+     ],
+     "reason": "The PA request form specifies 0.5 mg weekly while the pharmacy intake prescription specifies 0.25 mg weekly."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-17",
+   "criteria_id": "biologic-psoriasis",
+   "render": "annotations",
+   "text": "06/22/2026 15:40  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\nDERMATOLOGY ASSOCIATES OF THE VALLEY (fictional) | FAX: XXXXXXXXXX\nBIOLOGIC PRIOR AUTHORIZATION FORM - PSORIASIS\nDate: 06/22/2026 | Member ID: XXXXXXXX | Group: XXXXXXXX\nPatient: Raylan Cheung (fictional) | DOB: XX/XX/XXXX (Age: 45) | Sex: M\nPrescriber: Dr. Teresa Gomez, MD (fictional) | NPI: XXXXXXXXXX\n----------------------------------------------------------------------\nREQUESTED MEDICATION:\nMedication: Humira (adalimumab) 40 mg/0.8 mL Pen\nRequested Maintenance Dose: 40 mg SQ every other week (q14d)\n----------------------------------------------------------------------\nCLINICAL INFORMATION:\nRequested Indication: Moderate-to-severe plaque psoriasis (L40.0)\nCurrent Body Surface Area (BSA) Involved: 16% (measured 05/28/2026)\nAffected Areas: Extensor surfaces of elbows, knees, scalp, back\nPrior Systemic Therapy:\n- Methotrexate 15 mg PO weekly from 01/10/2026 to 05/10/2026 (16 weeks)\n  * Baseline BSA: 20% on 01/05/2026\n  * Post-treatment BSA: 2.0% on 05/10/2026 (achieved clearance)\nHandwritten note: Please note patient flare after tapering steroids.\n----------------------------------------------------------------------\nEXCERPT OF EARLIER DENIAL LETTER (Ref # XXXXXXXX, dated 03/15/2026):\n\"Coverage for Skyrizi was denied: Step therapy requires trial of adalimumab\nprior to consideration of preferred interleukin inhibitors.\"\nPrescriber Signature: Dr. Teresa Gomez, MD (fictional) 06/22/2026\n<<page>>\n06/22/2026 15:40  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nDERMATOLOGY ASSOCIATES OF THE VALLEY (fictional) - ENCOUNTER NOTE\nPatient: Raylan Cheung (fictional) | Age: 45 | MRN: XXXXXXXX\nEncounter Date: 05/28/2026 | Provider: Dr. Teresa Gomez, MD (fictional)\n----------------------------------------------------------------------\nREASON FOR VISIT: Severe flare of moderate-to-severe plaque psoriasis.\nHISTORY: 45yo male with long-standing moderate-to-severe plaque psoriasis.\nPatient was on oral methotrexate 15 mg weekly which cleared plaques\ndown to BSA 2.0% as of 05/10/2026. Medication held due to transaminitis.\nSince stopping, patient has experienced a rapid rebound of plaques.\nPHYSICAL EXAMINATION (05/28/2026):\nSkin: Well-demarcated erythematous plaques with thick silvery scale\non elbows, knees, back, and scalp. Total BSA involvement is 16%.\nASSESSMENT & PLAN:\n1. Moderate-to-severe plaque psoriasis - recurrent flaring.\n   - Prescribe Humira (adalimumab) 40 mg subcutaneous injection weekly.\n   - Submit PA for adalimumab maintenance.\nDr. Teresa Gomez, MD (fictional) - Signed electronically 05/28/2026",
+   "variation_notes": "The request form and clinic note disagree on dose frequency (every other week vs weekly) and post-methotrexate BSA reached 2.0% (at goal).",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Patient: Raylan Cheung (fictional) | DOB: XX/XX/XXXX (Age: 45) | Sex: M"
+     ],
+     "reason": "The patient is documented as 45 years of age."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Requested Indication: Moderate-to-severe plaque psoriasis (L40.0)"
+     ],
+     "reason": "Moderate-to-severe plaque psoriasis is explicitly named as the requested indication."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Current Body Surface Area (BSA) Involved: 16% (measured 05/28/2026)",
+      "on elbows, knees, back, and scalp. Total BSA involvement is 16%."
+     ],
+     "reason": "BSA involvement of 16% is documented on 05/28/2026, which is within 180 days of the 06/22/2026 request and exceeds 10%."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "- Methotrexate 15 mg PO weekly from 01/10/2026 to 05/10/2026 (16 weeks)",
+      "  * Baseline BSA: 20% on 01/05/2026",
+      "  * Post-treatment BSA: 2.0% on 05/10/2026 (achieved clearance)"
+     ],
+     "reason": "The post-treatment BSA reached 2.0%, which is at or below the 3% goal."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Requested Maintenance Dose: 40 mg SQ every other week (q14d)",
+      "   - Prescribe Humira (adalimumab) 40 mg subcutaneous injection weekly."
+     ],
+     "reason": "The PA form requests 40 mg every other week, but the clinic note prescribes 40 mg weekly."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-18",
+   "criteria_id": "biologic-psoriasis",
+   "render": "low-contrast",
+   "text": "10/18/2026 13:10  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\nMETRO DERMATOLOGY CENTER (fictional) | FAX COVER & PA TRANSMISSION\nDATE: 10/18/2026 | TO: PRIOR AUTH REVIEW UNIT | FAX: XXXXXXXXXX\nPATIENT: Cynthia Alvarez (fictional) | MEMBER ID: XXXXXXXX\nPRESCRIBER: Dr. Nathan Cross, MD (fictional) | NPI: XXXXXXXXXX\n----------------------------------------------------------------------\nSPECIALTY MEDICATION PRIOR AUTHORIZATION FORM\nRequest Date: 10/18/2026\nMedication Requested: Humira (adalimumab)\nDose & Administration: 40 mg SC every other week (q14d)\nIndication for Therapy: Chronic plaque psoriasis, mild to localized\nICD-10: L40.0 (Psoriasis vulgaris)\nClinical Documentation of Involvement:\n  - Body Surface Area (BSA): 11% (Exam Date: 02/20/2026)\nPrevious Medications Tried:\n  - Betamethasone dipropionate 0.05% ointment BID x 12 weeks\n  - Calcipotriene 0.005% cream daily x 8 weeks\n  - Systemic methotrexate: None. Patient has never taken methotrexate.\nNote to reviewer: Patient failed topicals and requests biologic therapy.\nPrescriber Signature: Dr. Nathan Cross, MD (fictional) 10/18/2026\n<<page>>\n10/18/2026 13:10  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nMETRO DERMATOLOGY CENTER (fictional) | TELEPHONE & ENCOUNTER NOTE\nPatient: Cynthia Alvarez (fictional) | MRN: XXXXXXXX | Date: 10/18/2026\n----------------------------------------------------------------------\nCLINICAL ENCOUNTER SUMMARY (Visit Date: 02/20/2026):\nHistory: Patient seen for follow-up of chronic plaque psoriasis.\nLesions localized mainly to elbows and shins. Denies joint pain.\nPhysical Exam (02/20/2026):\nErythematous scaly patches on bilateral knees and elbows.\nDocumented Body Surface Area: 11% involvement.\nPlan from 02/20/2026: Continue topical regimens. Re-evaluate in fall.\n----------------------------------------------------------------------\nNURSE TELEPHONE NOTE (10/17/2026 14:20):\nNurse note: Per call with pt, pt reports frustration with topical creams\nand wishes to start systemic biologic. Chart reviewed: no hx of\nmethotrexate or other oral immunosuppressive therapy documented.\nMessage relayed to Dr. Nathan Cross, MD (fictional). PA form generated.\nNurse: Amanda Bell, RN (fictional) 10/17/2026",
+   "variation_notes": "Age is missing, plaque psoriasis severity is mild/unspecified, BSA measurement is 240 days old, and no methotrexate trial took place.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "There is no patient age or date of birth documented in the packet."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Indication for Therapy: Chronic plaque psoriasis, mild to localized",
+      "History: Patient seen for follow-up of chronic plaque psoriasis."
+     ],
+     "reason": "The plaque psoriasis is described as mild to localized rather than moderate-to-severe."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "needs_review",
+     "evidence_lines": [
+      "  - Body Surface Area (BSA): 11% (Exam Date: 02/20/2026)",
+      "Documented Body Surface Area: 11% involvement."
+     ],
+     "reason": "The BSA was measured on 02/20/2026, which is 240 days before the 10/18/2026 request date and exceeds the 180-day limit."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The patient has only tried topical agents and has never had a trial of methotrexate."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Dose & Administration: 40 mg SC every other week (q14d)"
+     ],
+     "reason": "The requested maintenance dose is adalimumab 40 mg every other week."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-19",
+   "criteria_id": "biologic-psoriasis",
+   "render": "rotate-7",
+   "text": "11/10/2026 08:45  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\nLAKESIDE CLINICAL DERMATOLOGY (fictional) | LETTER OF MEDICAL NECESSITY\nDATE: 11/10/2026 | TO: Prior Authorization Department | FAX: XXXXXXXXXX\nPATIENT: Gregory Vance (fictional) | DOB: XX/XX/XXXX (Age: 39)\nMEMBER ID: XXXXXXXX | PRESCRIBER: Dr. Allison Hayes, MD (fictional)\n----------------------------------------------------------------------\nRE: Prior Authorization for Humira (adalimumab)\nIndication: Moderate-to-severe plaque psoriasis (ICD-10 L40.0)\nRequested Regimen: Adalimumab 80 mg SQ every 2 weeks\nDear Reviewer,\nI am requesting coverage of Humira 80 mg every 2 weeks for Gregory Vance\n(fictional), a 39-year-old male with moderate-to-severe plaque psoriasis.\nThe patient previously tried and failed methotrexate with inadequate\nresponse, but chart details regarding exact start dates and BSA scores\nfrom the outside clinic were unavailable at the time of transfer.\nMost recent clinical assessment documented body surface area of 12%.\nNote to reviewer: Requesting higher maintenance dose of 80 mg due to BMI.\nSincerely,\nDr. Allison Hayes, MD (fictional) | NPI: XXXXXXXXXX\n<<page>>\n11/10/2026 08:45  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nLAKESIDE CLINICAL DERMATOLOGY (fictional) | EHR PROGRESS NOTE & LABS\nPatient: Gregory Vance (fictional) | Age: 39 | MRN: XXXXXXXX\nDate: 11/10/2026 | Provider: Dr. Allison Hayes, MD (fictional)\n----------------------------------------------------------------------\nASSESSMENT: Moderate-to-severe plaque psoriasis, active flaring.\nCLINICAL EVALUATION RECORD:\nEvaluation Date | Parameter           | Finding  | Threshold\n----------------|---------------------|----------|----------\n05/06/2026      | Body Surface Area   | 12%      | >= 10%\n05/06/2026      | Plaque Morphology   | Thick    | Scaling\n11/10/2026      | TB QuantiFERON Gold | Negative | Negative\n----------------------------------------------------------------------\nMEDICATION TRIAL SUMMARY:\n1. Methotrexate: Chart notes \"failed methotrexate due to lack of efficacy\".\n   No specific dosage, baseline BSA, or follow-up BSA recorded.\n2. Topical clobetasol 0.05% cream: Minimal temporary improvement.\nPLAN:\nStart adalimumab 80 mg subcutaneous injection every 2 weeks.\nDr. Allison Hayes, MD (fictional) 11/10/2026 09:15",
+   "variation_notes": "The BSA date 05/06/2026 is ambiguous between May 6 (188 days, stale) and June 5 (158 days, valid) relative to the 11/10/2026 request, methotrexate trial lacks dates/values, and dose is 80 mg.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "PATIENT: Gregory Vance (fictional) | DOB: XX/XX/XXXX (Age: 39)"
+     ],
+     "reason": "The patient is documented as 39 years old."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Indication: Moderate-to-severe plaque psoriasis (ICD-10 L40.0)"
+     ],
+     "reason": "Moderate-to-severe plaque psoriasis is explicitly named as the requested indication."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "needs_review",
+     "evidence_lines": [
+      "05/06/2026      | Body Surface Area   | 12%      | >= 10%"
+     ],
+     "reason": "The numeric date 05/06/2026 is ambiguous without any resolving date on the page, and the two readings yield conflicting statuses (188 days stale vs 158 days valid)."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "The patient previously tried and failed methotrexate with inadequate",
+      "response, but chart details regarding exact start dates and BSA scores",
+      "from the outside clinic were unavailable at the time of transfer.",
+      "1. Methotrexate: Chart notes \"failed methotrexate due to lack of efficacy\".",
+      "   No specific dosage, baseline BSA, or follow-up BSA recorded."
+     ],
+     "reason": "The methotrexate trial is documented as a failure without doses, dates, or before-and-after BSA scores."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Requested Regimen: Adalimumab 80 mg SQ every 2 weeks"
+     ],
+     "reason": "The requested maintenance dose is 80 mg every 2 weeks instead of the required 40 mg every other week."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-20",
+   "criteria_id": "biologic-psoriasis",
+   "render": "turn-90",
+   "text": "07/15/2026 12:05  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\nWESTSIDE RHEUMATOLOGY & DERMATOLOGY (fictional) | PA SUBMISSION\nDATE OF FAX: 07/15/2026 | TO: Prior Authorization Unit | FAX: XXXXXXXXXX\nPatient Name: Douglas Miller (fictional) | Age: 51 | Gender: M\nMember ID: XXXXXXXX | Group: XXXXXXXX | Dr. Karen West, MD (fictional)\n----------------------------------------------------------------------\nPA DRUG REQUEST FORM - BIOLOGIC IMMUNOMODULATOR\nRequested Drug: Humira (adalimumab)\nRequested Maintenance Dose: [                      ]  Frequency: [    ]\nPrimary Indication for this Request:\n  [x] Psoriatic Arthritis with peripheral joint involvement (L40.50)\n  [ ] Moderate-to-severe Plaque Psoriasis (L40.0)\nRelevant Skin Involvement:\n  - Chronic plaque psoriasis noted in history, mild skin plaques\n  - BSA involved: 14% (Evaluated 06/08/2026)\nContraindications to Conventional DMARDs:\n  - Methotrexate is strictly contraindicated due to biopsy-proven\n    non-alcoholic cirrhosis and severe hepatic impairment (ALT 180 U/L).\nNote to reviewer: Patient requires biologic therapy due to liver disease.\nPrescriber Signature: Dr. Karen West, MD (fictional)  Date: 07/15/2026\n<<page>>\n07/15/2026 12:05  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nWESTSIDE RHEUMATOLOGY & DERMATOLOGY (fictional) | CLINICAL NOTE & LABS\nPatient: Douglas Miller (fictional) | Age: 51 | MRN: XXXXXXXX\nVisit Date: 06/08/2026 | Provider: Dr. Karen West, MD (fictional)\n----------------------------------------------------------------------\nCLINICAL ASSESSMENT: Psoriatic arthritis with peripheral joint disease.\nPast Medical History: Plaque psoriasis, NASH cirrhosis with hypertension.\nDERMATOLOGIC EXAM (06/08/2026):\nScattered erythematous scaly plaques on bilateral upper and lower limbs.\nCalculated total body surface area (BSA) involvement: 14%.\nLAB PANEL - LIVER FUNCTION & INFLAMMATORY (Collected 06/08/2026):\nTest           | Result | Units | Flag | Reference Interval\n---------------|--------|-------|------|-------------------\nALT (SGPT)     | 180    | U/L   | HIGH | 7 - 56\nAST (SGOT)     | 165    | U/L   | HIGH | 10 - 40\nTotal Bilirubin| 2.4    | mg/dL | HIGH | 0.2 - 1.2\nAlbumin        | 3.1    | g/dL  | LOW  | 3.5 - 5.0\n----------------------------------------------------------------------\nAddendum: Dr. Karen West, MD (fictional) 07/15/2026 11:30 - Confirmed\nhepatology consultation records reviewed; oral methotrexate contraindicated\ndue to advanced cirrhosis and elevated transaminases.",
+   "variation_notes": "Lab numeric date 06/08/2026 is settled as June 8 (not August 6) by later fax received date 07/15/2026, requested indication is psoriatic arthritis rather than moderate-to-severe plaque psoriasis, methotrexate is contraindicated with reason, and dose is blank.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Patient Name: Douglas Miller (fictional) | Age: 51 | Gender: M"
+     ],
+     "reason": "The patient is documented as 51 years of age."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Primary Indication for this Request:",
+      "  [x] Psoriatic Arthritis with peripheral joint involvement (L40.50)",
+      "  - Chronic plaque psoriasis noted in history, mild skin plaques"
+     ],
+     "reason": "The requested indication is psoriatic arthritis, with plaque psoriasis noted only as mild in past history."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "  - BSA involved: 14% (Evaluated 06/08/2026)",
+      "Calculated total body surface area (BSA) involvement: 14%."
+     ],
+     "reason": "The later received date 07/15/2026 settles 06/08/2026 as June 8, which is within 180 days and meets the 10% BSA threshold."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "  - Methotrexate is strictly contraindicated due to biopsy-proven",
+      "    non-alcoholic cirrhosis and severe hepatic impairment (ALT 180 U/L).",
+      "hepatology consultation records reviewed; oral methotrexate contraindicated",
+      "due to advanced cirrhosis and elevated transaminases."
+     ],
+     "reason": "Methotrexate contraindication is documented with a specific clinical reason (cirrhosis with severe hepatic impairment)."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The dose and frequency fields for adalimumab are left blank."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-21",
+   "criteria_id": "pcsk9",
+   "render": "clean",
+   "text": "10/24/2026 11:15  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\nCARDIOVASCULAR SPECIALISTS OF NORTH TEXAS (fictional)\n1200 Xxxxxxxx Blvd, Xxxxx, XX XXXXX | Tel: XXXXXXXXXX | Fax: XXXXXXXXXX\nPRIOR AUTHORIZATION TRANSMISSION - PCSK9 INHIBITOR\nDate: 10/24/2026 | Member ID: XXXXXXXX | Group ID: XXXXXXXX\nPatient: Walter Fitzgerald (fictional) | Age: 64 | Gender: Male\nPrescriber: Dr. Kenneth Sterling, MD (fictional) | NPI: XXXXXXXXXX\n----------------------------------------------------------------------\nMEDICATION REQUEST:\nRequested Drug: Repatha (evolocumab) SureClick autoinjector\nRequested Regimen: 140 mg subcutaneously every 2 weeks (q14d)\n----------------------------------------------------------------------\nCLINICAL INDICATION & HISTORY:\nIndication: Established ASCVD (history of STEMI with DES to LAD in 2024)\nICD-10 Code: I25.10 (Atherosclerotic heart disease of native artery)\nLipid Panel Results (Drawn 09/25/2026):\n  - Total Cholesterol: 210 mg/dL\n  - LDL-C: 128 mg/dL (Goal < 70 mg/dL for secondary prevention)\n  - HDL-C: 42 mg/dL | Triglycerides: 200 mg/dL\nPrior Statin Trial:\n  - Atorvastatin 80 mg daily PO taken from 03/15/2026 to present (>6 mos)\n  - Pre-treatment LDL-C: 182 mg/dL (03/01/2026)\n  - On-treatment follow-up LDL-C: 128 mg/dL (09/25/2026) (misses goal)\nNote to reviewer: Patient remains at very high cardiovascular risk.\nSignature: Dr. Kenneth Sterling, MD (fictional) 10/24/2026\n<<page>>\n10/24/2026 11:15  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nCARDIOVASCULAR SPECIALISTS OF NORTH TEXAS (fictional)\nPATIENT MEDICATION PROFILE & CLINICAL SUMMARY\nPatient: Walter Fitzgerald (fictional) | Age: 64 | MRN: XXXXXXXX\nDate: 10/24/2026 | Attending: Dr. Kenneth Sterling, MD (fictional)\n----------------------------------------------------------------------\nACTIVE MEDICATION ORDERS:\nMedication Name      | Dose    | Route | Frequency | Start Date | Status\n---------------------|---------|-------|-----------|------------|--------\nAtorvastatin calcium | 80 mg   | Oral  | Daily     | 03/15/2026 | Active\nAspirin EC           | 81 mg   | Oral  | Daily     | 01/10/2024 | Active\nMetoprolol succinate | 50 mg   | Oral  | Daily     | 01/10/2024 | Active\nEvolocumab (Repatha) | 420 mg  | SubQ  | Monthly   | 10/24/2026 | Pending\n----------------------------------------------------------------------\nCLINICAL PROGRESS NOTE EXCERPT (09/25/2026):\nAssessment: Established atherosclerotic cardiovascular disease with prior\nmyocardial infarction and percutaneous coronary intervention.\nHyperlipidemia not adequately controlled on high-intensity statin\n(atorvastatin 80 mg daily x 6 months). LDL-C remains elevated at\n128 mg/dL. Recommending addition of PCSK9 inhibitor therapy.",
+   "variation_notes": "Strong clinical documentation across age, ASCVD, labs, and statin trial, but the PA form (140 mg q2w) and active order list (420 mg monthly) conflict on dose.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Patient: Walter Fitzgerald (fictional) | Age: 64 | Gender: Male"
+     ],
+     "reason": "The patient is documented as 64 years of age."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Indication: Established ASCVD (history of STEMI with DES to LAD in 2024)"
+     ],
+     "reason": "Established ASCVD with prior myocardial infarction and stent is documented as the request indication."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "  - LDL-C: 128 mg/dL (Goal < 70 mg/dL for secondary prevention)"
+     ],
+     "reason": "An LDL-C of 128 mg/dL drawn on 09/25/2026 is within 180 days before the 10/24/2026 request and exceeds 70 mg/dL."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "  - Atorvastatin 80 mg daily PO taken from 03/15/2026 to present (>6 mos)",
+      "  - Pre-treatment LDL-C: 182 mg/dL (03/01/2026)",
+      "  - On-treatment follow-up LDL-C: 128 mg/dL (09/25/2026) (misses goal)"
+     ],
+     "reason": "Atorvastatin 80 mg daily was taken for >90 days with baseline LDL 182 mg/dL and post-treatment LDL 128 mg/dL remaining >= 70 mg/dL."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Requested Regimen: 140 mg subcutaneously every 2 weeks (q14d)",
+      "Evolocumab (Repatha) | 420 mg  | SubQ  | Monthly   | 10/24/2026 | Pending"
+     ],
+     "reason": "The request form specifies 140 mg every 2 weeks, but the attached medication profile specifies 420 mg monthly."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-22",
+   "criteria_id": "pcsk9",
+   "render": "fax-noise",
+   "text": "05/14/2026 16:30  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\nPREMIER CARDIOLOGY GROUP (fictional) | FAX: XXXXXXXXXX\nPRIOR AUTHORIZATION REQUEST - PCSK9 INHIBITOR\nDate: 05/14/2026 | Member ID: XXXXXXXX | Group: XXXXXXXX\nPatient Name: Gordie Benning (fictional) | Sex: M\nPrescriber: Dr. Patricia Neal, MD (fictional) | NPI: XXXXXXXXXX\n----------------------------------------------------------------------\nMEDICATION DETAILS:\nDrug Requested: Repatha (evolocumab)\nRequested Dose: [                      ]  Frequency: [               ]\n----------------------------------------------------------------------\nCLINICAL INDICATION:\nRequested Indication: Primary Hypercholesterolemia (ICD-10: E78.00)\nProblem List:\n  1. Atherosclerotic heart disease (I25.10) - diagnosed 2021\n  2. Essential hypertension (I10)\nMost Recent Lipid Panel (Lab Date: 04/20/2026):\n  - Total Cholesterol: 140 mg/dL\n  - LDL-C: 62 mg/dL\n  - HDL-C: 48 mg/dL | Triglycerides: 150 mg/dL\nStatin Regimen:\n  - Atorvastatin 20 mg PO daily from 11/01/2025 to present (>5 months)\nHandwritten note: Reviewer please note patient cannot take high statin.\nPrescriber Signature: Dr. Patricia Neal, MD (fictional) 05/14/2026\n<<page>>\n05/14/2026 16:30  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nPREMIER CARDIOLOGY GROUP (fictional) | ENCOUNTER NOTE & PRIOR DENIAL\nPatient: Gordie Benning (fictional) | MRN: XXXXXXXX | Date: 04/20/2026\nAttending: Dr. Patricia Neal, MD (fictional)\n----------------------------------------------------------------------\nHISTORY & ASSESSMENT:\nPatient presents for routine lipid evaluation. Denies chest pain.\nCurrently taking atorvastatin 20 mg daily. High-intensity statin\n(40-80 mg) not prescribed due to patient concern regarding myalgias.\nLab review from today shows LDL-C is 62 mg/dL.\nPLAN:\nRequest Repatha for additional LDL lowering. Maintain atorvastatin 20 mg.\n----------------------------------------------------------------------\nEXCERPT OF PRIOR PAYER DETERMINATION (Dated 01/18/2026):\n\"Denial Notice: Prior authorization for Praluent 75 mg was denied due to\nlack of trial of high-intensity statin therapy (atorvastatin 40-80 mg or\nrosuvastatin 20-40 mg daily).\"",
+   "variation_notes": "None of the criteria are met: patient age is missing, ASCVD appears only on the problem list, LDL-C is 62 mg/dL, statin trial was low-intensity (20 mg), and requested dose is blank.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "No patient age or date of birth is documented anywhere in the packet."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Requested Indication: Primary Hypercholesterolemia (ICD-10: E78.00)",
+      "  1. Atherosclerotic heart disease (I25.10) - diagnosed 2021"
+     ],
+     "reason": "ASCVD is documented only in a problem list, while the stated reason for the request is primary hypercholesterolemia."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "needs_review",
+     "evidence_lines": [
+      "  - LDL-C: 62 mg/dL"
+     ],
+     "reason": "The documented LDL-C is 62 mg/dL, which falls below the 70 mg/dL threshold."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "  - Atorvastatin 20 mg PO daily from 11/01/2025 to present (>5 months)"
+     ],
+     "reason": "Atorvastatin 20 mg daily does not qualify as high-intensity statin therapy (minimum 40 mg required)."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The evolocumab dose and frequency fields are left blank."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-23",
+   "criteria_id": "pcsk9",
+   "render": "turn-180",
+   "text": "10/15/2026 14:22  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\nUNIVERSITY CARDIOLOGY CLINIC (fictional) | FAX COVER SHEET\nDATE: 08/10/2026 | TO: PRIOR AUTH DEPARTMENT | FAX: XXXXXXXXXX\nPATIENT: Leon Sarno (fictional) | DOB: XX/XX/XXXX (Age: 62) | M\nMEMBER ID: XXXXXXXX | PRESCRIBER: Dr. Miriam Vance, MD (fictional)\n----------------------------------------------------------------------\nPRIOR AUTHORIZATION REQUEST FORM - PCSK9 INHIBITORS\nOfficial Request Date: 10/15/2026\nMedication Requested: Repatha (evolocumab)\nDose & Route: 140 mg SC every 2 weeks\nDiagnosis / Reason for Request:\n  Suspected ASCVD, rule out coronary artery disease (R94.31)\nClinical Documentation:\n  - Patient experiencing exertional dyspnea, stress test equivocal\n  - Recent LDL-C: 142 mg/dL (Collected 09/01/2026)\nPrior Statin Therapy:\n  - Statin trial: NONE. Patient not on a statin.\n  - Non-statin trial: Ezetimibe 10 mg daily x 6 months\nPrescriber Signature: Dr. Miriam Vance, MD (fictional) 10/15/2026\n<<page>>\n10/15/2026 14:22  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nUNIVERSITY CARDIOLOGY CLINIC (fictional) | LABORATORY REPORT & NOTES\nPatient: Leon Sarno (fictional) | Age: 62 | MRN: XXXXXXXX\n----------------------------------------------------------------------\nLAB PANEL: COMPREHENSIVE LIPID PROFILE\nLab Order Date: 09/01/2026 | Performing Lab: Uplands Health (fictional)\nTest Component     | Value | Units | Flag | Reference Range\n-------------------|-------|-------|------|----------------\nCholesterol, Total | 234   | mg/dL | HIGH | 100 - 199\nTriglycerides      | 188   | mg/dL | HIGH | 0 - 149\nHDL Cholesterol    | 39    | mg/dL | LOW  | > 40\nLDL-Cholesterol    | 142   | mg/dL | HIGH | < 100\n----------------------------------------------------------------------\nNurse note: Patient clarified no statin taken due to personal aversion\nto statins. Chart review confirms no prescription history for\natorvastatin or rosuvastatin. Only ezetimibe 10 mg was dispensed.\nNurse: Jason Miller, RN (fictional) 10/15/2026",
+   "variation_notes": "The cover sheet (08/10/2026) and request form (10/15/2026) have conflicting request dates, diagnosis is suspected ASCVD, and only ezetimibe was used without statins.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "PATIENT: Leon Sarno (fictional) | DOB: XX/XX/XXXX (Age: 62) | M"
+     ],
+     "reason": "The patient is documented as 62 years of age."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "needs_review",
+     "evidence_lines": [
+      "Diagnosis / Reason for Request:",
+      "  Suspected ASCVD, rule out coronary artery disease (R94.31)"
+     ],
+     "reason": "The diagnosis is explicitly documented as suspected / rule out coronary artery disease."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "needs_review",
+     "evidence_lines": [
+      "DATE: 08/10/2026 | TO: PRIOR AUTH DEPARTMENT | FAX: XXXXXXXXXX",
+      "Official Request Date: 10/15/2026",
+      "LDL-Cholesterol    | 142   | mg/dL | HIGH | < 100"
+     ],
+     "reason": "There are two conflicting request dates on the page (08/10/2026 and 10/15/2026)."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "There was no trial of high-intensity statin therapy, only ezetimibe."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Dose & Route: 140 mg SC every 2 weeks"
+     ],
+     "reason": "The requested evolocumab regimen is 140 mg SC every 2 weeks."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  },
+  {
+   "packet_id": "holdout2-24",
+   "criteria_id": "pcsk9",
+   "render": "turn-270",
+   "text": "07/20/2026 15:50  FROM: XXXXXXXXXX  TO: PA DEPT  P.001/002\nVASCULAR & CARDIOLOGY HEALTH PARTNERS (fictional)\nLETTER OF MEDICAL NECESSITY - PRIOR AUTHORIZATION REQUEST\nDate: 07/20/2026 | To: Payer PA Review Team | Fax: XXXXXXXXXX\nPatient: Dara Pruett (fictional) | Member ID: XXXXXXXX\nPrescriber: Dr. Brian Holt, MD (fictional) | NPI: XXXXXXXXXX\n----------------------------------------------------------------------\nRE: Request for Evolocumab (Repatha)\nIndication: Established ASCVD - severe peripheral artery disease status post\nleft femoral-popliteal bypass graft (ICD-10: I70.212).\nRequested Regimen: Repatha SubQ injection - Dose: [      ] Freq: [      ]\nDear Reviewer,\nI am requesting authorization for Repatha for Dara Pruett (fictional),\nwho has established atherosclerotic cardiovascular disease manifest as\nsymptomatic peripheral arterial disease requiring bypass surgery.\nPatient previously took atorvastatin 40 mg daily but discontinued due to\nsevere calf cramping. After a statin holiday, she was restarted on\nrosuvastatin 20 mg daily 45 days ago (started 06/05/2026).\nPre-treatment LDL-C on 05/20/2026 was 130 mg/dL.\nSincerely,\nDr. Brian Holt, MD (fictional) 07/20/2026\n<<page>>\n07/20/2026 15:50  FROM: XXXXXXXXXX  TO: PA DEPT  P.002/002\nVASCULAR & CARDIOLOGY HEALTH PARTNERS (fictional) | EHR RECORD\nPatient: Dara Pruett (fictional) | MRN: XXXXXXXX | Date: 07/20/2026\nProvider: Dr. Brian Holt, MD (fictional)\n----------------------------------------------------------------------\nMEDICATION PROFILE:\nDrug Name       | Dose  | Freq  | Start Date | Stop Date  | Indication\n----------------|-------|-------|------------|------------|-----------\nRosuvastatin    | 20 mg | Daily | 06/05/2026 | Active     | ASCVD\nClopidogrel     | 75 mg | Daily | 03/12/2025 | Active     | PAD\nCilostazol      | 100 mg| BID   | 04/10/2025 | Active     | Claudication\n----------------------------------------------------------------------\nCLINICAL LABS & PROGRESS NOTE:\nSpecimen collected 07/10/2026.\nLDL-C was initially reported as 84 mg/dL, corrected to 68 mg/dL\nper direct beta-quantification analysis (Ref range: < 70 mg/dL).\nTriglycerides: 280 mg/dL | HDL-C: 44 mg/dL\n----------------------------------------------------------------------\nAddendum: Dr. Brian Holt, MD (fictional) 07/20/2026 14:10 - LDL calculation\ncorrected following ultracentrifugation; true LDL-C is 68 mg/dL.\nRosuvastatin 20 mg tolerated for 45 days to date; continuation ordered.",
+   "variation_notes": "Patient age is missing, LDL-C is corrected to 68 mg/dL (below 70 threshold), statin duration is only 45 days, and requested dose is blank.",
+   "labels": [
+    {
+     "criterion_id": "adult",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "No age or date of birth is documented for the patient."
+    },
+    {
+     "criterion_id": "diagnosis",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Indication: Established ASCVD - severe peripheral artery disease status post",
+      "left femoral-popliteal bypass graft (ICD-10: I70.212)."
+     ],
+     "reason": "Established ASCVD with symptomatic peripheral arterial disease s/p bypass is documented as the indication."
+    },
+    {
+     "criterion_id": "lab",
+     "status": "evidence_found",
+     "evidence_lines": [
+      "Date: 07/20/2026 | To: Payer PA Review Team | Fax: XXXXXXXXXX",
+      "Pre-treatment LDL-C on 05/20/2026 was 130 mg/dL."
+     ],
+     "reason": "An LDL-C of 130 mg/dL on 05/20/2026 is at least 70 and 61 days before the 07/20/2026 request. Any qualifying value counts."
+    },
+    {
+     "criterion_id": "prior",
+     "status": "needs_review",
+     "evidence_lines": [
+      "rosuvastatin 20 mg daily 45 days ago (started 06/05/2026).",
+      "Rosuvastatin    | 20 mg | Daily | 06/05/2026 | Active     | ASCVD",
+      "Rosuvastatin 20 mg tolerated for 45 days to date; continuation ordered."
+     ],
+     "reason": "The rosuvastatin trial duration is only 45 days, which is less than the required 90 days."
+    },
+    {
+     "criterion_id": "dose",
+     "status": "missing",
+     "evidence_lines": [],
+     "reason": "The evolocumab dose and frequency fields are left blank."
+    }
+   ],
+   "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only"
+  }
+ ]
+}

@@ -1,0 +1,9027 @@
+{
+  "packet_id": "holdout2-07",
+  "criteria_id": "biologic-psoriasis",
+  "group": "orientation",
+  "tags": [
+    "render:turn-180"
+  ],
+  "render": {
+    "font": "roboto-mono",
+    "effects": [
+      "speckle-heavy",
+      "streaks"
+    ],
+    "rotate": 180,
+    "handwriting": [],
+    "annotations": []
+  },
+  "groupLabel": "Simulated page orientation",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "[date-a] 3:05 PM FROM: XXXXXXXXXX TO: PA DEPT P.001/003\n[name] [name] [name] (fictional)\nTo: [name] PA, [name] Plan (fictional)\nFrom: [name] [name] (fictional)\nRe: adalimumab, [name] [name] (fictional)\nMember ID: XXXXXXXX Pages: 3\n---- PA FORM ----\nPatient: [name] [name] (fictional) Age: 15 years\nPrescriber: Dr. [name] [name] (fictional)\nClinic: [name] [name] (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: adalimumab\nSig: 40 mg SC Q2wW\nIndication: moderate-to-severe plaque psoriasis\nRequest date: [date-b]\nPrior systemic: apremilast 30 mg PO BID\nPhototherapy: narrowband UVB last winter\nBSA today: see measures page\n[x] New start\nPharmacy: [name] Pharmacy (fictional)\n[date-c] 3:05 PM FROM: XXXXXXXXXX TO: PA DEPT P.002/003\nLETTER OF MEDICAL NECESSITY\n[name] [name] (fictional)\nDr. [name] [name] (fictional)\nRe: [name] [name] (fictional) Member ID XXXXXXXX\nRequest date: [date-d]\nPlease approve adalimumab 48 mg every other week\nfor moderate-to-severe plaque psoriasis.\nThe form [name] shows a different request date.\nI am not correcting either date in this letter.\nApremilast 30 mg PO BID was tried for acne only,\nnot as a psoriasis failure with measures.\nPer call with pt: itching is worse at night.\nDenies joint swelling. No hx of uveitis.\nFamily history: father with psoriasis.\n[name] Dr. [name] [name] (fictional)\n[date-e] 3:05 PM FROM: XXXXXXXXXX TO: PA DEPT P.003/003\n[name] [name] (fictional) MEASURES\nPatient: [name] [name] (fictional) MRN: XXXXXXXX\nMeasure | Value | Flag | Range | Date\nBSA involvement | 16% | H | n/a | [date-f]\nCBC | within ref | n/a | n/a | [date]\nNurse note: BSA estimated with the palm method.\nProblem list: acne, mild seborrhea.\nCopied-forward: sports physical form unsigned.\nHandwritten note: rash spares the face.\n---- OLD DENIAL EXCERPT ----\nDenied [date-g] for secukinumab 300 mg.\nNot the drug on today's adalimumab request.\n[name]. [name] [name] (fictional). 3 pages.\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 33
+      },
+      {
+        "tier": "pattern",
+        "type": "date",
+        "count": 1
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points",
+    "dateHandling": "shifted",
+    "dates": [
+      {
+        "token": "[date-a]",
+        "readings": [
+          "2133-01-01"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-b]",
+        "readings": [
+          "2133-01-01"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-c]",
+        "readings": [
+          "2133-01-01"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-d]",
+        "readings": [
+          "2132-06-26",
+          "2133-03-17"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-e]",
+        "readings": [
+          "2133-01-01"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-f]",
+        "readings": [
+          "2132-12-10"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-g]",
+        "readings": [
+          "2132-04-28"
+        ],
+        "order": "mdy"
+      }
+    ]
+  },
+  "dateReading": {
+    "status": "forced",
+    "order": "mdy"
+  },
+  "readerCoverage": {
+    "lines": 51,
+    "pages": 3,
+    "blockers": {
+      "adult": [],
+      "diagnosis": [],
+      "lab": [
+        {
+          "kind": "unparsed-mention",
+          "line": 17,
+          "page": 1,
+          "scope": "BSA",
+          "message": "A line names BSA but no result could be read: \"BSA today: see measures page\""
+        },
+        {
+          "kind": "unparsed-mention",
+          "line": 42,
+          "page": 3,
+          "scope": "BSA",
+          "message": "A line names BSA but no result could be read: \"Nurse note: BSA estimated with the palm method.\""
+        }
+      ],
+      "prior": [
+        {
+          "kind": "low-confidence-line",
+          "line": 47,
+          "page": 3,
+          "message": "Low OCR confidence on a line that could not be read: \"Denied [date-g] for secukinumab 300 mg.\""
+        }
+      ],
+      "dose": [
+        {
+          "kind": "unparsed-mention",
+          "line": 12,
+          "page": 1,
+          "scope": "adalimumab",
+          "message": "A dose is written without a readable frequency: \"Sig: 40 mg SC Q2wW\""
+        },
+        {
+          "kind": "low-confidence-line",
+          "line": 47,
+          "page": 3,
+          "message": "Low OCR confidence on a line that could not be read: \"Denied [date-g] for secukinumab 300 mg.\""
+        }
+      ]
+    },
+    "mentions": [
+      {
+        "criterion": "diagnosis",
+        "scope": "psoriasis",
+        "line": 30,
+        "kind": "negated",
+        "value": "psoriasis",
+        "span": {
+          "start": 1075,
+          "end": 1123,
+          "text": "Apremilast 30 mg PO BID was tried for acne only,"
+        }
+      },
+      {
+        "criterion": "diagnosis",
+        "scope": "psoriasis",
+        "line": 34,
+        "kind": "family",
+        "value": "psoriasis",
+        "span": {
+          "start": 1252,
+          "end": 1290,
+          "text": "Family history: father with psoriasis."
+        }
+      }
+    ],
+    "complete": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "requested_medication",
+      "value": "adalimumab",
+      "source_span": {
+        "start": 160,
+        "end": 201,
+        "text": "Re: adalimumab, [name] [name] (fictional)"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "327361",
+        "display": "adalimumab"
+      },
+      "value_span": {
+        "start": 164,
+        "end": 174
+      },
+      "match": {
+        "kind": "exact",
+        "written": "adalimumab",
+        "confidence": 1
+      },
+      "attrs": {
+        "product": "adalimumab",
+        "source": "prose"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 319,
+          "width": 37,
+          "height": 17
+        },
+        {
+          "x": 159,
+          "y": 318,
+          "width": 150,
+          "height": 22
+        },
+        {
+          "x": 479,
+          "y": 317,
+          "width": 149,
+          "height": 24
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "age",
+      "value": 15,
+      "source_span": {
+        "start": 249,
+        "end": 297,
+        "text": "Patient: [name] [name] (fictional) Age: 15 years"
+      },
+      "value_span": {
+        "start": 289,
+        "end": 291
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 439,
+          "width": 109,
+          "height": 17
+        },
+        {
+          "x": 378,
+          "y": 437,
+          "width": 150,
+          "height": 24
+        },
+        {
+          "x": 548,
+          "y": 439,
+          "width": 52,
+          "height": 22
+        },
+        {
+          "x": 621,
+          "y": 439,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 663,
+          "y": 443,
+          "width": 69,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "indication",
+      "value": "moderate-to-severe plaque psoriasis",
+      "source_span": {
+        "start": 444,
+        "end": 491,
+        "text": "Indication: moderate-to-severe plaque psoriasis"
+      },
+      "normalization": {
+        "system": "ICD-10-CM",
+        "code": "L40.0",
+        "display": "Psoriasis vulgaris"
+      },
+      "value_span": {
+        "start": 456,
+        "end": 491
+      },
+      "attrs": {
+        "family": "psoriasis"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 678,
+          "width": 152,
+          "height": 18
+        },
+        {
+          "x": 274,
+          "y": 678,
+          "width": 257,
+          "height": 18
+        },
+        {
+          "x": 548,
+          "y": 678,
+          "width": 83,
+          "height": 23
+        },
+        {
+          "x": 649,
+          "y": 679,
+          "width": 126,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "request_date",
+      "value": "2133-01-01",
+      "source_span": {
+        "start": 492,
+        "end": 514,
+        "text": "Request date: [date-b]"
+      },
+      "value_span": {
+        "start": 506,
+        "end": 514
+      },
+      "attrs": {
+        "label": "Request date"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 719,
+          "width": 97,
+          "height": 22
+        },
+        {
+          "x": 217,
+          "y": 718,
+          "width": 66,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "prior_medication",
+      "value": "apremilast",
+      "source_span": {
+        "start": 515,
+        "end": 554,
+        "text": "Prior systemic: apremilast 30 mg PO BID"
+      },
+      "value_span": {
+        "start": 531,
+        "end": 541
+      },
+      "episode": 1,
+      "match": {
+        "kind": "exact",
+        "written": "apremilast",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "pde4"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 759,
+          "width": 68,
+          "height": 17
+        },
+        {
+          "x": 188,
+          "y": 759,
+          "width": 123,
+          "height": 22
+        },
+        {
+          "x": 332,
+          "y": 758,
+          "width": 140,
+          "height": 23
+        },
+        {
+          "x": 490,
+          "y": 759,
+          "width": 26,
+          "height": 17
+        },
+        {
+          "x": 533,
+          "y": 763,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 577,
+          "y": 759,
+          "width": 26,
+          "height": 17
+        },
+        {
+          "x": 620,
+          "y": 759,
+          "width": 41,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "prior_dose",
+      "value": "30 mg twice daily",
+      "source_span": {
+        "start": 515,
+        "end": 554,
+        "text": "Prior systemic: apremilast 30 mg PO BID"
+      },
+      "value_span": {
+        "start": 542,
+        "end": 554
+      },
+      "episode": 1,
+      "attrs": {
+        "amount": 30,
+        "frequency": "twice daily"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 759,
+          "width": 68,
+          "height": 17
+        },
+        {
+          "x": 188,
+          "y": 759,
+          "width": 123,
+          "height": 22
+        },
+        {
+          "x": 332,
+          "y": 758,
+          "width": 140,
+          "height": 23
+        },
+        {
+          "x": 490,
+          "y": 759,
+          "width": 26,
+          "height": 17
+        },
+        {
+          "x": 533,
+          "y": 763,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 577,
+          "y": 759,
+          "width": 26,
+          "height": 17
+        },
+        {
+          "x": 620,
+          "y": 759,
+          "width": 41,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "conflicting_request_date",
+      "value": "2132-06-26",
+      "source_span": {
+        "start": 866,
+        "end": 888,
+        "text": "Request date: [date-d]"
+      },
+      "value_span": {
+        "start": 880,
+        "end": 888
+      },
+      "attrs": {
+        "label": "Request date"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 359,
+          "width": 97,
+          "height": 22
+        },
+        {
+          "x": 217,
+          "y": 358,
+          "width": 66,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "requested_dose",
+      "value": "48 mg every 2 weeks",
+      "source_span": {
+        "start": 889,
+        "end": 937,
+        "text": "Please approve adalimumab 48 mg every other week"
+      },
+      "spans": [
+        {
+          "start": 889,
+          "end": 937,
+          "text": "Please approve adalimumab 48 mg every other week"
+        },
+        {
+          "start": 938,
+          "end": 978,
+          "text": "for moderate-to-severe plaque psoriasis."
+        }
+      ],
+      "value_span": {
+        "start": 915,
+        "end": 937
+      },
+      "attrs": {
+        "drug": "adalimumab",
+        "amount": 48,
+        "source": "prose"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 398,
+          "width": 83,
+          "height": 18
+        },
+        {
+          "x": 203,
+          "y": 403,
+          "width": 97,
+          "height": 18
+        },
+        {
+          "x": 318,
+          "y": 398,
+          "width": 140,
+          "height": 18
+        },
+        {
+          "x": 475,
+          "y": 399,
+          "width": 27,
+          "height": 17
+        },
+        {
+          "x": 519,
+          "y": 403,
+          "width": 25,
+          "height": 18
+        },
+        {
+          "x": 562,
+          "y": 403,
+          "width": 70,
+          "height": 18
+        },
+        {
+          "x": 649,
+          "y": 398,
+          "width": 68,
+          "height": 18
+        },
+        {
+          "x": 734,
+          "y": 398,
+          "width": 56,
+          "height": 18
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "prior_medication",
+      "value": "apremilast",
+      "source_span": {
+        "start": 1075,
+        "end": 1123,
+        "text": "Apremilast 30 mg PO BID was tried for acne only,"
+      },
+      "spans": [
+        {
+          "start": 1075,
+          "end": 1123,
+          "text": "Apremilast 30 mg PO BID was tried for acne only,"
+        },
+        {
+          "start": 1124,
+          "end": 1165,
+          "text": "not as a psoriasis failure with measures."
+        }
+      ],
+      "value_span": {
+        "start": 1075,
+        "end": 1085
+      },
+      "episode": 2,
+      "match": {
+        "kind": "exact",
+        "written": "Apremilast",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "pde4"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 558,
+          "width": 141,
+          "height": 23
+        },
+        {
+          "x": 260,
+          "y": 559,
+          "width": 26,
+          "height": 17
+        },
+        {
+          "x": 303,
+          "y": 563,
+          "width": 25,
+          "height": 18
+        },
+        {
+          "x": 347,
+          "y": 559,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 390,
+          "y": 559,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 446,
+          "y": 563,
+          "width": 41,
+          "height": 13
+        },
+        {
+          "x": 505,
+          "y": 558,
+          "width": 68,
+          "height": 18
+        },
+        {
+          "x": 591,
+          "y": 557,
+          "width": 40,
+          "height": 19
+        },
+        {
+          "x": 649,
+          "y": 563,
+          "width": 54,
+          "height": 13
+        },
+        {
+          "x": 721,
+          "y": 558,
+          "width": 64,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "prior_dose",
+      "value": "30 mg twice daily",
+      "source_span": {
+        "start": 1075,
+        "end": 1123,
+        "text": "Apremilast 30 mg PO BID was tried for acne only,"
+      },
+      "spans": [
+        {
+          "start": 1075,
+          "end": 1123,
+          "text": "Apremilast 30 mg PO BID was tried for acne only,"
+        },
+        {
+          "start": 1124,
+          "end": 1165,
+          "text": "not as a psoriasis failure with measures."
+        }
+      ],
+      "value_span": {
+        "start": 1086,
+        "end": 1098
+      },
+      "episode": 2,
+      "attrs": {
+        "amount": 30,
+        "frequency": "twice daily"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 558,
+          "width": 141,
+          "height": 23
+        },
+        {
+          "x": 260,
+          "y": 559,
+          "width": 26,
+          "height": 17
+        },
+        {
+          "x": 303,
+          "y": 563,
+          "width": 25,
+          "height": 18
+        },
+        {
+          "x": 347,
+          "y": 559,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 390,
+          "y": 559,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 446,
+          "y": 563,
+          "width": 41,
+          "height": 13
+        },
+        {
+          "x": 505,
+          "y": 558,
+          "width": 68,
+          "height": 18
+        },
+        {
+          "x": 591,
+          "y": 557,
+          "width": 40,
+          "height": 19
+        },
+        {
+          "x": 649,
+          "y": 563,
+          "width": 54,
+          "height": 13
+        },
+        {
+          "x": 721,
+          "y": 558,
+          "width": 64,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "prior_outcome",
+      "value": "inadequate response",
+      "source_span": {
+        "start": 1075,
+        "end": 1123,
+        "text": "Apremilast 30 mg PO BID was tried for acne only,"
+      },
+      "spans": [
+        {
+          "start": 1075,
+          "end": 1123,
+          "text": "Apremilast 30 mg PO BID was tried for acne only,"
+        },
+        {
+          "start": 1124,
+          "end": 1165,
+          "text": "not as a psoriasis failure with measures."
+        }
+      ],
+      "episode": 2,
+      "attrs": {
+        "category": "efficacy"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 558,
+          "width": 141,
+          "height": 23
+        },
+        {
+          "x": 260,
+          "y": 559,
+          "width": 26,
+          "height": 17
+        },
+        {
+          "x": 303,
+          "y": 563,
+          "width": 25,
+          "height": 18
+        },
+        {
+          "x": 347,
+          "y": 559,
+          "width": 25,
+          "height": 17
+        },
+        {
+          "x": 390,
+          "y": 559,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 446,
+          "y": 563,
+          "width": 41,
+          "height": 13
+        },
+        {
+          "x": 505,
+          "y": 558,
+          "width": 68,
+          "height": 18
+        },
+        {
+          "x": 591,
+          "y": 557,
+          "width": 40,
+          "height": 19
+        },
+        {
+          "x": 649,
+          "y": 563,
+          "width": 54,
+          "height": 13
+        },
+        {
+          "x": 721,
+          "y": 558,
+          "width": 64,
+          "height": 23
+        }
+      ]
+    },
+    {
+      "id": "e12",
+      "type": "measurement",
+      "value": {
+        "name": "BSA",
+        "value": 16,
+        "unit": "%"
+      },
+      "source_span": {
+        "start": 1506,
+        "end": 1548,
+        "text": "BSA involvement | 16% | H | n/a | [date-f]"
+      },
+      "value_span": {
+        "start": 1524,
+        "end": 1526
+      },
+      "name_span": {
+        "start": 1506,
+        "end": 1521
+      },
+      "reviewed": false,
+      "related": [
+        "e13"
+      ],
+      "boxes": [
+        {
+          "x": 102,
+          "y": 319,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 160,
+          "y": 318,
+          "width": 154,
+          "height": 18
+        },
+        {
+          "x": 337,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        },
+        {
+          "x": 362,
+          "y": 319,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 423,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        },
+        {
+          "x": 447,
+          "y": 319,
+          "width": 11,
+          "height": 17
+        },
+        {
+          "x": 481,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        },
+        {
+          "x": 505,
+          "y": 319,
+          "width": 40,
+          "height": 19
+        },
+        {
+          "x": 567,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "id": "e13",
+      "type": "measurement_date",
+      "value": "2132-12-10",
+      "source_span": {
+        "start": 1506,
+        "end": 1548,
+        "text": "BSA involvement | 16% | H | n/a | [date-f]"
+      },
+      "value_span": {
+        "start": 1540,
+        "end": 1548
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 319,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 160,
+          "y": 318,
+          "width": 154,
+          "height": 18
+        },
+        {
+          "x": 337,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        },
+        {
+          "x": 362,
+          "y": 319,
+          "width": 40,
+          "height": 17
+        },
+        {
+          "x": 423,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        },
+        {
+          "x": 447,
+          "y": 319,
+          "width": 11,
+          "height": 17
+        },
+        {
+          "x": 481,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        },
+        {
+          "x": 505,
+          "y": 319,
+          "width": 40,
+          "height": 19
+        },
+        {
+          "x": 567,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 249,
+          "end": 297,
+          "text": "Patient: [name] [name] (fictional) Age: 15 years"
+        }
+      ],
+      "reason": "Documented age 15 is below the fictional 18-year rule.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 444,
+          "end": 491,
+          "text": "Indication: moderate-to-severe plaque psoriasis"
+        }
+      ],
+      "reason": "The request names moderate-to-severe plaque psoriasis as its reason.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 492,
+          "end": 514,
+          "text": "Request date: [date-b]"
+        },
+        {
+          "start": 866,
+          "end": 888,
+          "text": "Request date: [date-d]"
+        },
+        {
+          "start": 1506,
+          "end": 1548,
+          "text": "BSA involvement | 16% | H | n/a | [date-f]"
+        }
+      ],
+      "reason": "Two different request dates are documented. The 180-day window cannot be confirmed.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [],
+      "reason": "A apremilast course is documented. No methotrexate trial, intolerance or contraindication is documented. This cannot be called not documented, because part of the packet could not be read. Low OCR confidence on a line that could not be read: \"Denied [date-g] for secukinumab 300 mg.\"",
+      "blocked_by": [
+        "Low OCR confidence on a line that could not be read: \"Denied [date-g] for secukinumab 300 mg.\""
+      ],
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 160,
+          "end": 201,
+          "text": "Re: adalimumab, [name] [name] (fictional)"
+        },
+        {
+          "start": 889,
+          "end": 937,
+          "text": "Please approve adalimumab 48 mg every other week"
+        },
+        {
+          "start": 938,
+          "end": 978,
+          "text": "for moderate-to-severe plaque psoriasis."
+        }
+      ],
+      "reason": "48 mg is not a marketed adalimumab dose. Check the page for a misread.",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "Re: adalimumab, [name] [name] (fictional)",
+      "citations": [
+        {
+          "start": 160,
+          "end": 201,
+          "text": "Re: adalimumab, [name] [name] (fictional)"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Indication: moderate-to-severe plaque psoriasis",
+      "citations": [
+        {
+          "start": 444,
+          "end": 491,
+          "text": "Indication: moderate-to-severe plaque psoriasis"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Prior systemic: apremilast 30 mg PO BID",
+      "citations": [
+        {
+          "start": 515,
+          "end": 554,
+          "text": "Prior systemic: apremilast 30 mg PO BID"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Apremilast 30 mg PO BID was tried for acne only,",
+      "citations": [
+        {
+          "start": 1075,
+          "end": 1123,
+          "text": "Apremilast 30 mg PO BID was tried for acne only,"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "BSA involvement | 16% | H | n/a | [date-f]",
+      "citations": [
+        {
+          "start": 1506,
+          "end": 1548,
+          "text": "BSA involvement | 16% | H | n/a | [date-f]"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "3:05",
+      "confidence": 95.177414,
+      "box": {
+        "x": 274,
+        "y": 159,
+        "width": 55,
+        "height": 17
+      },
+      "start": 9,
+      "end": 13,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "PM",
+      "confidence": 75.491669,
+      "box": {
+        "x": 347,
+        "y": 159,
+        "width": 25,
+        "height": 17
+      },
+      "start": 14,
+      "end": 16,
+      "needsReview": true,
+      "page": 0
+    },
+    {
+      "text": "FROM:",
+      "confidence": 75.491669,
+      "box": {
+        "x": 405,
+        "y": 159,
+        "width": 65,
+        "height": 17
+      },
+      "start": 17,
+      "end": 22,
+      "needsReview": true,
+      "page": 0
+    },
+    {
+      "text": "XXXXXXXXXX",
+      "confidence": 91.473312,
+      "box": {
+        "x": 490,
+        "y": 159,
+        "width": 142,
+        "height": 17
+      },
+      "start": 23,
+      "end": 33,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "TO:",
+      "confidence": 96.458992,
+      "box": {
+        "x": 663,
+        "y": 159,
+        "width": 37,
+        "height": 17
+      },
+      "start": 34,
+      "end": 37,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "PA",
+      "confidence": 96.612923,
+      "box": {
+        "x": 721,
+        "y": 159,
+        "width": 26,
+        "height": 17
+      },
+      "start": 38,
+      "end": 40,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "DEPT",
+      "confidence": 89.970886,
+      "box": {
+        "x": 764,
+        "y": 159,
+        "width": 55,
+        "height": 17
+      },
+      "start": 41,
+      "end": 45,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "P.001/003",
+      "confidence": 82.842194,
+      "box": {
+        "x": 851,
+        "y": 159,
+        "width": 125,
+        "height": 19
+      },
+      "start": 46,
+      "end": 55,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.027618,
+      "box": {
+        "x": 363,
+        "y": 197,
+        "width": 150,
+        "height": 24
+      },
+      "start": 77,
+      "end": 88,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "To:",
+      "confidence": 96.349472,
+      "box": {
+        "x": 101,
+        "y": 239,
+        "width": 38,
+        "height": 17
+      },
+      "start": 89,
+      "end": 92,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "PA,",
+      "confidence": 92.491997,
+      "box": {
+        "x": 289,
+        "y": 239,
+        "width": 35,
+        "height": 21
+      },
+      "start": 100,
+      "end": 103,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Plan",
+      "confidence": 96.507149,
+      "box": {
+        "x": 477,
+        "y": 238,
+        "width": 53,
+        "height": 18
+      },
+      "start": 111,
+      "end": 115,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.798485,
+      "box": {
+        "x": 551,
+        "y": 237,
+        "width": 149,
+        "height": 24
+      },
+      "start": 116,
+      "end": 127,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "From:",
+      "confidence": 96.890625,
+      "box": {
+        "x": 102,
+        "y": 279,
+        "width": 65,
+        "height": 17
+      },
+      "start": 128,
+      "end": 133,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.375458,
+      "box": {
+        "x": 363,
+        "y": 277,
+        "width": 150,
+        "height": 24
+      },
+      "start": 148,
+      "end": 159,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Re:",
+      "confidence": 95.87149,
+      "box": {
+        "x": 102,
+        "y": 319,
+        "width": 37,
+        "height": 17
+      },
+      "start": 160,
+      "end": 163,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "adalimumab,",
+      "confidence": 95.87149,
+      "box": {
+        "x": 159,
+        "y": 318,
+        "width": 150,
+        "height": 22
+      },
+      "start": 164,
+      "end": 175,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 93.751411,
+      "box": {
+        "x": 479,
+        "y": 317,
+        "width": 149,
+        "height": 24
+      },
+      "start": 190,
+      "end": 201,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Member",
+      "confidence": 96.349823,
+      "box": {
+        "x": 102,
+        "y": 358,
+        "width": 83,
+        "height": 18
+      },
+      "start": 202,
+      "end": 208,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "ID:",
+      "confidence": 92.99942,
+      "box": {
+        "x": 203,
+        "y": 359,
+        "width": 36,
+        "height": 17
+      },
+      "start": 209,
+      "end": 212,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "XXXXXXXX",
+      "confidence": 90.256805,
+      "box": {
+        "x": 260,
+        "y": 359,
+        "width": 113,
+        "height": 17
+      },
+      "start": 213,
+      "end": 221,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Pages:",
+      "confidence": 96.424622,
+      "box": {
+        "x": 390,
+        "y": 359,
+        "width": 80,
+        "height": 22
+      },
+      "start": 222,
+      "end": 228,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "3",
+      "confidence": 96.424622,
+      "box": {
+        "x": 490,
+        "y": 359,
+        "width": 11,
+        "height": 17
+      },
+      "start": 229,
+      "end": 230,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "----",
+      "confidence": 84.559319,
+      "box": {
+        "x": 102,
+        "y": 408,
+        "width": 53,
+        "height": 1
+      },
+      "start": 231,
+      "end": 235,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "PA",
+      "confidence": 96.211441,
+      "box": {
+        "x": 174,
+        "y": 399,
+        "width": 26,
+        "height": 17
+      },
+      "start": 236,
+      "end": 238,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "FORM",
+      "confidence": 91.270203,
+      "box": {
+        "x": 217,
+        "y": 399,
+        "width": 54,
+        "height": 17
+      },
+      "start": 239,
+      "end": 243,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "----",
+      "confidence": 86.430588,
+      "box": {
+        "x": 290,
+        "y": 408,
+        "width": 52,
+        "height": 1
+      },
+      "start": 244,
+      "end": 248,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Patient:",
+      "confidence": 96.281616,
+      "box": {
+        "x": 102,
+        "y": 439,
+        "width": 109,
+        "height": 17
+      },
+      "start": 249,
+      "end": 257,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.968163,
+      "box": {
+        "x": 378,
+        "y": 437,
+        "width": 150,
+        "height": 24
+      },
+      "start": 272,
+      "end": 283,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Age:",
+      "confidence": 94.845985,
+      "box": {
+        "x": 548,
+        "y": 439,
+        "width": 52,
+        "height": 22
+      },
+      "start": 284,
+      "end": 288,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "15",
+      "confidence": 94.845985,
+      "box": {
+        "x": 621,
+        "y": 439,
+        "width": 25,
+        "height": 17
+      },
+      "start": 289,
+      "end": 291,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "years",
+      "confidence": 96.385849,
+      "box": {
+        "x": 663,
+        "y": 443,
+        "width": 69,
+        "height": 18
+      },
+      "start": 292,
+      "end": 297,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Prescriber:",
+      "confidence": 89.681473,
+      "box": {
+        "x": 102,
+        "y": 478,
+        "width": 152,
+        "height": 18
+      },
+      "start": 298,
+      "end": 309,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Dr.",
+      "confidence": 96.352196,
+      "box": {
+        "x": 275,
+        "y": 479,
+        "width": 36,
+        "height": 17
+      },
+      "start": 310,
+      "end": 313,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.200417,
+      "box": {
+        "x": 464,
+        "y": 477,
+        "width": 150,
+        "height": 24
+      },
+      "start": 328,
+      "end": 339,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Clinic:",
+      "confidence": 95.751358,
+      "box": {
+        "x": 101,
+        "y": 518,
+        "width": 95,
+        "height": 18
+      },
+      "start": 340,
+      "end": 347,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.182556,
+      "box": {
+        "x": 392,
+        "y": 517,
+        "width": 150,
+        "height": 24
+      },
+      "start": 362,
+      "end": 373,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Phone:",
+      "confidence": 89.367142,
+      "box": {
+        "x": 102,
+        "y": 558,
+        "width": 80,
+        "height": 18
+      },
+      "start": 374,
+      "end": 380,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "XXXXXXXXXX",
+      "confidence": 90.578438,
+      "box": {
+        "x": 202,
+        "y": 559,
+        "width": 142,
+        "height": 17
+      },
+      "start": 381,
+      "end": 391,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Fax:",
+      "confidence": 92.639099,
+      "box": {
+        "x": 361,
+        "y": 559,
+        "width": 51,
+        "height": 17
+      },
+      "start": 392,
+      "end": 396,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "XXXXXXXXXX",
+      "confidence": 90.095215,
+      "box": {
+        "x": 432,
+        "y": 559,
+        "width": 142,
+        "height": 17
+      },
+      "start": 397,
+      "end": 407,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Drug:",
+      "confidence": 94.882927,
+      "box": {
+        "x": 102,
+        "y": 599,
+        "width": 65,
+        "height": 22
+      },
+      "start": 408,
+      "end": 413,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "adalimumab",
+      "confidence": 94.882927,
+      "box": {
+        "x": 188,
+        "y": 598,
+        "width": 141,
+        "height": 18
+      },
+      "start": 414,
+      "end": 424,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Sig:",
+      "confidence": 96.126404,
+      "box": {
+        "x": 101,
+        "y": 639,
+        "width": 52,
+        "height": 22
+      },
+      "start": 425,
+      "end": 429,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "40",
+      "confidence": 91.948822,
+      "box": {
+        "x": 173,
+        "y": 639,
+        "width": 26,
+        "height": 17
+      },
+      "start": 430,
+      "end": 432,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "mg",
+      "confidence": 96.523697,
+      "box": {
+        "x": 216,
+        "y": 643,
+        "width": 26,
+        "height": 18
+      },
+      "start": 433,
+      "end": 435,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "SC",
+      "confidence": 93.182472,
+      "box": {
+        "x": 260,
+        "y": 639,
+        "width": 26,
+        "height": 17
+      },
+      "start": 436,
+      "end": 438,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Q2wW",
+      "confidence": 44.039368,
+      "box": {
+        "x": 303,
+        "y": 639,
+        "width": 41,
+        "height": 20
+      },
+      "start": 439,
+      "end": 443,
+      "needsReview": true,
+      "page": 0
+    },
+    {
+      "text": "Indication:",
+      "confidence": 93.02076,
+      "box": {
+        "x": 102,
+        "y": 678,
+        "width": 152,
+        "height": 18
+      },
+      "start": 444,
+      "end": 455,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "moderate-to-severe",
+      "confidence": 90.997108,
+      "box": {
+        "x": 274,
+        "y": 678,
+        "width": 257,
+        "height": 18
+      },
+      "start": 456,
+      "end": 474,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "plaque",
+      "confidence": 96.684769,
+      "box": {
+        "x": 548,
+        "y": 678,
+        "width": 83,
+        "height": 23
+      },
+      "start": 475,
+      "end": 481,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "psoriasis",
+      "confidence": 95.592316,
+      "box": {
+        "x": 649,
+        "y": 679,
+        "width": 126,
+        "height": 22
+      },
+      "start": 482,
+      "end": 491,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Request",
+      "confidence": 96.045593,
+      "box": {
+        "x": 102,
+        "y": 719,
+        "width": 97,
+        "height": 22
+      },
+      "start": 492,
+      "end": 499,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "date:",
+      "confidence": 96.560883,
+      "box": {
+        "x": 217,
+        "y": 718,
+        "width": 66,
+        "height": 18
+      },
+      "start": 500,
+      "end": 505,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Prior",
+      "confidence": 95.79744,
+      "box": {
+        "x": 102,
+        "y": 759,
+        "width": 68,
+        "height": 17
+      },
+      "start": 515,
+      "end": 520,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "systemic:",
+      "confidence": 92.863167,
+      "box": {
+        "x": 188,
+        "y": 759,
+        "width": 123,
+        "height": 22
+      },
+      "start": 521,
+      "end": 530,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "apremilast",
+      "confidence": 91.432091,
+      "box": {
+        "x": 332,
+        "y": 758,
+        "width": 140,
+        "height": 23
+      },
+      "start": 531,
+      "end": 541,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "30",
+      "confidence": 89.795982,
+      "box": {
+        "x": 490,
+        "y": 759,
+        "width": 26,
+        "height": 17
+      },
+      "start": 542,
+      "end": 544,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "mg",
+      "confidence": 96.330566,
+      "box": {
+        "x": 533,
+        "y": 763,
+        "width": 26,
+        "height": 18
+      },
+      "start": 545,
+      "end": 547,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "PO",
+      "confidence": 95.588715,
+      "box": {
+        "x": 577,
+        "y": 759,
+        "width": 26,
+        "height": 17
+      },
+      "start": 548,
+      "end": 550,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "BID",
+      "confidence": 96.801865,
+      "box": {
+        "x": 620,
+        "y": 759,
+        "width": 41,
+        "height": 17
+      },
+      "start": 551,
+      "end": 554,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Phototherapy:",
+      "confidence": 95.371887,
+      "box": {
+        "x": 102,
+        "y": 798,
+        "width": 181,
+        "height": 23
+      },
+      "start": 555,
+      "end": 568,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "narrowband",
+      "confidence": 96.366325,
+      "box": {
+        "x": 304,
+        "y": 798,
+        "width": 140,
+        "height": 18
+      },
+      "start": 569,
+      "end": 579,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "UVB",
+      "confidence": 96.630142,
+      "box": {
+        "x": 462,
+        "y": 799,
+        "width": 40,
+        "height": 17
+      },
+      "start": 580,
+      "end": 583,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "last",
+      "confidence": 96.254349,
+      "box": {
+        "x": 520,
+        "y": 798,
+        "width": 53,
+        "height": 18
+      },
+      "start": 584,
+      "end": 588,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "winter",
+      "confidence": 96.25486,
+      "box": {
+        "x": 590,
+        "y": 799,
+        "width": 84,
+        "height": 17
+      },
+      "start": 589,
+      "end": 595,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "BSA",
+      "confidence": 94.905258,
+      "box": {
+        "x": 102,
+        "y": 839,
+        "width": 40,
+        "height": 17
+      },
+      "start": 596,
+      "end": 599,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "today:",
+      "confidence": 95.850594,
+      "box": {
+        "x": 159,
+        "y": 838,
+        "width": 80,
+        "height": 23
+      },
+      "start": 600,
+      "end": 606,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "see",
+      "confidence": 96.358833,
+      "box": {
+        "x": 260,
+        "y": 843,
+        "width": 40,
+        "height": 13
+      },
+      "start": 607,
+      "end": 610,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "measures",
+      "confidence": 96.168678,
+      "box": {
+        "x": 317,
+        "y": 843,
+        "width": 113,
+        "height": 13
+      },
+      "start": 611,
+      "end": 619,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "page",
+      "confidence": 96.351593,
+      "box": {
+        "x": 448,
+        "y": 843,
+        "width": 54,
+        "height": 18
+      },
+      "start": 620,
+      "end": 624,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "[x]",
+      "confidence": 95.349815,
+      "box": {
+        "x": 105,
+        "y": 876,
+        "width": 33,
+        "height": 24
+      },
+      "start": 625,
+      "end": 628,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "New",
+      "confidence": 96.429176,
+      "box": {
+        "x": 159,
+        "y": 879,
+        "width": 41,
+        "height": 17
+      },
+      "start": 629,
+      "end": 632,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "start",
+      "confidence": 96.747437,
+      "box": {
+        "x": 217,
+        "y": 880,
+        "width": 68,
+        "height": 16
+      },
+      "start": 633,
+      "end": 638,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Pharmacy:",
+      "confidence": 95.719284,
+      "box": {
+        "x": 102,
+        "y": 918,
+        "width": 123,
+        "height": 23
+      },
+      "start": 639,
+      "end": 648,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Pharmacy",
+      "confidence": 96.186844,
+      "box": {
+        "x": 318,
+        "y": 918,
+        "width": 112,
+        "height": 23
+      },
+      "start": 656,
+      "end": 664,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 94.564308,
+      "box": {
+        "x": 450,
+        "y": 917,
+        "width": 150,
+        "height": 24
+      },
+      "start": 665,
+      "end": 676,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "3:05",
+      "confidence": 94.775917,
+      "box": {
+        "x": 274,
+        "y": 159,
+        "width": 55,
+        "height": 17
+      },
+      "start": 686,
+      "end": 690,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "PM",
+      "confidence": 73.432556,
+      "box": {
+        "x": 347,
+        "y": 159,
+        "width": 25,
+        "height": 17
+      },
+      "start": 691,
+      "end": 693,
+      "needsReview": true,
+      "page": 1
+    },
+    {
+      "text": "FROM:",
+      "confidence": 73.432556,
+      "box": {
+        "x": 405,
+        "y": 159,
+        "width": 65,
+        "height": 17
+      },
+      "start": 694,
+      "end": 699,
+      "needsReview": true,
+      "page": 1
+    },
+    {
+      "text": "XXXXXXXXXX",
+      "confidence": 90.863434,
+      "box": {
+        "x": 490,
+        "y": 159,
+        "width": 142,
+        "height": 17
+      },
+      "start": 700,
+      "end": 710,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "TO:",
+      "confidence": 96.280945,
+      "box": {
+        "x": 663,
+        "y": 159,
+        "width": 37,
+        "height": 17
+      },
+      "start": 711,
+      "end": 714,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "PA",
+      "confidence": 96.67337,
+      "box": {
+        "x": 721,
+        "y": 159,
+        "width": 26,
+        "height": 17
+      },
+      "start": 715,
+      "end": 717,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "DEPT",
+      "confidence": 88.507484,
+      "box": {
+        "x": 764,
+        "y": 159,
+        "width": 55,
+        "height": 17
+      },
+      "start": 718,
+      "end": 722,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "P.002/003",
+      "confidence": 86.029648,
+      "box": {
+        "x": 851,
+        "y": 159,
+        "width": 125,
+        "height": 19
+      },
+      "start": 723,
+      "end": 732,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "LETTER",
+      "confidence": 95.353622,
+      "box": {
+        "x": 102,
+        "y": 199,
+        "width": 83,
+        "height": 17
+      },
+      "start": 733,
+      "end": 739,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "OF",
+      "confidence": 95.353622,
+      "box": {
+        "x": 202,
+        "y": 199,
+        "width": 26,
+        "height": 17
+      },
+      "start": 740,
+      "end": 742,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "MEDICAL",
+      "confidence": 96.695663,
+      "box": {
+        "x": 246,
+        "y": 199,
+        "width": 97,
+        "height": 17
+      },
+      "start": 743,
+      "end": 750,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "NECESSITY",
+      "confidence": 96.43689,
+      "box": {
+        "x": 361,
+        "y": 199,
+        "width": 127,
+        "height": 17
+      },
+      "start": 751,
+      "end": 760,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.451149,
+      "box": {
+        "x": 277,
+        "y": 237,
+        "width": 150,
+        "height": 24
+      },
+      "start": 775,
+      "end": 786,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Dr.",
+      "confidence": 96.47123,
+      "box": {
+        "x": 102,
+        "y": 279,
+        "width": 36,
+        "height": 17
+      },
+      "start": 787,
+      "end": 790,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 94.99855,
+      "box": {
+        "x": 291,
+        "y": 277,
+        "width": 150,
+        "height": 24
+      },
+      "start": 805,
+      "end": 816,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Re:",
+      "confidence": 96.554398,
+      "box": {
+        "x": 102,
+        "y": 319,
+        "width": 37,
+        "height": 17
+      },
+      "start": 817,
+      "end": 820,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.945404,
+      "box": {
+        "x": 306,
+        "y": 317,
+        "width": 150,
+        "height": 24
+      },
+      "start": 835,
+      "end": 846,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Member",
+      "confidence": 96.068626,
+      "box": {
+        "x": 476,
+        "y": 318,
+        "width": 83,
+        "height": 18
+      },
+      "start": 847,
+      "end": 853,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "ID",
+      "confidence": 92.498222,
+      "box": {
+        "x": 577,
+        "y": 319,
+        "width": 26,
+        "height": 17
+      },
+      "start": 854,
+      "end": 856,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "XXXXXXXX",
+      "confidence": 90.678055,
+      "box": {
+        "x": 620,
+        "y": 319,
+        "width": 113,
+        "height": 17
+      },
+      "start": 857,
+      "end": 865,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Request",
+      "confidence": 95.995819,
+      "box": {
+        "x": 102,
+        "y": 359,
+        "width": 97,
+        "height": 22
+      },
+      "start": 866,
+      "end": 873,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "date:",
+      "confidence": 96.175987,
+      "box": {
+        "x": 217,
+        "y": 358,
+        "width": 66,
+        "height": 18
+      },
+      "start": 874,
+      "end": 879,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Please",
+      "confidence": 96.661049,
+      "box": {
+        "x": 102,
+        "y": 398,
+        "width": 83,
+        "height": 18
+      },
+      "start": 889,
+      "end": 895,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "approve",
+      "confidence": 96.658562,
+      "box": {
+        "x": 203,
+        "y": 403,
+        "width": 97,
+        "height": 18
+      },
+      "start": 896,
+      "end": 903,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "adalimumab",
+      "confidence": 96.660393,
+      "box": {
+        "x": 318,
+        "y": 398,
+        "width": 140,
+        "height": 18
+      },
+      "start": 904,
+      "end": 914,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "48",
+      "confidence": 90.775589,
+      "box": {
+        "x": 475,
+        "y": 399,
+        "width": 27,
+        "height": 17
+      },
+      "start": 915,
+      "end": 917,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "mg",
+      "confidence": 95.812386,
+      "box": {
+        "x": 519,
+        "y": 403,
+        "width": 25,
+        "height": 18
+      },
+      "start": 918,
+      "end": 920,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "every",
+      "confidence": 95.812386,
+      "box": {
+        "x": 562,
+        "y": 403,
+        "width": 70,
+        "height": 18
+      },
+      "start": 921,
+      "end": 926,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "other",
+      "confidence": 96.884018,
+      "box": {
+        "x": 649,
+        "y": 398,
+        "width": 68,
+        "height": 18
+      },
+      "start": 927,
+      "end": 932,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "week",
+      "confidence": 96.162857,
+      "box": {
+        "x": 734,
+        "y": 398,
+        "width": 56,
+        "height": 18
+      },
+      "start": 933,
+      "end": 937,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "for",
+      "confidence": 91.999451,
+      "box": {
+        "x": 102,
+        "y": 437,
+        "width": 39,
+        "height": 19
+      },
+      "start": 938,
+      "end": 941,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "moderate-to-severe",
+      "confidence": 89.762177,
+      "box": {
+        "x": 159,
+        "y": 438,
+        "width": 256,
+        "height": 18
+      },
+      "start": 942,
+      "end": 960,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "plaque",
+      "confidence": 96.525696,
+      "box": {
+        "x": 433,
+        "y": 438,
+        "width": 83,
+        "height": 23
+      },
+      "start": 961,
+      "end": 967,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "psoriasis.",
+      "confidence": 96.539497,
+      "box": {
+        "x": 534,
+        "y": 439,
+        "width": 137,
+        "height": 22
+      },
+      "start": 968,
+      "end": 978,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "The",
+      "confidence": 95.879601,
+      "box": {
+        "x": 101,
+        "y": 478,
+        "width": 41,
+        "height": 18
+      },
+      "start": 979,
+      "end": 982,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "form",
+      "confidence": 96.303299,
+      "box": {
+        "x": 159,
+        "y": 477,
+        "width": 55,
+        "height": 19
+      },
+      "start": 983,
+      "end": 987,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "shows",
+      "confidence": 96.247871,
+      "box": {
+        "x": 318,
+        "y": 478,
+        "width": 68,
+        "height": 18
+      },
+      "start": 995,
+      "end": 1000,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "a",
+      "confidence": 96.139206,
+      "box": {
+        "x": 404,
+        "y": 483,
+        "width": 11,
+        "height": 13
+      },
+      "start": 1001,
+      "end": 1002,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "different",
+      "confidence": 96.139206,
+      "box": {
+        "x": 433,
+        "y": 477,
+        "width": 126,
+        "height": 19
+      },
+      "start": 1003,
+      "end": 1012,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "request",
+      "confidence": 96.306641,
+      "box": {
+        "x": 579,
+        "y": 480,
+        "width": 95,
+        "height": 21
+      },
+      "start": 1013,
+      "end": 1020,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "date.",
+      "confidence": 96.344185,
+      "box": {
+        "x": 692,
+        "y": 478,
+        "width": 65,
+        "height": 18
+      },
+      "start": 1021,
+      "end": 1026,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "I",
+      "confidence": 96.032097,
+      "box": {
+        "x": 102,
+        "y": 519,
+        "width": 10,
+        "height": 17
+      },
+      "start": 1027,
+      "end": 1028,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "am",
+      "confidence": 96.032097,
+      "box": {
+        "x": 131,
+        "y": 523,
+        "width": 26,
+        "height": 13
+      },
+      "start": 1029,
+      "end": 1031,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "not",
+      "confidence": 96.122253,
+      "box": {
+        "x": 174,
+        "y": 520,
+        "width": 39,
+        "height": 16
+      },
+      "start": 1032,
+      "end": 1035,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "correcting",
+      "confidence": 95.605713,
+      "box": {
+        "x": 231,
+        "y": 519,
+        "width": 141,
+        "height": 22
+      },
+      "start": 1036,
+      "end": 1046,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "either",
+      "confidence": 96.604126,
+      "box": {
+        "x": 390,
+        "y": 518,
+        "width": 83,
+        "height": 18
+      },
+      "start": 1047,
+      "end": 1053,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "date",
+      "confidence": 96.392479,
+      "box": {
+        "x": 490,
+        "y": 518,
+        "width": 55,
+        "height": 18
+      },
+      "start": 1054,
+      "end": 1058,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "in",
+      "confidence": 96.374985,
+      "box": {
+        "x": 563,
+        "y": 519,
+        "width": 25,
+        "height": 17
+      },
+      "start": 1059,
+      "end": 1061,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "this",
+      "confidence": 96.016632,
+      "box": {
+        "x": 606,
+        "y": 518,
+        "width": 54,
+        "height": 18
+      },
+      "start": 1062,
+      "end": 1066,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "letter.",
+      "confidence": 95.199875,
+      "box": {
+        "x": 678,
+        "y": 518,
+        "width": 94,
+        "height": 18
+      },
+      "start": 1067,
+      "end": 1074,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Apremilast",
+      "confidence": 91.441711,
+      "box": {
+        "x": 101,
+        "y": 558,
+        "width": 141,
+        "height": 23
+      },
+      "start": 1075,
+      "end": 1085,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "30",
+      "confidence": 92.115189,
+      "box": {
+        "x": 260,
+        "y": 559,
+        "width": 26,
+        "height": 17
+      },
+      "start": 1086,
+      "end": 1088,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "mg",
+      "confidence": 96.227058,
+      "box": {
+        "x": 303,
+        "y": 563,
+        "width": 25,
+        "height": 18
+      },
+      "start": 1089,
+      "end": 1091,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "PO",
+      "confidence": 95.448471,
+      "box": {
+        "x": 347,
+        "y": 559,
+        "width": 25,
+        "height": 17
+      },
+      "start": 1092,
+      "end": 1094,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "BID",
+      "confidence": 96.323929,
+      "box": {
+        "x": 390,
+        "y": 559,
+        "width": 40,
+        "height": 17
+      },
+      "start": 1095,
+      "end": 1098,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "was",
+      "confidence": 96.323929,
+      "box": {
+        "x": 446,
+        "y": 563,
+        "width": 41,
+        "height": 13
+      },
+      "start": 1099,
+      "end": 1102,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "tried",
+      "confidence": 96.585007,
+      "box": {
+        "x": 505,
+        "y": 558,
+        "width": 68,
+        "height": 18
+      },
+      "start": 1103,
+      "end": 1108,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "for",
+      "confidence": 95.666939,
+      "box": {
+        "x": 591,
+        "y": 557,
+        "width": 40,
+        "height": 19
+      },
+      "start": 1109,
+      "end": 1112,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "acne",
+      "confidence": 95.666939,
+      "box": {
+        "x": 649,
+        "y": 563,
+        "width": 54,
+        "height": 13
+      },
+      "start": 1113,
+      "end": 1117,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "only,",
+      "confidence": 95.790909,
+      "box": {
+        "x": 721,
+        "y": 558,
+        "width": 64,
+        "height": 23
+      },
+      "start": 1118,
+      "end": 1123,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "not",
+      "confidence": 96.442604,
+      "box": {
+        "x": 102,
+        "y": 600,
+        "width": 39,
+        "height": 16
+      },
+      "start": 1124,
+      "end": 1127,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "as",
+      "confidence": 96.187286,
+      "box": {
+        "x": 159,
+        "y": 603,
+        "width": 26,
+        "height": 13
+      },
+      "start": 1128,
+      "end": 1130,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "a",
+      "confidence": 96.636078,
+      "box": {
+        "x": 203,
+        "y": 603,
+        "width": 10,
+        "height": 13
+      },
+      "start": 1131,
+      "end": 1132,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "psoriasis",
+      "confidence": 96.301064,
+      "box": {
+        "x": 232,
+        "y": 599,
+        "width": 126,
+        "height": 22
+      },
+      "start": 1133,
+      "end": 1142,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "failure",
+      "confidence": 96.509338,
+      "box": {
+        "x": 375,
+        "y": 597,
+        "width": 98,
+        "height": 19
+      },
+      "start": 1143,
+      "end": 1150,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "with",
+      "confidence": 96.017807,
+      "box": {
+        "x": 490,
+        "y": 598,
+        "width": 55,
+        "height": 18
+      },
+      "start": 1151,
+      "end": 1155,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "measures.",
+      "confidence": 96.498978,
+      "box": {
+        "x": 562,
+        "y": 603,
+        "width": 123,
+        "height": 13
+      },
+      "start": 1156,
+      "end": 1165,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Per",
+      "confidence": 96.833611,
+      "box": {
+        "x": 102,
+        "y": 639,
+        "width": 39,
+        "height": 17
+      },
+      "start": 1166,
+      "end": 1169,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "call",
+      "confidence": 96.36187,
+      "box": {
+        "x": 159,
+        "y": 638,
+        "width": 55,
+        "height": 18
+      },
+      "start": 1170,
+      "end": 1174,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "with",
+      "confidence": 96.36187,
+      "box": {
+        "x": 230,
+        "y": 638,
+        "width": 55,
+        "height": 18
+      },
+      "start": 1175,
+      "end": 1179,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "pt:",
+      "confidence": 96.143562,
+      "box": {
+        "x": 304,
+        "y": 640,
+        "width": 36,
+        "height": 21
+      },
+      "start": 1180,
+      "end": 1183,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "itching",
+      "confidence": 96.283722,
+      "box": {
+        "x": 362,
+        "y": 638,
+        "width": 96,
+        "height": 23
+      },
+      "start": 1184,
+      "end": 1191,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "is",
+      "confidence": 95.421692,
+      "box": {
+        "x": 477,
+        "y": 639,
+        "width": 25,
+        "height": 17
+      },
+      "start": 1192,
+      "end": 1194,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "worse",
+      "confidence": 96.388268,
+      "box": {
+        "x": 518,
+        "y": 643,
+        "width": 70,
+        "height": 13
+      },
+      "start": 1195,
+      "end": 1200,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "at",
+      "confidence": 95.693771,
+      "box": {
+        "x": 606,
+        "y": 640,
+        "width": 25,
+        "height": 16
+      },
+      "start": 1201,
+      "end": 1203,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "night.",
+      "confidence": 95.693771,
+      "box": {
+        "x": 649,
+        "y": 638,
+        "width": 80,
+        "height": 23
+      },
+      "start": 1204,
+      "end": 1210,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Denies",
+      "confidence": 96.186493,
+      "box": {
+        "x": 102,
+        "y": 679,
+        "width": 83,
+        "height": 17
+      },
+      "start": 1211,
+      "end": 1217,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "joint",
+      "confidence": 96.413185,
+      "box": {
+        "x": 203,
+        "y": 679,
+        "width": 68,
+        "height": 22
+      },
+      "start": 1218,
+      "end": 1223,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "swelling.",
+      "confidence": 95.28141,
+      "box": {
+        "x": 289,
+        "y": 678,
+        "width": 123,
+        "height": 23
+      },
+      "start": 1224,
+      "end": 1233,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "No",
+      "confidence": 96.567307,
+      "box": {
+        "x": 433,
+        "y": 679,
+        "width": 26,
+        "height": 17
+      },
+      "start": 1234,
+      "end": 1236,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "hx",
+      "confidence": 95.905182,
+      "box": {
+        "x": 476,
+        "y": 678,
+        "width": 26,
+        "height": 18
+      },
+      "start": 1237,
+      "end": 1239,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "of",
+      "confidence": 95.905182,
+      "box": {
+        "x": 519,
+        "y": 677,
+        "width": 26,
+        "height": 19
+      },
+      "start": 1240,
+      "end": 1242,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "uveitis.",
+      "confidence": 95.803528,
+      "box": {
+        "x": 563,
+        "y": 679,
+        "width": 108,
+        "height": 17
+      },
+      "start": 1243,
+      "end": 1251,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Family",
+      "confidence": 95.534538,
+      "box": {
+        "x": 102,
+        "y": 718,
+        "width": 83,
+        "height": 23
+      },
+      "start": 1252,
+      "end": 1258,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "history:",
+      "confidence": 96.006516,
+      "box": {
+        "x": 203,
+        "y": 718,
+        "width": 108,
+        "height": 23
+      },
+      "start": 1259,
+      "end": 1267,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "father",
+      "confidence": 96.399071,
+      "box": {
+        "x": 332,
+        "y": 717,
+        "width": 83,
+        "height": 19
+      },
+      "start": 1268,
+      "end": 1274,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "with",
+      "confidence": 96.399071,
+      "box": {
+        "x": 432,
+        "y": 718,
+        "width": 55,
+        "height": 18
+      },
+      "start": 1275,
+      "end": 1279,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "psoriasis.",
+      "confidence": 96.798409,
+      "box": {
+        "x": 505,
+        "y": 719,
+        "width": 137,
+        "height": 22
+      },
+      "start": 1280,
+      "end": 1290,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Dr.",
+      "confidence": 95.915733,
+      "box": {
+        "x": 203,
+        "y": 759,
+        "width": 36,
+        "height": 17
+      },
+      "start": 1298,
+      "end": 1301,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.827881,
+      "box": {
+        "x": 392,
+        "y": 757,
+        "width": 150,
+        "height": 24
+      },
+      "start": 1316,
+      "end": 1327,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "3:05",
+      "confidence": 94.94194,
+      "box": {
+        "x": 274,
+        "y": 159,
+        "width": 55,
+        "height": 17
+      },
+      "start": 1337,
+      "end": 1341,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "PM",
+      "confidence": 76.52813,
+      "box": {
+        "x": 347,
+        "y": 159,
+        "width": 25,
+        "height": 17
+      },
+      "start": 1342,
+      "end": 1344,
+      "needsReview": true,
+      "page": 2
+    },
+    {
+      "text": "FROM:",
+      "confidence": 76.512947,
+      "box": {
+        "x": 405,
+        "y": 159,
+        "width": 65,
+        "height": 17
+      },
+      "start": 1345,
+      "end": 1350,
+      "needsReview": true,
+      "page": 2
+    },
+    {
+      "text": "XXXXXXXXXX",
+      "confidence": 91.810204,
+      "box": {
+        "x": 490,
+        "y": 159,
+        "width": 142,
+        "height": 17
+      },
+      "start": 1351,
+      "end": 1361,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "TO:",
+      "confidence": 96.388077,
+      "box": {
+        "x": 663,
+        "y": 159,
+        "width": 37,
+        "height": 17
+      },
+      "start": 1362,
+      "end": 1365,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "PA",
+      "confidence": 96.639626,
+      "box": {
+        "x": 721,
+        "y": 159,
+        "width": 26,
+        "height": 17
+      },
+      "start": 1366,
+      "end": 1368,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "DEPT",
+      "confidence": 86.915764,
+      "box": {
+        "x": 764,
+        "y": 159,
+        "width": 55,
+        "height": 17
+      },
+      "start": 1369,
+      "end": 1373,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "P.003/003",
+      "confidence": 85.670212,
+      "box": {
+        "x": 851,
+        "y": 159,
+        "width": 125,
+        "height": 19
+      },
+      "start": 1374,
+      "end": 1383,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 94.381996,
+      "box": {
+        "x": 277,
+        "y": 197,
+        "width": 150,
+        "height": 24
+      },
+      "start": 1398,
+      "end": 1409,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "MEASURES",
+      "confidence": 96.540543,
+      "box": {
+        "x": 447,
+        "y": 199,
+        "width": 113,
+        "height": 17
+      },
+      "start": 1410,
+      "end": 1418,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Patient:",
+      "confidence": 96.487793,
+      "box": {
+        "x": 102,
+        "y": 239,
+        "width": 109,
+        "height": 17
+      },
+      "start": 1419,
+      "end": 1427,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 93.303398,
+      "box": {
+        "x": 378,
+        "y": 237,
+        "width": 150,
+        "height": 24
+      },
+      "start": 1442,
+      "end": 1453,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "MRN:",
+      "confidence": 90.325653,
+      "box": {
+        "x": 548,
+        "y": 239,
+        "width": 52,
+        "height": 17
+      },
+      "start": 1454,
+      "end": 1458,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "XXXXXXXX",
+      "confidence": 90.750053,
+      "box": {
+        "x": 620,
+        "y": 239,
+        "width": 113,
+        "height": 17
+      },
+      "start": 1459,
+      "end": 1467,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Measure",
+      "confidence": 96.4729,
+      "box": {
+        "x": 102,
+        "y": 279,
+        "width": 97,
+        "height": 17
+      },
+      "start": 1468,
+      "end": 1475,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 95.514397,
+      "box": {
+        "x": 221,
+        "y": 279,
+        "width": 2,
+        "height": 22
+      },
+      "start": 1476,
+      "end": 1477,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Value",
+      "confidence": 96.429787,
+      "box": {
+        "x": 245,
+        "y": 278,
+        "width": 70,
+        "height": 18
+      },
+      "start": 1478,
+      "end": 1483,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.26963,
+      "box": {
+        "x": 337,
+        "y": 279,
+        "width": 2,
+        "height": 22
+      },
+      "start": 1484,
+      "end": 1485,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Flag",
+      "confidence": 96.174583,
+      "box": {
+        "x": 361,
+        "y": 278,
+        "width": 54,
+        "height": 23
+      },
+      "start": 1486,
+      "end": 1490,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.67347,
+      "box": {
+        "x": 438,
+        "y": 279,
+        "width": 1,
+        "height": 22
+      },
+      "start": 1491,
+      "end": 1492,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Range",
+      "confidence": 96.842491,
+      "box": {
+        "x": 462,
+        "y": 279,
+        "width": 69,
+        "height": 22
+      },
+      "start": 1493,
+      "end": 1498,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.921967,
+      "box": {
+        "x": 553,
+        "y": 279,
+        "width": 2,
+        "height": 22
+      },
+      "start": 1499,
+      "end": 1500,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Date",
+      "confidence": 95.982109,
+      "box": {
+        "x": 577,
+        "y": 279,
+        "width": 54,
+        "height": 17
+      },
+      "start": 1501,
+      "end": 1505,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "BSA",
+      "confidence": 95.8592,
+      "box": {
+        "x": 102,
+        "y": 319,
+        "width": 40,
+        "height": 17
+      },
+      "start": 1506,
+      "end": 1509,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "involvement",
+      "confidence": 96.212227,
+      "box": {
+        "x": 160,
+        "y": 318,
+        "width": 154,
+        "height": 18
+      },
+      "start": 1510,
+      "end": 1521,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 95.650467,
+      "box": {
+        "x": 337,
+        "y": 319,
+        "width": 2,
+        "height": 22
+      },
+      "start": 1522,
+      "end": 1523,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "16%",
+      "confidence": 94.897629,
+      "box": {
+        "x": 362,
+        "y": 319,
+        "width": 40,
+        "height": 17
+      },
+      "start": 1524,
+      "end": 1527,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 92.974907,
+      "box": {
+        "x": 423,
+        "y": 319,
+        "width": 2,
+        "height": 22
+      },
+      "start": 1528,
+      "end": 1529,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "H",
+      "confidence": 92.974907,
+      "box": {
+        "x": 447,
+        "y": 319,
+        "width": 11,
+        "height": 17
+      },
+      "start": 1530,
+      "end": 1531,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.295471,
+      "box": {
+        "x": 481,
+        "y": 319,
+        "width": 2,
+        "height": 22
+      },
+      "start": 1532,
+      "end": 1533,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "n/a",
+      "confidence": 94.136528,
+      "box": {
+        "x": 505,
+        "y": 319,
+        "width": 40,
+        "height": 19
+      },
+      "start": 1534,
+      "end": 1537,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 94.136528,
+      "box": {
+        "x": 567,
+        "y": 319,
+        "width": 2,
+        "height": 22
+      },
+      "start": 1538,
+      "end": 1539,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "CBC",
+      "confidence": 94.308083,
+      "box": {
+        "x": 101,
+        "y": 359,
+        "width": 41,
+        "height": 17
+      },
+      "start": 1549,
+      "end": 1552,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 94.308083,
+      "box": {
+        "x": 164,
+        "y": 359,
+        "width": 2,
+        "height": 22
+      },
+      "start": 1553,
+      "end": 1554,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "within",
+      "confidence": 96.217377,
+      "box": {
+        "x": 187,
+        "y": 358,
+        "width": 84,
+        "height": 18
+      },
+      "start": 1555,
+      "end": 1561,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "ref",
+      "confidence": 96.775764,
+      "box": {
+        "x": 291,
+        "y": 357,
+        "width": 38,
+        "height": 19
+      },
+      "start": 1562,
+      "end": 1565,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.775764,
+      "box": {
+        "x": 351,
+        "y": 359,
+        "width": 2,
+        "height": 22
+      },
+      "start": 1566,
+      "end": 1567,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "n/a",
+      "confidence": 93.964066,
+      "box": {
+        "x": 376,
+        "y": 359,
+        "width": 39,
+        "height": 19
+      },
+      "start": 1568,
+      "end": 1571,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 94.249306,
+      "box": {
+        "x": 438,
+        "y": 359,
+        "width": 1,
+        "height": 22
+      },
+      "start": 1572,
+      "end": 1573,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "n/a",
+      "confidence": 95.343018,
+      "box": {
+        "x": 462,
+        "y": 359,
+        "width": 39,
+        "height": 19
+      },
+      "start": 1574,
+      "end": 1577,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 95.906578,
+      "box": {
+        "x": 524,
+        "y": 359,
+        "width": 2,
+        "height": 22
+      },
+      "start": 1578,
+      "end": 1579,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Nurse",
+      "confidence": 96.067261,
+      "box": {
+        "x": 102,
+        "y": 399,
+        "width": 68,
+        "height": 17
+      },
+      "start": 1587,
+      "end": 1592,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "note:",
+      "confidence": 96.067261,
+      "box": {
+        "x": 188,
+        "y": 400,
+        "width": 66,
+        "height": 16
+      },
+      "start": 1593,
+      "end": 1598,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "BSA",
+      "confidence": 96.661751,
+      "box": {
+        "x": 275,
+        "y": 399,
+        "width": 40,
+        "height": 17
+      },
+      "start": 1599,
+      "end": 1602,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "estimated",
+      "confidence": 96.318741,
+      "box": {
+        "x": 332,
+        "y": 398,
+        "width": 126,
+        "height": 18
+      },
+      "start": 1603,
+      "end": 1612,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "with",
+      "confidence": 96.832565,
+      "box": {
+        "x": 475,
+        "y": 398,
+        "width": 55,
+        "height": 18
+      },
+      "start": 1613,
+      "end": 1617,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "the",
+      "confidence": 96.536903,
+      "box": {
+        "x": 548,
+        "y": 398,
+        "width": 40,
+        "height": 18
+      },
+      "start": 1618,
+      "end": 1621,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "palm",
+      "confidence": 96.865402,
+      "box": {
+        "x": 606,
+        "y": 398,
+        "width": 55,
+        "height": 23
+      },
+      "start": 1622,
+      "end": 1626,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "method.",
+      "confidence": 96.4254,
+      "box": {
+        "x": 677,
+        "y": 398,
+        "width": 95,
+        "height": 18
+      },
+      "start": 1627,
+      "end": 1634,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Problem",
+      "confidence": 96.281509,
+      "box": {
+        "x": 102,
+        "y": 438,
+        "width": 98,
+        "height": 18
+      },
+      "start": 1635,
+      "end": 1642,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "list:",
+      "confidence": 95.172775,
+      "box": {
+        "x": 218,
+        "y": 438,
+        "width": 65,
+        "height": 18
+      },
+      "start": 1643,
+      "end": 1648,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "acne,",
+      "confidence": 96.252434,
+      "box": {
+        "x": 303,
+        "y": 443,
+        "width": 64,
+        "height": 17
+      },
+      "start": 1649,
+      "end": 1654,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "mild",
+      "confidence": 96.611977,
+      "box": {
+        "x": 389,
+        "y": 438,
+        "width": 55,
+        "height": 18
+      },
+      "start": 1655,
+      "end": 1659,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "seborrhea.",
+      "confidence": 95.794334,
+      "box": {
+        "x": 462,
+        "y": 438,
+        "width": 137,
+        "height": 18
+      },
+      "start": 1660,
+      "end": 1670,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Copied-forward:",
+      "confidence": 91.639839,
+      "box": {
+        "x": 101,
+        "y": 477,
+        "width": 210,
+        "height": 24
+      },
+      "start": 1671,
+      "end": 1686,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "sports",
+      "confidence": 96.580193,
+      "box": {
+        "x": 332,
+        "y": 480,
+        "width": 83,
+        "height": 21
+      },
+      "start": 1687,
+      "end": 1693,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "physical",
+      "confidence": 96.408699,
+      "box": {
+        "x": 433,
+        "y": 478,
+        "width": 112,
+        "height": 23
+      },
+      "start": 1694,
+      "end": 1702,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "form",
+      "confidence": 95.722961,
+      "box": {
+        "x": 563,
+        "y": 477,
+        "width": 54,
+        "height": 19
+      },
+      "start": 1703,
+      "end": 1707,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "unsigned.",
+      "confidence": 95.815048,
+      "box": {
+        "x": 635,
+        "y": 478,
+        "width": 122,
+        "height": 23
+      },
+      "start": 1708,
+      "end": 1717,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Handwritten",
+      "confidence": 96.295303,
+      "box": {
+        "x": 102,
+        "y": 518,
+        "width": 155,
+        "height": 18
+      },
+      "start": 1718,
+      "end": 1729,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "note:",
+      "confidence": 96.582687,
+      "box": {
+        "x": 275,
+        "y": 520,
+        "width": 65,
+        "height": 16
+      },
+      "start": 1730,
+      "end": 1735,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "rash",
+      "confidence": 96.811409,
+      "box": {
+        "x": 363,
+        "y": 518,
+        "width": 52,
+        "height": 18
+      },
+      "start": 1736,
+      "end": 1740,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "spares",
+      "confidence": 96.076576,
+      "box": {
+        "x": 433,
+        "y": 523,
+        "width": 83,
+        "height": 18
+      },
+      "start": 1741,
+      "end": 1747,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "the",
+      "confidence": 96.284821,
+      "box": {
+        "x": 534,
+        "y": 518,
+        "width": 40,
+        "height": 18
+      },
+      "start": 1748,
+      "end": 1751,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "face.",
+      "confidence": 96.284821,
+      "box": {
+        "x": 591,
+        "y": 517,
+        "width": 66,
+        "height": 19
+      },
+      "start": 1752,
+      "end": 1757,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "----",
+      "confidence": 71.016006,
+      "box": {
+        "x": 102,
+        "y": 568,
+        "width": 53,
+        "height": 2
+      },
+      "start": 1758,
+      "end": 1762,
+      "needsReview": true,
+      "page": 2
+    },
+    {
+      "text": "OLD",
+      "confidence": 96.770004,
+      "box": {
+        "x": 173,
+        "y": 559,
+        "width": 41,
+        "height": 17
+      },
+      "start": 1763,
+      "end": 1766,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "DENIAL",
+      "confidence": 96.608749,
+      "box": {
+        "x": 231,
+        "y": 559,
+        "width": 84,
+        "height": 17
+      },
+      "start": 1767,
+      "end": 1773,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "EXCERPT",
+      "confidence": 92.962379,
+      "box": {
+        "x": 332,
+        "y": 559,
+        "width": 98,
+        "height": 17
+      },
+      "start": 1774,
+      "end": 1781,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "----",
+      "confidence": 88.593719,
+      "box": {
+        "x": 448,
+        "y": 568,
+        "width": 52,
+        "height": 2
+      },
+      "start": 1782,
+      "end": 1786,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Denied",
+      "confidence": 96.108521,
+      "box": {
+        "x": 102,
+        "y": 598,
+        "width": 82,
+        "height": 18
+      },
+      "start": 1787,
+      "end": 1793,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "for",
+      "confidence": 93.167862,
+      "box": {
+        "x": 361,
+        "y": 597,
+        "width": 40,
+        "height": 19
+      },
+      "start": 1803,
+      "end": 1806,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "secukinumab",
+      "confidence": 89.270279,
+      "box": {
+        "x": 419,
+        "y": 598,
+        "width": 155,
+        "height": 18
+      },
+      "start": 1807,
+      "end": 1818,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "300",
+      "confidence": 69.774704,
+      "box": {
+        "x": 591,
+        "y": 599,
+        "width": 40,
+        "height": 17
+      },
+      "start": 1819,
+      "end": 1822,
+      "needsReview": true,
+      "page": 2
+    },
+    {
+      "text": "mg.",
+      "confidence": 96.176071,
+      "box": {
+        "x": 648,
+        "y": 603,
+        "width": 37,
+        "height": 18
+      },
+      "start": 1823,
+      "end": 1826,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Not",
+      "confidence": 96.079781,
+      "box": {
+        "x": 102,
+        "y": 639,
+        "width": 39,
+        "height": 17
+      },
+      "start": 1827,
+      "end": 1830,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "the",
+      "confidence": 96.079781,
+      "box": {
+        "x": 159,
+        "y": 638,
+        "width": 40,
+        "height": 18
+      },
+      "start": 1831,
+      "end": 1834,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "drug",
+      "confidence": 96.139236,
+      "box": {
+        "x": 217,
+        "y": 638,
+        "width": 54,
+        "height": 23
+      },
+      "start": 1835,
+      "end": 1839,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "on",
+      "confidence": 96.466499,
+      "box": {
+        "x": 289,
+        "y": 643,
+        "width": 25,
+        "height": 13
+      },
+      "start": 1840,
+      "end": 1842,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "today's",
+      "confidence": 95.802307,
+      "box": {
+        "x": 332,
+        "y": 638,
+        "width": 98,
+        "height": 23
+      },
+      "start": 1843,
+      "end": 1850,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "adalimumab",
+      "confidence": 96.453964,
+      "box": {
+        "x": 447,
+        "y": 638,
+        "width": 141,
+        "height": 18
+      },
+      "start": 1851,
+      "end": 1861,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "request.",
+      "confidence": 96.233551,
+      "box": {
+        "x": 608,
+        "y": 640,
+        "width": 106,
+        "height": 21
+      },
+      "start": 1862,
+      "end": 1870,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "(fictional).",
+      "confidence": 96.603516,
+      "box": {
+        "x": 349,
+        "y": 677,
+        "width": 164,
+        "height": 24
+      },
+      "start": 1893,
+      "end": 1905,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "3",
+      "confidence": 94.097015,
+      "box": {
+        "x": 533,
+        "y": 679,
+        "width": 11,
+        "height": 17
+      },
+      "start": 1906,
+      "end": 1907,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "pages.",
+      "confidence": 94.097015,
+      "box": {
+        "x": 563,
+        "y": 683,
+        "width": 79,
+        "height": 18
+      },
+      "start": 1908,
+      "end": 1914,
+      "needsReview": false,
+      "page": 2
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "08/19/2026 3:05 PM FROM: XXXXXXXXXX TO: PA DEPT P.001/003\nCOVER LOOMIS DERM (fictional)\nTo: Biologic PA, Northcap Plan (fictional)\nFrom: Loomis Derm (fictional)\nRe: adalimumab, Teo Brant (fictional)\nMember ID: XXXXXXXX Pages: 3\n---- PA FORM ----\nPatient: Teo Brant (fictional) Age: 15 years\nPrescriber: Dr. Uma Shah (fictional)\nClinic: Loomis Derm (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: adalimumab\nSig: 40 mg SC Q2wW\nIndication: moderate-to-severe plaque psoriasis\nRequest date: 08/19/2026\nPrior systemic: apremilast 30 mg PO BID\nPhototherapy: narrowband UVB last winter\nBSA today: see measures page\n[x] New start\nPharmacy: Kiln Pharmacy (fictional)\n08/19/2026 3:05 PM FROM: XXXXXXXXXX TO: PA DEPT P.002/003\nLETTER OF MEDICAL NECESSITY\nLoomis Derm (fictional)\nDr. Uma Shah (fictional)\nRe: Teo Brant (fictional) Member ID XXXXXXXX\nRequest date: 02/11/2026\nPlease approve adalimumab 48 mg every other week\nfor moderate-to-severe plaque psoriasis.\nThe form cover shows a different request date.\nI am not correcting either date in this letter.\nApremilast 30 mg PO BID was tried for acne only,\nnot as a psoriasis failure with measures.\nPer call with pt: itching is worse at night.\nDenies joint swelling. No hx of uveitis.\nFamily history: father with psoriasis.\nSigned Dr. Uma Shah (fictional)\n08/19/2026 3:05 PM FROM: XXXXXXXXXX TO: PA DEPT P.003/003\nLOOMIS DERM (fictional) MEASURES\nPatient: Teo Brant (fictional) MRN: XXXXXXXX\nMeasure | Value | Flag | Range | Date\nBSA involvement | 16% | H | n/a | 07/28/2026\nCBC | within ref | n/a | n/a | 87/28/2026\nNurse note: BSA estimated with the palm method.\nProblem list: acne, mild seborrhea.\nCopied-forward: sports physical form unsigned.\nHandwritten note: rash spares the face.\n---- OLD DENIAL EXCERPT ----\nDenied 12/14/2025 for secukinumab 300 mg.\nNot the drug on today's adalimumab request.\nEnd. Loomis Derm (fictional). 3 pages.\n",
+    "words": [
+      {
+        "text": "08/19/2026",
+        "confidence": 89.199844,
+        "box": {
+          "x": 102,
+          "y": 159,
+          "width": 140,
+          "height": 19
+        },
+        "start": 0,
+        "end": 10,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "3:05",
+        "confidence": 95.177414,
+        "box": {
+          "x": 274,
+          "y": 159,
+          "width": 55,
+          "height": 17
+        },
+        "start": 11,
+        "end": 15,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "PM",
+        "confidence": 75.491669,
+        "box": {
+          "x": 347,
+          "y": 159,
+          "width": 25,
+          "height": 17
+        },
+        "start": 16,
+        "end": 18,
+        "needsReview": true,
+        "page": 0
+      },
+      {
+        "text": "FROM:",
+        "confidence": 75.491669,
+        "box": {
+          "x": 405,
+          "y": 159,
+          "width": 65,
+          "height": 17
+        },
+        "start": 19,
+        "end": 24,
+        "needsReview": true,
+        "page": 0
+      },
+      {
+        "text": "XXXXXXXXXX",
+        "confidence": 91.473312,
+        "box": {
+          "x": 490,
+          "y": 159,
+          "width": 142,
+          "height": 17
+        },
+        "start": 25,
+        "end": 35,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "TO:",
+        "confidence": 96.458992,
+        "box": {
+          "x": 663,
+          "y": 159,
+          "width": 37,
+          "height": 17
+        },
+        "start": 36,
+        "end": 39,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "PA",
+        "confidence": 96.612923,
+        "box": {
+          "x": 721,
+          "y": 159,
+          "width": 26,
+          "height": 17
+        },
+        "start": 40,
+        "end": 42,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "DEPT",
+        "confidence": 89.970886,
+        "box": {
+          "x": 764,
+          "y": 159,
+          "width": 55,
+          "height": 17
+        },
+        "start": 43,
+        "end": 47,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "P.001/003",
+        "confidence": 82.842194,
+        "box": {
+          "x": 851,
+          "y": 159,
+          "width": 125,
+          "height": 19
+        },
+        "start": 48,
+        "end": 57,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "COVER",
+        "confidence": 96.420906,
+        "box": {
+          "x": 101,
+          "y": 199,
+          "width": 70,
+          "height": 17
+        },
+        "start": 58,
+        "end": 63,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "LOOMIS",
+        "confidence": 96.45121,
+        "box": {
+          "x": 189,
+          "y": 199,
+          "width": 83,
+          "height": 17
+        },
+        "start": 64,
+        "end": 70,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "DERM",
+        "confidence": 95.027618,
+        "box": {
+          "x": 289,
+          "y": 199,
+          "width": 54,
+          "height": 17
+        },
+        "start": 71,
+        "end": 75,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.027618,
+        "box": {
+          "x": 363,
+          "y": 197,
+          "width": 150,
+          "height": 24
+        },
+        "start": 76,
+        "end": 87,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "To:",
+        "confidence": 96.349472,
+        "box": {
+          "x": 101,
+          "y": 239,
+          "width": 38,
+          "height": 17
+        },
+        "start": 88,
+        "end": 91,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Biologic",
+        "confidence": 96.702805,
+        "box": {
+          "x": 160,
+          "y": 238,
+          "width": 111,
+          "height": 23
+        },
+        "start": 92,
+        "end": 100,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "PA,",
+        "confidence": 92.491997,
+        "box": {
+          "x": 289,
+          "y": 239,
+          "width": 35,
+          "height": 21
+        },
+        "start": 101,
+        "end": 104,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Northcap",
+        "confidence": 92.491997,
+        "box": {
+          "x": 346,
+          "y": 238,
+          "width": 112,
+          "height": 23
+        },
+        "start": 105,
+        "end": 113,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Plan",
+        "confidence": 96.507149,
+        "box": {
+          "x": 477,
+          "y": 238,
+          "width": 53,
+          "height": 18
+        },
+        "start": 114,
+        "end": 118,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.798485,
+        "box": {
+          "x": 551,
+          "y": 237,
+          "width": 149,
+          "height": 24
+        },
+        "start": 119,
+        "end": 130,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "From:",
+        "confidence": 96.890625,
+        "box": {
+          "x": 102,
+          "y": 279,
+          "width": 65,
+          "height": 17
+        },
+        "start": 131,
+        "end": 136,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Loomis",
+        "confidence": 96.245674,
+        "box": {
+          "x": 189,
+          "y": 279,
+          "width": 82,
+          "height": 17
+        },
+        "start": 137,
+        "end": 143,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Derm",
+        "confidence": 96.206467,
+        "box": {
+          "x": 289,
+          "y": 279,
+          "width": 55,
+          "height": 17
+        },
+        "start": 144,
+        "end": 148,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.375458,
+        "box": {
+          "x": 363,
+          "y": 277,
+          "width": 150,
+          "height": 24
+        },
+        "start": 149,
+        "end": 160,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Re:",
+        "confidence": 95.87149,
+        "box": {
+          "x": 102,
+          "y": 319,
+          "width": 37,
+          "height": 17
+        },
+        "start": 161,
+        "end": 164,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "adalimumab,",
+        "confidence": 95.87149,
+        "box": {
+          "x": 159,
+          "y": 318,
+          "width": 150,
+          "height": 22
+        },
+        "start": 165,
+        "end": 176,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Teo",
+        "confidence": 96.306602,
+        "box": {
+          "x": 331,
+          "y": 319,
+          "width": 41,
+          "height": 17
+        },
+        "start": 177,
+        "end": 180,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Brant",
+        "confidence": 95.976707,
+        "box": {
+          "x": 390,
+          "y": 319,
+          "width": 68,
+          "height": 17
+        },
+        "start": 181,
+        "end": 186,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 93.751411,
+        "box": {
+          "x": 479,
+          "y": 317,
+          "width": 149,
+          "height": 24
+        },
+        "start": 187,
+        "end": 198,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Member",
+        "confidence": 96.349823,
+        "box": {
+          "x": 102,
+          "y": 358,
+          "width": 83,
+          "height": 18
+        },
+        "start": 199,
+        "end": 205,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "ID:",
+        "confidence": 92.99942,
+        "box": {
+          "x": 203,
+          "y": 359,
+          "width": 36,
+          "height": 17
+        },
+        "start": 206,
+        "end": 209,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "XXXXXXXX",
+        "confidence": 90.256805,
+        "box": {
+          "x": 260,
+          "y": 359,
+          "width": 113,
+          "height": 17
+        },
+        "start": 210,
+        "end": 218,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Pages:",
+        "confidence": 96.424622,
+        "box": {
+          "x": 390,
+          "y": 359,
+          "width": 80,
+          "height": 22
+        },
+        "start": 219,
+        "end": 225,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "3",
+        "confidence": 96.424622,
+        "box": {
+          "x": 490,
+          "y": 359,
+          "width": 11,
+          "height": 17
+        },
+        "start": 226,
+        "end": 227,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "----",
+        "confidence": 84.559319,
+        "box": {
+          "x": 102,
+          "y": 408,
+          "width": 53,
+          "height": 1
+        },
+        "start": 228,
+        "end": 232,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "PA",
+        "confidence": 96.211441,
+        "box": {
+          "x": 174,
+          "y": 399,
+          "width": 26,
+          "height": 17
+        },
+        "start": 233,
+        "end": 235,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "FORM",
+        "confidence": 91.270203,
+        "box": {
+          "x": 217,
+          "y": 399,
+          "width": 54,
+          "height": 17
+        },
+        "start": 236,
+        "end": 240,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "----",
+        "confidence": 86.430588,
+        "box": {
+          "x": 290,
+          "y": 408,
+          "width": 52,
+          "height": 1
+        },
+        "start": 241,
+        "end": 245,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.281616,
+        "box": {
+          "x": 102,
+          "y": 439,
+          "width": 109,
+          "height": 17
+        },
+        "start": 246,
+        "end": 254,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Teo",
+        "confidence": 96.159119,
+        "box": {
+          "x": 230,
+          "y": 439,
+          "width": 41,
+          "height": 17
+        },
+        "start": 255,
+        "end": 258,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Brant",
+        "confidence": 96.109062,
+        "box": {
+          "x": 289,
+          "y": 439,
+          "width": 68,
+          "height": 17
+        },
+        "start": 259,
+        "end": 264,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.968163,
+        "box": {
+          "x": 378,
+          "y": 437,
+          "width": 150,
+          "height": 24
+        },
+        "start": 265,
+        "end": 276,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Age:",
+        "confidence": 94.845985,
+        "box": {
+          "x": 548,
+          "y": 439,
+          "width": 52,
+          "height": 22
+        },
+        "start": 277,
+        "end": 281,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "15",
+        "confidence": 94.845985,
+        "box": {
+          "x": 621,
+          "y": 439,
+          "width": 25,
+          "height": 17
+        },
+        "start": 282,
+        "end": 284,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "years",
+        "confidence": 96.385849,
+        "box": {
+          "x": 663,
+          "y": 443,
+          "width": 69,
+          "height": 18
+        },
+        "start": 285,
+        "end": 290,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Prescriber:",
+        "confidence": 89.681473,
+        "box": {
+          "x": 102,
+          "y": 478,
+          "width": 152,
+          "height": 18
+        },
+        "start": 291,
+        "end": 302,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Dr.",
+        "confidence": 96.352196,
+        "box": {
+          "x": 275,
+          "y": 479,
+          "width": 36,
+          "height": 17
+        },
+        "start": 303,
+        "end": 306,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Uma",
+        "confidence": 96.809143,
+        "box": {
+          "x": 332,
+          "y": 479,
+          "width": 40,
+          "height": 17
+        },
+        "start": 307,
+        "end": 310,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Shah",
+        "confidence": 95.98436,
+        "box": {
+          "x": 389,
+          "y": 478,
+          "width": 55,
+          "height": 18
+        },
+        "start": 311,
+        "end": 315,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.200417,
+        "box": {
+          "x": 464,
+          "y": 477,
+          "width": 150,
+          "height": 24
+        },
+        "start": 316,
+        "end": 327,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Clinic:",
+        "confidence": 95.751358,
+        "box": {
+          "x": 101,
+          "y": 518,
+          "width": 95,
+          "height": 18
+        },
+        "start": 328,
+        "end": 335,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Loomis",
+        "confidence": 96.718452,
+        "box": {
+          "x": 217,
+          "y": 519,
+          "width": 83,
+          "height": 17
+        },
+        "start": 336,
+        "end": 342,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Derm",
+        "confidence": 96.182556,
+        "box": {
+          "x": 318,
+          "y": 519,
+          "width": 55,
+          "height": 17
+        },
+        "start": 343,
+        "end": 347,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.182556,
+        "box": {
+          "x": 392,
+          "y": 517,
+          "width": 150,
+          "height": 24
+        },
+        "start": 348,
+        "end": 359,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Phone:",
+        "confidence": 89.367142,
+        "box": {
+          "x": 102,
+          "y": 558,
+          "width": 80,
+          "height": 18
+        },
+        "start": 360,
+        "end": 366,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "XXXXXXXXXX",
+        "confidence": 90.578438,
+        "box": {
+          "x": 202,
+          "y": 559,
+          "width": 142,
+          "height": 17
+        },
+        "start": 367,
+        "end": 377,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Fax:",
+        "confidence": 92.639099,
+        "box": {
+          "x": 361,
+          "y": 559,
+          "width": 51,
+          "height": 17
+        },
+        "start": 378,
+        "end": 382,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "XXXXXXXXXX",
+        "confidence": 90.095215,
+        "box": {
+          "x": 432,
+          "y": 559,
+          "width": 142,
+          "height": 17
+        },
+        "start": 383,
+        "end": 393,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Drug:",
+        "confidence": 94.882927,
+        "box": {
+          "x": 102,
+          "y": 599,
+          "width": 65,
+          "height": 22
+        },
+        "start": 394,
+        "end": 399,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "adalimumab",
+        "confidence": 94.882927,
+        "box": {
+          "x": 188,
+          "y": 598,
+          "width": 141,
+          "height": 18
+        },
+        "start": 400,
+        "end": 410,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Sig:",
+        "confidence": 96.126404,
+        "box": {
+          "x": 101,
+          "y": 639,
+          "width": 52,
+          "height": 22
+        },
+        "start": 411,
+        "end": 415,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "40",
+        "confidence": 91.948822,
+        "box": {
+          "x": 173,
+          "y": 639,
+          "width": 26,
+          "height": 17
+        },
+        "start": 416,
+        "end": 418,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "mg",
+        "confidence": 96.523697,
+        "box": {
+          "x": 216,
+          "y": 643,
+          "width": 26,
+          "height": 18
+        },
+        "start": 419,
+        "end": 421,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "SC",
+        "confidence": 93.182472,
+        "box": {
+          "x": 260,
+          "y": 639,
+          "width": 26,
+          "height": 17
+        },
+        "start": 422,
+        "end": 424,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Q2wW",
+        "confidence": 44.039368,
+        "box": {
+          "x": 303,
+          "y": 639,
+          "width": 41,
+          "height": 20
+        },
+        "start": 425,
+        "end": 429,
+        "needsReview": true,
+        "page": 0
+      },
+      {
+        "text": "Indication:",
+        "confidence": 93.02076,
+        "box": {
+          "x": 102,
+          "y": 678,
+          "width": 152,
+          "height": 18
+        },
+        "start": 430,
+        "end": 441,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "moderate-to-severe",
+        "confidence": 90.997108,
+        "box": {
+          "x": 274,
+          "y": 678,
+          "width": 257,
+          "height": 18
+        },
+        "start": 442,
+        "end": 460,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "plaque",
+        "confidence": 96.684769,
+        "box": {
+          "x": 548,
+          "y": 678,
+          "width": 83,
+          "height": 23
+        },
+        "start": 461,
+        "end": 467,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "psoriasis",
+        "confidence": 95.592316,
+        "box": {
+          "x": 649,
+          "y": 679,
+          "width": 126,
+          "height": 22
+        },
+        "start": 468,
+        "end": 477,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Request",
+        "confidence": 96.045593,
+        "box": {
+          "x": 102,
+          "y": 719,
+          "width": 97,
+          "height": 22
+        },
+        "start": 478,
+        "end": 485,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "date:",
+        "confidence": 96.560883,
+        "box": {
+          "x": 217,
+          "y": 718,
+          "width": 66,
+          "height": 18
+        },
+        "start": 486,
+        "end": 491,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "08/19/2026",
+        "confidence": 89.617134,
+        "box": {
+          "x": 303,
+          "y": 719,
+          "width": 141,
+          "height": 19
+        },
+        "start": 492,
+        "end": 502,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Prior",
+        "confidence": 95.79744,
+        "box": {
+          "x": 102,
+          "y": 759,
+          "width": 68,
+          "height": 17
+        },
+        "start": 503,
+        "end": 508,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "systemic:",
+        "confidence": 92.863167,
+        "box": {
+          "x": 188,
+          "y": 759,
+          "width": 123,
+          "height": 22
+        },
+        "start": 509,
+        "end": 518,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "apremilast",
+        "confidence": 91.432091,
+        "box": {
+          "x": 332,
+          "y": 758,
+          "width": 140,
+          "height": 23
+        },
+        "start": 519,
+        "end": 529,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "30",
+        "confidence": 89.795982,
+        "box": {
+          "x": 490,
+          "y": 759,
+          "width": 26,
+          "height": 17
+        },
+        "start": 530,
+        "end": 532,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "mg",
+        "confidence": 96.330566,
+        "box": {
+          "x": 533,
+          "y": 763,
+          "width": 26,
+          "height": 18
+        },
+        "start": 533,
+        "end": 535,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "PO",
+        "confidence": 95.588715,
+        "box": {
+          "x": 577,
+          "y": 759,
+          "width": 26,
+          "height": 17
+        },
+        "start": 536,
+        "end": 538,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "BID",
+        "confidence": 96.801865,
+        "box": {
+          "x": 620,
+          "y": 759,
+          "width": 41,
+          "height": 17
+        },
+        "start": 539,
+        "end": 542,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Phototherapy:",
+        "confidence": 95.371887,
+        "box": {
+          "x": 102,
+          "y": 798,
+          "width": 181,
+          "height": 23
+        },
+        "start": 543,
+        "end": 556,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "narrowband",
+        "confidence": 96.366325,
+        "box": {
+          "x": 304,
+          "y": 798,
+          "width": 140,
+          "height": 18
+        },
+        "start": 557,
+        "end": 567,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "UVB",
+        "confidence": 96.630142,
+        "box": {
+          "x": 462,
+          "y": 799,
+          "width": 40,
+          "height": 17
+        },
+        "start": 568,
+        "end": 571,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "last",
+        "confidence": 96.254349,
+        "box": {
+          "x": 520,
+          "y": 798,
+          "width": 53,
+          "height": 18
+        },
+        "start": 572,
+        "end": 576,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "winter",
+        "confidence": 96.25486,
+        "box": {
+          "x": 590,
+          "y": 799,
+          "width": 84,
+          "height": 17
+        },
+        "start": 577,
+        "end": 583,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "BSA",
+        "confidence": 94.905258,
+        "box": {
+          "x": 102,
+          "y": 839,
+          "width": 40,
+          "height": 17
+        },
+        "start": 584,
+        "end": 587,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "today:",
+        "confidence": 95.850594,
+        "box": {
+          "x": 159,
+          "y": 838,
+          "width": 80,
+          "height": 23
+        },
+        "start": 588,
+        "end": 594,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "see",
+        "confidence": 96.358833,
+        "box": {
+          "x": 260,
+          "y": 843,
+          "width": 40,
+          "height": 13
+        },
+        "start": 595,
+        "end": 598,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "measures",
+        "confidence": 96.168678,
+        "box": {
+          "x": 317,
+          "y": 843,
+          "width": 113,
+          "height": 13
+        },
+        "start": 599,
+        "end": 607,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "page",
+        "confidence": 96.351593,
+        "box": {
+          "x": 448,
+          "y": 843,
+          "width": 54,
+          "height": 18
+        },
+        "start": 608,
+        "end": 612,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "[x]",
+        "confidence": 95.349815,
+        "box": {
+          "x": 105,
+          "y": 876,
+          "width": 33,
+          "height": 24
+        },
+        "start": 613,
+        "end": 616,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "New",
+        "confidence": 96.429176,
+        "box": {
+          "x": 159,
+          "y": 879,
+          "width": 41,
+          "height": 17
+        },
+        "start": 617,
+        "end": 620,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "start",
+        "confidence": 96.747437,
+        "box": {
+          "x": 217,
+          "y": 880,
+          "width": 68,
+          "height": 16
+        },
+        "start": 621,
+        "end": 626,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Pharmacy:",
+        "confidence": 95.719284,
+        "box": {
+          "x": 102,
+          "y": 918,
+          "width": 123,
+          "height": 23
+        },
+        "start": 627,
+        "end": 636,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Kiln",
+        "confidence": 96.167892,
+        "box": {
+          "x": 246,
+          "y": 918,
+          "width": 54,
+          "height": 18
+        },
+        "start": 637,
+        "end": 641,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Pharmacy",
+        "confidence": 96.186844,
+        "box": {
+          "x": 318,
+          "y": 918,
+          "width": 112,
+          "height": 23
+        },
+        "start": 642,
+        "end": 650,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 94.564308,
+        "box": {
+          "x": 450,
+          "y": 917,
+          "width": 150,
+          "height": 24
+        },
+        "start": 651,
+        "end": 662,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "08/19/2026",
+        "confidence": 85.446022,
+        "box": {
+          "x": 102,
+          "y": 159,
+          "width": 140,
+          "height": 19
+        },
+        "start": 663,
+        "end": 673,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "3:05",
+        "confidence": 94.775917,
+        "box": {
+          "x": 274,
+          "y": 159,
+          "width": 55,
+          "height": 17
+        },
+        "start": 674,
+        "end": 678,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "PM",
+        "confidence": 73.432556,
+        "box": {
+          "x": 347,
+          "y": 159,
+          "width": 25,
+          "height": 17
+        },
+        "start": 679,
+        "end": 681,
+        "needsReview": true,
+        "page": 1
+      },
+      {
+        "text": "FROM:",
+        "confidence": 73.432556,
+        "box": {
+          "x": 405,
+          "y": 159,
+          "width": 65,
+          "height": 17
+        },
+        "start": 682,
+        "end": 687,
+        "needsReview": true,
+        "page": 1
+      },
+      {
+        "text": "XXXXXXXXXX",
+        "confidence": 90.863434,
+        "box": {
+          "x": 490,
+          "y": 159,
+          "width": 142,
+          "height": 17
+        },
+        "start": 688,
+        "end": 698,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "TO:",
+        "confidence": 96.280945,
+        "box": {
+          "x": 663,
+          "y": 159,
+          "width": 37,
+          "height": 17
+        },
+        "start": 699,
+        "end": 702,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "PA",
+        "confidence": 96.67337,
+        "box": {
+          "x": 721,
+          "y": 159,
+          "width": 26,
+          "height": 17
+        },
+        "start": 703,
+        "end": 705,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "DEPT",
+        "confidence": 88.507484,
+        "box": {
+          "x": 764,
+          "y": 159,
+          "width": 55,
+          "height": 17
+        },
+        "start": 706,
+        "end": 710,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "P.002/003",
+        "confidence": 86.029648,
+        "box": {
+          "x": 851,
+          "y": 159,
+          "width": 125,
+          "height": 19
+        },
+        "start": 711,
+        "end": 720,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "LETTER",
+        "confidence": 95.353622,
+        "box": {
+          "x": 102,
+          "y": 199,
+          "width": 83,
+          "height": 17
+        },
+        "start": 721,
+        "end": 727,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "OF",
+        "confidence": 95.353622,
+        "box": {
+          "x": 202,
+          "y": 199,
+          "width": 26,
+          "height": 17
+        },
+        "start": 728,
+        "end": 730,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "MEDICAL",
+        "confidence": 96.695663,
+        "box": {
+          "x": 246,
+          "y": 199,
+          "width": 97,
+          "height": 17
+        },
+        "start": 731,
+        "end": 738,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "NECESSITY",
+        "confidence": 96.43689,
+        "box": {
+          "x": 361,
+          "y": 199,
+          "width": 127,
+          "height": 17
+        },
+        "start": 739,
+        "end": 748,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Loomis",
+        "confidence": 96.264175,
+        "box": {
+          "x": 102,
+          "y": 239,
+          "width": 83,
+          "height": 17
+        },
+        "start": 749,
+        "end": 755,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Derm",
+        "confidence": 96.145378,
+        "box": {
+          "x": 203,
+          "y": 239,
+          "width": 54,
+          "height": 17
+        },
+        "start": 756,
+        "end": 760,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.451149,
+        "box": {
+          "x": 277,
+          "y": 237,
+          "width": 150,
+          "height": 24
+        },
+        "start": 761,
+        "end": 772,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Dr.",
+        "confidence": 96.47123,
+        "box": {
+          "x": 102,
+          "y": 279,
+          "width": 36,
+          "height": 17
+        },
+        "start": 773,
+        "end": 776,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Uma",
+        "confidence": 96.388435,
+        "box": {
+          "x": 159,
+          "y": 279,
+          "width": 40,
+          "height": 17
+        },
+        "start": 777,
+        "end": 780,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Shah",
+        "confidence": 95.990807,
+        "box": {
+          "x": 217,
+          "y": 278,
+          "width": 54,
+          "height": 18
+        },
+        "start": 781,
+        "end": 785,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 94.99855,
+        "box": {
+          "x": 291,
+          "y": 277,
+          "width": 150,
+          "height": 24
+        },
+        "start": 786,
+        "end": 797,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Re:",
+        "confidence": 96.554398,
+        "box": {
+          "x": 102,
+          "y": 319,
+          "width": 37,
+          "height": 17
+        },
+        "start": 798,
+        "end": 801,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Teo",
+        "confidence": 95.4618,
+        "box": {
+          "x": 158,
+          "y": 319,
+          "width": 41,
+          "height": 17
+        },
+        "start": 802,
+        "end": 805,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Brant",
+        "confidence": 95.945404,
+        "box": {
+          "x": 217,
+          "y": 319,
+          "width": 68,
+          "height": 17
+        },
+        "start": 806,
+        "end": 811,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.945404,
+        "box": {
+          "x": 306,
+          "y": 317,
+          "width": 150,
+          "height": 24
+        },
+        "start": 812,
+        "end": 823,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Member",
+        "confidence": 96.068626,
+        "box": {
+          "x": 476,
+          "y": 318,
+          "width": 83,
+          "height": 18
+        },
+        "start": 824,
+        "end": 830,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "ID",
+        "confidence": 92.498222,
+        "box": {
+          "x": 577,
+          "y": 319,
+          "width": 26,
+          "height": 17
+        },
+        "start": 831,
+        "end": 833,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "XXXXXXXX",
+        "confidence": 90.678055,
+        "box": {
+          "x": 620,
+          "y": 319,
+          "width": 113,
+          "height": 17
+        },
+        "start": 834,
+        "end": 842,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Request",
+        "confidence": 95.995819,
+        "box": {
+          "x": 102,
+          "y": 359,
+          "width": 97,
+          "height": 22
+        },
+        "start": 843,
+        "end": 850,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "date:",
+        "confidence": 96.175987,
+        "box": {
+          "x": 217,
+          "y": 358,
+          "width": 66,
+          "height": 18
+        },
+        "start": 851,
+        "end": 856,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "02/11/2026",
+        "confidence": 90.155243,
+        "box": {
+          "x": 303,
+          "y": 359,
+          "width": 141,
+          "height": 19
+        },
+        "start": 857,
+        "end": 867,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Please",
+        "confidence": 96.661049,
+        "box": {
+          "x": 102,
+          "y": 398,
+          "width": 83,
+          "height": 18
+        },
+        "start": 868,
+        "end": 874,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "approve",
+        "confidence": 96.658562,
+        "box": {
+          "x": 203,
+          "y": 403,
+          "width": 97,
+          "height": 18
+        },
+        "start": 875,
+        "end": 882,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "adalimumab",
+        "confidence": 96.660393,
+        "box": {
+          "x": 318,
+          "y": 398,
+          "width": 140,
+          "height": 18
+        },
+        "start": 883,
+        "end": 893,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "48",
+        "confidence": 90.775589,
+        "box": {
+          "x": 475,
+          "y": 399,
+          "width": 27,
+          "height": 17
+        },
+        "start": 894,
+        "end": 896,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "mg",
+        "confidence": 95.812386,
+        "box": {
+          "x": 519,
+          "y": 403,
+          "width": 25,
+          "height": 18
+        },
+        "start": 897,
+        "end": 899,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "every",
+        "confidence": 95.812386,
+        "box": {
+          "x": 562,
+          "y": 403,
+          "width": 70,
+          "height": 18
+        },
+        "start": 900,
+        "end": 905,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "other",
+        "confidence": 96.884018,
+        "box": {
+          "x": 649,
+          "y": 398,
+          "width": 68,
+          "height": 18
+        },
+        "start": 906,
+        "end": 911,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "week",
+        "confidence": 96.162857,
+        "box": {
+          "x": 734,
+          "y": 398,
+          "width": 56,
+          "height": 18
+        },
+        "start": 912,
+        "end": 916,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "for",
+        "confidence": 91.999451,
+        "box": {
+          "x": 102,
+          "y": 437,
+          "width": 39,
+          "height": 19
+        },
+        "start": 917,
+        "end": 920,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "moderate-to-severe",
+        "confidence": 89.762177,
+        "box": {
+          "x": 159,
+          "y": 438,
+          "width": 256,
+          "height": 18
+        },
+        "start": 921,
+        "end": 939,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "plaque",
+        "confidence": 96.525696,
+        "box": {
+          "x": 433,
+          "y": 438,
+          "width": 83,
+          "height": 23
+        },
+        "start": 940,
+        "end": 946,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "psoriasis.",
+        "confidence": 96.539497,
+        "box": {
+          "x": 534,
+          "y": 439,
+          "width": 137,
+          "height": 22
+        },
+        "start": 947,
+        "end": 957,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "The",
+        "confidence": 95.879601,
+        "box": {
+          "x": 101,
+          "y": 478,
+          "width": 41,
+          "height": 18
+        },
+        "start": 958,
+        "end": 961,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "form",
+        "confidence": 96.303299,
+        "box": {
+          "x": 159,
+          "y": 477,
+          "width": 55,
+          "height": 19
+        },
+        "start": 962,
+        "end": 966,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "cover",
+        "confidence": 96.247871,
+        "box": {
+          "x": 231,
+          "y": 483,
+          "width": 69,
+          "height": 13
+        },
+        "start": 967,
+        "end": 972,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "shows",
+        "confidence": 96.247871,
+        "box": {
+          "x": 318,
+          "y": 478,
+          "width": 68,
+          "height": 18
+        },
+        "start": 973,
+        "end": 978,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "a",
+        "confidence": 96.139206,
+        "box": {
+          "x": 404,
+          "y": 483,
+          "width": 11,
+          "height": 13
+        },
+        "start": 979,
+        "end": 980,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "different",
+        "confidence": 96.139206,
+        "box": {
+          "x": 433,
+          "y": 477,
+          "width": 126,
+          "height": 19
+        },
+        "start": 981,
+        "end": 990,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "request",
+        "confidence": 96.306641,
+        "box": {
+          "x": 579,
+          "y": 480,
+          "width": 95,
+          "height": 21
+        },
+        "start": 991,
+        "end": 998,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "date.",
+        "confidence": 96.344185,
+        "box": {
+          "x": 692,
+          "y": 478,
+          "width": 65,
+          "height": 18
+        },
+        "start": 999,
+        "end": 1004,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "I",
+        "confidence": 96.032097,
+        "box": {
+          "x": 102,
+          "y": 519,
+          "width": 10,
+          "height": 17
+        },
+        "start": 1005,
+        "end": 1006,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "am",
+        "confidence": 96.032097,
+        "box": {
+          "x": 131,
+          "y": 523,
+          "width": 26,
+          "height": 13
+        },
+        "start": 1007,
+        "end": 1009,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "not",
+        "confidence": 96.122253,
+        "box": {
+          "x": 174,
+          "y": 520,
+          "width": 39,
+          "height": 16
+        },
+        "start": 1010,
+        "end": 1013,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "correcting",
+        "confidence": 95.605713,
+        "box": {
+          "x": 231,
+          "y": 519,
+          "width": 141,
+          "height": 22
+        },
+        "start": 1014,
+        "end": 1024,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "either",
+        "confidence": 96.604126,
+        "box": {
+          "x": 390,
+          "y": 518,
+          "width": 83,
+          "height": 18
+        },
+        "start": 1025,
+        "end": 1031,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "date",
+        "confidence": 96.392479,
+        "box": {
+          "x": 490,
+          "y": 518,
+          "width": 55,
+          "height": 18
+        },
+        "start": 1032,
+        "end": 1036,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "in",
+        "confidence": 96.374985,
+        "box": {
+          "x": 563,
+          "y": 519,
+          "width": 25,
+          "height": 17
+        },
+        "start": 1037,
+        "end": 1039,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "this",
+        "confidence": 96.016632,
+        "box": {
+          "x": 606,
+          "y": 518,
+          "width": 54,
+          "height": 18
+        },
+        "start": 1040,
+        "end": 1044,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "letter.",
+        "confidence": 95.199875,
+        "box": {
+          "x": 678,
+          "y": 518,
+          "width": 94,
+          "height": 18
+        },
+        "start": 1045,
+        "end": 1052,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Apremilast",
+        "confidence": 91.441711,
+        "box": {
+          "x": 101,
+          "y": 558,
+          "width": 141,
+          "height": 23
+        },
+        "start": 1053,
+        "end": 1063,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "30",
+        "confidence": 92.115189,
+        "box": {
+          "x": 260,
+          "y": 559,
+          "width": 26,
+          "height": 17
+        },
+        "start": 1064,
+        "end": 1066,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "mg",
+        "confidence": 96.227058,
+        "box": {
+          "x": 303,
+          "y": 563,
+          "width": 25,
+          "height": 18
+        },
+        "start": 1067,
+        "end": 1069,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "PO",
+        "confidence": 95.448471,
+        "box": {
+          "x": 347,
+          "y": 559,
+          "width": 25,
+          "height": 17
+        },
+        "start": 1070,
+        "end": 1072,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "BID",
+        "confidence": 96.323929,
+        "box": {
+          "x": 390,
+          "y": 559,
+          "width": 40,
+          "height": 17
+        },
+        "start": 1073,
+        "end": 1076,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "was",
+        "confidence": 96.323929,
+        "box": {
+          "x": 446,
+          "y": 563,
+          "width": 41,
+          "height": 13
+        },
+        "start": 1077,
+        "end": 1080,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "tried",
+        "confidence": 96.585007,
+        "box": {
+          "x": 505,
+          "y": 558,
+          "width": 68,
+          "height": 18
+        },
+        "start": 1081,
+        "end": 1086,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "for",
+        "confidence": 95.666939,
+        "box": {
+          "x": 591,
+          "y": 557,
+          "width": 40,
+          "height": 19
+        },
+        "start": 1087,
+        "end": 1090,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "acne",
+        "confidence": 95.666939,
+        "box": {
+          "x": 649,
+          "y": 563,
+          "width": 54,
+          "height": 13
+        },
+        "start": 1091,
+        "end": 1095,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "only,",
+        "confidence": 95.790909,
+        "box": {
+          "x": 721,
+          "y": 558,
+          "width": 64,
+          "height": 23
+        },
+        "start": 1096,
+        "end": 1101,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "not",
+        "confidence": 96.442604,
+        "box": {
+          "x": 102,
+          "y": 600,
+          "width": 39,
+          "height": 16
+        },
+        "start": 1102,
+        "end": 1105,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "as",
+        "confidence": 96.187286,
+        "box": {
+          "x": 159,
+          "y": 603,
+          "width": 26,
+          "height": 13
+        },
+        "start": 1106,
+        "end": 1108,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "a",
+        "confidence": 96.636078,
+        "box": {
+          "x": 203,
+          "y": 603,
+          "width": 10,
+          "height": 13
+        },
+        "start": 1109,
+        "end": 1110,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "psoriasis",
+        "confidence": 96.301064,
+        "box": {
+          "x": 232,
+          "y": 599,
+          "width": 126,
+          "height": 22
+        },
+        "start": 1111,
+        "end": 1120,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "failure",
+        "confidence": 96.509338,
+        "box": {
+          "x": 375,
+          "y": 597,
+          "width": 98,
+          "height": 19
+        },
+        "start": 1121,
+        "end": 1128,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "with",
+        "confidence": 96.017807,
+        "box": {
+          "x": 490,
+          "y": 598,
+          "width": 55,
+          "height": 18
+        },
+        "start": 1129,
+        "end": 1133,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "measures.",
+        "confidence": 96.498978,
+        "box": {
+          "x": 562,
+          "y": 603,
+          "width": 123,
+          "height": 13
+        },
+        "start": 1134,
+        "end": 1143,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Per",
+        "confidence": 96.833611,
+        "box": {
+          "x": 102,
+          "y": 639,
+          "width": 39,
+          "height": 17
+        },
+        "start": 1144,
+        "end": 1147,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "call",
+        "confidence": 96.36187,
+        "box": {
+          "x": 159,
+          "y": 638,
+          "width": 55,
+          "height": 18
+        },
+        "start": 1148,
+        "end": 1152,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "with",
+        "confidence": 96.36187,
+        "box": {
+          "x": 230,
+          "y": 638,
+          "width": 55,
+          "height": 18
+        },
+        "start": 1153,
+        "end": 1157,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "pt:",
+        "confidence": 96.143562,
+        "box": {
+          "x": 304,
+          "y": 640,
+          "width": 36,
+          "height": 21
+        },
+        "start": 1158,
+        "end": 1161,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "itching",
+        "confidence": 96.283722,
+        "box": {
+          "x": 362,
+          "y": 638,
+          "width": 96,
+          "height": 23
+        },
+        "start": 1162,
+        "end": 1169,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "is",
+        "confidence": 95.421692,
+        "box": {
+          "x": 477,
+          "y": 639,
+          "width": 25,
+          "height": 17
+        },
+        "start": 1170,
+        "end": 1172,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "worse",
+        "confidence": 96.388268,
+        "box": {
+          "x": 518,
+          "y": 643,
+          "width": 70,
+          "height": 13
+        },
+        "start": 1173,
+        "end": 1178,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "at",
+        "confidence": 95.693771,
+        "box": {
+          "x": 606,
+          "y": 640,
+          "width": 25,
+          "height": 16
+        },
+        "start": 1179,
+        "end": 1181,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "night.",
+        "confidence": 95.693771,
+        "box": {
+          "x": 649,
+          "y": 638,
+          "width": 80,
+          "height": 23
+        },
+        "start": 1182,
+        "end": 1188,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Denies",
+        "confidence": 96.186493,
+        "box": {
+          "x": 102,
+          "y": 679,
+          "width": 83,
+          "height": 17
+        },
+        "start": 1189,
+        "end": 1195,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "joint",
+        "confidence": 96.413185,
+        "box": {
+          "x": 203,
+          "y": 679,
+          "width": 68,
+          "height": 22
+        },
+        "start": 1196,
+        "end": 1201,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "swelling.",
+        "confidence": 95.28141,
+        "box": {
+          "x": 289,
+          "y": 678,
+          "width": 123,
+          "height": 23
+        },
+        "start": 1202,
+        "end": 1211,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "No",
+        "confidence": 96.567307,
+        "box": {
+          "x": 433,
+          "y": 679,
+          "width": 26,
+          "height": 17
+        },
+        "start": 1212,
+        "end": 1214,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "hx",
+        "confidence": 95.905182,
+        "box": {
+          "x": 476,
+          "y": 678,
+          "width": 26,
+          "height": 18
+        },
+        "start": 1215,
+        "end": 1217,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "of",
+        "confidence": 95.905182,
+        "box": {
+          "x": 519,
+          "y": 677,
+          "width": 26,
+          "height": 19
+        },
+        "start": 1218,
+        "end": 1220,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "uveitis.",
+        "confidence": 95.803528,
+        "box": {
+          "x": 563,
+          "y": 679,
+          "width": 108,
+          "height": 17
+        },
+        "start": 1221,
+        "end": 1229,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Family",
+        "confidence": 95.534538,
+        "box": {
+          "x": 102,
+          "y": 718,
+          "width": 83,
+          "height": 23
+        },
+        "start": 1230,
+        "end": 1236,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "history:",
+        "confidence": 96.006516,
+        "box": {
+          "x": 203,
+          "y": 718,
+          "width": 108,
+          "height": 23
+        },
+        "start": 1237,
+        "end": 1245,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "father",
+        "confidence": 96.399071,
+        "box": {
+          "x": 332,
+          "y": 717,
+          "width": 83,
+          "height": 19
+        },
+        "start": 1246,
+        "end": 1252,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "with",
+        "confidence": 96.399071,
+        "box": {
+          "x": 432,
+          "y": 718,
+          "width": 55,
+          "height": 18
+        },
+        "start": 1253,
+        "end": 1257,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "psoriasis.",
+        "confidence": 96.798409,
+        "box": {
+          "x": 505,
+          "y": 719,
+          "width": 137,
+          "height": 22
+        },
+        "start": 1258,
+        "end": 1268,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Signed",
+        "confidence": 96.483978,
+        "box": {
+          "x": 101,
+          "y": 758,
+          "width": 83,
+          "height": 23
+        },
+        "start": 1269,
+        "end": 1275,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Dr.",
+        "confidence": 95.915733,
+        "box": {
+          "x": 203,
+          "y": 759,
+          "width": 36,
+          "height": 17
+        },
+        "start": 1276,
+        "end": 1279,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Uma",
+        "confidence": 95.362724,
+        "box": {
+          "x": 260,
+          "y": 759,
+          "width": 40,
+          "height": 17
+        },
+        "start": 1280,
+        "end": 1283,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Shah",
+        "confidence": 95.362724,
+        "box": {
+          "x": 317,
+          "y": 758,
+          "width": 55,
+          "height": 18
+        },
+        "start": 1284,
+        "end": 1288,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.827881,
+        "box": {
+          "x": 392,
+          "y": 757,
+          "width": 150,
+          "height": 24
+        },
+        "start": 1289,
+        "end": 1300,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "08/19/2026",
+        "confidence": 87.326569,
+        "box": {
+          "x": 102,
+          "y": 159,
+          "width": 140,
+          "height": 19
+        },
+        "start": 1301,
+        "end": 1311,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "3:05",
+        "confidence": 94.94194,
+        "box": {
+          "x": 274,
+          "y": 159,
+          "width": 55,
+          "height": 17
+        },
+        "start": 1312,
+        "end": 1316,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "PM",
+        "confidence": 76.52813,
+        "box": {
+          "x": 347,
+          "y": 159,
+          "width": 25,
+          "height": 17
+        },
+        "start": 1317,
+        "end": 1319,
+        "needsReview": true,
+        "page": 2
+      },
+      {
+        "text": "FROM:",
+        "confidence": 76.512947,
+        "box": {
+          "x": 405,
+          "y": 159,
+          "width": 65,
+          "height": 17
+        },
+        "start": 1320,
+        "end": 1325,
+        "needsReview": true,
+        "page": 2
+      },
+      {
+        "text": "XXXXXXXXXX",
+        "confidence": 91.810204,
+        "box": {
+          "x": 490,
+          "y": 159,
+          "width": 142,
+          "height": 17
+        },
+        "start": 1326,
+        "end": 1336,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "TO:",
+        "confidence": 96.388077,
+        "box": {
+          "x": 663,
+          "y": 159,
+          "width": 37,
+          "height": 17
+        },
+        "start": 1337,
+        "end": 1340,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "PA",
+        "confidence": 96.639626,
+        "box": {
+          "x": 721,
+          "y": 159,
+          "width": 26,
+          "height": 17
+        },
+        "start": 1341,
+        "end": 1343,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "DEPT",
+        "confidence": 86.915764,
+        "box": {
+          "x": 764,
+          "y": 159,
+          "width": 55,
+          "height": 17
+        },
+        "start": 1344,
+        "end": 1348,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "P.003/003",
+        "confidence": 85.670212,
+        "box": {
+          "x": 851,
+          "y": 159,
+          "width": 125,
+          "height": 19
+        },
+        "start": 1349,
+        "end": 1358,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "LOOMIS",
+        "confidence": 96.135834,
+        "box": {
+          "x": 102,
+          "y": 199,
+          "width": 83,
+          "height": 17
+        },
+        "start": 1359,
+        "end": 1365,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "DERM",
+        "confidence": 96.308571,
+        "box": {
+          "x": 203,
+          "y": 199,
+          "width": 54,
+          "height": 17
+        },
+        "start": 1366,
+        "end": 1370,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 94.381996,
+        "box": {
+          "x": 277,
+          "y": 197,
+          "width": 150,
+          "height": 24
+        },
+        "start": 1371,
+        "end": 1382,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "MEASURES",
+        "confidence": 96.540543,
+        "box": {
+          "x": 447,
+          "y": 199,
+          "width": 113,
+          "height": 17
+        },
+        "start": 1383,
+        "end": 1391,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.487793,
+        "box": {
+          "x": 102,
+          "y": 239,
+          "width": 109,
+          "height": 17
+        },
+        "start": 1392,
+        "end": 1400,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Teo",
+        "confidence": 96.463837,
+        "box": {
+          "x": 230,
+          "y": 239,
+          "width": 41,
+          "height": 17
+        },
+        "start": 1401,
+        "end": 1404,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Brant",
+        "confidence": 95.933228,
+        "box": {
+          "x": 289,
+          "y": 239,
+          "width": 68,
+          "height": 17
+        },
+        "start": 1405,
+        "end": 1410,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 93.303398,
+        "box": {
+          "x": 378,
+          "y": 237,
+          "width": 150,
+          "height": 24
+        },
+        "start": 1411,
+        "end": 1422,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "MRN:",
+        "confidence": 90.325653,
+        "box": {
+          "x": 548,
+          "y": 239,
+          "width": 52,
+          "height": 17
+        },
+        "start": 1423,
+        "end": 1427,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "XXXXXXXX",
+        "confidence": 90.750053,
+        "box": {
+          "x": 620,
+          "y": 239,
+          "width": 113,
+          "height": 17
+        },
+        "start": 1428,
+        "end": 1436,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Measure",
+        "confidence": 96.4729,
+        "box": {
+          "x": 102,
+          "y": 279,
+          "width": 97,
+          "height": 17
+        },
+        "start": 1437,
+        "end": 1444,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 95.514397,
+        "box": {
+          "x": 221,
+          "y": 279,
+          "width": 2,
+          "height": 22
+        },
+        "start": 1445,
+        "end": 1446,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Value",
+        "confidence": 96.429787,
+        "box": {
+          "x": 245,
+          "y": 278,
+          "width": 70,
+          "height": 18
+        },
+        "start": 1447,
+        "end": 1452,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.26963,
+        "box": {
+          "x": 337,
+          "y": 279,
+          "width": 2,
+          "height": 22
+        },
+        "start": 1453,
+        "end": 1454,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Flag",
+        "confidence": 96.174583,
+        "box": {
+          "x": 361,
+          "y": 278,
+          "width": 54,
+          "height": 23
+        },
+        "start": 1455,
+        "end": 1459,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.67347,
+        "box": {
+          "x": 438,
+          "y": 279,
+          "width": 1,
+          "height": 22
+        },
+        "start": 1460,
+        "end": 1461,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Range",
+        "confidence": 96.842491,
+        "box": {
+          "x": 462,
+          "y": 279,
+          "width": 69,
+          "height": 22
+        },
+        "start": 1462,
+        "end": 1467,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.921967,
+        "box": {
+          "x": 553,
+          "y": 279,
+          "width": 2,
+          "height": 22
+        },
+        "start": 1468,
+        "end": 1469,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Date",
+        "confidence": 95.982109,
+        "box": {
+          "x": 577,
+          "y": 279,
+          "width": 54,
+          "height": 17
+        },
+        "start": 1470,
+        "end": 1474,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "BSA",
+        "confidence": 95.8592,
+        "box": {
+          "x": 102,
+          "y": 319,
+          "width": 40,
+          "height": 17
+        },
+        "start": 1475,
+        "end": 1478,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "involvement",
+        "confidence": 96.212227,
+        "box": {
+          "x": 160,
+          "y": 318,
+          "width": 154,
+          "height": 18
+        },
+        "start": 1479,
+        "end": 1490,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 95.650467,
+        "box": {
+          "x": 337,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        },
+        "start": 1491,
+        "end": 1492,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "16%",
+        "confidence": 94.897629,
+        "box": {
+          "x": 362,
+          "y": 319,
+          "width": 40,
+          "height": 17
+        },
+        "start": 1493,
+        "end": 1496,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 92.974907,
+        "box": {
+          "x": 423,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        },
+        "start": 1497,
+        "end": 1498,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "H",
+        "confidence": 92.974907,
+        "box": {
+          "x": 447,
+          "y": 319,
+          "width": 11,
+          "height": 17
+        },
+        "start": 1499,
+        "end": 1500,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.295471,
+        "box": {
+          "x": 481,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        },
+        "start": 1501,
+        "end": 1502,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "n/a",
+        "confidence": 94.136528,
+        "box": {
+          "x": 505,
+          "y": 319,
+          "width": 40,
+          "height": 19
+        },
+        "start": 1503,
+        "end": 1506,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 94.136528,
+        "box": {
+          "x": 567,
+          "y": 319,
+          "width": 2,
+          "height": 22
+        },
+        "start": 1507,
+        "end": 1508,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "07/28/2026",
+        "confidence": 12.322983,
+        "box": {
+          "x": 591,
+          "y": 319,
+          "width": 141,
+          "height": 19
+        },
+        "start": 1509,
+        "end": 1519,
+        "needsReview": true,
+        "page": 2
+      },
+      {
+        "text": "CBC",
+        "confidence": 94.308083,
+        "box": {
+          "x": 101,
+          "y": 359,
+          "width": 41,
+          "height": 17
+        },
+        "start": 1520,
+        "end": 1523,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 94.308083,
+        "box": {
+          "x": 164,
+          "y": 359,
+          "width": 2,
+          "height": 22
+        },
+        "start": 1524,
+        "end": 1525,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "within",
+        "confidence": 96.217377,
+        "box": {
+          "x": 187,
+          "y": 358,
+          "width": 84,
+          "height": 18
+        },
+        "start": 1526,
+        "end": 1532,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "ref",
+        "confidence": 96.775764,
+        "box": {
+          "x": 291,
+          "y": 357,
+          "width": 38,
+          "height": 19
+        },
+        "start": 1533,
+        "end": 1536,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.775764,
+        "box": {
+          "x": 351,
+          "y": 359,
+          "width": 2,
+          "height": 22
+        },
+        "start": 1537,
+        "end": 1538,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "n/a",
+        "confidence": 93.964066,
+        "box": {
+          "x": 376,
+          "y": 359,
+          "width": 39,
+          "height": 19
+        },
+        "start": 1539,
+        "end": 1542,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 94.249306,
+        "box": {
+          "x": 438,
+          "y": 359,
+          "width": 1,
+          "height": 22
+        },
+        "start": 1543,
+        "end": 1544,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "n/a",
+        "confidence": 95.343018,
+        "box": {
+          "x": 462,
+          "y": 359,
+          "width": 39,
+          "height": 19
+        },
+        "start": 1545,
+        "end": 1548,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 95.906578,
+        "box": {
+          "x": 524,
+          "y": 359,
+          "width": 2,
+          "height": 22
+        },
+        "start": 1549,
+        "end": 1550,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "87/28/2026",
+        "confidence": 88.647583,
+        "box": {
+          "x": 548,
+          "y": 359,
+          "width": 141,
+          "height": 19
+        },
+        "start": 1551,
+        "end": 1561,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Nurse",
+        "confidence": 96.067261,
+        "box": {
+          "x": 102,
+          "y": 399,
+          "width": 68,
+          "height": 17
+        },
+        "start": 1562,
+        "end": 1567,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "note:",
+        "confidence": 96.067261,
+        "box": {
+          "x": 188,
+          "y": 400,
+          "width": 66,
+          "height": 16
+        },
+        "start": 1568,
+        "end": 1573,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "BSA",
+        "confidence": 96.661751,
+        "box": {
+          "x": 275,
+          "y": 399,
+          "width": 40,
+          "height": 17
+        },
+        "start": 1574,
+        "end": 1577,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "estimated",
+        "confidence": 96.318741,
+        "box": {
+          "x": 332,
+          "y": 398,
+          "width": 126,
+          "height": 18
+        },
+        "start": 1578,
+        "end": 1587,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "with",
+        "confidence": 96.832565,
+        "box": {
+          "x": 475,
+          "y": 398,
+          "width": 55,
+          "height": 18
+        },
+        "start": 1588,
+        "end": 1592,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "the",
+        "confidence": 96.536903,
+        "box": {
+          "x": 548,
+          "y": 398,
+          "width": 40,
+          "height": 18
+        },
+        "start": 1593,
+        "end": 1596,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "palm",
+        "confidence": 96.865402,
+        "box": {
+          "x": 606,
+          "y": 398,
+          "width": 55,
+          "height": 23
+        },
+        "start": 1597,
+        "end": 1601,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "method.",
+        "confidence": 96.4254,
+        "box": {
+          "x": 677,
+          "y": 398,
+          "width": 95,
+          "height": 18
+        },
+        "start": 1602,
+        "end": 1609,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Problem",
+        "confidence": 96.281509,
+        "box": {
+          "x": 102,
+          "y": 438,
+          "width": 98,
+          "height": 18
+        },
+        "start": 1610,
+        "end": 1617,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "list:",
+        "confidence": 95.172775,
+        "box": {
+          "x": 218,
+          "y": 438,
+          "width": 65,
+          "height": 18
+        },
+        "start": 1618,
+        "end": 1623,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "acne,",
+        "confidence": 96.252434,
+        "box": {
+          "x": 303,
+          "y": 443,
+          "width": 64,
+          "height": 17
+        },
+        "start": 1624,
+        "end": 1629,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "mild",
+        "confidence": 96.611977,
+        "box": {
+          "x": 389,
+          "y": 438,
+          "width": 55,
+          "height": 18
+        },
+        "start": 1630,
+        "end": 1634,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "seborrhea.",
+        "confidence": 95.794334,
+        "box": {
+          "x": 462,
+          "y": 438,
+          "width": 137,
+          "height": 18
+        },
+        "start": 1635,
+        "end": 1645,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Copied-forward:",
+        "confidence": 91.639839,
+        "box": {
+          "x": 101,
+          "y": 477,
+          "width": 210,
+          "height": 24
+        },
+        "start": 1646,
+        "end": 1661,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "sports",
+        "confidence": 96.580193,
+        "box": {
+          "x": 332,
+          "y": 480,
+          "width": 83,
+          "height": 21
+        },
+        "start": 1662,
+        "end": 1668,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "physical",
+        "confidence": 96.408699,
+        "box": {
+          "x": 433,
+          "y": 478,
+          "width": 112,
+          "height": 23
+        },
+        "start": 1669,
+        "end": 1677,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "form",
+        "confidence": 95.722961,
+        "box": {
+          "x": 563,
+          "y": 477,
+          "width": 54,
+          "height": 19
+        },
+        "start": 1678,
+        "end": 1682,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "unsigned.",
+        "confidence": 95.815048,
+        "box": {
+          "x": 635,
+          "y": 478,
+          "width": 122,
+          "height": 23
+        },
+        "start": 1683,
+        "end": 1692,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Handwritten",
+        "confidence": 96.295303,
+        "box": {
+          "x": 102,
+          "y": 518,
+          "width": 155,
+          "height": 18
+        },
+        "start": 1693,
+        "end": 1704,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "note:",
+        "confidence": 96.582687,
+        "box": {
+          "x": 275,
+          "y": 520,
+          "width": 65,
+          "height": 16
+        },
+        "start": 1705,
+        "end": 1710,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "rash",
+        "confidence": 96.811409,
+        "box": {
+          "x": 363,
+          "y": 518,
+          "width": 52,
+          "height": 18
+        },
+        "start": 1711,
+        "end": 1715,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "spares",
+        "confidence": 96.076576,
+        "box": {
+          "x": 433,
+          "y": 523,
+          "width": 83,
+          "height": 18
+        },
+        "start": 1716,
+        "end": 1722,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "the",
+        "confidence": 96.284821,
+        "box": {
+          "x": 534,
+          "y": 518,
+          "width": 40,
+          "height": 18
+        },
+        "start": 1723,
+        "end": 1726,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "face.",
+        "confidence": 96.284821,
+        "box": {
+          "x": 591,
+          "y": 517,
+          "width": 66,
+          "height": 19
+        },
+        "start": 1727,
+        "end": 1732,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "----",
+        "confidence": 71.016006,
+        "box": {
+          "x": 102,
+          "y": 568,
+          "width": 53,
+          "height": 2
+        },
+        "start": 1733,
+        "end": 1737,
+        "needsReview": true,
+        "page": 2
+      },
+      {
+        "text": "OLD",
+        "confidence": 96.770004,
+        "box": {
+          "x": 173,
+          "y": 559,
+          "width": 41,
+          "height": 17
+        },
+        "start": 1738,
+        "end": 1741,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "DENIAL",
+        "confidence": 96.608749,
+        "box": {
+          "x": 231,
+          "y": 559,
+          "width": 84,
+          "height": 17
+        },
+        "start": 1742,
+        "end": 1748,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "EXCERPT",
+        "confidence": 92.962379,
+        "box": {
+          "x": 332,
+          "y": 559,
+          "width": 98,
+          "height": 17
+        },
+        "start": 1749,
+        "end": 1756,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "----",
+        "confidence": 88.593719,
+        "box": {
+          "x": 448,
+          "y": 568,
+          "width": 52,
+          "height": 2
+        },
+        "start": 1757,
+        "end": 1761,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Denied",
+        "confidence": 96.108521,
+        "box": {
+          "x": 102,
+          "y": 598,
+          "width": 82,
+          "height": 18
+        },
+        "start": 1762,
+        "end": 1768,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "12/14/2025",
+        "confidence": 95.911346,
+        "box": {
+          "x": 203,
+          "y": 599,
+          "width": 140,
+          "height": 19
+        },
+        "start": 1769,
+        "end": 1779,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "for",
+        "confidence": 93.167862,
+        "box": {
+          "x": 361,
+          "y": 597,
+          "width": 40,
+          "height": 19
+        },
+        "start": 1780,
+        "end": 1783,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "secukinumab",
+        "confidence": 89.270279,
+        "box": {
+          "x": 419,
+          "y": 598,
+          "width": 155,
+          "height": 18
+        },
+        "start": 1784,
+        "end": 1795,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "300",
+        "confidence": 69.774704,
+        "box": {
+          "x": 591,
+          "y": 599,
+          "width": 40,
+          "height": 17
+        },
+        "start": 1796,
+        "end": 1799,
+        "needsReview": true,
+        "page": 2
+      },
+      {
+        "text": "mg.",
+        "confidence": 96.176071,
+        "box": {
+          "x": 648,
+          "y": 603,
+          "width": 37,
+          "height": 18
+        },
+        "start": 1800,
+        "end": 1803,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Not",
+        "confidence": 96.079781,
+        "box": {
+          "x": 102,
+          "y": 639,
+          "width": 39,
+          "height": 17
+        },
+        "start": 1804,
+        "end": 1807,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "the",
+        "confidence": 96.079781,
+        "box": {
+          "x": 159,
+          "y": 638,
+          "width": 40,
+          "height": 18
+        },
+        "start": 1808,
+        "end": 1811,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "drug",
+        "confidence": 96.139236,
+        "box": {
+          "x": 217,
+          "y": 638,
+          "width": 54,
+          "height": 23
+        },
+        "start": 1812,
+        "end": 1816,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "on",
+        "confidence": 96.466499,
+        "box": {
+          "x": 289,
+          "y": 643,
+          "width": 25,
+          "height": 13
+        },
+        "start": 1817,
+        "end": 1819,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "today's",
+        "confidence": 95.802307,
+        "box": {
+          "x": 332,
+          "y": 638,
+          "width": 98,
+          "height": 23
+        },
+        "start": 1820,
+        "end": 1827,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "adalimumab",
+        "confidence": 96.453964,
+        "box": {
+          "x": 447,
+          "y": 638,
+          "width": 141,
+          "height": 18
+        },
+        "start": 1828,
+        "end": 1838,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "request.",
+        "confidence": 96.233551,
+        "box": {
+          "x": 608,
+          "y": 640,
+          "width": 106,
+          "height": 21
+        },
+        "start": 1839,
+        "end": 1847,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "End.",
+        "confidence": 96.438156,
+        "box": {
+          "x": 102,
+          "y": 678,
+          "width": 50,
+          "height": 18
+        },
+        "start": 1848,
+        "end": 1852,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Loomis",
+        "confidence": 95.991455,
+        "box": {
+          "x": 174,
+          "y": 679,
+          "width": 83,
+          "height": 17
+        },
+        "start": 1853,
+        "end": 1859,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Derm",
+        "confidence": 96.422844,
+        "box": {
+          "x": 275,
+          "y": 679,
+          "width": 54,
+          "height": 17
+        },
+        "start": 1860,
+        "end": 1864,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "(fictional).",
+        "confidence": 96.603516,
+        "box": {
+          "x": 349,
+          "y": 677,
+          "width": 164,
+          "height": 24
+        },
+        "start": 1865,
+        "end": 1877,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "3",
+        "confidence": 94.097015,
+        "box": {
+          "x": 533,
+          "y": 679,
+          "width": 11,
+          "height": 17
+        },
+        "start": 1878,
+        "end": 1879,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "pages.",
+        "confidence": 94.097015,
+        "box": {
+          "x": 563,
+          "y": 683,
+          "width": 79,
+          "height": 18
+        },
+        "start": 1880,
+        "end": 1886,
+        "needsReview": false,
+        "page": 2
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM",
+    "pages": [
+      {
+        "image": "holdout2-07.png",
+        "readImage": "holdout2-07.read.png",
+        "width": 1700,
+        "height": 2200,
+        "orientation": {
+          "pageRotation": 180,
+          "scores": {
+            "0": 350.045978,
+            "180": 5855.178853000001
+          }
+        },
+        "deskewDegrees": 0,
+        "start": 0,
+        "end": 663
+      },
+      {
+        "image": "holdout2-07-page-2.png",
+        "readImage": "holdout2-07-page-2.read.png",
+        "width": 1700,
+        "height": 2200,
+        "orientation": {
+          "pageRotation": 180,
+          "scores": {
+            "0": 801.03751,
+            "180": 6683.087996000001
+          }
+        },
+        "deskewDegrees": 0,
+        "start": 663,
+        "end": 1301
+      },
+      {
+        "image": "holdout2-07-page-3.png",
+        "readImage": "holdout2-07-page-3.read.png",
+        "width": 1700,
+        "height": 2200,
+        "orientation": {
+          "pageRotation": 180,
+          "scores": {
+            "0": 789.6073530000001,
+            "180": 5676.0316390000025
+          }
+        },
+        "deskewDegrees": 0,
+        "start": 1301,
+        "end": 1887
+      }
+    ]
+  },
+  "coverage": {
+    "threshold": 80,
+    "pagesReceived": 3,
+    "pagesExpected": 3,
+    "missingPages": [],
+    "missingCount": 0,
+    "duplicatePages": [],
+    "conflictingTotals": [],
+    "outOfOrder": false,
+    "complete": true,
+    "pages": [
+      {
+        "index": 0,
+        "lines": 20,
+        "words": 95,
+        "orientation": {
+          "pageRotation": 180,
+          "deskewDegrees": 0,
+          "handled": true
+        },
+        "meanConfidence": 93.62043570526316,
+        "minConfidence": 44.039368,
+        "lowConfidenceLines": [
+          {
+            "from": 1,
+            "to": 1,
+            "start": 0,
+            "end": 57,
+            "words": 9,
+            "lowWords": 2
+          },
+          {
+            "from": 13,
+            "to": 13,
+            "start": 411,
+            "end": 429,
+            "words": 5,
+            "lowWords": 1
+          }
+        ],
+        "unreadableLines": [],
+        "counter": {
+          "text": "P.001/003",
+          "page": 1,
+          "of": 3,
+          "line": 1
+        }
+      },
+      {
+        "index": 1,
+        "lines": 16,
+        "words": 102,
+        "orientation": {
+          "pageRotation": 180,
+          "deskewDegrees": 0,
+          "handled": true
+        },
+        "meanConfidence": 94.94344033333334,
+        "minConfidence": 73.432556,
+        "lowConfidenceLines": [
+          {
+            "from": 1,
+            "to": 1,
+            "start": 663,
+            "end": 720,
+            "words": 9,
+            "lowWords": 2
+          }
+        ],
+        "unreadableLines": [],
+        "counter": {
+          "text": "P.002/003",
+          "page": 2,
+          "of": 3,
+          "line": 1
+        }
+      },
+      {
+        "index": 2,
+        "lines": 14,
+        "words": 96,
+        "orientation": {
+          "pageRotation": 180,
+          "deskewDegrees": 0,
+          "handled": true
+        },
+        "meanConfidence": 93.31518341666667,
+        "minConfidence": 12.322983,
+        "lowConfidenceLines": [
+          {
+            "from": 1,
+            "to": 1,
+            "start": 1301,
+            "end": 1358,
+            "words": 9,
+            "lowWords": 2
+          },
+          {
+            "from": 5,
+            "to": 5,
+            "start": 1475,
+            "end": 1519,
+            "words": 10,
+            "lowWords": 1
+          },
+          {
+            "from": 11,
+            "to": 12,
+            "start": 1733,
+            "end": 1803,
+            "words": 11,
+            "lowWords": 2
+          }
+        ],
+        "unreadableLines": [],
+        "counter": {
+          "text": "P.003/003",
+          "page": 3,
+          "of": 3,
+          "line": 1
+        }
+      }
+    ]
+  },
+  "sourceCheck": {
+    "lines": 50,
+    "unread": []
+  },
+  "scores": {
+    "entities": {
+      "tp": 0,
+      "predicted": 13,
+      "gold": 0,
+      "exactQuote": 0
+    },
+    "criteria": {
+      "correct": 3,
+      "total": 5
+    },
+    "cer": 0.0015915119363395225,
+    "edits": 3,
+    "chars": 1885,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [
+    "prior (held-out): draft missing, pipeline needs_review",
+    "dose (held-out): draft evidence_found, pipeline needs_review",
+    "3 OCR character edits"
+  ],
+  "latency": {
+    "renderAndOcrMs": 13232.721458,
+    "serviceMs": 68.21441600000253
+  }
+}

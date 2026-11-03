@@ -1,0 +1,140 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-12",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/holdout-v2/packets/holdout2-12.md",
+  "group": "fax-noise",
+  "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only",
+  "variation_notes": "Atorvastatin 10 mg was stopped and restarted, the patient is 16, and coronary disease appears only on a copied-forward problem list.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 275,
+          "end": 319,
+          "text": "Patient: Juni Park (fictional) Age: 16 years"
+        }
+      ],
+      "reason": "The form states the patient is 16 years old, which is under 18.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 463,
+          "end": 495,
+          "text": "Indication: hypercholesterolemia"
+        },
+        {
+          "start": 1004,
+          "end": 1050,
+          "text": "A: Hypercholesterolemia is the reason for this"
+        },
+        {
+          "start": 1051,
+          "end": 1073,
+          "text": "   evolocumab request."
+        },
+        {
+          "start": 1074,
+          "end": 1119,
+          "text": "PROBLEM LIST (copied forward, not reassessed)"
+        },
+        {
+          "start": 1120,
+          "end": 1146,
+          "text": "1. Coronary artery disease"
+        }
+      ],
+      "reason": "Hypercholesterolemia is named as the reason for the request, while coronary artery disease appears only on a copied-forward problem list.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 232,
+          "end": 256,
+          "text": "Request date: 10/28/2026"
+        },
+        {
+          "start": 1606,
+          "end": 1646,
+          "text": "LDL-C | 91 mg/dL | H | <100 | 09/04/2026"
+        }
+      ],
+      "reason": "LDL-C 91 mg/dL on 09/04/2026 is at least 70 mg/dL and within 180 days before the 10/28/2026 request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 510,
+          "end": 537,
+          "text": "Atorvastatin 10 mg PO daily"
+        },
+        {
+          "start": 538,
+          "end": 570,
+          "text": "Start 02/01/2026 stop 04/01/2026"
+        },
+        {
+          "start": 571,
+          "end": 605,
+          "text": "Restarted 04/20/2026, still taking"
+        },
+        {
+          "start": 1163,
+          "end": 1203,
+          "text": "P: Continue atorvastatin 10 mg PO daily."
+        },
+        {
+          "start": 1339,
+          "end": 1377,
+          "text": "has stayed 10 mg daily the whole time."
+        }
+      ],
+      "reason": "Atorvastatin is documented at 10 mg daily, below high-intensity, including across a stop and restart.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 442,
+          "end": 462,
+          "text": "Sig: 140 mg subQ Q2W"
+        },
+        {
+          "start": 1204,
+          "end": 1244,
+          "text": "   Evolocumab 140 mg subQ every 2 weeks."
+        }
+      ],
+      "reason": "The form and the note both request evolocumab 140 mg every 2 weeks.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

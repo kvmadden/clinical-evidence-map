@@ -1,0 +1,98 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-24",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/holdout-v2/packets/holdout2-24.md",
+  "group": "orientation",
+  "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only",
+  "variation_notes": "Patient age is missing, LDL-C is corrected to 68 mg/dL (below 70 threshold), statin duration is only 45 days, and requested dose is blank.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No age or date of birth is documented for the patient.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 453,
+          "end": 529,
+          "text": "Indication: Established ASCVD - severe peripheral artery disease status post"
+        },
+        {
+          "start": 530,
+          "end": 584,
+          "text": "left femoral-popliteal bypass graft (ICD-10: I70.212)."
+        }
+      ],
+      "reason": "Established ASCVD with symptomatic peripheral arterial disease s/p bypass is documented as the indication.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 167,
+          "end": 228,
+          "text": "Date: 07/20/2026 | To: Payer PA Review Team | Fax: XXXXXXXXXX"
+        },
+        {
+          "start": 1081,
+          "end": 1129,
+          "text": "Pre-treatment LDL-C on 05/20/2026 was 130 mg/dL."
+        }
+      ],
+      "reason": "An LDL-C of 130 mg/dL on 05/20/2026 is at least 70 and 61 days before the 07/20/2026 request. Any qualifying value counts.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 1022,
+          "end": 1080,
+          "text": "rosuvastatin 20 mg daily 45 days ago (started 06/05/2026)."
+        },
+        {
+          "start": 1656,
+          "end": 1721,
+          "text": "Rosuvastatin    | 20 mg | Daily | 06/05/2026 | Active     | ASCVD"
+        },
+        {
+          "start": 2376,
+          "end": 2447,
+          "text": "Rosuvastatin 20 mg tolerated for 45 days to date; continuation ordered."
+        }
+      ],
+      "reason": "The rosuvastatin trial duration is only 45 days, which is less than the required 90 days.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The evolocumab dose and frequency fields are left blank.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

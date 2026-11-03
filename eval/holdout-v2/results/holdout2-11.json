@@ -1,0 +1,9273 @@
+{
+  "packet_id": "holdout2-11",
+  "criteria_id": "pcsk9",
+  "group": "clean-render",
+  "tags": [
+    "render:clean"
+  ],
+  "render": {
+    "font": "liberation-sans",
+    "effects": [
+      "speckle-light"
+    ],
+    "rotate": 0,
+    "handwriting": [],
+    "annotations": []
+  },
+  "groupLabel": "Clean render",
+  "notice": "draft, pending pharmacist review",
+  "reviewed": false,
+  "privacy": {
+    "text": "[date-a] 9:05 AM FROM: XXXXXXXXXX TO: PA DEPT P.001/003\n[name] [name] [name] (fictional)\nTo: PA Desk, [name] Plan (fictional)\nFrom: [name] [name] (fictional)\nRe: evolocumab, [name] [name] (fictional)\nMember ID: XXXXXXXX Pages: 3\nRequest date: [date-b]\n---- PAFORM ----\nPatient: [name] [name] (fictional) Age: 59 years\nPrescriber: Dr. [name] [name] (fictional)\nClinic: [name] [name] (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: evolocumab\nForm sig: 140 mg SC every 2 weeks\nIndication: established atherosclerotic\ncardiovascular disease, prior myocardial\ninfarction, reason for this request\n[x] New start\nPharmacy: [name] Pharmacy (fictional)\n[date-c] 9:05 AM FROM: XXXXXXXXXX TO: PA DEPT P.002/003\n[name] [name] (fictional) EHR NOTE\nPatient: [name] [name] (fictional) MRN: XXXXXXXX\nVisit: [date-d] Dr. [name] [name] (fictional)\nS: Follow-up after myocardial infarction.\nDenies current chest pain.\nO: Lungs clear. See labs below.\nA: Established atherosclerotic cardiovascular\ndisease. This visit's request is for that.\nP: Evolocumab ordered. Nurse note: pen teaching\nbooked, sig taken from the PA form.\n---- LAB REPORT ----\nTest | Result | Flag | Range | Collected\nLDL-C | 98 mg/dL | H | <100 | [date-e]\nLDL-C | 164 mg/dL | H | <100 | [date-f]\nComment: [date-g] draw is after the request.\nThe [date-h] draw is an old baseline.\n[date-i] 9:05 AM FROM: XXXXXXXXXX TO: PA DEPT P.003/003\n[name] PHARMACY (fictional) MED LIST\nPatient: [name] [name] (fictional)\nDrug | Dose | Route | Freq | Start | Status\nezetimibe | 10 mg | PO | daily | [date-j] | current\nmetoprolol | 50 mg | PO | daily | [date-k] | current\naspirin | 81 mg | PO | daily | [date-l] | current\nevolocumab | 420 mg | SC | monthly | pending | requested\nHandwritten note: patient asked about monthly.\n[name]. [name] [name] (fictional). 3 pages.\n",
+    "blocked": false,
+    "hits": [
+      {
+        "tier": "name",
+        "type": "name",
+        "count": 27
+      }
+    ],
+    "offsetBasis": "redacted Unicode code points",
+    "dateHandling": "shifted",
+    "dates": [
+      {
+        "token": "[date-a]",
+        "readings": [
+          "2132-04-23"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-b]",
+        "readings": [
+          "2132-04-23"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-c]",
+        "readings": [
+          "2132-04-23"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-d]",
+        "readings": [
+          "2132-04-23"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-e]",
+        "readings": [
+          "2132-05-08",
+          "2132-01-13"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-f]",
+        "readings": [
+          "2130-10-27"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-g]",
+        "readings": [
+          "2132-05-08",
+          "2132-01-13"
+        ],
+        "order": "ambiguous"
+      },
+      {
+        "token": "[date-h]",
+        "readings": [
+          "2130-10-27"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-i]",
+        "readings": [
+          "2132-04-23"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-j]",
+        "readings": [
+          "2131-01-09"
+        ],
+        "order": "same"
+      },
+      {
+        "token": "[date-k]",
+        "readings": [
+          "2130-10-27"
+        ],
+        "order": "mdy"
+      },
+      {
+        "token": "[date-l]",
+        "readings": [
+          "2130-10-27"
+        ],
+        "order": "mdy"
+      }
+    ]
+  },
+  "dateReading": {
+    "status": "forced",
+    "order": "mdy"
+  },
+  "readerCoverage": {
+    "lines": 47,
+    "pages": 3,
+    "blockers": {
+      "adult": [],
+      "diagnosis": [],
+      "lab": [],
+      "prior": [],
+      "dose": []
+    },
+    "mentions": [
+      {
+        "criterion": "diagnosis",
+        "scope": "ascvd",
+        "line": 23,
+        "kind": "asserted-untied",
+        "value": "atherosclerotic cardiovascular disease",
+        "span": {
+          "start": 834,
+          "end": 875,
+          "text": "S: Follow-up after myocardial infarction."
+        }
+      }
+    ],
+    "complete": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "type": "requested_medication",
+      "value": "evolocumab",
+      "source_span": {
+        "start": 158,
+        "end": 199,
+        "text": "Re: evolocumab, [name] [name] (fictional)"
+      },
+      "normalization": {
+        "system": "RxNorm",
+        "code": "1665684",
+        "display": "evolocumab"
+      },
+      "value_span": {
+        "start": 162,
+        "end": 172
+      },
+      "match": {
+        "kind": "exact",
+        "written": "evolocumab",
+        "confidence": 1
+      },
+      "attrs": {
+        "product": "evolocumab",
+        "source": "prose"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 318,
+          "width": 36,
+          "height": 18
+        },
+        {
+          "x": 149,
+          "y": 317,
+          "width": 144,
+          "height": 22
+        },
+        {
+          "x": 432,
+          "y": 317,
+          "width": 103,
+          "height": 24
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "request_date",
+      "value": "2132-04-23",
+      "source_span": {
+        "start": 229,
+        "end": 251,
+        "text": "Request date: [date-b]"
+      },
+      "value_span": {
+        "start": 243,
+        "end": 251
+      },
+      "attrs": {
+        "label": "Request date"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 398,
+          "width": 95,
+          "height": 23
+        },
+        {
+          "x": 205,
+          "y": 397,
+          "width": 55,
+          "height": 19
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "age",
+      "value": 59,
+      "source_span": {
+        "start": 269,
+        "end": 317,
+        "text": "Patient: [name] [name] (fictional) Age: 59 years"
+      },
+      "value_span": {
+        "start": 309,
+        "end": 311
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 477,
+          "width": 84,
+          "height": 19
+        },
+        {
+          "x": 326,
+          "y": 477,
+          "width": 102,
+          "height": 24
+        },
+        {
+          "x": 435,
+          "y": 478,
+          "width": 51,
+          "height": 23
+        },
+        {
+          "x": 497,
+          "y": 478,
+          "width": 27,
+          "height": 18
+        },
+        {
+          "x": 532,
+          "y": 482,
+          "width": 63,
+          "height": 19
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "requested_dose",
+      "value": "140 mg every 2 weeks",
+      "source_span": {
+        "start": 445,
+        "end": 478,
+        "text": "Form sig: 140 mg SC every 2 weeks"
+      },
+      "value_span": {
+        "start": 455,
+        "end": 478
+      },
+      "attrs": {
+        "drug": "evolocumab",
+        "amount": 140,
+        "route": "subcutaneous",
+        "source": "prose"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 678,
+          "width": 57,
+          "height": 18
+        },
+        {
+          "x": 169,
+          "y": 677,
+          "width": 37,
+          "height": 24
+        },
+        {
+          "x": 217,
+          "y": 678,
+          "width": 41,
+          "height": 18
+        },
+        {
+          "x": 268,
+          "y": 682,
+          "width": 33,
+          "height": 19
+        },
+        {
+          "x": 311,
+          "y": 678,
+          "width": 33,
+          "height": 18
+        },
+        {
+          "x": 354,
+          "y": 682,
+          "width": 62,
+          "height": 19
+        },
+        {
+          "x": 425,
+          "y": 678,
+          "width": 12,
+          "height": 18
+        },
+        {
+          "x": 445,
+          "y": 677,
+          "width": 73,
+          "height": 19
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "indication",
+      "value": "atherosclerotic cardiovascular disease",
+      "source_span": {
+        "start": 479,
+        "end": 518,
+        "text": "Indication: established atherosclerotic"
+      },
+      "spans": [
+        {
+          "start": 479,
+          "end": 518,
+          "text": "Indication: established atherosclerotic"
+        },
+        {
+          "start": 519,
+          "end": 559,
+          "text": "cardiovascular disease, prior myocardial"
+        },
+        {
+          "start": 560,
+          "end": 595,
+          "text": "infarction, reason for this request"
+        }
+      ],
+      "value_span": {
+        "start": 503,
+        "end": 541
+      },
+      "attrs": {
+        "family": "ascvd"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 717,
+          "width": 114,
+          "height": 19
+        },
+        {
+          "x": 227,
+          "y": 717,
+          "width": 129,
+          "height": 19
+        },
+        {
+          "x": 366,
+          "y": 717,
+          "width": 167,
+          "height": 19
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "assessment",
+      "value": {
+        "condition": "atherosclerotic cardiovascular disease",
+        "certainty": "confirmed"
+      },
+      "source_span": {
+        "start": 935,
+        "end": 980,
+        "text": "A: Established atherosclerotic cardiovascular"
+      },
+      "spans": [
+        {
+          "start": 935,
+          "end": 980,
+          "text": "A: Established atherosclerotic cardiovascular"
+        },
+        {
+          "start": 981,
+          "end": 1023,
+          "text": "disease. This visit's request is for that."
+        }
+      ],
+      "value_span": {
+        "start": 950,
+        "end": 988
+      },
+      "attrs": {
+        "family": "ascvd"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 100,
+          "y": 438,
+          "width": 22,
+          "height": 18
+        },
+        {
+          "x": 134,
+          "y": 437,
+          "width": 131,
+          "height": 19
+        },
+        {
+          "x": 275,
+          "y": 437,
+          "width": 167,
+          "height": 19
+        },
+        {
+          "x": 451,
+          "y": 437,
+          "width": 166,
+          "height": 19
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "measurement",
+      "value": {
+        "name": "LDL-C",
+        "value": 98,
+        "unit": "mg/dL"
+      },
+      "source_span": {
+        "start": 1170,
+        "end": 1208,
+        "text": "LDL-C | 98 mg/dL | H | <100 | [date-e]"
+      },
+      "value_span": {
+        "start": 1178,
+        "end": 1180
+      },
+      "name_span": {
+        "start": 1170,
+        "end": 1175
+      },
+      "reviewed": false,
+      "related": [
+        "e8"
+      ],
+      "boxes": [
+        {
+          "x": 102,
+          "y": 678,
+          "width": 72,
+          "height": 18
+        },
+        {
+          "x": 185,
+          "y": 677,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 198,
+          "y": 678,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 234,
+          "y": 677,
+          "width": 81,
+          "height": 25
+        },
+        {
+          "x": 310,
+          "y": 672,
+          "width": 9,
+          "height": 34
+        },
+        {
+          "x": 327,
+          "y": 678,
+          "width": 15,
+          "height": 18
+        },
+        {
+          "x": 353,
+          "y": 677,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 366,
+          "y": 678,
+          "width": 57,
+          "height": 18
+        },
+        {
+          "x": 433,
+          "y": 677,
+          "width": 2,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "measurement_date",
+      "value": "2132-05-08",
+      "source_span": {
+        "start": 1170,
+        "end": 1208,
+        "text": "LDL-C | 98 mg/dL | H | <100 | [date-e]"
+      },
+      "value_span": {
+        "start": 1200,
+        "end": 1208
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 678,
+          "width": 72,
+          "height": 18
+        },
+        {
+          "x": 185,
+          "y": 677,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 198,
+          "y": 678,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 234,
+          "y": 677,
+          "width": 81,
+          "height": 25
+        },
+        {
+          "x": 310,
+          "y": 672,
+          "width": 9,
+          "height": 34
+        },
+        {
+          "x": 327,
+          "y": 678,
+          "width": 15,
+          "height": 18
+        },
+        {
+          "x": 353,
+          "y": 677,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 366,
+          "y": 678,
+          "width": 57,
+          "height": 18
+        },
+        {
+          "x": 433,
+          "y": 677,
+          "width": 2,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "measurement",
+      "value": {
+        "name": "LDL-C",
+        "value": 164,
+        "unit": "mg/dL"
+      },
+      "source_span": {
+        "start": 1209,
+        "end": 1248,
+        "text": "LDL-C | 164 mg/dL | H | <100 | [date-f]"
+      },
+      "value_span": {
+        "start": 1217,
+        "end": 1220
+      },
+      "name_span": {
+        "start": 1209,
+        "end": 1214
+      },
+      "reviewed": false,
+      "related": [
+        "e10"
+      ],
+      "boxes": [
+        {
+          "x": 102,
+          "y": 718,
+          "width": 72,
+          "height": 18
+        },
+        {
+          "x": 185,
+          "y": 717,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 198,
+          "y": 718,
+          "width": 41,
+          "height": 18
+        },
+        {
+          "x": 249,
+          "y": 717,
+          "width": 69,
+          "height": 24
+        },
+        {
+          "x": 328,
+          "y": 717,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 341,
+          "y": 718,
+          "width": 15,
+          "height": 18
+        },
+        {
+          "x": 368,
+          "y": 717,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 381,
+          "y": 718,
+          "width": 56,
+          "height": 18
+        },
+        {
+          "x": 447,
+          "y": 717,
+          "width": 3,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "measurement_date",
+      "value": "2130-10-27",
+      "source_span": {
+        "start": 1209,
+        "end": 1248,
+        "text": "LDL-C | 164 mg/dL | H | <100 | [date-f]"
+      },
+      "value_span": {
+        "start": 1240,
+        "end": 1248
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 718,
+          "width": 72,
+          "height": 18
+        },
+        {
+          "x": 185,
+          "y": 717,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 198,
+          "y": 718,
+          "width": 41,
+          "height": 18
+        },
+        {
+          "x": 249,
+          "y": 717,
+          "width": 69,
+          "height": 24
+        },
+        {
+          "x": 328,
+          "y": 717,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 341,
+          "y": 718,
+          "width": 15,
+          "height": 18
+        },
+        {
+          "x": 368,
+          "y": 717,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 381,
+          "y": 718,
+          "width": 56,
+          "height": 18
+        },
+        {
+          "x": 447,
+          "y": 717,
+          "width": 3,
+          "height": 25
+        }
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "prior_medication",
+      "value": "ezetimibe",
+      "source_span": {
+        "start": 1504,
+        "end": 1555,
+        "text": "ezetimibe | 10 mg | PO | daily | [date-j] | current"
+      },
+      "value_span": {
+        "start": 1504,
+        "end": 1513
+      },
+      "episode": 1,
+      "match": {
+        "kind": "exact",
+        "written": "ezetimibe",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "cholesterol-absorption"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 317,
+          "width": 109,
+          "height": 19
+        },
+        {
+          "x": 221,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 234,
+          "y": 318,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 270,
+          "y": 322,
+          "width": 33,
+          "height": 19
+        },
+        {
+          "x": 314,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 328,
+          "y": 318,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 373,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 386,
+          "y": 317,
+          "width": 52,
+          "height": 24
+        },
+        {
+          "x": 448,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 599,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 612,
+          "y": 319,
+          "width": 79,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e12",
+      "type": "prior_start_date",
+      "value": "2131-01-09",
+      "source_span": {
+        "start": 1504,
+        "end": 1555,
+        "text": "ezetimibe | 10 mg | PO | daily | [date-j] | current"
+      },
+      "value_span": {
+        "start": 1537,
+        "end": 1545
+      },
+      "episode": 1,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 317,
+          "width": 109,
+          "height": 19
+        },
+        {
+          "x": 221,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 234,
+          "y": 318,
+          "width": 26,
+          "height": 18
+        },
+        {
+          "x": 270,
+          "y": 322,
+          "width": 33,
+          "height": 19
+        },
+        {
+          "x": 314,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 328,
+          "y": 318,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 373,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 386,
+          "y": 317,
+          "width": 52,
+          "height": 24
+        },
+        {
+          "x": 448,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 599,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 612,
+          "y": 319,
+          "width": 79,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e13",
+      "type": "prior_medication",
+      "value": "metoprolol",
+      "source_span": {
+        "start": 1556,
+        "end": 1608,
+        "text": "metoprolol | 50 mg | PO | daily | [date-k] | current"
+      },
+      "value_span": {
+        "start": 1556,
+        "end": 1566
+      },
+      "episode": 2,
+      "match": {
+        "kind": "exact",
+        "written": "metoprolol",
+        "confidence": 1
+      },
+      "attrs": {
+        "status": "tried",
+        "drugClass": "beta-blocker"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 357,
+          "width": 118,
+          "height": 24
+        },
+        {
+          "x": 231,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 244,
+          "y": 358,
+          "width": 27,
+          "height": 18
+        },
+        {
+          "x": 280,
+          "y": 362,
+          "width": 33,
+          "height": 19
+        },
+        {
+          "x": 324,
+          "y": 357,
+          "width": 3,
+          "height": 25
+        },
+        {
+          "x": 338,
+          "y": 358,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 383,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 396,
+          "y": 357,
+          "width": 52,
+          "height": 24
+        },
+        {
+          "x": 458,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 609,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 622,
+          "y": 359,
+          "width": 80,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e14",
+      "type": "prior_start_date",
+      "value": "2130-10-27",
+      "source_span": {
+        "start": 1556,
+        "end": 1608,
+        "text": "metoprolol | 50 mg | PO | daily | [date-k] | current"
+      },
+      "value_span": {
+        "start": 1590,
+        "end": 1598
+      },
+      "episode": 2,
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 102,
+          "y": 357,
+          "width": 118,
+          "height": 24
+        },
+        {
+          "x": 231,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 244,
+          "y": 358,
+          "width": 27,
+          "height": 18
+        },
+        {
+          "x": 280,
+          "y": 362,
+          "width": 33,
+          "height": 19
+        },
+        {
+          "x": 324,
+          "y": 357,
+          "width": 3,
+          "height": 25
+        },
+        {
+          "x": 338,
+          "y": 358,
+          "width": 34,
+          "height": 18
+        },
+        {
+          "x": 383,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 396,
+          "y": 357,
+          "width": 52,
+          "height": 24
+        },
+        {
+          "x": 458,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 609,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 622,
+          "y": 359,
+          "width": 80,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "prior_dose",
+      "value": "81 mg daily",
+      "source_span": {
+        "start": 1609,
+        "end": 1658,
+        "text": "aspirin | 81 mg | PO | daily | [date-l] | current"
+      },
+      "value_span": {
+        "start": 1619,
+        "end": 1637
+      },
+      "episode": 2,
+      "attrs": {
+        "amount": 81,
+        "frequency": "daily"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 397,
+          "width": 74,
+          "height": 24
+        },
+        {
+          "x": 186,
+          "y": 397,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 199,
+          "y": 398,
+          "width": 27,
+          "height": 18
+        },
+        {
+          "x": 236,
+          "y": 402,
+          "width": 32,
+          "height": 19
+        },
+        {
+          "x": 280,
+          "y": 397,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 293,
+          "y": 398,
+          "width": 35,
+          "height": 18
+        },
+        {
+          "x": 338,
+          "y": 397,
+          "width": 3,
+          "height": 25
+        },
+        {
+          "x": 351,
+          "y": 397,
+          "width": 52,
+          "height": 24
+        },
+        {
+          "x": 413,
+          "y": 397,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 564,
+          "y": 397,
+          "width": 3,
+          "height": 25
+        },
+        {
+          "x": 577,
+          "y": 399,
+          "width": 80,
+          "height": 17
+        }
+      ]
+    },
+    {
+      "id": "e16",
+      "type": "requested_dose",
+      "value": "420 mg monthly",
+      "source_span": {
+        "start": 1659,
+        "end": 1715,
+        "text": "evolocumab | 420 mg | SC | monthly | pending | requested"
+      },
+      "value_span": {
+        "start": 1672,
+        "end": 1693
+      },
+      "attrs": {
+        "drug": "evolocumab",
+        "amount": 420,
+        "route": "subcutaneous",
+        "source": "prose"
+      },
+      "reviewed": false,
+      "boxes": [
+        {
+          "x": 101,
+          "y": 437,
+          "width": 138,
+          "height": 19
+        },
+        {
+          "x": 250,
+          "y": 437,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 262,
+          "y": 438,
+          "width": 42,
+          "height": 18
+        },
+        {
+          "x": 314,
+          "y": 442,
+          "width": 32,
+          "height": 19
+        },
+        {
+          "x": 358,
+          "y": 437,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 371,
+          "y": 438,
+          "width": 33,
+          "height": 18
+        },
+        {
+          "x": 415,
+          "y": 437,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 428,
+          "y": 437,
+          "width": 89,
+          "height": 24
+        },
+        {
+          "x": 527,
+          "y": 437,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 541,
+          "y": 437,
+          "width": 89,
+          "height": 24
+        },
+        {
+          "x": 641,
+          "y": 437,
+          "width": 2,
+          "height": 25
+        },
+        {
+          "x": 654,
+          "y": 437,
+          "width": 113,
+          "height": 24
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 269,
+          "end": 317,
+          "text": "Patient: [name] [name] (fictional) Age: 59 years"
+        }
+      ],
+      "reason": "Age 59 is documented.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 479,
+          "end": 518,
+          "text": "Indication: established atherosclerotic"
+        },
+        {
+          "start": 519,
+          "end": 559,
+          "text": "cardiovascular disease, prior myocardial"
+        },
+        {
+          "start": 560,
+          "end": 595,
+          "text": "infarction, reason for this request"
+        },
+        {
+          "start": 935,
+          "end": 980,
+          "text": "A: Established atherosclerotic cardiovascular"
+        },
+        {
+          "start": 981,
+          "end": 1023,
+          "text": "disease. This visit's request is for that."
+        }
+      ],
+      "reason": "The request names atherosclerotic cardiovascular disease as its reason.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 229,
+          "end": 251,
+          "text": "Request date: [date-b]"
+        },
+        {
+          "start": 1170,
+          "end": 1208,
+          "text": "LDL-C | 98 mg/dL | H | <100 | [date-e]"
+        }
+      ],
+      "reason": "The LDL-C date falls after the request date.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "A ezetimibe and metoprolol course is documented. No high-intensity statin trial, intolerance or contraindication is documented.",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 158,
+          "end": 199,
+          "text": "Re: evolocumab, [name] [name] (fictional)"
+        },
+        {
+          "start": 445,
+          "end": 478,
+          "text": "Form sig: 140 mg SC every 2 weeks"
+        },
+        {
+          "start": 1659,
+          "end": 1715,
+          "text": "evolocumab | 420 mg | SC | monthly | pending | requested"
+        }
+      ],
+      "reason": "The request gives different doses: 140 mg every 2 weeks in \"Form sig: 140 mg SC every 2 weeks\" and 420 mg monthly in \"evolocumab | 420 mg | SC | monthly | pending | requested\".",
+      "reviewed": false
+    }
+  ],
+  "summary": [
+    {
+      "text": "Re: evolocumab, [name] [name] (fictional)",
+      "citations": [
+        {
+          "start": 158,
+          "end": 199,
+          "text": "Re: evolocumab, [name] [name] (fictional)"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "Indication: established atherosclerotic",
+      "citations": [
+        {
+          "start": 479,
+          "end": 518,
+          "text": "Indication: established atherosclerotic"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "LDL-C | 98 mg/dL | H | <100 | [date-e]",
+      "citations": [
+        {
+          "start": 1170,
+          "end": 1208,
+          "text": "LDL-C | 98 mg/dL | H | <100 | [date-e]"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "LDL-C | 164 mg/dL | H | <100 | [date-f]",
+      "citations": [
+        {
+          "start": 1209,
+          "end": 1248,
+          "text": "LDL-C | 164 mg/dL | H | <100 | [date-f]"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "ezetimibe | 10 mg | PO | daily | [date-j] | current",
+      "citations": [
+        {
+          "start": 1504,
+          "end": 1555,
+          "text": "ezetimibe | 10 mg | PO | daily | [date-j] | current"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    },
+    {
+      "text": "metoprolol | 50 mg | PO | daily | [date-k] | current",
+      "citations": [
+        {
+          "start": 1556,
+          "end": 1608,
+          "text": "metoprolol | 50 mg | PO | daily | [date-k] | current"
+        }
+      ],
+      "supported": true,
+      "needsReview": false,
+      "reason": "Exact cited source statement."
+    }
+  ],
+  "words": [
+    {
+      "text": "9:05",
+      "confidence": 96.521011,
+      "box": {
+        "x": 246,
+        "y": 158,
+        "width": 48,
+        "height": 18
+      },
+      "start": 9,
+      "end": 13,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "AM",
+      "confidence": 93.717529,
+      "box": {
+        "x": 301,
+        "y": 158,
+        "width": 37,
+        "height": 18
+      },
+      "start": 14,
+      "end": 16,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "FROM:",
+      "confidence": 93.289085,
+      "box": {
+        "x": 356,
+        "y": 158,
+        "width": 80,
+        "height": 18
+      },
+      "start": 17,
+      "end": 22,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "XXXXXXXXXX",
+      "confidence": 91.690567,
+      "box": {
+        "x": 446,
+        "y": 158,
+        "width": 172,
+        "height": 18
+      },
+      "start": 23,
+      "end": 33,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "TO:",
+      "confidence": 96.384674,
+      "box": {
+        "x": 633,
+        "y": 158,
+        "width": 40,
+        "height": 18
+      },
+      "start": 34,
+      "end": 37,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "PA",
+      "confidence": 1.300262,
+      "box": {
+        "x": 685,
+        "y": 158,
+        "width": 30,
+        "height": 18
+      },
+      "start": 38,
+      "end": 40,
+      "needsReview": true,
+      "page": 0
+    },
+    {
+      "text": "DEPT",
+      "confidence": 1.300262,
+      "box": {
+        "x": 723,
+        "y": 158,
+        "width": 67,
+        "height": 18
+      },
+      "start": 41,
+      "end": 45,
+      "needsReview": true,
+      "page": 0
+    },
+    {
+      "text": "P.001/003",
+      "confidence": 91.61763,
+      "box": {
+        "x": 807,
+        "y": 157,
+        "width": 112,
+        "height": 19
+      },
+      "start": 46,
+      "end": 55,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 94.134155,
+      "box": {
+        "x": 454,
+        "y": 197,
+        "width": 102,
+        "height": 24
+      },
+      "start": 77,
+      "end": 88,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "To:",
+      "confidence": 96.796555,
+      "box": {
+        "x": 101,
+        "y": 238,
+        "width": 31,
+        "height": 18
+      },
+      "start": 89,
+      "end": 92,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "PA",
+      "confidence": 96.587173,
+      "box": {
+        "x": 144,
+        "y": 238,
+        "width": 30,
+        "height": 18
+      },
+      "start": 93,
+      "end": 95,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Desk,",
+      "confidence": 93.115105,
+      "box": {
+        "x": 183,
+        "y": 237,
+        "width": 62,
+        "height": 22
+      },
+      "start": 96,
+      "end": 101,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Plan",
+      "confidence": 95.842171,
+      "box": {
+        "x": 409,
+        "y": 237,
+        "width": 48,
+        "height": 19
+      },
+      "start": 109,
+      "end": 113,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.357788,
+      "box": {
+        "x": 468,
+        "y": 237,
+        "width": 102,
+        "height": 24
+      },
+      "start": 114,
+      "end": 125,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "From:",
+      "confidence": 96.127213,
+      "box": {
+        "x": 102,
+        "y": 278,
+        "width": 64,
+        "height": 18
+      },
+      "start": 126,
+      "end": 131,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.335236,
+      "box": {
+        "x": 367,
+        "y": 277,
+        "width": 103,
+        "height": 24
+      },
+      "start": 146,
+      "end": 157,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Re:",
+      "confidence": 92.963036,
+      "box": {
+        "x": 102,
+        "y": 318,
+        "width": 36,
+        "height": 18
+      },
+      "start": 158,
+      "end": 161,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "evolocumab,",
+      "confidence": 92.173103,
+      "box": {
+        "x": 149,
+        "y": 317,
+        "width": 144,
+        "height": 22
+      },
+      "start": 162,
+      "end": 173,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.717484,
+      "box": {
+        "x": 432,
+        "y": 317,
+        "width": 103,
+        "height": 24
+      },
+      "start": 188,
+      "end": 199,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Member",
+      "confidence": 94.559731,
+      "box": {
+        "x": 102,
+        "y": 357,
+        "width": 93,
+        "height": 19
+      },
+      "start": 200,
+      "end": 206,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "ID:",
+      "confidence": 93.223358,
+      "box": {
+        "x": 205,
+        "y": 358,
+        "width": 29,
+        "height": 18
+      },
+      "start": 207,
+      "end": 210,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "XXXXXXXX",
+      "confidence": 91.434586,
+      "box": {
+        "x": 244,
+        "y": 358,
+        "width": 137,
+        "height": 18
+      },
+      "start": 211,
+      "end": 219,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Pages:",
+      "confidence": 96.519745,
+      "box": {
+        "x": 391,
+        "y": 358,
+        "width": 77,
+        "height": 23
+      },
+      "start": 220,
+      "end": 226,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "3",
+      "confidence": 96.309044,
+      "box": {
+        "x": 478,
+        "y": 358,
+        "width": 13,
+        "height": 18
+      },
+      "start": 227,
+      "end": 228,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Request",
+      "confidence": 95.131989,
+      "box": {
+        "x": 102,
+        "y": 398,
+        "width": 95,
+        "height": 23
+      },
+      "start": 229,
+      "end": 236,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "date:",
+      "confidence": 96.858665,
+      "box": {
+        "x": 205,
+        "y": 397,
+        "width": 55,
+        "height": 19
+      },
+      "start": 237,
+      "end": 242,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "----",
+      "confidence": 73.372955,
+      "box": {
+        "x": 101,
+        "y": 448,
+        "width": 33,
+        "height": 2
+      },
+      "start": 252,
+      "end": 256,
+      "needsReview": true,
+      "page": 0
+    },
+    {
+      "text": "PAFORM",
+      "confidence": 91.993065,
+      "box": {
+        "x": 144,
+        "y": 438,
+        "width": 111,
+        "height": 18
+      },
+      "start": 257,
+      "end": 263,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "----",
+      "confidence": 60.442513,
+      "box": {
+        "x": 265,
+        "y": 448,
+        "width": 33,
+        "height": 2
+      },
+      "start": 264,
+      "end": 268,
+      "needsReview": true,
+      "page": 0
+    },
+    {
+      "text": "Patient:",
+      "confidence": 96.519371,
+      "box": {
+        "x": 102,
+        "y": 477,
+        "width": 84,
+        "height": 19
+      },
+      "start": 269,
+      "end": 277,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.544189,
+      "box": {
+        "x": 326,
+        "y": 477,
+        "width": 102,
+        "height": 24
+      },
+      "start": 292,
+      "end": 303,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Age:",
+      "confidence": 96.806671,
+      "box": {
+        "x": 435,
+        "y": 478,
+        "width": 51,
+        "height": 23
+      },
+      "start": 304,
+      "end": 308,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "59",
+      "confidence": 96.950531,
+      "box": {
+        "x": 497,
+        "y": 478,
+        "width": 27,
+        "height": 18
+      },
+      "start": 309,
+      "end": 311,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "years",
+      "confidence": 96.36129,
+      "box": {
+        "x": 532,
+        "y": 482,
+        "width": 63,
+        "height": 19
+      },
+      "start": 312,
+      "end": 317,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Prescriber:",
+      "confidence": 92.67469,
+      "box": {
+        "x": 102,
+        "y": 517,
+        "width": 121,
+        "height": 19
+      },
+      "start": 318,
+      "end": 329,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Dr.",
+      "confidence": 95.506187,
+      "box": {
+        "x": 235,
+        "y": 518,
+        "width": 29,
+        "height": 18
+      },
+      "start": 330,
+      "end": 333,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.39753,
+      "box": {
+        "x": 378,
+        "y": 517,
+        "width": 102,
+        "height": 24
+      },
+      "start": 348,
+      "end": 359,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Clinic:",
+      "confidence": 96.751221,
+      "box": {
+        "x": 101,
+        "y": 557,
+        "width": 67,
+        "height": 19
+      },
+      "start": 360,
+      "end": 367,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 95.680191,
+      "box": {
+        "x": 370,
+        "y": 557,
+        "width": 103,
+        "height": 24
+      },
+      "start": 382,
+      "end": 393,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Phone:",
+      "confidence": 92.331528,
+      "box": {
+        "x": 102,
+        "y": 597,
+        "width": 78,
+        "height": 19
+      },
+      "start": 394,
+      "end": 400,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "XXXXXXXXXX",
+      "confidence": 87.930588,
+      "box": {
+        "x": 191,
+        "y": 598,
+        "width": 171,
+        "height": 18
+      },
+      "start": 401,
+      "end": 411,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Fax:",
+      "confidence": 93.080658,
+      "box": {
+        "x": 372,
+        "y": 598,
+        "width": 47,
+        "height": 18
+      },
+      "start": 412,
+      "end": 416,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "XXXXXXXXXX",
+      "confidence": 90.351044,
+      "box": {
+        "x": 429,
+        "y": 598,
+        "width": 172,
+        "height": 18
+      },
+      "start": 417,
+      "end": 427,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Drug:",
+      "confidence": 93.223045,
+      "box": {
+        "x": 102,
+        "y": 638,
+        "width": 59,
+        "height": 23
+      },
+      "start": 428,
+      "end": 433,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "evolocumab",
+      "confidence": 91.660889,
+      "box": {
+        "x": 172,
+        "y": 637,
+        "width": 138,
+        "height": 19
+      },
+      "start": 434,
+      "end": 444,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Form",
+      "confidence": 96.225456,
+      "box": {
+        "x": 102,
+        "y": 678,
+        "width": 57,
+        "height": 18
+      },
+      "start": 445,
+      "end": 449,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "sig:",
+      "confidence": 96.610802,
+      "box": {
+        "x": 169,
+        "y": 677,
+        "width": 37,
+        "height": 24
+      },
+      "start": 450,
+      "end": 454,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "140",
+      "confidence": 96.828659,
+      "box": {
+        "x": 217,
+        "y": 678,
+        "width": 41,
+        "height": 18
+      },
+      "start": 455,
+      "end": 458,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "mg",
+      "confidence": 96.299103,
+      "box": {
+        "x": 268,
+        "y": 682,
+        "width": 33,
+        "height": 19
+      },
+      "start": 459,
+      "end": 461,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "SC",
+      "confidence": 96.513382,
+      "box": {
+        "x": 311,
+        "y": 678,
+        "width": 33,
+        "height": 18
+      },
+      "start": 462,
+      "end": 464,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "every",
+      "confidence": 96.559387,
+      "box": {
+        "x": 354,
+        "y": 682,
+        "width": 62,
+        "height": 19
+      },
+      "start": 465,
+      "end": 470,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "2",
+      "confidence": 96.50676,
+      "box": {
+        "x": 425,
+        "y": 678,
+        "width": 12,
+        "height": 18
+      },
+      "start": 471,
+      "end": 472,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "weeks",
+      "confidence": 95.091187,
+      "box": {
+        "x": 445,
+        "y": 677,
+        "width": 73,
+        "height": 19
+      },
+      "start": 473,
+      "end": 478,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Indication:",
+      "confidence": 95.712799,
+      "box": {
+        "x": 102,
+        "y": 717,
+        "width": 114,
+        "height": 19
+      },
+      "start": 479,
+      "end": 490,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "established",
+      "confidence": 96.549698,
+      "box": {
+        "x": 227,
+        "y": 717,
+        "width": 129,
+        "height": 19
+      },
+      "start": 491,
+      "end": 502,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "atherosclerotic",
+      "confidence": 96.879784,
+      "box": {
+        "x": 366,
+        "y": 717,
+        "width": 167,
+        "height": 19
+      },
+      "start": 503,
+      "end": 518,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "cardiovascular",
+      "confidence": 96.304756,
+      "box": {
+        "x": 101,
+        "y": 757,
+        "width": 166,
+        "height": 19
+      },
+      "start": 519,
+      "end": 533,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "disease,",
+      "confidence": 96.552483,
+      "box": {
+        "x": 276,
+        "y": 757,
+        "width": 93,
+        "height": 22
+      },
+      "start": 534,
+      "end": 542,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "prior",
+      "confidence": 96.781281,
+      "box": {
+        "x": 381,
+        "y": 757,
+        "width": 50,
+        "height": 24
+      },
+      "start": 543,
+      "end": 548,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "myocardial",
+      "confidence": 96.609055,
+      "box": {
+        "x": 440,
+        "y": 757,
+        "width": 122,
+        "height": 24
+      },
+      "start": 549,
+      "end": 559,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "infarction,",
+      "confidence": 96.880318,
+      "box": {
+        "x": 102,
+        "y": 797,
+        "width": 108,
+        "height": 22
+      },
+      "start": 560,
+      "end": 571,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "reason",
+      "confidence": 95.691246,
+      "box": {
+        "x": 222,
+        "y": 802,
+        "width": 76,
+        "height": 14
+      },
+      "start": 572,
+      "end": 578,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "for",
+      "confidence": 95.691246,
+      "box": {
+        "x": 307,
+        "y": 797,
+        "width": 30,
+        "height": 19
+      },
+      "start": 579,
+      "end": 582,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "this",
+      "confidence": 96.221436,
+      "box": {
+        "x": 345,
+        "y": 797,
+        "width": 39,
+        "height": 19
+      },
+      "start": 583,
+      "end": 587,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "request",
+      "confidence": 96.798157,
+      "box": {
+        "x": 394,
+        "y": 799,
+        "width": 84,
+        "height": 22
+      },
+      "start": 588,
+      "end": 595,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "[x]",
+      "confidence": 72.720581,
+      "box": {
+        "x": 102,
+        "y": 837,
+        "width": 24,
+        "height": 24
+      },
+      "start": 596,
+      "end": 599,
+      "needsReview": true,
+      "page": 0
+    },
+    {
+      "text": "New",
+      "confidence": 96.408829,
+      "box": {
+        "x": 137,
+        "y": 838,
+        "width": 50,
+        "height": 18
+      },
+      "start": 600,
+      "end": 603,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "start",
+      "confidence": 96.408829,
+      "box": {
+        "x": 195,
+        "y": 839,
+        "width": 49,
+        "height": 17
+      },
+      "start": 604,
+      "end": 609,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Pharmacy:",
+      "confidence": 96.778809,
+      "box": {
+        "x": 102,
+        "y": 877,
+        "width": 120,
+        "height": 24
+      },
+      "start": 610,
+      "end": 619,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "Pharmacy",
+      "confidence": 96.312592,
+      "box": {
+        "x": 288,
+        "y": 877,
+        "width": 115,
+        "height": 24
+      },
+      "start": 627,
+      "end": 635,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.225052,
+      "box": {
+        "x": 412,
+        "y": 877,
+        "width": 103,
+        "height": 24
+      },
+      "start": 636,
+      "end": 647,
+      "needsReview": false,
+      "page": 0
+    },
+    {
+      "text": "9:05",
+      "confidence": 96.520668,
+      "box": {
+        "x": 246,
+        "y": 158,
+        "width": 48,
+        "height": 18
+      },
+      "start": 657,
+      "end": 661,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "AM",
+      "confidence": 93.974861,
+      "box": {
+        "x": 301,
+        "y": 158,
+        "width": 37,
+        "height": 18
+      },
+      "start": 662,
+      "end": 664,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "FROM:",
+      "confidence": 93.287018,
+      "box": {
+        "x": 356,
+        "y": 158,
+        "width": 80,
+        "height": 18
+      },
+      "start": 665,
+      "end": 670,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "XXXXXXXXXX",
+      "confidence": 91.517456,
+      "box": {
+        "x": 446,
+        "y": 158,
+        "width": 172,
+        "height": 18
+      },
+      "start": 671,
+      "end": 681,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "TO:",
+      "confidence": 96.705605,
+      "box": {
+        "x": 633,
+        "y": 158,
+        "width": 40,
+        "height": 18
+      },
+      "start": 682,
+      "end": 685,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "PA",
+      "confidence": 2.607277,
+      "box": {
+        "x": 685,
+        "y": 158,
+        "width": 30,
+        "height": 18
+      },
+      "start": 686,
+      "end": 688,
+      "needsReview": true,
+      "page": 1
+    },
+    {
+      "text": "DEPT",
+      "confidence": 2.607277,
+      "box": {
+        "x": 723,
+        "y": 158,
+        "width": 67,
+        "height": 18
+      },
+      "start": 689,
+      "end": 693,
+      "needsReview": true,
+      "page": 1
+    },
+    {
+      "text": "P.002/003",
+      "confidence": 90.375465,
+      "box": {
+        "x": 807,
+        "y": 157,
+        "width": 112,
+        "height": 19
+      },
+      "start": 694,
+      "end": 703,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 93.433685,
+      "box": {
+        "x": 354,
+        "y": 197,
+        "width": 103,
+        "height": 24
+      },
+      "start": 718,
+      "end": 729,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "EHR",
+      "confidence": 96.665306,
+      "box": {
+        "x": 468,
+        "y": 198,
+        "width": 51,
+        "height": 18
+      },
+      "start": 730,
+      "end": 733,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "NOTE",
+      "confidence": 95.355133,
+      "box": {
+        "x": 530,
+        "y": 198,
+        "width": 69,
+        "height": 18
+      },
+      "start": 734,
+      "end": 738,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Patient:",
+      "confidence": 96.649544,
+      "box": {
+        "x": 102,
+        "y": 237,
+        "width": 84,
+        "height": 19
+      },
+      "start": 739,
+      "end": 747,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 93.285431,
+      "box": {
+        "x": 326,
+        "y": 237,
+        "width": 102,
+        "height": 24
+      },
+      "start": 762,
+      "end": 773,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "MRN:",
+      "confidence": 89.899452,
+      "box": {
+        "x": 439,
+        "y": 238,
+        "width": 62,
+        "height": 18
+      },
+      "start": 774,
+      "end": 778,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "XXXXXXXX",
+      "confidence": 90.585861,
+      "box": {
+        "x": 511,
+        "y": 238,
+        "width": 137,
+        "height": 18
+      },
+      "start": 779,
+      "end": 787,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Visit:",
+      "confidence": 95.179977,
+      "box": {
+        "x": 100,
+        "y": 277,
+        "width": 54,
+        "height": 19
+      },
+      "start": 788,
+      "end": 794,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Dr.",
+      "confidence": 90.079178,
+      "box": {
+        "x": 303,
+        "y": 278,
+        "width": 28,
+        "height": 18
+      },
+      "start": 804,
+      "end": 807,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.386421,
+      "box": {
+        "x": 445,
+        "y": 277,
+        "width": 102,
+        "height": 24
+      },
+      "start": 822,
+      "end": 833,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "S:",
+      "confidence": 90.288918,
+      "box": {
+        "x": 101,
+        "y": 318,
+        "width": 21,
+        "height": 18
+      },
+      "start": 834,
+      "end": 836,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Follow-up",
+      "confidence": 95.210159,
+      "box": {
+        "x": 134,
+        "y": 317,
+        "width": 109,
+        "height": 24
+      },
+      "start": 837,
+      "end": 846,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "after",
+      "confidence": 96.794113,
+      "box": {
+        "x": 253,
+        "y": 317,
+        "width": 50,
+        "height": 19
+      },
+      "start": 847,
+      "end": 852,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "myocardial",
+      "confidence": 96.865005,
+      "box": {
+        "x": 313,
+        "y": 317,
+        "width": 122,
+        "height": 24
+      },
+      "start": 853,
+      "end": 863,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "infarction.",
+      "confidence": 96.606476,
+      "box": {
+        "x": 446,
+        "y": 317,
+        "width": 108,
+        "height": 19
+      },
+      "start": 864,
+      "end": 875,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Denies",
+      "confidence": 96.453148,
+      "box": {
+        "x": 124,
+        "y": 357,
+        "width": 78,
+        "height": 19
+      },
+      "start": 876,
+      "end": 882,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "current",
+      "confidence": 95.842743,
+      "box": {
+        "x": 211,
+        "y": 359,
+        "width": 80,
+        "height": 17
+      },
+      "start": 883,
+      "end": 890,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "chest",
+      "confidence": 96.620148,
+      "box": {
+        "x": 299,
+        "y": 357,
+        "width": 61,
+        "height": 19
+      },
+      "start": 891,
+      "end": 896,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "pain.",
+      "confidence": 96.742325,
+      "box": {
+        "x": 369,
+        "y": 357,
+        "width": 52,
+        "height": 24
+      },
+      "start": 897,
+      "end": 902,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "O:",
+      "confidence": 87.078941,
+      "box": {
+        "x": 101,
+        "y": 398,
+        "width": 24,
+        "height": 18
+      },
+      "start": 903,
+      "end": 905,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Lungs",
+      "confidence": 96.220543,
+      "box": {
+        "x": 137,
+        "y": 398,
+        "width": 68,
+        "height": 23
+      },
+      "start": 906,
+      "end": 911,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "clear.",
+      "confidence": 96.200378,
+      "box": {
+        "x": 214,
+        "y": 397,
+        "width": 59,
+        "height": 19
+      },
+      "start": 912,
+      "end": 918,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "See",
+      "confidence": 96.200378,
+      "box": {
+        "x": 283,
+        "y": 398,
+        "width": 44,
+        "height": 18
+      },
+      "start": 919,
+      "end": 922,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "labs",
+      "confidence": 95.478867,
+      "box": {
+        "x": 337,
+        "y": 397,
+        "width": 45,
+        "height": 19
+      },
+      "start": 923,
+      "end": 927,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "below.",
+      "confidence": 96.283768,
+      "box": {
+        "x": 392,
+        "y": 397,
+        "width": 70,
+        "height": 19
+      },
+      "start": 928,
+      "end": 934,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "A:",
+      "confidence": 95.374138,
+      "box": {
+        "x": 100,
+        "y": 438,
+        "width": 22,
+        "height": 18
+      },
+      "start": 935,
+      "end": 937,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Established",
+      "confidence": 95.491669,
+      "box": {
+        "x": 134,
+        "y": 437,
+        "width": 131,
+        "height": 19
+      },
+      "start": 938,
+      "end": 949,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "atherosclerotic",
+      "confidence": 96.24398,
+      "box": {
+        "x": 275,
+        "y": 437,
+        "width": 167,
+        "height": 19
+      },
+      "start": 950,
+      "end": 965,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "cardiovascular",
+      "confidence": 96.756729,
+      "box": {
+        "x": 451,
+        "y": 437,
+        "width": 166,
+        "height": 19
+      },
+      "start": 966,
+      "end": 980,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "disease.",
+      "confidence": 95.902489,
+      "box": {
+        "x": 123,
+        "y": 477,
+        "width": 93,
+        "height": 19
+      },
+      "start": 981,
+      "end": 989,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "This",
+      "confidence": 93.304527,
+      "box": {
+        "x": 226,
+        "y": 477,
+        "width": 47,
+        "height": 19
+      },
+      "start": 990,
+      "end": 994,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "visit's",
+      "confidence": 91.828537,
+      "box": {
+        "x": 282,
+        "y": 477,
+        "width": 61,
+        "height": 19
+      },
+      "start": 995,
+      "end": 1002,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "request",
+      "confidence": 96.716026,
+      "box": {
+        "x": 353,
+        "y": 479,
+        "width": 85,
+        "height": 22
+      },
+      "start": 1003,
+      "end": 1010,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "is",
+      "confidence": 96.725098,
+      "box": {
+        "x": 447,
+        "y": 477,
+        "width": 16,
+        "height": 19
+      },
+      "start": 1011,
+      "end": 1013,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "for",
+      "confidence": 96.932518,
+      "box": {
+        "x": 472,
+        "y": 477,
+        "width": 29,
+        "height": 19
+      },
+      "start": 1014,
+      "end": 1017,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "that.",
+      "confidence": 96.657761,
+      "box": {
+        "x": 509,
+        "y": 477,
+        "width": 48,
+        "height": 19
+      },
+      "start": 1018,
+      "end": 1023,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "P:",
+      "confidence": 91.441681,
+      "box": {
+        "x": 102,
+        "y": 518,
+        "width": 20,
+        "height": 18
+      },
+      "start": 1024,
+      "end": 1026,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Evolocumab",
+      "confidence": 92.732277,
+      "box": {
+        "x": 134,
+        "y": 517,
+        "width": 140,
+        "height": 19
+      },
+      "start": 1027,
+      "end": 1037,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "ordered.",
+      "confidence": 96.349968,
+      "box": {
+        "x": 283,
+        "y": 517,
+        "width": 94,
+        "height": 19
+      },
+      "start": 1038,
+      "end": 1046,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Nurse",
+      "confidence": 96.886116,
+      "box": {
+        "x": 388,
+        "y": 518,
+        "width": 66,
+        "height": 18
+      },
+      "start": 1047,
+      "end": 1052,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "note:",
+      "confidence": 96.754623,
+      "box": {
+        "x": 464,
+        "y": 519,
+        "width": 54,
+        "height": 17
+      },
+      "start": 1053,
+      "end": 1058,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "pen",
+      "confidence": 96.063255,
+      "box": {
+        "x": 529,
+        "y": 522,
+        "width": 41,
+        "height": 19
+      },
+      "start": 1059,
+      "end": 1062,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "teaching",
+      "confidence": 96.67128,
+      "box": {
+        "x": 579,
+        "y": 517,
+        "width": 96,
+        "height": 24
+      },
+      "start": 1063,
+      "end": 1071,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "booked,",
+      "confidence": 96.893997,
+      "box": {
+        "x": 123,
+        "y": 557,
+        "width": 89,
+        "height": 22
+      },
+      "start": 1072,
+      "end": 1079,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "sig",
+      "confidence": 96.877846,
+      "box": {
+        "x": 222,
+        "y": 557,
+        "width": 31,
+        "height": 24
+      },
+      "start": 1080,
+      "end": 1083,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "taken",
+      "confidence": 96.877846,
+      "box": {
+        "x": 262,
+        "y": 557,
+        "width": 62,
+        "height": 19
+      },
+      "start": 1084,
+      "end": 1089,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "from",
+      "confidence": 96.867867,
+      "box": {
+        "x": 333,
+        "y": 557,
+        "width": 50,
+        "height": 19
+      },
+      "start": 1090,
+      "end": 1094,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "the",
+      "confidence": 96.056114,
+      "box": {
+        "x": 392,
+        "y": 557,
+        "width": 35,
+        "height": 19
+      },
+      "start": 1095,
+      "end": 1098,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "PA",
+      "confidence": 96.056114,
+      "box": {
+        "x": 437,
+        "y": 558,
+        "width": 31,
+        "height": 18
+      },
+      "start": 1099,
+      "end": 1101,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "form.",
+      "confidence": 96.822571,
+      "box": {
+        "x": 474,
+        "y": 557,
+        "width": 57,
+        "height": 19
+      },
+      "start": 1102,
+      "end": 1107,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "----",
+      "confidence": 73.503181,
+      "box": {
+        "x": 101,
+        "y": 608,
+        "width": 33,
+        "height": 2
+      },
+      "start": 1108,
+      "end": 1112,
+      "needsReview": true,
+      "page": 1
+    },
+    {
+      "text": "LAB",
+      "confidence": 96.460602,
+      "box": {
+        "x": 144,
+        "y": 598,
+        "width": 46,
+        "height": 18
+      },
+      "start": 1113,
+      "end": 1116,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "REPORT",
+      "confidence": 92.801857,
+      "box": {
+        "x": 200,
+        "y": 598,
+        "width": 106,
+        "height": 18
+      },
+      "start": 1117,
+      "end": 1123,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "----",
+      "confidence": 86.295013,
+      "box": {
+        "x": 314,
+        "y": 608,
+        "width": 32,
+        "height": 2
+      },
+      "start": 1124,
+      "end": 1128,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Test",
+      "confidence": 95.273811,
+      "box": {
+        "x": 101,
+        "y": 637,
+        "width": 58,
+        "height": 25
+      },
+      "start": 1129,
+      "end": 1133,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 95.273811,
+      "box": {
+        "x": 154,
+        "y": 633,
+        "width": 9,
+        "height": 33
+      },
+      "start": 1134,
+      "end": 1135,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Result",
+      "confidence": 94.669746,
+      "box": {
+        "x": 171,
+        "y": 637,
+        "width": 71,
+        "height": 19
+      },
+      "start": 1136,
+      "end": 1142,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 96.152023,
+      "box": {
+        "x": 252,
+        "y": 637,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1143,
+      "end": 1144,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Flag",
+      "confidence": 96.75827,
+      "box": {
+        "x": 266,
+        "y": 637,
+        "width": 47,
+        "height": 24
+      },
+      "start": 1145,
+      "end": 1149,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 96.724525,
+      "box": {
+        "x": 324,
+        "y": 637,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1150,
+      "end": 1151,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Range",
+      "confidence": 96.713081,
+      "box": {
+        "x": 338,
+        "y": 638,
+        "width": 73,
+        "height": 23
+      },
+      "start": 1152,
+      "end": 1157,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 96.908798,
+      "box": {
+        "x": 422,
+        "y": 637,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1158,
+      "end": 1159,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Collected",
+      "confidence": 96.325928,
+      "box": {
+        "x": 435,
+        "y": 637,
+        "width": 105,
+        "height": 19
+      },
+      "start": 1160,
+      "end": 1169,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "LDL-C",
+      "confidence": 91.645485,
+      "box": {
+        "x": 102,
+        "y": 678,
+        "width": 72,
+        "height": 18
+      },
+      "start": 1170,
+      "end": 1175,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 91.645485,
+      "box": {
+        "x": 185,
+        "y": 677,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1176,
+      "end": 1177,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "98",
+      "confidence": 95.771385,
+      "box": {
+        "x": 198,
+        "y": 678,
+        "width": 26,
+        "height": 18
+      },
+      "start": 1178,
+      "end": 1180,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "mg/dL",
+      "confidence": 95.543541,
+      "box": {
+        "x": 234,
+        "y": 677,
+        "width": 81,
+        "height": 25
+      },
+      "start": 1181,
+      "end": 1186,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 91.627769,
+      "box": {
+        "x": 310,
+        "y": 672,
+        "width": 9,
+        "height": 34
+      },
+      "start": 1187,
+      "end": 1188,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "H",
+      "confidence": 91.627769,
+      "box": {
+        "x": 327,
+        "y": 678,
+        "width": 15,
+        "height": 18
+      },
+      "start": 1189,
+      "end": 1190,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 93.015205,
+      "box": {
+        "x": 353,
+        "y": 677,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1191,
+      "end": 1192,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "<100",
+      "confidence": 92.867134,
+      "box": {
+        "x": 366,
+        "y": 678,
+        "width": 57,
+        "height": 18
+      },
+      "start": 1193,
+      "end": 1197,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 96.95079,
+      "box": {
+        "x": 433,
+        "y": 677,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1198,
+      "end": 1199,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "LDL-C",
+      "confidence": 92.324348,
+      "box": {
+        "x": 102,
+        "y": 718,
+        "width": 72,
+        "height": 18
+      },
+      "start": 1209,
+      "end": 1214,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 92.324348,
+      "box": {
+        "x": 185,
+        "y": 717,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1215,
+      "end": 1216,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "164",
+      "confidence": 96.739502,
+      "box": {
+        "x": 198,
+        "y": 718,
+        "width": 41,
+        "height": 18
+      },
+      "start": 1217,
+      "end": 1220,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "mg/dL",
+      "confidence": 95.964478,
+      "box": {
+        "x": 249,
+        "y": 717,
+        "width": 69,
+        "height": 24
+      },
+      "start": 1221,
+      "end": 1226,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 92.892441,
+      "box": {
+        "x": 328,
+        "y": 717,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1227,
+      "end": 1228,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "H",
+      "confidence": 92.292618,
+      "box": {
+        "x": 341,
+        "y": 718,
+        "width": 15,
+        "height": 18
+      },
+      "start": 1229,
+      "end": 1230,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 93.03228,
+      "box": {
+        "x": 368,
+        "y": 717,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1231,
+      "end": 1232,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "<100",
+      "confidence": 93.03228,
+      "box": {
+        "x": 381,
+        "y": 718,
+        "width": 56,
+        "height": 18
+      },
+      "start": 1233,
+      "end": 1237,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "|",
+      "confidence": 96.983879,
+      "box": {
+        "x": 447,
+        "y": 717,
+        "width": 3,
+        "height": 25
+      },
+      "start": 1238,
+      "end": 1239,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "Comment:",
+      "confidence": 96.27977,
+      "box": {
+        "x": 101,
+        "y": 758,
+        "width": 117,
+        "height": 18
+      },
+      "start": 1249,
+      "end": 1257,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "draw",
+      "confidence": 96.789276,
+      "box": {
+        "x": 366,
+        "y": 757,
+        "width": 55,
+        "height": 19
+      },
+      "start": 1267,
+      "end": 1271,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "is",
+      "confidence": 96.507629,
+      "box": {
+        "x": 430,
+        "y": 757,
+        "width": 16,
+        "height": 19
+      },
+      "start": 1272,
+      "end": 1274,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "after",
+      "confidence": 96.700623,
+      "box": {
+        "x": 455,
+        "y": 757,
+        "width": 51,
+        "height": 19
+      },
+      "start": 1275,
+      "end": 1280,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "the",
+      "confidence": 96.724052,
+      "box": {
+        "x": 514,
+        "y": 757,
+        "width": 34,
+        "height": 19
+      },
+      "start": 1281,
+      "end": 1284,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "request.",
+      "confidence": 96.688423,
+      "box": {
+        "x": 558,
+        "y": 759,
+        "width": 90,
+        "height": 22
+      },
+      "start": 1285,
+      "end": 1293,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "The",
+      "confidence": 96.312157,
+      "box": {
+        "x": 101,
+        "y": 797,
+        "width": 43,
+        "height": 19
+      },
+      "start": 1294,
+      "end": 1297,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "draw",
+      "confidence": 96.165108,
+      "box": {
+        "x": 290,
+        "y": 797,
+        "width": 56,
+        "height": 19
+      },
+      "start": 1307,
+      "end": 1311,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "is",
+      "confidence": 96.165108,
+      "box": {
+        "x": 355,
+        "y": 797,
+        "width": 16,
+        "height": 19
+      },
+      "start": 1312,
+      "end": 1314,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "an",
+      "confidence": 96.666245,
+      "box": {
+        "x": 380,
+        "y": 802,
+        "width": 26,
+        "height": 14
+      },
+      "start": 1315,
+      "end": 1317,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "old",
+      "confidence": 96.740776,
+      "box": {
+        "x": 416,
+        "y": 797,
+        "width": 32,
+        "height": 19
+      },
+      "start": 1318,
+      "end": 1321,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "baseline.",
+      "confidence": 96.536797,
+      "box": {
+        "x": 459,
+        "y": 797,
+        "width": 100,
+        "height": 19
+      },
+      "start": 1322,
+      "end": 1331,
+      "needsReview": false,
+      "page": 1
+    },
+    {
+      "text": "9:05",
+      "confidence": 96.115997,
+      "box": {
+        "x": 246,
+        "y": 158,
+        "width": 48,
+        "height": 18
+      },
+      "start": 1341,
+      "end": 1345,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "AM",
+      "confidence": 94.480537,
+      "box": {
+        "x": 301,
+        "y": 158,
+        "width": 37,
+        "height": 18
+      },
+      "start": 1346,
+      "end": 1348,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "FROM:",
+      "confidence": 91.908081,
+      "box": {
+        "x": 356,
+        "y": 158,
+        "width": 80,
+        "height": 18
+      },
+      "start": 1349,
+      "end": 1354,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "XXXXXXXXXX",
+      "confidence": 90.729233,
+      "box": {
+        "x": 446,
+        "y": 158,
+        "width": 172,
+        "height": 18
+      },
+      "start": 1355,
+      "end": 1365,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "TO:",
+      "confidence": 96.736107,
+      "box": {
+        "x": 633,
+        "y": 158,
+        "width": 40,
+        "height": 18
+      },
+      "start": 1366,
+      "end": 1369,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "PA",
+      "confidence": 50.239605,
+      "box": {
+        "x": 685,
+        "y": 158,
+        "width": 30,
+        "height": 18
+      },
+      "start": 1370,
+      "end": 1372,
+      "needsReview": true,
+      "page": 2
+    },
+    {
+      "text": "DEPT",
+      "confidence": 50.239605,
+      "box": {
+        "x": 723,
+        "y": 158,
+        "width": 67,
+        "height": 18
+      },
+      "start": 1373,
+      "end": 1377,
+      "needsReview": true,
+      "page": 2
+    },
+    {
+      "text": "P.003/003",
+      "confidence": 91.888412,
+      "box": {
+        "x": 807,
+        "y": 157,
+        "width": 112,
+        "height": 19
+      },
+      "start": 1378,
+      "end": 1387,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "PHARMACY",
+      "confidence": 95.410553,
+      "box": {
+        "x": 185,
+        "y": 198,
+        "width": 145,
+        "height": 18
+      },
+      "start": 1395,
+      "end": 1403,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 94.365242,
+      "box": {
+        "x": 339,
+        "y": 197,
+        "width": 102,
+        "height": 24
+      },
+      "start": 1404,
+      "end": 1415,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "MED",
+      "confidence": 96.661148,
+      "box": {
+        "x": 452,
+        "y": 198,
+        "width": 55,
+        "height": 18
+      },
+      "start": 1416,
+      "end": 1419,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "LIST",
+      "confidence": 96.119347,
+      "box": {
+        "x": 517,
+        "y": 198,
+        "width": 52,
+        "height": 18
+      },
+      "start": 1420,
+      "end": 1424,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Patient:",
+      "confidence": 96.204269,
+      "box": {
+        "x": 102,
+        "y": 237,
+        "width": 84,
+        "height": 19
+      },
+      "start": 1425,
+      "end": 1433,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "(fictional)",
+      "confidence": 96.447693,
+      "box": {
+        "x": 326,
+        "y": 237,
+        "width": 102,
+        "height": 24
+      },
+      "start": 1448,
+      "end": 1459,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Drug",
+      "confidence": 96.054817,
+      "box": {
+        "x": 102,
+        "y": 278,
+        "width": 53,
+        "height": 23
+      },
+      "start": 1460,
+      "end": 1464,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.362419,
+      "box": {
+        "x": 166,
+        "y": 277,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1465,
+      "end": 1466,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Dose",
+      "confidence": 95.502441,
+      "box": {
+        "x": 180,
+        "y": 278,
+        "width": 57,
+        "height": 18
+      },
+      "start": 1467,
+      "end": 1471,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.269569,
+      "box": {
+        "x": 248,
+        "y": 277,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1472,
+      "end": 1473,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Route",
+      "confidence": 96.617615,
+      "box": {
+        "x": 262,
+        "y": 278,
+        "width": 66,
+        "height": 18
+      },
+      "start": 1474,
+      "end": 1479,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.640686,
+      "box": {
+        "x": 338,
+        "y": 277,
+        "width": 3,
+        "height": 25
+      },
+      "start": 1480,
+      "end": 1481,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Freq",
+      "confidence": 95.170639,
+      "box": {
+        "x": 352,
+        "y": 278,
+        "width": 50,
+        "height": 23
+      },
+      "start": 1482,
+      "end": 1486,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 95.170639,
+      "box": {
+        "x": 413,
+        "y": 277,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1487,
+      "end": 1488,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Start",
+      "confidence": 95.244865,
+      "box": {
+        "x": 426,
+        "y": 278,
+        "width": 53,
+        "height": 18
+      },
+      "start": 1489,
+      "end": 1494,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 95.244865,
+      "box": {
+        "x": 489,
+        "y": 277,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1495,
+      "end": 1496,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Status",
+      "confidence": 96.468109,
+      "box": {
+        "x": 502,
+        "y": 278,
+        "width": 72,
+        "height": 18
+      },
+      "start": 1497,
+      "end": 1503,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "ezetimibe",
+      "confidence": 92.129723,
+      "box": {
+        "x": 101,
+        "y": 317,
+        "width": 109,
+        "height": 19
+      },
+      "start": 1504,
+      "end": 1513,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 95.025154,
+      "box": {
+        "x": 221,
+        "y": 317,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1514,
+      "end": 1515,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "10",
+      "confidence": 96.663834,
+      "box": {
+        "x": 234,
+        "y": 318,
+        "width": 26,
+        "height": 18
+      },
+      "start": 1516,
+      "end": 1518,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "mg",
+      "confidence": 93.663406,
+      "box": {
+        "x": 270,
+        "y": 322,
+        "width": 33,
+        "height": 19
+      },
+      "start": 1519,
+      "end": 1521,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 93.663406,
+      "box": {
+        "x": 314,
+        "y": 317,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1522,
+      "end": 1523,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "PO",
+      "confidence": 96.788025,
+      "box": {
+        "x": 328,
+        "y": 318,
+        "width": 34,
+        "height": 18
+      },
+      "start": 1524,
+      "end": 1526,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.472542,
+      "box": {
+        "x": 373,
+        "y": 317,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1527,
+      "end": 1528,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "daily",
+      "confidence": 95.165047,
+      "box": {
+        "x": 386,
+        "y": 317,
+        "width": 52,
+        "height": 24
+      },
+      "start": 1529,
+      "end": 1534,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.758896,
+      "box": {
+        "x": 448,
+        "y": 317,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1535,
+      "end": 1536,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.924149,
+      "box": {
+        "x": 599,
+        "y": 317,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1546,
+      "end": 1547,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "current",
+      "confidence": 96.982735,
+      "box": {
+        "x": 612,
+        "y": 319,
+        "width": 79,
+        "height": 17
+      },
+      "start": 1548,
+      "end": 1555,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "metoprolol",
+      "confidence": 96.116913,
+      "box": {
+        "x": 102,
+        "y": 357,
+        "width": 118,
+        "height": 24
+      },
+      "start": 1556,
+      "end": 1566,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.378181,
+      "box": {
+        "x": 231,
+        "y": 357,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1567,
+      "end": 1568,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "50",
+      "confidence": 96.567947,
+      "box": {
+        "x": 244,
+        "y": 358,
+        "width": 27,
+        "height": 18
+      },
+      "start": 1569,
+      "end": 1571,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "mg",
+      "confidence": 94.443542,
+      "box": {
+        "x": 280,
+        "y": 362,
+        "width": 33,
+        "height": 19
+      },
+      "start": 1572,
+      "end": 1574,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 94.443542,
+      "box": {
+        "x": 324,
+        "y": 357,
+        "width": 3,
+        "height": 25
+      },
+      "start": 1575,
+      "end": 1576,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "PO",
+      "confidence": 96.169708,
+      "box": {
+        "x": 338,
+        "y": 358,
+        "width": 34,
+        "height": 18
+      },
+      "start": 1577,
+      "end": 1579,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.210213,
+      "box": {
+        "x": 383,
+        "y": 357,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1580,
+      "end": 1581,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "daily",
+      "confidence": 96.336151,
+      "box": {
+        "x": 396,
+        "y": 357,
+        "width": 52,
+        "height": 24
+      },
+      "start": 1582,
+      "end": 1587,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.609406,
+      "box": {
+        "x": 458,
+        "y": 357,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1588,
+      "end": 1589,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.702324,
+      "box": {
+        "x": 609,
+        "y": 357,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1599,
+      "end": 1600,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "current",
+      "confidence": 96.865646,
+      "box": {
+        "x": 622,
+        "y": 359,
+        "width": 80,
+        "height": 17
+      },
+      "start": 1601,
+      "end": 1608,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "aspirin",
+      "confidence": 95.72924,
+      "box": {
+        "x": 101,
+        "y": 397,
+        "width": 74,
+        "height": 24
+      },
+      "start": 1609,
+      "end": 1616,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 95.495438,
+      "box": {
+        "x": 186,
+        "y": 397,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1617,
+      "end": 1618,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "81",
+      "confidence": 95.857368,
+      "box": {
+        "x": 199,
+        "y": 398,
+        "width": 27,
+        "height": 18
+      },
+      "start": 1619,
+      "end": 1621,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "mg",
+      "confidence": 93.110641,
+      "box": {
+        "x": 236,
+        "y": 402,
+        "width": 32,
+        "height": 19
+      },
+      "start": 1622,
+      "end": 1624,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 93.110641,
+      "box": {
+        "x": 280,
+        "y": 397,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1625,
+      "end": 1626,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "PO",
+      "confidence": 95.689781,
+      "box": {
+        "x": 293,
+        "y": 398,
+        "width": 35,
+        "height": 18
+      },
+      "start": 1627,
+      "end": 1629,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 95.689781,
+      "box": {
+        "x": 338,
+        "y": 397,
+        "width": 3,
+        "height": 25
+      },
+      "start": 1630,
+      "end": 1631,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "daily",
+      "confidence": 95.804794,
+      "box": {
+        "x": 351,
+        "y": 397,
+        "width": 52,
+        "height": 24
+      },
+      "start": 1632,
+      "end": 1637,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.911461,
+      "box": {
+        "x": 413,
+        "y": 397,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1638,
+      "end": 1639,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.846184,
+      "box": {
+        "x": 564,
+        "y": 397,
+        "width": 3,
+        "height": 25
+      },
+      "start": 1649,
+      "end": 1650,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "current",
+      "confidence": 96.91748,
+      "box": {
+        "x": 577,
+        "y": 399,
+        "width": 80,
+        "height": 17
+      },
+      "start": 1651,
+      "end": 1658,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "evolocumab",
+      "confidence": 91.712601,
+      "box": {
+        "x": 101,
+        "y": 437,
+        "width": 138,
+        "height": 19
+      },
+      "start": 1659,
+      "end": 1669,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 95.273018,
+      "box": {
+        "x": 250,
+        "y": 437,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1670,
+      "end": 1671,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "420",
+      "confidence": 96.200424,
+      "box": {
+        "x": 262,
+        "y": 438,
+        "width": 42,
+        "height": 18
+      },
+      "start": 1672,
+      "end": 1675,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "mg",
+      "confidence": 94.722,
+      "box": {
+        "x": 314,
+        "y": 442,
+        "width": 32,
+        "height": 19
+      },
+      "start": 1676,
+      "end": 1678,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 94.722,
+      "box": {
+        "x": 358,
+        "y": 437,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1679,
+      "end": 1680,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "SC",
+      "confidence": 90.12896,
+      "box": {
+        "x": 371,
+        "y": 438,
+        "width": 33,
+        "height": 18
+      },
+      "start": 1681,
+      "end": 1683,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 90.12896,
+      "box": {
+        "x": 415,
+        "y": 437,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1684,
+      "end": 1685,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "monthly",
+      "confidence": 96.827164,
+      "box": {
+        "x": 428,
+        "y": 437,
+        "width": 89,
+        "height": 24
+      },
+      "start": 1686,
+      "end": 1693,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.880737,
+      "box": {
+        "x": 527,
+        "y": 437,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1694,
+      "end": 1695,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "pending",
+      "confidence": 95.888824,
+      "box": {
+        "x": 541,
+        "y": 437,
+        "width": 89,
+        "height": 24
+      },
+      "start": 1696,
+      "end": 1703,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "|",
+      "confidence": 96.716728,
+      "box": {
+        "x": 641,
+        "y": 437,
+        "width": 2,
+        "height": 25
+      },
+      "start": 1704,
+      "end": 1705,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "requested",
+      "confidence": 96.764038,
+      "box": {
+        "x": 654,
+        "y": 437,
+        "width": 113,
+        "height": 24
+      },
+      "start": 1706,
+      "end": 1715,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "Handwritten",
+      "confidence": 96.061119,
+      "box": {
+        "x": 102,
+        "y": 477,
+        "width": 135,
+        "height": 19
+      },
+      "start": 1716,
+      "end": 1727,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "note:",
+      "confidence": 96.532799,
+      "box": {
+        "x": 248,
+        "y": 479,
+        "width": 53,
+        "height": 17
+      },
+      "start": 1728,
+      "end": 1733,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "patient",
+      "confidence": 96.452629,
+      "box": {
+        "x": 313,
+        "y": 477,
+        "width": 76,
+        "height": 24
+      },
+      "start": 1734,
+      "end": 1741,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "asked",
+      "confidence": 96.770271,
+      "box": {
+        "x": 397,
+        "y": 477,
+        "width": 67,
+        "height": 19
+      },
+      "start": 1742,
+      "end": 1747,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "about",
+      "confidence": 96.10144,
+      "box": {
+        "x": 474,
+        "y": 477,
+        "width": 64,
+        "height": 19
+      },
+      "start": 1748,
+      "end": 1753,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "monthly.",
+      "confidence": 96.744713,
+      "box": {
+        "x": 547,
+        "y": 477,
+        "width": 92,
+        "height": 24
+      },
+      "start": 1754,
+      "end": 1762,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "(fictional).",
+      "confidence": 95.829788,
+      "box": {
+        "x": 353,
+        "y": 517,
+        "width": 109,
+        "height": 24
+      },
+      "start": 1785,
+      "end": 1797,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "3",
+      "confidence": 95.829788,
+      "box": {
+        "x": 473,
+        "y": 518,
+        "width": 12,
+        "height": 18
+      },
+      "start": 1798,
+      "end": 1799,
+      "needsReview": false,
+      "page": 2
+    },
+    {
+      "text": "pages.",
+      "confidence": 96.227608,
+      "box": {
+        "x": 495,
+        "y": 522,
+        "width": 74,
+        "height": 19
+      },
+      "start": 1800,
+      "end": 1806,
+      "needsReview": false,
+      "page": 2
+    }
+  ],
+  "offsetBasis": "redacted Unicode code points",
+  "ocr": {
+    "text": "05/18/2026 9:05 AM FROM: XXXXXXXXXX TO: PA DEPT P.001/003\nCOVER KEEL CARDIOLOGY (fictional)\nTo: PA Desk, Westmarrow Plan (fictional)\nFrom: Keel Cardiology (fictional)\nRe: evolocumab, Samir Holt (fictional)\nMember ID: XXXXXXXX Pages: 3\nRequest date: 05/18/2026\n---- PAFORM ----\nPatient: Samir Holt (fictional) Age: 59 years\nPrescriber: Dr. Lila Cho (fictional)\nClinic: Keel Cardiology (fictional)\nPhone: XXXXXXXXXX Fax: XXXXXXXXXX\nDrug: evolocumab\nForm sig: 140 mg SC every 2 weeks\nIndication: established atherosclerotic\ncardiovascular disease, prior myocardial\ninfarction, reason for this request\n[x] New start\nPharmacy: Drift Pharmacy (fictional)\n05/18/2026 9:05 AM FROM: XXXXXXXXXX TO: PA DEPT P.002/003\nKEEL CARDIOLOGY (fictional) EHR NOTE\nPatient: Samir Holt (fictional) MRN: XXXXXXXX\nVisit: 05/18/2026 Dr. Lila Cho (fictional)\nS: Follow-up after myocardial infarction.\nDenies current chest pain.\nO: Lungs clear. See labs below.\nA: Established atherosclerotic cardiovascular\ndisease. This visit's request is for that.\nP: Evolocumab ordered. Nurse note: pen teaching\nbooked, sig taken from the PA form.\n---- LAB REPORT ----\nTest | Result | Flag | Range | Collected\nLDL-C | 98 mg/dL | H | <100 | 06/02/2026\nLDL-C | 164 mg/dL | H | <100 | 11/20/2024\nComment: 06/02/2026 draw is after the request.\nThe 11/20/2024 draw is an old baseline.\n05/18/2026 9:05 AM FROM: XXXXXXXXXX TO: PA DEPT P.003/003\nDRIFT PHARMACY (fictional) MED LIST\nPatient: Samir Holt (fictional)\nDrug | Dose | Route | Freq | Start | Status\nezetimibe | 10 mg | PO | daily | 02/02/2025 | current\nmetoprolol | 50 mg | PO | daily | 11/20/2024 | current\naspirin | 81 mg | PO | daily | 11/20/2024 | current\nevolocumab | 420 mg | SC | monthly | pending | requested\nHandwritten note: patient asked about monthly.\nEnd. Keel Cardiology (fictional). 3 pages.\n",
+    "words": [
+      {
+        "text": "05/18/2026",
+        "confidence": 95.953056,
+        "box": {
+          "x": 101,
+          "y": 157,
+          "width": 128,
+          "height": 19
+        },
+        "start": 0,
+        "end": 10,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "9:05",
+        "confidence": 96.521011,
+        "box": {
+          "x": 246,
+          "y": 158,
+          "width": 48,
+          "height": 18
+        },
+        "start": 11,
+        "end": 15,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "AM",
+        "confidence": 93.717529,
+        "box": {
+          "x": 301,
+          "y": 158,
+          "width": 37,
+          "height": 18
+        },
+        "start": 16,
+        "end": 18,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "FROM:",
+        "confidence": 93.289085,
+        "box": {
+          "x": 356,
+          "y": 158,
+          "width": 80,
+          "height": 18
+        },
+        "start": 19,
+        "end": 24,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "XXXXXXXXXX",
+        "confidence": 91.690567,
+        "box": {
+          "x": 446,
+          "y": 158,
+          "width": 172,
+          "height": 18
+        },
+        "start": 25,
+        "end": 35,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "TO:",
+        "confidence": 96.384674,
+        "box": {
+          "x": 633,
+          "y": 158,
+          "width": 40,
+          "height": 18
+        },
+        "start": 36,
+        "end": 39,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "PA",
+        "confidence": 1.300262,
+        "box": {
+          "x": 685,
+          "y": 158,
+          "width": 30,
+          "height": 18
+        },
+        "start": 40,
+        "end": 42,
+        "needsReview": true,
+        "page": 0
+      },
+      {
+        "text": "DEPT",
+        "confidence": 1.300262,
+        "box": {
+          "x": 723,
+          "y": 158,
+          "width": 67,
+          "height": 18
+        },
+        "start": 43,
+        "end": 47,
+        "needsReview": true,
+        "page": 0
+      },
+      {
+        "text": "P.001/003",
+        "confidence": 91.61763,
+        "box": {
+          "x": 807,
+          "y": 157,
+          "width": 112,
+          "height": 19
+        },
+        "start": 48,
+        "end": 57,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "COVER",
+        "confidence": 96.127625,
+        "box": {
+          "x": 101,
+          "y": 198,
+          "width": 90,
+          "height": 18
+        },
+        "start": 58,
+        "end": 63,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "KEEL",
+        "confidence": 96.419624,
+        "box": {
+          "x": 202,
+          "y": 198,
+          "width": 63,
+          "height": 18
+        },
+        "start": 64,
+        "end": 68,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "CARDIOLOGY",
+        "confidence": 95.347458,
+        "box": {
+          "x": 274,
+          "y": 198,
+          "width": 171,
+          "height": 18
+        },
+        "start": 69,
+        "end": 79,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 94.134155,
+        "box": {
+          "x": 454,
+          "y": 197,
+          "width": 102,
+          "height": 24
+        },
+        "start": 80,
+        "end": 91,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "To:",
+        "confidence": 96.796555,
+        "box": {
+          "x": 101,
+          "y": 238,
+          "width": 31,
+          "height": 18
+        },
+        "start": 92,
+        "end": 95,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "PA",
+        "confidence": 96.587173,
+        "box": {
+          "x": 144,
+          "y": 238,
+          "width": 30,
+          "height": 18
+        },
+        "start": 96,
+        "end": 98,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Desk,",
+        "confidence": 93.115105,
+        "box": {
+          "x": 183,
+          "y": 237,
+          "width": 62,
+          "height": 22
+        },
+        "start": 99,
+        "end": 104,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Westmarrow",
+        "confidence": 90.933083,
+        "box": {
+          "x": 254,
+          "y": 238,
+          "width": 145,
+          "height": 18
+        },
+        "start": 105,
+        "end": 115,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Plan",
+        "confidence": 95.842171,
+        "box": {
+          "x": 409,
+          "y": 237,
+          "width": 48,
+          "height": 19
+        },
+        "start": 116,
+        "end": 120,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.357788,
+        "box": {
+          "x": 468,
+          "y": 237,
+          "width": 102,
+          "height": 24
+        },
+        "start": 121,
+        "end": 132,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "From:",
+        "confidence": 96.127213,
+        "box": {
+          "x": 102,
+          "y": 278,
+          "width": 64,
+          "height": 18
+        },
+        "start": 133,
+        "end": 138,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Keel",
+        "confidence": 96.911026,
+        "box": {
+          "x": 177,
+          "y": 277,
+          "width": 48,
+          "height": 19
+        },
+        "start": 139,
+        "end": 143,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Cardiology",
+        "confidence": 95.618095,
+        "box": {
+          "x": 236,
+          "y": 277,
+          "width": 122,
+          "height": 24
+        },
+        "start": 144,
+        "end": 154,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.335236,
+        "box": {
+          "x": 367,
+          "y": 277,
+          "width": 103,
+          "height": 24
+        },
+        "start": 155,
+        "end": 166,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Re:",
+        "confidence": 92.963036,
+        "box": {
+          "x": 102,
+          "y": 318,
+          "width": 36,
+          "height": 18
+        },
+        "start": 167,
+        "end": 170,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "evolocumab,",
+        "confidence": 92.173103,
+        "box": {
+          "x": 149,
+          "y": 317,
+          "width": 144,
+          "height": 22
+        },
+        "start": 171,
+        "end": 182,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Samir",
+        "confidence": 96.80217,
+        "box": {
+          "x": 304,
+          "y": 317,
+          "width": 66,
+          "height": 19
+        },
+        "start": 183,
+        "end": 188,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Holt",
+        "confidence": 96.753662,
+        "box": {
+          "x": 380,
+          "y": 317,
+          "width": 44,
+          "height": 19
+        },
+        "start": 189,
+        "end": 193,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.717484,
+        "box": {
+          "x": 432,
+          "y": 317,
+          "width": 103,
+          "height": 24
+        },
+        "start": 194,
+        "end": 205,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Member",
+        "confidence": 94.559731,
+        "box": {
+          "x": 102,
+          "y": 357,
+          "width": 93,
+          "height": 19
+        },
+        "start": 206,
+        "end": 212,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "ID:",
+        "confidence": 93.223358,
+        "box": {
+          "x": 205,
+          "y": 358,
+          "width": 29,
+          "height": 18
+        },
+        "start": 213,
+        "end": 216,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "XXXXXXXX",
+        "confidence": 91.434586,
+        "box": {
+          "x": 244,
+          "y": 358,
+          "width": 137,
+          "height": 18
+        },
+        "start": 217,
+        "end": 225,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Pages:",
+        "confidence": 96.519745,
+        "box": {
+          "x": 391,
+          "y": 358,
+          "width": 77,
+          "height": 23
+        },
+        "start": 226,
+        "end": 232,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "3",
+        "confidence": 96.309044,
+        "box": {
+          "x": 478,
+          "y": 358,
+          "width": 13,
+          "height": 18
+        },
+        "start": 233,
+        "end": 234,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Request",
+        "confidence": 95.131989,
+        "box": {
+          "x": 102,
+          "y": 398,
+          "width": 95,
+          "height": 23
+        },
+        "start": 235,
+        "end": 242,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "date:",
+        "confidence": 96.858665,
+        "box": {
+          "x": 205,
+          "y": 397,
+          "width": 55,
+          "height": 19
+        },
+        "start": 243,
+        "end": 248,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "05/18/2026",
+        "confidence": 96.297562,
+        "box": {
+          "x": 270,
+          "y": 397,
+          "width": 128,
+          "height": 19
+        },
+        "start": 249,
+        "end": 259,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "----",
+        "confidence": 73.372955,
+        "box": {
+          "x": 101,
+          "y": 448,
+          "width": 33,
+          "height": 2
+        },
+        "start": 260,
+        "end": 264,
+        "needsReview": true,
+        "page": 0
+      },
+      {
+        "text": "PAFORM",
+        "confidence": 91.993065,
+        "box": {
+          "x": 144,
+          "y": 438,
+          "width": 111,
+          "height": 18
+        },
+        "start": 265,
+        "end": 271,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "----",
+        "confidence": 60.442513,
+        "box": {
+          "x": 265,
+          "y": 448,
+          "width": 33,
+          "height": 2
+        },
+        "start": 272,
+        "end": 276,
+        "needsReview": true,
+        "page": 0
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.519371,
+        "box": {
+          "x": 102,
+          "y": 477,
+          "width": 84,
+          "height": 19
+        },
+        "start": 277,
+        "end": 285,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Samir",
+        "confidence": 96.519371,
+        "box": {
+          "x": 197,
+          "y": 477,
+          "width": 66,
+          "height": 19
+        },
+        "start": 286,
+        "end": 291,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Holt",
+        "confidence": 95.544189,
+        "box": {
+          "x": 273,
+          "y": 477,
+          "width": 44,
+          "height": 19
+        },
+        "start": 292,
+        "end": 296,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.544189,
+        "box": {
+          "x": 326,
+          "y": 477,
+          "width": 102,
+          "height": 24
+        },
+        "start": 297,
+        "end": 308,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Age:",
+        "confidence": 96.806671,
+        "box": {
+          "x": 435,
+          "y": 478,
+          "width": 51,
+          "height": 23
+        },
+        "start": 309,
+        "end": 313,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "59",
+        "confidence": 96.950531,
+        "box": {
+          "x": 497,
+          "y": 478,
+          "width": 27,
+          "height": 18
+        },
+        "start": 314,
+        "end": 316,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "years",
+        "confidence": 96.36129,
+        "box": {
+          "x": 532,
+          "y": 482,
+          "width": 63,
+          "height": 19
+        },
+        "start": 317,
+        "end": 322,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Prescriber:",
+        "confidence": 92.67469,
+        "box": {
+          "x": 102,
+          "y": 517,
+          "width": 121,
+          "height": 19
+        },
+        "start": 323,
+        "end": 334,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Dr.",
+        "confidence": 95.506187,
+        "box": {
+          "x": 235,
+          "y": 518,
+          "width": 29,
+          "height": 18
+        },
+        "start": 335,
+        "end": 338,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Lila",
+        "confidence": 95.506187,
+        "box": {
+          "x": 275,
+          "y": 517,
+          "width": 39,
+          "height": 19
+        },
+        "start": 339,
+        "end": 343,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Cho",
+        "confidence": 96.39753,
+        "box": {
+          "x": 322,
+          "y": 517,
+          "width": 46,
+          "height": 19
+        },
+        "start": 344,
+        "end": 347,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.39753,
+        "box": {
+          "x": 378,
+          "y": 517,
+          "width": 102,
+          "height": 24
+        },
+        "start": 348,
+        "end": 359,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Clinic:",
+        "confidence": 96.751221,
+        "box": {
+          "x": 101,
+          "y": 557,
+          "width": 67,
+          "height": 19
+        },
+        "start": 360,
+        "end": 367,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Keel",
+        "confidence": 95.881348,
+        "box": {
+          "x": 180,
+          "y": 557,
+          "width": 48,
+          "height": 19
+        },
+        "start": 368,
+        "end": 372,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Cardiology",
+        "confidence": 96.278549,
+        "box": {
+          "x": 239,
+          "y": 557,
+          "width": 122,
+          "height": 24
+        },
+        "start": 373,
+        "end": 383,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 95.680191,
+        "box": {
+          "x": 370,
+          "y": 557,
+          "width": 103,
+          "height": 24
+        },
+        "start": 384,
+        "end": 395,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Phone:",
+        "confidence": 92.331528,
+        "box": {
+          "x": 102,
+          "y": 597,
+          "width": 78,
+          "height": 19
+        },
+        "start": 396,
+        "end": 402,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "XXXXXXXXXX",
+        "confidence": 87.930588,
+        "box": {
+          "x": 191,
+          "y": 598,
+          "width": 171,
+          "height": 18
+        },
+        "start": 403,
+        "end": 413,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Fax:",
+        "confidence": 93.080658,
+        "box": {
+          "x": 372,
+          "y": 598,
+          "width": 47,
+          "height": 18
+        },
+        "start": 414,
+        "end": 418,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "XXXXXXXXXX",
+        "confidence": 90.351044,
+        "box": {
+          "x": 429,
+          "y": 598,
+          "width": 172,
+          "height": 18
+        },
+        "start": 419,
+        "end": 429,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Drug:",
+        "confidence": 93.223045,
+        "box": {
+          "x": 102,
+          "y": 638,
+          "width": 59,
+          "height": 23
+        },
+        "start": 430,
+        "end": 435,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "evolocumab",
+        "confidence": 91.660889,
+        "box": {
+          "x": 172,
+          "y": 637,
+          "width": 138,
+          "height": 19
+        },
+        "start": 436,
+        "end": 446,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Form",
+        "confidence": 96.225456,
+        "box": {
+          "x": 102,
+          "y": 678,
+          "width": 57,
+          "height": 18
+        },
+        "start": 447,
+        "end": 451,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "sig:",
+        "confidence": 96.610802,
+        "box": {
+          "x": 169,
+          "y": 677,
+          "width": 37,
+          "height": 24
+        },
+        "start": 452,
+        "end": 456,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "140",
+        "confidence": 96.828659,
+        "box": {
+          "x": 217,
+          "y": 678,
+          "width": 41,
+          "height": 18
+        },
+        "start": 457,
+        "end": 460,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "mg",
+        "confidence": 96.299103,
+        "box": {
+          "x": 268,
+          "y": 682,
+          "width": 33,
+          "height": 19
+        },
+        "start": 461,
+        "end": 463,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "SC",
+        "confidence": 96.513382,
+        "box": {
+          "x": 311,
+          "y": 678,
+          "width": 33,
+          "height": 18
+        },
+        "start": 464,
+        "end": 466,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "every",
+        "confidence": 96.559387,
+        "box": {
+          "x": 354,
+          "y": 682,
+          "width": 62,
+          "height": 19
+        },
+        "start": 467,
+        "end": 472,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "2",
+        "confidence": 96.50676,
+        "box": {
+          "x": 425,
+          "y": 678,
+          "width": 12,
+          "height": 18
+        },
+        "start": 473,
+        "end": 474,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "weeks",
+        "confidence": 95.091187,
+        "box": {
+          "x": 445,
+          "y": 677,
+          "width": 73,
+          "height": 19
+        },
+        "start": 475,
+        "end": 480,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Indication:",
+        "confidence": 95.712799,
+        "box": {
+          "x": 102,
+          "y": 717,
+          "width": 114,
+          "height": 19
+        },
+        "start": 481,
+        "end": 492,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "established",
+        "confidence": 96.549698,
+        "box": {
+          "x": 227,
+          "y": 717,
+          "width": 129,
+          "height": 19
+        },
+        "start": 493,
+        "end": 504,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "atherosclerotic",
+        "confidence": 96.879784,
+        "box": {
+          "x": 366,
+          "y": 717,
+          "width": 167,
+          "height": 19
+        },
+        "start": 505,
+        "end": 520,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "cardiovascular",
+        "confidence": 96.304756,
+        "box": {
+          "x": 101,
+          "y": 757,
+          "width": 166,
+          "height": 19
+        },
+        "start": 521,
+        "end": 535,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "disease,",
+        "confidence": 96.552483,
+        "box": {
+          "x": 276,
+          "y": 757,
+          "width": 93,
+          "height": 22
+        },
+        "start": 536,
+        "end": 544,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "prior",
+        "confidence": 96.781281,
+        "box": {
+          "x": 381,
+          "y": 757,
+          "width": 50,
+          "height": 24
+        },
+        "start": 545,
+        "end": 550,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "myocardial",
+        "confidence": 96.609055,
+        "box": {
+          "x": 440,
+          "y": 757,
+          "width": 122,
+          "height": 24
+        },
+        "start": 551,
+        "end": 561,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "infarction,",
+        "confidence": 96.880318,
+        "box": {
+          "x": 102,
+          "y": 797,
+          "width": 108,
+          "height": 22
+        },
+        "start": 562,
+        "end": 573,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "reason",
+        "confidence": 95.691246,
+        "box": {
+          "x": 222,
+          "y": 802,
+          "width": 76,
+          "height": 14
+        },
+        "start": 574,
+        "end": 580,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "for",
+        "confidence": 95.691246,
+        "box": {
+          "x": 307,
+          "y": 797,
+          "width": 30,
+          "height": 19
+        },
+        "start": 581,
+        "end": 584,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "this",
+        "confidence": 96.221436,
+        "box": {
+          "x": 345,
+          "y": 797,
+          "width": 39,
+          "height": 19
+        },
+        "start": 585,
+        "end": 589,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "request",
+        "confidence": 96.798157,
+        "box": {
+          "x": 394,
+          "y": 799,
+          "width": 84,
+          "height": 22
+        },
+        "start": 590,
+        "end": 597,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "[x]",
+        "confidence": 72.720581,
+        "box": {
+          "x": 102,
+          "y": 837,
+          "width": 24,
+          "height": 24
+        },
+        "start": 598,
+        "end": 601,
+        "needsReview": true,
+        "page": 0
+      },
+      {
+        "text": "New",
+        "confidence": 96.408829,
+        "box": {
+          "x": 137,
+          "y": 838,
+          "width": 50,
+          "height": 18
+        },
+        "start": 602,
+        "end": 605,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "start",
+        "confidence": 96.408829,
+        "box": {
+          "x": 195,
+          "y": 839,
+          "width": 49,
+          "height": 17
+        },
+        "start": 606,
+        "end": 611,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Pharmacy:",
+        "confidence": 96.778809,
+        "box": {
+          "x": 102,
+          "y": 877,
+          "width": 120,
+          "height": 24
+        },
+        "start": 612,
+        "end": 621,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Drift",
+        "confidence": 96.921288,
+        "box": {
+          "x": 234,
+          "y": 877,
+          "width": 45,
+          "height": 19
+        },
+        "start": 622,
+        "end": 627,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "Pharmacy",
+        "confidence": 96.312592,
+        "box": {
+          "x": 288,
+          "y": 877,
+          "width": 115,
+          "height": 24
+        },
+        "start": 628,
+        "end": 636,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.225052,
+        "box": {
+          "x": 412,
+          "y": 877,
+          "width": 103,
+          "height": 24
+        },
+        "start": 637,
+        "end": 648,
+        "needsReview": false,
+        "page": 0
+      },
+      {
+        "text": "05/18/2026",
+        "confidence": 96.123093,
+        "box": {
+          "x": 101,
+          "y": 157,
+          "width": 128,
+          "height": 19
+        },
+        "start": 649,
+        "end": 659,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "9:05",
+        "confidence": 96.520668,
+        "box": {
+          "x": 246,
+          "y": 158,
+          "width": 48,
+          "height": 18
+        },
+        "start": 660,
+        "end": 664,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "AM",
+        "confidence": 93.974861,
+        "box": {
+          "x": 301,
+          "y": 158,
+          "width": 37,
+          "height": 18
+        },
+        "start": 665,
+        "end": 667,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "FROM:",
+        "confidence": 93.287018,
+        "box": {
+          "x": 356,
+          "y": 158,
+          "width": 80,
+          "height": 18
+        },
+        "start": 668,
+        "end": 673,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "XXXXXXXXXX",
+        "confidence": 91.517456,
+        "box": {
+          "x": 446,
+          "y": 158,
+          "width": 172,
+          "height": 18
+        },
+        "start": 674,
+        "end": 684,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "TO:",
+        "confidence": 96.705605,
+        "box": {
+          "x": 633,
+          "y": 158,
+          "width": 40,
+          "height": 18
+        },
+        "start": 685,
+        "end": 688,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "PA",
+        "confidence": 2.607277,
+        "box": {
+          "x": 685,
+          "y": 158,
+          "width": 30,
+          "height": 18
+        },
+        "start": 689,
+        "end": 691,
+        "needsReview": true,
+        "page": 1
+      },
+      {
+        "text": "DEPT",
+        "confidence": 2.607277,
+        "box": {
+          "x": 723,
+          "y": 158,
+          "width": 67,
+          "height": 18
+        },
+        "start": 692,
+        "end": 696,
+        "needsReview": true,
+        "page": 1
+      },
+      {
+        "text": "P.002/003",
+        "confidence": 90.375465,
+        "box": {
+          "x": 807,
+          "y": 157,
+          "width": 112,
+          "height": 19
+        },
+        "start": 697,
+        "end": 706,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "KEEL",
+        "confidence": 96.790184,
+        "box": {
+          "x": 102,
+          "y": 198,
+          "width": 64,
+          "height": 18
+        },
+        "start": 707,
+        "end": 711,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "CARDIOLOGY",
+        "confidence": 96.03479,
+        "box": {
+          "x": 174,
+          "y": 198,
+          "width": 171,
+          "height": 18
+        },
+        "start": 712,
+        "end": 722,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 93.433685,
+        "box": {
+          "x": 354,
+          "y": 197,
+          "width": 103,
+          "height": 24
+        },
+        "start": 723,
+        "end": 734,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "EHR",
+        "confidence": 96.665306,
+        "box": {
+          "x": 468,
+          "y": 198,
+          "width": 51,
+          "height": 18
+        },
+        "start": 735,
+        "end": 738,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "NOTE",
+        "confidence": 95.355133,
+        "box": {
+          "x": 530,
+          "y": 198,
+          "width": 69,
+          "height": 18
+        },
+        "start": 739,
+        "end": 743,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.649544,
+        "box": {
+          "x": 102,
+          "y": 237,
+          "width": 84,
+          "height": 19
+        },
+        "start": 744,
+        "end": 752,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Samir",
+        "confidence": 96.404823,
+        "box": {
+          "x": 197,
+          "y": 237,
+          "width": 66,
+          "height": 19
+        },
+        "start": 753,
+        "end": 758,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Holt",
+        "confidence": 96.09024,
+        "box": {
+          "x": 273,
+          "y": 237,
+          "width": 44,
+          "height": 19
+        },
+        "start": 759,
+        "end": 763,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 93.285431,
+        "box": {
+          "x": 326,
+          "y": 237,
+          "width": 102,
+          "height": 24
+        },
+        "start": 764,
+        "end": 775,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "MRN:",
+        "confidence": 89.899452,
+        "box": {
+          "x": 439,
+          "y": 238,
+          "width": 62,
+          "height": 18
+        },
+        "start": 776,
+        "end": 780,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "XXXXXXXX",
+        "confidence": 90.585861,
+        "box": {
+          "x": 511,
+          "y": 238,
+          "width": 137,
+          "height": 18
+        },
+        "start": 781,
+        "end": 789,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Visit:",
+        "confidence": 95.179977,
+        "box": {
+          "x": 100,
+          "y": 277,
+          "width": 54,
+          "height": 19
+        },
+        "start": 790,
+        "end": 796,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "05/18/2026",
+        "confidence": 95.179977,
+        "box": {
+          "x": 164,
+          "y": 277,
+          "width": 128,
+          "height": 19
+        },
+        "start": 797,
+        "end": 807,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Dr.",
+        "confidence": 90.079178,
+        "box": {
+          "x": 303,
+          "y": 278,
+          "width": 28,
+          "height": 18
+        },
+        "start": 808,
+        "end": 811,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Lila",
+        "confidence": 96.977402,
+        "box": {
+          "x": 343,
+          "y": 277,
+          "width": 38,
+          "height": 19
+        },
+        "start": 812,
+        "end": 816,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Cho",
+        "confidence": 96.386421,
+        "box": {
+          "x": 390,
+          "y": 277,
+          "width": 45,
+          "height": 19
+        },
+        "start": 817,
+        "end": 820,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.386421,
+        "box": {
+          "x": 445,
+          "y": 277,
+          "width": 102,
+          "height": 24
+        },
+        "start": 821,
+        "end": 832,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "S:",
+        "confidence": 90.288918,
+        "box": {
+          "x": 101,
+          "y": 318,
+          "width": 21,
+          "height": 18
+        },
+        "start": 833,
+        "end": 835,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Follow-up",
+        "confidence": 95.210159,
+        "box": {
+          "x": 134,
+          "y": 317,
+          "width": 109,
+          "height": 24
+        },
+        "start": 836,
+        "end": 845,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "after",
+        "confidence": 96.794113,
+        "box": {
+          "x": 253,
+          "y": 317,
+          "width": 50,
+          "height": 19
+        },
+        "start": 846,
+        "end": 851,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "myocardial",
+        "confidence": 96.865005,
+        "box": {
+          "x": 313,
+          "y": 317,
+          "width": 122,
+          "height": 24
+        },
+        "start": 852,
+        "end": 862,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "infarction.",
+        "confidence": 96.606476,
+        "box": {
+          "x": 446,
+          "y": 317,
+          "width": 108,
+          "height": 19
+        },
+        "start": 863,
+        "end": 874,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Denies",
+        "confidence": 96.453148,
+        "box": {
+          "x": 124,
+          "y": 357,
+          "width": 78,
+          "height": 19
+        },
+        "start": 875,
+        "end": 881,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "current",
+        "confidence": 95.842743,
+        "box": {
+          "x": 211,
+          "y": 359,
+          "width": 80,
+          "height": 17
+        },
+        "start": 882,
+        "end": 889,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "chest",
+        "confidence": 96.620148,
+        "box": {
+          "x": 299,
+          "y": 357,
+          "width": 61,
+          "height": 19
+        },
+        "start": 890,
+        "end": 895,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "pain.",
+        "confidence": 96.742325,
+        "box": {
+          "x": 369,
+          "y": 357,
+          "width": 52,
+          "height": 24
+        },
+        "start": 896,
+        "end": 901,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "O:",
+        "confidence": 87.078941,
+        "box": {
+          "x": 101,
+          "y": 398,
+          "width": 24,
+          "height": 18
+        },
+        "start": 902,
+        "end": 904,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Lungs",
+        "confidence": 96.220543,
+        "box": {
+          "x": 137,
+          "y": 398,
+          "width": 68,
+          "height": 23
+        },
+        "start": 905,
+        "end": 910,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "clear.",
+        "confidence": 96.200378,
+        "box": {
+          "x": 214,
+          "y": 397,
+          "width": 59,
+          "height": 19
+        },
+        "start": 911,
+        "end": 917,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "See",
+        "confidence": 96.200378,
+        "box": {
+          "x": 283,
+          "y": 398,
+          "width": 44,
+          "height": 18
+        },
+        "start": 918,
+        "end": 921,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "labs",
+        "confidence": 95.478867,
+        "box": {
+          "x": 337,
+          "y": 397,
+          "width": 45,
+          "height": 19
+        },
+        "start": 922,
+        "end": 926,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "below.",
+        "confidence": 96.283768,
+        "box": {
+          "x": 392,
+          "y": 397,
+          "width": 70,
+          "height": 19
+        },
+        "start": 927,
+        "end": 933,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "A:",
+        "confidence": 95.374138,
+        "box": {
+          "x": 100,
+          "y": 438,
+          "width": 22,
+          "height": 18
+        },
+        "start": 934,
+        "end": 936,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Established",
+        "confidence": 95.491669,
+        "box": {
+          "x": 134,
+          "y": 437,
+          "width": 131,
+          "height": 19
+        },
+        "start": 937,
+        "end": 948,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "atherosclerotic",
+        "confidence": 96.24398,
+        "box": {
+          "x": 275,
+          "y": 437,
+          "width": 167,
+          "height": 19
+        },
+        "start": 949,
+        "end": 964,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "cardiovascular",
+        "confidence": 96.756729,
+        "box": {
+          "x": 451,
+          "y": 437,
+          "width": 166,
+          "height": 19
+        },
+        "start": 965,
+        "end": 979,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "disease.",
+        "confidence": 95.902489,
+        "box": {
+          "x": 123,
+          "y": 477,
+          "width": 93,
+          "height": 19
+        },
+        "start": 980,
+        "end": 988,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "This",
+        "confidence": 93.304527,
+        "box": {
+          "x": 226,
+          "y": 477,
+          "width": 47,
+          "height": 19
+        },
+        "start": 989,
+        "end": 993,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "visit's",
+        "confidence": 91.828537,
+        "box": {
+          "x": 282,
+          "y": 477,
+          "width": 61,
+          "height": 19
+        },
+        "start": 994,
+        "end": 1001,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "request",
+        "confidence": 96.716026,
+        "box": {
+          "x": 353,
+          "y": 479,
+          "width": 85,
+          "height": 22
+        },
+        "start": 1002,
+        "end": 1009,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "is",
+        "confidence": 96.725098,
+        "box": {
+          "x": 447,
+          "y": 477,
+          "width": 16,
+          "height": 19
+        },
+        "start": 1010,
+        "end": 1012,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "for",
+        "confidence": 96.932518,
+        "box": {
+          "x": 472,
+          "y": 477,
+          "width": 29,
+          "height": 19
+        },
+        "start": 1013,
+        "end": 1016,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "that.",
+        "confidence": 96.657761,
+        "box": {
+          "x": 509,
+          "y": 477,
+          "width": 48,
+          "height": 19
+        },
+        "start": 1017,
+        "end": 1022,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "P:",
+        "confidence": 91.441681,
+        "box": {
+          "x": 102,
+          "y": 518,
+          "width": 20,
+          "height": 18
+        },
+        "start": 1023,
+        "end": 1025,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Evolocumab",
+        "confidence": 92.732277,
+        "box": {
+          "x": 134,
+          "y": 517,
+          "width": 140,
+          "height": 19
+        },
+        "start": 1026,
+        "end": 1036,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "ordered.",
+        "confidence": 96.349968,
+        "box": {
+          "x": 283,
+          "y": 517,
+          "width": 94,
+          "height": 19
+        },
+        "start": 1037,
+        "end": 1045,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Nurse",
+        "confidence": 96.886116,
+        "box": {
+          "x": 388,
+          "y": 518,
+          "width": 66,
+          "height": 18
+        },
+        "start": 1046,
+        "end": 1051,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "note:",
+        "confidence": 96.754623,
+        "box": {
+          "x": 464,
+          "y": 519,
+          "width": 54,
+          "height": 17
+        },
+        "start": 1052,
+        "end": 1057,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "pen",
+        "confidence": 96.063255,
+        "box": {
+          "x": 529,
+          "y": 522,
+          "width": 41,
+          "height": 19
+        },
+        "start": 1058,
+        "end": 1061,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "teaching",
+        "confidence": 96.67128,
+        "box": {
+          "x": 579,
+          "y": 517,
+          "width": 96,
+          "height": 24
+        },
+        "start": 1062,
+        "end": 1070,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "booked,",
+        "confidence": 96.893997,
+        "box": {
+          "x": 123,
+          "y": 557,
+          "width": 89,
+          "height": 22
+        },
+        "start": 1071,
+        "end": 1078,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "sig",
+        "confidence": 96.877846,
+        "box": {
+          "x": 222,
+          "y": 557,
+          "width": 31,
+          "height": 24
+        },
+        "start": 1079,
+        "end": 1082,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "taken",
+        "confidence": 96.877846,
+        "box": {
+          "x": 262,
+          "y": 557,
+          "width": 62,
+          "height": 19
+        },
+        "start": 1083,
+        "end": 1088,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "from",
+        "confidence": 96.867867,
+        "box": {
+          "x": 333,
+          "y": 557,
+          "width": 50,
+          "height": 19
+        },
+        "start": 1089,
+        "end": 1093,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "the",
+        "confidence": 96.056114,
+        "box": {
+          "x": 392,
+          "y": 557,
+          "width": 35,
+          "height": 19
+        },
+        "start": 1094,
+        "end": 1097,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "PA",
+        "confidence": 96.056114,
+        "box": {
+          "x": 437,
+          "y": 558,
+          "width": 31,
+          "height": 18
+        },
+        "start": 1098,
+        "end": 1100,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "form.",
+        "confidence": 96.822571,
+        "box": {
+          "x": 474,
+          "y": 557,
+          "width": 57,
+          "height": 19
+        },
+        "start": 1101,
+        "end": 1106,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "----",
+        "confidence": 73.503181,
+        "box": {
+          "x": 101,
+          "y": 608,
+          "width": 33,
+          "height": 2
+        },
+        "start": 1107,
+        "end": 1111,
+        "needsReview": true,
+        "page": 1
+      },
+      {
+        "text": "LAB",
+        "confidence": 96.460602,
+        "box": {
+          "x": 144,
+          "y": 598,
+          "width": 46,
+          "height": 18
+        },
+        "start": 1112,
+        "end": 1115,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "REPORT",
+        "confidence": 92.801857,
+        "box": {
+          "x": 200,
+          "y": 598,
+          "width": 106,
+          "height": 18
+        },
+        "start": 1116,
+        "end": 1122,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "----",
+        "confidence": 86.295013,
+        "box": {
+          "x": 314,
+          "y": 608,
+          "width": 32,
+          "height": 2
+        },
+        "start": 1123,
+        "end": 1127,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Test",
+        "confidence": 95.273811,
+        "box": {
+          "x": 101,
+          "y": 637,
+          "width": 58,
+          "height": 25
+        },
+        "start": 1128,
+        "end": 1132,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 95.273811,
+        "box": {
+          "x": 154,
+          "y": 633,
+          "width": 9,
+          "height": 33
+        },
+        "start": 1133,
+        "end": 1134,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Result",
+        "confidence": 94.669746,
+        "box": {
+          "x": 171,
+          "y": 637,
+          "width": 71,
+          "height": 19
+        },
+        "start": 1135,
+        "end": 1141,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 96.152023,
+        "box": {
+          "x": 252,
+          "y": 637,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1142,
+        "end": 1143,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Flag",
+        "confidence": 96.75827,
+        "box": {
+          "x": 266,
+          "y": 637,
+          "width": 47,
+          "height": 24
+        },
+        "start": 1144,
+        "end": 1148,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 96.724525,
+        "box": {
+          "x": 324,
+          "y": 637,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1149,
+        "end": 1150,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Range",
+        "confidence": 96.713081,
+        "box": {
+          "x": 338,
+          "y": 638,
+          "width": 73,
+          "height": 23
+        },
+        "start": 1151,
+        "end": 1156,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 96.908798,
+        "box": {
+          "x": 422,
+          "y": 637,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1157,
+        "end": 1158,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Collected",
+        "confidence": 96.325928,
+        "box": {
+          "x": 435,
+          "y": 637,
+          "width": 105,
+          "height": 19
+        },
+        "start": 1159,
+        "end": 1168,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "LDL-C",
+        "confidence": 91.645485,
+        "box": {
+          "x": 102,
+          "y": 678,
+          "width": 72,
+          "height": 18
+        },
+        "start": 1169,
+        "end": 1174,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 91.645485,
+        "box": {
+          "x": 185,
+          "y": 677,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1175,
+        "end": 1176,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "98",
+        "confidence": 95.771385,
+        "box": {
+          "x": 198,
+          "y": 678,
+          "width": 26,
+          "height": 18
+        },
+        "start": 1177,
+        "end": 1179,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "mg/dL",
+        "confidence": 95.543541,
+        "box": {
+          "x": 234,
+          "y": 677,
+          "width": 81,
+          "height": 25
+        },
+        "start": 1180,
+        "end": 1185,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 91.627769,
+        "box": {
+          "x": 310,
+          "y": 672,
+          "width": 9,
+          "height": 34
+        },
+        "start": 1186,
+        "end": 1187,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "H",
+        "confidence": 91.627769,
+        "box": {
+          "x": 327,
+          "y": 678,
+          "width": 15,
+          "height": 18
+        },
+        "start": 1188,
+        "end": 1189,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 93.015205,
+        "box": {
+          "x": 353,
+          "y": 677,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1190,
+        "end": 1191,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "<100",
+        "confidence": 92.867134,
+        "box": {
+          "x": 366,
+          "y": 678,
+          "width": 57,
+          "height": 18
+        },
+        "start": 1192,
+        "end": 1196,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 96.95079,
+        "box": {
+          "x": 433,
+          "y": 677,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1197,
+        "end": 1198,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "06/02/2026",
+        "confidence": 96.565765,
+        "box": {
+          "x": 446,
+          "y": 677,
+          "width": 128,
+          "height": 19
+        },
+        "start": 1199,
+        "end": 1209,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "LDL-C",
+        "confidence": 92.324348,
+        "box": {
+          "x": 102,
+          "y": 718,
+          "width": 72,
+          "height": 18
+        },
+        "start": 1210,
+        "end": 1215,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 92.324348,
+        "box": {
+          "x": 185,
+          "y": 717,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1216,
+        "end": 1217,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "164",
+        "confidence": 96.739502,
+        "box": {
+          "x": 198,
+          "y": 718,
+          "width": 41,
+          "height": 18
+        },
+        "start": 1218,
+        "end": 1221,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "mg/dL",
+        "confidence": 95.964478,
+        "box": {
+          "x": 249,
+          "y": 717,
+          "width": 69,
+          "height": 24
+        },
+        "start": 1222,
+        "end": 1227,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 92.892441,
+        "box": {
+          "x": 328,
+          "y": 717,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1228,
+        "end": 1229,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "H",
+        "confidence": 92.292618,
+        "box": {
+          "x": 341,
+          "y": 718,
+          "width": 15,
+          "height": 18
+        },
+        "start": 1230,
+        "end": 1231,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 93.03228,
+        "box": {
+          "x": 368,
+          "y": 717,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1232,
+        "end": 1233,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "<100",
+        "confidence": 93.03228,
+        "box": {
+          "x": 381,
+          "y": 718,
+          "width": 56,
+          "height": 18
+        },
+        "start": 1234,
+        "end": 1238,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "|",
+        "confidence": 96.983879,
+        "box": {
+          "x": 447,
+          "y": 717,
+          "width": 3,
+          "height": 25
+        },
+        "start": 1239,
+        "end": 1240,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "11/20/2024",
+        "confidence": 96.075523,
+        "box": {
+          "x": 461,
+          "y": 717,
+          "width": 128,
+          "height": 19
+        },
+        "start": 1241,
+        "end": 1251,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "Comment:",
+        "confidence": 96.27977,
+        "box": {
+          "x": 101,
+          "y": 758,
+          "width": 117,
+          "height": 18
+        },
+        "start": 1252,
+        "end": 1260,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "06/02/2026",
+        "confidence": 96.752205,
+        "box": {
+          "x": 228,
+          "y": 757,
+          "width": 128,
+          "height": 19
+        },
+        "start": 1261,
+        "end": 1271,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "draw",
+        "confidence": 96.789276,
+        "box": {
+          "x": 366,
+          "y": 757,
+          "width": 55,
+          "height": 19
+        },
+        "start": 1272,
+        "end": 1276,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "is",
+        "confidence": 96.507629,
+        "box": {
+          "x": 430,
+          "y": 757,
+          "width": 16,
+          "height": 19
+        },
+        "start": 1277,
+        "end": 1279,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "after",
+        "confidence": 96.700623,
+        "box": {
+          "x": 455,
+          "y": 757,
+          "width": 51,
+          "height": 19
+        },
+        "start": 1280,
+        "end": 1285,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "the",
+        "confidence": 96.724052,
+        "box": {
+          "x": 514,
+          "y": 757,
+          "width": 34,
+          "height": 19
+        },
+        "start": 1286,
+        "end": 1289,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "request.",
+        "confidence": 96.688423,
+        "box": {
+          "x": 558,
+          "y": 759,
+          "width": 90,
+          "height": 22
+        },
+        "start": 1290,
+        "end": 1298,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "The",
+        "confidence": 96.312157,
+        "box": {
+          "x": 101,
+          "y": 797,
+          "width": 43,
+          "height": 19
+        },
+        "start": 1299,
+        "end": 1302,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "11/20/2024",
+        "confidence": 95.991318,
+        "box": {
+          "x": 154,
+          "y": 797,
+          "width": 127,
+          "height": 19
+        },
+        "start": 1303,
+        "end": 1313,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "draw",
+        "confidence": 96.165108,
+        "box": {
+          "x": 290,
+          "y": 797,
+          "width": 56,
+          "height": 19
+        },
+        "start": 1314,
+        "end": 1318,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "is",
+        "confidence": 96.165108,
+        "box": {
+          "x": 355,
+          "y": 797,
+          "width": 16,
+          "height": 19
+        },
+        "start": 1319,
+        "end": 1321,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "an",
+        "confidence": 96.666245,
+        "box": {
+          "x": 380,
+          "y": 802,
+          "width": 26,
+          "height": 14
+        },
+        "start": 1322,
+        "end": 1324,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "old",
+        "confidence": 96.740776,
+        "box": {
+          "x": 416,
+          "y": 797,
+          "width": 32,
+          "height": 19
+        },
+        "start": 1325,
+        "end": 1328,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "baseline.",
+        "confidence": 96.536797,
+        "box": {
+          "x": 459,
+          "y": 797,
+          "width": 100,
+          "height": 19
+        },
+        "start": 1329,
+        "end": 1338,
+        "needsReview": false,
+        "page": 1
+      },
+      {
+        "text": "05/18/2026",
+        "confidence": 95.30188,
+        "box": {
+          "x": 101,
+          "y": 157,
+          "width": 128,
+          "height": 19
+        },
+        "start": 1339,
+        "end": 1349,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "9:05",
+        "confidence": 96.115997,
+        "box": {
+          "x": 246,
+          "y": 158,
+          "width": 48,
+          "height": 18
+        },
+        "start": 1350,
+        "end": 1354,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "AM",
+        "confidence": 94.480537,
+        "box": {
+          "x": 301,
+          "y": 158,
+          "width": 37,
+          "height": 18
+        },
+        "start": 1355,
+        "end": 1357,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "FROM:",
+        "confidence": 91.908081,
+        "box": {
+          "x": 356,
+          "y": 158,
+          "width": 80,
+          "height": 18
+        },
+        "start": 1358,
+        "end": 1363,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "XXXXXXXXXX",
+        "confidence": 90.729233,
+        "box": {
+          "x": 446,
+          "y": 158,
+          "width": 172,
+          "height": 18
+        },
+        "start": 1364,
+        "end": 1374,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "TO:",
+        "confidence": 96.736107,
+        "box": {
+          "x": 633,
+          "y": 158,
+          "width": 40,
+          "height": 18
+        },
+        "start": 1375,
+        "end": 1378,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "PA",
+        "confidence": 50.239605,
+        "box": {
+          "x": 685,
+          "y": 158,
+          "width": 30,
+          "height": 18
+        },
+        "start": 1379,
+        "end": 1381,
+        "needsReview": true,
+        "page": 2
+      },
+      {
+        "text": "DEPT",
+        "confidence": 50.239605,
+        "box": {
+          "x": 723,
+          "y": 158,
+          "width": 67,
+          "height": 18
+        },
+        "start": 1382,
+        "end": 1386,
+        "needsReview": true,
+        "page": 2
+      },
+      {
+        "text": "P.003/003",
+        "confidence": 91.888412,
+        "box": {
+          "x": 807,
+          "y": 157,
+          "width": 112,
+          "height": 19
+        },
+        "start": 1387,
+        "end": 1396,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "DRIFT",
+        "confidence": 95.886368,
+        "box": {
+          "x": 102,
+          "y": 198,
+          "width": 74,
+          "height": 18
+        },
+        "start": 1397,
+        "end": 1402,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "PHARMACY",
+        "confidence": 95.410553,
+        "box": {
+          "x": 185,
+          "y": 198,
+          "width": 145,
+          "height": 18
+        },
+        "start": 1403,
+        "end": 1411,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 94.365242,
+        "box": {
+          "x": 339,
+          "y": 197,
+          "width": 102,
+          "height": 24
+        },
+        "start": 1412,
+        "end": 1423,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "MED",
+        "confidence": 96.661148,
+        "box": {
+          "x": 452,
+          "y": 198,
+          "width": 55,
+          "height": 18
+        },
+        "start": 1424,
+        "end": 1427,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "LIST",
+        "confidence": 96.119347,
+        "box": {
+          "x": 517,
+          "y": 198,
+          "width": 52,
+          "height": 18
+        },
+        "start": 1428,
+        "end": 1432,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Patient:",
+        "confidence": 96.204269,
+        "box": {
+          "x": 102,
+          "y": 237,
+          "width": 84,
+          "height": 19
+        },
+        "start": 1433,
+        "end": 1441,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Samir",
+        "confidence": 96.204269,
+        "box": {
+          "x": 197,
+          "y": 237,
+          "width": 66,
+          "height": 19
+        },
+        "start": 1442,
+        "end": 1447,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Holt",
+        "confidence": 96.447693,
+        "box": {
+          "x": 273,
+          "y": 237,
+          "width": 44,
+          "height": 19
+        },
+        "start": 1448,
+        "end": 1452,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "(fictional)",
+        "confidence": 96.447693,
+        "box": {
+          "x": 326,
+          "y": 237,
+          "width": 102,
+          "height": 24
+        },
+        "start": 1453,
+        "end": 1464,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Drug",
+        "confidence": 96.054817,
+        "box": {
+          "x": 102,
+          "y": 278,
+          "width": 53,
+          "height": 23
+        },
+        "start": 1465,
+        "end": 1469,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.362419,
+        "box": {
+          "x": 166,
+          "y": 277,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1470,
+        "end": 1471,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Dose",
+        "confidence": 95.502441,
+        "box": {
+          "x": 180,
+          "y": 278,
+          "width": 57,
+          "height": 18
+        },
+        "start": 1472,
+        "end": 1476,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.269569,
+        "box": {
+          "x": 248,
+          "y": 277,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1477,
+        "end": 1478,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Route",
+        "confidence": 96.617615,
+        "box": {
+          "x": 262,
+          "y": 278,
+          "width": 66,
+          "height": 18
+        },
+        "start": 1479,
+        "end": 1484,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.640686,
+        "box": {
+          "x": 338,
+          "y": 277,
+          "width": 3,
+          "height": 25
+        },
+        "start": 1485,
+        "end": 1486,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Freq",
+        "confidence": 95.170639,
+        "box": {
+          "x": 352,
+          "y": 278,
+          "width": 50,
+          "height": 23
+        },
+        "start": 1487,
+        "end": 1491,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 95.170639,
+        "box": {
+          "x": 413,
+          "y": 277,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1492,
+        "end": 1493,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Start",
+        "confidence": 95.244865,
+        "box": {
+          "x": 426,
+          "y": 278,
+          "width": 53,
+          "height": 18
+        },
+        "start": 1494,
+        "end": 1499,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 95.244865,
+        "box": {
+          "x": 489,
+          "y": 277,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1500,
+        "end": 1501,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Status",
+        "confidence": 96.468109,
+        "box": {
+          "x": 502,
+          "y": 278,
+          "width": 72,
+          "height": 18
+        },
+        "start": 1502,
+        "end": 1508,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "ezetimibe",
+        "confidence": 92.129723,
+        "box": {
+          "x": 101,
+          "y": 317,
+          "width": 109,
+          "height": 19
+        },
+        "start": 1509,
+        "end": 1518,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 95.025154,
+        "box": {
+          "x": 221,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1519,
+        "end": 1520,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "10",
+        "confidence": 96.663834,
+        "box": {
+          "x": 234,
+          "y": 318,
+          "width": 26,
+          "height": 18
+        },
+        "start": 1521,
+        "end": 1523,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "mg",
+        "confidence": 93.663406,
+        "box": {
+          "x": 270,
+          "y": 322,
+          "width": 33,
+          "height": 19
+        },
+        "start": 1524,
+        "end": 1526,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 93.663406,
+        "box": {
+          "x": 314,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1527,
+        "end": 1528,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "PO",
+        "confidence": 96.788025,
+        "box": {
+          "x": 328,
+          "y": 318,
+          "width": 34,
+          "height": 18
+        },
+        "start": 1529,
+        "end": 1531,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.472542,
+        "box": {
+          "x": 373,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1532,
+        "end": 1533,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "daily",
+        "confidence": 95.165047,
+        "box": {
+          "x": 386,
+          "y": 317,
+          "width": 52,
+          "height": 24
+        },
+        "start": 1534,
+        "end": 1539,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.758896,
+        "box": {
+          "x": 448,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1540,
+        "end": 1541,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "02/02/2025",
+        "confidence": 96.779472,
+        "box": {
+          "x": 460,
+          "y": 317,
+          "width": 128,
+          "height": 19
+        },
+        "start": 1542,
+        "end": 1552,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.924149,
+        "box": {
+          "x": 599,
+          "y": 317,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1553,
+        "end": 1554,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "current",
+        "confidence": 96.982735,
+        "box": {
+          "x": 612,
+          "y": 319,
+          "width": 79,
+          "height": 17
+        },
+        "start": 1555,
+        "end": 1562,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "metoprolol",
+        "confidence": 96.116913,
+        "box": {
+          "x": 102,
+          "y": 357,
+          "width": 118,
+          "height": 24
+        },
+        "start": 1563,
+        "end": 1573,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.378181,
+        "box": {
+          "x": 231,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1574,
+        "end": 1575,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "50",
+        "confidence": 96.567947,
+        "box": {
+          "x": 244,
+          "y": 358,
+          "width": 27,
+          "height": 18
+        },
+        "start": 1576,
+        "end": 1578,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "mg",
+        "confidence": 94.443542,
+        "box": {
+          "x": 280,
+          "y": 362,
+          "width": 33,
+          "height": 19
+        },
+        "start": 1579,
+        "end": 1581,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 94.443542,
+        "box": {
+          "x": 324,
+          "y": 357,
+          "width": 3,
+          "height": 25
+        },
+        "start": 1582,
+        "end": 1583,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "PO",
+        "confidence": 96.169708,
+        "box": {
+          "x": 338,
+          "y": 358,
+          "width": 34,
+          "height": 18
+        },
+        "start": 1584,
+        "end": 1586,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.210213,
+        "box": {
+          "x": 383,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1587,
+        "end": 1588,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "daily",
+        "confidence": 96.336151,
+        "box": {
+          "x": 396,
+          "y": 357,
+          "width": 52,
+          "height": 24
+        },
+        "start": 1589,
+        "end": 1594,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.609406,
+        "box": {
+          "x": 458,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1595,
+        "end": 1596,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "11/20/2024",
+        "confidence": 95.828461,
+        "box": {
+          "x": 471,
+          "y": 357,
+          "width": 128,
+          "height": 19
+        },
+        "start": 1597,
+        "end": 1607,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.702324,
+        "box": {
+          "x": 609,
+          "y": 357,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1608,
+        "end": 1609,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "current",
+        "confidence": 96.865646,
+        "box": {
+          "x": 622,
+          "y": 359,
+          "width": 80,
+          "height": 17
+        },
+        "start": 1610,
+        "end": 1617,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "aspirin",
+        "confidence": 95.72924,
+        "box": {
+          "x": 101,
+          "y": 397,
+          "width": 74,
+          "height": 24
+        },
+        "start": 1618,
+        "end": 1625,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 95.495438,
+        "box": {
+          "x": 186,
+          "y": 397,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1626,
+        "end": 1627,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "81",
+        "confidence": 95.857368,
+        "box": {
+          "x": 199,
+          "y": 398,
+          "width": 27,
+          "height": 18
+        },
+        "start": 1628,
+        "end": 1630,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "mg",
+        "confidence": 93.110641,
+        "box": {
+          "x": 236,
+          "y": 402,
+          "width": 32,
+          "height": 19
+        },
+        "start": 1631,
+        "end": 1633,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 93.110641,
+        "box": {
+          "x": 280,
+          "y": 397,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1634,
+        "end": 1635,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "PO",
+        "confidence": 95.689781,
+        "box": {
+          "x": 293,
+          "y": 398,
+          "width": 35,
+          "height": 18
+        },
+        "start": 1636,
+        "end": 1638,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 95.689781,
+        "box": {
+          "x": 338,
+          "y": 397,
+          "width": 3,
+          "height": 25
+        },
+        "start": 1639,
+        "end": 1640,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "daily",
+        "confidence": 95.804794,
+        "box": {
+          "x": 351,
+          "y": 397,
+          "width": 52,
+          "height": 24
+        },
+        "start": 1641,
+        "end": 1646,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.911461,
+        "box": {
+          "x": 413,
+          "y": 397,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1647,
+        "end": 1648,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "11/20/2024",
+        "confidence": 96.100121,
+        "box": {
+          "x": 427,
+          "y": 397,
+          "width": 127,
+          "height": 19
+        },
+        "start": 1649,
+        "end": 1659,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.846184,
+        "box": {
+          "x": 564,
+          "y": 397,
+          "width": 3,
+          "height": 25
+        },
+        "start": 1660,
+        "end": 1661,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "current",
+        "confidence": 96.91748,
+        "box": {
+          "x": 577,
+          "y": 399,
+          "width": 80,
+          "height": 17
+        },
+        "start": 1662,
+        "end": 1669,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "evolocumab",
+        "confidence": 91.712601,
+        "box": {
+          "x": 101,
+          "y": 437,
+          "width": 138,
+          "height": 19
+        },
+        "start": 1670,
+        "end": 1680,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 95.273018,
+        "box": {
+          "x": 250,
+          "y": 437,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1681,
+        "end": 1682,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "420",
+        "confidence": 96.200424,
+        "box": {
+          "x": 262,
+          "y": 438,
+          "width": 42,
+          "height": 18
+        },
+        "start": 1683,
+        "end": 1686,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "mg",
+        "confidence": 94.722,
+        "box": {
+          "x": 314,
+          "y": 442,
+          "width": 32,
+          "height": 19
+        },
+        "start": 1687,
+        "end": 1689,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 94.722,
+        "box": {
+          "x": 358,
+          "y": 437,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1690,
+        "end": 1691,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "SC",
+        "confidence": 90.12896,
+        "box": {
+          "x": 371,
+          "y": 438,
+          "width": 33,
+          "height": 18
+        },
+        "start": 1692,
+        "end": 1694,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 90.12896,
+        "box": {
+          "x": 415,
+          "y": 437,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1695,
+        "end": 1696,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "monthly",
+        "confidence": 96.827164,
+        "box": {
+          "x": 428,
+          "y": 437,
+          "width": 89,
+          "height": 24
+        },
+        "start": 1697,
+        "end": 1704,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.880737,
+        "box": {
+          "x": 527,
+          "y": 437,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1705,
+        "end": 1706,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "pending",
+        "confidence": 95.888824,
+        "box": {
+          "x": 541,
+          "y": 437,
+          "width": 89,
+          "height": 24
+        },
+        "start": 1707,
+        "end": 1714,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "|",
+        "confidence": 96.716728,
+        "box": {
+          "x": 641,
+          "y": 437,
+          "width": 2,
+          "height": 25
+        },
+        "start": 1715,
+        "end": 1716,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "requested",
+        "confidence": 96.764038,
+        "box": {
+          "x": 654,
+          "y": 437,
+          "width": 113,
+          "height": 24
+        },
+        "start": 1717,
+        "end": 1726,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Handwritten",
+        "confidence": 96.061119,
+        "box": {
+          "x": 102,
+          "y": 477,
+          "width": 135,
+          "height": 19
+        },
+        "start": 1727,
+        "end": 1738,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "note:",
+        "confidence": 96.532799,
+        "box": {
+          "x": 248,
+          "y": 479,
+          "width": 53,
+          "height": 17
+        },
+        "start": 1739,
+        "end": 1744,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "patient",
+        "confidence": 96.452629,
+        "box": {
+          "x": 313,
+          "y": 477,
+          "width": 76,
+          "height": 24
+        },
+        "start": 1745,
+        "end": 1752,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "asked",
+        "confidence": 96.770271,
+        "box": {
+          "x": 397,
+          "y": 477,
+          "width": 67,
+          "height": 19
+        },
+        "start": 1753,
+        "end": 1758,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "about",
+        "confidence": 96.10144,
+        "box": {
+          "x": 474,
+          "y": 477,
+          "width": 64,
+          "height": 19
+        },
+        "start": 1759,
+        "end": 1764,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "monthly.",
+        "confidence": 96.744713,
+        "box": {
+          "x": 547,
+          "y": 477,
+          "width": 92,
+          "height": 24
+        },
+        "start": 1765,
+        "end": 1773,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "End.",
+        "confidence": 96.090134,
+        "box": {
+          "x": 102,
+          "y": 517,
+          "width": 49,
+          "height": 19
+        },
+        "start": 1774,
+        "end": 1778,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Keel",
+        "confidence": 95.732529,
+        "box": {
+          "x": 163,
+          "y": 517,
+          "width": 48,
+          "height": 19
+        },
+        "start": 1779,
+        "end": 1783,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "Cardiology",
+        "confidence": 95.732529,
+        "box": {
+          "x": 221,
+          "y": 517,
+          "width": 123,
+          "height": 24
+        },
+        "start": 1784,
+        "end": 1794,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "(fictional).",
+        "confidence": 95.829788,
+        "box": {
+          "x": 353,
+          "y": 517,
+          "width": 109,
+          "height": 24
+        },
+        "start": 1795,
+        "end": 1807,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "3",
+        "confidence": 95.829788,
+        "box": {
+          "x": 473,
+          "y": 518,
+          "width": 12,
+          "height": 18
+        },
+        "start": 1808,
+        "end": 1809,
+        "needsReview": false,
+        "page": 2
+      },
+      {
+        "text": "pages.",
+        "confidence": 96.227608,
+        "box": {
+          "x": 495,
+          "y": 522,
+          "width": 74,
+          "height": 19
+        },
+        "start": 1810,
+        "end": 1816,
+        "needsReview": false,
+        "page": 2
+      }
+    ],
+    "threshold": 80,
+    "engine": "tesseract.js 6 / English LSTM",
+    "pages": [
+      {
+        "image": "holdout2-11.png",
+        "readImage": "holdout2-11.png",
+        "width": 1700,
+        "height": 2200,
+        "orientation": {
+          "pageRotation": 0,
+          "scores": {
+            "0": 5960.660194000001,
+            "180": 408.90319099999994
+          }
+        },
+        "deskewDegrees": 0,
+        "start": 0,
+        "end": 649
+      },
+      {
+        "image": "holdout2-11-page-2.png",
+        "readImage": "holdout2-11-page-2.png",
+        "width": 1700,
+        "height": 2200,
+        "orientation": {
+          "pageRotation": 0,
+          "scores": {
+            "0": 6040.84944,
+            "180": 573.777743
+          }
+        },
+        "deskewDegrees": 0,
+        "start": 649,
+        "end": 1339
+      },
+      {
+        "image": "holdout2-11-page-3.png",
+        "readImage": "holdout2-11-page-3.png",
+        "width": 1700,
+        "height": 2200,
+        "orientation": {
+          "pageRotation": 0,
+          "scores": {
+            "0": 3738.2995510000005,
+            "180": 618.266205
+          }
+        },
+        "deskewDegrees": 0,
+        "start": 1339,
+        "end": 1817
+      }
+    ]
+  },
+  "coverage": {
+    "threshold": 80,
+    "pagesReceived": 3,
+    "pagesExpected": 3,
+    "missingPages": [],
+    "missingCount": 0,
+    "duplicatePages": [],
+    "conflictingTotals": [],
+    "outOfOrder": false,
+    "complete": true,
+    "pages": [
+      {
+        "index": 0,
+        "lines": 19,
+        "words": 88,
+        "orientation": {
+          "pageRotation": 0,
+          "deskewDegrees": 0,
+          "handled": true
+        },
+        "meanConfidence": 92.28362298863637,
+        "minConfidence": 1.300262,
+        "lowConfidenceLines": [
+          {
+            "from": 1,
+            "to": 1,
+            "start": 0,
+            "end": 57,
+            "words": 9,
+            "lowWords": 2
+          },
+          {
+            "from": 8,
+            "to": 8,
+            "start": 260,
+            "end": 276,
+            "words": 3,
+            "lowWords": 2
+          },
+          {
+            "from": 18,
+            "to": 18,
+            "start": 598,
+            "end": 611,
+            "words": 3,
+            "lowWords": 1
+          }
+        ],
+        "unreadableLines": [],
+        "counter": {
+          "text": "P.001/003",
+          "page": 1,
+          "of": 3,
+          "line": 1
+        }
+      },
+      {
+        "index": 1,
+        "lines": 17,
+        "words": 113,
+        "orientation": {
+          "pageRotation": 0,
+          "deskewDegrees": 0,
+          "handled": true
+        },
+        "meanConfidence": 93.30155433628316,
+        "minConfidence": 2.607277,
+        "lowConfidenceLines": [
+          {
+            "from": 1,
+            "to": 1,
+            "start": 649,
+            "end": 706,
+            "words": 9,
+            "lowWords": 2
+          },
+          {
+            "from": 12,
+            "to": 12,
+            "start": 1107,
+            "end": 1127,
+            "words": 4,
+            "lowWords": 1
+          }
+        ],
+        "unreadableLines": [],
+        "counter": {
+          "text": "P.002/003",
+          "page": 2,
+          "of": 3,
+          "line": 1
+        }
+      },
+      {
+        "index": 2,
+        "lines": 10,
+        "words": 89,
+        "orientation": {
+          "pageRotation": 0,
+          "deskewDegrees": 0,
+          "handled": true
+        },
+        "meanConfidence": 94.52982985393258,
+        "minConfidence": 50.239605,
+        "lowConfidenceLines": [
+          {
+            "from": 1,
+            "to": 1,
+            "start": 1339,
+            "end": 1396,
+            "words": 9,
+            "lowWords": 2
+          }
+        ],
+        "unreadableLines": [],
+        "counter": {
+          "text": "P.003/003",
+          "page": 3,
+          "of": 3,
+          "line": 1
+        }
+      }
+    ]
+  },
+  "sourceCheck": {
+    "lines": 46,
+    "unread": []
+  },
+  "scores": {
+    "entities": {
+      "tp": 0,
+      "predicted": 16,
+      "gold": 0,
+      "exactQuote": 0
+    },
+    "criteria": {
+      "correct": 5,
+      "total": 5
+    },
+    "cer": 0.000550357732526142,
+    "edits": 1,
+    "chars": 1817,
+    "verifier": {
+      "caught": 3,
+      "injected": 3
+    }
+  },
+  "failures": [
+    "1 OCR character edits"
+  ],
+  "latency": {
+    "renderAndOcrMs": 8104.240583000006,
+    "serviceMs": 59.090334000007715
+  }
+}

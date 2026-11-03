@@ -1,0 +1,124 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-06",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout-v2/packets/holdout2-06.md",
+  "group": "rotation-7deg",
+  "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only",
+  "variation_notes": "No slash date has a day above 12, but the received date rules out a month-first reading because the request would fall after receipt.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 345,
+          "end": 365,
+          "text": "Age: 41 years Sex: F"
+        }
+      ],
+      "reason": "The form states the patient is 41 years old.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 535,
+          "end": 582,
+          "text": "Indication: moderate-to-severe plaque psoriasis"
+        },
+        {
+          "start": 1085,
+          "end": 1138,
+          "text": "A: Moderate-to-severe plaque psoriasis, this request."
+        }
+      ],
+      "reason": "The indication and assessment name moderate-to-severe plaque psoriasis as the reason for this request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 245,
+          "end": 269,
+          "text": "Request date: 07/04/2026"
+        },
+        {
+          "start": 270,
+          "end": 294,
+          "text": "Fax received: 05/08/2026"
+        },
+        {
+          "start": 583,
+          "end": 612,
+          "text": "BSA: 14% Measured: 03/02/2026"
+        },
+        {
+          "start": 1033,
+          "end": 1084,
+          "text": "O: Body surface area involvement 14% on 03/02/2026."
+        }
+      ],
+      "reason": "The received date rules out a month-first reading, and under the day-first reading body surface area 14% on 03/02/2026 is within 180 days before the 07/04/2026 request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 613,
+          "end": 637,
+          "text": "Methotrexate 15 mg PO QW"
+        },
+        {
+          "start": 638,
+          "end": 670,
+          "text": "Start 01/02/2026 stop 01/11/2026"
+        },
+        {
+          "start": 671,
+          "end": 705,
+          "text": "Restart 02/01/2026 stop 02/03/2026"
+        },
+        {
+          "start": 706,
+          "end": 732,
+          "text": "Reason stopped: not stated"
+        },
+        {
+          "start": 1375,
+          "end": 1423,
+          "text": "Duration of methotrexate was under three months."
+        }
+      ],
+      "reason": "Methotrexate 15 mg weekly was stopped and restarted across two short spans, under 90 days, and no intolerance reason is stated.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The adalimumab dose and frequency are blank and the note says no dose was chosen.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

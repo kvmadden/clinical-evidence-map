@@ -1,0 +1,109 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-08",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout-v2/packets/holdout2-08.md",
+  "group": "orientation",
+  "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only",
+  "variation_notes": "The form and the letter disagree on weekly versus every-other-week dosing, and the written indication is hidradenitis suppurativa.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 274,
+          "end": 320,
+          "text": "Patient: Wynn Calder (fictional) Age: 39 years"
+        }
+      ],
+      "reason": "The form states the patient is 39 years old.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The stated indication is hidradenitis suppurativa, and plaque psoriasis is not named anywhere.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 231,
+          "end": 255,
+          "text": "Request date: 09/25/2026"
+        },
+        {
+          "start": 510,
+          "end": 544,
+          "text": "BSA involvement: 15% on 08/14/2026"
+        },
+        {
+          "start": 1613,
+          "end": 1663,
+          "text": "O: BSA involvement 15%, unchanged from 08/14/2026."
+        }
+      ],
+      "reason": "Body surface area involvement is 15% on 08/14/2026, within 180 days before the single request date 09/25/2026.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 545,
+          "end": 580,
+          "text": "Prior: methotrexate, outcome failed"
+        },
+        {
+          "start": 581,
+          "end": 617,
+          "text": "MTX dose: unknown MTX dates: unknown"
+        },
+        {
+          "start": 1116,
+          "end": 1161,
+          "text": "Methotrexate was failed. No dose and no dates"
+        }
+      ],
+      "reason": "Methotrexate is called a failure, but the dose and dates are unknown and there is no before-and-after body surface area pair.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 445,
+          "end": 472,
+          "text": "Sig on form: 40 mg subQ Q2W"
+        },
+        {
+          "start": 934,
+          "end": 978,
+          "text": "Please authorize adalimumab 40 mg every week"
+        }
+      ],
+      "reason": "The form requests 40 mg subQ every other week while the letter requests 40 mg every week.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

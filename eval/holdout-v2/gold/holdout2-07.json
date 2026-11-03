@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-07",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout-v2/packets/holdout2-07.md",
+  "group": "orientation",
+  "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only",
+  "variation_notes": "The form and the letter give two different request dates for an otherwise consistent adalimumab order in a 15-year-old.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 250,
+          "end": 294,
+          "text": "Patient: Teo Brant (fictional) Age: 15 years"
+        }
+      ],
+      "reason": "The form states the patient is 15 years old, which is under 18.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 433,
+          "end": 480,
+          "text": "Indication: moderate-to-severe plaque psoriasis"
+        },
+        {
+          "start": 933,
+          "end": 973,
+          "text": "for moderate-to-severe plaque psoriasis."
+        }
+      ],
+      "reason": "The form and letter both name moderate-to-severe plaque psoriasis as the reason for this request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 481,
+          "end": 505,
+          "text": "Request date: 08/19/2026"
+        },
+        {
+          "start": 859,
+          "end": 883,
+          "text": "Request date: 02/11/2026"
+        },
+        {
+          "start": 1504,
+          "end": 1548,
+          "text": "BSA involvement | 16% | H | n/a | 07/28/2026"
+        }
+      ],
+      "reason": "The packet prints two different request dates, 08/19/2026 and 02/11/2026.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "Apremilast and phototherapy are mentioned and methotrexate is never named.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 415,
+          "end": 432,
+          "text": "Sig: 40 mg SC Q2W"
+        },
+        {
+          "start": 884,
+          "end": 932,
+          "text": "Please approve adalimumab 40 mg every other week"
+        }
+      ],
+      "reason": "Both the form and the letter request adalimumab 40 mg every other week.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

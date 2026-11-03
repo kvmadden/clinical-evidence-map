@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-20",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout-v2/packets/holdout2-20.md",
+  "group": "orientation",
+  "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only",
+  "variation_notes": "Lab numeric date 06/08/2026 is settled as June 8 (not August 6) by later fax received date 07/15/2026, requested indication is psoriatic arthritis rather than moderate-to-severe plaque psoriasis, methotrexate is contraindicated with reason, and dose is blank.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 196,
+          "end": 258,
+          "text": "Patient Name: Douglas Miller (fictional) | Age: 51 | Gender: M"
+        }
+      ],
+      "reason": "The patient is documented as 51 years of age.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 557,
+          "end": 593,
+          "text": "Primary Indication for this Request:"
+        },
+        {
+          "start": 594,
+          "end": 662,
+          "text": "  [x] Psoriatic Arthritis with peripheral joint involvement (L40.50)"
+        },
+        {
+          "start": 740,
+          "end": 804,
+          "text": "  - Chronic plaque psoriasis noted in history, mild skin plaques"
+        }
+      ],
+      "reason": "The requested indication is psoriatic arthritis, with plaque psoriasis noted only as mild in past history.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 805,
+          "end": 849,
+          "text": "  - BSA involved: 14% (Evaluated 06/08/2026)"
+        },
+        {
+          "start": 1765,
+          "end": 1823,
+          "text": "Calculated total body surface area (BSA) involvement: 14%."
+        }
+      ],
+      "reason": "The later received date 07/15/2026 settles 06/08/2026 as June 8, which is within 180 days and meets the 10% BSA threshold.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 892,
+          "end": 957,
+          "text": "  - Methotrexate is strictly contraindicated due to biopsy-proven"
+        },
+        {
+          "start": 958,
+          "end": 1030,
+          "text": "    non-alcoholic cirrhosis and severe hepatic impairment (ALT 180 U/L)."
+        },
+        {
+          "start": 2350,
+          "end": 2425,
+          "text": "hepatology consultation records reviewed; oral methotrexate contraindicated"
+        },
+        {
+          "start": 2426,
+          "end": 2479,
+          "text": "due to advanced cirrhosis and elevated transaminases."
+        }
+      ],
+      "reason": "Methotrexate contraindication is documented with a specific clinical reason (cirrhosis with severe hepatic impairment).",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The dose and frequency fields for adalimumab are left blank.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

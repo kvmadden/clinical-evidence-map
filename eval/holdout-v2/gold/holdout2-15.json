@@ -1,0 +1,94 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-15",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/holdout-v2/packets/holdout2-15.md",
+  "group": "choppy-lines",
+  "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only",
+  "variation_notes": "The patient is a 17-year-old minor, follow-up A1c on metformin achieved 6.7% (at goal), a corrected A1c is documented, and the dose field is left blank.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 385,
+          "end": 443,
+          "text": "Patient Name: Lior Gallant (fictional) | Age: 17 years old"
+        }
+      ],
+      "reason": "The patient is stated to be 17 years old, which is under the adult age requirement of 18.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 624,
+          "end": 677,
+          "text": "Indication: Type 2 Diabetes Mellitus (ICD-10: E11.69)"
+        }
+      ],
+      "reason": "Type 2 diabetes mellitus is documented as the specific indication for this request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 2222,
+          "end": 2274,
+          "text": "Result: Hemoglobin A1c 8.4% (Collected: 07/28/2026)."
+        }
+      ],
+      "reason": "An A1c result of 8.4% is documented on 07/28/2026, which is within 180 days before the 08/18/2026 request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 1826,
+          "end": 1898,
+          "text": "Patient completed 4-month course of metformin 1000 mg BID (02/10/2026 to"
+        },
+        {
+          "start": 1899,
+          "end": 1973,
+          "text": "06/15/2026). Baseline A1c was 9.4% (02/05/2026). Follow-up A1c was 6.7% on"
+        },
+        {
+          "start": 1974,
+          "end": 2043,
+          "text": "06/15/2026, achieving goal. Metformin was discontinued due to patient"
+        }
+      ],
+      "reason": "The follow-up A1c after 4 months of metformin was 6.7%, which is already at goal (<7.0%).",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The dose field for semaglutide was left blank on the request form and progress note.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

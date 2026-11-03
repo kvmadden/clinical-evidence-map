@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-16",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/holdout-v2/packets/holdout2-16.md",
+  "group": "smudge",
+  "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only",
+  "variation_notes": "None of the criteria are met: age is absent, T2D is only in past history while obesity is requested, A1c is missing, metformin intolerance lacks a reason, and doses conflict.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No patient age or date of birth is documented anywhere in the packet.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 614,
+          "end": 656,
+          "text": "Reason for Request / Requested Indication:"
+        },
+        {
+          "start": 688,
+          "end": 743,
+          "text": "  [x] Morbid Obesity with Metabolic Syndrome (BMI 38.2)"
+        },
+        {
+          "start": 799,
+          "end": 854,
+          "text": "  - Type 2 diabetes mellitus (E11.9) - per past records"
+        }
+      ],
+      "reason": "Type 2 diabetes appears only on a past medical history list while the stated requested indication is morbid obesity.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "No A1c lab result is documented in the packet.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 903,
+          "end": 972,
+          "text": "  - Metformin: Patient intolerant to metformin (no reason documented)"
+        },
+        {
+          "start": 1921,
+          "end": 1992,
+          "text": "- Intake call with clinic: Confirmed patient cannot tolerate metformin."
+        },
+        {
+          "start": 1993,
+          "end": 2067,
+          "text": "  Specific adverse event or contraindication reason not provided in chart."
+        }
+      ],
+      "reason": "Metformin intolerance is asserted without documenting any clinical reason or specific adverse event.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 565,
+          "end": 613,
+          "text": "Requested Sig: 0.5 mg subcutaneously once weekly"
+        },
+        {
+          "start": 1599,
+          "end": 1669,
+          "text": "Directions: Inject 0.25 mg SQ once weekly for 4 weeks then re-evaluate"
+        }
+      ],
+      "reason": "The PA request form specifies 0.5 mg weekly while the pharmacy intake prescription specifies 0.25 mg weekly.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

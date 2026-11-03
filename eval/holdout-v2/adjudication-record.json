@@ -1,0 +1,57 @@
+{
+ "method": "Each packet was labeled by its author (Grok 4.7 for holdout2-01 to 12, Gemini 3.8 Flash for 13 to 24) and relabeled blind by Claude Opus 5.5, GPT 6.1 Sol, Gemini 3.8 Flash and Grok 4.7 from the rubric and the packet text only. All four relabels match the author on 116 of 120 labels. The author family is left out of the vote on its own packets. Claude adjudicated the four disputed labels against the rubric in SPEC-v2.md, on 3 Nov 2026, before any pipeline ran on the set.",
+ "decisions": [
+  {
+   "packet": "holdout2-24",
+   "criterion": "lab",
+   "author": "needs_review",
+   "votes": {
+    "claude": "evidence_found",
+    "gpt": "evidence_found",
+    "grok": "evidence_found",
+    "gemini (author family)": "needs_review"
+   },
+   "final": "evidence_found",
+   "reason": "The rubric says any qualifying value anywhere on the page counts. The pre-treatment LDL-C of 130 mg/dL on 05/20/2026 is 61 days before the 07/20/2026 request. The author used only the later corrected value of 68 mg/dL."
+  },
+  {
+   "packet": "holdout2-17",
+   "criterion": "prior",
+   "author": "needs_review",
+   "votes": {
+    "claude": "needs_review",
+    "gpt": "evidence_found",
+    "grok": "evidence_found",
+    "gemini (author family)": "needs_review"
+   },
+   "final": "needs_review",
+   "reason": "Methotrexate reached goal (BSA 2.0%), which on the trial path is needs_review, and it was held for transaminitis, which on the intolerance path could be evidence_found. The page reads two ways with different results, which the statuses define as needs_review."
+  },
+  {
+   "packet": "holdout2-23",
+   "criterion": "lab",
+   "author": "needs_review",
+   "votes": {
+    "claude": "evidence_found",
+    "gpt": "evidence_found",
+    "grok": "needs_review",
+    "gemini (author family)": "needs_review"
+   },
+   "final": "needs_review",
+   "reason": "The fax cover is dated 08/10/2026 while the form gives an official request date of 10/15/2026 and the LDL-C was collected 09/01/2026. The lab qualifies against one date and falls after the other. Conflicting request dates are needs_review under the rubric."
+  },
+  {
+   "packet": "holdout2-24",
+   "criterion": "prior",
+   "author": "needs_review",
+   "votes": {
+    "claude": "needs_review",
+    "gpt": "evidence_found",
+    "grok": "needs_review",
+    "gemini (author family)": "needs_review"
+   },
+   "final": "needs_review",
+   "reason": "Atorvastatin was stopped for severe calf cramping, but the patient now tolerates rosuvastatin 20 mg (45 days, LDL-C at goal). The intolerance claim conflicts with tolerated high-intensity statin therapy. Two of three other families agreed with the author."
+  }
+ ]
+}

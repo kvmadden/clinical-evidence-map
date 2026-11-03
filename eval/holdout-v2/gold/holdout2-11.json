@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-11",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/holdout-v2/packets/holdout2-11.md",
+  "group": "clean-render",
+  "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only",
+  "variation_notes": "The form asks for 140 mg every 2 weeks while the medication list asks for 420 mg monthly, and the only recent LDL was drawn after the request.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 282,
+          "end": 327,
+          "text": "Patient: Samir Holt (fictional) Age: 59 years"
+        }
+      ],
+      "reason": "The form states the patient is 59 years old.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 486,
+          "end": 525,
+          "text": "Indication: established atherosclerotic"
+        },
+        {
+          "start": 526,
+          "end": 566,
+          "text": "cardiovascular disease, prior myocardial"
+        },
+        {
+          "start": 567,
+          "end": 602,
+          "text": "infarction, reason for this request"
+        }
+      ],
+      "reason": "The form names established atherosclerotic cardiovascular disease with prior myocardial infarction as the reason for this request.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 239,
+          "end": 263,
+          "text": "Request date: 05/18/2026"
+        },
+        {
+          "start": 1196,
+          "end": 1236,
+          "text": "LDL-C | 98 mg/dL | H | <100 | 06/02/2026"
+        },
+        {
+          "start": 1279,
+          "end": 1325,
+          "text": "Comment: 06/02/2026 draw is after the request."
+        },
+        {
+          "start": 1237,
+          "end": 1278,
+          "text": "LDL-C | 164 mg/dL | H | <100 | 11/20/2024"
+        }
+      ],
+      "reason": "LDL-C 98 mg/dL was collected on 06/02/2026, after the 05/18/2026 request, and the 11/20/2024 result is older than 180 days.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The medication list shows ezetimibe, metoprolol, and aspirin, with no atorvastatin or rosuvastatin trial.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 452,
+          "end": 485,
+          "text": "Form sig: 140 mg SC every 2 weeks"
+        },
+        {
+          "start": 1710,
+          "end": 1766,
+          "text": "evolocumab | 420 mg | SC | monthly | pending | requested"
+        }
+      ],
+      "reason": "The form requests 140 mg every 2 weeks while the medication list requests 420 mg monthly.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

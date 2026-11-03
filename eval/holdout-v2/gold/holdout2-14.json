@@ -1,0 +1,94 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-14",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/holdout-v2/packets/holdout2-14.md",
+  "group": "fax-noise",
+  "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only",
+  "variation_notes": "The diagnosis is only suspected/rule-out, the attached A1c was drawn after the request date, the dose is 1.0 mg, and glimepiride was tried instead of metformin.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 226,
+          "end": 287,
+          "text": "Patient Name: Arthur Pendelton (fictional) | Age: 58 | Sex: M"
+        }
+      ],
+      "reason": "The patient is documented as 58 years of age.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 614,
+          "end": 684,
+          "text": "Primary Diagnosis for this Request: Suspected T2D, r/o type 2 diabetes"
+        }
+      ],
+      "reason": "Type 2 diabetes is documented only as a suspected or rule-out diagnosis rather than an established condition.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 159,
+          "end": 225,
+          "text": "Request Date: 11/12/2026 | Member ID: XXXXXXXX | Group #: XXXXXXXX"
+        },
+        {
+          "start": 1306,
+          "end": 1380,
+          "text": "Specimen ID: XXXXXXXX | Collected: 11/20/2026 08:30 | Reported: 11/21/2026"
+        },
+        {
+          "start": 1515,
+          "end": 1572,
+          "text": "Hemoglobin A1c        | 8.1    | %     | H    | 4.8 - 5.6"
+        }
+      ],
+      "reason": "The A1c specimen collection date of 11/20/2026 is dated after the request date of 11/12/2026.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "There is no documented trial of metformin, only a prior trial of glimepiride.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 514,
+          "end": 546,
+          "text": "Requested Dose: 1.0 mg weekly SQ"
+        }
+      ],
+      "reason": "The requested dose is 1.0 mg weekly instead of the required 0.5 mg weekly.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

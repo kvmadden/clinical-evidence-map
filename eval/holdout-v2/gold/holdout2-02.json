@@ -1,0 +1,109 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-02",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/holdout-v2/packets/holdout2-02.md",
+  "group": "fax-noise",
+  "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only",
+  "variation_notes": "Every slash date can be read month-first or day-first, and those two readings put the only A1c on opposite sides of the 180-day window.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 438,
+          "end": 458,
+          "text": "Age: 17 years Sex: F"
+        }
+      ],
+      "reason": "The form states the patient is 17 years old, which is under 18.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 623,
+          "end": 660,
+          "text": "Indication: chronic weight management"
+        },
+        {
+          "start": 1321,
+          "end": 1371,
+          "text": "1. Obesity, reason for today's semaglutide request"
+        },
+        {
+          "start": 1372,
+          "end": 1379,
+          "text": "2. T2DM"
+        }
+      ],
+      "reason": "The request indication is chronic weight management, and T2DM appears only as a problem-list entry.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 246,
+          "end": 290,
+          "text": "Member ID: XXXXXXXX Request date: 07/02/2026"
+        },
+        {
+          "start": 291,
+          "end": 324,
+          "text": "Fax received: 11/10/2026 Pages: 3"
+        },
+        {
+          "start": 1842,
+          "end": 1880,
+          "text": "A1c | 8.4% | H | 4.0-5.6% | 12/01/2025"
+        }
+      ],
+      "reason": "The only A1c is 8.4% on 12/01/2025 with request date 07/02/2026, and those slash dates can be read month-first as stale or day-first as inside 180 days, while the received date rules out neither reading.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The pages list glipizide and adapalene and do not document any metformin trial.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 575,
+          "end": 592,
+          "text": "Drug: semaglutide"
+        },
+        {
+          "start": 593,
+          "end": 622,
+          "text": "Requested sig: 1 mg SC weekly"
+        }
+      ],
+      "reason": "The requested sig is semaglutide 1 mg SC weekly, which is not 0.5 mg weekly.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

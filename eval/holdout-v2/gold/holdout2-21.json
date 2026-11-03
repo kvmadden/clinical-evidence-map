@@ -1,0 +1,105 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-21",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/holdout-v2/packets/holdout2-21.md",
+  "group": "clean-render",
+  "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only",
+  "variation_notes": "Strong clinical documentation across age, ASCVD, labs, and statin trial, but the PA form (140 mg q2w) and active order list (420 mg monthly) conflict on dose.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 296,
+          "end": 359,
+          "text": "Patient: Walter Fitzgerald (fictional) | Age: 64 | Gender: Male"
+        }
+      ],
+      "reason": "The patient is documented as 64 years of age.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 742,
+          "end": 814,
+          "text": "Indication: Established ASCVD (history of STEMI with DES to LAD in 2024)"
+        }
+      ],
+      "reason": "Established ASCVD with prior myocardial infarction and stent is documented as the request indication.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 957,
+          "end": 1020,
+          "text": "  - LDL-C: 128 mg/dL (Goal < 70 mg/dL for secondary prevention)"
+        }
+      ],
+      "reason": "An LDL-C of 128 mg/dL drawn on 09/25/2026 is within 180 days before the 10/24/2026 request and exceeds 70 mg/dL.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 1088,
+          "end": 1161,
+          "text": "  - Atorvastatin 80 mg daily PO taken from 03/15/2026 to present (>6 mos)"
+        },
+        {
+          "start": 1162,
+          "end": 1209,
+          "text": "  - Pre-treatment LDL-C: 182 mg/dL (03/01/2026)"
+        },
+        {
+          "start": 1210,
+          "end": 1280,
+          "text": "  - On-treatment follow-up LDL-C: 128 mg/dL (09/25/2026) (misses goal)"
+        }
+      ],
+      "reason": "Atorvastatin 80 mg daily was taken for >90 days with baseline LDL 182 mg/dL and post-treatment LDL 128 mg/dL remaining >= 70 mg/dL.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 578,
+          "end": 639,
+          "text": "Requested Regimen: 140 mg subcutaneously every 2 weeks (q14d)"
+        },
+        {
+          "start": 2171,
+          "end": 2244,
+          "text": "Evolocumab (Repatha) | 420 mg  | SubQ  | Monthly   | 10/24/2026 | Pending"
+        }
+      ],
+      "reason": "The request form specifies 140 mg every 2 weeks, but the attached medication profile specifies 420 mg monthly.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

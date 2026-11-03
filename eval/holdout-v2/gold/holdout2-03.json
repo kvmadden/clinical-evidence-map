@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-03",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "glp1-t2d",
+  "source_file": "eval/holdout-v2/packets/holdout2-03.md",
+  "group": "choppy-lines",
+  "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only",
+  "variation_notes": "Metformin was stopped and restarted, the diabetes indication is only possible, and both the A1c and the semaglutide dose are blank.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 322,
+          "end": 342,
+          "text": "Age: 48 years Sex: M"
+        }
+      ],
+      "reason": "The form states the patient is 48 years old.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 531,
+          "end": 567,
+          "text": "Indication: possible type 2 diabetes"
+        },
+        {
+          "start": 568,
+          "end": 597,
+          "text": "[ ] Confirmed [x] Unconfirmed"
+        },
+        {
+          "start": 1125,
+          "end": 1163,
+          "text": "A: Hyperglycemia. r/o type 2 diabetes."
+        }
+      ],
+      "reason": "The indication is marked possible and unconfirmed, and the note says r/o type 2 diabetes.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "A1c fields are blank and no numeric A1c appears anywhere in the packet.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 598,
+          "end": 622,
+          "text": "Metformin: 500 mg PO BID"
+        },
+        {
+          "start": 623,
+          "end": 657,
+          "text": "Start: 06/01/2026 Stop: 07/01/2026"
+        },
+        {
+          "start": 658,
+          "end": 690,
+          "text": "Restart: 07/20/2026 Stop: ______"
+        },
+        {
+          "start": 691,
+          "end": 720,
+          "text": "Response: inadequate response"
+        },
+        {
+          "start": 721,
+          "end": 741,
+          "text": "Baseline A1c: ______"
+        },
+        {
+          "start": 742,
+          "end": 763,
+          "text": "Follow-up A1c: ______"
+        }
+      ],
+      "reason": "Metformin 500 mg twice daily was stopped and restarted with each segment under 90 days, called an inadequate response, and no before or after A1c is recorded.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The semaglutide dose and frequency are blank, and the note says a dose was not chosen.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

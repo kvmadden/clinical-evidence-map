@@ -1,0 +1,110 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-19",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout-v2/packets/holdout2-19.md",
+  "group": "rotation-7deg",
+  "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only",
+  "variation_notes": "The BSA date 05/06/2026 is ambiguous between May 6 (188 days, stale) and June 5 (158 days, valid) relative to the 11/10/2026 request, methotrexate trial lacks dates/values, and dose is 80 mg.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 203,
+          "end": 265,
+          "text": "PATIENT: Gregory Vance (fictional) | DOB: XX/XX/XXXX (Age: 39)"
+        }
+      ],
+      "reason": "The patient is documented as 39 years old.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 453,
+          "end": 515,
+          "text": "Indication: Moderate-to-severe plaque psoriasis (ICD-10 L40.0)"
+        }
+      ],
+      "reason": "Moderate-to-severe plaque psoriasis is explicitly named as the requested indication.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 1690,
+          "end": 1747,
+          "text": "05/06/2026      | Body Surface Area   | 12%      | >= 10%"
+        }
+      ],
+      "reason": "The numeric date 05/06/2026 is ambiguous without any resolving date on the page, and the two readings yield conflicting statuses (188 days stale vs 158 days valid).",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 731,
+          "end": 799,
+          "text": "The patient previously tried and failed methotrexate with inadequate"
+        },
+        {
+          "start": 800,
+          "end": 870,
+          "text": "response, but chart details regarding exact start dates and BSA scores"
+        },
+        {
+          "start": 871,
+          "end": 936,
+          "text": "from the outside clinic were unavailable at the time of transfer."
+        },
+        {
+          "start": 1964,
+          "end": 2039,
+          "text": "1. Methotrexate: Chart notes \"failed methotrexate due to lack of efficacy\"."
+        },
+        {
+          "start": 2040,
+          "end": 2103,
+          "text": "   No specific dosage, baseline BSA, or follow-up BSA recorded."
+        }
+      ],
+      "reason": "The methotrexate trial is documented as a failure without doses, dates, or before-and-after BSA scores.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 516,
+          "end": 568,
+          "text": "Requested Regimen: Adalimumab 80 mg SQ every 2 weeks"
+        }
+      ],
+      "reason": "The requested maintenance dose is 80 mg every 2 weeks instead of the required 40 mg every other week.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

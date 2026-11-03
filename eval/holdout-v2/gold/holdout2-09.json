@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-09",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "pcsk9",
+  "source_file": "eval/holdout-v2/packets/holdout2-09.md",
+  "group": "orientation",
+  "authored_by": "Grok 4.7, through the grok CLI with terminal commands denied, from SPEC-v2.md only",
+  "variation_notes": "Evolocumab is requested for hyperlipidemia with the dose blank and no LDL on the fax, while a stent sits only on the problem list and atorvastatin is contraindicated.",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 294,
+          "end": 340,
+          "text": "Patient: Ellis Dumar (fictional) Age: 66 years"
+        }
+      ],
+      "reason": "The form states the patient is 66 years old.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 512,
+          "end": 545,
+          "text": "Indication: severe hyperlipidemia"
+        },
+        {
+          "start": 546,
+          "end": 585,
+          "text": "Problem list: CAD s/p stent (2019); HTN"
+        },
+        {
+          "start": 1109,
+          "end": 1159,
+          "text": "A: Severe hyperlipidemia, reason for this request."
+        }
+      ],
+      "reason": "The stated reason is severe hyperlipidemia, and CAD with a stent appears only on the problem list.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The LDL-C field is blank and no LDL-C value is reported.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 586,
+          "end": 627,
+          "text": "Statin line: atorvastatin contraindicated"
+        },
+        {
+          "start": 628,
+          "end": 669,
+          "text": "Reason: rhabdomyolysis, hospitalized 2024"
+        },
+        {
+          "start": 1388,
+          "end": 1438,
+          "text": "Atorvastatin stays contraindicated. Reason remains"
+        },
+        {
+          "start": 1439,
+          "end": 1478,
+          "text": "rhabdomyolysis from the 2024 admission."
+        }
+      ],
+      "reason": "Atorvastatin is documented as contraindicated because of rhabdomyolysis with a 2024 hospitalization.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "missing",
+      "evidence_spans": [],
+      "reason": "The evolocumab dose and frequency are blank and the note says the dose was not selected.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}

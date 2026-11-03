@@ -1,0 +1,110 @@
+{
+  "schema_version": "2.0",
+  "packet_id": "holdout2-17",
+  "fictional": true,
+  "reviewed": false,
+  "criteria_id": "biologic-psoriasis",
+  "source_file": "eval/holdout-v2/packets/holdout2-17.md",
+  "group": "annotations",
+  "authored_by": "Gemini 3.8 Flash (High), through Antigravity, from SPEC-v2.md only",
+  "variation_notes": "The request form and clinic note disagree on dose frequency (every other week vs weekly) and post-methotrexate BSA reached 2.0% (at goal).",
+  "offset_basis": "Unicode code points, zero-based, end-exclusive, in body after <!-- SOURCE START --> followed by newline. Front matter and delimiter excluded.",
+  "entities": [],
+  "criterion_evidence": [
+    {
+      "criterion_id": "adult",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 229,
+          "end": 300,
+          "text": "Patient: Raylan Cheung (fictional) | DOB: XX/XX/XXXX (Age: 45) | Sex: M"
+        }
+      ],
+      "reason": "The patient is documented as 45 years of age.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "diagnosis",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 660,
+          "end": 725,
+          "text": "Requested Indication: Moderate-to-severe plaque psoriasis (L40.0)"
+        }
+      ],
+      "reason": "Moderate-to-severe plaque psoriasis is explicitly named as the requested indication.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "lab",
+      "status": "evidence_found",
+      "evidence_spans": [
+        {
+          "start": 726,
+          "end": 793,
+          "text": "Current Body Surface Area (BSA) Involved: 16% (measured 05/28/2026)"
+        },
+        {
+          "start": 2262,
+          "end": 2326,
+          "text": "on elbows, knees, back, and scalp. Total BSA involvement is 16%."
+        }
+      ],
+      "reason": "BSA involvement of 16% is documented on 05/28/2026, which is within 180 days of the 06/22/2026 request and exceeds 10%.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "prior",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 882,
+          "end": 953,
+          "text": "- Methotrexate 15 mg PO weekly from 01/10/2026 to 05/10/2026 (16 weeks)"
+        },
+        {
+          "start": 954,
+          "end": 989,
+          "text": "  * Baseline BSA: 20% on 01/05/2026"
+        },
+        {
+          "start": 990,
+          "end": 1053,
+          "text": "  * Post-treatment BSA: 2.0% on 05/10/2026 (achieved clearance)"
+        }
+      ],
+      "reason": "The post-treatment BSA reached 2.0%, which is at or below the 3% goal.",
+      "scenario": "held-out",
+      "reviewed": false
+    },
+    {
+      "criterion_id": "dose",
+      "status": "needs_review",
+      "evidence_spans": [
+        {
+          "start": 506,
+          "end": 566,
+          "text": "Requested Maintenance Dose: 40 mg SQ every other week (q14d)"
+        },
+        {
+          "start": 2406,
+          "end": 2477,
+          "text": "   - Prescribe Humira (adalimumab) 40 mg subcutaneous injection weekly."
+        }
+      ],
+      "reason": "The PA form requests 40 mg every other week, but the clinic note prescribes 40 mg weekly.",
+      "scenario": "held-out",
+      "reviewed": false
+    }
+  ],
+  "normalization": {
+    "status": "not_attempted",
+    "reason": "Held-out labels cover criterion statuses and quoted lines only.",
+    "reviewed": false
+  }
+}
