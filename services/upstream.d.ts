@@ -3,7 +3,7 @@ declare module "layered-pii-redaction" {
     text: string,
     options: {
       profile: "identifiers"
-      peopleMap: { people: never[]; safe: never[] }
+      peopleMap: { people: never[]; safe: string[] }
     },
   ): { text: string; blocked: boolean; hits: unknown[] }
 }

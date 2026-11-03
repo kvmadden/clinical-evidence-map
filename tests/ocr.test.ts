@@ -22,14 +22,20 @@ test("OCR contract parses boxes and routes every word below threshold", () => {
   assert.deepEqual(result.words[0].box, { x: 20, y: 30, width: 40, height: 10 })
 })
 
-test("OCR renders real fax PDF and image then recognizes words locally", async () => {
+test("OCR renders a fax-style PDF and image, then reads words locally", async () => {
   const dir = await mkdtemp(join(tmpdir(), "clinical-ocr-"))
   const ocr = await createOcr()
   try {
+    const plan = {
+      effects: ["speckle-light"],
+      rotate: 0,
+      handwriting: [],
+      annotations: [],
+    }
     const fax = await renderFax({
       text,
       packetId: "fixture",
-      quality: "clean",
+      plan,
       outputDir: dir,
     })
     assert.equal((await readFile(fax.pdf)).subarray(0, 4).toString(), "%PDF")
@@ -39,6 +45,26 @@ test("OCR renders real fax PDF and image then recognizes words locally", async (
     assert.ok(
       result.words.every((w) => w.confidence >= 0 && w.confidence <= 100),
     )
+    assert.equal(result.orientation?.pageRotation, 0)
+    // The same page turned upside down is detected and read the right way up.
+    const turned = await renderFax({
+      text,
+      packetId: "fixture-turned",
+      plan: { ...plan, rotate: 180 },
+      outputDir: dir,
+    })
+    const read = await ocr.recognize(turned.image)
+    assert.equal(read.orientation?.pageRotation, 180)
+    assert.match(read.text, /metformin/i)
+    // A 7-degree rotation is straightened before reading.
+    const skewed = await renderFax({
+      text,
+      packetId: "fixture-skewed",
+      plan: { ...plan, rotate: 7 },
+      outputDir: dir,
+    })
+    const straight = await ocr.recognize(skewed.image)
+    assert.ok(Math.abs((straight.deskewDegrees ?? 0) + 7) <= 1)
   } finally {
     await ocr.close()
     await rm(dir, { recursive: true, force: true })

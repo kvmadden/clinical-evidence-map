@@ -16,7 +16,7 @@ for (const [width, height] of [
       await expect(
         page.getByRole("heading", { name: "Your review queue" }),
       ).toBeVisible()
-      await page.getByRole("button", { name: /Open packet-043/ }).click()
+      await page.getByRole("button", { name: /Open packet-018/ }).click()
       await expect(
         page.getByRole("heading", { name: "Review the record" }),
       ).toBeVisible()
@@ -25,7 +25,7 @@ for (const [width, height] of [
           .getByText("draft, pending pharmacist review", { exact: true })
           .first(),
       ).toBeVisible()
-      await page.getByRole("button", { name: "Show evidence for dose" }).click()
+      await page.getByRole("button", { name: "Show evidence for lab" }).click()
       await expect(page.locator("#source-quote")).not.toHaveText(
         "Select evidence to inspect its source.",
       )
@@ -59,7 +59,9 @@ for (const [width, height] of [
       await page.getByRole("button", { name: "Evidence", exact: true }).click()
       await page
         .getByLabel("Review note")
-        .fill("Synthetic test review. Dose contradiction needs confirmation.")
+        .fill(
+          "Synthetic test review. Dates can be read two ways and need confirmation.",
+        )
       await page.getByRole("button", { name: "Correct", exact: true }).click()
       await expect(page.getByRole("status")).toContainText("Correction saved")
       await page.getByRole("button", { name: "Flag", exact: true }).click()

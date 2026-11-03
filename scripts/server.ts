@@ -1,8 +1,11 @@
 import { createServer } from "node:http"
 import { readFile } from "node:fs/promises"
+import { existsSync } from "node:fs"
 import { extname, resolve, sep } from "node:path"
 import { loadManifest } from "../services/pipeline.js"
 import { appendReview, readReviews } from "../services/audit/index.js"
+import { SETS } from "./sets.mjs"
+import { readFirstScore } from "./records.mjs"
 const value = (key: string, fallback: string) =>
   process.argv.includes(key)
     ? process.argv[process.argv.indexOf(key) + 1]
@@ -10,7 +13,51 @@ const value = (key: string, fallback: string) =>
 const port = Number(value("--port", "4178"))
 const auditPath = value("--audit", ".runtime/reviews.jsonl")
 const manifest = await loadManifest()
-const ids = new Set(manifest.packets.map((p) => p.packet_id))
+// The queue holds the development packets. The multi-page fixture is listed
+// apart as examples. Each packet is read from its own set's folder.
+const fixtureRoot = SETS.multipage.root
+const fixtures = existsSync(`${fixtureRoot}/results/metrics.json`)
+  ? ((await loadManifest(`${fixtureRoot}/manifest.json`)) as Awaited<
+      ReturnType<typeof loadManifest>
+    > & { description?: string })
+  : null
+const examples = fixtures?.packets ?? []
+const rootOf = new Map<string, string>([
+  ...manifest.packets.map((p) => [p.packet_id, "eval"] as const),
+  ...examples.map((p) => [p.packet_id, fixtureRoot] as const),
+])
+const ids = new Set(rootOf.keys())
+// Held-out sets that exist. Their blind score comes only from a first-score
+// record that is valid for the set as it stands. Anything else is shown as a
+// development result.
+async function heldOutSets() {
+  const sets = []
+  for (const [name, set] of Object.entries(SETS)) {
+    if (!set.heldOut || !existsSync(`${set.root}/results/metrics.json`))
+      continue
+    const now = JSON.parse(
+      await readFile(`${set.root}/results/metrics.json`, "utf8"),
+    )
+    const first = await readFirstScore(set.root)
+    const role = existsSync(`${set.root}/ROLE.json`)
+      ? JSON.parse(await readFile(`${set.root}/ROLE.json`, "utf8"))
+      : null
+    sets.push({
+      name,
+      label: set.label,
+      packets: now.packets,
+      role: role?.role ?? "held-out",
+      since: role?.since ?? null,
+      first: first.valid
+        ? first.record.metrics.draftDiagnostics.criteria
+        : null,
+      firstMissing: first.valid ? null : first.reason,
+      now: now.draftDiagnostics.criteria,
+      nowClass: now.run?.class ?? null,
+    })
+  }
+  return sets
+}
 const json = (
   res: import("node:http").ServerResponse,
   code: number,
@@ -28,21 +75,32 @@ const server = createServer(async (req, res) => {
     const path = url.pathname
     if (req.method === "GET" && path === "/api/packets") {
       const reviews = await readReviews(auditPath)
+      const withAction = (p: { packet_id: string }) => ({
+        ...p,
+        lastAction:
+          reviews.filter((r) => r.packetId === p.packet_id).at(-1)?.action ??
+          null,
+      })
       return json(res, 200, {
         ...manifest,
-        packets: manifest.packets.map((p) => ({
-          ...p,
-          lastAction:
-            reviews.filter((r) => r.packetId === p.packet_id).at(-1)?.action ??
-            null,
-        })),
+        packets: manifest.packets.map(withAction),
+        examples: examples.map(withAction),
+        examplesNote: fixtures?.description ?? null,
       })
     }
+    if (req.method === "GET" && path === "/api/heldout")
+      return json(res, 200, await heldOutSets())
     if (req.method === "GET" && path === "/api/metrics")
       return json(
         res,
         200,
         JSON.parse(await readFile("eval/results/metrics.json", "utf8")),
+      )
+    if (req.method === "GET" && path === "/api/metrics/holdout")
+      return json(
+        res,
+        200,
+        JSON.parse(await readFile("eval/holdout/results/metrics.json", "utf8")),
       )
     if (req.method === "GET" && path === "/api/failures") {
       const rows = await Promise.all(
@@ -55,9 +113,10 @@ const server = createServer(async (req, res) => {
       )
       return json(res, 200, rows)
     }
-    const match = path.match(/^\/api\/packets\/(packet-\d{3})(\/reviews)?$/)
+    const match = path.match(/^\/api\/packets\/([a-z]+-\d{2,3})(\/reviews)?$/)
     if (match && ids.has(match[1])) {
       const packetId = match[1]
+      const root = rootOf.get(packetId)!
       if (req.method === "GET") {
         if (match[2])
           return json(
@@ -68,12 +127,17 @@ const server = createServer(async (req, res) => {
             ),
           )
         const result = JSON.parse(
-          await readFile(`eval/results/${packetId}.json`, "utf8"),
+          await readFile(`${root}/results/${packetId}.json`, "utf8"),
         )
         const criteria = JSON.parse(
           await readFile(`eval/criteria/${result.criteria_id}.json`, "utf8"),
         )
-        return json(res, 200, { ...result, policy: criteria })
+        return json(res, 200, {
+          ...result,
+          policy: criteria,
+          artifactBase: `/${root}/artifacts/`,
+          example: root !== "eval",
+        })
       }
       if (req.method === "POST" && match[2]) {
         if (
@@ -91,7 +155,7 @@ const server = createServer(async (req, res) => {
         if (typeof input.target !== "string" || typeof input.note !== "string")
           return json(res, 400, { error: "Target and note required" })
         const result = JSON.parse(
-          await readFile(`eval/results/${packetId}.json`, "utf8"),
+          await readFile(`${root}/results/${packetId}.json`, "utf8"),
         )
         const targets = [
           "packet",
@@ -116,14 +180,18 @@ const server = createServer(async (req, res) => {
     }
     if (req.method !== "GET")
       return json(res, 405, { error: "Method not allowed" })
+    const artifactRoots = ["eval/artifacts", `${fixtureRoot}/artifacts`]
     const file =
       path === "/"
         ? "web/index.html"
-        : path.startsWith("/eval/artifacts/")
+        : artifactRoots.some((r) => path.startsWith(`/${r}/`))
           ? path.slice(1)
           : `web${path}`
     const full = resolve(file)
-    const allowed = [resolve("web") + sep, resolve("eval/artifacts") + sep]
+    const allowed = [
+      resolve("web") + sep,
+      ...artifactRoots.map((r) => resolve(r) + sep),
+    ]
     if (!allowed.some((root) => full.startsWith(root)))
       return json(res, 404, { error: "Not found" })
     const data = await readFile(full)

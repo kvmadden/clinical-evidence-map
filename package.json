@@ -7,16 +7,20 @@
     "node": ">=22"
   },
   "scripts": {
+    "generate": "tsx scripts/generate.ts",
     "test": "tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
     "eval": "tsx scripts/evaluate.ts",
     "start": "tsx scripts/server.ts",
     "test:ui": "playwright test",
-    "gate": "npm run typecheck && npm test && npm run eval -- --check && npm run test:ui",
+    "gate": "npm run typecheck && npm test && npm run eval -- --check && tsx scripts/holdout.ts verify && npm run eval:holdout -- --check && npm run eval:holdout-v2 -- --check && npm run eval -- --set multipage --check && npm run test:ui",
     "summary": "tsx scripts/summary.ts",
     "media": "node scripts/media.mjs",
     "format:check": "prettier --check --no-semi services scripts tests web playwright.config.ts tsconfig.json package.json",
-    "report": "node scripts/report.mjs"
+    "report": "node scripts/report.mjs",
+    "eval:holdout": "tsx scripts/evaluate.ts --set holdout",
+    "eval:holdout-v2": "tsx scripts/evaluate.ts --set holdout-v2",
+    "fixtures": "tsx scripts/fixtures.ts"
   },
   "dependencies": {
     "fontkit": "2.0.4",

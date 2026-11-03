@@ -1,0 +1,2246 @@
+{
+  "notice": "Development probes for the stage D reader. Synthetic, every person fictional. The 54 shared battery probes plus the probes from the four evaluation reports (Claude, GPT, Grok, Gemini had none of its own). They were written and adjudicated while the reader was built, so passing them shows the reader does what it was built to do. They are not a held-out measure. Notes say where an expectation was changed from the report that wrote it.",
+  "probes": [
+    {
+      "id": "battery-01",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "adult prose",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMs. Moss is a 54-year-old woman seen for diabetes follow-up.\n"
+    },
+    {
+      "id": "battery-02",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "adult label",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAge: 54\n"
+    },
+    {
+      "id": "battery-03",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "adult table row",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nName | Age | Sex\nRiley Moss (fictional) | 54 | F\n"
+    },
+    {
+      "id": "battery-04",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "adult checkbox",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\n[x] Age: 54 years\n"
+    },
+    {
+      "id": "battery-05",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "adult Q and A",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nQ: Patient age?\nA: 54\n"
+    },
+    {
+      "id": "battery-06",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "adult SOAP",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nS: 54 yo F with T2DM here for refill.\nO: BP 128/80.\n"
+    },
+    {
+      "id": "battery-07",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "needs_review",
+      "note": "adult minor",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAge: 16 years\n"
+    },
+    {
+      "id": "battery-08",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "adult abbreviation y/o",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nPt is a 61 y/o male.\n"
+    },
+    {
+      "id": "battery-09",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "dx prose request",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nI am requesting semaglutide for her type 2 diabetes mellitus.\n"
+    },
+    {
+      "id": "battery-10",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "dx abbreviation indication",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: T2DM (E11.9)\nRx requested: semaglutide\n"
+    },
+    {
+      "id": "battery-11",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "dx history only",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nPast medical history: type 2 diabetes, hypertension.\nSemaglutide requested.\n"
+    },
+    {
+      "id": "battery-12",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "missing",
+      "note": "dx family history only",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nFamily history: mother with type 2 diabetes.\nRequesting semaglutide for weight loss, BMI 34.\n"
+    },
+    {
+      "id": "battery-13",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "dx suspected",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAssessment: possible type 2 diabetes, rule out MODY.\nPlan: start semaglutide.\n"
+    },
+    {
+      "id": "battery-14",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "missing",
+      "note": "dx negated",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nNo history of diabetes.\nRequesting semaglutide for obesity.\n"
+    },
+    {
+      "id": "battery-15",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "dx checkbox",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDiagnosis for this request:\n[x] Type 2 diabetes mellitus\n[ ] Obesity\n"
+    },
+    {
+      "id": "battery-16",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "missing",
+      "note": "dx checkbox unchecked",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDiagnosis for this request:\n[ ] Type 2 diabetes mellitus\n[x] Obesity\n"
+    },
+    {
+      "id": "battery-17",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "lab table with range and flag",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLab | Result | Ref range | Date\nHbA1c | 8.4 % (H) | 4.0-5.6 | 09/20/2026\n"
+    },
+    {
+      "id": "battery-18",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "needs_review",
+      "note": "lab stale",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nA1c 8.4% on 2025-12-01\n"
+    },
+    {
+      "id": "battery-19",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "needs_review",
+      "note": "lab after request",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nA1c 8.4% collected 2026-10-20\n"
+    },
+    {
+      "id": "battery-20",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "missing",
+      "note": "lab blank",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nHbA1c: ____\n"
+    },
+    {
+      "id": "battery-21",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "lab split across lines",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMost recent hemoglobin\nA1c was 8.1% (2026-09-15).\n"
+    },
+    {
+      "id": "battery-22",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "lab A1C= form",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLabs 9/15/26: A1C=7.9%, eGFR 82\n"
+    },
+    {
+      "id": "battery-23",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "prior full trial",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMetformin 1000 mg BID from 2026-01-10 to 2026-08-30.\nA1c 9.0% on 2026-01-05, 8.2% on 2026-06-01.\n"
+    },
+    {
+      "id": "battery-24",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "prior failed without values",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nFailed metformin 1000 mg BID x 6 months, inadequate response.\n"
+    },
+    {
+      "id": "battery-25",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "prior intolerance with reason",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMetformin stopped after 3 weeks due to severe diarrhea (GI intolerance).\n"
+    },
+    {
+      "id": "battery-26",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "prior intolerance without reason",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMetformin intolerant.\n"
+    },
+    {
+      "id": "battery-27",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "prior other class only",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nTried glipizide 10 mg daily for 1 year, A1c remained 8.5%.\n"
+    },
+    {
+      "id": "battery-28",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "prior checkbox unchecked",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nPrior therapy:\n[ ] Metformin\n[x] Sitagliptin 100 mg daily\n"
+    },
+    {
+      "id": "battery-29",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "prior contraindication",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMetformin contraindicated: eGFR 25.\n"
+    },
+    {
+      "id": "battery-30",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "prior table",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDrug | Dose | Start | Stop | A1c before | A1c after\nmetformin | 1000 mg BID | 01/10/2026 | 08/30/2026 | 9.0% (01/05/2026) | 8.2% (06/01/2026)\n"
+    },
+    {
+      "id": "battery-31",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "dose brand and sig code",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRx: Ozempic 0.5mg SQ q7d\n"
+    },
+    {
+      "id": "battery-32",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "dose different",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequested: semaglutide 1 mg SC weekly\n"
+    },
+    {
+      "id": "battery-33",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "dose request vs med list conflict",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequested: semaglutide 0.5 mg SC weekly\nCurrent medications: semaglutide 0.25 mg SC weekly\n"
+    },
+    {
+      "id": "battery-34",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "dose titration note",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequested: semaglutide 0.5 mg SC weekly (titrated up from 0.25 mg).\n"
+    },
+    {
+      "id": "battery-35",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "missing",
+      "note": "dose missing",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nSemaglutide requested.\n"
+    },
+    {
+      "id": "battery-36",
+      "source": "battery",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "dose QW form",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nSig: semaglutide 0.5 mg subcut QW\n"
+    },
+    {
+      "id": "battery-37",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "pcsk9 dx prior MI",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: ASCVD, prior MI in 2023.\nRequesting evolocumab.\n"
+    },
+    {
+      "id": "battery-38",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "pcsk9 dx CAD stent synonym",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRepatha requested for CAD s/p PCI with stent.\n"
+    },
+    {
+      "id": "battery-39",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "pcsk9 dx problem list only",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nProblem list: CAD\nRequesting evolocumab for hyperlipidemia.\n"
+    },
+    {
+      "id": "battery-40",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "pcsk9 lab",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLDL-C 132 mg/dL (09/30/2026)\n"
+    },
+    {
+      "id": "battery-41",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "needs_review",
+      "note": "pcsk9 lab below threshold",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLDL 64 mg/dL on 2026-09-30\n"
+    },
+    {
+      "id": "battery-42",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "pcsk9 prior full",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAtorvastatin 80 mg daily since 2026-01-15.\nLDL 160 mg/dL on 2026-01-10, 118 mg/dL on 2026-07-01.\n"
+    },
+    {
+      "id": "battery-43",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "pcsk9 prior low dose",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAtorvastatin 20 mg daily since 2025-06-01. LDL 160 mg/dL on 2025-05-20, 140 mg/dL on 2025-12-01.\n"
+    },
+    {
+      "id": "battery-44",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "pcsk9 prior statin intolerance",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nStatin intolerance: myalgias with CK elevation on atorvastatin and rosuvastatin.\n"
+    },
+    {
+      "id": "battery-45",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "pcsk9 dose brand",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRepatha 140 mg SC every 2 weeks\n"
+    },
+    {
+      "id": "battery-46",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "pcsk9 dose monthly",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nevolocumab 420 mg SC monthly\n"
+    },
+    {
+      "id": "battery-47",
+      "source": "battery",
+      "criteria": "pcsk9",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "pcsk9 dose table",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDrug | Dose | Route | Freq\nevolocumab | 140 mg | SC | q2wk\n"
+    },
+    {
+      "id": "battery-48",
+      "source": "battery",
+      "criteria": "biologic-psoriasis",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "pso dx",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequesting adalimumab for moderate to severe plaque psoriasis.\n"
+    },
+    {
+      "id": "battery-49",
+      "source": "battery",
+      "criteria": "biologic-psoriasis",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "pso dx mild",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequesting adalimumab for mild plaque psoriasis.\n"
+    },
+    {
+      "id": "battery-50",
+      "source": "battery",
+      "criteria": "biologic-psoriasis",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "pso lab",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nBSA 12% on 09/28/2026\n"
+    },
+    {
+      "id": "battery-51",
+      "source": "battery",
+      "criteria": "biologic-psoriasis",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "pso prior full",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMethotrexate 15 mg weekly from 2026-02-01.\nBSA 18% on 2026-01-25, 9% on 2026-06-15.\n"
+    },
+    {
+      "id": "battery-52",
+      "source": "battery",
+      "criteria": "biologic-psoriasis",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "pso prior intolerance",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMethotrexate stopped: elevated liver enzymes (ALT 3x ULN).\n"
+    },
+    {
+      "id": "battery-53",
+      "source": "battery",
+      "criteria": "biologic-psoriasis",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "pso dose brand",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nHumira 40 mg SC q14 days\n"
+    },
+    {
+      "id": "battery-54",
+      "source": "battery",
+      "criteria": "biologic-psoriasis",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "pso dose weekly",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nadalimumab 40 mg SC weekly\n"
+    },
+    {
+      "id": "claude-A01",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "age 92 is hidden by the privacy step",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAge: 92\n"
+    },
+    {
+      "id": "claude-A02",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "needs_review",
+      "note": "minor with a label variant",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAge stated: 17 years\n"
+    },
+    {
+      "id": "claude-A03",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "age on the patient line",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional), age 44\n"
+    },
+    {
+      "id": "claude-A04",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "age at diagnosis read as current age",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAge 12 at diagnosis; now 45 years old.\n"
+    },
+    {
+      "id": "claude-A05",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "Aged label",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAged 45\n"
+    },
+    {
+      "id": "claude-A06",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "needs_review",
+      "note": "two documents disagree on age",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAge: 45\nAge: 16\n"
+    },
+    {
+      "id": "claude-A07",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "needs_review",
+      "note": "OCR-style letter O in the age",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAge: 5O\n"
+    },
+    {
+      "id": "claude-A08",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "pipe table row",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAge | 46\n"
+    },
+    {
+      "id": "claude-D01",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "missing",
+      "note": "post-negation 'ruled out'",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDiagnosis: type 2 diabetes ruled out; obesity.\n"
+    },
+    {
+      "id": "claude-D02",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "family history in the indication field (adjudicated in the 3 Nov review round: a relative's condition in the request field goes to review (Grok finding 8); was missing)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: family history of type 2 diabetes\n"
+    },
+    {
+      "id": "claude-D03",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "different indication but class condition confirmed in assessment",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: obesity\nAssessment: Type 2 diabetes mellitus, A1c 8.4%.\n"
+    },
+    {
+      "id": "claude-D04",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "ICD-10 code only",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDiagnosis for this request: E11.9\n"
+    },
+    {
+      "id": "claude-D05",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "T2D abbreviation",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: T2D, uncontrolled\n"
+    },
+    {
+      "id": "claude-D06",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "Type II DM",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: Type II DM\n"
+    },
+    {
+      "id": "claude-D07",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "diabetes without a type",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: diabetes mellitus, uncontrolled\n"
+    },
+    {
+      "id": "claude-D08",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "missing",
+      "note": "unchecked box on the same line",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication for this request: [ ] Type 2 diabetes  [x] Obesity\n"
+    },
+    {
+      "id": "claude-D09",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "probable diagnosis in assessment, no indication line",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAssessment: probable T2DM; confirm with repeat A1c.\n"
+    },
+    {
+      "id": "claude-D10",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "history of, now in remission",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: history of type 2 diabetes, now in remission\n"
+    },
+    {
+      "id": "claude-D11",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "mild-to-moderate read as moderate-to-severe",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDiagnosis: mild-to-moderate plaque psoriasis\n"
+    },
+    {
+      "id": "claude-D12",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "Psoriasis Vulgaris capitalized",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDiagnosis: Psoriasis Vulgaris, moderate to severe\n"
+    },
+    {
+      "id": "claude-D13",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "plaque psoriasis with BSA 15% and PASI 14 but no stated severity; the rubric needs stated moderate-to-severe, never inferred from a measure (adjudicated: Claude's evaluation expected found)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDiagnosis: chronic plaque psoriasis, BSA 15%, PASI 14\n"
+    },
+    {
+      "id": "claude-D14",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "CAD abbreviation",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: CAD s/p CABG 2022\n"
+    },
+    {
+      "id": "claude-D15",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "s/p MI abbreviation",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: s/p MI 03/2024\n"
+    },
+    {
+      "id": "claude-D16",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "risk, not disease (adjudicated in the 3 Nov review round: the request field names the condition only as a risk, which a person must read (Grok finding 8); was missing)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: at risk for coronary artery disease, primary prevention\n"
+    },
+    {
+      "id": "claude-D17",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "Coronary Heart Disease capitalized",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: Coronary Heart Disease with prior stent\n"
+    },
+    {
+      "id": "claude-D18",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "suspected, assessment only",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAssessment: suspected ASCVD, stress test pending.\n"
+    },
+    {
+      "id": "claude-D19",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "requested indication label",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequested indication: type 2 diabetes\n"
+    },
+    {
+      "id": "claude-L01",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "HbAlc OCR form",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nHbAlc: 8.4% on 2026-09-20\n"
+    },
+    {
+      "id": "claude-L02",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "date before value",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nA1c 2026-09-20: 8.4%\n"
+    },
+    {
+      "id": "claude-L03",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "needs_review",
+      "note": "'was' between name and value, no date",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMost recent A1c was 8.4%.\n"
+    },
+    {
+      "id": "claude-L04",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "goal stated before the value",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLDL-C goal <70 mg/dL; current 132 mg/dL on 2026-09-30\n"
+    },
+    {
+      "id": "claude-L05",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "3.4 mmol/L converts to 131 mg/dL (x38.67), above 70; stage D rule 7 converts mmol/L",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLDL-C 3.4 mmol/L on 2026-09-30\n"
+    },
+    {
+      "id": "claude-L06",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "needs_review",
+      "note": "invalid specimen",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nA1c 8.4% on 2026-09-20 (specimen hemolyzed, result invalid)\n"
+    },
+    {
+      "id": "claude-L07",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "dd-Mon-yyyy dates",
+      "text": "Request date: 05-Oct-2026\nPatient: Riley Moss (fictional)\nLDL-C 132 mg/dL on 30-Sep-2026\n"
+    },
+    {
+      "id": "claude-L08",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "needs_review",
+      "note": "two different request dates, both labeled",
+      "text": "Letter date: 2026-10-05\nDate of request: 2026-06-15\nPatient: Riley Moss (fictional)\nLDL-C 132 mg/dL on 2026-09-30\n"
+    },
+    {
+      "id": "claude-L09",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "latest value below threshold, earlier value qualifies (rubric: any value)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLDL-C 150 mg/dL on 2026-06-01\nLDL-C 62 mg/dL on 2026-09-30\n"
+    },
+    {
+      "id": "claude-L10",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "lab table row with flag and range",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nTest | Result | Flag | Range | Collected\nHemoglobin A1c | 8.4 | H | 4.0-5.6 % | 2026-09-20\n"
+    },
+    {
+      "id": "claude-L11",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "needs_review",
+      "note": "only a received date, no request date (window unverifiable)",
+      "text": "Received by plan: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: evolocumab 140 mg every 2 weeks\nLDL-C 132 mg/dL on 2026-09-30\n"
+    },
+    {
+      "id": "claude-L12",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "BSA as %BSA",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\n%BSA 14 on 2026-09-28\n"
+    },
+    {
+      "id": "claude-P01",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "allergy line with 'contraindicated' and no metformin anywhere",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAllergies: sulfa - contraindicated due to rash.\n"
+    },
+    {
+      "id": "claude-P02",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "other drug intolerance as orphan statement",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nGlipizide stopped for hypoglycemia.\n"
+    },
+    {
+      "id": "claude-P03",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "'stopped for cost' read as intolerance",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin 1000 mg BID x 6 months, stopped for cost\n"
+    },
+    {
+      "id": "claude-P04",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "'stopped for inadequate response' read as intolerance",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin 1000 mg BID x 6 months, stopped for inadequate response\n"
+    },
+    {
+      "id": "claude-P05",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "intolerance of another drug borrowed for metformin",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: glipizide 5 mg daily, stopped for hypoglycemia.\nPrior therapy: metformin 1000 mg BID x 6 months.\n"
+    },
+    {
+      "id": "claude-P06",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "never tried",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: never tried metformin\n"
+    },
+    {
+      "id": "claude-P07",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "declined by patient",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin declined by patient\n"
+    },
+    {
+      "id": "claude-P08",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "duration but follow-up only 14 days after baseline",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin 1000 mg BID x 6 months\nBaseline before metformin: A1c 9.0% on 2026-09-01\nOn metformin: A1c 8.5% on 2026-09-15\n"
+    },
+    {
+      "id": "claude-P09s",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "two drugs on one line, atorvastatin second (variant with a start date)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: ezetimibe 10 mg daily; atorvastatin 80 mg daily from 2026-01-06 to 2026-07-06\nBaseline before atorvastatin: LDL-C 160 mg/dL on 2026-01-05\nOn atorvastatin: LDL-C 118 mg/dL on 2026-06-01\n"
+    },
+    {
+      "id": "claude-P09",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "two drugs on one line, atorvastatin second (adjudicated: Claude's evaluation expected found; no start date, so the 90 days from start to follow-up cannot be checked)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: ezetimibe 10 mg daily; atorvastatin 80 mg daily x 6 months\nBaseline before atorvastatin: LDL-C 160 mg/dL on 2026-01-05\nOn atorvastatin: LDL-C 118 mg/dL on 2026-06-01\n"
+    },
+    {
+      "id": "claude-P10s",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "dose of an earlier drug used for atorvastatin (variant with a start date)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: ezetimibe 10 mg daily from 2026-01-06 to 2026-07-06\nPrior therapy: atorvastatin 80 mg daily from 2026-01-06 to 2026-07-06\nBaseline before atorvastatin: LDL-C 160 mg/dL on 2026-01-05\nOn atorvastatin: LDL-C 118 mg/dL on 2026-06-01\n"
+    },
+    {
+      "id": "claude-P10",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "dose of an earlier drug used for atorvastatin (adjudicated: Claude's evaluation expected found; no start date, so the 90 days from start to follow-up cannot be checked)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: ezetimibe 10 mg daily x 6 months\nPrior therapy: atorvastatin 80 mg daily x 6 months\nBaseline before atorvastatin: LDL-C 160 mg/dL on 2026-01-05\nOn atorvastatin: LDL-C 118 mg/dL on 2026-06-01\n"
+    },
+    {
+      "id": "claude-P11",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "statin intolerance with reason, label form",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nStatin intolerance: myalgia with CK 900 on atorvastatin 40 mg.\n"
+    },
+    {
+      "id": "claude-P12",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "stopped - myalgia in med history",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nAtorvastatin 80 mg daily - stopped - myalgia\n"
+    },
+    {
+      "id": "claude-P13",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "GI intolerance in parentheses",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMetformin: GI intolerance (diarrhea)\n"
+    },
+    {
+      "id": "claude-P14",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "capitalized drug after a lowercase word",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nPrior therapy: patient tried Metformin 1000 mg BID x 6 months\n"
+    },
+    {
+      "id": "claude-P15s",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "rosuvastatin 40 mg is high-intensity; counts under the stage D rule (Kevin, 2 Nov) (variant with a start date)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: rosuvastatin 40 mg daily from 2026-01-06 to 2026-07-06\nBaseline before rosuvastatin: LDL-C 160 mg/dL on 2026-01-05\nOn rosuvastatin: LDL-C 118 mg/dL on 2026-06-01\n"
+    },
+    {
+      "id": "claude-P15",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "rosuvastatin 40 mg is high-intensity; counts under the stage D rule (Kevin, 2 Nov) (adjudicated: Claude's evaluation expected found; no start date, so the 90 days from start to follow-up cannot be checked)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: rosuvastatin 40 mg daily x 6 months\nBaseline before rosuvastatin: LDL-C 160 mg/dL on 2026-01-05\nOn rosuvastatin: LDL-C 118 mg/dL on 2026-06-01\n"
+    },
+    {
+      "id": "claude-P16",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "metformin planned, not taken",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin 500 mg BID planned if A1c stays high\n"
+    },
+    {
+      "id": "claude-P17",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "number-word duration",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: methotrexate 15 mg weekly for four months, no improvement\n"
+    },
+    {
+      "id": "claude-P18",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "full trial outside a MEDICATION HISTORY heading",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMedication course:\nPrior therapy: metformin 1000 mg BID from 2026-01-10 to 2026-08-30\nBaseline before metformin: A1c 9.0% on 2026-01-05\nOn metformin: A1c 8.2% on 2026-06-01\n"
+    },
+    {
+      "id": "claude-P19",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "full trial with 'before' and 'during' wording",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin 1000 mg BID from 2026-01-10 to 2026-08-30\nA1c before metformin: 9.0% on 2026-01-05\nA1c during metformin: 8.2% on 2026-06-01\n"
+    },
+    {
+      "id": "claude-P20",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "dev-template full trial (control)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin 1000 mg BID from 2026-01-10 to 2026-08-30\nBaseline before metformin: A1c 9.0% on 2026-01-05\nOn metformin: A1c 8.2% on 2026-06-01\n"
+    },
+    {
+      "id": "claude-P21",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "methotrexate stopped for pregnancy planning: a documented contraindication with its reason (adjudicated: Claude's evaluation expected review)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: methotrexate 15 mg weekly x 2 months, stopped for pregnancy planning\n"
+    },
+    {
+      "id": "claude-P22",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "'failed' outside a prior label",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nOutcome: failed metformin\n"
+    },
+    {
+      "id": "claude-S01",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "medication list names a different drug",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.5 mg weekly\nCurrent medications: metformin 1000 mg BID\n"
+    },
+    {
+      "id": "claude-S02",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "medication list drug not in lexicon",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.5 mg weekly\nCurrent medications: lisinopril 10 mg daily\n"
+    },
+    {
+      "id": "claude-S03",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "loading dose then maintenance",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: adalimumab 80 mg SC once, then 40 mg every other week starting day 8\n"
+    },
+    {
+      "id": "claude-S04",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "pen strength before the dose",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 2 mg/1.5 mL pen, inject 0.5 mg weekly\n"
+    },
+    {
+      "id": "claude-S05",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "500 mcg equals 0.5 mg",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 500 mcg SC weekly\n"
+    },
+    {
+      "id": "claude-S06",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "Q2W code",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: adalimumab 40 mg SC Q2W\n"
+    },
+    {
+      "id": "claude-S07",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "every 2 wks",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: evolocumab 140 mg SC every 2 wks\n"
+    },
+    {
+      "id": "claude-S08",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "every seven days in words",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.5 mg SC every seven days\n"
+    },
+    {
+      "id": "claude-S09",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "second dose field disagrees",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.5 mg SC weekly\nDose and frequency: 1 mg SC weekly\n"
+    },
+    {
+      "id": "claude-S10",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "frequency list order picks the wrong frequency",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: adalimumab 40 mg weekly (previously every other week)\n"
+    },
+    {
+      "id": "claude-S11",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "three times weekly read as weekly",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.5 mg three times weekly\n"
+    },
+    {
+      "id": "claude-S12",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "leading decimal without a zero: confirm 0.5 mg, never read as 5 mg",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide .5 mg weekly\n"
+    },
+    {
+      "id": "claude-S13",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "different GLP-1 requested (contestable expectation)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: dulaglutide 1.5 mg weekly\n"
+    },
+    {
+      "id": "claude-S14",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "Wegovy brand: rubric pass, clinical flag (weight-management product)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: Wegovy 0.5 mg weekly\n"
+    },
+    {
+      "id": "claude-S15",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "plan line in a SOAP note",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nP: Evolocumab 140mg SQ q14d.\n"
+    },
+    {
+      "id": "claude-S16",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "titration step: current 0.25 mg, request 0.5 mg (rubric: disagree)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.5 mg weekly\nCurrent medications: semaglutide 0.25 mg weekly x 4 weeks, completed\n"
+    },
+    {
+      "id": "claude-S17",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "request field reads 'Humira Pen 40 mg/0.4 mL' with no frequency",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: Humira Pen 40 mg/0.4 mL\n"
+    },
+    {
+      "id": "claude-V01",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "brand name capitalized after a lowercase word",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.5 mg weekly, dispense as Ozempic pen\n"
+    },
+    {
+      "id": "claude-V02",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "first name at sentence start (privacy leak check)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRiley is 54 years old and here for follow-up.\n"
+    },
+    {
+      "id": "claude-V03",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "day-month without year in a range shares the year",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLDL-C 132 mg/dL on 30 Sep 2026\n"
+    },
+    {
+      "id": "claude-V04",
+      "source": "claude",
+      "criteria": "biologic-psoriasis",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "range with the year only on the end date",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: methotrexate 15 mg weekly from 2 January to 30 June 2026\nBaseline before methotrexate: BSA 15% on 2026-01-01\nOn methotrexate: BSA 9% on 2026-05-01\n"
+    },
+    {
+      "id": "claude-V05",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "received date labeled 'Received:' rules out month-first",
+      "text": "Received: 2026-10-06\nRequest date: 10/07/2026\nPatient: Riley Moss (fictional)\nA1c 8.4% on 04/03/2026\n"
+    },
+    {
+      "id": "claude-D20",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "two reasons, class condition second",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: obesity and type 2 diabetes mellitus\n"
+    },
+    {
+      "id": "claude-D21",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "post-modifier hedge 'unlikely'",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: type 2 diabetes unlikely; obesity\n"
+    },
+    {
+      "id": "claude-D22",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "post-modifier 'not confirmed'",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: type 2 diabetes (per patient report, not confirmed)\n"
+    },
+    {
+      "id": "claude-D23",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "question-and-answer label",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDiagnosis? Type 2 diabetes mellitus\n"
+    },
+    {
+      "id": "claude-L13",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "date in parentheses before the value",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nA1c (2026-09-20): 8.4%\n"
+    },
+    {
+      "id": "claude-L14",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "older value's date taken for the current value",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nA1c: 8.4% (prior 9.1% on 2026-01-05) collected 2026-09-20\n"
+    },
+    {
+      "id": "claude-L15",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "two labs on one line, LDL second",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLabs 2026-09-20: A1c 6.1%, LDL-C 132 mg/dL\n"
+    },
+    {
+      "id": "claude-P23",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "duration in 'wks', no start date (timing unverifiable)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin 1000 mg BID for 16 wks\nBaseline before metformin: A1c 9.0% on 2026-01-05\nOn metformin: A1c 8.2% on 2026-06-01\n"
+    },
+    {
+      "id": "claude-P24",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "trial dated after the request",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin 1000 mg BID from 2026-11-01 to 2027-03-01\nBaseline before metformin: A1c 9.0% on 2026-10-30\nOn metformin: A1c 8.2% on 2027-02-15\n"
+    },
+    {
+      "id": "claude-P25",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "checked box on the line below the label",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nPrior therapy:\n[x] Metformin 1000 mg BID x 6 months\n[ ] Sitagliptin\n"
+    },
+    {
+      "id": "claude-P26",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "unchecked metformin, checked sitagliptin, same line",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: [ ] metformin  [x] sitagliptin 100 mg daily x 6 months\n"
+    },
+    {
+      "id": "claude-P27",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "inline 'Medication history:' label",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMedication history: metformin 1000 mg BID from 2026-01-10 to 2026-08-30\nBaseline before metformin: A1c 9.0% on 2026-01-05\nOn metformin: A1c 8.2% on 2026-06-01\n"
+    },
+    {
+      "id": "claude-S18",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "escalation to 1 mg in the same request",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.5 mg SC weekly x 4 weeks, then 1 mg weekly\n"
+    },
+    {
+      "id": "claude-S19",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "two alternative regimens",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: evolocumab 140 mg SC every 2 weeks or 420 mg monthly\n"
+    },
+    {
+      "id": "claude-P28",
+      "source": "claude",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "non-statin intolerance reported as atorvastatin intolerance",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nEzetimibe stopped for diarrhea.\n"
+    },
+    {
+      "id": "claude-P29",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "negated contraindication",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMetformin is not contraindicated in this patient.\n"
+    },
+    {
+      "id": "claude-P30",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "contraindication field answered 'none'",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMetformin contraindicated: none\n"
+    },
+    {
+      "id": "claude-P31",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "wrong-class trial hides a metformin contraindication",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nPrior therapy: glipizide 10 mg daily x 6 months\nMetformin contraindicated due to eGFR 25.\n"
+    },
+    {
+      "id": "claude-P32",
+      "source": "claude",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "trial values written newest first",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin 1000 mg BID from 2026-01-10 to 2026-08-30\nA1c 8.2% on 2026-06-01, 9.0% on 2026-01-05\n"
+    },
+    {
+      "id": "gpt-01",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "needs_review",
+      "note": "two ages disagree",
+      "text": "Request date: 2026-10-05\nAge: 17\nAge: 54\n"
+    },
+    {
+      "id": "gpt-02",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "needs_review",
+      "note": "two ages disagree",
+      "text": "Request date: 2026-10-05\nAge: 54\nAge: 17\n"
+    },
+    {
+      "id": "gpt-03",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "needs_review",
+      "note": "corrected age is a minor",
+      "text": "Request date: 2026-10-05\nAge: 54 (incorrect; corrected to 15)\n"
+    },
+    {
+      "id": "gpt-04",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "age over 89 must stay readable",
+      "text": "Request date: 2026-10-05\nAge: 95\n"
+    },
+    {
+      "id": "gpt-05",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nAGE = 54\n"
+    },
+    {
+      "id": "gpt-06",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nAge: unknown; approximately 54\n"
+    },
+    {
+      "id": "gpt-07",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "missing",
+      "note": "",
+      "text": "Request date: 2026-10-05\nIndication: family history of type 2 diabetes; patient has obesity\n"
+    },
+    {
+      "id": "gpt-08",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nIndication: type 2 diabetes ruled out\n"
+    },
+    {
+      "id": "gpt-09",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nIndication: ? type 2 diabetes\n"
+    },
+    {
+      "id": "gpt-10",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nIndication: concern for type 2 diabetes\n"
+    },
+    {
+      "id": "gpt-11",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "(adjudicated in the 3 Nov review round: nothing closes the list, so whether 'denies' covers type 2 diabetes cannot be told, and the fail-safe answer is review (GPT finding 1); was found)",
+      "text": "Request date: 2026-10-05\nIndication: denies nausea, type 2 diabetes\n"
+    },
+    {
+      "id": "gpt-12",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "pseudo-negation",
+      "text": "Request date: 2026-10-05\nIndication: no complications of type 2 diabetes\n"
+    },
+    {
+      "id": "gpt-13",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nIndication: type 2 diabetes\nIndication: obesity only; diabetes entry incorrect\n"
+    },
+    {
+      "id": "gpt-14",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nAssessment: possible T2DM\n"
+    },
+    {
+      "id": "gpt-15",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "missing",
+      "note": "",
+      "text": "Request date: 2026-10-05\nIndication: [ ] type 2 diabetes [x] obesity\n"
+    },
+    {
+      "id": "gpt-16",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nIndication: obesity; type 2 diabetes is the reason for this request\n"
+    },
+    {
+      "id": "gpt-17",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "missing",
+      "note": "a target is not a result",
+      "text": "Request date: 2026-10-05\nA1c target 7.0% on 2026-09-20\n"
+    },
+    {
+      "id": "gpt-18",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nA1c <6.0% on 2026-09-20\n"
+    },
+    {
+      "id": "gpt-19",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nA1c 8.4% on 2026-09-20; corrected result 6.1%\n"
+    },
+    {
+      "id": "gpt-20",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nA1c | 8.4% | 2026-09-20\n"
+    },
+    {
+      "id": "gpt-21",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nA1c was 8.4% on 2026-09-20\n"
+    },
+    {
+      "id": "gpt-22",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nA1c 8.4% on 20-Sep-2026\n"
+    },
+    {
+      "id": "gpt-23",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "needs_review",
+      "note": "two request dates",
+      "text": "Request date: 2026-10-05\nRequest date: 2026-10-06\nA1c 8.4% on 2026-09-20\n"
+    },
+    {
+      "id": "gpt-24",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPrior: metformin not contraindicated due to renal function\n"
+    },
+    {
+      "id": "gpt-25",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPrior: metformin stopped for inadequate response\n"
+    },
+    {
+      "id": "gpt-26",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPrior: metformin stopped for insurance coverage\n"
+    },
+    {
+      "id": "gpt-27",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPrior: metformin 500 mg BID\nFamily history: mother stopped for diarrhea\n"
+    },
+    {
+      "id": "gpt-28",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "adjudicated: GPT expected missing; an unattributed contraindication cannot be ruled irrelevant under the whole-packet rule",
+      "text": "Request date: 2026-10-05\nNo drug trial recorded.\nDrug contraindicated: renal disease\n"
+    },
+    {
+      "id": "gpt-29",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPrior: glipizide 5 mg daily; metformin contraindicated due to eGFR 20\n"
+    },
+    {
+      "id": "gpt-30",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPrior: metformin 500 mg BID\nPrior: glipizide stopped for nausea\n"
+    },
+    {
+      "id": "gpt-31",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPrior: metformin 500 mg BID for 100 days\nBaseline A1c 9% on 2026-01-01\nOn metformin A1c 8% on 2026-01-02\n"
+    },
+    {
+      "id": "gpt-32",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "adjudicated: GPT expected missing; a request for another drug goes to review",
+      "text": "Request date: 2026-10-05\nDose: 0.5 mg weekly\nRequest: glipizide\n"
+    },
+    {
+      "id": "gpt-33",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nRequest: semaglutide 0.5 mg weekly\nCurrent: metformin 1000 mg BID\n"
+    },
+    {
+      "id": "gpt-34",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nRequest: semaglutide 0.5 mg weekly\nRequest: semaglutide 1 mg weekly\n"
+    },
+    {
+      "id": "gpt-35",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "stated correction",
+      "text": "Request date: 2026-10-05\nRequest: semaglutide 1 mg weekly\nRequest: semaglutide 0.5 mg weekly; correction replaces prior order\n"
+    },
+    {
+      "id": "gpt-36",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nRequest: semaglutide 0.5 mg weekly; metformin 1000 mg BID\n"
+    },
+    {
+      "id": "gpt-37",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nRequest: semaglutide 500 mcg weekly\n"
+    },
+    {
+      "id": "gpt-38",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "adjudicated: GPT expected found; a dose without a leading zero is confirmed by a person, never read as 5 mg",
+      "text": "Request date: 2026-10-05\nRequest: semaglutide .5 mg weekly\n"
+    },
+    {
+      "id": "gpt-39",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "adjudicated: GPT expected found; a decimal comma is confirmed by a person",
+      "text": "Request date: 2026-10-05\nRequest: semaglutide 0,5 mg weekly\n"
+    },
+    {
+      "id": "gpt-40",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nRequest: semaglutide 0.5 mg once every seven days\n"
+    },
+    {
+      "id": "gpt-41",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "adjudicated: GPT expected missing; a dose with no named drug is incomplete, not absent",
+      "text": "Request date: 2026-10-05\nDose: 0.5 mg weekly\n"
+    },
+    {
+      "id": "gpt-42",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nRequest: semaglutide 0.5 mg weekly not requested; old order\n"
+    },
+    {
+      "id": "gpt-43",
+      "source": "gpt",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "wrapped value",
+      "text": "Request date: 2026-10-05\nIndication: type 2\ndiabetes mellitus\n"
+    },
+    {
+      "id": "gpt-44",
+      "source": "gpt",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nLDL-C 90 mg/dL on 2026-09-20\n"
+    },
+    {
+      "id": "gpt-45",
+      "source": "gpt",
+      "criteria": "pcsk9",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nRequest: evolocumab 140 mg every 2 wks\n"
+    },
+    {
+      "id": "gpt-46",
+      "source": "gpt",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPrior: atorvastatin 60 mg daily for 100 days\nBaseline LDL 150 mg/dL on 2026-01-01\nOn atorvastatin LDL 100 mg/dL on 2026-05-01\n"
+    },
+    {
+      "id": "gpt-47",
+      "source": "gpt",
+      "criteria": "biologic-psoriasis",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nIndication: psoriasis vulgaris, moderate\n"
+    },
+    {
+      "id": "gpt-48",
+      "source": "gpt",
+      "criteria": "biologic-psoriasis",
+      "criterion": "lab",
+      "expected": "needs_review",
+      "note": "adjudicated: GPT expected found; a fraction unit goes to review",
+      "text": "Request date: 2026-10-05\nBSA 0.12 fraction on 2026-09-20\n"
+    },
+    {
+      "id": "grok-01",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nPt age: 54\n"
+    },
+    {
+      "id": "grok-02",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAge: 54-year-old\n"
+    },
+    {
+      "id": "grok-03",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMother is 54. Patient is 16 years old.\n"
+    },
+    {
+      "id": "grok-04",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "missing",
+      "note": "no age words anywhere",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nSemaglutide requested for type 2 diabetes.\n"
+    },
+    {
+      "id": "grok-05",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "(adjudicated in the 3 Nov review round: Grok's review asks review for a relative's condition in the request field (Grok finding 8); was missing)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: family history of type 2 diabetes mellitus\n"
+    },
+    {
+      "id": "grok-06",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: type 2 diabetes mellitus, ruled out\n"
+    },
+    {
+      "id": "grok-07",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAssessment: type 2 diabetes mellitus is the reason for this request\n"
+    },
+    {
+      "id": "grok-08",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "missing",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nPMH: mother with type 2 diabetes mellitus\n"
+    },
+    {
+      "id": "grok-09",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDx: E11.9\n"
+    },
+    {
+      "id": "grok-10",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: obesity with type 2 diabetes mellitus\n"
+    },
+    {
+      "id": "grok-11",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "(adjudicated in the 3 Nov review round: the only diagnosis entry is an unchecked box, which a person must read (Grok finding 8); was missing)",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDiagnosis: [ ] Type 2 diabetes mellitus\n"
+    },
+    {
+      "id": "grok-12",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nDiagnosis: [x] Type 2 diabetes mellitus\n"
+    },
+    {
+      "id": "grok-13",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "diagnosis",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nProblem list: type 2 diabetes mellitus\n"
+    },
+    {
+      "id": "grok-14",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "a reference range is never the result",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nA1c ref 4.0-5.6 result 8.2% on 2026-09-01\n"
+    },
+    {
+      "id": "grok-15",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nA1c 8.2% (H) on 2026-09-01\n"
+    },
+    {
+      "id": "grok-16",
+      "source": "grok",
+      "criteria": "pcsk9",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "2.8 mmol/L converts to 108 mg/dL",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLDL-C 2.8 mmol/L on 2026-09-01\n"
+    },
+    {
+      "id": "grok-17",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "48 mmol/mol is about 6.5%, at goal",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMEDICATION HISTORY\nPrior therapy: metformin 1000 mg BID from 2026-01-10 to 2026-08-30\nBaseline before metformin: A1c 9.0% on 2026-01-05\nOn metformin: HbA1c 48 mmol/mol on 2026-06-01\n"
+    },
+    {
+      "id": "grok-18",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "needs_review",
+      "note": "two request dates",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest date: 2026-09-01\nA1c 8% on 2026-09-20\n"
+    },
+    {
+      "id": "grok-19",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "no Prior: label",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nMetformin 1000 mg BID from 2026-01-10 to 2026-08-30\nA1c 9.0% on 2026-01-05\nA1c 8.2% on 2026-06-01\n"
+    },
+    {
+      "id": "grok-20",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nStopped metformin for GI upset\n"
+    },
+    {
+      "id": "grok-21",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nmetformin stopped - diarrhea\n"
+    },
+    {
+      "id": "grok-22",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIntolerance to metformin: diarrhea\n"
+    },
+    {
+      "id": "grok-23",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nFailed glipizide, inadequate response\n"
+    },
+    {
+      "id": "grok-24",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nSitagliptin contraindicated: pancreatitis\n"
+    },
+    {
+      "id": "grok-25",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "titration with a clear final dose",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.25 mg weekly for 4 weeks, then 0.5 mg weekly\n"
+    },
+    {
+      "id": "grok-26",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: Ozempic 0.5 mg subcutaneously q.wk\n"
+    },
+    {
+      "id": "grok-27",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide\nDose: 0.5 mg every 7 days\n"
+    },
+    {
+      "id": "grok-28",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide\nDose: 0.5mg q7days\n"
+    },
+    {
+      "id": "grok-29",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.5 mg weekly\nCurrent medications: lisinopril 10 mg daily; semaglutide 0.5 mg weekly\n"
+    },
+    {
+      "id": "grok-30",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRequest: semaglutide 0.5 mg weekly\nCurrent medications: semaglutide, lisinopril 20 mg daily\n"
+    },
+    {
+      "id": "grok-31",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "missing",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nPrior therapies tried: [ ] Metformin 1000 mg BID x 6 months\n"
+    },
+    {
+      "id": "grok-32",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "prior",
+      "expected": "needs_review",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\n[x] Metformin 1000 mg BID x 6 months, inadequate response\n"
+    },
+    {
+      "id": "grok-33",
+      "source": "grok",
+      "criteria": "biologic-psoriasis",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "adjudicated: Grok expected review; moderate is inside moderate-to-severe, as in Grok 35 and GPT 47",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: moderate plaque psoriasis\n"
+    },
+    {
+      "id": "grok-34",
+      "source": "grok",
+      "criteria": "biologic-psoriasis",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: severe plaque psoriasis\n"
+    },
+    {
+      "id": "grok-35",
+      "source": "grok",
+      "criteria": "biologic-psoriasis",
+      "criterion": "diagnosis",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nIndication: psoriasis vulgaris, moderate\n"
+    },
+    {
+      "id": "grok-36",
+      "source": "grok",
+      "criteria": "pcsk9",
+      "criterion": "dose",
+      "expected": "evidence_found",
+      "note": "no label",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nRepatha 140 mg every 2 weeks\n"
+    },
+    {
+      "id": "grok-37",
+      "source": "grok",
+      "criteria": "pcsk9",
+      "criterion": "dose",
+      "expected": "needs_review",
+      "note": "no label",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nevolocumab 420 mg monthly\n"
+    },
+    {
+      "id": "grok-38",
+      "source": "grok",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAtorvastatin 80 mg nightly since 2026-01-15\nLDL 160 mg/dL on 2026-01-10\nLDL 118 mg/dL on 2026-07-01\n"
+    },
+    {
+      "id": "grok-39",
+      "source": "grok",
+      "criteria": "pcsk9",
+      "criterion": "prior",
+      "expected": "evidence_found",
+      "note": "two 20 mg tablets is 40 mg daily",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAtorvastatin 20 mg tablets, two tablets PO QD from 2026-01-02 to 2026-06-30\nLDL-C 151 mg/dL on 2026-01-01\nLDL-C 120 mg/dL on 2026-04-15\n"
+    },
+    {
+      "id": "grok-40",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nLabs collected 03-Oct-2026: A1c 8.1%\n"
+    },
+    {
+      "id": "grok-41",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "lab",
+      "expected": "evidence_found",
+      "note": "value wrapped onto the next line",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nHemoglobin A1c\n8.4% on 2026-09-01\n"
+    },
+    {
+      "id": "grok-42",
+      "source": "grok",
+      "criteria": "glp1-t2d",
+      "criterion": "adult",
+      "expected": "evidence_found",
+      "note": "clear age beside unreadable text",
+      "text": "Request date: 2026-10-05\nPatient: Riley Moss (fictional)\nAge: 54\nqz#v lll1 ~~ 0k |\nvv/ ;; xx\n"
+    }
+  ]
+}
