@@ -2,6 +2,7 @@ import { test } from "node:test"
 import assert from "node:assert/strict"
 import { redact } from "../services/redact/index.js"
 import { extract, findDrugs, parseDose } from "../services/extract/index.js"
+import { processText } from "../services/pipeline.js"
 
 const run = (text: string) => {
   const privacy = redact({ text, dateShiftDays: 0 })
@@ -96,6 +97,271 @@ test("dates in every format resolve by a day above 12 and stay two readings othe
     ),
     ["2026-09-15"],
   )
+})
+
+test("a preceding specimen collection header dates only its adjacent lab result", () => {
+  const base = (header: string, result = "LDL-C: 128 mg/dL") =>
+    `Request date: 2026-10-01.\nAge: 50 years.\nIndication: Established ASCVD.\nRequest: evolocumab 140 mg every 2 weeks.\nLAB REPORT\n${header}\n${result}\n`
+  const measurementDate = (text: string) =>
+    run(text).entities.find((e) => e.type === "measurement_date")
+  const labStatus = (text: string) =>
+    processText(text, "pcsk9", undefined, { dateShiftDays: 0 }).criteria.find(
+      (criterion) => criterion.criterion_id === "lab",
+    )?.status
+  const followingHeader = (body: string) =>
+    `Request date: 2026-10-01.\nAge: 50 years.\nIndication: Established ASCVD.\nRequest: evolocumab 140 mg every 2 weeks.\nLAB REPORT\n${body}`
+
+  for (const header of [
+    "Date collected: 2026-09-15",
+    "Collection date: 2026-09-15",
+    "Specimen collected: 2026-09-15",
+    "Sample collected: 2026-09-15",
+    "Date drawn: 2026-09-15",
+  ]) {
+    const date = measurementDate(base(header))
+    assert.equal(date?.value, "2026-09-15", header)
+    assert.equal(
+      date?.source_span.text,
+      header.replace("2026-09-15", "[date-b]"),
+      header,
+    )
+  }
+
+  const indentedPreceding = measurementDate(
+    base("  Date collected: 2026-09-15"),
+  )
+  assert.equal(indentedPreceding?.value, "2026-09-15")
+  assert.equal(
+    indentedPreceding?.source_span.text,
+    "  Date collected: [date-b]",
+  )
+  const indentedFollowing = measurementDate(
+    followingHeader("LDL-C: 128 mg/dL\n  Date collected: 2026-09-15\n"),
+  )
+  assert.equal(indentedFollowing?.value, "2026-09-15")
+  assert.equal(
+    indentedFollowing?.source_span.text,
+    "  Date collected: [date-b]",
+  )
+  assert.equal(
+    labStatus(
+      base(
+        "Date collected: 2026-09-15",
+        "LDL-C: 128 mg/dL\n  Date collected: 2026-08-15",
+      ),
+    ),
+    "needs_review",
+    "an indented conflicting following header must remain visible",
+  )
+  for (const prefix of ["", "Date "]) {
+    for (const verb of [
+      "collected",
+      "drawn",
+      "obtained",
+      "resulted",
+      "measured",
+    ]) {
+      for (const suffix of ["", " on", " date"]) {
+        const label = `${prefix}${verb}${suffix}`
+        const date = measurementDate(
+          followingHeader(`LDL-C: 128 mg/dL\n${label}: 2026-09-15\n`),
+        )
+        assert.equal(date?.value, "2026-09-15", label)
+        assert.equal(date?.source_span.text, `${label}: [date-b]`, label)
+      }
+    }
+  }
+
+  const explicitResultDate = measurementDate(
+    base("Date collected: 2026-09-15", "LDL-C: 128 mg/dL on 2026-09-16"),
+  )
+  assert.equal(explicitResultDate?.value, "2026-09-16")
+  assert.match(
+    explicitResultDate?.source_span.text ?? "",
+    /LDL-C: 128 mg\/dL on \[date-/,
+  )
+  const explicitResultWithConflictingHeaders = measurementDate(
+    base(
+      "Date collected: 2026-09-15",
+      "LDL-C: 128 mg/dL on 2026-09-16\nDate collected: 2026-08-15",
+    ),
+  )
+  assert.equal(explicitResultWithConflictingHeaders?.value, "2026-09-16")
+
+  assert.equal(
+    labStatus(
+      base(
+        "Date collected: 2026-09-15",
+        "LDL-C: 128 mg/dL\nDate collected: 2026-08-15",
+      ),
+    ),
+    "needs_review",
+    "different preceding and following collection dates must conflict",
+  )
+  assert.equal(
+    labStatus(
+      base(
+        "Date collected: 2026-09-15",
+        "LDL-C: 128 mg/dL\nDate collected: 2026-08-15 (fasting)",
+      ),
+    ),
+    "needs_review",
+    "an annotated following collection date must still conflict with a different preceding date",
+  )
+  assert.equal(
+    labStatus(
+      followingHeader(
+        "LDL-C: 128 mg/dL\nDate collected: 2026-09-15; repeat collected: 2026-08-15\n",
+      ),
+    ),
+    "needs_review",
+    "a following collection line with multiple dates must not supply its first date",
+  )
+  assert.equal(
+    labStatus(
+      base(
+        "Date collected: 2026-09-15",
+        "LDL-C: 128 mg/dL\nDate collected: 2026-09-15; repeat collected: 2026-08-15",
+      ),
+    ),
+    "needs_review",
+    "an unusable following collection header blocks fallback to a valid preceding date",
+  )
+  const annotatedFollowing = measurementDate(
+    followingHeader("LDL-C: 128 mg/dL\nDate collected: 2026-09-15 (fasting)\n"),
+  )
+  assert.equal(annotatedFollowing?.value, "2026-09-15")
+  assert.equal(
+    annotatedFollowing?.source_span.text,
+    "Date collected: [date-b] (fasting)",
+  )
+  assert.equal(
+    labStatus(
+      followingHeader(
+        "LDL-C: 128 mg/dL\nDate collected: 2026-09-15 (fasting)\n",
+      ),
+    ),
+    "evidence_found",
+    "a single annotated following collection date remains valid",
+  )
+  assert.equal(
+    labStatus(
+      base("Date collected: 2026-09-15", "LDL-C: 128 mg/dL. A1c: 8.5%"),
+    ),
+    "needs_review",
+    "a preceding header must not date one result among multiple analytes",
+  )
+  assert.equal(
+    labStatus(
+      base("Date collected: 2026-09-15", "LDL-C: 128 mg/dL, repeat 130 mg/dL"),
+    ),
+    "needs_review",
+    "a preceding header must not date a line with multiple results",
+  )
+  const sameDateHeaders = measurementDate(
+    base(
+      "Date collected: 2026-09-15",
+      "LDL-C: 128 mg/dL\nDate collected: 2026-09-15",
+    ),
+  )
+  assert.equal(sameDateHeaders?.value, "2026-09-15")
+  assert.equal(sameDateHeaders?.source_span.text, "Date collected: [date-c]")
+  assert.equal(
+    labStatus(
+      base(
+        "Date collected: 2026-09-15",
+        "LDL-C: 128 mg/dL\nDate collected: 2026-09-15",
+      ),
+    ),
+    "evidence_found",
+    "matching collection headers retain the normal association",
+  )
+  for (const body of [
+    "LDL-C: 128 mg/dL\n<<page>>\nDate collected: 2026-09-15\n",
+    "LDL-C: 128 mg/dL\nHISTORY\nDate collected: 2026-09-15\n",
+    "LDL-C: 128 mg/dL\nDate collected: 2026-09-15 (mother)\n",
+  ])
+    assert.equal(labStatus(followingHeader(body)), "needs_review", body)
+
+  for (const header of [
+    "Report received: 2026-09-15",
+    "Request date: 2026-09-15",
+    "Printed: 2026-09-15",
+    "Collection date: 2026-09-15; report date: 2026-09-16",
+    "Specimen collected for mother: 2026-09-15",
+  ])
+    assert.equal(measurementDate(base(header)), undefined, header)
+  for (const header of [
+    "Report received: 2026-09-15",
+    "Collection date: 2026-09-15; report date: 2026-09-16",
+    "Date collected: 39/39/2026",
+  ]) {
+    const result = processText(base(header), "pcsk9", undefined, {
+      dateShiftDays: 0,
+    })
+    assert.equal(
+      result.criteria.find((criterion) => criterion.criterion_id === "lab")
+        ?.status,
+      "needs_review",
+      header,
+    )
+  }
+  assert.equal(
+    measurementDate(
+      base("Date collected: 2026-09-15", "LDL-C for mother: 128 mg/dL"),
+    ),
+    undefined,
+    "a patient's collection header must not date a family member's result",
+  )
+
+  assert.equal(
+    measurementDate(
+      `Request date: 2026-10-01.\nAge: 50 years.\nIndication: Established ASCVD.\nRequest: evolocumab 140 mg every 2 weeks.\nLAB REPORT\nDate collected: 2026-09-15\n<<page>>\nLDL-C: 128 mg/dL\n`,
+    ),
+    undefined,
+    "a collection date must not cross a page break",
+  )
+  assert.equal(
+    measurementDate(
+      `Request date: 2026-10-01.\nAge: 50 years.\nIndication: Established ASCVD.\nRequest: evolocumab 140 mg every 2 weeks.\nLAB REPORT\nDate collected: 2026-09-15\nHISTORY\nLDL-C: 128 mg/dL\n`,
+    ),
+    undefined,
+    "a collection date must not cross a section boundary",
+  )
+
+  const headerLabels = [
+    "Date collected",
+    "Collection date",
+    "Specimen collected",
+    "Sample collected",
+    "Date drawn",
+  ]
+  for (const preceding of headerLabels) {
+    for (const following of headerLabels) {
+      for (const state of [
+        "same",
+        "different",
+        "multiple",
+        "ambiguousPreceding",
+      ] as const) {
+        const followingDate =
+          state === "different" ? "2026-08-15" : "2026-09-15"
+        const body =
+          `${preceding}: 2026-09-15` +
+          (state === "ambiguousPreceding"
+            ? "; repeat collected: 2026-08-15"
+            : "") +
+          `\nLDL-C: 128 mg/dL\n` +
+          `${following}: ${followingDate}` +
+          (state === "multiple" ? "; repeat collected: 2026-08-15" : "")
+        assert.equal(
+          labStatus(base("", body)),
+          state === "same" ? "evidence_found" : "needs_review",
+          `${preceding} before and ${following} after with ${state} dates`,
+        )
+      }
+    }
+  }
 })
 
 test("blank form fields read as blank, never as found", () => {

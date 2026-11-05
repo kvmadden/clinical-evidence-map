@@ -427,6 +427,60 @@ const TOKEN = /\[date-[a-z]+\]/g
 const number = (s: string) => Number(s.replace(/,/g, ""))
 const tokensIn = (s: string) =>
   [...s.matchAll(TOKEN)].map((m) => ({ token: m[0], index: m.index! }))
+type CollectionHeader =
+  | { state: "absent" }
+  | {
+      state: "ambiguous"
+      preceding: boolean
+      following: boolean
+    }
+  | {
+      state: "valid"
+      date: ReturnType<typeof tokensIn>[number]
+      preceding: boolean
+      following: boolean
+    }
+const COLLECTION_HEADER_LABEL =
+  /^(date\s+of\s+collection|date\s+(?:collected|drawn|obtained|resulted|measured)(?:\s+(?:on|date))?|collection\s+date|(?:specimen|sample)\s+(?:collection\s+date|collected|drawn)|blood\s+drawn|(?:collected|drawn|obtained|resulted|measured)(?:\s+(?:on|date))?)(?:\s*:|\s+|$)\s*/i
+const PRECEDING_COLLECTION_HEADER_LABELS = new Set([
+  "date collected",
+  "date drawn",
+  "date of collection",
+  "collection date",
+  "specimen collection date",
+  "specimen collected",
+  "specimen drawn",
+  "sample collection date",
+  "sample collected",
+  "sample drawn",
+  "blood drawn",
+])
+const FOLLOWING_COLLECTION_HEADER_LABELS = new Set([
+  "collected",
+  "drawn",
+  "obtained",
+  "resulted",
+  "measured",
+])
+const classifyCollectionHeader = (
+  line: DocLine | undefined,
+): CollectionHeader => {
+  if (!line || !["field", "prose"].includes(line.kind))
+    return { state: "absent" }
+  const text = line.text.trimStart()
+  const label = text.match(COLLECTION_HEADER_LABEL)
+  if (!label) return { state: "absent" }
+  const name = label[1].toLowerCase().replace(/\s+/g, " ")
+  const preceding = PRECEDING_COLLECTION_HEADER_LABELS.has(name)
+  const following = FOLLOWING_COLLECTION_HEADER_LABELS.has(
+    name.replace(/^date\s+/, "").replace(/\s+(?:on|date)$/, ""),
+  )
+  const dates = tokensIn(line.text)
+  return dates.length === 1 &&
+    text.slice(label[0].length).startsWith(dates[0].token)
+    ? { state: "valid", date: dates[0], preceding, following }
+    : { state: "ambiguous", preceding, following }
+}
 
 // Words that open a request statement in prose, or tie a condition to it.
 const REQUEST_VERB =
@@ -1296,9 +1350,8 @@ export function extract({
           badUnit: c.badUnit,
         })
       }
-      // A date after a value belongs to it until the next value. Otherwise the
-      // date before the lab name on the same line, a single date elsewhere in
-      // its part of the line, or the next line's "Date collected" date.
+      // Same-line date candidates keep precedence. Adjacent collection
+      // headers are considered below with page, section and subject checks.
       const results = found.filter((f) => f.role !== "target")
       results.forEach((f, k) => {
         const nextValue = results[k + 1]?.valueAt[0] ?? segEnd
@@ -1319,17 +1372,96 @@ export function extract({
         const candidate = before ?? (inSeg.length === 1 ? inSeg[0] : undefined)
         if (candidate) unowned[0].token = candidate.token
         else {
+          const previous = doc.find((x) => x.i === l.i - 1)
           const next = doc.slice(l.i + 1).find((x) => x.kind !== "continuation")
-          const m = next?.text
-            .trim()
-            .match(
-              /^(?:date\s+)?(?:collected|drawn|obtained|resulted|measured)(?:\s+on|\s+date)?\s*:?\s*(\[date-[a-z]+\])/i,
+          const previousHeader = classifyCollectionHeader(previous)
+          const followingHeader = classifyCollectionHeader(next)
+          const resultSubject = assertion(t, hit.index, hit.end, {
+            label: l.label,
+            sectionRole: l.section.role,
+          })
+          const sameSection = (line: DocLine | undefined) =>
+            line?.page === l.page &&
+            line.section.line === l.section.line &&
+            line.section.role === l.section.role &&
+            line.section.heading === l.section.heading
+          const isRelevantHeader = (
+            line: DocLine | undefined,
+            header: CollectionHeader,
+          ) => {
+            if (
+              !line ||
+              header.state === "absent" ||
+              !sameSection(line) ||
+              resultSubject.family
             )
-          if (next && m) {
-            unowned[0].token = m[1]
+              return false
+            const date =
+              header.state === "valid" ? header.date : tokensIn(line.text)[0]
+            const start = date?.index ?? line.text.length
+            const end = date ? start + date.token.length : start
+            return !assertion(line.text, start, end, {
+              label: line.label,
+              sectionRole: line.section.role,
+            }).family
+          }
+          const precedingRelevant = isRelevantHeader(previous, previousHeader)
+          const followingRelevant = isRelevantHeader(next, followingHeader)
+          const precedingDate =
+            precedingRelevant &&
+            previousHeader.state === "valid" &&
+            previousHeader.preceding
+              ? previousHeader.date
+              : undefined
+          const followingDate =
+            followingRelevant &&
+            followingHeader.state === "valid" &&
+            followingHeader.following
+              ? followingHeader.date
+              : undefined
+          const ambiguousHeader =
+            (precedingRelevant && previousHeader.state === "ambiguous") ||
+            (followingRelevant && followingHeader.state === "ambiguous")
+          const precedingComparableDate =
+            precedingRelevant && previousHeader.state === "valid"
+              ? previousHeader.date
+              : undefined
+          const followingComparableDate =
+            followingRelevant && followingHeader.state === "valid"
+              ? followingHeader.date
+              : undefined
+          const sameHeaderDate =
+            precedingComparableDate &&
+            followingComparableDate &&
+            readingsOf(precedingComparableDate.token).length === 1 &&
+            readingsOf(followingComparableDate.token).length === 1 &&
+            readingsOf(precedingComparableDate.token)[0] ===
+              readingsOf(followingComparableDate.token)[0]
+          const competingHeaders =
+            ambiguousHeader ||
+            (!!precedingComparableDate &&
+              !!followingComparableDate &&
+              !sameHeaderDate)
+          if (next && followingDate && !competingHeaders && followingRelevant) {
+            unowned[0].token = followingDate.token
             unowned[0].tokenLine = next
             used.add(next.i)
             understood.lab.add(next.i)
+          }
+          if (
+            previous &&
+            precedingDate &&
+            precedingRelevant &&
+            !competingHeaders &&
+            !unowned[0].token &&
+            !used.has(previous.i) &&
+            labs.length === 1 &&
+            results.length === 1
+          ) {
+            unowned[0].token = precedingDate.token
+            unowned[0].tokenLine = previous
+            used.add(previous.i)
+            understood.lab.add(previous.i)
           }
         }
       }
