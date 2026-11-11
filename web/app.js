@@ -84,15 +84,17 @@ function metric(label, value, detail) {
     el("p", "small", detail),
   )
 }
+// A status is a plain word. The card beside it carries the margin mark.
+const STATUS = {
+  evidence_found: "Found",
+  missing: "Not documented",
+  needs_review: "Needs review",
+}
 function statusTag(status) {
   return el(
     "span",
-    `badge ${status}`,
-    status === "evidence_found"
-      ? "Evidence found"
-      : status === "missing"
-        ? "Missing"
-        : "Needs review",
+    `badge status status-${status}`,
+    STATUS[status] ?? pretty(status),
   )
 }
 const list = (numbers) =>
@@ -182,7 +184,7 @@ async function queue() {
       el("span", "quality", groupName(packet.group)),
       el(
         "span",
-        "badge needs_review",
+        "badge review-state",
         packet.lastAction
           ? `${pretty(packet.lastAction)} recorded`
           : "Awaiting review",
@@ -240,7 +242,7 @@ async function queue() {
       ),
       el(
         "span",
-        "badge needs_review",
+        "badge review-state",
         packet.lastAction
           ? `${pretty(packet.lastAction)} recorded`
           : "Awaiting review",
@@ -284,7 +286,7 @@ async function packet(id) {
   ].entries())
     steps.append(
       append(
-        el("div", i === 2 ? "step current" : "step"),
+        el("div", i === 2 ? "step current" : "step done"),
         el("span", "", String(i + 1).padStart(2, "0")),
         el("strong", "", name),
       ),
@@ -570,9 +572,16 @@ async function packet(id) {
     option(e.id, `${pretty(e.type)}: ${showValue(e)}`),
   )
   function inspect(spans, target) {
+    // Each quoted span under highlighter, after its page on a long packet.
     quote.replaceChildren(
       ...spans.map((s) =>
-        el("p", "", multi ? `Page ${pageAt(s.start) + 1} · ${s.text}` : s.text),
+        append(
+          el("p"),
+          ...(multi
+            ? [el("span", "page-ref", `Page ${pageAt(s.start) + 1} · `)]
+            : []),
+          el("mark", "", s.text),
+        ),
       ),
     )
     if (!spans.length)
@@ -600,6 +609,7 @@ async function packet(id) {
     const cards = el("div", "criteria-cards")
     for (const criterion of data.criteria) {
       const card = el("article", "criterion-card")
+      card.dataset.status = criterion.status
       const policy = data.policy.criteria.find(
         (c) => c.id === criterion.criterion_id,
       )
@@ -957,7 +967,7 @@ async function gallery() {
         ),
       )
       const list = el("ul")
-      for (const f of p.failures) list.append(el("li", "", f))
+      for (const f of p.failures) list.append(el("li", "miss", f))
       if (!p.failures.length)
         list.append(
           el(

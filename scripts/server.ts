@@ -201,6 +201,7 @@ const server = createServer(async (req, res) => {
       ".css": "text/css",
       ".png": "image/png",
       ".pdf": "application/pdf",
+      ".woff2": "font/woff2",
     }
     res.writeHead(200, {
       "Content-Type": types[extname(file)] ?? "application/octet-stream",

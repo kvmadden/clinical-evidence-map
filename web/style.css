@@ -1,46 +1,91 @@
-/* Palette imported from pii-redaction-gate inspector at 63ac3ab. */
+/* A nurse reviewer's desk with a faxed prior-authorization packet on it.
+   The packet is fax paper with its OCR text in IBM Plex Mono and a caps fax
+   header. Quoted evidence carries highlighter, and findings sit as margin
+   notes in reviewer navy beside the words they quote. Review red marks only
+   something caught: a page not received, an unsupported sentence, an error.
+   IBM Plex Mono is bundled in web/fonts with its license (SIL OFL 1.1). */
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/ibm-plex-mono-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   color-scheme: light;
-  --ink: #183c36;
-  --muted: #536b63;
-  --paper: #f4f6f2;
-  --surface: #fff;
-  --line: #cbd7cf;
-  --accent: #16644f;
-  --soft: #edf3ee;
-  --amber: #84441d;
-  --amber-bg: #fae8d8;
-  --green: #235d3f;
-  --green-bg: #dcefe2;
-  --shadow: 0 8px 30px #183c3608;
+  --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  /* Georgia's figures are old style, where a zero reads as a letter o.
+     Large standalone numbers take a serif with lining figures. */
+  --figures: "Iowan Old Style", "Times New Roman", Georgia, serif;
+  --desk: #eae6de;
+  --sheet: #fcfbf8;
+  --field: #fff;
+  --ink: #15202e;
+  --slate: #586170;
+  --navy: #1f3a5f;
+  --navy-hover: #2b4c78;
+  --navy-wash: #1f3a5f12;
+  --on-navy: #fcfbf8;
+  --margin-line: #1f3a5f59;
+  --rule: #ddd8ce;
+  --edge: #cbc4b6;
+  --highlight: #f4de84;
+  --on-highlight: #15202e;
+  --red: #b3261e;
+  --red-tint: #f6e3e0;
+  --focus: #1f3a5f;
+  --page-edge: #d3ccbf;
+  --page-shadow: 0 1px 2px #15202e1f, 0 8px 22px #15202e12;
+  --page-filter: none;
 }
+/* The same desk at night: warm umber, the paper dimmed, navy lifted. */
 [data-theme="dark"] {
   color-scheme: dark;
-  --ink: #e0eee6;
-  --muted: #a0b8ac;
-  --paper: #111c19;
-  --surface: #192823;
-  --line: #43594b;
-  --accent: #9bdfb8;
-  --soft: #22362c;
-  --amber: #ffd8af;
-  --amber-bg: #513825;
-  --green: #b4e9c0;
-  --green-bg: #244632;
-  --shadow: none;
+  --desk: #1b1915;
+  --sheet: #24211c;
+  --field: #1d1b17;
+  --ink: #f1ece2;
+  --slate: #b9b1a3;
+  --navy: #9db7da;
+  --navy-hover: #b8cbe5;
+  --navy-wash: #9db7da17;
+  --on-navy: #1b1915;
+  --margin-line: #9db7da4d;
+  --rule: #39342c;
+  --edge: #463f35;
+  --highlight: #e2c765;
+  --on-highlight: #1b1915;
+  --red: #ff8a80;
+  --red-tint: #3d1f1b;
+  --focus: #9db7da;
+  --page-edge: #4a443a;
+  --page-shadow: 0 2px 12px #00000080;
+  --page-filter: brightness(0.86);
 }
 * {
   box-sizing: border-box;
 }
+html {
+  background: var(--desk);
+}
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--desk);
   color: var(--ink);
-  font:
-    14px/1.55 system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
+  font: 16px/1.55 var(--serif);
+  text-rendering: optimizeLegibility;
+}
+::selection {
+  background: var(--highlight);
+  color: var(--on-highlight);
 }
 .shell {
   max-width: 1440px;
@@ -48,8 +93,12 @@ body {
   padding: 0 48px;
 }
 a {
-  color: var(--accent);
+  color: var(--navy);
+  text-decoration-thickness: 1px;
   text-underline-offset: 4px;
+}
+a:hover {
+  text-decoration-thickness: 2px;
 }
 button,
 input,
@@ -66,9 +115,10 @@ textarea {
 button {
   cursor: pointer;
   min-height: 44px;
-  border-radius: 7px;
-  padding: 10px 14px;
-  font-weight: 650;
+  border-radius: 3px;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 1.25;
   border: 1px solid transparent;
 }
 button:disabled {
@@ -78,19 +128,19 @@ button:disabled {
 .quiet {
   background: transparent;
   color: var(--ink);
-  border-color: var(--line);
+  border-color: var(--edge);
 }
 .quiet:hover,
 .packet-row:hover,
 .entity-row:hover {
-  background: var(--soft);
+  background: var(--navy-wash);
 }
 .primary {
-  background: var(--accent);
-  color: var(--surface);
+  background: var(--navy);
+  color: var(--on-navy);
 }
-[data-theme="dark"] .primary {
-  color: #111c19;
+.primary:hover {
+  background: var(--navy-hover);
 }
 button:focus-visible,
 a:focus-visible,
@@ -98,7 +148,7 @@ summary:focus-visible,
 select:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #a76e16;
+  outline: 3px solid var(--focus);
   outline-offset: 3px;
 }
 .skip {
@@ -106,43 +156,43 @@ textarea:focus-visible {
   left: 16px;
   top: -100px;
   z-index: 5;
-  padding: 12px;
-  background: var(--surface);
+  padding: 12px 16px;
+  background: var(--sheet);
+  border: 1px solid var(--edge);
 }
 .skip:focus {
   top: 12px;
 }
+
+/* The masthead: the name set in Georgia, one word under highlighter. */
 nav {
-  height: 78px;
+  min-height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--edge);
 }
 .brand {
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 750;
-  letter-spacing: -0.035em;
-  text-decoration: none;
+  display: inline-block;
+  line-height: 44px;
+  font-size: 22px;
+  letter-spacing: -0.01em;
   color: var(--ink);
-  min-height: 44px;
+  text-decoration: none;
+  white-space: nowrap;
 }
-.logo {
-  display: grid;
-  place-items: center;
-  background: var(--accent);
-  color: var(--surface);
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  font-size: 25px;
-  margin-right: 10px;
-}
-[data-theme="dark"] .logo {
-  color: #111c19;
+.brand-mark {
+  color: var(--on-highlight);
+  background: linear-gradient(
+    176deg,
+    transparent 14%,
+    var(--highlight) 15%,
+    var(--highlight) 86%,
+    transparent 87%
+  );
+  padding: 0 4px;
+  margin: 0 -1px;
 }
 .nav-actions {
   display: flex;
@@ -150,259 +200,329 @@ nav {
   align-items: center;
 }
 .nav-actions a {
-  font-size: 12px;
+  font-size: 16px;
   min-height: 44px;
   align-content: center;
 }
 .nav-actions button {
-  font-size: 12px;
+  font-size: 15px;
 }
+
+/* Page heads: a fax-style caps line over a Georgia title. */
 .page-header {
-  padding: 34px 0 24px;
-  max-width: 850px;
+  padding: 34px 0 22px;
+  max-width: 880px;
 }
 .eyebrow {
-  font-size: 10px;
-  font-weight: 750;
-  letter-spacing: 0.15em;
-  color: var(--accent);
-  margin: 0 0 12px;
+  font: 600 12px/1.4 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 0 0 14px;
 }
 h1 {
-  font-size: 46px;
-  line-height: 1.12;
-  letter-spacing: -0.045em;
-  font-weight: 650;
-  margin: 0 0 13px;
+  font: 400 46px/1.08 var(--serif);
+  letter-spacing: -0.015em;
+  margin: 0 0 12px;
+  text-wrap: balance;
 }
 h2 {
-  font-size: 16px;
-  letter-spacing: -0.02em;
+  font: 400 22px/1.25 var(--serif);
   margin: 0;
 }
 h3 {
-  font-size: 13px;
+  font: 700 17px/1.3 var(--serif);
   margin: 0;
-  font-weight: 750;
 }
 p {
   margin: 0 0 8px;
 }
+p,
+li,
+dd,
+figcaption {
+  text-wrap: pretty;
+}
 .intro {
-  font-size: 14px;
-  color: var(--muted);
-  max-width: 650px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--slate);
+  max-width: 680px;
 }
 .small {
-  font-size: 11px;
-  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--slate);
 }
 .draft {
-  font-size: 11px;
-  color: var(--amber);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--slate);
   margin: 0;
 }
 .context-strip {
-  border-block: 1px solid var(--line);
-  padding: 13px 0;
+  border-block: 1px solid var(--edge);
+  padding: 12px 0;
   display: flex;
-  gap: 28px;
+  gap: 8px 24px;
   align-items: center;
-  font-size: 12px;
   flex-wrap: wrap;
+  font: 12px/1.5 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
 }
 .context-strip > span + span {
-  border-left: 1px solid var(--line);
-  padding-left: 28px;
+  border-left: 1px solid var(--edge);
+  padding-left: 24px;
 }
 .context-strip .draft {
   margin-left: auto;
+  font: italic 15px/1.4 var(--serif);
+  letter-spacing: 0;
+  text-transform: none;
 }
 .list-heading {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  padding: 28px 0 16px;
+  padding: 30px 0 14px;
   gap: 16px;
 }
+
+/* The queue: a received-fax log on a sheet of fax paper. */
 .packet-list {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--surface);
+  background: var(--sheet);
+  border: 1px solid var(--edge);
+  border-radius: 2px;
 }
 .packet-row {
   border-radius: 0;
   width: 100%;
   display: grid;
-  grid-template-columns: 44px 1fr 180px 150px 20px;
+  grid-template-columns: 52px minmax(0, 1fr) 250px 190px 24px;
   gap: 16px;
   text-align: left;
   align-items: center;
-  padding: 16px 22px;
+  padding: 14px 24px;
   background: transparent;
   color: var(--ink);
   border: 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--rule);
 }
 .packet-row:last-child {
   border-bottom: 0;
 }
 .packet-number {
-  font:
-    12px ui-monospace,
-    monospace;
-  color: var(--muted);
+  font: 12px/1.4 var(--mono);
+  letter-spacing: 0.06em;
+  color: var(--slate);
 }
 .packet-name {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 .packet-name strong {
-  font-size: 14px;
+  font: 600 15px/1.35 var(--mono);
+}
+.packet-name .small {
+  font: 12px/1.4 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .quality {
-  font-size: 12px;
-  font-weight: 450;
+  font-size: 15px;
+  line-height: 1.4;
 }
 .arrow {
   font-size: 18px;
-  color: var(--accent);
+  color: var(--navy);
+  justify-self: end;
 }
+
+/* Status reads as a plain word. A badge never gets a fill or a pill. */
 .badge {
-  font-size: 10px;
-  border: 1px solid var(--line);
-  padding: 4px 8px;
-  border-radius: 5px;
   display: inline-block;
   width: max-content;
   max-width: 100%;
-  font-weight: 600;
+  padding: 3px 6px;
+  font: 600 12px/1.4 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
 }
-.needs_review,
-.missing {
-  color: var(--amber);
-  background: var(--amber-bg);
-  border-color: transparent;
+/* Plain words keep their inner padding, and a negative margin lines the
+   text up with the column it sits in. */
+.review-state,
+.failure-card .badge {
+  margin-left: -6px;
 }
-.evidence_found {
-  color: var(--green);
-  background: var(--green-bg);
-  border-color: transparent;
+.panel-heading .badge {
+  margin-right: -6px;
+}
+.status-evidence_found,
+.status-needs_review {
+  color: var(--navy);
+}
+.status-missing {
+  color: var(--slate);
 }
 .back {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
   margin-top: 12px;
-  font-size: 12px;
+  font-size: 16px;
   text-decoration: none;
 }
-.back + .page-header {
-  padding-top: 10px;
+.back:hover {
+  text-decoration: underline;
 }
+.back + .page-header {
+  padding-top: 8px;
+}
+
+/* The routing line of a fax cover sheet: done, done, now. */
 .steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  padding: 19px 0;
+  display: flex;
+  align-items: center;
+  padding: 18px 0 22px;
 }
 .step {
   display: flex;
   align-items: center;
-  gap: 9px;
-  color: var(--muted);
-  font-size: 11px;
+  gap: 10px;
+  color: var(--slate);
+  font: 12px/1.4 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.step strong {
+  font-weight: 600;
+}
+.step + .step::before {
+  content: "";
+  width: 36px;
+  height: 1px;
+  margin: 0 6px;
+  background: var(--edge);
 }
 .step > span {
-  display: grid;
+  display: inline-grid;
   place-items: center;
-  border: 1px solid var(--line);
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  font:
-    10px ui-monospace,
-    monospace;
+  min-width: 32px;
+  height: 26px;
+  padding: 2px 6px;
+  border: 1px solid var(--edge);
+  border-radius: 2px;
+  font: 600 12px/1 var(--mono);
+  letter-spacing: 0.04em;
+}
+.step.done > span {
+  color: var(--navy);
+  border-color: var(--margin-line);
 }
 .step.current {
-  color: var(--accent);
+  color: var(--navy);
 }
 .step.current > span {
-  background: var(--accent);
-  color: var(--surface);
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--on-navy);
 }
-[data-theme="dark"] .step.current > span {
-  color: #111c19;
-}
+
+/* The desk: the fax on the left, the margin notes on the right. */
 .review-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.07fr) minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  gap: 24px;
   align-items: start;
 }
 .panel {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  box-shadow: var(--shadow);
+  background: var(--sheet);
+  border: 1px solid var(--edge);
+  border-radius: 2px;
   min-width: 0;
 }
 .panel-heading {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  padding: 17px 20px;
-  border-bottom: 1px solid var(--line);
-  gap: 10px;
+  padding: 16px 20px 14px;
+  border-bottom: 1px solid var(--rule);
+  gap: 12px;
+}
+/* The fax's own header line: caps mono over a double rule. When the line
+   is too long, what the packet holds moves under the title. */
+.document .panel-heading {
+  flex-wrap: wrap;
+  row-gap: 2px;
+  border-bottom: 3px double var(--rule);
+}
+.document .panel-heading h2 {
+  font: 600 13px/1.4 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.document .panel-heading .small,
+.pages figcaption {
+  font: 12px/1.45 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
 }
 .document-tools {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 18px;
-  gap: 10px;
-  border-bottom: 1px solid var(--line);
+  padding: 2px 20px;
+  gap: 0 16px;
+  border-bottom: 1px solid var(--rule);
 }
 .toggle {
   display: flex;
   align-items: center;
-  gap: 7px;
-  font-size: 10px;
+  gap: 10px;
+  font-size: 15px;
   min-height: 44px;
 }
 .toggle input {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--accent);
+  width: 20px;
+  height: 20px;
+  accent-color: var(--navy);
   margin: 0;
 }
 .pdf-link {
   display: flex;
   align-items: center;
-  font-size: 10px;
+  font-size: 15px;
   min-height: 44px;
   white-space: nowrap;
 }
+/* The page image is a real capture, so it alone sits on the desk with a
+   shadow. Its boxes are drawn on light paper in every theme. */
 .image-wrap {
   position: relative;
-  margin: 16px;
-  background: #f6f5ef;
-  border: 1px solid #c8c9be;
-  box-shadow: 0 3px 12px #0000000a;
+  margin: 20px;
+  background: #fcfbf8;
+  border: 1px solid var(--page-edge);
+  box-shadow: var(--page-shadow);
   line-height: 0;
 }
 .image-wrap img {
   display: block;
   width: 100%;
   height: auto;
+  filter: var(--page-filter);
 }
 .overlays {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  mix-blend-mode: multiply;
 }
 .overlays[hidden] {
   display: none;
@@ -411,252 +531,403 @@ p {
   position: absolute;
   display: block;
 }
+/* Words OCR read below the threshold: a pencil ring around the word,
+   never over it. A low reading asks for a look; it is not a catch. */
 .confidence-box {
-  background: #ffc14a40;
-  border: 1px solid #955600;
+  outline: 1.5px dashed #4f5866;
+  outline-offset: 2px;
+  border-radius: 3px;
 }
+/* Quoted evidence: highlighter laid over the printed words. The layer
+   multiplies as one, so boxes that touch read as one stroke. */
 .source-box {
-  background: #24b47735;
-  outline: 2px solid #087844;
+  background: #f4de84;
+  box-shadow: 0 0 0 3px #f4de84;
 }
+/* The quoted words, lifted off the page with their highlighter. */
 blockquote {
-  border-left: 3px solid var(--accent);
-  margin: 16px 20px 8px;
-  padding: 8px 12px;
-  background: var(--soft);
-  font:
-    11px/1.7 ui-monospace,
-    monospace;
+  margin: 0 20px 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--field);
+  font: 14px/1.75 var(--mono);
   overflow-wrap: anywhere;
-  min-height: 45px;
+  min-height: 50px;
+}
+blockquote:not(:has(p)) {
+  font: italic 15px/1.6 var(--serif);
+  color: var(--slate);
 }
 blockquote:focus {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--navy);
   outline-offset: 2px;
+}
+blockquote p {
+  margin: 0 0 6px;
 }
 blockquote p:last-child {
   margin-bottom: 0;
 }
-.document > p.small {
-  padding: 0 20px 8px;
+blockquote .page-ref {
+  color: var(--slate);
 }
-/* Packets of several pages: every page in order, scrolled inside the panel. */
+mark {
+  background: var(--highlight);
+  color: var(--on-highlight);
+  padding: 1px 2px;
+  border-radius: 1px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.document > p.small {
+  padding: 0 20px 10px;
+}
+/* Packets of several pages: every page in order, scrolled inside the panel.
+   Each page carries its own caps header, as a fax does. */
 .pages {
   position: relative;
   max-height: 78vh;
   overflow-y: auto;
   overscroll-behavior: contain;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--rule);
 }
 .pages:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--navy);
   outline-offset: -2px;
 }
 .pages figure {
   margin: 0;
 }
 .pages figcaption {
-  padding: 12px 16px 0;
-  font-weight: 650;
+  padding: 14px 20px 0;
 }
 .pages .image-wrap {
   margin-top: 8px;
 }
 .ocr-text .page-label {
   display: block;
-  margin: 10px 0 2px;
-  font-weight: 750;
-  color: var(--accent);
+  margin: 12px 0 2px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
 }
 .ocr-text .page-label:first-child {
   margin-top: 0;
 }
+/* What arrived. A complete packet reads as a note. A gap is a catch. */
 .coverage-note {
-  margin: 12px 16px 0;
-  padding: 10px 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--soft);
-  font-size: 12px;
+  position: relative;
+  margin: 14px 20px 0;
+  padding: 2px 0 2px 28px;
+  font-size: 15px;
+  color: var(--slate);
+}
+.coverage-note::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 6px;
+  height: 11px;
+  border: solid var(--navy);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 .coverage-note.warning {
-  color: var(--amber);
-  background: var(--amber-bg);
-  border-color: var(--amber);
-  font-weight: 650;
+  padding: 10px 14px 10px 40px;
+  background: var(--red-tint);
+  color: var(--red);
+  font-weight: 700;
+  border-radius: 2px;
+}
+.coverage-note.warning::before {
+  left: 14px;
+  top: 13px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  transform: none;
 }
 .examples {
-  margin-top: 12px;
+  margin-top: 14px;
 }
 .examples .list-heading {
   flex-wrap: wrap;
 }
 details {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--rule);
   padding: 0 20px;
 }
 summary {
   cursor: pointer;
-  min-height: 44px;
+  min-height: 48px;
   align-content: center;
-  font-size: 12px;
-  font-weight: 650;
+  font-size: 15px;
+  color: var(--navy);
+}
+summary::marker {
+  color: var(--slate);
 }
 .ocr-text {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-  font:
-    11px/1.8 ui-monospace,
-    monospace;
+  font: 13px/1.75 var(--mono);
   max-height: 440px;
   overflow: auto;
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  background: var(--field);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
 }
-mark {
-  background: var(--green-bg);
-  color: var(--green);
+.confidence-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 16px;
+  max-height: 300px;
+  overflow: auto;
 }
+.confidence-words button {
+  font: 13px/1.3 var(--mono);
+  padding: 10px 10px;
+}
+/* A word below the threshold carries the pencil ring of the overlay. */
+.uncertain-word {
+  border: 2px dashed var(--slate);
+  color: var(--ink);
+}
+
+/* The margin: a navy rule down the notes, a mark in the gutter beside each
+   finding, the finding written to its right. */
 .tabs {
   display: flex;
-  border-bottom: 1px solid var(--line);
-  padding: 0 16px;
-  gap: 16px;
+  border-bottom: 1px solid var(--rule);
+  padding: 0 20px;
+  gap: 26px;
 }
 .tab {
   background: none;
-  color: var(--muted);
-  border-radius: 0;
-  padding: 14px 5px;
-  font-size: 12px;
+  color: var(--slate);
+  border: 0;
   border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 12px 1px 10px;
+  margin-bottom: -1px;
+  font-size: 16px;
 }
 .tab[aria-pressed="true"] {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: var(--ink);
+  border-bottom-color: var(--navy);
 }
 .tab-content {
-  padding: 16px;
-  max-height: 810px;
+  --gutter: 52px;
+  --note: 72px;
+  padding: 4px 20px 16px 0;
+  max-height: 800px;
   overflow: auto;
+  background: linear-gradient(var(--margin-line), var(--margin-line))
+    var(--gutter) 0 / 1px 100% no-repeat local;
+}
+.tab-content > h3,
+.tab-content > p {
+  margin-left: var(--note);
+}
+.tab-content > h3 {
+  margin-top: 16px;
+  margin-bottom: 4px;
 }
 .criterion-card {
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  padding: 14px;
-  margin-bottom: 10px;
+  position: relative;
+  padding: 16px 0 16px var(--note);
+  border-bottom: 1px solid var(--rule);
+}
+.criterion-card::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+/* Marks: a tick for found, a ring for needs review, a stroke for not
+   documented. Drawn, so a screen reader hears only the word beside them. */
+.criterion-card[data-status="evidence_found"]::before,
+.criterion-card:has(> .verified)::before {
+  left: calc(var(--gutter) / 2 - 3px);
+  top: 18px;
+  width: 8px;
+  height: 14px;
+  border: solid var(--navy);
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+.criterion-card[data-status="needs_review"]::before {
+  left: calc(var(--gutter) / 2 - 9px);
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--navy);
+  border-radius: 50%;
+}
+.criterion-card[data-status="missing"]::before {
+  left: calc(var(--gutter) / 2 - 9px);
+  top: 28px;
+  width: 18px;
+  height: 2.5px;
+  background: var(--slate);
+}
+/* A summary sentence the verifier could not tie to its source: caught. */
+.criterion-card:has(> .flagged)::before {
+  left: calc(var(--gutter) / 2 - 9px);
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
 }
 .card-top {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 12px;
+  margin-bottom: 6px;
 }
 .card-top h3 {
+  font-size: 18px;
   text-transform: capitalize;
 }
 .criterion-text {
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+/* The tool's reason, written as the margin note. */
+.criterion-card > p.small {
+  font-style: italic;
+  font-size: 15px;
+  color: var(--navy);
+}
+.criterion-card > strong {
+  display: block;
+  margin-bottom: 4px;
 }
 .source-link {
   background: none;
-  color: var(--accent);
-  padding: 7px 0;
+  color: var(--navy);
+  padding: 8px 0;
   min-height: 44px;
-  font-size: 11px;
+  font-size: 15px;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 4px;
-  font-weight: 650;
+  border: 0;
   display: inline-flex;
   align-items: center;
 }
+.source-link:hover {
+  text-decoration-thickness: 2px;
+}
 .entities {
-  margin-top: 14px;
-  padding: 0;
-  border-bottom: 1px solid var(--line);
+  margin-top: 8px;
+  padding: 0 0 0 var(--note);
+  border: 0;
 }
 .entity-row {
   background: transparent;
   border: 0;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--rule);
   border-radius: 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   text-align: left;
   color: var(--ink);
-  gap: 8px;
+  gap: 4px 12px;
   padding: 10px 4px;
-  font-size: 11px;
+  font-size: 15px;
+}
+.entity-row > .small {
+  font: 12px/1.4 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .entity-row > strong {
-  font-size: 11px;
+  font-weight: 400;
   max-width: 65%;
   overflow-wrap: anywhere;
 }
 .code {
-  font:
-    10px/1.6 ui-monospace,
-    monospace;
-  color: var(--muted);
+  font: 12px/1.6 var(--mono);
+  color: var(--slate);
   overflow-wrap: anywhere;
 }
 .verified {
-  color: var(--green);
+  color: var(--slate);
 }
 .flagged,
 .error {
-  color: var(--amber);
+  color: var(--red);
+}
+.criterion-card > p.verified {
+  color: var(--slate);
+}
+.criterion-card > p.flagged {
+  color: var(--red);
+  font-weight: 700;
 }
 .privacy-note {
-  padding: 16px 18px;
-  margin: 18px 0;
-  background: var(--soft);
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  margin: 24px 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--edge);
   display: flex;
-  gap: 10px;
-  font-size: 11px;
-  color: var(--muted);
+  gap: 12px;
+  font-size: 15px;
+  color: var(--slate);
+  max-width: 1000px;
 }
 .privacy-note strong {
   color: var(--ink);
   white-space: nowrap;
 }
+
+/* Recording the review: the nurse's own slip. */
 .review-actions {
-  padding: 20px;
+  padding: 20px 24px 22px;
 }
 .review-heading {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   gap: 12px;
   margin-bottom: 18px;
 }
 .review-fields {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 18px;
+  gap: 20px;
 }
 label:not(.toggle) {
   display: block;
-  font-size: 11px;
-  font-weight: 650;
-  margin-bottom: 6px;
+  font: 12px/1.4 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 8px;
 }
 select,
 textarea {
   width: 100%;
   max-width: 100%;
-  background: var(--paper);
+  background: var(--field);
   color: var(--ink);
-  border: 1px solid var(--line);
-  border-radius: 6px;
+  border: 1px solid var(--edge);
+  border-radius: 2px;
   padding: 10px 12px;
-  min-height: 44px;
-  font-size: 12px;
+  min-height: 48px;
+  font-size: 16px;
 }
 textarea {
   resize: vertical;
@@ -664,35 +935,49 @@ textarea {
 .action-buttons {
   display: flex;
   gap: 10px;
-  margin-top: 16px;
+  margin-top: 18px;
 }
 .save-status {
-  font-size: 12px;
-  color: var(--accent);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--navy);
   margin: 12px 0 0;
-  min-height: 19px;
+  min-height: 24px;
 }
+
+/* The failure gallery: a score sheet, then one slip per packet. */
 .metrics {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 22px 0;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--surface);
+  background: var(--sheet);
+  border: 1px solid var(--edge);
+  border-radius: 2px;
 }
 .metric {
-  padding: 22px;
+  padding: 18px 22px 16px;
+  border-left: 1px solid var(--rule);
+  border-top: 1px solid var(--rule);
 }
-.metric + .metric {
-  border-left: 1px solid var(--line);
+.metric:nth-child(3n + 1) {
+  border-left: 0;
+}
+.metric:nth-child(-n + 3) {
+  border-top: 0;
+}
+.metric > p.small:first-child {
+  font: 12px/1.45 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .metric strong {
-  font-size: 35px;
-  letter-spacing: -0.04em;
-  line-height: 1.5;
+  display: block;
+  font: 400 38px/1.2 var(--figures);
+  letter-spacing: -0.01em;
+  margin: 4px 0 6px;
 }
 .filter {
-  max-width: 300px;
+  max-width: 320px;
   margin: 22px 0;
 }
 .failure-grid {
@@ -701,158 +986,192 @@ textarea {
   gap: 16px;
 }
 .failure-card {
-  padding: 18px;
+  padding: 16px 20px 12px;
+}
+.failure-card .card-top {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 2px;
 }
 .failure-card h2 {
-  font-size: 14px;
+  font: 600 15px/1.4 var(--mono);
 }
 .failure-card ul {
-  padding-left: 17px;
-  color: var(--muted);
-  font-size: 11px;
+  padding-left: 18px;
+  margin: 6px 0 4px;
+  font-size: 15px;
   overflow-wrap: anywhere;
 }
 .failure-card li {
   margin-bottom: 8px;
+  color: var(--slate);
+}
+/* A mismatch against the draft reference is a catch. */
+.failure-card li.miss {
+  color: var(--ink);
+}
+.failure-card li.miss::marker {
+  color: var(--red);
 }
 footer {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
-  margin-top: 26px;
-  padding: 18px 0 26px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 10px;
-  letter-spacing: 0.02em;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: 30px;
+  padding: 18px 0 28px;
+  border-top: 1px solid var(--edge);
+  color: var(--slate);
+}
+footer > span:first-child {
+  font: 12px/1.5 var(--mono);
+  letter-spacing: 0.1em;
+}
+footer > span:last-child {
+  font-style: italic;
+  font-size: 15px;
 }
 @media (min-width: 1200px) {
   .review-grid {
-    grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
   .tab-content {
     max-height: 760px;
   }
 }
+@media (max-width: 1180px) {
+  .packet-row {
+    grid-template-columns: 44px minmax(0, 1fr) 210px 170px 20px;
+    padding: 14px 20px;
+  }
+}
 @media (max-width: 899px) {
   .shell {
-    padding: 0 18px;
+    padding: 0 16px;
   }
   nav {
-    height: auto;
     min-height: 72px;
     flex-wrap: wrap;
-    padding: 14px 0;
-    gap: 8px;
+    padding: 12px 0;
+    gap: 4px;
   }
   .brand {
-    font-size: 15px;
+    font-size: 20px;
   }
   .nav-actions {
     gap: 14px;
     justify-content: space-between;
     width: 100%;
   }
-  .nav-actions button {
-    font-size: 11px;
-  }
   .page-header {
-    padding: 26px 0 20px;
+    padding: 24px 0 18px;
   }
   h1 {
-    font-size: 35px;
+    font-size: 34px;
+    line-height: 1.12;
   }
   .intro {
-    font-size: 12px;
+    font-size: 17px;
   }
+  /* Facts stack one per line rather than wrap partway. */
   .context-strip {
-    gap: 8px 16px;
-    font-size: 11px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
   .context-strip > span + span {
     padding-left: 0;
     border: 0;
   }
   .context-strip .draft {
-    margin-left: 0;
-    flex-basis: 100%;
+    margin: 4px 0 0;
   }
   .list-heading {
     align-items: start;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
   }
   .packet-row {
-    grid-template-columns: 25px 1fr auto;
-    gap: 9px;
-    padding: 14px;
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    gap: 4px 10px;
+    padding: 14px 14px;
+    align-items: start;
   }
   .packet-row .quality {
     grid-column: 2;
-    font-size: 10px;
+    font-size: 15px;
   }
   .packet-row .badge {
     grid-column: 3;
-    grid-row: 1/3;
-    font-size: 9px;
+    grid-row: 1 / 3;
   }
   .packet-row .arrow {
     display: none;
   }
   .packet-number {
-    grid-row: 1/3;
+    grid-row: 1 / 3;
+    padding-top: 2px;
+  }
+  /* The routing line stacks, one step per line. */
+  .steps {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 14px 0 18px;
+  }
+  .step + .step::before {
+    display: none;
   }
   .review-grid {
     grid-template-columns: 1fr;
     gap: 18px;
   }
-  .steps {
-    gap: 7px;
-  }
-  .step {
-    font-size: 10px;
-    gap: 5px;
-  }
-  .step > span {
-    width: 23px;
-    height: 23px;
-    flex-shrink: 0;
-  }
   .panel-heading {
-    padding: 14px 16px;
+    padding: 14px 14px 12px;
   }
-  .panel-heading h2 {
-    font-size: 14px;
-  }
-  .panel-heading .small {
-    font-size: 10px;
+  .document .panel-heading {
+    flex-direction: column;
+    gap: 2px;
   }
   .document-tools {
-    padding: 5px 12px;
-    gap: 6px;
-  }
-  .toggle {
-    font-size: 9px;
-  }
-  .pdf-link {
-    font-size: 9px;
+    padding: 2px 14px;
+    gap: 8px;
   }
   .image-wrap {
-    margin: 12px;
+    margin: 14px;
+  }
+  .pages figcaption {
+    padding: 12px 14px 0;
+  }
+  blockquote {
+    margin: 0 14px 10px;
+  }
+  .document > p.small {
+    padding: 0 14px 10px;
+  }
+  .coverage-note {
+    margin: 12px 14px 0;
+  }
+  details {
+    padding: 0 14px;
   }
   .tabs {
-    gap: 16px;
+    gap: 20px;
+    padding: 0 14px;
   }
   .tab-content {
+    --gutter: 34px;
+    --note: 50px;
     max-height: none;
-    padding: 12px;
+    padding: 4px 14px 14px 0;
   }
   .criterion-card {
-    padding: 12px;
+    padding: 14px 0 14px var(--note);
   }
   .privacy-note {
     flex-direction: column;
-    gap: 3px;
+    gap: 4px;
   }
   .review-actions {
     padding: 16px;
@@ -864,32 +1183,36 @@ footer {
   }
   .review-fields {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 14px;
   }
   .action-buttons {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
-    gap: 7px;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 8px;
   }
   .action-buttons button {
-    font-size: 11px;
     padding: 10px 8px;
   }
   .metrics {
     grid-template-columns: 1fr 1fr;
   }
   .metric {
-    padding: 15px;
+    padding: 14px 14px 12px;
+  }
+  .metric:nth-child(3n + 1) {
+    border-left: 1px solid var(--rule);
+  }
+  .metric:nth-child(-n + 3) {
+    border-top: 1px solid var(--rule);
+  }
+  .metric:nth-child(2n + 1) {
+    border-left: 0;
+  }
+  .metric:nth-child(-n + 2) {
+    border-top: 0;
   }
   .metric strong {
     font-size: 30px;
-  }
-  .metric:nth-child(3) {
-    border-left: 0;
-    border-top: 1px solid var(--line);
-  }
-  .metric:nth-child(4) {
-    border-top: 1px solid var(--line);
   }
   .failure-grid {
     grid-template-columns: 1fr;
@@ -906,20 +1229,4 @@ footer {
   * {
     scroll-behavior: auto !important;
   }
-}
-
-.confidence-words {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  padding-bottom: 14px;
-  max-height: 300px;
-  overflow: auto;
-}
-.confidence-words button {
-  font-size: 11px;
-}
-.uncertain-word {
-  background: var(--amber-bg);
-  color: var(--amber);
 }
