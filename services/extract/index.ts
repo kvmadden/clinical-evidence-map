@@ -25,6 +25,7 @@ import {
   CLINICAL_WORDS,
   CONDITIONS,
   DRUGS,
+  LABELS,
   LABS,
   LOOK_ALIKES,
   NUMBER,
@@ -48,6 +49,21 @@ export { buildDocument } from "./document.js"
 const terminology = JSON.parse(
   readFileSync(new URL("./terminology.json", import.meta.url), "utf8"),
 ) as Record<string, Normalization>
+
+// A second labeled field may follow the first on one OCR line. Use the
+// document parser's same label aliases for the boundaries within that line.
+const conditionFieldRoles = ["indication", "history", "assessment", "family"]
+const conditionLabels = conditionFieldRoles
+  .map((role) => LABELS[role].source.slice(1, -1))
+  .join("|")
+const inlineConditionLabel = new RegExp(
+  String.raw`\b(${conditionLabels})(?:\s*\((?:check|select|mark|tick|circle|list|choose|if\s+any)[^)]*\))?(?:\s*[:|?=]|\s+-\s+)\s*`,
+  "gi",
+)
+const inlineRequestDate = new RegExp(
+  String.raw`(?:^|[.;|]\s*)(${LABELS.requestDate.source.slice(1, -1)})\s*[:|?=]?\s*(\[date-[a-z]+\])`,
+  "gi",
+)
 
 // Optimal string alignment distance. A swap of two neighbors counts as one edit.
 export function osa(a: string, b: string) {
@@ -528,6 +544,36 @@ const HISTORY_WORDS =
   /\b(?:failed|stopped|discontinu\w*|previously|prior|tried|was|were|history|intoleran\w*|ago|in\s+20\d\d|last\s+(?:year|month)|before|used\s+to)\b/i
 const NOT_TRIED =
   /^\s*[:,-]?\s*(?:was\s+)?(?:not\s+(?:tried|taken|used|given)|never\s+(?:tried|taken|used|started|given)|none)\b/i
+const CONTINUOUS_COURSE =
+  /\b(?:taking\s+continuously|course\s+continued|still\s+taking)\b/i
+function continuousCourse(text: string, pattern = CONTINUOUS_COURSE) {
+  const matches = [...text.matchAll(new RegExp(pattern.source, "gi"))]
+  return (
+    matches.length > 0 &&
+    matches.every((match) => {
+      const context = assertion(
+        text,
+        match.index!,
+        match.index! + match[0].length,
+      )
+      const statement = sentenceOf(
+        text,
+        match.index!,
+        match.index! + match[0].length,
+      )
+      if (/\b(?:as\s+of|on|at)\s*(\[date(?:-[a-z]+)?\])/i.test(statement))
+        return false
+      if (
+        CONTINUOUS_COURSE.test(match[0]) &&
+        !/^\s*(?:taking\s+continuously|course\s+continued|still\s+taking)(?:\s+(?:until|through|to)\s+\[date-[a-z]+\])?\s*[.!]?\s*$/i.test(
+          statement,
+        )
+      )
+        return false
+      return !Object.values(context).some(Boolean)
+    })
+  )
+}
 const ATTRIBUTE =
   /\[date-[a-z]+\]|\[date\]|\d+(?:\.\d+)?\s*(?:mg|mcg)\b|\b(?:trial|course|dose|dosage|sig|frequency|started|start|began|begun|since|stopped|discontinu\w*|d\/c|ended|end|completed|duration|length|how\s+long|why|outcome|response|result|reason|before|after|baseline|during|while|on\s+treatment|on\s+therapy|at\s+last|follow-?up|intoleran\w*|contraindicat\w*|failed|failure|inadequate|improv\w*|worse|goal|tolerat\w*|side\s+effects?|symptoms|myalgi\w*|nausea|diarrh\w*|weeks?|months?|days?|wks?|mos?|it\s+was|this\s+was|that\s+course|the\s+course)\b/i
 const STOP_ATTACH = /^\s*(?:current|latest|most\s+recent|today|recent)\b/i
@@ -764,6 +810,9 @@ export function extract({
   const bareDates: { line: DocLine; token: string; label: string }[] = []
   for (const l of content) {
     const t = lineText(l)
+    // OCR can put a request date beside age, page counters or another date.
+    // Bind only the date immediately following its explicit label.
+    const inline = [...t.matchAll(inlineRequestDate)]
     const value = l.value ?? t
     const first = tokensIn(value)[0]?.token
     if (l.kind === "field" && first) {
@@ -772,16 +821,25 @@ export function extract({
           value,
         )
       if (
-        l.role === "requestDate" ||
-        (onlyDate && /\brequest/i.test(l.label ?? ""))
+        (l.role === "requestDate" &&
+          /^\s*[,.;:|]*\s*(?:on\s+)?\[date-[a-z]+\]/i.test(value)) ||
+        (onlyDate &&
+          /\brequest/i.test(l.label ?? "") &&
+          !/\b(?:previous|prior|cancelled|canceled|historical|old)\b/i.test(
+            l.label ?? "",
+          ))
       )
         requestDates.push({ line: l, token: first, label: l.label ?? "" })
       else if (l.role === "receivedDate")
         receivedDates.push({ line: l, token: first })
       else if (l.role === "bareDate" && onlyDate)
         bareDates.push({ line: l, token: first, label: l.label ?? "" })
+      for (const m of inline)
+        requestDates.push({ line: l, token: m[2], label: m[1] })
       continue
     }
+    for (const m of inline)
+      requestDates.push({ line: l, token: m[2], label: m[1] })
     const prose =
       t.match(
         /^\s*(written|dated|prepared|submitted|sent|filed|authored|entered|completed|signed)\s*:?\s*(?:on\s+)?(\[date-[a-z]+\])/i,
@@ -1019,40 +1077,73 @@ export function extract({
       : [{ text: t.slice(valueStart), offset: valueStart, checked: l.checked }]
     const questionTied =
       !!l.label && l.label !== "Q:" && QUESTION_TIED.test(l.label)
+    const inlineFields =
+      l.role && conditionFieldRoles.includes(l.role)
+        ? [...t.slice(valueStart).matchAll(inlineConditionLabel)]
+        : []
     for (const piece of pieces)
       for (const h of findConditions(piece.text)) {
         const start = piece.offset + h.index,
           end = piece.offset + h.end
-        const valueOnly =
-          l.kind === "field" ? " ".repeat(valueStart) + t.slice(valueStart) : t
+        let precedingField: RegExpMatchArray | undefined
+        let followingField: RegExpMatchArray | undefined
+        for (const field of inlineFields) {
+          const labelStart = valueStart + field.index!
+          if (labelStart >= end) {
+            followingField = field
+            break
+          }
+          if (labelStart + field[0].length <= start) precedingField = field
+        }
+        const scopeStart = precedingField
+          ? valueStart + precedingField.index! + precedingField[0].length
+          : valueStart
+        const scopeEnd = followingField
+          ? valueStart + followingField.index!
+          : t.length
+        const valueOnly = " ".repeat(scopeStart) + t.slice(scopeStart, scopeEnd)
         const a = assertion(valueOnly, start, end, {
-          label: l.label,
-          sectionRole: l.section.role,
+          label: precedingField?.[1] ?? l.label,
+          sectionRole: precedingField ? "unknown" : l.section.role,
         })
         let role: CondMention["role"] = "note"
         // Whether the mention sits where the request states its reason,
         // whoever it turns out to be about.
+        // Exclude the parsed primary label itself. Only embedded labels after
+        // the field value can override the line's original role.
+        const inlineRole = precedingField
+          ? roleOf(precedingField[1])
+          : undefined
+        const fieldRole = inlineRole ?? l.role
+        const laterOtherField = !!inlineRole && inlineRole !== "indication"
         const requestField =
-          l.role === "indication" ||
-          questionTied ||
-          (groupRole === "indication" && !l.role)
-        if (a.family || l.role === "family" || l.section.role === "family")
+          fieldRole === "indication" ||
+          (questionTied && !laterOtherField) ||
+          (groupRole === "indication" && !fieldRole)
+        if (
+          a.family ||
+          fieldRole === "family" ||
+          (!inlineRole && l.section.role === "family")
+        )
           role = "family"
         else if (requestField) role = "request"
-        else if (l.role === "assessment" || l.soap === "A") role = "assessment"
+        else if (fieldRole === "assessment" || l.soap === "A")
+          role = "assessment"
         else if (
-          l.role === "history" ||
+          fieldRole === "history" ||
           l.section.role === "problems" ||
           groupRole === "history"
         )
           role = "history"
-        const sentence = sentenceOf(t, start, end)
-        const before = t.slice(0, start)
-        const tied =
-          role === "request" ||
-          TIED_PHRASE.test(sentence) ||
-          TIED_FOR.test(before) ||
-          (piece.checked === "checked" && REQUEST_VERB.test(t))
+        const scopedText = inlineFields.length ? valueOnly : t
+        const sentence = sentenceOf(scopedText, start, end)
+        const before = scopedText.slice(0, start)
+        const contextualTie =
+          !laterOtherField &&
+          (TIED_PHRASE.test(sentence) ||
+            TIED_FOR.test(before) ||
+            (piece.checked === "checked" && REQUEST_VERB.test(scopedText)))
+        const tied = role === "request" || contextualTie
         const unchecked =
           piece.checked === "unchecked" ||
           (l.checked === "unchecked" && !l.options?.length)
@@ -1067,11 +1158,7 @@ export function extract({
           end,
           tied: tied && role !== "family",
           corrected: h.corrected,
-          inRequest:
-            requestField ||
-            TIED_PHRASE.test(sentence) ||
-            TIED_FOR.test(before) ||
-            (piece.checked === "checked" && REQUEST_VERB.test(t)),
+          inRequest: requestField || contextualTie,
         })
         understood.diagnosis.add(l.i)
       }
@@ -1743,7 +1830,12 @@ export function extract({
         break
       const nt = lineText(n)
       if (STOP_ATTACH.test(n.label ?? nt)) break
-      if (!ATTRIBUTE.test(nt) && !findLabs(nt).length) break
+      if (
+        !ATTRIBUTE.test(nt) &&
+        !CONTINUOUS_COURSE.test(nt) &&
+        !findLabs(nt).length
+      )
+        break
       target.lines.push(n)
       belongs(n.i, target)
     }
@@ -1899,6 +1991,7 @@ export function extract({
     let start: string | null = null,
       stop: string | null = null,
       ongoing = false,
+      uncertainContinuation = false,
       days: number | null = null
     let startLine = first,
       stopLine = first
@@ -1927,12 +2020,18 @@ export function extract({
           ? ft.slice(single ? 0 : ep.drug.from, single ? ft.length : ep.drug.to)
           : lineText(l)
       const toks = tokensIn(t)
+      if (CONTINUOUS_COURSE.test(t) && !continuousCourse(t))
+        uncertainContinuation = true
       const startM = t.match(
         /\b(?:started|start(?:ed)?\s+(?:date|on)|start|began|begun|initiated|since|from)\s*:?\s*(?:on\s+)?(\[date-[a-z]+\])/i,
       )
-      const stopM = t.match(
-        /\b(?:stopped|discontinued|d\/c'?d|ended|end\s+date|stop(?:ped)?\s+(?:date|on)|stop|end)\s*:?\s*(?:on\s+)?(\[date-[a-z]+\])/i,
-      )
+      const stopM =
+        t.match(
+          /\b(?:stopped|discontinued|d\/c'?d|ended|end\s+date|stop(?:ped)?\s+(?:date|on)|stop|end)\s*:?\s*(?:on\s+)?(\[date-[a-z]+\])/i,
+        ) ??
+        (continuousCourse(t)
+          ? t.match(/\b(?:until|through|to)\s+(\[date-[a-z]+\])/i)
+          : null)
       const range = t.match(
         /(\[date-[a-z]+\])\s*(?:-|–|—|to|through|thru|until)\s*(\[date-[a-z]+\])/i,
       )
@@ -1969,9 +2068,11 @@ export function extract({
         startLine = stopLine = l
       }
       if (
-        /\b(?:through|to|until)\s+(?:today|present|now)\b|\b(?:remains?\s+ongoing|ongoing|still\s+taking|currently\s+taking|continues|continuing|remains?\s+on)\b/i.test(
+        continuousCourse(
           t,
-        )
+          /\b(?:through|to|until)\s+(?:today|present|now)\b|\b(?:remains?\s+ongoing|ongoing|still\s+taking|currently\s+taking|continues|continuing|remains?\s+on)\b/i,
+        ) ||
+        continuousCourse(t)
       )
         ongoing = true
       if (days === null) days = episodeDuration(t)
@@ -1979,7 +2080,7 @@ export function extract({
     if (start) addDate(startLine, "prior_start_date", start, { episode: ep.id })
     if (stop) addDate(stopLine, "prior_stop_date", stop, { episode: ep.id })
     if (openStart && !stop) ongoing = true
-    if (ongoing && !stop) attrs.ongoing = true
+    if (ongoing && !stop && !uncertainContinuation) attrs.ongoing = true
     if (days !== null)
       add(first, "prior_duration_days", days, { episode: ep.id })
     if (stated) {
@@ -2003,6 +2104,36 @@ export function extract({
           (single ||
             (v.valueAt[0] >= ep.drug.from && v.valueAt[0] < ep.drug.to))),
     )
+    // A single course in a history block may have its baseline immediately
+    // above the drug. Require a dated pair around the start and no competing
+    // drug, page, section or episode ownership.
+    const previous = doc[first.i - 1]
+    if (
+      start &&
+      previous &&
+      previous.page === first.page &&
+      previous.section === first.section &&
+      first.section.role === "history" &&
+      !(drugsByLine.get(previous.i) ?? []).length &&
+      episodes.filter((e) => e.lines[0].section === first.section).length === 1
+    ) {
+      const sr = readingsOf(start)
+      const beforeStart = (token: string) => {
+        const r = readingsOf(token)
+        return [0, 1].every((k) => (r[k] ?? r[0]) <= (sr[k] ?? sr[0]))
+      }
+      for (const v of labValues.filter(
+        (v) =>
+          v.line === previous && !v.episode && v.token && v.role === "result",
+      )) {
+        if (!beforeStart(v.token!)) continue
+        const followup = mine.some(
+          (after) =>
+            after.lab === v.lab && after.token && !beforeStart(after.token),
+        )
+        if (followup) mine.push(v)
+      }
+    }
     for (const v of mine) {
       const lt = lineText(v.line)
       const others = mine.filter((x) => x.line === v.line && x !== v)
@@ -2763,8 +2894,8 @@ export function classifyOutcome(t: string): Outcome | null {
   }
   // The reason after an outcome word: a label's value first ("Intolerance:
   // GI upset"), then a causal phrase ("due to", "for"), then "with" or "after".
-  const reasonAfter = (m: RegExpMatchArray) => {
-    const rest = t.slice(m.index! + m[0].length)
+  const reasonAfter = (m: RegExpMatchArray, end?: number) => {
+    const rest = t.slice(m.index! + m[0].length, end)
     const label = rest.match(/^\s*[:?–—-]\s*(.+?)\s*\.?\s*$/)
     if (label) return clean(label[1])
     const causal = rest.match(
@@ -2785,7 +2916,26 @@ export function classifyOutcome(t: string): Outcome | null {
     /^(?:none|no|n\/a|nil|not\s+applicable|denied|denies|nkda|unknown)\b/i.test(
       r,
     )
-  const contra = t.match(OUTCOMES.contraindication)
+  const contra =
+    t.match(OUTCOMES.contraindication) ?? t.match(/\bunsuitable\b/i)
+  if (contra && /^unsuitable$/i.test(contra[0])) {
+    const context = assertion(
+      t,
+      contra.index!,
+      contra.index! + contra[0].length,
+    )
+    const reason = reasonAfter(contra)
+    const causal = /^\s*(?:due\s+to|because\s+of)\s+\S/i.test(
+      t.slice(contra.index! + contra[0].length),
+    )
+    return {
+      type: "contraindication",
+      category: Object.values(context).some(Boolean)
+        ? "unclear"
+        : "contraindication",
+      ...(causal && reason && !isBlankValue(reason) ? { reason } : {}),
+    }
+  }
   // "not contraindicated due to renal function" negates the outcome and gives
   // a reason for it in one breath: a person has to read it.
   if (
@@ -2854,9 +3004,25 @@ export function classifyOutcome(t: string): Outcome | null {
     }
   }
   if (intol && !notBefore(intol)) {
-    let reason = reasonAfter(intol)
+    const outcomeEnd = intol.index! + intol[0].length
+    const tail = t.slice(outcomeEnd)
+    const reasonLabel = /\b(?:reason|cause)\s*:\s*/i.exec(tail)
+    const labeledReason = reasonLabel
+      ? tail.slice(reasonLabel.index + reasonLabel[0].length)
+      : undefined
+    const explicitBlankReason =
+      labeledReason !== undefined &&
+      (isBlankValue(labeledReason) ||
+        /^(?:_+|blank|n\/?a)(?=[.,;\s]|$)/i.test(labeledReason))
+    let reason = explicitBlankReason
+      ? reasonAfter(intol, outcomeEnd + reasonLabel!.index)
+      : labeledReason === undefined
+        ? reasonAfter(intol)
+        : clean(labeledReason)
+    if (/^(?:recorded|documented)$/i.test(reason ?? "")) reason = undefined
     if (none(reason)) return null
-    const blank = !!reason && /^_+$/.test(reason)
+    const blank =
+      (explicitBlankReason && !reason) || (!!reason && /^_+$/.test(reason))
     if (blank) reason = undefined
     if (reason && /^(?:to|of)\s+\S+$/i.test(reason)) reason = undefined
     if (reason) reason = reason.replace(/^(?:to|of)\s+\S+\s*[-–—:,]\s*/i, "")
