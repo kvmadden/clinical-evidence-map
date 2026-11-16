@@ -76,11 +76,10 @@ Requires Node 22 or newer and a free English OCR model download on first rebuild
 
 ```sh
 npm ci
-npm run eval -- --check
 npm start
 ```
 
-`npm start` prints the review workspace's local address. Open it in a browser. The checked-in page images, PDFs and OCR outputs let you inspect and rescore the demonstration immediately. `npm run generate` rebuilds the packets and labels. `npm run eval -- --rebuild` redraws all 63 pages and reruns local OCR, which takes several minutes. `npm run eval:holdout-v2 -- --check` confirms that the second held-out set's saved blind score reproduces from its stored OCR. Any other run on that set is saved as a development result.
+`npm start` prints the review workspace's local address. Open it in a browser. The review queue serves the archived synthetic example outputs. To exercise the current reader, run the summary command below or the inline-course browser test. Use a disposable checkout for commands that regenerate packets, OCR or scores.
 
 A second consumer, a care-management summary, reuses the same redaction and extraction modules:
 
@@ -105,7 +104,11 @@ npm run summary -- eval/packets/packet-001.md
 
 ```sh
 npx playwright install chromium
-npm run gate
+npm run typecheck
+npm test
+npm run test:ui
 ```
 
-The gate typechecks the services, runs the unit tests including a byte-for-byte rebuild of the packet set, reproduces saved metrics, and exercises review actions, persistence, keyboard access, overflow and WCAG AA checks at 1440×900, 430×932 and 390×844 in light and dark. `npm run media` records the review GIF in a visible local browser.
+The published scores describe the archived reader revisions. Verify those scores on the corresponding revisions with the original stored OCR. The current reader handles inline request dates and drug-linked prior courses differently, so comparing its output directly with the archived scores can report drift. The owner-provisioned [local aggregate gate](docs/development-regression.md#local-aggregate-proof) checks current development outputs and replays the historical evaluations separately. It requires private synthetic evaluation inputs.
+
+The unit suite includes a byte-for-byte packet rebuild. The browser suite covers review actions, persistence, keyboard access, overflow and WCAG AA checks at 1440×900, 430×932 and 390×844 in light and dark. `npm run media` records the review GIF in a visible local browser.

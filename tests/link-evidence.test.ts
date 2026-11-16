@@ -118,6 +118,123 @@ test("diagnosis must be the reason for this request", () => {
   )
 })
 
+test("a problem-list diagnosis beside a different requested indication is not the request diagnosis", () => {
+  const text = [
+    "Request date: 2026-10-21. Age: 17 years.",
+    "Requested indication: appetite management. Problem list: type 2 diabetes.",
+    "Medication requested: semaglutide 0.5 mg SQ weekly.",
+  ].join("\n")
+  const c = status(text, "diagnosis")
+  assert.equal(c.status, "needs_review")
+  assert.ok(
+    c.evidence_spans.some((span) =>
+      /Problem list: type 2 diabetes/.test(span.text),
+    ),
+  )
+  assert.equal(
+    status(
+      "Request date: 2026-10-21. Age: 17 years.\nIndication for this request: appetite management, problem list: type 2 diabetes.\n",
+      "diagnosis",
+    ).status,
+    "needs_review",
+  )
+  assert.equal(
+    status(
+      "Request date: 2026-10-21. Age: 17 years.\nProblem list: hypertension. Requested indication: type 2 diabetes.\n",
+      "diagnosis",
+    ).status,
+    "evidence_found",
+  )
+  assert.equal(
+    status(
+      "Request date: 2026-10-21.\nDiagnosis: type 2 diabetes.\n",
+      "diagnosis",
+    ).status,
+    "evidence_found",
+  )
+
+  // An explicit indication remains a true positive, including a compound one.
+  assert.equal(status(complete, "diagnosis").status, "evidence_found")
+  assert.equal(
+    status(
+      complete.replace(
+        "Indication for this request: Type 2 diabetes mellitus.",
+        "Indication for this request: Type 2 diabetes mellitus and hypertension.",
+      ),
+      "diagnosis",
+    ).status,
+    "evidence_found",
+  )
+})
+
+test("inline condition fields use the same labels as standalone fields", () => {
+  for (const history of ["PMH", "Comorbidities"]) {
+    assert.equal(
+      status(
+        `Requested indication: appetite management. ${history}: type 2 diabetes.`,
+        "diagnosis",
+      ).status,
+      "needs_review",
+    )
+  }
+  assert.equal(
+    status(
+      "Problem list: hypertension. Requested use: type 2 diabetes.",
+      "diagnosis",
+    ).status,
+    "evidence_found",
+  )
+})
+
+test("an inline field bounds the diagnosis assertion and its request context", () => {
+  for (const field of ["Problem list |", "Problem list (list all):"]) {
+    const text = `Requested indication: appetite management. ${field} type 2 diabetes.`
+    assert.equal(status(text, "diagnosis").status, "needs_review", text)
+  }
+  for (const history of [
+    "Problem list: no hypertension,",
+    "Family history: hypertension.",
+  ]) {
+    const text = `${history} Requested indication: type 2 diabetes.`
+    assert.equal(status(text, "diagnosis").status, "evidence_found", text)
+  }
+})
+
+test("an empty reason placeholder does not substantiate a metformin intolerance", () => {
+  const text = [
+    "Request date: 2026-10-22. Age: 59 years.",
+    "Reason for the request: type 2 diabetes.",
+    "Semaglutide request: 0.5 mg subcutaneous once weekly.",
+    "A1c 8.1% collected 2026-10-01.",
+    "Prior therapy note: Metformin intolerance recorded. Reason: ____",
+  ].join("\n")
+  const c = status(text, "prior")
+  assert.equal(c.status, "needs_review")
+  assert.match(c.reason, /without a reason/i)
+
+  const withReason = text.replace("Reason: ____", "Reason: persistent diarrhea")
+  assert.equal(status(withReason, "prior").status, "evidence_found")
+  const statedBeforeBlank = text.replace(
+    "Metformin intolerance recorded. Reason: ____",
+    "Metformin intolerance due to persistent diarrhea. Reason: ____",
+  )
+  assert.equal(status(statedBeforeBlank, "prior").status, "evidence_found")
+  const priorCall = (outcome: string) =>
+    status(
+      text.replace("Metformin intolerance recorded. Reason: ____", outcome),
+      "prior",
+    )
+  for (const reason of ["____.", "n/a.", "____ Date: CK labs attached."]) {
+    const c = priorCall(`Metformin intolerance recorded. Reason: ${reason}`)
+    assert.equal(c.status, "needs_review", reason)
+  }
+  const specific = priorCall(
+    "Metformin intolerance due to palpitations. Reason: ____",
+  )
+  assert.equal(specific.status, "evidence_found")
+  assert.match(specific.reason, /palpitations/i)
+})
+
 test("lab, dose and age near misses", () => {
   // The A1c after 90 days of metformin is itself within 180 days, so drop it here.
   const labOnly = complete.replace(/Baseline[^\n]*\n|On metformin[^\n]*\n/g, "")

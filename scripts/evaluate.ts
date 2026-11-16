@@ -7,7 +7,6 @@ import { performance } from "node:perf_hooks"
 import { createOcr } from "../services/ocr/index.js"
 import { recognizePages, renderPacket } from "../services/ocr/packet.js"
 import { pagesOf, splitPages } from "../services/ocr/pages.js"
-import { readCoverage } from "../services/ocr/coverage.js"
 import { loadManifest, processText, sourceBody } from "../services/pipeline.js"
 import { verify } from "../services/verify/index.js"
 import { DRAFT } from "../services/contracts.js"
@@ -35,16 +34,8 @@ import {
 } from "./records.mjs"
 import type { PageReader } from "../services/ocr/packet.js"
 
-// Per-packet date shift used by the privacy step during evaluation. It is
-// derived from the packet ID so runs reproduce, which also means it is not
-// secret. A deployment would draw a random shift and keep it apart from text.
-export const shiftFor = (id: string) =>
-  36500 +
-  (createHash("sha256")
-    .update(`clinical-evidence-map:date-shift:${id}`)
-    .digest()
-    .readUInt32LE(0) %
-    3650)
+import { decodeStoredOcr, extractStoredOcr, shiftFor } from "./stored-ocr.js"
+export { shiftFor } from "./stored-ocr.js"
 
 // A held-out set is checked against the sha256 in its FREEZE.json, over
 // packets/*, gold/* and manifest.json, before every run.
@@ -354,7 +345,7 @@ export async function evaluate(
       const cacheFile = `${artifactDir}/${id}.json`
       let cache
       try {
-        cache = JSON.parse(await readFile(cacheFile, "utf8"))
+        cache = decodeStoredOcr(await readFile(cacheFile))
       } catch {}
       // A blind first run reads every page again, so its score never rests
       // on stored OCR that could have been edited.
@@ -380,14 +371,12 @@ export async function evaluate(
       }
       // Coverage travels with the OCR output into the pipeline. It is built
       // from the OCR output alone, never from the source text.
-      const packetCoverage = readCoverage(cache.ocr)
       const shift = shiftFor(id)
       const start = performance.now()
-      const output = processText(
-        cache.ocr.text,
+      const { output, coverage: packetCoverage } = extractStoredOcr(
+        cache.ocr,
         entry.criteria_id,
-        { ...cache.ocr, coverage: packetCoverage },
-        { dateShiftDays: shift },
+        id,
       )
       const serviceMs = performance.now() - start
       const sourceOutput = processText(reading, entry.criteria_id, undefined, {
@@ -568,7 +557,7 @@ export async function evaluate(
             `${multi ? `Page ${page + 1} orientation` : "Orientation"}: page turned ${expectedTurn} degrees, read as ${detected}`,
           )
       })
-      const latency = { renderAndOcrMs: cache.renderAndOcrMs, serviceMs }
+      const latency = { renderAndOcrMs: cache.renderAndOcrMs!, serviceMs }
       // Coverage goes into the saved result when there is something to show:
       // several pages, or a packet that did not fully arrive. One-page
       // packets that arrived whole keep their earlier result unchanged.
