@@ -1,5 +1,11 @@
 # Clinical evidence map
 
+Clinical Evidence Map is a prototype that helps utilization-management nurses and pharmacists trace prior-authorization findings back to source text in fictional fax packets.
+
+Open the [public review queue demo](https://kvmadden.com/projects/clinical-evidence-map/#try) to inspect a fictional packet without an account.
+
+To run the review workspace locally, use Node 22 or later. Run `npm ci` and `npm start` from this repository, then open the address printed in the terminal. Use fictional packets only.
+
 **The hard question:** when a nurse opens a faxed prior-authorization packet, does every finding the tool shows point to the exact words on the page, and does it say "review this" instead of guessing when it cannot tell?
 
 **Short answer:** partly. The stage D reader's one blind score, on a second held-out set of 24 packets that Grok and Gemini wrote from a written spec and that was frozen before the run, is 85 of 120 criterion statuses correct, against 49 of 120 for always answering "found". That beats the baseline but falls short of the brief's 90% target. It said "not documented" where the label is found or needs review once in 96, and "evidence found" where the label is not 4 times in 71, all five on labels that say needs review. The cost is review time: it sent 72 of 120 answers to review, where the labels send 47. The stage D rules were rebuilt after an earlier failure. On the first held-out set, written by a different model, the stage C rules scored 37 of 120, below the always-found baseline of 60 of 120. The main failure was answering "not documented" when they could not read a layout: 71 of the 96 criteria labeled evidence found or needs review got that answer. The rebuilt rules answer "not documented" only when the whole packet was read and nothing on it mentions the item, and otherwise say what blocked the read. On the 63 development packets they answer 266 of 315 statuses correctly, against 164 for always answering "found", and send 143 of 315 to review. On the first held-out set, development data since 3 November 2026, they answer 110 of 120, but that rise was made by looking at those packets.
