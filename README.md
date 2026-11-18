@@ -1,10 +1,37 @@
-# Clinical evidence map
+# Clinical Evidence Map
 
-Clinical Evidence Map is a prototype that helps utilization-management nurses and pharmacists trace prior-authorization findings back to source text in fictional fax packets.
+A research prototype for utilization-management nurses and pharmacists who need to trace prior-authorization findings back to the source text in a packet.
 
-Open the [public review queue demo](https://kvmadden.com/projects/clinical-evidence-map/#try) to inspect a fictional packet without an account.
+It reads fictional fax-style pages, links findings to exact source lines, and asks for review when evidence is incomplete or unclear. The nurse makes the decision. **Synthetic data only. Reference labels remain provisional, and this is not a clinically validated tool.**
 
-To run the review workspace locally, use Node 22 or later. Run `npm ci` and `npm start` from this repository, then open the address printed in the terminal. Use fictional packets only.
+## Try it
+
+Open the [public review queue demo](https://kvmadden.com/projects/clinical-evidence-map/#try) without an account. Follow a finding back to the packet, then inspect a case with ambiguous dates or a missing page.
+
+To run the archived review workspace locally, clone this repository and run:
+
+```sh
+# Node 22 or later
+npm ci
+npm start
+```
+
+Open the address printed in the terminal. No API key or paid service is required. Use fictional packets only. The queue serves archived example outputs. See the guide below to exercise the current reader.
+
+## How it was tested
+
+Tests cover reading rules, source citations, missing pages and review actions. Separately frozen synthetic sets exposed failures on unfamiliar layouts. Historical scores stay tied to their original reader revisions, and later reruns are development checks. Draft labels and simulated page effects limit what those results establish.
+
+```sh
+npm run typecheck
+npm test
+node scripts/portfolio-aggregate.mjs --check
+```
+
+The [public aggregate method](eval/PORTFOLIO-AGGREGATE.md) explains which published totals can be regenerated without private evaluation inputs. The [evaluation report](docs/EVALUATION.md) records failures, baselines and limitations. Full evaluation replay requires the separately held inputs.
+
+<details>
+<summary>Workflow, historical results and technical guide</summary>
 
 **The hard question:** when a nurse opens a faxed prior-authorization packet, does every finding the tool shows point to the exact words on the page, and does it say "review this" instead of guessing when it cannot tell?
 
@@ -118,3 +145,5 @@ npm run test:ui
 The published scores describe the archived reader revisions. Verify those scores on the corresponding revisions with the original stored OCR. The current reader handles inline request dates and drug-linked prior courses differently, so comparing its output directly with the archived scores can report drift. The owner-provisioned [local aggregate gate](docs/development-regression.md#local-aggregate-proof) checks current development outputs and replays the historical evaluations separately. It requires private synthetic evaluation inputs.
 
 The unit suite includes a byte-for-byte packet rebuild. The browser suite covers review actions, persistence, keyboard access, overflow and WCAG AA checks at 1440×900, 430×932 and 390×844 in light and dark. `npm run media` records the review GIF in a visible local browser.
+
+</details>
