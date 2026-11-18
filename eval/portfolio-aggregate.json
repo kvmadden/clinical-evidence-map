@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 1,
+  "clearance": "previously-published-synthetic-aggregates",
+  "portfolioRevision": "4f0321770730f5d99787150065114c479bb287f2",
+  "stageD": {
+    "sourceRevision": "53b96fd",
+    "criteriaSets": 3,
+    "development": {
+      "packets": 63,
+      "total": 315,
+      "correct": 266,
+      "alwaysFound": 164,
+      "falseFound": 0,
+      "notFound": 151,
+      "falseMissing": 0,
+      "notMissing": 258,
+      "review": 143,
+      "labelReview": 94,
+      "quotes": 1622,
+      "sourceText": 315,
+      "withQuotes": 225,
+      "p50": "4.3",
+      "p95": "5.2"
+    },
+    "heldOut": {
+      "packets": 24,
+      "total": 120,
+      "correct": 85,
+      "alwaysFound": 49,
+      "falseFound": 4,
+      "notFound": 71,
+      "falseMissing": 1,
+      "notMissing": 96,
+      "review": 72,
+      "labelReview": 47,
+      "foundToReview": 14,
+      "missingToReview": 16,
+      "quotes": 783,
+      "sourceText": 83,
+      "relabelMatch": 116,
+      "withQuotes": 19,
+      "clean": {
+        "correct": 16,
+        "total": 20,
+        "alwaysFound": 16
+      },
+      "degraded": {
+        "correct": 69,
+        "total": 100,
+        "alwaysFound": 33
+      },
+      "sourceTextSplit": {
+        "missingCaughtFromImages": 8,
+        "missingLabels": 24,
+        "foundFromText": 40,
+        "foundFromImages": 35
+      },
+      "authors": [
+        {
+          "name": "Grok",
+          "correct": 45,
+          "total": 60,
+          "alwaysFound": 24
+        },
+        {
+          "name": "Gemini",
+          "correct": 40,
+          "total": 60,
+          "alwaysFound": 25
+        }
+      ],
+      "p50": "11.0",
+      "p95": "15.3",
+      "privacy": {
+        "nameTokens": 639,
+        "notNames": 136,
+        "dates": 263,
+        "datesRemoved": 14
+      }
+    },
+    "comparison": {
+      "models": [
+        {
+          "name": "Claude Opus 5.5",
+          "correct": 119
+        },
+        {
+          "name": "Gemini 3.8 Flash",
+          "correct": 119
+        },
+        {
+          "name": "GPT 6.1 Sol",
+          "correct": 117
+        },
+        {
+          "name": "Grok 4.7",
+          "correct": 119
+        }
+      ],
+      "readerMisses": 35,
+      "sentToReview": 30,
+      "allModelsRight": 29,
+      "disputed": 36,
+      "authorFamilies": 2
+    },
+    "firstSet": {
+      "packets": 24,
+      "total": 120,
+      "alwaysFound": 60,
+      "current": 110,
+      "earlier": 37,
+      "earlierFalseMissing": 71,
+      "notMissing": 96
+    },
+    "target": {
+      "percent": 90
+    },
+    "criteria": [
+      [
+        "Adult",
+        [
+          22,
+          24,
+          14
+        ],
+        [
+          5,
+          24,
+          5
+        ],
+        [
+          59,
+          63,
+          43
+        ]
+      ],
+      [
+        "Diagnosis",
+        [
+          23,
+          24,
+          11
+        ],
+        [
+          10,
+          24,
+          11
+        ],
+        [
+          59,
+          63,
+          31
+        ]
+      ],
+      [
+        "Lab",
+        [
+          13,
+          24,
+          11
+        ],
+        [
+          18,
+          24,
+          9
+        ],
+        [
+          53,
+          63,
+          32
+        ]
+      ],
+      [
+        "Prior therapy",
+        [
+          16,
+          24,
+          6
+        ],
+        [
+          16,
+          24,
+          12
+        ],
+        [
+          48,
+          63,
+          27
+        ]
+      ],
+      [
+        "Dose",
+        [
+          11,
+          24,
+          7
+        ],
+        [
+          23,
+          24,
+          10
+        ],
+        [
+          47,
+          63,
+          31
+        ]
+      ]
+    ],
+    "slices": [
+      [
+        "Clean render",
+        [
+          16,
+          20,
+          16
+        ],
+        [
+          22,
+          25,
+          16
+        ]
+      ],
+      [
+        "Simulated fax noise",
+        [
+          15,
+          20,
+          3
+        ],
+        [
+          36,
+          40,
+          17
+        ]
+      ],
+      [
+        "Simulated choppy scan lines",
+        [
+          6,
+          10,
+          3
+        ],
+        [
+          34,
+          40,
+          19
+        ]
+      ],
+      [
+        "Simulated smudges",
+        [
+          7,
+          10,
+          3
+        ],
+        [
+          35,
+          40,
+          17
+        ]
+      ],
+      [
+        "Simulated low contrast",
+        [
+          6,
+          10,
+          1
+        ],
+        [
+          37,
+          40,
+          19
+        ]
+      ],
+      [
+        "Simulated 7-degree rotation",
+        [
+          9,
+          10,
+          5
+        ],
+        [
+          24,
+          25,
+          15
+        ]
+      ],
+      [
+        "Simulated page orientation",
+        [
+          19,
+          30,
+          13
+        ],
+        [
+          38,
+          40,
+          19
+        ]
+      ],
+      [
+        "Drawn circles, arrows and underlines, no handwriting",
+        [
+          7,
+          10,
+          5
+        ],
+        null
+      ],
+      [
+        "AI-drawn handwriting (image model)",
+        null,
+        [
+          17,
+          25,
+          16
+        ]
+      ],
+      [
+        "Printed page with AI-drawn notes, circles and arrows",
+        null,
+        [
+          23,
+          40,
+          26
+        ]
+      ]
+    ],
+    "reviewedDevelopmentLabels": 13
+  },
+  "bench": {
+    "counts": {
+      "adult": {
+        "total": 24,
+        "split": 2,
+        "ruled": 0
+      },
+      "diagnosis": {
+        "total": 24,
+        "split": 1,
+        "ruled": 5
+      },
+      "lab": {
+        "total": 24,
+        "split": 11,
+        "ruled": 0
+      },
+      "prior": {
+        "total": 24,
+        "split": 9,
+        "ruled": 0
+      },
+      "dose": {
+        "total": 24,
+        "split": 13,
+        "ruled": 0
+      }
+    },
+    "totals": {
+      "calls": 120,
+      "packets": 24,
+      "split": 36,
+      "ruled": 5,
+      "readerMisses": 35,
+      "sentToReview": 30,
+      "alwaysFound": 49
+    },
+    "scoreboard": [
+      {
+        "id": "reader",
+        "correct": 85,
+        "reviewWhenSure": 30,
+        "confidentWrong": 5
+      },
+      {
+        "id": "claude-opus-5.5",
+        "correct": 119,
+        "reviewWhenSure": 0,
+        "confidentWrong": 1
+      },
+      {
+        "id": "gemini-3.8-flash",
+        "correct": 119,
+        "reviewWhenSure": 1,
+        "confidentWrong": 0
+      },
+      {
+        "id": "gpt-6.1-sol",
+        "correct": 117,
+        "reviewWhenSure": 0,
+        "confidentWrong": 3
+      },
+      {
+        "id": "grok-4.7",
+        "correct": 119,
+        "reviewWhenSure": 0,
+        "confidentWrong": 1
+      }
+    ],
+    "takeaway": {
+      "topSplits": 33,
+      "topNames": [
+        "Dose",
+        "Lab",
+        "Prior therapy"
+      ],
+      "ruledNames": [
+        "Diagnosis"
+      ]
+    },
+    "routing": {
+      "design": "E",
+      "calls": 120,
+      "autoDecided": 73,
+      "autoCorrect": 73,
+      "desk": 47,
+      "silent": 0,
+      "rulingsOnDesk": 5,
+      "readerAloneSilent": 5,
+      "singleModelsWithZeroSilent": [
+        "Gemini 3.8 Flash"
+      ],
+      "commit": "3e9ce28"
+    }
+  },
+  "desk": {
+    "packets": 24,
+    "calls": 120,
+    "auto": 73,
+    "desk": 47,
+    "silent": 0,
+    "deskMatchesReview": true,
+    "buckets": {
+      "ready": 2,
+      "needs": 5,
+      "missing": 17
+    }
+  }
+}
